@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Qui a peint La Joconde ?",
+    "options": ["Michel-Ange", "Léonard de Vinci", "Raphaël", "Botticelli"],
+    "correct_index": 1,
+    "explanation": "La Joconde, aussi appelée Mona Lisa, a été peinte par Léonard de Vinci au début du XVIe siècle. Elle est exposée au musée du Louvre à Paris."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel écrivain français est l'auteur des Misérables ?",
+    "options": ["Émile Zola", "Victor Hugo", "Honoré de Balzac", "Gustave Flaubert"],
+    "correct_index": 1,
+    "explanation": "Victor Hugo a publié Les Misérables en 1862. Ce roman est considéré comme l'un des plus grands chefs-d'œuvre de la littérature française."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Dans quel musée parisien est exposée La Joconde ?",
+    "options": ["Le musée d'Orsay", "Le Centre Pompidou", "Le musée du Louvre", "Le musée Rodin"],
+    "correct_index": 2,
+    "explanation": "La Joconde est exposée au musée du Louvre depuis la Révolution française. C'est l'œuvre la plus visitée du musée."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Qui a écrit Le Petit Prince ?",
+    "options": ["Jules Verne", "Antoine de Saint-Exupéry", "Albert Camus", "André Gide"],
+    "correct_index": 1,
+    "explanation": "Antoine de Saint-Exupéry a publié Le Petit Prince en 1943. C'est l'un des livres les plus traduits au monde."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel compositeur allemand, devenu sourd, a composé la Neuvième Symphonie ?",
+    "options": ["Mozart", "Bach", "Beethoven", "Brahms"],
+    "correct_index": 2,
+    "explanation": "Ludwig van Beethoven a composé sa Neuvième Symphonie alors qu'il était presque entièrement sourd. Elle a été créée en 1824."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Qui a sculpté Le Penseur ?",
+    "options": ["Auguste Rodin", "Michel-Ange", "Donatello", "Brancusi"],
+    "correct_index": 0,
+    "explanation": "Le Penseur est une sculpture en bronze d'Auguste Rodin, conçue à l'origine comme partie de La Porte de l'Enfer."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel mouvement artistique est associé à Claude Monet ?",
+    "options": ["Le cubisme", "L'impressionnisme", "Le surréalisme", "Le réalisme"],
+    "correct_index": 1,
+    "explanation": "Claude Monet est l'un des fondateurs de l'impressionnisme. C'est son tableau Impression, soleil levant qui a donné son nom au mouvement."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quelle pièce de Molière met en scène un personnage hypocrite qui se fait passer pour dévot ?",
+    "options": ["L'Avare", "Le Tartuffe", "Le Bourgeois gentilhomme", "Les Fourberies de Scapin"],
+    "correct_index": 1,
+    "explanation": "Le Tartuffe, créé en 1664, met en scène un faux dévot qui manipule un bourgeois crédule. La pièce fut censurée à sa création."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel peintre espagnol est célèbre pour son tableau Guernica ?",
+    "options": ["Salvador Dalí", "Pablo Picasso", "Joan Miró", "Francisco Goya"],
+    "correct_index": 1,
+    "explanation": "Pablo Picasso a peint Guernica en 1937 pour dénoncer le bombardement de la ville basque de Guernica pendant la guerre civile espagnole."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Qui a composé Les Quatre Saisons ?",
+    "options": ["Jean-Sébastien Bach", "Antonio Vivaldi", "Georg Friedrich Haendel", "Joseph Haydn"],
+    "correct_index": 1,
+    "explanation": "Les Quatre Saisons sont un ensemble de quatre concertos pour violon composés par Antonio Vivaldi vers 1723."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel auteur a écrit les Fables, dont Le Corbeau et le Renard ?",
+    "options": ["Charles Perrault", "Jean de La Fontaine", "Jean Racine", "Pierre Corneille"],
+    "correct_index": 1,
+    "explanation": "Jean de La Fontaine a publié ses Fables entre 1668 et 1694, s'inspirant notamment d'Ésope et de Phèdre."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Comment s'appelle le célèbre ballet de Tchaïkovski mettant en scène une princesse endormie ?",
+    "options": ["Le Lac des cygnes", "Casse-Noisette", "La Belle au bois dormant", "Giselle"],
+    "correct_index": 2,
+    "explanation": "La Belle au bois dormant est un ballet de Tchaïkovski créé en 1890 à Saint-Pétersbourg, inspiré du conte de Charles Perrault."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel style architectural est caractérisé par des arcs-boutants et des vitraux, comme Notre-Dame de Paris ?",
+    "options": ["Roman", "Gothique", "Baroque", "Renaissance"],
+    "correct_index": 1,
+    "explanation": "L'architecture gothique, apparue au XIIe siècle en Île-de-France, se distingue par ses arcs-boutants, ses voûtes d'ogives et ses grands vitraux."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Qui a écrit Roméo et Juliette ?",
+    "options": ["Molière", "William Shakespeare", "Christopher Marlowe", "Oscar Wilde"],
+    "correct_index": 1,
+    "explanation": "William Shakespeare a écrit Roméo et Juliette vers 1595. C'est l'une des tragédies les plus célèbres de la littérature mondiale."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "easy",
+    "question": "Quel peintre néerlandais est connu pour ses autoportraits et La Ronde de nuit ?",
+    "options": ["Vermeer", "Rembrandt", "Van Gogh", "Mondrian"],
+    "correct_index": 1,
+    "explanation": "Rembrandt van Rijn est l'un des plus grands peintres du Siècle d'or néerlandais, célèbre pour son usage magistral du clair-obscur."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel roman de Marcel Proust commence par la célèbre phrase « Longtemps, je me suis couché de bonne heure » ?",
+    "options": ["À l'ombre des jeunes filles en fleurs", "Du côté de chez Swann", "Le Temps retrouvé", "La Prisonnière"],
+    "correct_index": 1,
+    "explanation": "Du côté de chez Swann (1913) est le premier tome d'À la recherche du temps perdu, l'œuvre majeure de Marcel Proust."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel architecte a conçu la Sagrada Família à Barcelone ?",
+    "options": ["Le Corbusier", "Antoni Gaudí", "Oscar Niemeyer", "Frank Lloyd Wright"],
+    "correct_index": 1,
+    "explanation": "Antoni Gaudí a consacré les dernières années de sa vie à la Sagrada Família, basilique toujours en construction depuis 1882."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel écrivain français a reçu le prix Nobel de littérature en 1957 ?",
+    "options": ["Jean-Paul Sartre", "Albert Camus", "André Malraux", "André Gide"],
+    "correct_index": 1,
+    "explanation": "Albert Camus a reçu le prix Nobel de littérature en 1957 à l'âge de 44 ans, notamment pour L'Étranger et La Peste."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel peintre post-impressionniste s'est coupé une partie de l'oreille ?",
+    "options": ["Paul Cézanne", "Paul Gauguin", "Vincent van Gogh", "Henri de Toulouse-Lautrec"],
+    "correct_index": 2,
+    "explanation": "Vincent van Gogh s'est coupé une partie de l'oreille en décembre 1888 à Arles, lors d'une crise de démence."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Qui a écrit Les Fleurs du mal ?",
+    "options": ["Arthur Rimbaud", "Paul Verlaine", "Charles Baudelaire", "Stéphane Mallarmé"],
+    "correct_index": 2,
+    "explanation": "Charles Baudelaire a publié Les Fleurs du mal en 1857. Le recueil fut condamné pour outrage à la morale publique."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel opéra de Mozart raconte l'histoire d'un séducteur emporté aux enfers ?",
+    "options": ["La Flûte enchantée", "Les Noces de Figaro", "Don Giovanni", "Così fan tutte"],
+    "correct_index": 2,
+    "explanation": "Don Giovanni, créé en 1787 à Prague, raconte la chute du séducteur Don Juan, emporté par la statue du Commandeur."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel courant littéraire du XIXe siècle, porté par Zola, cherche à appliquer la méthode scientifique au roman ?",
+    "options": ["Le romantisme", "Le réalisme", "Le naturalisme", "Le symbolisme"],
+    "correct_index": 2,
+    "explanation": "Le naturalisme, théorisé par Émile Zola dans Le Roman expérimental (1880), vise à appliquer les méthodes scientifiques à la littérature."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel tableau de Delacroix représente une allégorie de la Révolution de Juillet 1830 ?",
+    "options": ["Le Radeau de la Méduse", "La Liberté guidant le peuple", "La Mort de Sardanapale", "Le Sacre de Napoléon"],
+    "correct_index": 1,
+    "explanation": "La Liberté guidant le peuple (1830) d'Eugène Delacroix est devenu un symbole de la République française et de la liberté."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quelle est la nationalité du dramaturge Anton Tchekhov, auteur de La Cerisaie ?",
+    "options": ["Polonaise", "Russe", "Tchèque", "Ukrainienne"],
+    "correct_index": 1,
+    "explanation": "Anton Tchekhov était un écrivain et dramaturge russe. La Cerisaie (1904) est sa dernière pièce, créée au Théâtre d'Art de Moscou."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel sculpteur italien a réalisé le David en marbre exposé à Florence ?",
+    "options": ["Donatello", "Le Bernin", "Michel-Ange", "Cellini"],
+    "correct_index": 2,
+    "explanation": "Michel-Ange a sculpté le David entre 1501 et 1504. Cette statue de plus de 4 mètres est exposée à la Galerie de l'Académie à Florence."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel poète français du XIXe siècle a écrit Le Bateau ivre à l'âge de 16 ans ?",
+    "options": ["Paul Verlaine", "Arthur Rimbaud", "Charles Baudelaire", "Gérard de Nerval"],
+    "correct_index": 1,
+    "explanation": "Arthur Rimbaud a écrit Le Bateau ivre en 1871, à seulement 16 ans. Il a cessé d'écrire de la poésie avant ses 21 ans."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel compositeur a écrit le Boléro, œuvre orchestrale célèbre pour sa répétition hypnotique ?",
+    "options": ["Claude Debussy", "Maurice Ravel", "Camille Saint-Saëns", "Gabriel Fauré"],
+    "correct_index": 1,
+    "explanation": "Maurice Ravel a composé le Boléro en 1928. Cette pièce repose sur un unique thème répété avec une orchestration croissante."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel roman d'Alexandre Dumas met en scène Athos, Porthos, Aramis et d'Artagnan ?",
+    "options": ["Le Comte de Monte-Cristo", "Les Trois Mousquetaires", "Le Vicomte de Bragelonne", "La Reine Margot"],
+    "correct_index": 1,
+    "explanation": "Les Trois Mousquetaires, publié en feuilleton en 1844, est l'un des romans d'aventures les plus célèbres de la littérature française."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel peintre est le chef de file du mouvement surréaliste et a peint La Persistance de la mémoire ?",
+    "options": ["René Magritte", "Max Ernst", "Salvador Dalí", "André Breton"],
+    "correct_index": 2,
+    "explanation": "Salvador Dalí a peint La Persistance de la mémoire en 1931, célèbre pour ses montres molles, devenues une icône du surréalisme."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quelle tragédie de Racine raconte l'amour interdit de Phèdre pour son beau-fils Hippolyte ?",
+    "options": ["Andromaque", "Phèdre", "Britannicus", "Bérénice"],
+    "correct_index": 1,
+    "explanation": "Phèdre, créée en 1677, est considérée comme le chef-d'œuvre de Racine et l'un des sommets de la tragédie classique française."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel architecte franco-suisse est connu pour la Cité radieuse de Marseille et la chapelle de Ronchamp ?",
+    "options": ["Hector Guimard", "Le Corbusier", "Jean Nouvel", "Auguste Perret"],
+    "correct_index": 1,
+    "explanation": "Le Corbusier (Charles-Édouard Jeanneret) est l'un des pionniers de l'architecture moderne, célèbre pour ses cinq points de l'architecture."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel compositeur autrichien, surnommé « le père de la symphonie », a composé plus de 100 symphonies ?",
+    "options": ["Wolfgang Amadeus Mozart", "Joseph Haydn", "Franz Schubert", "Anton Bruckner"],
+    "correct_index": 1,
+    "explanation": "Joseph Haydn a composé 104 symphonies et est considéré comme le père de la symphonie classique et du quatuor à cordes."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel roman de Gustave Flaubert raconte la vie et les désillusions d'une femme de médecin de province ?",
+    "options": ["L'Éducation sentimentale", "Salammbô", "Madame Bovary", "Bouvard et Pécuchet"],
+    "correct_index": 2,
+    "explanation": "Madame Bovary (1857) raconte l'histoire d'Emma Bovary et son insatisfaction chronique. Flaubert fut poursuivi pour immoralité à sa publication."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel chorégraphe russe a révolutionné le ballet au début du XXe siècle avec les Ballets russes ?",
+    "options": ["Marius Petipa", "Serge Diaghilev", "Rudolf Noureev", "George Balanchine"],
+    "correct_index": 1,
+    "explanation": "Serge Diaghilev a fondé les Ballets russes en 1909, compagnie qui a révolutionné la danse en collaborant avec Stravinsky, Picasso et Cocteau."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "medium",
+    "question": "Quel tableau de Théodore Géricault représente un naufrage célèbre survenu en 1816 ?",
+    "options": ["La Liberté guidant le peuple", "Le Radeau de la Méduse", "La Mort de Sardanapale", "Le Tres de Mayo"],
+    "correct_index": 1,
+    "explanation": "Le Radeau de la Méduse (1819) représente les survivants du naufrage de la frégate Méduse. Ce tableau est un manifeste du romantisme."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel compositeur français a écrit l'opéra Pelléas et Mélisande, inspiré de la pièce de Maeterlinck ?",
+    "options": ["Maurice Ravel", "Claude Debussy", "Gabriel Fauré", "Hector Berlioz"],
+    "correct_index": 1,
+    "explanation": "Claude Debussy a composé Pelléas et Mélisande, créé en 1902. C'est son unique opéra achevé et un chef-d'œuvre de l'opéra français."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel peintre italien du Caravage est connu pour son utilisation dramatique du clair-obscur, appelé ténébrisme ?",
+    "options": ["Le Titien", "Le Caravage", "Véronèse", "Le Tintoret"],
+    "correct_index": 1,
+    "explanation": "Le Caravage (Michelangelo Merisi) a révolutionné la peinture baroque par son usage radical du clair-obscur et son réalisme cru."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Dans quelle œuvre Dante parcourt-il l'Enfer, le Purgatoire et le Paradis ?",
+    "options": ["Le Décaméron", "La Divine Comédie", "Roland furieux", "La Vita nuova"],
+    "correct_index": 1,
+    "explanation": "La Divine Comédie, écrite par Dante Alighieri entre 1303 et 1321, est un poème épique en trois parties : Enfer, Purgatoire et Paradis."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel dramaturge irlandais, auteur de En attendant Godot, a reçu le prix Nobel de littérature en 1969 ?",
+    "options": ["Oscar Wilde", "Samuel Beckett", "James Joyce", "W. B. Yeats"],
+    "correct_index": 1,
+    "explanation": "Samuel Beckett, figure majeure du théâtre de l'absurde, a reçu le Nobel en 1969. En attendant Godot (1952) est son œuvre la plus célèbre."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel compositeur russe a provoqué un scandale avec la création du Sacre du printemps en 1913 ?",
+    "options": ["Sergueï Prokofiev", "Dmitri Chostakovitch", "Igor Stravinsky", "Nikolaï Rimski-Korsakov"],
+    "correct_index": 2,
+    "explanation": "Le Sacre du printemps d'Igor Stravinsky, chorégraphié par Nijinski, a provoqué une émeute lors de sa première au Théâtre des Champs-Élysées."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel mouvement littéraire, fondé par André Breton en 1924, s'inspire des travaux de Freud sur l'inconscient ?",
+    "options": ["Le dadaïsme", "L'existentialisme", "Le surréalisme", "Le futurisme"],
+    "correct_index": 2,
+    "explanation": "Le surréalisme, lancé par le Manifeste du surréalisme de Breton en 1924, explore l'inconscient et le rêve à travers l'écriture automatique."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel peintre flamand a peint Le Jardin des délices, triptyque exposé au musée du Prado ?",
+    "options": ["Pieter Bruegel l'Ancien", "Jan van Eyck", "Jérôme Bosch", "Hans Memling"],
+    "correct_index": 2,
+    "explanation": "Jérôme Bosch a peint Le Jardin des délices vers 1500. Ce triptyque énigmatique représente le Paradis, la Terre et l'Enfer."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quelle œuvre de Stéphane Mallarmé, poème novateur, commence par « Un coup de dés jamais n'abolira le hasard » ?",
+    "options": ["L'Après-midi d'un faune", "Hérodiade", "Un coup de dés jamais n'abolira le hasard", "Igitur"],
+    "correct_index": 2,
+    "explanation": "Un coup de dés jamais n'abolira le hasard (1897) est un poème révolutionnaire par sa disposition typographique sur la page."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel architecte italien a conçu la colonnade de la place Saint-Pierre de Rome ?",
+    "options": ["Filippo Brunelleschi", "Andrea Palladio", "Le Bernin", "Leon Battista Alberti"],
+    "correct_index": 2,
+    "explanation": "Le Bernin (Gian Lorenzo Bernini) a conçu la colonnade de la place Saint-Pierre entre 1656 et 1667, chef-d'œuvre de l'architecture baroque."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel roman de Louis-Ferdinand Céline, publié en 1932, est écrit dans un style oral révolutionnaire ?",
+    "options": ["Mort à crédit", "Voyage au bout de la nuit", "D'un château l'autre", "Guignol's Band"],
+    "correct_index": 1,
+    "explanation": "Voyage au bout de la nuit (1932) a bouleversé la littérature française par son style parlé et sa vision nihiliste du monde."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel peintre est considéré comme le précurseur du cubisme avec ses recherches sur les formes géométriques ?",
+    "options": ["Paul Cézanne", "Georges Seurat", "Paul Gauguin", "Édouard Manet"],
+    "correct_index": 0,
+    "explanation": "Paul Cézanne est considéré comme le père de l'art moderne. Ses recherches sur la simplification des formes ont directement inspiré Picasso et Braque."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quelle danseuse et chorégraphe allemande est la fondatrice de la danse-théâtre (Tanztheater) ?",
+    "options": ["Martha Graham", "Mary Wigman", "Pina Bausch", "Isadora Duncan"],
+    "correct_index": 2,
+    "explanation": "Pina Bausch a fondé le Tanztheater Wuppertal en 1973 et a révolutionné la danse contemporaine en fusionnant danse, théâtre et émotion."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel compositeur a écrit L'Art de la fugue, œuvre inachevée considérée comme un sommet du contrepoint ?",
+    "options": ["Georg Friedrich Haendel", "Jean-Sébastien Bach", "Antonio Vivaldi", "Domenico Scarlatti"],
+    "correct_index": 1,
+    "explanation": "Jean-Sébastien Bach a composé L'Art de la fugue dans les dernières années de sa vie. L'œuvre est restée inachevée à sa mort en 1750."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel écrivain colombien, auteur de Cent ans de solitude, est associé au réalisme magique ?",
+    "options": ["Jorge Luis Borges", "Gabriel García Márquez", "Mario Vargas Llosa", "Julio Cortázar"],
+    "correct_index": 1,
+    "explanation": "Gabriel García Márquez a publié Cent ans de solitude en 1967, roman fondateur du réalisme magique. Il a reçu le prix Nobel en 1982."
+  },
+  {
+    "category": "Arts & Littérature",
+    "difficulty": "hard",
+    "question": "Quel peintre a réalisé les fresques de la chapelle Sixtine, notamment Le Jugement dernier ?",
+    "options": ["Raphaël", "Le Pérugin", "Michel-Ange", "Léonard de Vinci"],
+    "correct_index": 2,
+    "explanation": "Michel-Ange a peint le plafond de la chapelle Sixtine entre 1508 et 1512, puis Le Jugement dernier sur le mur de l'autel entre 1536 et 1541."
+  }
+]

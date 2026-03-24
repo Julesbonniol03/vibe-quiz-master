@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel acteur incarne Jack Sparrow dans la saga 'Pirates des Caraïbes' ?",
+    "options": ["Brad Pitt", "Johnny Depp", "Orlando Bloom", "Leonardo DiCaprio"],
+    "correct_index": 1,
+    "explanation": "Johnny Depp interprète le capitaine Jack Sparrow depuis le premier film en 2003, un rôle devenu iconique de sa carrière."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel est le nom du personnage principal de la série 'Breaking Bad' ?",
+    "options": ["Jesse Pinkman", "Hank Schrader", "Walter White", "Gustavo Fring"],
+    "correct_index": 2,
+    "explanation": "Walter White, interprété par Bryan Cranston, est un professeur de chimie qui se transforme en baron de la drogue."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel jeu vidéo met en scène un plombier nommé Mario ?",
+    "options": ["Sonic the Hedgehog", "Super Mario Bros.", "Donkey Kong Country", "Mega Man"],
+    "correct_index": 1,
+    "explanation": "Super Mario Bros., créé par Nintendo en 1985, est l'un des jeux vidéo les plus vendus de tous les temps."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quelle chanteuse est surnommée 'Queen Bey' ?",
+    "options": ["Rihanna", "Beyoncé", "Adele", "Lady Gaga"],
+    "correct_index": 1,
+    "explanation": "Beyoncé Knowles est surnommée 'Queen Bey' par ses fans, un jeu de mots entre son prénom et le mot 'queen' (reine)."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Dans quel film trouve-t-on la réplique 'Je suis ton père' ?",
+    "options": ["Star Trek", "Star Wars : L'Empire contre-attaque", "Retour vers le futur", "Matrix"],
+    "correct_index": 1,
+    "explanation": "Cette réplique culte est prononcée par Dark Vador à Luke Skywalker dans 'L'Empire contre-attaque' (1980)."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel réseau social est connu pour ses vidéos courtes et ses danses virales ?",
+    "options": ["Facebook", "Twitter", "TikTok", "LinkedIn"],
+    "correct_index": 2,
+    "explanation": "TikTok, lancé internationalement en 2018, est devenu le réseau social phare des vidéos courtes et tendances virales."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel groupe de K-pop a sorti l'album 'Map of the Soul: 7' ?",
+    "options": ["BLACKPINK", "EXO", "BTS", "TWICE"],
+    "correct_index": 2,
+    "explanation": "BTS (Bangtan Sonyeondan) a sorti cet album en 2020, devenant l'un des groupes les plus populaires au monde."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel est le nom du sorcier à la cicatrice en forme d'éclair ?",
+    "options": ["Gandalf", "Harry Potter", "Dumbledore", "Merlin"],
+    "correct_index": 1,
+    "explanation": "Harry Potter, créé par J.K. Rowling, porte une cicatrice en forme d'éclair sur le front, marque du sort lancé par Voldemort."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel personnage de dessin animé vit dans un ananas au fond de l'océan ?",
+    "options": ["Nemo", "Bob l'éponge", "Patrick Étoile", "Ariel"],
+    "correct_index": 1,
+    "explanation": "Bob l'éponge (SpongeBob SquarePants) habite dans un ananas à Bikini Bottom, une ville sous-marine fictive."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel jeu de battle royale gratuit a été développé par Epic Games ?",
+    "options": ["PUBG", "Apex Legends", "Fortnite", "Call of Duty: Warzone"],
+    "correct_index": 2,
+    "explanation": "Fortnite Battle Royale, lancé en 2017, est devenu un phénomène culturel mondial avec ses danses et événements en jeu."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quelle saga cinématographique met en scène les Avengers ?",
+    "options": ["DC Extended Universe", "Marvel Cinematic Universe", "X-Men", "Transformers"],
+    "correct_index": 1,
+    "explanation": "Le Marvel Cinematic Universe (MCU) a rassemblé Iron Man, Thor, Captain America et d'autres héros dans la saga des Avengers."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel chanteur est connu sous le surnom 'The King of Pop' ?",
+    "options": ["Elvis Presley", "Prince", "Michael Jackson", "Freddie Mercury"],
+    "correct_index": 2,
+    "explanation": "Michael Jackson a reçu ce titre grâce à ses albums révolutionnaires comme 'Thriller' et ses performances scéniques légendaires."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel est le nom de la princesse dans le film d'animation 'La Reine des Neiges' ?",
+    "options": ["Raiponce", "Elsa", "Moana", "Belle"],
+    "correct_index": 1,
+    "explanation": "Elsa est la reine d'Arendelle dotée du pouvoir de créer de la glace et de la neige dans le film Disney de 2013."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quelle plateforme de streaming a produit la série 'Stranger Things' ?",
+    "options": ["Amazon Prime Video", "Disney+", "Netflix", "HBO Max"],
+    "correct_index": 2,
+    "explanation": "Netflix a produit 'Stranger Things' dès 2016, une série devenue un phénomène culturel mêlant horreur et nostalgie des années 80."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel mème internet représente un chien de race Shiba Inu ?",
+    "options": ["Grumpy Cat", "Doge", "Nyan Cat", "Keyboard Cat"],
+    "correct_index": 1,
+    "explanation": "Le mème Doge, apparu en 2013, montre un Shiba Inu avec des légendes en Comic Sans, et a inspiré la cryptomonnaie Dogecoin."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel réalisateur a dirigé le film 'Inception' en 2010 ?",
+    "options": ["Steven Spielberg", "Christopher Nolan", "Ridley Scott", "Denis Villeneuve"],
+    "correct_index": 1,
+    "explanation": "Christopher Nolan a réalisé 'Inception' avec Leonardo DiCaprio, un thriller sur les rêves imbriqués."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Dans la série 'Game of Thrones', quelle maison a pour devise 'L'hiver vient' ?",
+    "options": ["Lannister", "Targaryen", "Stark", "Baratheon"],
+    "correct_index": 2,
+    "explanation": "La maison Stark de Winterfell a pour devise 'Winter is Coming' (L'hiver vient), un avertissement constant sur les dangers à venir."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel jeu vidéo de 2020 se déroule dans Night City, une mégapole dystopique ?",
+    "options": ["Deus Ex: Mankind Divided", "Cyberpunk 2077", "Watch Dogs: Legion", "Detroit: Become Human"],
+    "correct_index": 1,
+    "explanation": "Cyberpunk 2077, développé par CD Projekt Red, se déroule dans Night City, une ville futuriste de Californie."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel artiste a chanté 'Shape of You', l'un des titres les plus écoutés sur Spotify ?",
+    "options": ["Justin Bieber", "Ed Sheeran", "Bruno Mars", "The Weeknd"],
+    "correct_index": 1,
+    "explanation": "Ed Sheeran a sorti 'Shape of You' en 2017 sur l'album '÷' (Divide), battant de nombreux records de streaming."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel film d'animation Pixar met en scène des émotions personnifiées dans la tête d'une enfant ?",
+    "options": ["Coco", "Vice-Versa", "Soul", "Monstres & Cie"],
+    "correct_index": 1,
+    "explanation": "Vice-Versa (Inside Out), sorti en 2015, personnifie Joie, Tristesse, Colère, Peur et Dégoût dans l'esprit de la jeune Riley."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel YouTubeur suédois était le créateur de contenu le plus suivi au monde jusqu'en 2019 ?",
+    "options": ["MrBeast", "PewDiePie", "Markiplier", "Jacksepticeye"],
+    "correct_index": 1,
+    "explanation": "PewDiePie (Felix Kjellberg) a été le YouTubeur individuel le plus suivi pendant des années avant d'être dépassé par d'autres chaînes."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel est le vrai nom de l'artiste musical connu sous le nom de 'The Weeknd' ?",
+    "options": ["Abel Tesfaye", "Aubrey Graham", "Robyn Fenty", "Marshall Mathers"],
+    "correct_index": 0,
+    "explanation": "Abel Tesfaye, d'origine éthiopienne et canadienne, a choisi le nom de scène 'The Weeknd' au début de sa carrière."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Dans quel jeu vidéo les joueurs construisent-ils des structures avec des blocs cubiques dans un monde ouvert ?",
+    "options": ["Roblox", "Terraria", "Minecraft", "Lego Worlds"],
+    "correct_index": 2,
+    "explanation": "Minecraft, créé par Markus 'Notch' Persson et sorti en 2011, est le jeu vidéo le plus vendu de l'histoire."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle série sud-coréenne de Netflix a battu des records de visionnage en 2021 ?",
+    "options": ["Squid Game", "Kingdom", "All of Us Are Dead", "Sweet Home"],
+    "correct_index": 0,
+    "explanation": "Squid Game est devenue la série la plus regardée de l'histoire de Netflix avec 1,65 milliard d'heures de visionnage en 28 jours."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel groupe de rock britannique a sorti l'album 'A Head Full of Dreams' ?",
+    "options": ["Radiohead", "Oasis", "Coldplay", "Muse"],
+    "correct_index": 2,
+    "explanation": "Coldplay a sorti 'A Head Full of Dreams' en 2015, un album pop-rock coloré porté par le single 'Adventure of a Lifetime'."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel personnage de fiction est le directeur de Poudlard dans Harry Potter ?",
+    "options": ["Severus Rogue", "Albus Dumbledore", "Minerva McGonagall", "Rubeus Hagrid"],
+    "correct_index": 1,
+    "explanation": "Albus Dumbledore est le directeur emblématique de l'école de sorcellerie Poudlard durant la majeure partie de la saga."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel film a remporté l'Oscar du meilleur film en 2020, devenant le premier film non anglophone à le faire ?",
+    "options": ["1917", "Joker", "Parasite", "Once Upon a Time in Hollywood"],
+    "correct_index": 2,
+    "explanation": "Parasite de Bong Joon-ho a fait l'histoire en étant le premier film en langue étrangère à remporter l'Oscar du meilleur film."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel est le nom du monde virtuel dans le film 'Ready Player One' de Steven Spielberg ?",
+    "options": ["La Matrice", "L'OASIS", "Le Metaverse", "Tron"],
+    "correct_index": 1,
+    "explanation": "L'OASIS (Ontologically Anthropocentric Sensory Immersive Simulation) est le monde virtuel créé par James Halliday dans le film."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel rappeur américain a sorti l'album 'To Pimp a Butterfly' en 2015 ?",
+    "options": ["J. Cole", "Drake", "Kendrick Lamar", "Kanye West"],
+    "correct_index": 2,
+    "explanation": "Kendrick Lamar a sorti cet album acclamé par la critique, mêlant hip-hop, jazz et funk avec des thèmes sociaux forts."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel format de mème montre un homme regardant une autre femme tandis que sa copine le fusille du regard ?",
+    "options": ["Distracted Boyfriend", "Drake Hotline Bling", "Success Kid", "Bad Luck Brian"],
+    "correct_index": 0,
+    "explanation": "Le mème 'Distracted Boyfriend' provient d'une photo de banque d'images prise par Antonio Guillem, devenue virale en 2017."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle franchise de jeux vidéo japonaise met en scène des combats entre Ryu, Ken et Chun-Li ?",
+    "options": ["Tekken", "Mortal Kombat", "Street Fighter", "King of Fighters"],
+    "correct_index": 2,
+    "explanation": "Street Fighter, créé par Capcom en 1987, est l'un des jeux de combat les plus emblématiques avec ses personnages iconiques."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel acteur interprète le Joker dans le film éponyme de 2019 ?",
+    "options": ["Heath Ledger", "Jared Leto", "Joaquin Phoenix", "Jack Nicholson"],
+    "correct_index": 2,
+    "explanation": "Joaquin Phoenix a remporté l'Oscar du meilleur acteur pour son interprétation d'Arthur Fleck dans 'Joker' de Todd Phillips."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel terme désigne le fait de regarder plusieurs épisodes d'une série à la suite ?",
+    "options": ["Zapping", "Binge-watching", "Channel surfing", "Speed-watching"],
+    "correct_index": 1,
+    "explanation": "Le binge-watching est devenu courant avec les plateformes de streaming qui mettent à disposition des saisons entières d'un coup."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel jeu mobile a provoqué un engouement mondial en 2016 en utilisant la réalité augmentée ?",
+    "options": ["Candy Crush Saga", "Pokémon GO", "Clash Royale", "Angry Birds"],
+    "correct_index": 1,
+    "explanation": "Pokémon GO de Niantic a révolutionné le jeu mobile en incitant les joueurs à explorer le monde réel pour capturer des Pokémon."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle chanteuse a interprété 'Bad Guy', devenu un tube mondial en 2019 ?",
+    "options": ["Dua Lipa", "Billie Eilish", "Ariana Grande", "Halsey"],
+    "correct_index": 1,
+    "explanation": "Billie Eilish a sorti 'Bad Guy' à seulement 17 ans sur son album 'When We All Fall Asleep, Where Do We Go?'."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel jeu indépendant de 2015 propose un système où le joueur peut épargner ou tuer tous les monstres qu'il rencontre ?",
+    "options": ["Celeste", "Hollow Knight", "Undertale", "Hades"],
+    "correct_index": 2,
+    "explanation": "Undertale, créé par Toby Fox, est célèbre pour son système de combat moral où chaque ennemi peut être épargné via la diplomatie."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel est le nom du protocole qui a transformé les images de singes en objets de collection numériques en 2021 ?",
+    "options": ["Bitcoin", "NFT", "DeFi", "DAO"],
+    "correct_index": 1,
+    "explanation": "Les NFT (Non-Fungible Tokens) ont permis la création du Bored Ape Yacht Club et d'autres collections d'art numérique sur la blockchain."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel réalisateur japonais a réalisé le film d'animation 'Your Name' (Kimi no Na wa) en 2016 ?",
+    "options": ["Hayao Miyazaki", "Makoto Shinkai", "Mamoru Hosoda", "Satoshi Kon"],
+    "correct_index": 1,
+    "explanation": "Makoto Shinkai a réalisé 'Your Name', devenu le film d'animation japonais le plus rentable au moment de sa sortie."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel album de Radiohead sorti en 2000 est souvent considéré comme un chef-d'œuvre de rock expérimental ?",
+    "options": ["OK Computer", "Kid A", "In Rainbows", "Amnesiac"],
+    "correct_index": 1,
+    "explanation": "Kid A a marqué un tournant radical pour Radiohead, abandonnant le rock traditionnel pour l'électronique et l'expérimentation sonore."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel streamer sur Twitch a battu le record de spectateurs simultanés en 2021 lors d'un événement caritatif ?",
+    "options": ["Ninja", "xQc", "Ibai Llanos", "Shroud"],
+    "correct_index": 2,
+    "explanation": "Ibai Llanos, streamer espagnol, a rassemblé plus de 3,3 millions de spectateurs simultanés lors de 'La Velada del Año'."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Dans la série 'Black Mirror', quel épisode interactif permettait au spectateur de faire des choix pour le personnage principal ?",
+    "options": ["White Bear", "Bandersnatch", "San Junipero", "Nosedive"],
+    "correct_index": 1,
+    "explanation": "Bandersnatch (2018) était un film interactif sur Netflix où le spectateur choisissait les actions du protagoniste Stefan Butler."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel compositeur japonais a créé la musique de la série de jeux vidéo 'Final Fantasy' ?",
+    "options": ["Koji Kondo", "Nobuo Uematsu", "Yoko Shimomura", "Akira Yamaoka"],
+    "correct_index": 1,
+    "explanation": "Nobuo Uematsu a composé la musique de la majorité des jeux Final Fantasy, dont des thèmes emblématiques comme 'One-Winged Angel'."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel phénomène internet de 2021 a vu des utilisateurs de Reddit faire monter en flèche l'action GameStop ?",
+    "options": ["r/CryptoCurrency", "r/WallStreetBets", "r/Investing", "r/StockMarket"],
+    "correct_index": 1,
+    "explanation": "Le subreddit r/WallStreetBets a coordonné un achat massif d'actions GameStop, provoquant un 'short squeeze' historique contre les fonds spéculatifs."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel film de David Lynch est considéré comme un classique du cinéma surréaliste avec sa scène de diner terrifiante ?",
+    "options": ["Blue Velvet", "Mulholland Drive", "Eraserhead", "Lost Highway"],
+    "correct_index": 1,
+    "explanation": "Mulholland Drive (2001) contient la célèbre scène du diner Winkie's et est régulièrement cité comme l'un des meilleurs films du XXIe siècle."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel jeu développé par FromSoftware a remporté le Game Award du jeu de l'année en 2022 ?",
+    "options": ["Sekiro: Shadows Die Twice", "Dark Souls III", "Elden Ring", "Bloodborne"],
+    "correct_index": 2,
+    "explanation": "Elden Ring, développé en collaboration avec George R.R. Martin pour l'univers, a remporté le GOTY 2022 aux Game Awards."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel artiste a popularisé le genre musical 'Vaporwave' souvent associé à l'esthétique internet rétro ?",
+    "options": ["Oneohtrix Point Never", "Macintosh Plus", "James Ferraro", "Blank Banshee"],
+    "correct_index": 1,
+    "explanation": "Macintosh Plus (Vektroid) a créé l'album 'Floral Shoppe' en 2011, dont le titre 'リサフランク420' est devenu l'hymne du Vaporwave."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel terme désigne la pratique de diffuser en direct sa partie de jeu vidéo sur internet ?",
+    "options": ["Modding", "Streaming", "Speedrunning", "Cosplaying"],
+    "correct_index": 1,
+    "explanation": "Le streaming de jeux vidéo s'est démocratisé grâce à des plateformes comme Twitch et YouTube Gaming depuis le début des années 2010."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel film de Denis Villeneuve sorti en 2021 est l'adaptation d'un roman de Frank Herbert ?",
+    "options": ["Arrival", "Blade Runner 2049", "Dune", "Sicario"],
+    "correct_index": 2,
+    "explanation": "Dune (2021) adapte la première partie du roman de science-fiction de Frank Herbert, avec Timothée Chalamet dans le rôle de Paul Atréides."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel créateur de contenu français est connu pour ses analyses cinématographiques sur YouTube sous le nom 'Le Fossoyeur de Films' ?",
+    "options": ["Cyprien", "François Theurel", "Squeezie", "Joueur du Grenier"],
+    "correct_index": 1,
+    "explanation": "François Theurel, alias Le Fossoyeur de Films, propose des analyses approfondies du cinéma sur sa chaîne YouTube depuis 2012."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel jeu de cartes numérique développé par Riot Games est basé sur l'univers de League of Legends ?",
+    "options": ["Hearthstone", "Gwent", "Legends of Runeterra", "Magic: The Gathering Arena"],
+    "correct_index": 2,
+    "explanation": "Legends of Runeterra, sorti en 2020, utilise les champions et l'univers de Runeterra déjà présents dans League of Legends."
+  }
+]
