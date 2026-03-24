@@ -149,10 +149,10 @@ export const questions: Question[] = [
     explanation: "Le Hertz (Hz) est l'unité SI de fréquence, représentant un cycle par seconde.",
   },
 
-  // === ARTS ===
+  // === ARTS & LITTÉRATURE ===
   {
     id: 17,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "easy",
     question: "Qui a peint la Joconde ?",
     options: ["Michelange", "Raphaël", "Léonard de Vinci", "Botticelli"],
@@ -161,7 +161,7 @@ export const questions: Question[] = [
   },
   {
     id: 18,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "medium",
     question: "Quel mouvement artistique Picasso a-t-il co-fondé ?",
     options: ["Impressionnisme", "Surréalisme", "Cubisme", "Expressionnisme"],
@@ -170,7 +170,7 @@ export const questions: Question[] = [
   },
   {
     id: 19,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "medium",
     question: "Dans quelle ville se trouve le musée du Louvre ?",
     options: ["Rome", "Londres", "Madrid", "Paris"],
@@ -179,7 +179,7 @@ export const questions: Question[] = [
   },
   {
     id: 20,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "hard",
     question: "Qui a composé la symphonie n°9 en ré mineur ?",
     options: ["Mozart", "Bach", "Beethoven", "Schubert"],
@@ -188,7 +188,7 @@ export const questions: Question[] = [
   },
   {
     id: 21,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "easy",
     question: "Quel auteur a écrit 'Les Misérables' ?",
     options: ["Émile Zola", "Victor Hugo", "Gustave Flaubert", "Alexandre Dumas"],
@@ -197,7 +197,7 @@ export const questions: Question[] = [
   },
   {
     id: 22,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "hard",
     question: "Quel est le vrai nom de Molière ?",
     options: ["Jean-Baptiste Poquelin", "François-Marie Arouet", "Pierre-Augustin Caron", "Nicolas Boileau"],
@@ -206,7 +206,7 @@ export const questions: Question[] = [
   },
   {
     id: 23,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "medium",
     question: "Quel style architectural caractérise la cathédrale Notre-Dame de Paris ?",
     options: ["Roman", "Baroque", "Gothique", "Renaissance"],
@@ -215,7 +215,7 @@ export const questions: Question[] = [
   },
   {
     id: 24,
-    category: "Arts",
+    category: "Arts & Littérature",
     difficulty: "easy",
     question: "Quel artiste néerlandais est célèbre pour 'La Nuit étoilée' ?",
     options: ["Rembrandt", "Vermeer", "Van Gogh", "Mondrian"],
@@ -311,16 +311,52 @@ export const categoryColors: Record<string, { bg: string; text: string; border: 
     border: "border-cyan-500/30",
     icon: "🔬",
   },
-  Arts: {
-    bg: "bg-purple-500/20",
-    text: "text-purple-400",
-    border: "border-purple-500/30",
-    icon: "🎨",
+  Géographie: {
+    bg: "bg-blue-500/20",
+    text: "text-blue-400",
+    border: "border-blue-500/30",
+    icon: "🌍",
+  },
+  "Pop Culture": {
+    bg: "bg-pink-500/20",
+    text: "text-pink-400",
+    border: "border-pink-500/30",
+    icon: "🎬",
   },
   Sport: {
     bg: "bg-green-500/20",
     text: "text-green-400",
     border: "border-green-500/30",
+    icon: "⚡",
+  },
+  "Arts & Littérature": {
+    bg: "bg-purple-500/20",
+    text: "text-purple-400",
+    border: "border-purple-500/30",
+    icon: "🎨",
+  },
+  "Nature & Animaux": {
+    bg: "bg-emerald-500/20",
+    text: "text-emerald-400",
+    border: "border-emerald-500/30",
+    icon: "🌿",
+  },
+  Technologie: {
+    bg: "bg-indigo-500/20",
+    text: "text-indigo-400",
+    border: "border-indigo-500/30",
+    icon: "💻",
+  },
+  Gastronomie: {
+    bg: "bg-orange-500/20",
+    text: "text-orange-400",
+    border: "border-orange-500/30",
+    icon: "🍽️",
+  },
+  "Mythologie & Religions": {
+    bg: "bg-violet-500/20",
+    text: "text-violet-400",
+    border: "border-violet-500/30",
     icon: "⚡",
   },
 };

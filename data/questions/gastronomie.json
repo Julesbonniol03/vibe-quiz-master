@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel est l'ingrédient principal du guacamole ?",
+    "options": ["Tomate", "Avocat", "Poivron", "Concombre"],
+    "correct_index": 1,
+    "explanation": "Le guacamole est une préparation mexicaine à base d'avocat écrasé, agrémenté de citron vert, de coriandre et de piment."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "De quel pays le sushi est-il originaire ?",
+    "options": ["Chine", "Corée du Sud", "Japon", "Thaïlande"],
+    "correct_index": 2,
+    "explanation": "Le sushi est un plat emblématique de la cuisine japonaise, composé de riz vinaigré accompagné de poisson cru ou d'autres garnitures."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel fromage est traditionnellement utilisé sur une pizza Margherita ?",
+    "options": ["Gruyère", "Cheddar", "Mozzarella", "Parmesan"],
+    "correct_index": 2,
+    "explanation": "La pizza Margherita, créée à Naples, est garnie de tomate, de mozzarella et de basilic, représentant les couleurs du drapeau italien."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel est le principal ingrédient du houmous ?",
+    "options": ["Lentilles", "Pois chiches", "Haricots blancs", "Fèves"],
+    "correct_index": 1,
+    "explanation": "Le houmous est une spécialité du Moyen-Orient préparée à base de purée de pois chiches, de tahini, de citron et d'ail."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Comment appelle-t-on la pâte feuilletée en forme de croissant de lune ?",
+    "options": ["Brioche", "Croissant", "Pain au lait", "Chausson"],
+    "correct_index": 1,
+    "explanation": "Le croissant, viennoiserie emblématique de la France, tire son nom de sa forme en croissant de lune. Il est réalisé à partir de pâte feuilletée levée."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quelle épice donne sa couleur jaune au curry ?",
+    "options": ["Paprika", "Safran", "Curcuma", "Gingembre"],
+    "correct_index": 2,
+    "explanation": "Le curcuma, aussi appelé « safran des Indes », est l'épice qui confère au curry sa couleur jaune caractéristique grâce à la curcumine."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel plat italien est composé de pâtes, d'œufs, de guanciale et de pecorino ?",
+    "options": ["Bolognaise", "Carbonara", "Amatriciana", "Cacio e pepe"],
+    "correct_index": 1,
+    "explanation": "La carbonara est un plat romain traditionnel préparé avec des pâtes, du guanciale (joue de porc), des œufs et du pecorino romano."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "De quel fruit est tiré le vin ?",
+    "options": ["Pomme", "Cerise", "Raisin", "Prune"],
+    "correct_index": 2,
+    "explanation": "Le vin est obtenu par la fermentation alcoolique du jus de raisin. La pomme donne le cidre, la cerise le kirsch et la prune l'eau-de-vie de prune."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel est le plat national du Maroc, cuit dans un récipient en terre cuite conique ?",
+    "options": ["Couscous", "Tajine", "Pastilla", "Harira"],
+    "correct_index": 1,
+    "explanation": "Le tajine est un ragoût mijoté dans un plat en terre cuite à couvercle conique du même nom, permettant une cuisson lente à l'étouffée."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quelle boisson italienne à base d'expresso et de lait mousseux est servie dans une grande tasse ?",
+    "options": ["Ristretto", "Cappuccino", "Americano", "Macchiato"],
+    "correct_index": 1,
+    "explanation": "Le cappuccino est composé à parts égales d'expresso, de lait chaud et de mousse de lait. Son nom vient de la couleur des robes des moines capucins."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel type de pâte est utilisé pour faire des gnocchis italiens traditionnels ?",
+    "options": ["Pâte de blé dur", "Pâte de pomme de terre", "Pâte de riz", "Pâte brisée"],
+    "correct_index": 1,
+    "explanation": "Les gnocchis traditionnels italiens sont préparés à base de pommes de terre écrasées mélangées à de la farine et des œufs."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel condiment japonais vert et très piquant accompagne souvent les sushis ?",
+    "options": ["Gingembre", "Wasabi", "Miso", "Ponzu"],
+    "correct_index": 1,
+    "explanation": "Le wasabi est une plante japonaise dont la racine râpée produit une pâte verte au goût très piquant, traditionnellement servie avec les sushis."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel est l'ingrédient de base de la paella espagnole ?",
+    "options": ["Pâtes", "Riz", "Quinoa", "Boulgour"],
+    "correct_index": 1,
+    "explanation": "La paella est un plat originaire de Valence à base de riz, cuit dans une large poêle avec du safran, des légumes et diverses viandes ou fruits de mer."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Comment s'appelle le dessert français composé de choux garnis de crème et nappés de chocolat ?",
+    "options": ["Éclair", "Profiterole", "Religieuse", "Paris-Brest"],
+    "correct_index": 1,
+    "explanation": "Les profiteroles sont de petits choux fourrés de crème glacée ou de crème pâtissière, nappés de sauce au chocolat chaud."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "easy",
+    "question": "Quel alcool entre dans la composition d'un mojito ?",
+    "options": ["Vodka", "Tequila", "Rhum", "Gin"],
+    "correct_index": 2,
+    "explanation": "Le mojito est un cocktail cubain composé de rhum blanc, de citron vert, de menthe fraîche, de sucre et d'eau gazeuse."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel chef français est célèbre pour avoir codifié la cuisine française et écrit « Le Guide culinaire » ?",
+    "options": ["Paul Bocuse", "Auguste Escoffier", "Antonin Carême", "Joël Robuchon"],
+    "correct_index": 1,
+    "explanation": "Auguste Escoffier (1846-1935) a modernisé et codifié la haute cuisine française. Son ouvrage « Le Guide culinaire » reste une référence incontournable."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quelle région française produit le champagne ?",
+    "options": ["Bourgogne", "Alsace", "Champagne", "Loire"],
+    "correct_index": 2,
+    "explanation": "Le champagne est exclusivement produit dans la région Champagne, au nord-est de la France. C'est une appellation d'origine contrôlée strictement protégée."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel est le nom de la technique de cuisson qui consiste à saisir un aliment à feu vif puis à le cuire lentement dans un liquide ?",
+    "options": ["Pocher", "Braiser", "Blanchir", "Étuver"],
+    "correct_index": 1,
+    "explanation": "Le braisage consiste à saisir un aliment à haute température puis à le cuire lentement dans un liquide en récipient fermé, ce qui attendrit les viandes."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel pays est le premier producteur mondial de café ?",
+    "options": ["Colombie", "Vietnam", "Éthiopie", "Brésil"],
+    "correct_index": 3,
+    "explanation": "Le Brésil est le premier producteur mondial de café depuis plus de 150 ans, fournissant environ un tiers de la production mondiale."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel plat thaïlandais est une soupe épicée aux crevettes à base de citronnelle et de galanga ?",
+    "options": ["Pad thaï", "Tom yum", "Som tam", "Massaman"],
+    "correct_index": 1,
+    "explanation": "Le tom yum (ou tom yam) est une soupe thaïlandaise aigre et épicée, aromatisée à la citronnelle, au galanga, aux feuilles de combava et au piment."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel est le cépage principal du vin de Bordeaux rouge sur la rive droite (Saint-Émilion, Pomerol) ?",
+    "options": ["Cabernet Sauvignon", "Pinot Noir", "Merlot", "Syrah"],
+    "correct_index": 2,
+    "explanation": "Le Merlot domine les assemblages de la rive droite de Bordeaux, contrairement à la rive gauche où le Cabernet Sauvignon prédomine."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel plat indien est un pain plat cuit dans un four tandoor ?",
+    "options": ["Chapati", "Naan", "Paratha", "Roti"],
+    "correct_index": 1,
+    "explanation": "Le naan est un pain levé cuit contre les parois brûlantes d'un four tandoor en argile, traditionnel de la cuisine indienne du Nord."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel est le nom du couteau japonais à lame très fine utilisé pour trancher le poisson cru ?",
+    "options": ["Santoku", "Yanagiba", "Deba", "Nakiri"],
+    "correct_index": 1,
+    "explanation": "Le yanagiba est un couteau japonais à longue lame effilée et tranchante, spécialement conçu pour découper le poisson cru en sashimi."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "De quel pays le kimchi est-il un plat traditionnel ?",
+    "options": ["Japon", "Chine", "Corée du Sud", "Vietnam"],
+    "correct_index": 2,
+    "explanation": "Le kimchi est un mets fermenté coréen à base de chou chinois et de piment, inscrit au patrimoine immatériel de l'UNESCO."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quelle est la différence entre le prosciutto crudo et le prosciutto cotto ?",
+    "options": ["L'un est de porc, l'autre de bœuf", "L'un est cru séché, l'autre est cuit", "L'un est fumé, l'autre ne l'est pas", "L'un est italien, l'autre espagnol"],
+    "correct_index": 1,
+    "explanation": "Le prosciutto crudo est un jambon cru séché à l'air (comme le jambon de Parme), tandis que le prosciutto cotto est un jambon cuit."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Combien d'étoiles au maximum un restaurant peut-il recevoir au Guide Michelin ?",
+    "options": ["2", "3", "4", "5"],
+    "correct_index": 1,
+    "explanation": "Le Guide Michelin attribue au maximum 3 étoiles, la distinction suprême signifiant « une cuisine exceptionnelle, vaut le voyage »."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel type de riz est utilisé pour préparer un risotto italien ?",
+    "options": ["Riz basmati", "Riz arborio", "Riz thaï", "Riz complet"],
+    "correct_index": 1,
+    "explanation": "Le riz arborio (ou carnaroli) est un riz à grain rond riche en amidon, ce qui donne au risotto sa texture crémeuse caractéristique."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel est le nom de la sauce japonaise à base de soja fermenté utilisée comme condiment universel ?",
+    "options": ["Mirin", "Ponzu", "Shoyu", "Dashi"],
+    "correct_index": 2,
+    "explanation": "Le shoyu est la sauce soja japonaise, obtenue par fermentation de graines de soja et de blé. Elle existe en versions claire (usukuchi) et foncée (koikuchi)."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel dessert autrichien est un gâteau au chocolat avec une couche de confiture d'abricot ?",
+    "options": ["Forêt-Noire", "Linzer Torte", "Sachertorte", "Strudel"],
+    "correct_index": 2,
+    "explanation": "La Sachertorte a été créée en 1832 par Franz Sacher à Vienne. C'est un gâteau au chocolat dense avec une fine couche de confiture d'abricot et un glaçage chocolat."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel fromage français à pâte persillée est affiné dans les caves de Roquefort-sur-Soulzon ?",
+    "options": ["Bleu d'Auvergne", "Fourme d'Ambert", "Roquefort", "Saint-Agur"],
+    "correct_index": 2,
+    "explanation": "Le Roquefort est un fromage au lait cru de brebis, affiné dans les caves naturelles des falaises du Combalou à Roquefort-sur-Soulzon."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel plat péruvien consiste en du poisson cru mariné dans du jus d'agrumes ?",
+    "options": ["Causa", "Ceviche", "Lomo saltado", "Anticucho"],
+    "correct_index": 1,
+    "explanation": "Le ceviche est un plat emblématique du Pérou où le poisson cru est « cuit » par l'acidité du citron vert, accompagné d'oignon rouge et de piment."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quelle est la base aromatique classique de la cuisine française appelée « mirepoix » ?",
+    "options": ["Oignon, ail, tomate", "Carotte, oignon, céleri", "Poireau, carotte, navet", "Échalote, thym, laurier"],
+    "correct_index": 1,
+    "explanation": "La mirepoix est un mélange de carotte, oignon et céleri coupés en dés, utilisé comme base aromatique pour les fonds, sauces et braisages."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel spiritueux mexicain est produit exclusivement à partir de l'agave bleu ?",
+    "options": ["Mezcal", "Tequila", "Pulque", "Sotol"],
+    "correct_index": 1,
+    "explanation": "La tequila est un spiritueux produit exclusivement à partir de l'agave bleu Weber dans des régions délimitées du Mexique, principalement l'État de Jalisco."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel chef catalan dirige le restaurant elBulli, célèbre pour sa cuisine moléculaire ?",
+    "options": ["Joan Roca", "Ferran Adrià", "José Andrés", "Andoni Luis Aduriz"],
+    "correct_index": 1,
+    "explanation": "Ferran Adrià a révolutionné la gastronomie mondiale avec sa cuisine moléculaire au restaurant elBulli, élu cinq fois meilleur restaurant du monde."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "medium",
+    "question": "Quel est le nom du vin doux naturel produit à Banyuls dans le sud de la France ?",
+    "options": ["Porto", "Banyuls", "Muscat de Rivesaltes", "Maury"],
+    "correct_index": 1,
+    "explanation": "Le Banyuls est un vin doux naturel produit sur les terrasses escarpées de la Côte Vermeille, élaboré principalement à partir du cépage Grenache noir."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel est le nom du cinquième goût fondamental, identifié par le chimiste japonais Kikunae Ikeda en 1908 ?",
+    "options": ["Amer", "Umami", "Aigre", "Astringent"],
+    "correct_index": 1,
+    "explanation": "L'umami, mot japonais signifiant « goût savoureux », est le cinquième goût de base découvert par Kikunae Ikeda, lié au glutamate présent dans le kombu."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel est le nom de la réaction chimique entre les sucres et les acides aminés responsable du brunissement des aliments à la cuisson ?",
+    "options": ["Caramélisation", "Réaction de Maillard", "Oxydation", "Hydrolyse"],
+    "correct_index": 1,
+    "explanation": "La réaction de Maillard, décrite par Louis-Camille Maillard en 1912, est responsable des arômes et de la coloration brune des aliments grillés ou rôtis."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel cépage blanc est utilisé pour produire le vin jaune du Jura ?",
+    "options": ["Chardonnay", "Savagnin", "Trousseau", "Poulsard"],
+    "correct_index": 1,
+    "explanation": "Le vin jaune du Jura est exclusivement élaboré à partir du cépage Savagnin, élevé sous voile de levures pendant au moins six ans et trois mois en fût de chêne."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel plat japonais de haute gastronomie consiste en un poisson-globe potentiellement mortel préparé par un chef agréé ?",
+    "options": ["Sashimi d'unagi", "Fugu", "Kaiseki", "Tataki"],
+    "correct_index": 1,
+    "explanation": "Le fugu est un poisson-globe dont certains organes contiennent de la tétrodotoxine, un poison mortel. Seuls les chefs possédant une licence spéciale peuvent le préparer au Japon."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel est le nom du procédé de conservation des aliments inventé par Nicolas Appert au début du XIXe siècle ?",
+    "options": ["Pasteurisation", "Lyophilisation", "Appertisation", "Stérilisation UHT"],
+    "correct_index": 2,
+    "explanation": "L'appertisation, inventée par Nicolas Appert vers 1804, consiste à stériliser les aliments par la chaleur dans des contenants hermétiques, ancêtre de la conserve."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel composé chimique est responsable du piquant du piment ?",
+    "options": ["Pipérine", "Capsaïcine", "Allicine", "Sinigrine"],
+    "correct_index": 1,
+    "explanation": "La capsaïcine est le composé actif des piments du genre Capsicum. Son intensité est mesurée par l'échelle de Scoville."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel type de thé subit une oxydation complète lors de sa fabrication ?",
+    "options": ["Thé vert", "Thé blanc", "Thé noir", "Thé oolong"],
+    "correct_index": 2,
+    "explanation": "Le thé noir subit une oxydation complète des feuilles, contrairement au thé vert (non oxydé) et au thé oolong (partiellement oxydé)."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel chef français a obtenu trois étoiles Michelin pour son restaurant « L'Auberge du Pont de Collonges » pendant plus de 50 ans ?",
+    "options": ["Alain Ducasse", "Paul Bocuse", "Georges Blanc", "Marc Veyrat"],
+    "correct_index": 1,
+    "explanation": "Paul Bocuse a conservé ses trois étoiles Michelin de 1965 à 2020, un record absolu. Il est considéré comme le « pape de la gastronomie française »."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel champignon est le plus cher du monde et se trouve uniquement grâce à des chiens ou des cochons dressés ?",
+    "options": ["Morille", "Cèpe de Bordeaux", "Truffe blanche d'Alba", "Chanterelle"],
+    "correct_index": 2,
+    "explanation": "La truffe blanche d'Alba (Tuber magnatum) est le champignon le plus cher au monde, pouvant atteindre plusieurs milliers d'euros le kilo. Elle pousse sous terre en symbiose avec certains arbres."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Comment s'appelle la technique de cuisson sous vide à basse température développée par Georges Pralus ?",
+    "options": ["Cuisson à l'étouffée", "Cuisson sous vide", "Cuisson en papillote", "Cuisson bain-marie"],
+    "correct_index": 1,
+    "explanation": "La cuisson sous vide, perfectionnée par Georges Pralus dans les années 1970, consiste à cuire un aliment emballé sous vide à température précise et basse pendant une longue durée."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel est le nom du processus de transformation du cacao en chocolat qui inclut un brassage prolongé à chaud ?",
+    "options": ["Torréfaction", "Conchage", "Tempérage", "Concassage"],
+    "correct_index": 1,
+    "explanation": "Le conchage, inventé par Rodolphe Lindt en 1879, est un brassage prolongé du chocolat à chaud qui développe ses arômes et lui donne sa texture lisse."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel vignoble français possède un classement datant de 1855 toujours en vigueur pour ses grands crus ?",
+    "options": ["Bourgogne", "Bordeaux (Médoc)", "Vallée du Rhône", "Alsace"],
+    "correct_index": 1,
+    "explanation": "Le classement de 1855 des vins de Bordeaux, établi pour l'Exposition universelle de Paris, hiérarchise les grands crus du Médoc et de Sauternes. Il n'a été modifié qu'une seule fois (Mouton Rothschild en 1973)."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel est le nom de la technique japonaise de découpe du thon en trois pièces distinctes ?",
+    "options": ["Katsuramuki", "Sanmai oroshi", "Sogizukuri", "Usuzukuri"],
+    "correct_index": 1,
+    "explanation": "Le sanmai oroshi (« trois pièces ») est la technique japonaise de base pour fileter un poisson en trois morceaux : deux filets et l'arête centrale."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quelle est l'épice la plus chère au monde, récoltée à la main à partir des stigmates d'un crocus ?",
+    "options": ["Vanille", "Cardamome", "Safran", "Poivre de Kampot"],
+    "correct_index": 2,
+    "explanation": "Le safran, issu des stigmates du Crocus sativus, nécessite environ 150 000 fleurs pour produire un kilo, ce qui en fait l'épice la plus chère au monde."
+  },
+  {
+    "category": "Gastronomie",
+    "difficulty": "hard",
+    "question": "Quel terme désigne l'étude et la connaissance des vins, incluant la dégustation, le service et la conservation ?",
+    "options": ["Sommellerie", "Œnologie", "Viticulture", "Ampélographie"],
+    "correct_index": 1,
+    "explanation": "L'œnologie est la science qui étudie le vin sous tous ses aspects, de la vinification à la dégustation. La viticulture concerne la culture de la vigne et l'ampélographie l'étude des cépages."
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "En quelle année a eu lieu la prise de la Bastille ?",
+    "options": ["1789", "1776", "1804", "1815"],
+    "correct_index": 0,
+    "explanation": "La prise de la Bastille a eu lieu le 14 juillet 1789, marquant le début symbolique de la Révolution française."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Qui a découvert l'Amérique en 1492 ?",
+    "options": ["Vasco de Gama", "Christophe Colomb", "Fernand de Magellan", "Amerigo Vespucci"],
+    "correct_index": 1,
+    "explanation": "Christophe Colomb, navigateur génois au service de l'Espagne, a atteint les Amériques le 12 octobre 1492."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel empereur français a été exilé à Sainte-Hélène ?",
+    "options": ["Louis XIV", "Charlemagne", "Napoléon Bonaparte", "Charles de Gaulle"],
+    "correct_index": 2,
+    "explanation": "Napoléon Bonaparte a été exilé sur l'île de Sainte-Hélène après sa défaite à Waterloo en 1815, où il est mort en 1821."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "La Seconde Guerre mondiale s'est terminée en Europe en quelle année ?",
+    "options": ["1943", "1944", "1945", "1946"],
+    "correct_index": 2,
+    "explanation": "La Seconde Guerre mondiale en Europe s'est terminée le 8 mai 1945 avec la capitulation de l'Allemagne nazie."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle civilisation a construit les pyramides de Gizeh ?",
+    "options": ["Les Romains", "Les Grecs", "Les Égyptiens", "Les Perses"],
+    "correct_index": 2,
+    "explanation": "Les pyramides de Gizeh ont été construites par les anciens Égyptiens vers 2560 av. J.-C. comme tombeaux pour les pharaons."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel mur, symbole de la Guerre froide, est tombé en 1989 ?",
+    "options": ["Le mur d'Hadrien", "Le mur de Berlin", "La Grande Muraille de Chine", "Le mur des Lamentations"],
+    "correct_index": 1,
+    "explanation": "Le mur de Berlin est tombé le 9 novembre 1989, marquant la fin de la division entre l'Allemagne de l'Est et de l'Ouest."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Qui était le roi de France surnommé le Roi-Soleil ?",
+    "options": ["Louis XIII", "Louis XIV", "Louis XV", "Louis XVI"],
+    "correct_index": 1,
+    "explanation": "Louis XIV, qui régna de 1643 à 1715, était surnommé le Roi-Soleil et fit construire le château de Versailles."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+    "options": ["1965", "1967", "1969", "1971"],
+    "correct_index": 2,
+    "explanation": "Neil Armstrong a posé le pied sur la Lune le 20 juillet 1969 lors de la mission Apollo 11."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle guerre a opposé le Nord et le Sud des États-Unis ?",
+    "options": ["La guerre d'Indépendance", "La guerre de Sécession", "La guerre de Cent Ans", "La guerre du Vietnam"],
+    "correct_index": 1,
+    "explanation": "La guerre de Sécession (1861-1865) a opposé les États du Nord (l'Union) aux États confédérés du Sud."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays a lancé la première bombe atomique sur Hiroshima ?",
+    "options": ["L'URSS", "Le Royaume-Uni", "Les États-Unis", "La France"],
+    "correct_index": 2,
+    "explanation": "Les États-Unis ont largué la bombe atomique sur Hiroshima le 6 août 1945, précipitant la fin de la Seconde Guerre mondiale."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle héroïne française a combattu les Anglais pendant la guerre de Cent Ans ?",
+    "options": ["Marie-Antoinette", "Jeanne d'Arc", "Catherine de Médicis", "Aliénor d'Aquitaine"],
+    "correct_index": 1,
+    "explanation": "Jeanne d'Arc a mené les troupes françaises à plusieurs victoires avant d'être capturée et brûlée vive en 1431."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Le traité de Versailles a mis fin à quelle guerre ?",
+    "options": ["La guerre franco-prussienne", "La Première Guerre mondiale", "La Seconde Guerre mondiale", "La guerre de Crimée"],
+    "correct_index": 1,
+    "explanation": "Le traité de Versailles, signé le 28 juin 1919, a officiellement mis fin à la Première Guerre mondiale."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel empire était gouverné depuis Constantinople ?",
+    "options": ["L'Empire romain d'Occident", "L'Empire ottoman", "L'Empire byzantin", "L'Empire perse"],
+    "correct_index": 2,
+    "explanation": "L'Empire byzantin, ou Empire romain d'Orient, avait Constantinople pour capitale depuis sa fondation en 330 jusqu'à sa chute en 1453."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Qui a été le premier président de la Ve République française ?",
+    "options": ["Georges Pompidou", "Charles de Gaulle", "Vincent Auriol", "René Coty"],
+    "correct_index": 1,
+    "explanation": "Charles de Gaulle est devenu le premier président de la Ve République en 1958, après avoir fondé ses nouvelles institutions."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "En quelle année Christophe Colomb a-t-il atteint les Amériques ?",
+    "options": ["1488", "1492", "1498", "1502"],
+    "correct_index": 1,
+    "explanation": "Christophe Colomb a atteint les Bahamas le 12 octobre 1492, croyant avoir trouvé une route vers les Indes."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel philosophe grec est considéré comme le père de la démocratie athénienne ?",
+    "options": ["Socrate", "Aristote", "Clisthène", "Périclès"],
+    "correct_index": 2,
+    "explanation": "Clisthène a réformé les institutions athéniennes vers 508 av. J.-C., instaurant les bases de la démocratie directe."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle bataille de 1805 est considérée comme le chef-d'œuvre stratégique de Napoléon ?",
+    "options": ["Waterloo", "Austerlitz", "Iéna", "Wagram"],
+    "correct_index": 1,
+    "explanation": "La bataille d'Austerlitz, le 2 décembre 1805, dite la « bataille des trois empereurs », fut une victoire décisive de Napoléon."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement a déclenché la Première Guerre mondiale en 1914 ?",
+    "options": ["L'invasion de la Belgique", "Le naufrage du Lusitania", "L'assassinat de l'archiduc François-Ferdinand", "La mobilisation russe"],
+    "correct_index": 2,
+    "explanation": "L'assassinat de l'archiduc François-Ferdinand d'Autriche à Sarajevo le 28 juin 1914 a déclenché l'engrenage des alliances menant à la guerre."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empire a été fondé par Gengis Khan au XIIIe siècle ?",
+    "options": ["L'Empire ottoman", "L'Empire moghol", "L'Empire mongol", "L'Empire chinois"],
+    "correct_index": 2,
+    "explanation": "Gengis Khan a fondé l'Empire mongol en 1206, qui devint le plus vaste empire continental de l'histoire."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "En quelle année l'esclavage a-t-il été définitivement aboli en France ?",
+    "options": ["1794", "1833", "1848", "1865"],
+    "correct_index": 2,
+    "explanation": "L'abolition définitive de l'esclavage en France a été décrétée le 27 avril 1848 sous l'impulsion de Victor Schœlcher."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle dynastie a régné sur la Chine pendant la construction de la Grande Muraille actuelle ?",
+    "options": ["La dynastie Han", "La dynastie Tang", "La dynastie Ming", "La dynastie Qin"],
+    "correct_index": 2,
+    "explanation": "Bien que commencée sous les Qin, la Grande Muraille telle qu'on la connaît aujourd'hui a été principalement construite sous la dynastie Ming (1368-1644)."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel traité a partagé le Nouveau Monde entre l'Espagne et le Portugal en 1494 ?",
+    "options": ["Le traité de Westphalie", "Le traité de Tordesillas", "Le traité de Paris", "Le traité d'Utrecht"],
+    "correct_index": 1,
+    "explanation": "Le traité de Tordesillas, signé en 1494, a divisé les terres nouvellement découvertes entre les couronnes espagnole et portugaise."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi d'Angleterre a rompu avec l'Église catholique pour créer l'Église anglicane ?",
+    "options": ["Henri VII", "Henri VIII", "Édouard VI", "Jacques Ier"],
+    "correct_index": 1,
+    "explanation": "Henri VIII a rompu avec Rome en 1534, principalement pour pouvoir annuler son mariage avec Catherine d'Aragon."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle révolution industrielle a commencé en Angleterre à la fin du XVIIIe siècle ?",
+    "options": ["La révolution agricole", "La première révolution industrielle", "La révolution numérique", "La révolution scientifique"],
+    "correct_index": 1,
+    "explanation": "La première révolution industrielle a débuté en Angleterre vers 1760, portée par la machine à vapeur et l'industrie textile."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays était autrefois connu sous le nom de Perse ?",
+    "options": ["L'Irak", "L'Iran", "La Turquie", "L'Afghanistan"],
+    "correct_index": 1,
+    "explanation": "L'Iran était connu sous le nom de Perse jusqu'en 1935, quand le shah Reza Pahlavi a demandé que le pays soit appelé Iran."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle bataille navale de 1805 a assuré la domination maritime britannique ?",
+    "options": ["La bataille de Lépante", "La bataille de Trafalgar", "La bataille du Nil", "La bataille de Midway"],
+    "correct_index": 1,
+    "explanation": "La bataille de Trafalgar, le 21 octobre 1805, a vu la victoire de l'amiral Nelson sur les flottes française et espagnole."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel accord international a été signé en 1648, mettant fin à la guerre de Trente Ans ?",
+    "options": ["Le traité de Versailles", "Les traités de Westphalie", "Le traité de Vienne", "Le traité de Paris"],
+    "correct_index": 1,
+    "explanation": "Les traités de Westphalie (1648) ont mis fin à la guerre de Trente Ans et établi le principe de souveraineté des États."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Qui a été le leader de la révolution russe d'octobre 1917 ?",
+    "options": ["Staline", "Trotski", "Lénine", "Kerenski"],
+    "correct_index": 2,
+    "explanation": "Lénine a dirigé les bolcheviks lors de la révolution d'Octobre 1917, renversant le gouvernement provisoire russe."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel peuple a fondé Carthage, rivale de Rome ?",
+    "options": ["Les Grecs", "Les Phéniciens", "Les Étrusques", "Les Celtes"],
+    "correct_index": 1,
+    "explanation": "Carthage a été fondée par les Phéniciens, originaires de l'actuel Liban, vers 814 av. J.-C."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement marque traditionnellement le début du Moyen Âge ?",
+    "options": ["La chute de Constantinople", "La chute de l'Empire romain d'Occident", "Le couronnement de Charlemagne", "Les invasions vikings"],
+    "correct_index": 1,
+    "explanation": "La chute de l'Empire romain d'Occident en 476, avec la déposition de Romulus Augustule, marque conventionnellement le début du Moyen Âge."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel explorateur portugais a atteint l'Inde par voie maritime en 1498 ?",
+    "options": ["Bartolomeu Dias", "Vasco de Gama", "Pedro Álvares Cabral", "Fernand de Magellan"],
+    "correct_index": 1,
+    "explanation": "Vasco de Gama est arrivé à Calicut en Inde en mai 1498, ouvrant la route maritime vers l'Asie."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel régime politique a été instauré en Allemagne en 1933 ?",
+    "options": ["La République de Weimar", "Le Troisième Reich", "La République fédérale", "L'Empire allemand"],
+    "correct_index": 1,
+    "explanation": "Adolf Hitler est devenu chancelier le 30 janvier 1933, instaurant le Troisième Reich, un régime totalitaire nazi."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle guerre a opposé la France et l'Angleterre de 1337 à 1453 ?",
+    "options": ["La guerre de Sept Ans", "La guerre de Cent Ans", "Les guerres napoléoniennes", "La guerre de Succession d'Espagne"],
+    "correct_index": 1,
+    "explanation": "La guerre de Cent Ans (1337-1453) a opposé les royaumes de France et d'Angleterre pour la succession au trône de France."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel célèbre code de lois a été promulgué par Napoléon en 1804 ?",
+    "options": ["Le Code Justinien", "Le Code civil", "Le Code pénal", "Le Code noir"],
+    "correct_index": 1,
+    "explanation": "Le Code civil, aussi appelé Code Napoléon, a été promulgué en 1804 et reste le fondement du droit civil français."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle organisation internationale a été créée en 1945 pour maintenir la paix ?",
+    "options": ["L'OTAN", "L'ONU", "La Société des Nations", "L'Union européenne"],
+    "correct_index": 1,
+    "explanation": "L'Organisation des Nations Unies (ONU) a été fondée le 24 octobre 1945, après la Seconde Guerre mondiale, pour préserver la paix mondiale."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel pharaon égyptien est associé à la bataille de Qadesh contre les Hittites vers 1274 av. J.-C. ?",
+    "options": ["Thoutmôsis III", "Ramsès II", "Akhenaton", "Séthi Ier"],
+    "correct_index": 1,
+    "explanation": "Ramsès II a affronté les Hittites à Qadesh, aboutissant au premier traité de paix connu de l'histoire."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel concile œcuménique de 1545-1563 a lancé la Contre-Réforme catholique ?",
+    "options": ["Le concile de Nicée", "Le concile de Constance", "Le concile de Trente", "Le concile Vatican I"],
+    "correct_index": 2,
+    "explanation": "Le concile de Trente (1545-1563) a défini la doctrine catholique en réponse à la Réforme protestante et réformé les pratiques de l'Église."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empereur romain a divisé l'Empire en deux parties administratives en 285 ?",
+    "options": ["Constantin", "Théodose", "Dioclétien", "Aurélien"],
+    "correct_index": 2,
+    "explanation": "Dioclétien a instauré la Tétrarchie en 285-286, divisant l'Empire romain en parties occidentale et orientale pour mieux le gouverner."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle dynastie japonaise a instauré le shogunat de Tokugawa, isolant le Japon pendant plus de deux siècles ?",
+    "options": ["Les Minamoto", "Les Ashikaga", "Les Tokugawa", "Les Fujiwara"],
+    "correct_index": 2,
+    "explanation": "Le shogunat Tokugawa (1603-1868) a instauré la politique du sakoku, fermant le Japon aux influences étrangères pendant plus de 200 ans."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité de 843 a partagé l'Empire carolingien entre les petits-fils de Charlemagne ?",
+    "options": ["Le traité de Meerssen", "Le traité de Verdun", "Le traité de Ribemont", "Le traité de Coulaines"],
+    "correct_index": 1,
+    "explanation": "Le traité de Verdun en 843 a partagé l'Empire carolingien entre Lothaire, Louis le Germanique et Charles le Chauve."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel sultan ottoman a conquis Constantinople en 1453 ?",
+    "options": ["Soliman le Magnifique", "Bayézid Ier", "Mehmed II", "Mourad II"],
+    "correct_index": 2,
+    "explanation": "Mehmed II, surnommé le Conquérant, a pris Constantinople le 29 mai 1453, mettant fin à l'Empire byzantin."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle conférence de 1884-1885 a organisé le partage colonial de l'Afrique ?",
+    "options": ["La conférence de Vienne", "La conférence de Berlin", "La conférence de Yalta", "La conférence de Bandung"],
+    "correct_index": 1,
+    "explanation": "La conférence de Berlin (1884-1885), organisée par Bismarck, a fixé les règles de la colonisation européenne en Afrique."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel roi de Macédoine a conquis l'Empire perse au IVe siècle av. J.-C. ?",
+    "options": ["Philippe II", "Alexandre le Grand", "Ptolémée Ier", "Séleucos Ier"],
+    "correct_index": 1,
+    "explanation": "Alexandre le Grand a conquis l'Empire perse entre 334 et 330 av. J.-C., créant un empire s'étendant de la Grèce à l'Inde."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel édit royal de 1598 a accordé la liberté de culte aux protestants en France ?",
+    "options": ["L'édit de Fontainebleau", "L'édit de Nantes", "L'édit de Compiègne", "L'édit de Saint-Germain"],
+    "correct_index": 1,
+    "explanation": "L'édit de Nantes, signé par Henri IV en 1598, a mis fin aux guerres de Religion en accordant des droits aux protestants."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle civilisation précolombienne a été conquise par Francisco Pizarro en 1532 ?",
+    "options": ["Les Aztèques", "Les Mayas", "Les Incas", "Les Olmèques"],
+    "correct_index": 2,
+    "explanation": "Francisco Pizarro a conquis l'Empire inca en 1532, capturant l'empereur Atahualpa à Cajamarca."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel événement de 1054 a provoqué le Grand Schisme entre les Églises d'Orient et d'Occident ?",
+    "options": ["L'excommunication mutuelle des patriarches", "La querelle des Investitures", "La prise de Jérusalem", "Le concile de Chalcédoine"],
+    "correct_index": 0,
+    "explanation": "Le Grand Schisme de 1054 résulte de l'excommunication mutuelle du pape Léon IX et du patriarche Michel Cérulaire, séparant catholicisme et orthodoxie."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel général carthaginois a traversé les Alpes avec des éléphants pour attaquer Rome ?",
+    "options": ["Hamilcar Barca", "Hannibal Barca", "Hasdrubal", "Scipion l'Africain"],
+    "correct_index": 1,
+    "explanation": "Hannibal Barca a traversé les Alpes en 218 av. J.-C. avec ses éléphants lors de la deuxième guerre punique contre Rome."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel congrès de 1814-1815 a redessiné la carte de l'Europe après les guerres napoléoniennes ?",
+    "options": ["Le congrès de Paris", "Le congrès de Vienne", "Le congrès de Berlin", "Le congrès d'Aix-la-Chapelle"],
+    "correct_index": 1,
+    "explanation": "Le congrès de Vienne (1814-1815), dirigé par Metternich, a réorganisé l'Europe pour restaurer l'équilibre des puissances après Napoléon."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle révolte paysanne a secoué la France en 1358 ?",
+    "options": ["La Fronde", "La Jacquerie", "Les Croquants", "Les Camisards"],
+    "correct_index": 1,
+    "explanation": "La Jacquerie de 1358 fut une révolte paysanne violente dans le nord de la France, en pleine guerre de Cent Ans et après la Grande Peste."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empire africain médiéval, dirigé par Mansa Moussa, était réputé pour son immense richesse en or ?",
+    "options": ["L'Empire songhaï", "L'Empire du Mali", "Le Royaume du Kongo", "L'Empire du Ghana"],
+    "correct_index": 1,
+    "explanation": "L'Empire du Mali, sous Mansa Moussa au XIVe siècle, était l'un des plus riches du monde. Son pèlerinage à La Mecque en 1324 fit chuter le cours de l'or en Égypte."
+  }
+]

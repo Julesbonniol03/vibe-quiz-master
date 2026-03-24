@@ -10,17 +10,23 @@ const stats = [
 ];
 
 const categories: { name: Category; questions: number; played: number }[] = [
-  { name: "Histoire", questions: 8, played: 320 },
-  { name: "Sciences", questions: 8, played: 280 },
-  { name: "Arts", questions: 8, played: 195 },
-  { name: "Sport", questions: 8, played: 410 },
+  { name: "Histoire", questions: 50, played: 320 },
+  { name: "Sciences", questions: 50, played: 280 },
+  { name: "Géographie", questions: 50, played: 150 },
+  { name: "Pop Culture", questions: 50, played: 195 },
+  { name: "Sport", questions: 50, played: 410 },
+  { name: "Arts & Littérature", questions: 50, played: 175 },
+  { name: "Nature & Animaux", questions: 50, played: 120 },
+  { name: "Technologie", questions: 50, played: 90 },
+  { name: "Gastronomie", questions: 50, played: 85 },
+  { name: "Mythologie & Religions", questions: 50, played: 60 },
 ];
 
 const recentActivity = [
   { category: "Sport", score: 7, total: 8, streak: 5, time: "Il y a 2h" },
   { category: "Sciences", score: 5, total: 8, streak: 3, time: "Il y a 5h" },
   { category: "Histoire", score: 6, total: 8, streak: 6, time: "Hier" },
-  { category: "Arts", score: 4, total: 8, streak: 2, time: "Il y a 2j" },
+  { category: "Arts & Littérature", score: 4, total: 8, streak: 2, time: "Il y a 2j" },
 ];
 
 export default function DashboardPage() {
@@ -112,8 +118,20 @@ export default function DashboardPage() {
                             ? "from-amber-500 to-amber-400"
                             : cat.name === "Sciences"
                             ? "from-cyan-500 to-cyan-400"
-                            : cat.name === "Arts"
+                            : cat.name === "Arts & Littérature"
                             ? "from-purple-500 to-purple-400"
+                            : cat.name === "Géographie"
+                            ? "from-blue-500 to-blue-400"
+                            : cat.name === "Pop Culture"
+                            ? "from-pink-500 to-pink-400"
+                            : cat.name === "Nature & Animaux"
+                            ? "from-emerald-500 to-emerald-400"
+                            : cat.name === "Technologie"
+                            ? "from-indigo-500 to-indigo-400"
+                            : cat.name === "Gastronomie"
+                            ? "from-orange-500 to-orange-400"
+                            : cat.name === "Mythologie & Religions"
+                            ? "from-violet-500 to-violet-400"
                             : "from-green-500 to-green-400"
                         }`}
                         style={{ width: `${progress}%` }}

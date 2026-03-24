@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Dans la mythologie grecque, qui est le roi des dieux de l'Olympe ?",
+    "options": ["Poséidon", "Hadès", "Zeus", "Arès"],
+    "correct_index": 2,
+    "explanation": "Zeus est le roi des dieux de l'Olympe dans la mythologie grecque. Il règne sur le ciel et la foudre."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel est le livre sacré de l'islam ?",
+    "options": ["La Torah", "La Bible", "Le Coran", "Les Védas"],
+    "correct_index": 2,
+    "explanation": "Le Coran est le livre sacré de l'islam, considéré par les musulmans comme la parole de Dieu révélée au prophète Muhammad."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Dans la mythologie romaine, quel est l'équivalent du dieu grec Zeus ?",
+    "options": ["Mars", "Jupiter", "Neptune", "Mercure"],
+    "correct_index": 1,
+    "explanation": "Jupiter est l'équivalent romain de Zeus. Il est le roi des dieux dans le panthéon romain."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel animal est associé au dieu égyptien Anubis ?",
+    "options": ["Le chat", "Le faucon", "Le chacal", "Le crocodile"],
+    "correct_index": 2,
+    "explanation": "Anubis, dieu égyptien de l'embaumement et des morts, est représenté avec une tête de chacal."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Dans la mythologie nordique, quel est le nom du marteau de Thor ?",
+    "options": ["Gungnir", "Mjöllnir", "Excalibur", "Gram"],
+    "correct_index": 1,
+    "explanation": "Mjöllnir est le célèbre marteau de Thor, forgé par les nains Sindri et Brokk. Il revient toujours dans la main de son propriétaire."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Combien y a-t-il de commandements dans le Décalogue biblique ?",
+    "options": ["5", "7", "10", "12"],
+    "correct_index": 2,
+    "explanation": "Le Décalogue, aussi appelé les Dix Commandements, est un ensemble de dix règles données par Dieu à Moïse sur le mont Sinaï."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel héros grec est célèbre pour ses douze travaux ?",
+    "options": ["Achille", "Ulysse", "Persée", "Héraclès"],
+    "correct_index": 3,
+    "explanation": "Héraclès (Hercule chez les Romains) a accompli douze travaux imposés par le roi Eurysthée pour expier le meurtre de sa famille."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Dans quelle religion trouve-t-on le concept du karma et de la réincarnation ?",
+    "options": ["Le judaïsme", "L'hindouisme", "L'islam", "Le christianisme"],
+    "correct_index": 1,
+    "explanation": "L'hindouisme enseigne le cycle des réincarnations (samsara) guidé par le karma, c'est-à-dire les conséquences des actions passées."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel est le dieu grec de la mer ?",
+    "options": ["Apollon", "Hermès", "Poséidon", "Héphaïstos"],
+    "correct_index": 2,
+    "explanation": "Poséidon est le dieu grec de la mer, des tremblements de terre et des chevaux. Son équivalent romain est Neptune."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quelle créature mythologique est mi-homme, mi-cheval ?",
+    "options": ["Le Minotaure", "Le Centaure", "Le Satyre", "Le Griffon"],
+    "correct_index": 1,
+    "explanation": "Le centaure possède un buste humain sur un corps de cheval. Le plus célèbre est Chiron, précepteur d'Achille."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel est le fondateur du bouddhisme ?",
+    "options": ["Confucius", "Lao Tseu", "Siddhartha Gautama", "Mahâvîra"],
+    "correct_index": 2,
+    "explanation": "Siddhartha Gautama, prince indien du VIe siècle av. J.-C., est devenu le Bouddha (l'Éveillé) après avoir atteint l'illumination."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Dans la mythologie grecque, qui est la déesse de l'amour et de la beauté ?",
+    "options": ["Athéna", "Héra", "Artémis", "Aphrodite"],
+    "correct_index": 3,
+    "explanation": "Aphrodite est la déesse grecque de l'amour et de la beauté. Son équivalent romain est Vénus."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel prophète est commun au judaïsme, au christianisme et à l'islam ?",
+    "options": ["Bouddha", "Abraham", "Zoroastre", "Confucius"],
+    "correct_index": 1,
+    "explanation": "Abraham est une figure centrale des trois religions monothéistes dites abrahamiques : le judaïsme, le christianisme et l'islam."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel est le nom du lieu où séjournent les morts dans la mythologie grecque ?",
+    "options": ["Le Valhalla", "Les Enfers", "Le Tartare", "L'Élysée"],
+    "correct_index": 1,
+    "explanation": "Les Enfers grecs (ou Hadès) sont le royaume souterrain des morts, gouverné par le dieu Hadès. Le Tartare et l'Élysée en sont des parties."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "easy",
+    "question": "Quel dieu égyptien a une tête de faucon et est associé au soleil ?",
+    "options": ["Osiris", "Seth", "Horus", "Thot"],
+    "correct_index": 2,
+    "explanation": "Horus, dieu à tête de faucon, est associé au ciel et au soleil. Il est le fils d'Osiris et d'Isis."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie nordique, comment s'appelle l'arbre cosmique qui relie les neuf mondes ?",
+    "options": ["Irminsul", "Yggdrasil", "Glasir", "Læraðr"],
+    "correct_index": 1,
+    "explanation": "Yggdrasil est le frêne cosmique de la mythologie nordique. Ses racines et ses branches relient les neuf mondes de la cosmogonie scandinave."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Qui a tranché le nœud gordien selon la légende ?",
+    "options": ["Jules César", "Alexandre le Grand", "Ulysse", "Thésée"],
+    "correct_index": 1,
+    "explanation": "Alexandre le Grand a tranché le nœud gordien avec son épée, accomplissant ainsi la prophétie selon laquelle celui qui le dénouerait régnerait sur l'Asie."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie grecque, quel Titan porte le monde sur ses épaules ?",
+    "options": ["Prométhée", "Cronos", "Atlas", "Hypérion"],
+    "correct_index": 2,
+    "explanation": "Atlas fut condamné par Zeus à porter la voûte céleste sur ses épaules pour l'éternité après la défaite des Titans."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel est le nom de la fin du monde dans la mythologie nordique ?",
+    "options": ["L'Apocalypse", "Le Ragnarök", "Le Götterdämmerung", "Le Fimbulvetr"],
+    "correct_index": 1,
+    "explanation": "Le Ragnarök est la bataille finale entre les dieux et les forces du chaos dans la mythologie nordique, menant à la destruction puis à la renaissance du monde."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans l'hindouisme, quelle est la trinité divine (Trimūrti) ?",
+    "options": ["Vishnou, Shiva, Indra", "Brahma, Vishnou, Shiva", "Ganesh, Krishna, Rama", "Brahma, Indra, Agni"],
+    "correct_index": 1,
+    "explanation": "La Trimūrti hindoue se compose de Brahma le créateur, Vishnou le préservateur et Shiva le destructeur."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel monstre de la mythologie grecque possède un corps de lion, une tête de femme et pose des énigmes ?",
+    "options": ["La Chimère", "La Méduse", "Le Sphinx", "La Harpie"],
+    "correct_index": 2,
+    "explanation": "Le Sphinx grec pose une célèbre énigme aux voyageurs près de Thèbes. Œdipe fut le seul à trouver la réponse et le Sphinx se jeta dans le vide."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel dieu nordique est connu comme le dieu de la ruse et du mensonge ?",
+    "options": ["Odin", "Loki", "Freyr", "Baldr"],
+    "correct_index": 1,
+    "explanation": "Loki est le dieu de la ruse et de la discorde dans la mythologie nordique. Il est responsable de la mort de Baldr et jouera un rôle clé lors du Ragnarök."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie égyptienne, quel dieu est le maître de l'au-delà et juge des morts ?",
+    "options": ["Râ", "Osiris", "Anubis", "Thot"],
+    "correct_index": 1,
+    "explanation": "Osiris, tué et ressuscité, règne sur le royaume des morts. Il préside le tribunal de l'au-delà lors de la pesée du cœur."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel est le premier des cinq piliers de l'islam ?",
+    "options": ["La prière", "Le jeûne du Ramadan", "La chahada (profession de foi)", "Le pèlerinage à La Mecque"],
+    "correct_index": 2,
+    "explanation": "La chahada est la profession de foi musulmane : « Il n'y a de dieu que Dieu et Muhammad est son prophète. » C'est le premier et le plus fondamental des cinq piliers."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie grecque, qui a offert le feu aux hommes ?",
+    "options": ["Épiméthée", "Héraclès", "Prométhée", "Héphaïstos"],
+    "correct_index": 2,
+    "explanation": "Prométhée a volé le feu aux dieux pour le donner aux hommes. En punition, Zeus l'a enchaîné à un rocher où un aigle lui dévore le foie chaque jour."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel est le texte sacré le plus ancien de l'hindouisme ?",
+    "options": ["Le Mahabharata", "Le Rig-Véda", "Les Upanishads", "La Bhagavad-Gita"],
+    "correct_index": 1,
+    "explanation": "Le Rig-Véda est le plus ancien des quatre Védas, composé entre 1500 et 1200 av. J.-C. C'est l'un des plus anciens textes religieux au monde."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie grecque, qui a tué la Méduse ?",
+    "options": ["Thésée", "Persée", "Héraclès", "Bellérophon"],
+    "correct_index": 1,
+    "explanation": "Persée a décapité Méduse en utilisant le reflet de son bouclier poli pour éviter son regard pétrifiant. Du sang de Méduse naquit Pégase."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel est le nom du paradis des guerriers morts au combat dans la mythologie nordique ?",
+    "options": ["L'Asgard", "Le Niflheim", "Le Valhalla", "Le Midgard"],
+    "correct_index": 2,
+    "explanation": "Le Valhalla est la grande salle d'Odin à Asgard où les guerriers morts au combat (les Einherjar) festoient en attendant le Ragnarök."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans le christianisme, combien d'apôtres Jésus a-t-il choisis ?",
+    "options": ["7", "10", "12", "14"],
+    "correct_index": 2,
+    "explanation": "Jésus a choisi douze apôtres pour le suivre et diffuser son enseignement. Le nombre douze symbolise les douze tribus d'Israël."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel héros grec a vaincu le Minotaure dans le labyrinthe de Crète ?",
+    "options": ["Persée", "Jason", "Thésée", "Achille"],
+    "correct_index": 2,
+    "explanation": "Thésée a tué le Minotaure dans le labyrinthe construit par Dédale, grâce au fil d'Ariane qui lui permit de retrouver la sortie."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quelle déesse égyptienne est connue comme la mère d'Horus et l'épouse d'Osiris ?",
+    "options": ["Hathor", "Bastet", "Isis", "Maât"],
+    "correct_index": 2,
+    "explanation": "Isis est l'une des déesses les plus importantes du panthéon égyptien. Elle a ressuscité Osiris et protégé leur fils Horus."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quel est le jour de repos hebdomadaire dans le judaïsme ?",
+    "options": ["Le vendredi", "Le samedi (Shabbat)", "Le dimanche", "Le lundi"],
+    "correct_index": 1,
+    "explanation": "Le Shabbat commence le vendredi soir au coucher du soleil et se termine le samedi soir. Il commémore le repos de Dieu après la Création."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans la mythologie grecque, quel est le nom du passeur des Enfers qui fait traverser le Styx aux âmes des morts ?",
+    "options": ["Cerbère", "Charon", "Tantale", "Sisyphe"],
+    "correct_index": 1,
+    "explanation": "Charon est le nocher des Enfers. Les Grecs plaçaient une obole dans la bouche des défunts pour payer la traversée du Styx."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Quelle est la quête principale de Jason dans la mythologie grecque ?",
+    "options": ["La pomme d'or", "La Toison d'or", "Le trident de Poséidon", "L'égide de Zeus"],
+    "correct_index": 1,
+    "explanation": "Jason et les Argonautes ont navigué sur le navire Argo pour conquérir la Toison d'or en Colchide, avec l'aide de la magicienne Médée."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "medium",
+    "question": "Dans le bouddhisme, comment s'appelle l'état de libération ultime du cycle des réincarnations ?",
+    "options": ["Le Karma", "Le Dharma", "Le Nirvana", "Le Samsara"],
+    "correct_index": 2,
+    "explanation": "Le Nirvana est l'extinction de la souffrance et la libération du cycle des renaissances (samsara). C'est l'objectif ultime de la pratique bouddhiste."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie grecque, quelles sont les trois Moires (Parques chez les Romains) ?",
+    "options": ["Clotho, Lachésis, Atropos", "Thalie, Euphrosyne, Aglaé", "Mégère, Tisiphone, Alecto", "Sthéno, Euryale, Méduse"],
+    "correct_index": 0,
+    "explanation": "Les trois Moires sont Clotho (qui file le fil de la vie), Lachésis (qui le mesure) et Atropos (qui le coupe). Elles déterminent le destin de chaque être."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Quel est le nom du serpent géant qui encercle le monde dans la mythologie nordique ?",
+    "options": ["Fenrir", "Nidhögg", "Jörmungandr", "Fáfnir"],
+    "correct_index": 2,
+    "explanation": "Jörmungandr, aussi appelé le serpent de Midgard, est un fils de Loki. Il encercle le monde en se mordant la queue et affrontera Thor lors du Ragnarök."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la Kabbale juive, combien de sephiroth composent l'Arbre de Vie ?",
+    "options": ["7", "10", "12", "22"],
+    "correct_index": 1,
+    "explanation": "L'Arbre de Vie kabbalistique est composé de dix sephiroth (émanations divines) reliées par 22 sentiers correspondant aux lettres de l'alphabet hébreu."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie égyptienne, quel est le nom du scarabée sacré symbolisant la renaissance ?",
+    "options": ["Apophis", "Khépri", "Bennou", "Sobek"],
+    "correct_index": 1,
+    "explanation": "Khépri est le dieu-scarabée qui représente le soleil levant et la renaissance. Il pousse le soleil dans le ciel comme le scarabée pousse sa boule de fumier."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Quel concile œcuménique a établi le Credo de Nicée en 325 ?",
+    "options": ["Le concile de Chalcédoine", "Le premier concile de Nicée", "Le concile de Constantinople", "Le concile d'Éphèse"],
+    "correct_index": 1,
+    "explanation": "Le premier concile de Nicée, convoqué par l'empereur Constantin en 325, a formulé le Credo de Nicée affirmant la divinité du Christ face à l'arianisme."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie grecque, quel est le nom de la nymphe condamnée à ne pouvoir que répéter les paroles des autres ?",
+    "options": ["Daphné", "Écho", "Calypso", "Syrinx"],
+    "correct_index": 1,
+    "explanation": "Écho fut punie par Héra pour l'avoir distraite avec ses bavardages pendant que Zeus la trompait. Elle ne pouvait plus que répéter les derniers mots qu'elle entendait."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans le zoroastrisme, quel est le nom du dieu suprême du bien ?",
+    "options": ["Mithra", "Ahura Mazda", "Angra Mainyu", "Zurvan"],
+    "correct_index": 1,
+    "explanation": "Ahura Mazda est le dieu suprême du zoroastrisme, religion fondée par Zarathoustra en Perse antique. Il s'oppose à Angra Mainyu, l'esprit du mal."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Quel roi de la mythologie grecque fut condamné à pousser éternellement un rocher au sommet d'une montagne ?",
+    "options": ["Tantale", "Ixion", "Sisyphe", "Midas"],
+    "correct_index": 2,
+    "explanation": "Sisyphe, roi de Corinthe, fut condamné par les dieux à pousser un rocher qui retombait sans cesse avant d'atteindre le sommet. Albert Camus en a fait un symbole de l'absurde."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Quel texte sacré du jaïnisme prône le principe fondamental de l'ahimsa (non-violence) ?",
+    "options": ["Le Tripitaka", "Les Agamas", "Le Tao Te King", "Le Guru Granth Sahib"],
+    "correct_index": 1,
+    "explanation": "Les Agamas sont les textes sacrés du jaïnisme. L'ahimsa (non-violence envers tous les êtres vivants) y est le principe éthique le plus fondamental."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie nordique, comment s'appelle le loup géant qui dévorera Odin lors du Ragnarök ?",
+    "options": ["Sköll", "Hati", "Fenrir", "Garm"],
+    "correct_index": 2,
+    "explanation": "Fenrir, fils de Loki, est un loup monstrueux enchaîné par les dieux. Lors du Ragnarök, il se libérera et avalera Odin avant d'être tué par Víðarr."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie grecque, qui sont les trois juges des Enfers ?",
+    "options": ["Hadès, Perséphone, Hermès", "Minos, Éaque, Rhadamanthe", "Charon, Cerbère, Thanatos", "Cronos, Rhéa, Japet"],
+    "correct_index": 1,
+    "explanation": "Minos, Éaque et Rhadamanthe sont les trois juges des Enfers. Anciens rois mortels réputés pour leur justice, ils décident du sort des âmes après la mort."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Quel est le concept central de la philosophie taoïste représenté par le symbole du yin et du yang ?",
+    "options": ["La hiérarchie cosmique", "La dualité complémentaire des forces opposées", "La suprématie du bien sur le mal", "L'impermanence de toute chose"],
+    "correct_index": 1,
+    "explanation": "Le yin et le yang représentent la dualité complémentaire dans le taoïsme : ombre et lumière, passif et actif, féminin et masculin, formant un tout équilibré."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie égyptienne, quel est le nom du livre décrivant le voyage du défunt dans l'au-delà ?",
+    "options": ["Le Livre de Thot", "Le Livre des Morts", "Le Livre des Pyramides", "Le Livre de Râ"],
+    "correct_index": 1,
+    "explanation": "Le Livre des Morts (ou Livre pour sortir au jour) est un recueil de formules magiques destinées à guider le défunt dans l'au-delà et à l'aider à surmonter les épreuves."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie grecque, quel héros a résolu l'énigme du Sphinx de Thèbes ?",
+    "options": ["Persée", "Œdipe", "Thésée", "Ulysse"],
+    "correct_index": 1,
+    "explanation": "Œdipe a répondu correctement à l'énigme du Sphinx : « Quel être marche à quatre pattes le matin, deux le midi et trois le soir ? » La réponse est l'homme."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie sumérienne, quel est le nom de la déesse qui descend aux Enfers pour affronter sa sœur Ereshkigal ?",
+    "options": ["Ishtar", "Inanna", "Tiamat", "Ninhursag"],
+    "correct_index": 1,
+    "explanation": "Inanna (Ishtar chez les Babyloniens) descend aux Enfers pour défier sa sœur Ereshkigal. Ce mythe de descente et de résurrection est l'un des plus anciens récits littéraires connus."
+  }
+]

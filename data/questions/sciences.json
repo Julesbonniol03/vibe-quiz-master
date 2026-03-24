@@ -1,0 +1,402 @@
+[
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "options": ["H2O", "CO2", "O2", "NaCl"],
+    "correct_index": 0,
+    "explanation": "L'eau est composée de deux atomes d'hydrogène et d'un atome d'oxygène, d'où la formule H2O."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "options": ["Vénus", "Mars", "Mercure", "Terre"],
+    "correct_index": 2,
+    "explanation": "Mercure est la planète la plus proche du Soleil, située à environ 58 millions de kilomètres."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Combien d'os possède le corps humain adulte ?",
+    "options": ["106", "206", "306", "156"],
+    "correct_index": 1,
+    "explanation": "Le squelette humain adulte compte 206 os, contre environ 270 à la naissance, certains fusionnant au cours de la croissance."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel gaz les plantes absorbent-elles lors de la photosynthèse ?",
+    "options": ["L'oxygène", "L'azote", "Le dioxyde de carbone", "L'hydrogène"],
+    "correct_index": 2,
+    "explanation": "Les plantes absorbent le dioxyde de carbone (CO2) et rejettent de l'oxygène lors de la photosynthèse."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel est le plus grand organe du corps humain ?",
+    "options": ["Le foie", "Le cerveau", "La peau", "Les poumons"],
+    "correct_index": 2,
+    "explanation": "La peau est le plus grand organe du corps humain, couvrant environ 2 m² chez l'adulte."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle est la vitesse de la lumière dans le vide (approximativement) ?",
+    "options": ["100 000 km/s", "300 000 km/s", "500 000 km/s", "150 000 km/s"],
+    "correct_index": 1,
+    "explanation": "La lumière se déplace à environ 299 792 km/s dans le vide, souvent arrondi à 300 000 km/s."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel est le symbole chimique du fer ?",
+    "options": ["Fr", "Fi", "Fe", "Fe2"],
+    "correct_index": 2,
+    "explanation": "Le symbole chimique du fer est Fe, du latin « ferrum »."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle est la planète la plus grande du système solaire ?",
+    "options": ["Saturne", "Neptune", "Jupiter", "Uranus"],
+    "correct_index": 2,
+    "explanation": "Jupiter est la plus grande planète du système solaire, avec un diamètre d'environ 143 000 km."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "De quoi est principalement composé l'air que nous respirons ?",
+    "options": ["D'oxygène", "De dioxyde de carbone", "D'azote", "D'hélium"],
+    "correct_index": 2,
+    "explanation": "L'air est composé à environ 78 % d'azote et 21 % d'oxygène, le reste étant des gaz rares et du CO2."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Comment s'appelle le processus par lequel l'eau passe de l'état liquide à l'état gazeux ?",
+    "options": ["La condensation", "La solidification", "L'évaporation", "La sublimation"],
+    "correct_index": 2,
+    "explanation": "L'évaporation est le passage de l'état liquide à l'état gazeux, phénomène qui se produit à la surface d'un liquide."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel scientifique a formulé la théorie de la relativité ?",
+    "options": ["Isaac Newton", "Niels Bohr", "Albert Einstein", "Galilée"],
+    "correct_index": 2,
+    "explanation": "Albert Einstein a publié la théorie de la relativité restreinte en 1905 et la relativité générale en 1915."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Combien de chromosomes possède une cellule humaine normale ?",
+    "options": ["23", "44", "46", "48"],
+    "correct_index": 2,
+    "explanation": "Une cellule humaine normale contient 46 chromosomes, soit 23 paires."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel organe du corps humain produit l'insuline ?",
+    "options": ["Le foie", "Le pancréas", "Les reins", "L'estomac"],
+    "correct_index": 1,
+    "explanation": "L'insuline est produite par les cellules bêta des îlots de Langerhans dans le pancréas."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle est la température d'ébullition de l'eau à pression atmosphérique normale ?",
+    "options": ["90 °C", "100 °C", "110 °C", "120 °C"],
+    "correct_index": 1,
+    "explanation": "L'eau bout à 100 °C (212 °F) à la pression atmosphérique standard de 1 atm."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel est le nom de notre galaxie ?",
+    "options": ["Andromède", "La Voie lactée", "Le Grand Nuage de Magellan", "La galaxie du Sombrero"],
+    "correct_index": 1,
+    "explanation": "Notre système solaire se trouve dans la Voie lactée, une galaxie spirale barrée contenant des centaines de milliards d'étoiles."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est le nombre d'Avogadro (approximativement) ?",
+    "options": ["6,022 × 10²³", "3,14 × 10²³", "1,602 × 10¹⁹", "9,81 × 10²⁴"],
+    "correct_index": 0,
+    "explanation": "Le nombre d'Avogadro est environ 6,022 × 10²³, correspondant au nombre d'entités dans une mole de substance."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel physicien français a découvert la radioactivité naturelle ?",
+    "options": ["Pierre Curie", "Henri Becquerel", "Louis de Broglie", "Paul Langevin"],
+    "correct_index": 1,
+    "explanation": "Henri Becquerel a découvert la radioactivité naturelle en 1896 en étudiant la fluorescence des sels d'uranium."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle est la particule élémentaire porteuse de la charge électrique négative ?",
+    "options": ["Le proton", "Le neutron", "L'électron", "Le photon"],
+    "correct_index": 2,
+    "explanation": "L'électron est une particule élémentaire portant une charge électrique négative de -1,6 × 10⁻¹⁹ coulombs."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est le pH d'une solution neutre à 25 °C ?",
+    "options": ["0", "7", "10", "14"],
+    "correct_index": 1,
+    "explanation": "À 25 °C, une solution neutre a un pH de 7. En dessous c'est acide, au-dessus c'est basique."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle molécule porte l'information génétique dans les cellules ?",
+    "options": ["L'ARN messager", "L'ADN", "Les protéines", "Les lipides"],
+    "correct_index": 1,
+    "explanation": "L'ADN (acide désoxyribonucléique) est la molécule qui stocke l'information génétique sous forme de séquences de nucléotides."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Comment s'appelle la force qui maintient les planètes en orbite autour du Soleil ?",
+    "options": ["La force électromagnétique", "La force nucléaire forte", "La gravitation", "La force centrifuge"],
+    "correct_index": 2,
+    "explanation": "C'est la gravitation, décrite par Newton puis par Einstein, qui maintient les planètes en orbite autour du Soleil."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel élément chimique a le numéro atomique 6 ?",
+    "options": ["L'azote", "L'oxygène", "Le carbone", "Le bore"],
+    "correct_index": 2,
+    "explanation": "Le carbone possède 6 protons dans son noyau, ce qui lui donne le numéro atomique 6."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle scientifique française a reçu deux prix Nobel dans deux disciplines différentes ?",
+    "options": ["Irène Joliot-Curie", "Marie Curie", "Emmanuelle Charpentier", "Claudie Haigneré"],
+    "correct_index": 1,
+    "explanation": "Marie Curie a reçu le prix Nobel de physique en 1903 et celui de chimie en 1911, un exploit unique pour une femme."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel type de liaison chimique se forme par le partage d'électrons entre atomes ?",
+    "options": ["La liaison ionique", "La liaison covalente", "La liaison métallique", "La liaison hydrogène"],
+    "correct_index": 1,
+    "explanation": "La liaison covalente se forme lorsque deux atomes partagent une ou plusieurs paires d'électrons."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est le gaz à effet de serre le plus abondant émis par les activités humaines ?",
+    "options": ["Le méthane", "Le protoxyde d'azote", "Le dioxyde de carbone", "L'ozone"],
+    "correct_index": 2,
+    "explanation": "Le dioxyde de carbone (CO2) est le principal gaz à effet de serre d'origine anthropique, principalement issu de la combustion d'énergies fossiles."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle est l'unité de mesure de la force dans le Système international ?",
+    "options": ["Le joule", "Le watt", "Le newton", "Le pascal"],
+    "correct_index": 2,
+    "explanation": "Le newton (N) est l'unité de force dans le SI, nommé en l'honneur d'Isaac Newton."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel phénomène optique explique la décomposition de la lumière blanche par un prisme ?",
+    "options": ["La réflexion", "La diffraction", "La dispersion", "La polarisation"],
+    "correct_index": 2,
+    "explanation": "La dispersion est le phénomène par lequel un prisme sépare la lumière blanche en ses composantes colorées, chaque longueur d'onde étant réfractée différemment."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est le plus petit os du corps humain ?",
+    "options": ["Le marteau", "L'enclume", "L'étrier", "Le pisiforme"],
+    "correct_index": 2,
+    "explanation": "L'étrier, situé dans l'oreille moyenne, est le plus petit os du corps humain, mesurant environ 3 mm."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Comment appelle-t-on un atome qui a gagné ou perdu un ou plusieurs électrons ?",
+    "options": ["Un isotope", "Un ion", "Un radical", "Un isomère"],
+    "correct_index": 1,
+    "explanation": "Un ion est un atome ou une molécule portant une charge électrique, positive (cation) s'il a perdu des électrons, négative (anion) s'il en a gagné."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est le rôle principal des globules blancs dans le corps humain ?",
+    "options": ["Transporter l'oxygène", "Défendre l'organisme contre les infections", "Assurer la coagulation du sang", "Produire des hormones"],
+    "correct_index": 1,
+    "explanation": "Les globules blancs (leucocytes) sont les cellules du système immunitaire qui protègent l'organisme contre les agents pathogènes."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel est l'élément le plus abondant dans l'univers ?",
+    "options": ["L'hélium", "L'oxygène", "Le carbone", "L'hydrogène"],
+    "correct_index": 3,
+    "explanation": "L'hydrogène représente environ 75 % de la masse baryonique de l'univers et constitue le combustible principal des étoiles."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle est la loi de la physique qui stipule que « rien ne se perd, rien ne se crée, tout se transforme » ?",
+    "options": ["La loi de la gravitation universelle", "La conservation de l'énergie", "Le principe d'incertitude", "La loi de Coulomb"],
+    "correct_index": 1,
+    "explanation": "Cette formule, attribuée à Lavoisier, exprime le principe de conservation de la masse et de l'énergie."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel vaccin Louis Pasteur a-t-il mis au point en 1885 ?",
+    "options": ["Le vaccin contre la variole", "Le vaccin contre la tuberculose", "Le vaccin contre la rage", "Le vaccin contre le choléra"],
+    "correct_index": 2,
+    "explanation": "Louis Pasteur a développé le vaccin contre la rage et l'a utilisé avec succès pour la première fois sur Joseph Meister en 1885."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Combien de temps met la lumière du Soleil pour atteindre la Terre ?",
+    "options": ["Environ 1 minute", "Environ 8 minutes", "Environ 20 minutes", "Environ 1 heure"],
+    "correct_index": 1,
+    "explanation": "La lumière du Soleil met environ 8 minutes et 20 secondes pour parcourir les 150 millions de kilomètres jusqu'à la Terre."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel organe filtre le sang et produit l'urine ?",
+    "options": ["Le foie", "La rate", "Le rein", "La vessie"],
+    "correct_index": 2,
+    "explanation": "Les reins filtrent environ 180 litres de sang par jour et produisent l'urine pour éliminer les déchets métaboliques."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le nom de la particule hypothétique responsable de la masse des autres particules, découverte en 2012 au CERN ?",
+    "options": ["Le graviton", "Le boson de Higgs", "Le gluon", "Le tachyon"],
+    "correct_index": 1,
+    "explanation": "Le boson de Higgs, prédit théoriquement en 1964, a été observé expérimentalement en 2012 au LHC du CERN, confirmant le mécanisme de Brout-Englert-Higgs."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel physicien français a proposé la dualité onde-corpuscule de la matière ?",
+    "options": ["Paul Dirac", "Louis de Broglie", "Alain Aspect", "Henri Poincaré"],
+    "correct_index": 1,
+    "explanation": "Louis de Broglie a proposé en 1924 dans sa thèse de doctorat que toute particule possède une onde associée, ce qui lui a valu le prix Nobel en 1929."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quelle est la constante de Planck (approximativement) ?",
+    "options": ["6,626 × 10⁻³⁴ J·s", "1,381 × 10⁻²³ J/K", "8,314 J/(mol·K)", "9,109 × 10⁻³¹ kg"],
+    "correct_index": 0,
+    "explanation": "La constante de Planck vaut environ 6,626 × 10⁻³⁴ J·s et relie l'énergie d'un photon à sa fréquence."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Comment s'appelle le cycle cellulaire aboutissant à la formation de cellules reproductrices haploïdes ?",
+    "options": ["La mitose", "La méiose", "L'apoptose", "La cytokinèse"],
+    "correct_index": 1,
+    "explanation": "La méiose est un processus de division cellulaire en deux étapes qui produit quatre cellules haploïdes (gamètes) à partir d'une cellule diploïde."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le principe fondamental de la thermodynamique qui stipule qu'il est impossible d'atteindre le zéro absolu ?",
+    "options": ["Le premier principe", "Le deuxième principe", "Le troisième principe", "Le principe zéro"],
+    "correct_index": 2,
+    "explanation": "Le troisième principe de la thermodynamique (théorème de Nernst) établit qu'il est impossible d'atteindre le zéro absolu (0 K) en un nombre fini d'opérations."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quelle est la technique d'édition génétique révolutionnaire développée par Emmanuelle Charpentier et Jennifer Doudna ?",
+    "options": ["PCR", "CRISPR-Cas9", "Southern blot", "Séquençage Sanger"],
+    "correct_index": 1,
+    "explanation": "CRISPR-Cas9 est un outil d'édition génétique précis qui a valu à Charpentier et Doudna le prix Nobel de chimie en 2020."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel phénomène quantique Albert Einstein qualifiait-il d'« action fantôme à distance » ?",
+    "options": ["L'effet tunnel", "La superposition quantique", "L'intrication quantique", "La dualité onde-corpuscule"],
+    "correct_index": 2,
+    "explanation": "L'intrication quantique, où deux particules restent corrélées indépendamment de la distance, a été qualifiée par Einstein de « spukhafte Fernwirkung » (action fantôme à distance)."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel astronome français a calculé par le calcul la position de Neptune avant son observation ?",
+    "options": ["Urbain Le Verrier", "Camille Flammarion", "Charles Messier", "Pierre-Simon de Laplace"],
+    "correct_index": 0,
+    "explanation": "Urbain Le Verrier a prédit mathématiquement la position de Neptune en 1846, en analysant les perturbations de l'orbite d'Uranus."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel type de réaction nucléaire alimente le Soleil ?",
+    "options": ["La fission nucléaire", "La fusion nucléaire", "La désintégration bêta", "La capture neutronique"],
+    "correct_index": 1,
+    "explanation": "Le Soleil tire son énergie de la fusion thermonucléaire, principalement la chaîne proton-proton qui transforme l'hydrogène en hélium."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quelle est la fonction principale des mitochondries dans la cellule ?",
+    "options": ["La synthèse des protéines", "La production d'énergie sous forme d'ATP", "Le stockage du matériel génétique", "La digestion cellulaire"],
+    "correct_index": 1,
+    "explanation": "Les mitochondries sont les « centrales énergétiques » de la cellule, produisant l'ATP par phosphorylation oxydative."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le nom du théorème qui interdit de connaître simultanément la position et la vitesse exactes d'une particule ?",
+    "options": ["Le théorème de Bell", "Le principe d'exclusion de Pauli", "Le principe d'incertitude de Heisenberg", "Le théorème de Noether"],
+    "correct_index": 2,
+    "explanation": "Le principe d'incertitude de Heisenberg (1927) établit une limite fondamentale à la précision avec laquelle on peut connaître simultanément la position et la quantité de mouvement d'une particule."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel chercheur français a démontré expérimentalement la violation des inégalités de Bell en 1982 ?",
+    "options": ["Claude Cohen-Tannoudji", "Alain Aspect", "Serge Haroche", "Gérard Mourou"],
+    "correct_index": 1,
+    "explanation": "Alain Aspect a réalisé en 1982 des expériences cruciales confirmant l'intrication quantique et la violation des inégalités de Bell, travaux récompensés par le prix Nobel de physique en 2022."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le nom de l'enzyme qui réplique l'ADN lors de la division cellulaire ?",
+    "options": ["L'ARN polymérase", "La ligase", "L'ADN polymérase", "L'hélicase"],
+    "correct_index": 2,
+    "explanation": "L'ADN polymérase est l'enzyme qui synthétise un nouveau brin d'ADN en utilisant le brin matrice comme modèle lors de la réplication."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Comment appelle-t-on les particules élémentaires constituant les protons et les neutrons ?",
+    "options": ["Les leptons", "Les bosons", "Les quarks", "Les mésons"],
+    "correct_index": 2,
+    "explanation": "Les quarks sont les constituants fondamentaux des hadrons. Un proton est formé de deux quarks up et un quark down, un neutron de deux quarks down et un quark up."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel prix Nobel français a reçu la distinction en 2018 pour ses travaux sur les impulsions laser ultra-intenses ?",
+    "options": ["Albert Fert", "Serge Haroche", "Gérard Mourou", "Claude Cohen-Tannoudji"],
+    "correct_index": 2,
+    "explanation": "Gérard Mourou a reçu le prix Nobel de physique en 2018 pour la technique d'amplification par dérive de fréquence (CPA), permettant de créer des impulsions laser ultra-courtes et intenses."
+  }
+]

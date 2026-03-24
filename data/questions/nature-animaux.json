@@ -1,0 +1,652 @@
+[
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel est le plus grand animal vivant sur Terre ?",
+    "options": [
+      "L'éléphant d'Afrique",
+      "La baleine bleue",
+      "Le requin-baleine",
+      "La girafe"
+    ],
+    "correct_index": 1,
+    "explanation": "La baleine bleue est le plus grand animal ayant jamais existé sur Terre, pouvant atteindre plus de 30 mètres de long et peser jusqu'à 170 tonnes."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Combien de pattes possède une araignée ?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "correct_index": 1,
+    "explanation": "Les araignées sont des arachnides et possèdent 8 pattes, contrairement aux insectes qui en ont 6."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel gaz les plantes absorbent-elles lors de la photosynthèse ?",
+    "options": [
+      "L'oxygène",
+      "L'azote",
+      "Le dioxyde de carbone",
+      "L'hydrogène"
+    ],
+    "correct_index": 2,
+    "explanation": "Les plantes absorbent le dioxyde de carbone (CO₂) et rejettent de l'oxygène lors de la photosynthèse, un processus essentiel à la vie sur Terre."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel animal est surnommé « le roi de la jungle » ?",
+    "options": [
+      "Le tigre",
+      "Le lion",
+      "Le gorille",
+      "L'éléphant"
+    ],
+    "correct_index": 1,
+    "explanation": "Le lion est traditionnellement surnommé le roi de la jungle, bien qu'il vive principalement dans la savane africaine et non dans la jungle."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quelle est la particularité du caméléon ?",
+    "options": [
+      "Il peut voler",
+      "Il change de couleur",
+      "Il est venimeux",
+      "Il vit dans l'eau"
+    ],
+    "correct_index": 1,
+    "explanation": "Le caméléon est capable de changer la couleur de sa peau grâce à des cellules spécialisées appelées chromatophores, notamment pour communiquer ou réguler sa température."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel est le plus grand félin du monde ?",
+    "options": [
+      "Le lion",
+      "Le léopard",
+      "Le tigre",
+      "Le guépard"
+    ],
+    "correct_index": 2,
+    "explanation": "Le tigre de Sibérie est le plus grand félin du monde, pouvant peser jusqu'à 300 kg et mesurer plus de 3 mètres de long."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Comment s'appelle le petit du cheval ?",
+    "options": [
+      "Le veau",
+      "Le poulain",
+      "L'agneau",
+      "Le chevreau"
+    ],
+    "correct_index": 1,
+    "explanation": "Le petit du cheval s'appelle le poulain. La femelle adulte est la jument et le mâle adulte est l'étalon."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel organe permet aux poissons de respirer sous l'eau ?",
+    "options": [
+      "Les poumons",
+      "Les branchies",
+      "La peau",
+      "Les nageoires"
+    ],
+    "correct_index": 1,
+    "explanation": "Les branchies permettent aux poissons d'extraire l'oxygène dissous dans l'eau pour respirer."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel est le mammifère terrestre le plus rapide ?",
+    "options": [
+      "Le lion",
+      "Le lévrier",
+      "Le guépard",
+      "L'antilope"
+    ],
+    "correct_index": 2,
+    "explanation": "Le guépard peut atteindre une vitesse de pointe d'environ 110 km/h en quelques secondes, ce qui en fait le mammifère terrestre le plus rapide."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel arbre produit des glands ?",
+    "options": [
+      "Le hêtre",
+      "Le chêne",
+      "Le bouleau",
+      "Le sapin"
+    ],
+    "correct_index": 1,
+    "explanation": "Le chêne produit des glands, qui sont des fruits secs appelés akènes. Les glands constituent une source de nourriture importante pour de nombreux animaux forestiers."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel animal produit du miel ?",
+    "options": [
+      "La guêpe",
+      "Le bourdon",
+      "L'abeille",
+      "Le frelon"
+    ],
+    "correct_index": 2,
+    "explanation": "L'abeille domestique (Apis mellifera) produit du miel à partir du nectar des fleurs, qu'elle stocke dans les alvéoles de la ruche."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Combien de cœurs possède une pieuvre ?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct_index": 2,
+    "explanation": "La pieuvre possède 3 cœurs : un cœur principal qui envoie le sang dans le corps et deux cœurs branchiaux qui pompent le sang vers les branchies."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quelle est la plus grande forêt tropicale du monde ?",
+    "options": [
+      "La forêt du Congo",
+      "La forêt de Bornéo",
+      "La forêt amazonienne",
+      "La forêt de Daintree"
+    ],
+    "correct_index": 2,
+    "explanation": "La forêt amazonienne couvre environ 5,5 millions de km² et représente plus de la moitié des forêts tropicales restantes dans le monde."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "Quel est le seul mammifère capable de voler ?",
+    "options": [
+      "L'écureuil volant",
+      "La chauve-souris",
+      "Le colugos",
+      "Le polatouche"
+    ],
+    "correct_index": 1,
+    "explanation": "La chauve-souris est le seul mammifère capable de vol actif. Les autres mammifères dits « volants » ne font en réalité que planer."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "easy",
+    "question": "De quelle couleur sont les feuilles en automne grâce au pigment caroténoïde ?",
+    "options": [
+      "Rouge",
+      "Jaune-orangé",
+      "Violet",
+      "Bleu"
+    ],
+    "correct_index": 1,
+    "explanation": "Les caroténoïdes donnent aux feuilles leurs teintes jaunes et orangées en automne, lorsque la chlorophylle verte se dégrade."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le nom scientifique du loup gris ?",
+    "options": [
+      "Canis lupus",
+      "Canis latrans",
+      "Canis aureus",
+      "Canis rufus"
+    ],
+    "correct_index": 0,
+    "explanation": "Le loup gris porte le nom scientifique Canis lupus. C'est l'ancêtre du chien domestique (Canis lupus familiaris)."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel phénomène naturel provoque les marées ?",
+    "options": [
+      "Le vent",
+      "La rotation de la Terre",
+      "L'attraction gravitationnelle de la Lune et du Soleil",
+      "Les courants marins"
+    ],
+    "correct_index": 2,
+    "explanation": "Les marées sont principalement causées par l'attraction gravitationnelle de la Lune et, dans une moindre mesure, du Soleil sur les masses d'eau terrestres."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quelle est la durée de gestation d'un éléphant d'Afrique ?",
+    "options": [
+      "12 mois",
+      "18 mois",
+      "22 mois",
+      "28 mois"
+    ],
+    "correct_index": 2,
+    "explanation": "L'éléphant d'Afrique a la plus longue gestation de tous les mammifères terrestres, environ 22 mois, soit presque deux ans."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Comment s'appelle le processus par lequel un têtard devient une grenouille ?",
+    "options": [
+      "La mutation",
+      "La métamorphose",
+      "La mue",
+      "La chrysalide"
+    ],
+    "correct_index": 1,
+    "explanation": "La métamorphose est le processus biologique de transformation profonde du têtard aquatique en grenouille terrestre, impliquant la perte de la queue et le développement des pattes."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le plus grand désert chaud du monde ?",
+    "options": [
+      "Le désert de Gobi",
+      "Le désert du Kalahari",
+      "Le Sahara",
+      "Le désert d'Arabie"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Sahara est le plus grand désert chaud du monde avec une superficie d'environ 9 millions de km², couvrant une grande partie de l'Afrique du Nord."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quelle espèce de requin est la plus grande ?",
+    "options": [
+      "Le grand requin blanc",
+      "Le requin-marteau",
+      "Le requin-baleine",
+      "Le requin-tigre"
+    ],
+    "correct_index": 2,
+    "explanation": "Le requin-baleine est le plus grand poisson vivant, pouvant atteindre 18 mètres de long. Malgré sa taille, il se nourrit principalement de plancton."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le rôle principal des vers de terre dans le sol ?",
+    "options": [
+      "Polliniser les plantes",
+      "Aérer et fertiliser le sol",
+      "Éliminer les parasites",
+      "Retenir l'eau"
+    ],
+    "correct_index": 1,
+    "explanation": "Les vers de terre jouent un rôle essentiel en creusant des galeries qui aèrent le sol et en transformant la matière organique en humus fertile."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel animal possède des empreintes digitales quasi identiques à celles de l'homme ?",
+    "options": [
+      "Le chimpanzé",
+      "Le gorille",
+      "Le koala",
+      "L'orang-outan"
+    ],
+    "correct_index": 2,
+    "explanation": "Le koala possède des empreintes digitales si similaires à celles de l'homme qu'elles pourraient être confondues, même au microscope."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un animal endémique ?",
+    "options": [
+      "Un animal en voie de disparition",
+      "Un animal qui ne vit que dans une zone géographique précise",
+      "Un animal domestiqué",
+      "Un animal qui migre chaque année"
+    ],
+    "correct_index": 1,
+    "explanation": "Un animal endémique est une espèce qui n'existe naturellement que dans une région géographique limitée et spécifique, comme le lémurien à Madagascar."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quelle plante carnivore est célèbre pour son piège à mâchoires ?",
+    "options": [
+      "Le népenthès",
+      "La drosera",
+      "La dionée attrape-mouche",
+      "La sarracénie"
+    ],
+    "correct_index": 2,
+    "explanation": "La dionée attrape-mouche (Dionaea muscipula) possède un piège à mâchoires qui se referme en moins d'une seconde lorsqu'un insecte touche ses poils sensitifs."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le plus long fleuve du monde ?",
+    "options": [
+      "L'Amazone",
+      "Le Nil",
+      "Le Yangtsé",
+      "Le Mississippi"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Nil, avec environ 6 650 km, est généralement considéré comme le plus long fleuve du monde, bien que certaines mesures récentes donnent un léger avantage à l'Amazone."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel type d'animal est l'ornithorynque ?",
+    "options": [
+      "Un reptile",
+      "Un amphibien",
+      "Un mammifère",
+      "Un oiseau"
+    ],
+    "correct_index": 2,
+    "explanation": "L'ornithorynque est un mammifère monotrème, c'est-à-dire un mammifère qui pond des œufs. Il possède aussi un bec et les mâles ont un éperon venimeux."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quelle couche de l'atmosphère contient la couche d'ozone ?",
+    "options": [
+      "La troposphère",
+      "La stratosphère",
+      "La mésosphère",
+      "La thermosphère"
+    ],
+    "correct_index": 1,
+    "explanation": "La couche d'ozone se situe dans la stratosphère, entre 20 et 50 km d'altitude. Elle protège la Terre des rayons ultraviolets nocifs du Soleil."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel insecte effectue une danse pour indiquer la direction d'une source de nourriture à ses congénères ?",
+    "options": [
+      "La fourmi",
+      "L'abeille",
+      "Le papillon",
+      "La coccinelle"
+    ],
+    "correct_index": 1,
+    "explanation": "L'abeille réalise une « danse frétillante » pour communiquer la direction et la distance d'une source de nectar aux autres abeilles de la ruche."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le principal pollinisateur des plantes à fleurs ?",
+    "options": [
+      "Le vent",
+      "Les abeilles",
+      "Les oiseaux",
+      "Les papillons"
+    ],
+    "correct_index": 1,
+    "explanation": "Les abeilles sont les principaux pollinisateurs des plantes à fleurs. On estime qu'elles participent à la pollinisation d'environ 80 % des espèces végétales."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel phénomène océanique récurrent réchauffe les eaux du Pacifique et perturbe le climat mondial ?",
+    "options": [
+      "La Niña",
+      "El Niño",
+      "Le Gulf Stream",
+      "Le courant de Humboldt"
+    ],
+    "correct_index": 1,
+    "explanation": "El Niño est un phénomène climatique caractérisé par un réchauffement anormal des eaux de surface dans l'est du Pacifique, entraînant des perturbations météorologiques mondiales."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le nom du symbiose entre un champignon et une algue ?",
+    "options": [
+      "Un lichen",
+      "Une mousse",
+      "Une fougère",
+      "Un mycélium"
+    ],
+    "correct_index": 0,
+    "explanation": "Le lichen est le résultat de la symbiose entre un champignon et une algue (ou cyanobactérie). Il peut coloniser des milieux très hostiles comme les rochers."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel mammifère marin est connu pour utiliser des outils, comme des pierres pour ouvrir des coquillages ?",
+    "options": [
+      "Le dauphin",
+      "La loutre de mer",
+      "Le phoque",
+      "Le morse"
+    ],
+    "correct_index": 1,
+    "explanation": "La loutre de mer utilise des pierres posées sur son ventre comme enclume pour casser les coquillages, ce qui en fait l'un des rares mammifères marins à utiliser des outils."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel est le plus grand récif corallien du monde ?",
+    "options": [
+      "Le récif de la Nouvelle-Calédonie",
+      "La Grande Barrière de corail",
+      "Le récif de Belize",
+      "Le récif des Maldives"
+    ],
+    "correct_index": 1,
+    "explanation": "La Grande Barrière de corail, au large de l'Australie, s'étend sur plus de 2 300 km. C'est la plus grande structure vivante visible depuis l'espace."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "medium",
+    "question": "Quel animal peut régénérer ses membres perdus ?",
+    "options": [
+      "Le lézard",
+      "L'axolotl",
+      "La tortue",
+      "Le serpent"
+    ],
+    "correct_index": 1,
+    "explanation": "L'axolotl, une salamandre mexicaine, est capable de régénérer des membres entiers, des organes, et même des parties de son cerveau et de son cœur."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le nom du processus par lequel les plantes perdent de l'eau par leurs feuilles ?",
+    "options": [
+      "L'évaporation",
+      "La transpiration",
+      "L'osmose",
+      "La condensation"
+    ],
+    "correct_index": 1,
+    "explanation": "L'évapotranspiration, ou plus précisément la transpiration végétale, est le processus par lequel les plantes libèrent de la vapeur d'eau par les stomates de leurs feuilles."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le terme scientifique désignant les organismes qui produisent de la lumière ?",
+    "options": [
+      "Bioluminescence",
+      "Phosphorescence",
+      "Fluorescence",
+      "Incandescence"
+    ],
+    "correct_index": 0,
+    "explanation": "La bioluminescence est la production de lumière par des organismes vivants grâce à une réaction chimique impliquant la luciférine et la luciférase."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le nom de la théorie selon laquelle les mitochondries étaient à l'origine des bactéries indépendantes ?",
+    "options": [
+      "La théorie de la panspermie",
+      "La théorie endosymbiotique",
+      "La théorie de la biogenèse",
+      "La théorie de la génération spontanée"
+    ],
+    "correct_index": 1,
+    "explanation": "La théorie endosymbiotique, proposée par Lynn Margulis, affirme que les mitochondries et les chloroplastes étaient des bactéries qui ont été intégrées dans des cellules eucaryotes primitives."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le seul oiseau capable de voler en arrière ?",
+    "options": [
+      "Le martinet",
+      "Le colibri",
+      "L'hirondelle",
+      "Le faucon pèlerin"
+    ],
+    "correct_index": 1,
+    "explanation": "Le colibri est le seul oiseau capable de voler en arrière grâce à la structure unique de ses ailes qui peuvent tourner à 180 degrés, lui permettant un vol stationnaire et rétrograde."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le plus ancien arbre vivant connu, situé en Californie ?",
+    "options": [
+      "Le séquoia géant « General Sherman »",
+      "Le pin Bristlecone « Mathusalem »",
+      "Le cyprès de Montezuma « El Árbol del Tule »",
+      "Le baobab de Sunland"
+    ],
+    "correct_index": 1,
+    "explanation": "Le pin Bristlecone « Mathusalem », dans les White Mountains de Californie, est âgé de plus de 4 850 ans, ce qui en fait l'un des plus anciens arbres individuels connus."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quelle substance chimique donne sa couleur verte aux plantes ?",
+    "options": [
+      "La xanthophylle",
+      "Le carotène",
+      "La chlorophylle",
+      "L'anthocyanine"
+    ],
+    "correct_index": 2,
+    "explanation": "La chlorophylle est le pigment vert présent dans les chloroplastes des cellules végétales. Elle absorbe la lumière rouge et bleue, réfléchissant le vert."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le nom du phénomène par lequel certaines espèces inoffensives imitent l'apparence d'espèces dangereuses ?",
+    "options": [
+      "Le camouflage",
+      "Le mimétisme batésien",
+      "Le mimétisme müllérien",
+      "L'aposématisme"
+    ],
+    "correct_index": 1,
+    "explanation": "Le mimétisme batésien, décrit par Henry Walter Bates, est une stratégie évolutive où une espèce inoffensive imite l'apparence d'une espèce toxique ou dangereuse pour dissuader les prédateurs."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le plus grand invertébré connu ?",
+    "options": [
+      "La méduse à crinière de lion",
+      "Le calmar colossal",
+      "Le crabe-araignée du Japon",
+      "Le poulpe géant du Pacifique"
+    ],
+    "correct_index": 1,
+    "explanation": "Le calmar colossal (Mesonychoteuthis hamiltoni) est le plus grand invertébré connu, pouvant mesurer jusqu'à 14 mètres de long et peser plus de 500 kg."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que la mycorhize ?",
+    "options": [
+      "Une maladie fongique des plantes",
+      "Une association symbiotique entre un champignon et les racines d'une plante",
+      "Un type de spore fongique",
+      "Une racine aérienne"
+    ],
+    "correct_index": 1,
+    "explanation": "La mycorhize est une association symbiotique entre les racines d'une plante et un champignon. Le champignon aide la plante à absorber l'eau et les minéraux en échange de sucres."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le nom du cycle biogéochimique de l'azote qui transforme l'azote atmosphérique en formes utilisables par les plantes ?",
+    "options": [
+      "La nitrification",
+      "La fixation de l'azote",
+      "La dénitrification",
+      "L'ammonification"
+    ],
+    "correct_index": 1,
+    "explanation": "La fixation de l'azote est le processus par lequel l'azote atmosphérique (N₂) est converti en ammoniac (NH₃), réalisé principalement par des bactéries comme les rhizobiums."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est l'animal terrestre ayant la pression de morsure la plus puissante ?",
+    "options": [
+      "Le lion",
+      "L'hippopotame",
+      "Le crocodile marin",
+      "Le jaguar"
+    ],
+    "correct_index": 2,
+    "explanation": "Le crocodile marin (Crocodylus porosus) possède la morsure la plus puissante jamais mesurée chez un animal vivant, avec une force d'environ 16 000 newtons."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Comment appelle-t-on la zone océanique où la lumière ne pénètre plus, au-delà de 1 000 mètres de profondeur ?",
+    "options": [
+      "La zone mésopélagique",
+      "La zone bathypélagique",
+      "La zone épipélagique",
+      "La zone abyssale"
+    ],
+    "correct_index": 1,
+    "explanation": "La zone bathypélagique, entre 1 000 et 4 000 mètres de profondeur, est une zone d'obscurité totale où la température avoisine 4°C et la pression est extrême."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel scientifique est considéré comme le père de la taxonomie moderne ?",
+    "options": [
+      "Charles Darwin",
+      "Carl von Linné",
+      "Gregor Mendel",
+      "Jean-Baptiste de Lamarck"
+    ],
+    "correct_index": 1,
+    "explanation": "Carl von Linné (Linnaeus) a établi au XVIIIe siècle le système de nomenclature binomiale encore utilisé aujourd'hui pour nommer les espèces vivantes."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel est le biome terrestre le plus productif en termes de biomasse ?",
+    "options": [
+      "La savane tropicale",
+      "La forêt tropicale humide",
+      "La forêt tempérée",
+      "La mangrove"
+    ],
+    "correct_index": 1,
+    "explanation": "La forêt tropicale humide est le biome terrestre le plus productif, abritant plus de 50 % de la biodiversité mondiale sur seulement 6 % de la surface terrestre."
+  },
+  {
+    "category": "Nature & Animaux",
+    "difficulty": "hard",
+    "question": "Quel mécanisme de défense le concombre de mer utilise-t-il face à un prédateur ?",
+    "options": [
+      "Il émet un poison par la peau",
+      "Il expulse ses organes internes",
+      "Il se gonfle d'eau",
+      "Il produit une décharge électrique"
+    ],
+    "correct_index": 1,
+    "explanation": "Le concombre de mer peut expulser ses organes internes (éviscération) par l'anus pour distraire ou empoisonner un prédateur, puis les régénérer en quelques semaines."
+  }
+]
