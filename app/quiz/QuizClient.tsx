@@ -6,10 +6,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
 
-const TIMER_SECONDS = 15;
-const QUESTIONS_PER_GAME = 8;
-
+type GameMode = "classique" | "blitz" | "mort-subite";
 type GamePhase = "loading" | "select" | "playing" | "answered" | "finished";
+
+const TIMER_SECONDS = 15;
+const CLASSIC_QUESTIONS = 10;
+const BLITZ_QUESTIONS = 50; // large pool, game ends by timer
+const BLITZ_DURATION = 60;
+const SUDDEN_DEATH_QUESTIONS = 50; // large pool, game ends on first error
+
+const MODE_INFO: Record<GameMode, { label: string; icon: string; desc: string; color: string }> = {
+  classique: { label: "Classique", icon: "📝", desc: "10 questions tranquilles", color: "neon-cyan" },
+  blitz: { label: "Blitz", icon: "⚡", desc: "60s chrono, max de points", color: "amber-400" },
+  "mort-subite": { label: "Mort Subite", icon: "💀", desc: "Première erreur = fin", color: "neon-rose" },
+};
 
 interface CategoryInfo {
   name: string;
@@ -18,10 +28,12 @@ interface CategoryInfo {
 
 interface Props {
   initialCategory?: string;
+  initialMode?: GameMode;
 }
 
-export default function QuizClient({ initialCategory }: Props) {
+export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [phase, setPhase] = useState<GamePhase>("loading");
+  const [gameMode, setGameMode] = useState<GameMode>(initialMode || "classique");
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">(
     (initialCategory as Category) || "All"
   );
@@ -29,7 +41,6 @@ export default function QuizClient({ initialCategory }: Props) {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [shakeWrong, setShakeWrong] = useState(false);
 
-  // Fetch categories on mount
   useEffect(() => {
     fetch("/api/categories")
       .then((r) => r.json())
@@ -45,12 +56,14 @@ export default function QuizClient({ initialCategory }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [timeLeft, setTimeLeft] = useState(TIMER_SECONDS);
+  const [blitzTimeLeft, setBlitzTimeLeft] = useState(BLITZ_DURATION);
   const [score, setScore] = useState(0);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [answers, setAnswers] = useState<{ selected: number | null; correct: number }[]>([]);
   const [showExplanation, setShowExplanation] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const blitzTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -59,6 +72,33 @@ export default function QuizClient({ initialCategory }: Props) {
     }
   }, []);
 
+  const stopBlitzTimer = useCallback(() => {
+    if (blitzTimerRef.current) {
+      clearInterval(blitzTimerRef.current);
+      blitzTimerRef.current = null;
+    }
+  }, []);
+
+  // Blitz global timer
+  useEffect(() => {
+    if (gameMode !== "blitz" || (phase !== "playing" && phase !== "answered")) return;
+    if (blitzTimerRef.current) return; // already running
+
+    blitzTimerRef.current = setInterval(() => {
+      setBlitzTimeLeft((t) => {
+        if (t <= 1) {
+          stopBlitzTimer();
+          stopTimer();
+          setPhase("finished");
+          return 0;
+        }
+        return t - 1;
+      });
+    }, 1000);
+
+    return () => stopBlitzTimer();
+  }, [gameMode, phase, stopBlitzTimer, stopTimer]);
+
   const handleTimeout = useCallback(() => {
     stopTimer();
     const currentQ = gameQuestions[currentIndex];
@@ -66,12 +106,20 @@ export default function QuizClient({ initialCategory }: Props) {
     setStreak(0);
     setSelectedOption(-1);
     setShakeWrong(true);
-    setPhase("answered");
-  }, [gameQuestions, currentIndex, stopTimer]);
 
+    // Mort subite: timeout = error = game over
+    if (gameMode === "mort-subite") {
+      setPhase("finished");
+    } else {
+      setPhase("answered");
+    }
+  }, [gameQuestions, currentIndex, stopTimer, gameMode]);
+
+  // Per-question timer (classic & sudden death use 15s, blitz uses 10s)
   useEffect(() => {
     if (phase !== "playing") return;
-    setTimeLeft(TIMER_SECONDS);
+    const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
+    setTimeLeft(perQuestionTime);
     timerRef.current = setInterval(() => {
       setTimeLeft((t) => {
         if (t <= 1) {
@@ -82,12 +130,14 @@ export default function QuizClient({ initialCategory }: Props) {
       });
     }, 1000);
     return () => stopTimer();
-  }, [phase, currentIndex, handleTimeout, stopTimer]);
+  }, [phase, currentIndex, handleTimeout, stopTimer, gameMode]);
+
+  const questionsLimit = gameMode === "classique" ? CLASSIC_QUESTIONS : gameMode === "blitz" ? BLITZ_QUESTIONS : SUDDEN_DEATH_QUESTIONS;
 
   const startGame = useCallback(async () => {
     setPhase("loading");
     try {
-      const params = new URLSearchParams({ limit: String(QUESTIONS_PER_GAME) });
+      const params = new URLSearchParams({ limit: String(questionsLimit) });
       if (selectedCategory !== "All") params.set("category", selectedCategory);
       const res = await fetch(`/api/questions/random?${params}`);
       const data = await res.json();
@@ -104,11 +154,12 @@ export default function QuizClient({ initialCategory }: Props) {
       setSelectedOption(null);
       setShowExplanation(false);
       setShakeWrong(false);
+      setBlitzTimeLeft(BLITZ_DURATION);
       setPhase("playing");
     } catch {
       setPhase("select");
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, questionsLimit]);
 
   const handleAnswer = useCallback(
     (optionIndex: number) => {
@@ -130,9 +181,15 @@ export default function QuizClient({ initialCategory }: Props) {
         setStreak(0);
         setShakeWrong(true);
       }
-      setPhase("answered");
+
+      // Mort subite: wrong answer = game over immediately
+      if (gameMode === "mort-subite" && !isCorrect) {
+        setPhase("finished");
+      } else {
+        setPhase("answered");
+      }
     },
-    [phase, gameQuestions, currentIndex, stopTimer]
+    [phase, gameQuestions, currentIndex, stopTimer, gameMode]
   );
 
   const handleNext = useCallback(() => {
@@ -149,9 +206,13 @@ export default function QuizClient({ initialCategory }: Props) {
   }, [currentIndex, gameQuestions.length]);
 
   const currentQ = gameQuestions[currentIndex];
-  const timerPercent = (timeLeft / TIMER_SECONDS) * 100;
+  const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
+  const timerPercent = (timeLeft / perQuestionTime) * 100;
   const timerUrgent = timeLeft <= 4;
   const timerWarn = timeLeft <= 8 && timeLeft > 4;
+
+  // For finished screen: actual questions answered (not the whole pool)
+  const answeredQuestions = gameQuestions.slice(0, answers.length);
 
   // ─── LOADING SCREEN ───
   if (phase === "loading") {
@@ -179,6 +240,7 @@ export default function QuizClient({ initialCategory }: Props) {
   // ─── SELECT SCREEN ───
   if (phase === "select") {
     const allCategoryNames: string[] = ["All", ...categories.map((c) => c.name)];
+    const modeInfo = MODE_INFO[gameMode];
     return (
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -191,7 +253,43 @@ export default function QuizClient({ initialCategory }: Props) {
             Choisissez une{" "}
             <span className="gradient-text">catégorie</span>
           </h1>
-          <p className="text-slate-500">Timer de 15s · 8 questions · Streak system</p>
+          <p className="text-slate-500">
+            {modeInfo.icon} {modeInfo.label} · {modeInfo.desc}
+          </p>
+        </div>
+
+        {/* Mode selector */}
+        <div className="grid grid-cols-3 gap-3 mb-8">
+          {(Object.entries(MODE_INFO) as [GameMode, typeof modeInfo][]).map(([mode, info]) => {
+            const isActive = gameMode === mode;
+            return (
+              <motion.button
+                key={mode}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => setGameMode(mode)}
+                className={`p-4 rounded-2xl border-2 text-center transition-all ${
+                  isActive
+                    ? mode === "blitz"
+                      ? "border-amber-400/50 bg-amber-400/10 shadow-lg shadow-amber-400/10"
+                      : mode === "mort-subite"
+                      ? "border-neon-rose/50 bg-neon-rose/10 shadow-lg shadow-neon-rose/10"
+                      : "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10"
+                    : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
+                }`}
+              >
+                <div className="text-2xl mb-1">{info.icon}</div>
+                <div className={`font-semibold text-sm ${
+                  isActive
+                    ? mode === "blitz" ? "text-amber-400" : mode === "mort-subite" ? "text-neon-rose" : "text-neon-cyan"
+                    : "text-white"
+                }`}>
+                  {info.label}
+                </div>
+                <div className="text-slate-600 text-xs mt-1">{info.desc}</div>
+              </motion.button>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
@@ -233,7 +331,7 @@ export default function QuizClient({ initialCategory }: Props) {
           onClick={startGame}
           className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
         >
-          Lancer le Quiz
+          {gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
         </motion.button>
       </motion.div>
     );
@@ -241,12 +339,15 @@ export default function QuizClient({ initialCategory }: Props) {
 
   // ─── FINISHED SCREEN ───
   if (phase === "finished") {
-    const accuracy = Math.round((score / gameQuestions.length) * 100);
+    const total = answeredQuestions.length;
+    const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
     const grade =
       accuracy >= 90 ? { label: "Excellent !", icon: "🏆", color: "text-yellow-400" }
       : accuracy >= 70 ? { label: "Très bien !", icon: "⭐", color: "text-neon-cyan" }
       : accuracy >= 50 ? { label: "Pas mal !", icon: "👍", color: "text-green-400" }
       : { label: "Continuez !", icon: "💪", color: "text-neon-rose" };
+
+    const modeLabel = MODE_INFO[gameMode];
 
     return (
       <motion.div
@@ -264,7 +365,12 @@ export default function QuizClient({ initialCategory }: Props) {
             {grade.icon}
           </motion.div>
           <h2 className={`text-3xl font-bold mb-1 ${grade.color}`}>{grade.label}</h2>
-          <p className="text-slate-500 mb-8">Quiz terminé !</p>
+          <p className="text-slate-500 mb-2">Quiz terminé !</p>
+          <p className="text-slate-600 text-sm mb-8">
+            {modeLabel.icon} Mode {modeLabel.label}
+            {gameMode === "blitz" && ` · ${BLITZ_DURATION - blitzTimeLeft}s utilisées`}
+            {gameMode === "mort-subite" && score === total && " · Sans faute !"}
+          </p>
 
           <div className="grid grid-cols-3 gap-4 mb-8">
             <motion.div
@@ -273,7 +379,7 @@ export default function QuizClient({ initialCategory }: Props) {
               transition={{ delay: 0.2 }}
               className="bg-neon-cyan/5 border border-neon-cyan/15 rounded-2xl p-4"
             >
-              <div className="text-2xl font-bold text-neon-cyan">{score}/{gameQuestions.length}</div>
+              <div className="text-2xl font-bold text-neon-cyan">{score}/{total}</div>
               <div className="text-slate-500 text-xs mt-1">Score</div>
             </motion.div>
             <motion.div
@@ -298,7 +404,7 @@ export default function QuizClient({ initialCategory }: Props) {
 
           {/* Answer review */}
           <div className="space-y-2 mb-8 text-left">
-            {gameQuestions.map((q, i) => {
+            {answeredQuestions.map((q, i) => {
               const ans = answers[i];
               const isCorrect = ans?.selected === q.correctIndex;
               const isTimedOut = ans?.selected === null;
@@ -330,6 +436,7 @@ export default function QuizClient({ initialCategory }: Props) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => {
+                stopBlitzTimer();
                 setPhase("select");
                 setSelectedCategory("All");
               }}
@@ -360,7 +467,9 @@ export default function QuizClient({ initialCategory }: Props) {
   // ─── PLAYING / ANSWERED ───
   const catColors = categoryColors[currentQ.category] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
   const diffColors = difficultyColors[currentQ.difficulty];
-  const progressPercent = ((currentIndex + (phase === "answered" ? 1 : 0)) / gameQuestions.length) * 100;
+  const progressPercent = gameMode === "classique"
+    ? ((currentIndex + (phase === "answered" ? 1 : 0)) / gameQuestions.length) * 100
+    : 100; // non-classic modes: no fixed progress
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
@@ -386,12 +495,47 @@ export default function QuizClient({ initialCategory }: Props) {
           </AnimatePresence>
         </div>
 
-        <div className="text-slate-600 text-sm font-medium tabular-nums">
-          {currentIndex + 1} / {gameQuestions.length}
+        <div className="flex items-center gap-3">
+          {/* Blitz global timer */}
+          {gameMode === "blitz" && (
+            <div className={`glass-card !rounded-xl px-4 py-2 flex items-center gap-2 ${
+              blitzTimeLeft <= 10 ? "border-neon-rose/30" : ""
+            }`}>
+              <span className="text-lg">⚡</span>
+              <span className={`font-bold tabular-nums ${
+                blitzTimeLeft <= 10 ? "text-neon-rose" : blitzTimeLeft <= 20 ? "text-amber-400" : "text-neon-cyan"
+              }`}>
+                {blitzTimeLeft}s
+              </span>
+            </div>
+          )}
+
+          {/* Mort subite indicator */}
+          {gameMode === "mort-subite" && (
+            <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-neon-rose/20">
+              <span className="text-lg">💀</span>
+              <span className="text-neon-rose text-sm font-bold">Mort Subite</span>
+            </div>
+          )}
+
+          {gameMode === "classique" && (
+            <div className="text-slate-600 text-sm font-medium tabular-nums">
+              {currentIndex + 1} / {gameQuestions.length}
+            </div>
+          )}
+
+          {gameMode !== "classique" && (
+            <div className="text-slate-600 text-sm font-medium tabular-nums">
+              Q{currentIndex + 1}
+            </div>
+          )}
         </div>
 
         <button
-          onClick={() => setPhase("select")}
+          onClick={() => {
+            stopBlitzTimer();
+            setPhase("select");
+          }}
           className="text-slate-600 hover:text-slate-300 transition-colors text-sm px-3 py-1.5 rounded-lg hover:bg-white/5"
         >
           Quitter
@@ -399,18 +543,41 @@ export default function QuizClient({ initialCategory }: Props) {
       </div>
 
       {/* Glowing progress bar */}
-      <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
-        <motion.div
-          className={`h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-glow-bar`}
-          animate={{ width: `${progressPercent}%` }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          style={{
-            boxShadow: "0 0 10px rgba(0, 240, 255, 0.4), 0 0 25px rgba(0, 240, 255, 0.15)",
-          }}
-        />
-      </div>
+      {gameMode === "classique" && (
+        <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
+          <motion.div
+            className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-glow-bar"
+            animate={{ width: `${progressPercent}%` }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            style={{
+              boxShadow: "0 0 10px rgba(0, 240, 255, 0.4), 0 0 25px rgba(0, 240, 255, 0.15)",
+            }}
+          />
+        </div>
+      )}
 
-      {/* Question Card - Glassmorphism + slide animation */}
+      {/* Blitz progress bar (time-based) */}
+      {gameMode === "blitz" && (
+        <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
+          <motion.div
+            className="h-1.5 rounded-full"
+            animate={{ width: `${(blitzTimeLeft / BLITZ_DURATION) * 100}%` }}
+            transition={{ duration: 1, ease: "linear" }}
+            style={{
+              background: blitzTimeLeft <= 10
+                ? "linear-gradient(90deg, #ff2d7b, #ff6b9d)"
+                : blitzTimeLeft <= 20
+                ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
+                : "linear-gradient(90deg, #f59e0b, #00f0ff)",
+              boxShadow: blitzTimeLeft <= 10
+                ? "0 0 12px rgba(255, 45, 123, 0.6)"
+                : "0 0 10px rgba(245, 158, 11, 0.4)",
+            }}
+          />
+        </div>
+      )}
+
+      {/* Question Card */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -429,7 +596,7 @@ export default function QuizClient({ initialCategory }: Props) {
             <span className={`text-xs font-medium ${diffColors.text}`}>{diffColors.label}</span>
           </div>
 
-          {/* Timer with glow */}
+          {/* Per-question timer */}
           <div className="mb-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-slate-600 text-xs">Temps restant</span>

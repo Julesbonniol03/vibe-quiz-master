@@ -60,7 +60,7 @@ export default function DashboardPage() {
               </span>
             </h1>
             <p className="text-slate-500 max-w-md">
-              {totalQ} questions · 10 catégories · Timer 15s · Streak system
+              {totalQ} questions · 3 modes de jeu · Streak system
             </p>
           </div>
           <div className="flex gap-3">
@@ -78,6 +78,43 @@ export default function DashboardPage() {
             </Link>
           </div>
         </div>
+      </div>
+
+      {/* Game Modes */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <Link
+          href="/quiz?mode=classique"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-neon-cyan/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">📝</div>
+            <h3 className="text-lg font-bold text-neon-cyan mb-1">Classique</h3>
+            <p className="text-slate-500 text-sm">10 questions tranquilles avec timer de 15s par question.</p>
+          </div>
+        </Link>
+        <Link
+          href="/quiz?mode=blitz"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-amber-400/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">⚡</div>
+            <h3 className="text-lg font-bold text-amber-400 mb-1">Blitz</h3>
+            <p className="text-slate-500 text-sm">60 secondes au chrono pour marquer un max de points !</p>
+          </div>
+        </Link>
+        <Link
+          href="/quiz?mode=mort-subite"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-neon-rose/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-rose/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">💀</div>
+            <h3 className="text-lg font-bold text-neon-rose mb-1">Mort Subite</h3>
+            <p className="text-slate-500 text-sm">Première erreur = fin de partie. Combien tiendrez-vous ?</p>
+          </div>
+        </Link>
       </div>
 
       {/* Stats Grid */}
