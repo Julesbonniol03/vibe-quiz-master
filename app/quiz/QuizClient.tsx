@@ -2,27 +2,42 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
-import { questions, categoryColors, difficultyColors } from "@/lib/questions";
+import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
 
 const TIMER_SECONDS = 15;
 const QUESTIONS_PER_GAME = 8;
 
-type GamePhase = "select" | "playing" | "answered" | "finished";
+type GamePhase = "loading" | "select" | "playing" | "answered" | "finished";
+
+interface CategoryInfo {
+  name: string;
+  count: number;
+}
 
 interface Props {
   initialCategory?: string;
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  return [...arr].sort(() => Math.random() - 0.5);
-}
-
 export default function QuizClient({ initialCategory }: Props) {
-  const [phase, setPhase] = useState<GamePhase>("select");
+  const [phase, setPhase] = useState<GamePhase>("loading");
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">(
     (initialCategory as Category) || "All"
   );
+  const [categories, setCategories] = useState<CategoryInfo[]>([]);
+  const [totalQuestions, setTotalQuestions] = useState(0);
+
+  // Fetch categories on mount
+  useEffect(() => {
+    fetch("/api/categories")
+      .then((r) => r.json())
+      .then((data) => {
+        setCategories(data.categories);
+        setTotalQuestions(data.total);
+        setPhase("select");
+      })
+      .catch(() => setPhase("select"));
+  }, []);
   const [gameQuestions, setGameQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -65,21 +80,29 @@ export default function QuizClient({ initialCategory }: Props) {
     return () => stopTimer();
   }, [phase, currentIndex, handleTimeout, stopTimer]);
 
-  const startGame = useCallback(() => {
-    const pool =
-      selectedCategory === "All"
-        ? questions
-        : questions.filter((q) => q.category === selectedCategory);
-    const selected = shuffle(pool).slice(0, QUESTIONS_PER_GAME);
-    setGameQuestions(selected);
-    setCurrentIndex(0);
-    setScore(0);
-    setStreak(0);
-    setBestStreak(0);
-    setAnswers([]);
-    setSelectedOption(null);
-    setShowExplanation(false);
-    setPhase("playing");
+  const startGame = useCallback(async () => {
+    setPhase("loading");
+    try {
+      const params = new URLSearchParams({ limit: String(QUESTIONS_PER_GAME) });
+      if (selectedCategory !== "All") params.set("category", selectedCategory);
+      const res = await fetch(`/api/questions/random?${params}`);
+      const data = await res.json();
+      if (!data.questions || data.questions.length === 0) {
+        setPhase("select");
+        return;
+      }
+      setGameQuestions(data.questions);
+      setCurrentIndex(0);
+      setScore(0);
+      setStreak(0);
+      setBestStreak(0);
+      setAnswers([]);
+      setSelectedOption(null);
+      setShowExplanation(false);
+      setPhase("playing");
+    } catch {
+      setPhase("select");
+    }
   }, [selectedCategory]);
 
   const handleAnswer = useCallback(
@@ -122,12 +145,19 @@ export default function QuizClient({ initialCategory }: Props) {
   const timerColor =
     timeLeft > 8 ? "#6366f1" : timeLeft > 4 ? "#f59e0b" : "#f43f5e";
 
+  // ─── LOADING SCREEN ───
+  if (phase === "loading") {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-20 text-center">
+        <div className="text-5xl mb-4 animate-bounce">🧠</div>
+        <p className="text-slate-400 text-lg">Chargement des questions...</p>
+      </div>
+    );
+  }
+
   // ─── SELECT SCREEN ───
   if (phase === "select") {
-    const allCategories: (Category | "All")[] = [
-      "All", "Histoire", "Sciences", "Géographie", "Pop Culture", "Sport",
-      "Arts & Littérature", "Nature & Animaux", "Technologie", "Gastronomie", "Mythologie & Religions"
-    ];
+    const allCategoryNames: string[] = ["All", ...categories.map((c) => c.name)];
     return (
       <div className="max-w-2xl mx-auto px-4 py-10">
         <div className="text-center mb-10">
@@ -137,13 +167,15 @@ export default function QuizClient({ initialCategory }: Props) {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-          {allCategories.map((cat) => {
+          {allCategoryNames.map((cat) => {
             const colors = cat !== "All" ? categoryColors[cat] : null;
             const isSelected = selectedCategory === cat;
+            const catInfo = categories.find((c) => c.name === cat);
+            const questionCount = cat === "All" ? totalQuestions : (catInfo?.count ?? 0);
             return (
               <button
                 key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => setSelectedCategory(cat as Category | "All")}
                 className={`p-5 rounded-2xl border-2 transition-all hover:scale-105 active:scale-95 text-left ${
                   isSelected
                     ? "border-indigo-500 bg-indigo-500/20 shadow-lg shadow-indigo-500/20"
@@ -155,9 +187,7 @@ export default function QuizClient({ initialCategory }: Props) {
                   {cat === "All" ? "Tout" : cat}
                 </div>
                 <div className="text-slate-500 text-xs mt-1">
-                  {cat === "All"
-                    ? `${questions.length} questions`
-                    : `${questions.filter((q) => q.category === cat).length} questions`}
+                  {questionCount} questions
                 </div>
               </button>
             );
