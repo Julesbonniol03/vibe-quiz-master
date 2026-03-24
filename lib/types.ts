@@ -1,4 +1,14 @@
-export type Category = "Histoire" | "Sciences" | "Arts" | "Sport";
+export type Category =
+  | "Histoire"
+  | "Sciences"
+  | "Géographie"
+  | "Pop Culture"
+  | "Sport"
+  | "Arts & Littérature"
+  | "Nature & Animaux"
+  | "Technologie"
+  | "Gastronomie"
+  | "Mythologie & Religions";
 
 export interface Question {
   id: number;

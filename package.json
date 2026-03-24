@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "db:seed": "tsx scripts/seed-questions.ts",
+    "db:seed-all": "tsx scripts/seed-all-questions.ts",
     "db:generate": "tsx scripts/generate-mega-pack.ts",
     "db:mega": "tsx scripts/generate-mega-pack.ts --runs=10"
   },

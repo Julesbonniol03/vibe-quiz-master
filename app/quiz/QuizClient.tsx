@@ -124,7 +124,10 @@ export default function QuizClient({ initialCategory }: Props) {
 
   // ─── SELECT SCREEN ───
   if (phase === "select") {
-    const allCategories: (Category | "All")[] = ["All", "Histoire", "Sciences", "Arts", "Sport"];
+    const allCategories: (Category | "All")[] = [
+      "All", "Histoire", "Sciences", "Géographie", "Pop Culture", "Sport",
+      "Arts & Littérature", "Nature & Animaux", "Technologie", "Gastronomie", "Mythologie & Religions"
+    ];
     return (
       <div className="max-w-2xl mx-auto px-4 py-10">
         <div className="text-center mb-10">
