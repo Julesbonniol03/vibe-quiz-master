@@ -2,12 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 
-interface Question {
+interface RawQuestion {
   category: string;
   difficulty: "easy" | "medium" | "hard";
   question: string;
   options: string[];
   correct_index: number;
+  explanation: string;
+}
+
+interface Question {
+  id: number;
+  category: string;
+  difficulty: "easy" | "medium" | "hard";
+  question: string;
+  options: string[];
+  correctIndex: number;
   explanation: string;
 }
 
@@ -21,15 +31,24 @@ function loadQuestions(): Question[] {
   const files = readdirSync(dataDir).filter((f) => f.endsWith(".json"));
   const seen = new Set<string>();
   const questions: Question[] = [];
+  let id = 1;
 
   for (const file of files) {
     const raw = readFileSync(join(dataDir, file), "utf-8");
-    const parsed: Question[] = JSON.parse(raw);
+    const parsed: RawQuestion[] = JSON.parse(raw);
     for (const q of parsed) {
       const key = q.question.trim().toLowerCase();
       if (!seen.has(key)) {
         seen.add(key);
-        questions.push(q);
+        questions.push({
+          id: id++,
+          category: q.category,
+          difficulty: q.difficulty,
+          question: q.question,
+          options: q.options,
+          correctIndex: q.correct_index,
+          explanation: q.explanation,
+        });
       }
     }
   }
