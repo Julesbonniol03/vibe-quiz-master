@@ -13,6 +13,13 @@
 
 import Anthropic from "@anthropic-ai/sdk";
 import { createClient } from "@supabase/supabase-js";
+import { ProxyAgent, setGlobalDispatcher } from "undici";
+
+// Route all outgoing requests through the egress proxy (required in this environment)
+const proxyUrl = process.env.https_proxy ?? process.env.HTTPS_PROXY ?? "";
+if (proxyUrl) {
+  setGlobalDispatcher(new ProxyAgent(proxyUrl));
+}
 
 // ─── Config ────────────────────────────────────────────────────────────────
 
