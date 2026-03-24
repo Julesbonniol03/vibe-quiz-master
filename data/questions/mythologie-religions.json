@@ -390,5 +390,13 @@
     "options": ["Persée", "Œdipe", "Thésée", "Ulysse"],
     "correct_index": 1,
     "explanation": "Œdipe a répondu correctement à l'énigme du Sphinx : « Quel être marche à quatre pattes le matin, deux le midi et trois le soir ? » La réponse est l'homme."
+  },
+  {
+    "category": "Mythologie & Religions",
+    "difficulty": "hard",
+    "question": "Dans la mythologie sumérienne, quel est le nom de la déesse qui descend aux Enfers pour affronter sa sœur Ereshkigal ?",
+    "options": ["Ishtar", "Inanna", "Tiamat", "Ninhursag"],
+    "correct_index": 1,
+    "explanation": "Inanna (Ishtar chez les Babyloniens) descend aux Enfers pour défier sa sœur Ereshkigal. Ce mythe de descente et de résurrection est l'un des plus anciens récits littéraires connus."
   }
 ]
