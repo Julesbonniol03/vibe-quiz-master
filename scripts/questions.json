@@ -1,0 +1,410 @@
+[
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "En quelle année Christophe Colomb a-t-il atteint l'Amérique ?",
+    "options": ["1488", "1492", "1498", "1504"],
+    "correct_index": 1,
+    "explanation": "Christophe Colomb atteignit les Bahamas le 12 octobre 1492, ouvrant la voie à la colonisation européenne des Amériques."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Qui était surnommé 'le Petit Caporal' ?",
+    "options": ["Louis XIV", "Jules César", "Napoléon Bonaparte", "Charlemagne"],
+    "correct_index": 2,
+    "explanation": "Napoléon Bonaparte fut surnommé 'le Petit Caporal' par ses soldats après la bataille de Castiglione en 1796."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Qui était le premier homme à marcher sur la Lune ?",
+    "options": ["Buzz Aldrin", "Yuri Gagarine", "Neil Armstrong", "John Glenn"],
+    "correct_index": 2,
+    "explanation": "Neil Armstrong posa le pied sur la Lune le 21 juillet 1969 lors de la mission Apollo 11."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement a déclenché la Première Guerre mondiale ?",
+    "options": ["L'invasion de la Belgique", "L'assassinat de l'archiduc François-Ferdinand", "La mobilisation de la Russie", "Le traité de la Triple Alliance"],
+    "correct_index": 1,
+    "explanation": "L'assassinat de l'archiduc François-Ferdinand d'Autriche à Sarajevo le 28 juin 1914 déclencha une série d'ultimatums menant à la guerre."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle civilisation a construit le Machu Picchu ?",
+    "options": ["Les Aztèques", "Les Mayas", "Les Incas", "Les Olmèques"],
+    "correct_index": 2,
+    "explanation": "Le Machu Picchu fut construit au XVe siècle par l'empire Inca, probablement sous le règne de l'Inca Pachacutec."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel traité a officiellement mis fin à la Première Guerre mondiale ?",
+    "options": ["Traité de Paris", "Traité de Versailles", "Traité de Brest-Litovsk", "Traité de Locarno"],
+    "correct_index": 1,
+    "explanation": "Le traité de Versailles, signé le 28 juin 1919, mit officiellement fin à la Première Guerre mondiale entre l'Allemagne et les Alliés."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "En quelle année l'URSS s'est-elle dissoute ?",
+    "options": ["1989", "1990", "1991", "1993"],
+    "correct_index": 2,
+    "explanation": "L'Union soviétique s'est officiellement dissoute le 25 décembre 1991, donnant naissance à 15 États indépendants."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle était la capitale de l'Empire byzantin ?",
+    "options": ["Rome", "Alexandrie", "Antioche", "Constantinople"],
+    "correct_index": 3,
+    "explanation": "Constantinople (actuelle Istanbul) était la capitale de l'Empire byzantin jusqu'à sa chute en 1453."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Combien d'années a réellement duré la Guerre de Cent Ans ?",
+    "options": ["100 ans", "106 ans", "116 ans", "124 ans"],
+    "correct_index": 2,
+    "explanation": "Malgré son nom, la Guerre de Cent Ans a duré 116 ans, de 1337 à 1453, entre la France et l'Angleterre."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel pays a été le premier à accorder le droit de vote aux femmes ?",
+    "options": ["Australie", "Finlande", "Nouvelle-Zélande", "Suède"],
+    "correct_index": 2,
+    "explanation": "La Nouvelle-Zélande fut le premier pays au monde à accorder le droit de vote aux femmes en 1893."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel pharaon est généralement associé au premier grand traité de paix de l'histoire ?",
+    "options": ["Toutânkhamon", "Ramsès II", "Akhenaton", "Thoutmosis III"],
+    "correct_index": 1,
+    "explanation": "Ramsès II signa avec les Hittites le traité de Kadesh vers 1259 av. J.-C., considéré comme le plus ancien traité de paix connu."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Dans quelle ville fut assassiné Martin Luther King Jr. ?",
+    "options": ["Atlanta", "Washington D.C.", "Memphis", "Birmingham"],
+    "correct_index": 2,
+    "explanation": "Martin Luther King Jr. fut assassiné le 4 avril 1968 à Memphis, Tennessee, sur le balcon du Lorraine Motel."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empire a construit la Route de la Soie pour relier l'Orient à l'Occident ?",
+    "options": ["Empire perse", "Empire mongol", "Empire ottoman", "Empire Han"],
+    "correct_index": 3,
+    "explanation": "La Route de la Soie fut développée sous la dynastie Han en Chine (206 av. J.-C. – 220 ap. J.-C.) pour favoriser le commerce avec l'Occident."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "En quelle année la France a-t-elle aboli l'esclavage définitivement ?",
+    "options": ["1794", "1815", "1848", "1865"],
+    "correct_index": 2,
+    "explanation": "L'esclavage fut définitivement aboli en France par le décret du 27 avril 1848, sous la IIe République."
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Qui était le leader de la révolution cubaine aux côtés de Fidel Castro ?",
+    "options": ["Hugo Chávez", "Ernesto 'Che' Guevara", "Salvador Allende", "Augusto Pinochet"],
+    "correct_index": 1,
+    "explanation": "Ernesto 'Che' Guevara était un révolutionnaire argentin qui joua un rôle clé dans la révolution cubaine (1953-1959)."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel est le plus grand organe du corps humain ?",
+    "options": ["Le foie", "Le cerveau", "La peau", "Le poumon"],
+    "correct_index": 2,
+    "explanation": "La peau est le plus grand organe du corps humain, couvrant environ 1,7 à 2 m² chez un adulte."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel est l'élément chimique le plus léger du tableau périodique ?",
+    "options": ["Hélium", "Lithium", "Hydrogène", "Oxygène"],
+    "correct_index": 2,
+    "explanation": "L'hydrogène est l'élément le plus léger et le plus abondant de l'univers, avec un numéro atomique de 1."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quelle planète est surnommée la 'planète rouge' ?",
+    "options": ["Vénus", "Mars", "Jupiter", "Mercure"],
+    "correct_index": 1,
+    "explanation": "Mars est surnommée la planète rouge à cause de l'oxyde de fer (rouille) qui recouvre sa surface."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Que signifie l'acronyme ADN ?",
+    "options": ["Acide DésoxyriboNucléique", "Acide DiNucléique", "Acide DésoxyNucléotide", "Acide DéoxyNucléaire"],
+    "correct_index": 0,
+    "explanation": "ADN signifie Acide DésoxyriboNucléique. C'est la molécule qui contient l'information génétique de tous les êtres vivants."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quel métal est liquide à température ambiante ?",
+    "options": ["Plomb", "Étain", "Bismuth", "Mercure"],
+    "correct_index": 3,
+    "explanation": "Le mercure (Hg) est le seul métal liquide à température ambiante, avec un point de fusion de -38,8°C."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Combien de chromosomes possède normalement un être humain ?",
+    "options": ["23", "44", "46", "48"],
+    "correct_index": 2,
+    "explanation": "Un être humain possède 46 chromosomes organisés en 23 paires, dont une paire de chromosomes sexuels."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Qui a découvert la pénicilline ?",
+    "options": ["Louis Pasteur", "Marie Curie", "Alexander Fleming", "Robert Koch"],
+    "correct_index": 2,
+    "explanation": "Alexander Fleming découvrit la pénicilline en 1928 en observant qu'une moisissure (Penicillium) détruisait des bactéries."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quelle est la vitesse approximative du son dans l'air à 20°C ?",
+    "options": ["243 m/s", "343 m/s", "443 m/s", "543 m/s"],
+    "correct_index": 1,
+    "explanation": "Le son se propage à environ 343 m/s dans l'air à 20°C. Cette vitesse varie selon la température et la densité du milieu."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le symbole chimique du potassium dans le tableau périodique ?",
+    "options": ["P", "Po", "K", "Pt"],
+    "correct_index": 2,
+    "explanation": "Le symbole K vient du latin 'Kalium'. Le potassium est essentiel à la vie et régule notamment la pression sanguine."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quelle particule fondamentale confère leur masse aux autres particules ?",
+    "options": ["Quark top", "Boson de Higgs", "Neutrino tau", "Gluon"],
+    "correct_index": 1,
+    "explanation": "Le boson de Higgs, découvert au CERN en 2012, est la particule associée au champ de Higgs qui donne leur masse aux autres particules."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Combien de dents permanentes possède un adulte (avec les dents de sagesse) ?",
+    "options": ["28", "30", "32", "34"],
+    "correct_index": 2,
+    "explanation": "Un adulte possède 32 dents permanentes, dont 4 dents de sagesse (troisièmes molaires) qui n'apparaissent pas toujours."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle loi stipule que l'énergie ne peut être ni créée ni détruite, seulement transformée ?",
+    "options": ["Loi de Newton", "Loi d'Ohm", "Premier principe de la thermodynamique", "Loi de Faraday"],
+    "correct_index": 2,
+    "explanation": "Le premier principe de la thermodynamique énonce la conservation de l'énergie : l'énergie totale d'un système isolé reste constante."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "hard",
+    "question": "Quel est le pH approximatif du sang humain sain ?",
+    "options": ["6.8", "7.0", "7.4", "7.8"],
+    "correct_index": 2,
+    "explanation": "Le pH normal du sang artériel humain est d'environ 7,4, légèrement alcalin. Une variation de 0,1 peut avoir des conséquences graves."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "medium",
+    "question": "Quelle planète possède le plus grand nombre de lunes connues dans notre système solaire ?",
+    "options": ["Jupiter", "Saturne", "Uranus", "Neptune"],
+    "correct_index": 1,
+    "explanation": "Saturne détient le record avec plus de 140 lunes confirmées, dépassant Jupiter depuis les découvertes récentes."
+  },
+  {
+    "category": "Sciences",
+    "difficulty": "easy",
+    "question": "Quel organe produit l'insuline dans le corps humain ?",
+    "options": ["Le foie", "La thyroïde", "Le pancréas", "Les reins"],
+    "correct_index": 2,
+    "explanation": "L'insuline est produite par les cellules bêta des îlots de Langerhans dans le pancréas. Elle régule la glycémie."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Qui a chanté 'Thriller', l'un des albums les plus vendus de l'histoire ?",
+    "options": ["Prince", "Michael Jackson", "David Bowie", "Freddie Mercury"],
+    "correct_index": 1,
+    "explanation": "Michael Jackson a sorti l'album 'Thriller' en 1982. Il s'est vendu à plus de 70 millions d'exemplaires dans le monde."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Dans quelle maison de Poudlard se trouve Hermione Granger ?",
+    "options": ["Serpentard", "Poufsouffle", "Serdaigle", "Gryffondor"],
+    "correct_index": 3,
+    "explanation": "Hermione Granger est assignée à Gryffondor lors de la cérémonie du Choixpeau magique dans Harry Potter à l'école des sorciers."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Qui joue le rôle de Tony Stark / Iron Man dans le MCU ?",
+    "options": ["Chris Evans", "Chris Hemsworth", "Robert Downey Jr.", "Mark Ruffalo"],
+    "correct_index": 2,
+    "explanation": "Robert Downey Jr. incarne Tony Stark / Iron Man depuis le premier film Iron Man en 2008 jusqu'à Avengers: Endgame en 2019."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quelle est la couleur de la pilule que prend Neo dans 'Matrix' ?",
+    "options": ["Bleue", "Rouge", "Verte", "Blanche"],
+    "correct_index": 1,
+    "explanation": "Dans Matrix (1999), Morpheus offre deux pilules à Neo : la bleue pour rester dans l'illusion, la rouge pour découvrir la vérité. Neo choisit la rouge."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Dans quel film entend-on la réplique 'Je suis ton père' ?",
+    "options": ["Star Wars : Un Nouvel Espoir", "Star Wars : Le Retour du Jedi", "Star Wars : L'Empire contre-attaque", "Rogue One"],
+    "correct_index": 2,
+    "explanation": "La célèbre réplique de Dark Vador 'Luke, je suis ton père' est prononcée dans Star Wars : L'Empire contre-attaque (1980)."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel est le pays d'origine du phénomène musical K-pop ?",
+    "options": ["Japon", "Chine", "Corée du Sud", "Taïwan"],
+    "correct_index": 2,
+    "explanation": "La K-pop (Korean pop) est un genre musical originaire de Corée du Sud, popularisé mondialement notamment par BTS et BLACKPINK."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Qui a écrit la saga 'Le Seigneur des Anneaux' ?",
+    "options": ["C.S. Lewis", "George R.R. Martin", "J.R.R. Tolkien", "Terry Pratchett"],
+    "correct_index": 2,
+    "explanation": "J.R.R. Tolkien publia 'Le Seigneur des Anneaux' entre 1954 et 1955. Il est considéré comme le père de la fantasy moderne."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle application a popularisé le format des 'stories' éphémères à 24h ?",
+    "options": ["Instagram", "Facebook", "Twitter", "Snapchat"],
+    "correct_index": 3,
+    "explanation": "Snapchat lança les stories en 2013. Le format fut ensuite copié par Instagram (2016), Facebook et de nombreuses autres plateformes."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Combien de saisons compte la série 'Game of Thrones' ?",
+    "options": ["6", "7", "8", "10"],
+    "correct_index": 2,
+    "explanation": "Game of Thrones compte 8 saisons, diffusées sur HBO de 2011 à 2019, basées sur les romans 'A Song of Ice and Fire' de G.R.R. Martin."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Qui a réalisé le film 'Inception' (2010) ?",
+    "options": ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Denis Villeneuve"],
+    "correct_index": 2,
+    "explanation": "Christopher Nolan a réalisé et écrit Inception (2010), un thriller de science-fiction sur l'exploration des rêves."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel groupe de musique était composé de Beyoncé, Kelly Rowland et Michelle Williams ?",
+    "options": ["TLC", "Destiny's Child", "En Vogue", "Spice Girls"],
+    "correct_index": 1,
+    "explanation": "Destiny's Child était un groupe de R&B formé à Houston en 1990. Beyoncé y était chanteuse principale avant sa carrière solo."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Dans quelle ville fictive se déroule la série 'Stranger Things' ?",
+    "options": ["Springfield", "Hawkins", "Shelbyville", "Stars Hollow"],
+    "correct_index": 1,
+    "explanation": "Stranger Things se déroule à Hawkins, une ville fictive de l'Indiana, au cours des années 1980."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle actrice joue Katniss Everdeen dans la saga 'Hunger Games' ?",
+    "options": ["Emma Stone", "Kristen Stewart", "Jennifer Lawrence", "Emma Watson"],
+    "correct_index": 2,
+    "explanation": "Jennifer Lawrence incarne Katniss Everdeen dans les quatre films Hunger Games (2012-2015), rôle qui l'a propulsée au sommet de Hollywood."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel est le vrai nom de Lady Gaga ?",
+    "options": ["Stefani Joanne Angelina Germanotta", "Alecia Beth Moore", "Robyn Rihanna Fenty", "Melissa Viviane Jefferson"],
+    "correct_index": 0,
+    "explanation": "Lady Gaga est le nom de scène de Stefani Joanne Angelina Germanotta, née le 28 mars 1986 à New York."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel film détient (ex aequo) le record du plus grand nombre d'Oscars remportés ?",
+    "options": ["Titanic (1997)", "Le Retour du Roi (2003)", "Ces deux films ex aequo avec 11 Oscars", "Ben-Hur (1959) avec 12 Oscars"],
+    "correct_index": 3,
+    "explanation": "Ben-Hur (1959) détient le record absolu avec 11 Oscars sur 12 nominations. Titanic et Le Retour du Roi ont aussi obtenu 11 Oscars chacun."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "Quel est le personnage principal de la série 'Breaking Bad' ?",
+    "options": ["Jesse Pinkman", "Hank Schrader", "Walter White", "Saul Goodman"],
+    "correct_index": 2,
+    "explanation": "Walter White, professeur de chimie devenu fabricant de méthamphétamine, est le protagoniste de Breaking Bad (2008-2013), interprété par Bryan Cranston."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel jeu vidéo met en scène un plombier qui sauve une princesse ?",
+    "options": ["Sonic the Hedgehog", "Donkey Kong Country", "Super Mario Bros", "Mega Man"],
+    "correct_index": 2,
+    "explanation": "Super Mario Bros (Nintendo, 1985) met en scène Mario, plombier moustachu qui parcourt le Royaume Champignon pour sauver la Princesse Peach."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "hard",
+    "question": "De quel pays est originaire la chanteuse Billie Eilish ?",
+    "options": ["Canada", "Australie", "Royaume-Uni", "États-Unis"],
+    "correct_index": 3,
+    "explanation": "Billie Eilish Pirate Baird O'Connell est née le 18 décembre 2001 à Los Angeles, Californie. Elle a sorti son premier single à 13 ans."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quelle plateforme de streaming a produit la série 'Squid Game' ?",
+    "options": ["Amazon Prime", "Disney+", "HBO Max", "Netflix"],
+    "correct_index": 3,
+    "explanation": "Squid Game est une série sud-coréenne produite et diffusée par Netflix en 2021, devenant rapidement la série la plus regardée de la plateforme."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "easy",
+    "question": "Quel acteur joue Jack Sparrow dans 'Pirates des Caraïbes' ?",
+    "options": ["Orlando Bloom", "Geoffrey Rush", "Johnny Depp", "Keira Knightley"],
+    "correct_index": 2,
+    "explanation": "Johnny Depp incarne le capitaine Jack Sparrow dans la saga Pirates des Caraïbes depuis le premier film en 2003."
+  },
+  {
+    "category": "Pop Culture",
+    "difficulty": "medium",
+    "question": "Quel artiste est connu sous le surnom 'The Weeknd' ?",
+    "options": ["Drake", "Abel Tesfaye", "Kendrick Lamar", "Frank Ocean"],
+    "correct_index": 1,
+    "explanation": "The Weeknd est le nom de scène d'Abel Makkonen Tesfaye, chanteur canadien d'origine éthiopienne né en 1990 à Toronto."
+  }
+]
