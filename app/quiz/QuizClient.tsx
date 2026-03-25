@@ -807,7 +807,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              onClick={startGame}
+              onClick={() => {
+                if (gameMode === "daily") {
+                  startGame();
+                } else {
+                  setPhase("select-difficulty");
+                }
+              }}
               className={`flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15 ${
                 gameMode === "daily" && progress.isDailyCompleted ? "opacity-50" : ""
               }`}
