@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
 import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
+import { useFeedback } from "@/hooks/useFeedback";
+import confetti from "canvas-confetti";
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
 type Difficulty = "easy" | "medium" | "hard";
@@ -81,6 +83,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
 
   const progress = useProgress();
   const router = useRouter();
+  const { correctFeedback, wrongFeedback } = useFeedback();
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -118,6 +121,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
 
   const handleTimeout = useCallback(() => {
     stopTimer();
+    wrongFeedback();
     const currentQ = gameQuestions[currentIndex];
     setAnswers((prev) => [...prev, { selected: null, correct: currentQ.correctIndex }]);
     setStreak(0);
@@ -130,7 +134,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     } else {
       setPhase("answered");
     }
-  }, [gameQuestions, currentIndex, stopTimer, gameMode]);
+  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback]);
 
   // Per-question timer (classic & sudden death use 15s, blitz uses 10s)
   useEffect(() => {
@@ -195,6 +199,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       setSelectedOption(optionIndex);
       setAnswers((prev) => [...prev, { selected: optionIndex, correct: currentQ.correctIndex }]);
       if (isCorrect) {
+        correctFeedback();
         setScore((s) => s + 1);
         setStreak((s) => {
           const newStreak = s + 1;
@@ -203,6 +208,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         });
         setShakeWrong(false);
       } else {
+        wrongFeedback();
         setStreak(0);
         setShakeWrong(true);
       }
@@ -214,7 +220,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         setPhase("answered");
       }
     },
-    [phase, gameQuestions, currentIndex, stopTimer, gameMode]
+    [phase, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback]
   );
 
   const handleNext = useCallback(() => {
@@ -281,6 +287,28 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
+
+  // Neon confetti explosion on perfect score
+  useEffect(() => {
+    if (phase !== "finished") return;
+    const total = answers.length;
+    if (total === 0 || score !== total) return;
+
+    const neonColors = ["#00f0ff", "#ff2d7b", "#a855f7", "#fbbf24", "#34d399"];
+    const fire = (opts: confetti.Options) =>
+      confetti({ ...opts, colors: neonColors, disableForReducedMotion: true });
+
+    // Burst from both sides
+    fire({ particleCount: 80, angle: 60, spread: 70, origin: { x: 0, y: 0.65 } });
+    fire({ particleCount: 80, angle: 120, spread: 70, origin: { x: 1, y: 0.65 } });
+
+    // Delayed center burst
+    const t = setTimeout(() => {
+      fire({ particleCount: 100, spread: 100, origin: { x: 0.5, y: 0.4 }, startVelocity: 45 });
+    }, 300);
+
+    return () => clearTimeout(t);
+  }, [phase, score, answers.length]);
 
   const currentQ = gameQuestions[currentIndex];
   const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
