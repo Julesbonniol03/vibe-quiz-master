@@ -4,7 +4,7 @@ import { useProgress } from "@/hooks/useProgress";
 import { motion } from "framer-motion";
 
 export function StatsGrid() {
-  const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed } = useProgress();
+  const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed, dailyStreak } = useProgress();
 
   if (!hydrated) {
     return (
@@ -22,8 +22,8 @@ export function StatsGrid() {
 
   const stats = [
     { label: "Niveau", value: `${levelInfo.level}`, sub: `${levelInfo.currentXp}/${levelInfo.xpForNext} XP`, icon: "⭐", color: "text-yellow-400" },
-    { label: "Parties Jouées", value: `${gamesPlayed}`, sub: `${totalPlayed} questions`, icon: "🎮", color: "text-neon-cyan" },
-    { label: "Meilleur Streak", value: `${globalBestStreak}`, sub: "d'affilée", icon: "🔥", color: "text-neon-rose" },
+    { label: "Flamme Quotidienne", value: `${dailyStreak}`, sub: dailyStreak > 0 ? `jour${dailyStreak > 1 ? "s" : ""} d'affilée` : "Jouez le défi !", icon: "🔥", color: "text-orange-400" },
+    { label: "Parties Jouées", value: `${gamesPlayed}`, sub: `${totalPlayed} questions · streak ${globalBestStreak}`, icon: "🎮", color: "text-neon-cyan" },
     { label: "Précision", value: `${accuracy}%`, sub: `${totalPlayed} réponses`, icon: "🎯", color: "text-green-400" },
   ];
 
@@ -74,6 +74,49 @@ export function XpBar() {
         {xp} XP total
       </span>
     </motion.div>
+  );
+}
+
+export function DailyBanner() {
+  const { hydrated, dailyStreak, isDailyCompleted } = useProgress();
+  if (!hydrated) return null;
+
+  return (
+    <div className="relative overflow-hidden bg-cyber-900 border border-neon-rose/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-cyan/[0.03]" />
+      <div className="relative flex items-center gap-4">
+        <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl">
+          🎯
+        </div>
+        <div>
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-purple-400 text-sm font-semibold uppercase tracking-wider">Défi du jour</span>
+            {dailyStreak > 0 && (
+              <span className="bg-orange-500/10 text-orange-400 text-xs px-2 py-0.5 rounded-full border border-orange-500/20 flex items-center gap-1">
+                🔥 {dailyStreak}j
+              </span>
+            )}
+            {isDailyCompleted && (
+              <span className="bg-green-500/10 text-green-400 text-xs px-2 py-0.5 rounded-full border border-green-500/20">
+                ✅ Fait
+              </span>
+            )}
+          </div>
+          <p className="text-white font-semibold">5 questions identiques pour tout le monde</p>
+          <p className="text-slate-500 text-sm">Toutes catégories · Timer 15s · Changent chaque jour</p>
+        </div>
+      </div>
+      <a
+        href="/quiz?mode=daily"
+        className={`relative px-5 py-2.5 font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg whitespace-nowrap ${
+          isDailyCompleted
+            ? "bg-white/5 border border-white/10 text-slate-400 shadow-none"
+            : "bg-purple-500 hover:bg-purple-500/90 text-white shadow-purple-500/20"
+        }`}
+      >
+        {isDailyCompleted ? "Revenir demain" : "Relever le défi →"}
+      </a>
+    </div>
   );
 }
 

@@ -9,6 +9,9 @@ const KEY_XP = "vqm_xp";
 const KEY_GAMES = "vqm_games";
 const KEY_BEST_STREAK = "vqm_best_streak";
 const KEY_WRONG_QUESTIONS = "vqm_wrong_questions"; // full question data for flashcards
+const KEY_DAILY_STREAK = "vqm_daily_streak";
+const KEY_DAILY_LAST_DATE = "vqm_daily_last_date";
+const KEY_DAILY_COMPLETED = "vqm_daily_completed"; // date string of last completed daily
 
 export interface WrongQuestion {
   id: number;
@@ -69,6 +72,9 @@ export function useProgress() {
   const [gamesPlayed, setGamesPlayed] = useState(0);
   const [globalBestStreak, setGlobalBestStreak] = useState(0);
   const [wrongQuestions, setWrongQuestions] = useState<WrongQuestion[]>([]);
+  const [dailyStreak, setDailyStreak] = useState(0);
+  const [dailyLastDate, setDailyLastDate] = useState("");
+  const [dailyCompleted, setDailyCompleted] = useState("");
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -80,6 +86,9 @@ export function useProgress() {
     setGamesPlayed(load<number>(KEY_GAMES, 0));
     setGlobalBestStreak(load<number>(KEY_BEST_STREAK, 0));
     setWrongQuestions(load<WrongQuestion[]>(KEY_WRONG_QUESTIONS, []));
+    setDailyStreak(load<number>(KEY_DAILY_STREAK, 0));
+    setDailyLastDate(load<string>(KEY_DAILY_LAST_DATE, ""));
+    setDailyCompleted(load<string>(KEY_DAILY_COMPLETED, ""));
     setHydrated(true);
   }, []);
 
@@ -151,6 +160,34 @@ export function useProgress() {
     });
   }, []);
 
+  const completeDaily = useCallback(() => {
+    const today = getTodayStr();
+    // Already completed today
+    if (dailyCompleted === today) return;
+
+    setDailyCompleted(today);
+    save(KEY_DAILY_COMPLETED, today);
+
+    // Update streak: if yesterday was the last play date, increment; else reset to 1
+    const yesterday = getYesterdayStr();
+    const newStreak = dailyLastDate === yesterday || dailyLastDate === today ? dailyStreak + 1 : 1;
+    setDailyStreak(newStreak);
+    save(KEY_DAILY_STREAK, newStreak);
+    setDailyLastDate(today);
+    save(KEY_DAILY_LAST_DATE, today);
+  }, [dailyCompleted, dailyLastDate, dailyStreak]);
+
+  // Check if streak is still valid (hasn't been broken)
+  const computedDailyStreak = (() => {
+    if (!hydrated) return 0;
+    const today = getTodayStr();
+    const yesterday = getYesterdayStr();
+    if (dailyLastDate === today || dailyLastDate === yesterday) return dailyStreak;
+    return 0; // streak broken
+  })();
+
+  const isDailyCompleted = dailyCompleted === getTodayStr();
+
   const resetAll = useCallback(() => {
     save(KEY_WRONG, []);
     save(KEY_RIGHT, []);
@@ -160,6 +197,9 @@ export function useProgress() {
     save(KEY_GAMES, 0);
     save(KEY_BEST_STREAK, 0);
     save(KEY_WRONG_QUESTIONS, []);
+    save(KEY_DAILY_STREAK, 0);
+    save(KEY_DAILY_LAST_DATE, "");
+    save(KEY_DAILY_COMPLETED, "");
     setWrongIds([]);
     setRightIds([]);
     setTotalPlayed(0);
@@ -168,6 +208,9 @@ export function useProgress() {
     setGamesPlayed(0);
     setGlobalBestStreak(0);
     setWrongQuestions([]);
+    setDailyStreak(0);
+    setDailyLastDate("");
+    setDailyCompleted("");
   }, []);
 
   const accuracy =
@@ -187,12 +230,26 @@ export function useProgress() {
     gamesPlayed,
     globalBestStreak,
     wrongQuestions,
+    dailyStreak: computedDailyStreak,
+    isDailyCompleted,
     markWrong,
     markRight,
     saveWrongQuestion,
     dismissMistake,
     addXp,
     recordGame,
+    completeDaily,
     resetAll,
   };
+}
+
+function getTodayStr(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+function getYesterdayStr(): string {
+  const d = new Date();
+  d.setDate(d.getDate() - 1);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }

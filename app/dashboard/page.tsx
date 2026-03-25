@@ -2,7 +2,7 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner } from "./DashboardClient";
 
 function loadCategories() {
   const dataDir = join(process.cwd(), "data", "questions");
@@ -179,30 +179,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Daily Challenge Banner */}
-      <div className="relative overflow-hidden bg-cyber-900 border border-neon-rose/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-neon-rose/[0.03] to-neon-cyan/[0.03]" />
-        <div className="relative flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-neon-rose/10 border border-neon-rose/20 flex items-center justify-center text-2xl">
-            🎯
-          </div>
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-neon-rose text-sm font-semibold uppercase tracking-wider">Défi du jour</span>
-              <span className="bg-neon-rose/10 text-neon-rose text-xs px-2 py-0.5 rounded-full border border-neon-rose/20">
-                +2x points
-              </span>
-            </div>
-            <p className="text-white font-semibold">Quiz Mixte — Toutes catégories confondues</p>
-            <p className="text-slate-500 text-sm">10 questions · Timer 15s · Difficulté aléatoire</p>
-          </div>
-        </div>
-        <Link
-          href="/quiz?mode=daily"
-          className="relative px-5 py-2.5 bg-neon-rose hover:bg-neon-rose/90 text-white font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-rose/20 whitespace-nowrap"
-        >
-          Relever le défi →
-        </Link>
-      </div>
+      <DailyBanner />
     </div>
   );
 }
