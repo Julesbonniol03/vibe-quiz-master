@@ -11,10 +11,42 @@ export const viewport: Viewport = {
   themeColor: "#050505",
 };
 
+const APP_URL = "https://vibe-quiz-master.vercel.app";
+
 export const metadata: Metadata = {
   title: "Vibe Quiz Master - Quiz Culture Générale",
-  description: "Testez vos connaissances en histoire, sciences, arts et sport avec Vibe Quiz Master",
+  description: "L'élite de la Culture G en mode Cyber-Luxe. 1000+ questions, 17 catégories, 3 modes de jeu. Testez vos connaissances !",
   manifest: "/manifest.json",
+  metadataBase: new URL(APP_URL),
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: "/apple-touch-icon.svg",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: APP_URL,
+    siteName: "Vibe Quiz Master",
+    title: "Vibe Quiz Master — L'élite de la Culture G",
+    description: "1000+ questions · 17 catégories · 3 modes de jeu. Testez vos connaissances en mode Cyber-Luxe et défiez vos amis !",
+    images: [
+      {
+        url: "/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Vibe Quiz Master — Quiz Culture Générale",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vibe Quiz Master — L'élite de la Culture G",
+    description: "1000+ questions · 17 catégories · 3 modes de jeu. Testez vos connaissances en mode Cyber-Luxe !",
+    images: ["/api/og"],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",

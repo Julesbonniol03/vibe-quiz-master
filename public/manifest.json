@@ -1,21 +1,47 @@
 {
   "name": "Vibe Quiz Master",
   "short_name": "VibeQuiz",
-  "description": "Quiz culture générale - 1000+ questions",
+  "description": "L'élite de la Culture G en mode Cyber-Luxe. 1000+ questions, 17 catégories, 3 modes de jeu.",
   "start_url": "/dashboard",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#050505",
   "theme_color": "#050505",
+  "categories": ["education", "games", "entertainment"],
+  "lang": "fr",
+  "dir": "ltr",
   "icons": [
     {
       "src": "/icon-192.svg",
       "sizes": "192x192",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
       "src": "/icon-192.svg",
       "sizes": "512x512",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Jouer un Quiz",
+      "short_name": "Quiz",
+      "url": "/quiz",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Défi du Jour",
+      "short_name": "Défi",
+      "url": "/quiz?mode=daily"
+    },
+    {
+      "name": "Réviser",
+      "short_name": "Réviser",
+      "url": "/reviser"
     }
   ]
 }
