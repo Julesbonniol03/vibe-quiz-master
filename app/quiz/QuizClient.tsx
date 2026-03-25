@@ -8,7 +8,14 @@ import { Category, Question } from "@/lib/types";
 import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
-type GamePhase = "loading" | "select" | "playing" | "answered" | "finished";
+type Difficulty = "easy" | "medium" | "hard";
+type GamePhase = "loading" | "select" | "select-difficulty" | "playing" | "answered" | "finished";
+
+const DIFFICULTY_INFO: Record<Difficulty, { label: string; icon: string; desc: string; color: string; border: string; bg: string; shadow: string }> = {
+  easy: { label: "Débutant", icon: "🌱", desc: "Pour se mettre en jambes", color: "text-green-400", border: "border-green-500/50", bg: "bg-green-500/10", shadow: "shadow-green-500/10" },
+  medium: { label: "Intermédiaire", icon: "⚡", desc: "Le juste milieu", color: "text-amber-400", border: "border-amber-400/50", bg: "bg-amber-400/10", shadow: "shadow-amber-400/10" },
+  hard: { label: "Expert", icon: "🔥", desc: "Seuls les meilleurs survivent", color: "text-neon-rose", border: "border-neon-rose/50", bg: "bg-neon-rose/10", shadow: "shadow-neon-rose/10" },
+};
 
 const TIMER_SECONDS = 15;
 const CLASSIC_QUESTIONS = 10;
@@ -43,6 +50,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [categories, setCategories] = useState<CategoryInfo[]>([]);
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [shakeWrong, setShakeWrong] = useState(false);
+  const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("easy");
 
   useEffect(() => {
     fetch("/api/categories")
@@ -64,7 +72,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
   const [answers, setAnswers] = useState<{ selected: number | null; correct: number }[]>([]);
-  const [showExplanation, setShowExplanation] = useState(false);
   const [xpGained, setXpGained] = useState(0);
   const [prevLevel, setPrevLevel] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -152,6 +159,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       } else {
         const params = new URLSearchParams({ limit: String(questionsLimit) });
         if (selectedCategory !== "All") params.set("category", selectedCategory);
+        params.set("difficulty", selectedDifficulty);
         const res = await fetch(`/api/questions/random?${params}`);
         data = await res.json();
       }
@@ -168,14 +176,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       setBestStreak(0);
       setAnswers([]);
       setSelectedOption(null);
-      setShowExplanation(false);
       setShakeWrong(false);
       setBlitzTimeLeft(BLITZ_DURATION);
       setPhase("playing");
     } catch {
       setPhase("select");
     }
-  }, [selectedCategory, questionsLimit]);
+  }, [selectedCategory, selectedDifficulty, questionsLimit, gameMode]);
 
   const handleAnswer = useCallback(
     (optionIndex: number) => {
@@ -216,10 +223,21 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     }
     setCurrentIndex(nextIndex);
     setSelectedOption(null);
-    setShowExplanation(false);
     setShakeWrong(false);
     setPhase("playing");
   }, [currentIndex, gameQuestions.length]);
+
+  // Auto-advance to next question after 1.2s
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => {
+    if (phase !== "answered") return;
+    autoAdvanceRef.current = setTimeout(() => {
+      handleNext();
+    }, 1200);
+    return () => {
+      if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    };
+  }, [phase, handleNext]);
 
   // Record XP & wrong questions when game finishes
   useEffect(() => {
@@ -405,11 +423,114 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          onClick={startGame}
+          onClick={() => {
+            if (gameMode === "daily") {
+              startGame();
+            } else {
+              setPhase("select-difficulty");
+            }
+          }}
           className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
         >
-          {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
+          {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : "Choisir le niveau →"}
         </motion.button>
+      </motion.div>
+    );
+  }
+
+  // ─── SELECT DIFFICULTY SCREEN ───
+  if (phase === "select-difficulty") {
+    const modeInfo = MODE_INFO[gameMode];
+    const catLabel = selectedCategory === "All" ? "Toutes catégories" : selectedCategory;
+    const catCol = selectedCategory !== "All" ? categoryColors[selectedCategory] : null;
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -60 }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        className="max-w-lg mx-auto px-4 py-10"
+      >
+        <div className="text-center mb-10">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", bounce: 0.5 }}
+            className="text-5xl mb-4"
+          >
+            🎯
+          </motion.div>
+          <h1 className="text-3xl font-bold text-white mb-2">
+            Choisis ton{" "}
+            <span className="gradient-text">niveau</span>
+          </h1>
+          <p className="text-slate-500">
+            {catCol ? catCol.icon : "🌍"} {catLabel} · {modeInfo.icon} {modeInfo.label}
+          </p>
+        </div>
+
+        <div className="space-y-4 mb-8">
+          {(Object.entries(DIFFICULTY_INFO) as [Difficulty, typeof DIFFICULTY_INFO["easy"]][]).map(
+            ([diff, info], i) => {
+              const isSelected = selectedDifficulty === diff;
+              return (
+                <motion.button
+                  key={diff}
+                  initial={{ opacity: 0, x: 40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1, duration: 0.3 }}
+                  whileHover={{ scale: 1.02, x: 6 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => setSelectedDifficulty(diff)}
+                  className={`w-full p-5 rounded-2xl border-2 text-left transition-all flex items-center gap-4 ${
+                    isSelected
+                      ? `${info.border} ${info.bg} shadow-lg ${info.shadow}`
+                      : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
+                  }`}
+                >
+                  <div className={`text-4xl flex-shrink-0 ${isSelected ? "" : "grayscale opacity-50"} transition-all`}>
+                    {info.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className={`font-bold text-lg ${isSelected ? info.color : "text-white"}`}>
+                      {info.label}
+                    </div>
+                    <div className="text-slate-500 text-sm">{info.desc}</div>
+                  </div>
+                  {isSelected && (
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      animate={{ scale: 1 }}
+                      className={`w-6 h-6 rounded-full ${info.bg} border ${info.border} flex items-center justify-center`}
+                    >
+                      <span className={`text-xs ${info.color}`}>✓</span>
+                    </motion.div>
+                  )}
+                </motion.button>
+              );
+            }
+          )}
+        </div>
+
+        <div className="flex gap-3">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => setPhase("select")}
+            className="px-6 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-2xl hover:bg-white/8 transition-colors"
+          >
+            ← Retour
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={startGame}
+            className="flex-1 py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
+          >
+            {gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
+          </motion.button>
+        </div>
       </motion.div>
     );
   }
@@ -910,39 +1031,27 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               </div>
             )}
 
-            <AnimatePresence>
-              {showExplanation && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="glass-card !rounded-2xl p-4 mb-4 overflow-hidden"
-                >
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">💡 Explication : </span>
-                    {currentQ.explanation}
-                  </p>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* Explanation shown inline */}
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              className="glass-card !rounded-2xl p-4 mb-4 overflow-hidden"
+            >
+              <p className="text-slate-400 text-sm leading-relaxed">
+                <span className="text-neon-cyan font-medium">💡 </span>
+                {currentQ.explanation}
+              </p>
+            </motion.div>
 
-            <div className="flex gap-3">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={() => setShowExplanation((v) => !v)}
-                className="px-4 py-3 glass-card !rounded-xl text-slate-400 text-sm font-medium hover:bg-white/5 transition-colors"
-              >
-                {showExplanation ? "Masquer" : "💡 Explication"}
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.97 }}
-                onClick={handleNext}
-                className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15"
-              >
-                {currentIndex + 1 >= gameQuestions.length ? "Voir les résultats 🏆" : "Question suivante →"}
-              </motion.button>
+            {/* Auto-advance progress bar */}
+            <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
+              <motion.div
+                initial={{ width: "100%" }}
+                animate={{ width: "0%" }}
+                transition={{ duration: 1.2, ease: "linear" }}
+                className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+              />
             </div>
           </motion.div>
         )}
