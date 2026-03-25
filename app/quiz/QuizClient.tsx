@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
@@ -79,6 +80,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const gameRecordedRef = useRef(false);
 
   const progress = useProgress();
+  const router = useRouter();
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -420,6 +422,32 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </div>
         )}
 
+        {/* Histoire: show period revision option */}
+        {selectedCategory === "Histoire" && gameMode === "classique" && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="mb-4"
+          >
+            <div className="glass-card !rounded-2xl p-5 flex items-center gap-4">
+              <div className="text-3xl">🏛️</div>
+              <div className="flex-1">
+                <p className="text-white font-semibold">Révision Chronologique</p>
+                <p className="text-slate-500 text-sm">Flashcards par période historique</p>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => router.push("/reviser/histoire")}
+                className="px-4 py-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold rounded-xl hover:bg-amber-500/20 transition-colors text-sm whitespace-nowrap"
+              >
+                Réviser une Période →
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
@@ -432,7 +460,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           }}
           className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
         >
-          {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : "Choisir le niveau →"}
+          {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : selectedCategory === "Histoire" ? "📝 Quiz Classique →" : "Choisir le niveau →"}
         </motion.button>
       </motion.div>
     );

@@ -9,6 +9,7 @@ interface RawQuestion {
   options: string[];
   correct_index: number;
   explanation: string;
+  period?: string;
 }
 
 interface Question {
@@ -19,6 +20,7 @@ interface Question {
   options: string[];
   correctIndex: number;
   explanation: string;
+  period?: string;
 }
 
 // Load all questions once at module init
@@ -48,6 +50,7 @@ function loadQuestions(): Question[] {
           options: q.options,
           correctIndex: q.correct_index,
           explanation: q.explanation,
+          period: q.period,
         });
       }
     }
@@ -61,6 +64,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const category = searchParams.get("category");
   const difficulty = searchParams.get("difficulty");
+  const period = searchParams.get("period");
   const limit = Math.min(
     Math.max(parseInt(searchParams.get("limit") ?? "10", 10) || 10, 1),
     50
@@ -75,6 +79,9 @@ export async function GET(request: NextRequest) {
   }
   if (difficulty) {
     filtered = filtered.filter((q) => q.difficulty === difficulty);
+  }
+  if (period) {
+    filtered = filtered.filter((q) => q.period === period);
   }
 
   if (filtered.length === 0) {
