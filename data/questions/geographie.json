@@ -3,7 +3,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quelle est la capitale de la France ?",
-    "options": ["Lyon", "Paris", "Marseille", "Toulouse"],
+    "options": [
+      "Lyon",
+      "Paris",
+      "Marseille",
+      "Toulouse"
+    ],
     "correct_index": 1,
     "explanation": "Paris est la capitale de la France depuis des siècles et abrite des monuments emblématiques comme la Tour Eiffel et le Louvre."
   },
@@ -11,7 +16,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel est le plus grand océan du monde ?",
-    "options": ["Océan Atlantique", "Océan Indien", "Océan Pacifique", "Océan Arctique"],
+    "options": [
+      "Océan Atlantique",
+      "Océan Indien",
+      "Océan Pacifique",
+      "Océan Arctique"
+    ],
     "correct_index": 2,
     "explanation": "L'océan Pacifique est le plus grand océan du monde, couvrant environ 165 millions de km², soit plus d'un tiers de la surface terrestre."
   },
@@ -19,7 +29,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Combien y a-t-il de continents sur Terre ?",
-    "options": ["5", "6", "7", "8"],
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
     "correct_index": 2,
     "explanation": "Il y a 7 continents : l'Afrique, l'Antarctique, l'Asie, l'Europe, l'Amérique du Nord, l'Amérique du Sud et l'Océanie."
   },
@@ -27,7 +42,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel est le plus long fleuve du monde ?",
-    "options": ["L'Amazone", "Le Nil", "Le Mississippi", "Le Yangtsé"],
+    "options": [
+      "L'Amazone",
+      "Le Nil",
+      "Le Mississippi",
+      "Le Yangtsé"
+    ],
     "correct_index": 1,
     "explanation": "Le Nil, avec environ 6 650 km, est généralement considéré comme le plus long fleuve du monde, traversant onze pays d'Afrique."
   },
@@ -35,7 +55,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel pays a la forme d'une botte ?",
-    "options": ["La Grèce", "L'Espagne", "L'Italie", "Le Portugal"],
+    "options": [
+      "La Grèce",
+      "L'Espagne",
+      "L'Italie",
+      "Le Portugal"
+    ],
     "correct_index": 2,
     "explanation": "L'Italie est célèbre pour sa forme de botte, s'étendant dans la mer Méditerranée au sud de l'Europe."
   },
@@ -43,7 +68,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quelle est la capitale de l'Espagne ?",
-    "options": ["Barcelone", "Séville", "Madrid", "Valence"],
+    "options": [
+      "Barcelone",
+      "Séville",
+      "Madrid",
+      "Valence"
+    ],
     "correct_index": 2,
     "explanation": "Madrid est la capitale et la plus grande ville d'Espagne, située au centre de la péninsule Ibérique."
   },
@@ -51,7 +81,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel est le plus grand pays du monde en superficie ?",
-    "options": ["La Chine", "Les États-Unis", "Le Canada", "La Russie"],
+    "options": [
+      "La Chine",
+      "Les États-Unis",
+      "Le Canada",
+      "La Russie"
+    ],
     "correct_index": 3,
     "explanation": "La Russie est le plus grand pays du monde avec environ 17,1 millions de km², s'étendant sur deux continents."
   },
@@ -59,7 +94,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Sur quel continent se trouve l'Égypte ?",
-    "options": ["L'Asie", "L'Europe", "L'Afrique", "L'Océanie"],
+    "options": [
+      "L'Asie",
+      "L'Europe",
+      "L'Afrique",
+      "L'Océanie"
+    ],
     "correct_index": 2,
     "explanation": "L'Égypte se situe dans le nord-est de l'Afrique, bien qu'une petite partie (la péninsule du Sinaï) se trouve en Asie."
   },
@@ -67,7 +107,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quelle est la plus haute montagne du monde ?",
-    "options": ["Le K2", "Le Mont Blanc", "L'Everest", "Le Kilimandjaro"],
+    "options": [
+      "Le K2",
+      "Le Mont Blanc",
+      "L'Everest",
+      "Le Kilimandjaro"
+    ],
     "correct_index": 2,
     "explanation": "L'Everest culmine à 8 849 mètres d'altitude, ce qui en fait le point le plus élevé de la planète, situé dans l'Himalaya."
   },
@@ -75,7 +120,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel fleuve traverse Paris ?",
-    "options": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+    "options": [
+      "La Loire",
+      "Le Rhône",
+      "La Seine",
+      "La Garonne"
+    ],
     "correct_index": 2,
     "explanation": "La Seine traverse Paris d'est en ouest, séparant la Rive Gauche de la Rive Droite."
   },
@@ -83,7 +133,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quelle est la capitale du Japon ?",
-    "options": ["Osaka", "Kyoto", "Tokyo", "Hiroshima"],
+    "options": [
+      "Osaka",
+      "Kyoto",
+      "Tokyo",
+      "Hiroshima"
+    ],
     "correct_index": 2,
     "explanation": "Tokyo est la capitale du Japon et l'une des métropoles les plus peuplées au monde, avec plus de 13 millions d'habitants."
   },
@@ -91,7 +146,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel est le plus petit continent ?",
-    "options": ["L'Europe", "L'Antarctique", "L'Océanie", "L'Amérique du Sud"],
+    "options": [
+      "L'Europe",
+      "L'Antarctique",
+      "L'Océanie",
+      "L'Amérique du Sud"
+    ],
     "correct_index": 2,
     "explanation": "L'Océanie (dont l'Australie est la masse terrestre principale) est le plus petit continent avec environ 8,5 millions de km²."
   },
@@ -99,7 +159,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Dans quel pays se trouve la statue de la Liberté ?",
-    "options": ["La France", "Les États-Unis", "Le Royaume-Uni", "Le Canada"],
+    "options": [
+      "La France",
+      "Les États-Unis",
+      "Le Royaume-Uni",
+      "Le Canada"
+    ],
     "correct_index": 1,
     "explanation": "La statue de la Liberté se trouve à New York, aux États-Unis. Elle a été offerte par la France en 1886."
   },
@@ -107,7 +172,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quel océan borde la côte ouest de l'Afrique ?",
-    "options": ["L'océan Pacifique", "L'océan Indien", "L'océan Atlantique", "L'océan Arctique"],
+    "options": [
+      "L'océan Pacifique",
+      "L'océan Indien",
+      "L'océan Atlantique",
+      "L'océan Arctique"
+    ],
     "correct_index": 2,
     "explanation": "L'océan Atlantique borde la côte ouest de l'Afrique, du Maroc jusqu'à l'Afrique du Sud."
   },
@@ -115,7 +185,12 @@
     "category": "Géographie",
     "difficulty": "easy",
     "question": "Quelle est la capitale de l'Allemagne ?",
-    "options": ["Munich", "Francfort", "Hambourg", "Berlin"],
+    "options": [
+      "Munich",
+      "Francfort",
+      "Hambourg",
+      "Berlin"
+    ],
     "correct_index": 3,
     "explanation": "Berlin est la capitale et la plus grande ville d'Allemagne, réunifiée en 1990 après la chute du mur."
   },
@@ -123,7 +198,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle est la capitale de l'Australie ?",
-    "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Brisbane"
+    ],
     "correct_index": 2,
     "explanation": "Canberra est la capitale de l'Australie, choisie comme compromis entre Sydney et Melbourne au début du XXe siècle."
   },
@@ -131,7 +211,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel est le plus grand désert du monde ?",
-    "options": ["Le Sahara", "Le désert de Gobi", "L'Antarctique", "Le désert d'Arabie"],
+    "options": [
+      "Le Sahara",
+      "Le désert de Gobi",
+      "L'Antarctique",
+      "Le désert d'Arabie"
+    ],
     "correct_index": 2,
     "explanation": "L'Antarctique est techniquement le plus grand désert du monde (14 millions de km²), car un désert se définit par ses faibles précipitations et non par sa chaleur."
   },
@@ -139,7 +224,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel pays possède le plus grand nombre d'habitants ?",
-    "options": ["Les États-Unis", "L'Inde", "La Chine", "L'Indonésie"],
+    "options": [
+      "Les États-Unis",
+      "L'Inde",
+      "La Chine",
+      "L'Indonésie"
+    ],
     "correct_index": 1,
     "explanation": "L'Inde a dépassé la Chine pour devenir le pays le plus peuplé du monde, avec plus de 1,4 milliard d'habitants."
   },
@@ -147,7 +237,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel détroit sépare l'Europe de l'Afrique ?",
-    "options": ["Le détroit de Malacca", "Le détroit de Gibraltar", "Le détroit de Béring", "Le détroit d'Ormuz"],
+    "options": [
+      "Le détroit de Malacca",
+      "Le détroit de Gibraltar",
+      "Le détroit de Béring",
+      "Le détroit d'Ormuz"
+    ],
     "correct_index": 1,
     "explanation": "Le détroit de Gibraltar, large d'environ 14 km à son point le plus étroit, sépare l'Espagne du Maroc."
   },
@@ -155,7 +250,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle est la mer la plus salée du monde ?",
-    "options": ["La mer Caspienne", "La mer Rouge", "La mer Morte", "La mer Méditerranée"],
+    "options": [
+      "La mer Caspienne",
+      "La mer Rouge",
+      "La mer Morte",
+      "La mer Méditerranée"
+    ],
     "correct_index": 2,
     "explanation": "La mer Morte, située entre Israël, la Jordanie et la Palestine, a une salinité d'environ 34 %, soit presque dix fois celle des océans."
   },
@@ -163,7 +263,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle chaîne de montagnes sépare la France de l'Espagne ?",
-    "options": ["Les Alpes", "Les Pyrénées", "Le Jura", "Les Vosges"],
+    "options": [
+      "Les Alpes",
+      "Les Pyrénées",
+      "Le Jura",
+      "Les Vosges"
+    ],
     "correct_index": 1,
     "explanation": "Les Pyrénées forment une frontière naturelle d'environ 430 km entre la France et l'Espagne, avec un point culminant au pic d'Aneto (3 404 m)."
   },
@@ -171,7 +276,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel est le plus grand lac d'Afrique ?",
-    "options": ["Le lac Tanganyika", "Le lac Malawi", "Le lac Tchad", "Le lac Victoria"],
+    "options": [
+      "Le lac Tanganyika",
+      "Le lac Malawi",
+      "Le lac Tchad",
+      "Le lac Victoria"
+    ],
     "correct_index": 3,
     "explanation": "Le lac Victoria, avec une superficie d'environ 68 800 km², est le plus grand lac d'Afrique et le deuxième plus grand lac d'eau douce au monde."
   },
@@ -179,7 +289,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle est la capitale du Canada ?",
-    "options": ["Toronto", "Montréal", "Vancouver", "Ottawa"],
+    "options": [
+      "Toronto",
+      "Montréal",
+      "Vancouver",
+      "Ottawa"
+    ],
     "correct_index": 3,
     "explanation": "Ottawa, située dans la province de l'Ontario, est la capitale du Canada depuis 1857, choisie par la reine Victoria."
   },
@@ -187,7 +302,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel pays est surnommé le « pays du Soleil-Levant » ?",
-    "options": ["La Chine", "La Corée du Sud", "Le Japon", "La Thaïlande"],
+    "options": [
+      "La Chine",
+      "La Corée du Sud",
+      "Le Japon",
+      "La Thaïlande"
+    ],
     "correct_index": 2,
     "explanation": "Le Japon est surnommé le pays du Soleil-Levant car son nom en japonais, Nihon, signifie littéralement « origine du soleil »."
   },
@@ -195,7 +315,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel est le plus long fleuve d'Europe ?",
-    "options": ["Le Danube", "Le Rhin", "La Volga", "La Loire"],
+    "options": [
+      "Le Danube",
+      "Le Rhin",
+      "La Volga",
+      "La Loire"
+    ],
     "correct_index": 2,
     "explanation": "La Volga, avec ses 3 530 km, est le plus long fleuve d'Europe. Elle coule entièrement en Russie et se jette dans la mer Caspienne."
   },
@@ -203,7 +328,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle île est la plus grande du monde ?",
-    "options": ["Madagascar", "Bornéo", "Le Groenland", "La Nouvelle-Guinée"],
+    "options": [
+      "Madagascar",
+      "Bornéo",
+      "Le Groenland",
+      "La Nouvelle-Guinée"
+    ],
     "correct_index": 2,
     "explanation": "Le Groenland est la plus grande île du monde avec environ 2,16 millions de km². C'est un territoire autonome du Danemark."
   },
@@ -211,7 +341,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Dans quel pays se trouve le Machu Picchu ?",
-    "options": ["La Bolivie", "Le Pérou", "L'Équateur", "La Colombie"],
+    "options": [
+      "La Bolivie",
+      "Le Pérou",
+      "L'Équateur",
+      "La Colombie"
+    ],
     "correct_index": 1,
     "explanation": "Le Machu Picchu est une ancienne cité inca située dans les Andes au Pérou, à environ 2 430 mètres d'altitude."
   },
@@ -219,7 +354,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel pays africain a pour capitale Nairobi ?",
-    "options": ["La Tanzanie", "L'Ouganda", "Le Kenya", "L'Éthiopie"],
+    "options": [
+      "La Tanzanie",
+      "L'Ouganda",
+      "Le Kenya",
+      "L'Éthiopie"
+    ],
     "correct_index": 2,
     "explanation": "Nairobi est la capitale et la plus grande ville du Kenya, un pays d'Afrique de l'Est célèbre pour ses safaris."
   },
@@ -227,7 +367,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel est le plus petit pays du monde en superficie ?",
-    "options": ["Monaco", "Le Liechtenstein", "Saint-Marin", "Le Vatican"],
+    "options": [
+      "Monaco",
+      "Le Liechtenstein",
+      "Saint-Marin",
+      "Le Vatican"
+    ],
     "correct_index": 3,
     "explanation": "Le Vatican, avec seulement 0,44 km², est le plus petit État indépendant du monde, enclavé dans la ville de Rome."
   },
@@ -235,7 +380,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel fleuve traverse Le Caire ?",
-    "options": ["Le Tigre", "L'Euphrate", "Le Nil", "Le Jourdain"],
+    "options": [
+      "Le Tigre",
+      "L'Euphrate",
+      "Le Nil",
+      "Le Jourdain"
+    ],
     "correct_index": 2,
     "explanation": "Le Nil traverse Le Caire avant de se jeter dans la mer Méditerranée par son delta. C'est l'artère vitale de l'Égypte."
   },
@@ -243,7 +393,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle est la capitale de la Turquie ?",
-    "options": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+    "options": [
+      "Istanbul",
+      "Ankara",
+      "Izmir",
+      "Antalya"
+    ],
     "correct_index": 1,
     "explanation": "Ankara est la capitale de la Turquie depuis 1923, même si Istanbul est la ville la plus peuplée et la plus connue du pays."
   },
@@ -251,7 +406,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel pays est traversé par l'équateur et le méridien de Greenwich ?",
-    "options": ["Le Nigéria", "Le Ghana", "Le Cameroun", "Le Togo"],
+    "options": [
+      "Le Nigéria",
+      "Le Ghana",
+      "Le Cameroun",
+      "Le Togo"
+    ],
     "correct_index": 1,
     "explanation": "Le Ghana est le seul pays traversé à la fois par l'équateur (approximativement) et le méridien de Greenwich, qui passe par Tema."
   },
@@ -259,7 +419,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel est le volcan le plus haut d'Europe ?",
-    "options": ["Le Vésuve", "L'Etna", "L'Elbrouz", "Le Stromboli"],
+    "options": [
+      "Le Vésuve",
+      "L'Etna",
+      "L'Elbrouz",
+      "Le Stromboli"
+    ],
     "correct_index": 2,
     "explanation": "L'Elbrouz, situé dans le Caucase en Russie, culmine à 5 642 mètres. C'est aussi le point le plus élevé d'Europe si l'on inclut le Caucase."
   },
@@ -267,7 +432,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quel pays d'Amérique du Sud est le plus grand en superficie ?",
-    "options": ["L'Argentine", "La Colombie", "Le Brésil", "Le Pérou"],
+    "options": [
+      "L'Argentine",
+      "La Colombie",
+      "Le Brésil",
+      "Le Pérou"
+    ],
     "correct_index": 2,
     "explanation": "Le Brésil est le plus grand pays d'Amérique du Sud et le cinquième plus grand au monde, avec environ 8,5 millions de km²."
   },
@@ -275,7 +445,12 @@
     "category": "Géographie",
     "difficulty": "medium",
     "question": "Quelle mer intérieure est bordée par la Russie, le Kazakhstan et l'Iran ?",
-    "options": ["La mer d'Aral", "La mer Noire", "La mer Caspienne", "La mer d'Azov"],
+    "options": [
+      "La mer d'Aral",
+      "La mer Noire",
+      "La mer Caspienne",
+      "La mer d'Azov"
+    ],
     "correct_index": 2,
     "explanation": "La mer Caspienne est la plus grande étendue d'eau intérieure au monde, bordée par cinq pays dont la Russie, le Kazakhstan et l'Iran."
   },
@@ -283,7 +458,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quelle est la capitale du Myanmar (Birmanie) ?",
-    "options": ["Rangoun", "Mandalay", "Naypyidaw", "Bago"],
+    "options": [
+      "Rangoun",
+      "Mandalay",
+      "Naypyidaw",
+      "Bago"
+    ],
     "correct_index": 2,
     "explanation": "Naypyidaw est la capitale du Myanmar depuis 2006, remplaçant Rangoun (Yangon) qui reste la plus grande ville du pays."
   },
@@ -291,7 +471,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel est le point le plus bas de la surface terrestre ?",
-    "options": ["La mer Morte", "La dépression de l'Afar", "Le lac Assal", "La fosse des Mariannes"],
+    "options": [
+      "La mer Morte",
+      "La dépression de l'Afar",
+      "Le lac Assal",
+      "La fosse des Mariannes"
+    ],
     "correct_index": 0,
     "explanation": "Les rives de la mer Morte, à environ -430 mètres sous le niveau de la mer, constituent le point terrestre le plus bas. La fosse des Mariannes est le point le plus profond des océans."
   },
@@ -299,7 +484,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel pays possède la plus longue côte au monde ?",
-    "options": ["L'Indonésie", "La Russie", "Le Canada", "L'Australie"],
+    "options": [
+      "L'Indonésie",
+      "La Russie",
+      "Le Canada",
+      "L'Australie"
+    ],
     "correct_index": 2,
     "explanation": "Le Canada possède la plus longue côte au monde avec environ 202 080 km, grâce à ses innombrables îles et baies dans l'Arctique."
   },
@@ -307,7 +497,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quelle est la capitale du Sri Lanka ?",
-    "options": ["Colombo", "Sri Jayawardenapura Kotte", "Kandy", "Galle"],
+    "options": [
+      "Colombo",
+      "Sri Jayawardenapura Kotte",
+      "Kandy",
+      "Galle"
+    ],
     "correct_index": 1,
     "explanation": "Sri Jayawardenapura Kotte est la capitale législative officielle du Sri Lanka, bien que Colombo reste la capitale commerciale et la plus grande ville."
   },
@@ -315,7 +510,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel est le fleuve le plus long d'Asie ?",
-    "options": ["Le Gange", "Le Mékong", "Le Yangtsé", "L'Ob"],
+    "options": [
+      "Le Gange",
+      "Le Mékong",
+      "Le Yangtsé",
+      "L'Ob"
+    ],
     "correct_index": 2,
     "explanation": "Le Yangtsé (Chang Jiang) est le plus long fleuve d'Asie avec environ 6 300 km. Il traverse la Chine d'ouest en est."
   },
@@ -323,7 +523,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel pays d'Afrique a le plus grand nombre de pays frontaliers ?",
-    "options": ["Le Soudan", "La République démocratique du Congo", "La Tanzanie", "Le Mali"],
+    "options": [
+      "Le Soudan",
+      "La République démocratique du Congo",
+      "La Tanzanie",
+      "Le Mali"
+    ],
     "correct_index": 1,
     "explanation": "La République démocratique du Congo partage ses frontières avec neuf pays, ce qui en fait le pays africain ayant le plus de voisins."
   },
@@ -331,7 +536,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel archipel est situé à la jonction des plaques tectoniques nord-américaine et eurasienne ?",
-    "options": ["Les Açores", "Les Canaries", "L'Islande", "Les Féroé"],
+    "options": [
+      "Les Açores",
+      "Les Canaries",
+      "L'Islande",
+      "Les Féroé"
+    ],
     "correct_index": 2,
     "explanation": "L'Islande est située sur la dorsale médio-atlantique, à la jonction des plaques tectoniques nord-américaine et eurasienne, ce qui explique son activité volcanique intense."
   },
@@ -339,7 +549,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel est le lac le plus profond du monde ?",
-    "options": ["Le lac Tanganyika", "Le lac Baïkal", "Le lac Supérieur", "Le lac Titicaca"],
+    "options": [
+      "Le lac Tanganyika",
+      "Le lac Baïkal",
+      "Le lac Supérieur",
+      "Le lac Titicaca"
+    ],
     "correct_index": 1,
     "explanation": "Le lac Baïkal en Sibérie (Russie) est le lac le plus profond du monde avec 1 642 mètres. Il contient environ 20 % de l'eau douce non gelée de la planète."
   },
@@ -347,7 +562,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel pays enclavé d'Asie centrale a pour capitale Achgabat ?",
-    "options": ["L'Ouzbékistan", "Le Tadjikistan", "Le Turkménistan", "Le Kirghizistan"],
+    "options": [
+      "L'Ouzbékistan",
+      "Le Tadjikistan",
+      "Le Turkménistan",
+      "Le Kirghizistan"
+    ],
     "correct_index": 2,
     "explanation": "Achgabat (Ashgabat) est la capitale du Turkménistan, un pays enclavé d'Asie centrale bordé par la mer Caspienne à l'ouest."
   },
@@ -355,7 +575,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel est le plus haut sommet d'Afrique ?",
-    "options": ["Le mont Kenya", "Le Ras Dashan", "Le Kilimandjaro", "Le mont Stanley"],
+    "options": [
+      "Le mont Kenya",
+      "Le Ras Dashan",
+      "Le Kilimandjaro",
+      "Le mont Stanley"
+    ],
     "correct_index": 2,
     "explanation": "Le Kilimandjaro en Tanzanie culmine à 5 895 mètres (pic Uhuru). C'est aussi le plus haut sommet isolé du monde."
   },
@@ -363,7 +588,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel est le seul pays au monde à être traversé par l'équateur et un tropique ?",
-    "options": ["La Colombie", "Le Brésil", "L'Équateur", "Le Kenya"],
+    "options": [
+      "La Colombie",
+      "Le Brésil",
+      "L'Équateur",
+      "Le Kenya"
+    ],
     "correct_index": 1,
     "explanation": "Le Brésil est traversé à la fois par l'équateur au nord et par le tropique du Capricorne au sud, grâce à son immense étendue."
   },
@@ -371,7 +601,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quelle est la ville la plus peuplée d'Afrique ?",
-    "options": ["Le Caire", "Lagos", "Kinshasa", "Johannesburg"],
+    "options": [
+      "Le Caire",
+      "Lagos",
+      "Kinshasa",
+      "Johannesburg"
+    ],
     "correct_index": 1,
     "explanation": "Lagos, au Nigéria, est la ville la plus peuplée d'Afrique avec plus de 15 millions d'habitants dans sa zone métropolitaine."
   },
@@ -379,7 +614,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel détroit sépare l'Asie de l'Amérique du Nord ?",
-    "options": ["Le détroit de Malacca", "Le détroit de Torres", "Le détroit de Béring", "Le détroit de Magellan"],
+    "options": [
+      "Le détroit de Malacca",
+      "Le détroit de Torres",
+      "Le détroit de Béring",
+      "Le détroit de Magellan"
+    ],
     "correct_index": 2,
     "explanation": "Le détroit de Béring, large d'environ 82 km, sépare la Russie (Asie) de l'Alaska (Amérique du Nord)."
   },
@@ -387,7 +627,12 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quel pays possède le plus grand nombre d'îles au monde ?",
-    "options": ["Les Philippines", "L'Indonésie", "La Suède", "La Norvège"],
+    "options": [
+      "Les Philippines",
+      "L'Indonésie",
+      "La Suède",
+      "La Norvège"
+    ],
     "correct_index": 2,
     "explanation": "La Suède possède environ 267 570 îles, ce qui en fait le pays ayant le plus grand nombre d'îles au monde, devant la Norvège et la Finlande."
   },
@@ -395,8 +640,208 @@
     "category": "Géographie",
     "difficulty": "hard",
     "question": "Quelle est la capitale du Bhoutan ?",
-    "options": ["Katmandou", "Thimphou", "Dacca", "Colombo"],
+    "options": [
+      "Katmandou",
+      "Thimphou",
+      "Dacca",
+      "Colombo"
+    ],
     "correct_index": 1,
     "explanation": "Thimphou est la capitale du Bhoutan, un petit royaume himalayen situé entre l'Inde et la Chine, connu pour mesurer le « bonheur national brut »."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "easy",
+    "question": "Quel est le plus long fleuve du monde ?",
+    "options": [
+      "L'Amazone",
+      "Le Nil",
+      "Le Mississippi",
+      "Le Yangtsé"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Nil mesure environ 6 650 km, ce qui en fait le plus long fleuve du monde, suivi de l'Amazone."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "medium",
+    "question": "Quel pays a le plus de fuseaux horaires ?",
+    "options": [
+      "Russie",
+      "États-Unis",
+      "Chine",
+      "France"
+    ],
+    "correct_index": 3,
+    "explanation": "La France possède 12 fuseaux horaires grâce à ses territoires d'outre-mer, devant les États-Unis (11) et la Russie (11)."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "hard",
+    "question": "Quel est le point le plus profond des océans ?",
+    "options": [
+      "Fosse des Mariannes",
+      "Fosse de Porto Rico",
+      "Fosse des Tonga",
+      "Fosse du Japon"
+    ],
+    "correct_index": 0,
+    "explanation": "La fosse des Mariannes atteint environ 11 034 mètres au Challenger Deep, dans l'océan Pacifique."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "easy",
+    "question": "Quel est le plus grand pays du monde par sa superficie ?",
+    "options": [
+      "Canada",
+      "Chine",
+      "États-Unis",
+      "Russie"
+    ],
+    "correct_index": 3,
+    "explanation": "La Russie couvre environ 17,1 millions de km², soit plus du double du Canada (2e)."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "medium",
+    "question": "Quel détroit sépare l'Europe de l'Afrique ?",
+    "options": [
+      "Détroit de Malacca",
+      "Détroit de Gibraltar",
+      "Détroit du Bosphore",
+      "Détroit de Béring"
+    ],
+    "correct_index": 1,
+    "explanation": "Le détroit de Gibraltar sépare l'Espagne du Maroc, large de seulement 14 km à son point le plus étroit."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "hard",
+    "question": "Quel est le plus petit pays du monde ?",
+    "options": [
+      "Monaco",
+      "Nauru",
+      "Vatican",
+      "Saint-Marin"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Vatican (0,44 km²) est le plus petit État du monde, enclavé dans Rome."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "easy",
+    "question": "Sur quel continent se trouve le Brésil ?",
+    "options": [
+      "Afrique",
+      "Asie",
+      "Europe",
+      "Amérique du Sud"
+    ],
+    "correct_index": 3,
+    "explanation": "Le Brésil est le plus grand pays d'Amérique du Sud, couvrant près de la moitié du continent."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "medium",
+    "question": "Quel fleuve traverse Paris ?",
+    "options": [
+      "La Loire",
+      "Le Rhône",
+      "La Seine",
+      "La Garonne"
+    ],
+    "correct_index": 2,
+    "explanation": "La Seine traverse Paris d'est en ouest, divisant la ville en Rive droite et Rive gauche."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "hard",
+    "question": "Quel pays africain était autrefois appelé Abyssinie ?",
+    "options": [
+      "Somalie",
+      "Érythrée",
+      "Éthiopie",
+      "Soudan"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Éthiopie était connue sous le nom d'Abyssinie jusqu'au XXe siècle. C'est l'un des rares pays africains jamais colonisés."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "easy",
+    "question": "Quel océan borde la côte ouest de la France ?",
+    "options": [
+      "Océan Indien",
+      "Océan Pacifique",
+      "Océan Atlantique",
+      "Mer Méditerranée"
+    ],
+    "correct_index": 2,
+    "explanation": "L'océan Atlantique borde la côte ouest de la France, de la Bretagne au Pays basque."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "medium",
+    "question": "Quelle est la capitale de l'Australie ?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Brisbane"
+    ],
+    "correct_index": 2,
+    "explanation": "Canberra est la capitale de l'Australie depuis 1913, choisie comme compromis entre Sydney et Melbourne."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "hard",
+    "question": "Combien de pays l'équateur traverse-t-il ?",
+    "options": [
+      "8",
+      "11",
+      "13",
+      "16"
+    ],
+    "correct_index": 2,
+    "explanation": "L'équateur traverse 13 pays : Équateur, Colombie, Brésil, Gabon, Congo, RDC, Ouganda, Kenya, Somalie, Maldives, Indonésie, Kiribati, São Tomé-et-Príncipe."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "easy",
+    "question": "Quelle est la montagne la plus haute du monde ?",
+    "options": [
+      "K2",
+      "Mont Blanc",
+      "Kilimandjaro",
+      "Everest"
+    ],
+    "correct_index": 3,
+    "explanation": "L'Everest culmine à 8 849 mètres dans l'Himalaya, à la frontière entre le Népal et le Tibet."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "medium",
+    "question": "Quel pays est surnommé le 'pays du Soleil-Levant' ?",
+    "options": [
+      "Chine",
+      "Corée du Sud",
+      "Japon",
+      "Thaïlande"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Japon est surnommé le pays du Soleil-Levant car il se situe à l'est de l'Asie continentale."
+  },
+  {
+    "category": "Géographie",
+    "difficulty": "hard",
+    "question": "Quel est le désert le plus grand du monde ?",
+    "options": [
+      "Sahara",
+      "Gobi",
+      "Antarctique",
+      "Arabie"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Antarctique est techniquement le plus grand désert du monde (14 millions km²), car un désert se définit par ses précipitations, pas sa température."
   }
 ]
