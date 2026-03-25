@@ -16,8 +16,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06]">
-      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
+      <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" style={{ paddingLeft: "max(1rem, env(safe-area-inset-left, 0px))", paddingRight: "max(1rem, env(safe-area-inset-right, 0px))" }}>
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-neon-cyan/20 group-hover:scale-110 group-hover:shadow-neon-cyan/40 transition-all">
