@@ -55,6 +55,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [shakeWrong, setShakeWrong] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("easy");
   const [reviewOpenId, setReviewOpenId] = useState<number | null>(null);
+  const [gameTime, setGameTime] = useState(0);
 
   useEffect(() => {
     fetch("/api/categories")
@@ -270,6 +271,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
 
     // Record speed
     const gameTimeSeconds = (Date.now() - gameStartTimeRef.current) / 1000;
+    setGameTime(Math.round(gameTimeSeconds));
     progress.recordSpeed(gameTimeSeconds, total);
 
     // Save each answer: mark right/wrong, record category stats, save wrong question data
@@ -777,13 +779,16 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             })}
           </div>
 
-          {/* Share button */}
-          <ShareScoreButton
+          {/* Share Score Card */}
+          <ShareScoreCard
             answers={answers}
             score={score}
             total={total}
             gameMode={gameMode}
-            dailyStreak={progress.dailyStreak}
+            difficulty={selectedDifficulty}
+            level={getLevel(progress.xp).level}
+            gameTime={gameTime}
+            streak={bestStreak}
           />
 
           <div className="flex gap-3">
@@ -1145,68 +1150,244 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   );
 }
 
-// ─── SHARE SCORE BUTTON ───
-function ShareScoreButton({
+// ─── SHARE SCORE CARD (Canvas) ───
+function ShareScoreCard({
   answers,
   score,
   total,
   gameMode,
-  dailyStreak,
+  difficulty,
+  level,
+  gameTime,
+  streak,
 }: {
   answers: { selected: number | null; correct: number }[];
   score: number;
   total: number;
   gameMode: GameMode;
-  dailyStreak: number;
+  difficulty: string;
+  level: number;
+  gameTime: number;
+  streak: number;
 }) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const [copied, setCopied] = useState(false);
+  const [cardReady, setCardReady] = useState(false);
 
-  const generateShareText = () => {
-    const emojiGrid = answers
-      .map((a) => (a.selected === a.correct ? "🟩" : a.selected === null ? "🟨" : "🟥"))
-      .join("");
+  const modeLabel = MODE_INFO[gameMode];
+  const diffLabel = difficulty === "hard" ? "Expert" : difficulty === "medium" ? "Intermédiaire" : "Débutant";
+  const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
+  const timeStr = gameTime >= 60
+    ? `${Math.floor(gameTime / 60)}m${String(gameTime % 60).padStart(2, "0")}s`
+    : `${gameTime}s`;
 
-    const modeLabel = MODE_INFO[gameMode];
-    const today = new Date();
-    const dateStr = `${String(today.getDate()).padStart(2, "0")}/${String(today.getMonth() + 1).padStart(2, "0")}/${today.getFullYear()}`;
+  // Draw the card on canvas
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    let text = `🧠 Vibe Quiz Master ${gameMode === "daily" ? `— Défi du ${dateStr}` : `— ${modeLabel.label}`}\n`;
-    text += `${emojiGrid}\n`;
-    text += `${score}/${total} `;
-    text += score === total ? "💯" : score >= total * 0.7 ? "⭐" : "💪";
-    if (dailyStreak > 1 && gameMode === "daily") {
-      text += ` 🔥 ${dailyStreak}j d'affilée`;
+    const W = 720;
+    const H = 480;
+    canvas.width = W;
+    canvas.height = H;
+    const dpr = typeof window !== "undefined" ? Math.min(window.devicePixelRatio || 1, 2) : 1;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = `${W}px`;
+    canvas.style.height = `${H}px`;
+    ctx.scale(dpr, dpr);
+
+    // ─ Background
+    ctx.fillStyle = "#050505";
+    ctx.fillRect(0, 0, W, H);
+
+    // ─ Mesh gradient orbs
+    const drawOrb = (x: number, y: number, r: number, color: string) => {
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
+      grad.addColorStop(0, color);
+      grad.addColorStop(1, "transparent");
+      ctx.fillStyle = grad;
+      ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    };
+    drawOrb(100, 80, 200, "rgba(0,240,255,0.08)");
+    drawOrb(620, 400, 250, "rgba(255,45,123,0.07)");
+    drawOrb(360, 240, 180, "rgba(255,183,0,0.05)");
+
+    // ─ Subtle grid
+    ctx.strokeStyle = "rgba(255,255,255,0.03)";
+    ctx.lineWidth = 0.5;
+    for (let x = 0; x < W; x += 40) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
     }
-    return text;
-  };
+    for (let y = 0; y < H; y += 40) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
 
-  const handleShare = async () => {
-    const text = generateShareText();
+    // ─ Border glow
+    ctx.strokeStyle = "rgba(0,240,255,0.15)";
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.roundRect(8, 8, W - 16, H - 16, 24);
+    ctx.stroke();
 
-    // Try native share (mobile)
-    if (typeof navigator !== "undefined" && navigator.share) {
-      try {
-        await navigator.share({ text });
-        return;
-      } catch {
-        // User cancelled or not supported, fall through
+    // ─ Header: logo + title
+    ctx.font = "bold 16px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "#00f0ff";
+    ctx.fillText("V", 32, 50);
+    ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.5)";
+    ctx.fillText("Vibe Quiz Master", 54, 50);
+
+    // Mode badge
+    ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.3)";
+    ctx.fillText(`${modeLabel.icon} ${modeLabel.label} · ${diffLabel}`, W - 200, 50);
+
+    // ─ Big score circle
+    const cx = W / 2;
+    const cy = 180;
+    const radius = 70;
+
+    // Ring background
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(255,255,255,0.06)";
+    ctx.lineWidth = 8;
+    ctx.stroke();
+
+    // Ring progress
+    const startAngle = -Math.PI / 2;
+    const endAngle = startAngle + (accuracy / 100) * Math.PI * 2;
+    const grad = ctx.createLinearGradient(cx - radius, cy, cx + radius, cy);
+    grad.addColorStop(0, "#00f0ff");
+    grad.addColorStop(1, "#ff2d7b");
+    ctx.beginPath();
+    ctx.arc(cx, cy, radius, startAngle, endAngle);
+    ctx.strokeStyle = grad;
+    ctx.lineWidth = 8;
+    ctx.lineCap = "round";
+    ctx.stroke();
+    ctx.lineCap = "butt";
+
+    // Score text
+    ctx.textAlign = "center";
+    ctx.font = "bold 48px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "#ffffff";
+    ctx.fillText(`${score}/${total}`, cx, cy + 8);
+
+    ctx.font = "12px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.4)";
+    ctx.fillText(`${accuracy}% de précision`, cx, cy + 30);
+
+    // ─ Emoji grid row
+    const emojiRow = answers.map((a) =>
+      a.selected === a.correct ? "🟩" : a.selected === null ? "🟨" : "🟥"
+    );
+    ctx.font = "18px sans-serif";
+    const emojiWidth = 22;
+    const emojiStartX = cx - (emojiRow.length * emojiWidth) / 2;
+    emojiRow.forEach((e, i) => {
+      ctx.fillText(e, emojiStartX + i * emojiWidth, cy + 56);
+    });
+
+    // ─ Stats row
+    const statsY = 310;
+    const stats = [
+      { label: "Niveau", value: `${level}`, icon: "⭐" },
+      { label: "Temps", value: timeStr, icon: "⏱️" },
+      { label: "Streak", value: `${streak}x`, icon: "🔥" },
+    ];
+    const statW = 160;
+    const statsStartX = cx - ((stats.length * statW) / 2);
+
+    stats.forEach((s, i) => {
+      const sx = statsStartX + i * statW + statW / 2;
+
+      // Background pill
+      ctx.fillStyle = "rgba(255,255,255,0.03)";
+      ctx.beginPath();
+      ctx.roundRect(sx - 60, statsY - 20, 120, 50, 12);
+      ctx.fill();
+      ctx.strokeStyle = "rgba(255,255,255,0.06)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.roundRect(sx - 60, statsY - 20, 120, 50, 12);
+      ctx.stroke();
+
+      ctx.textAlign = "center";
+      ctx.font = "bold 18px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.fillStyle = "#ffffff";
+      ctx.fillText(`${s.icon} ${s.value}`, sx, statsY + 6);
+
+      ctx.font = "10px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.fillStyle = "rgba(255,255,255,0.35)";
+      ctx.fillText(s.label, sx, statsY + 22);
+    });
+
+    // ─ Challenge text
+    const challengeText = difficulty === "hard"
+      ? "Je t'ai battu en mode Expert ! Feras-tu mieux ?"
+      : score === total
+        ? "Score parfait ! Qui peut faire pareil ?"
+        : "Ose me battre si tu peux !";
+
+    ctx.textAlign = "center";
+    ctx.font = "italic 15px -apple-system, BlinkMacSystemFont, sans-serif";
+    const challengeGrad = ctx.createLinearGradient(cx - 200, 0, cx + 200, 0);
+    challengeGrad.addColorStop(0, "#00f0ff");
+    challengeGrad.addColorStop(1, "#ff2d7b");
+    ctx.fillStyle = challengeGrad;
+    ctx.fillText(`"${challengeText}"`, cx, 400);
+
+    // ─ Footer
+    ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
+    ctx.fillStyle = "rgba(255,255,255,0.2)";
+    ctx.fillText("vibequizmaster.vercel.app", cx, H - 24);
+
+    ctx.textAlign = "left";
+    setCardReady(true);
+  }, [score, total, accuracy, modeLabel, diffLabel, level, timeStr, streak, difficulty, answers, gameTime]);
+
+  const shareCard = async () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Convert canvas to blob
+    const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
+
+    // Try native share with image (mobile)
+    if (blob && typeof navigator !== "undefined" && navigator.share && navigator.canShare) {
+      const file = new File([blob], "vibe-quiz-score.png", { type: "image/png" });
+      const shareData = { files: [file], text: "vibequizmaster.vercel.app" };
+      if (navigator.canShare(shareData)) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch {
+          // User cancelled, fall through
+        }
       }
     }
 
-    // Copy to clipboard
+    // Fallback: copy link to clipboard
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText("vibequizmaster.vercel.app");
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback
+      // silent
     }
   };
 
-  const handleWhatsApp = () => {
-    const text = generateShareText();
-    const encoded = encodeURIComponent(text);
-    window.open(`https://wa.me/?text=${encoded}`, "_blank");
+  const downloadCard = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const link = document.createElement("a");
+    link.download = "vibe-quiz-score.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
   };
 
   return (
@@ -1214,25 +1395,38 @@ function ShareScoreButton({
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="flex gap-3 mb-6"
+      className="mb-6"
     >
-      <motion.button
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.97 }}
-        onClick={handleShare}
-        className="flex-1 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors text-sm flex items-center justify-center gap-2"
-      >
-        {copied ? "✅ Copié !" : "📋 Copier mon score"}
-      </motion.button>
-      <motion.button
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.97 }}
-        onClick={handleWhatsApp}
-        className="py-3 px-5 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] font-semibold rounded-xl hover:bg-[#25D366]/20 transition-colors text-sm flex items-center gap-2"
-      >
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp
-      </motion.button>
+      {/* Canvas card preview */}
+      <div className="rounded-2xl overflow-hidden border border-white/[0.08] mb-3 bg-black">
+        <canvas
+          ref={canvasRef}
+          className="w-full h-auto"
+          style={{ display: "block", maxWidth: "100%" }}
+        />
+      </div>
+
+      {/* Action buttons */}
+      <div className="flex gap-3">
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+          onClick={shareCard}
+          disabled={!cardReady}
+          className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15 text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+        >
+          {copied ? "✅ Lien copié !" : "📤 Partager"}
+        </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.97 }}
+          onClick={downloadCard}
+          disabled={!cardReady}
+          className="py-3 px-5 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors text-sm flex items-center gap-2 disabled:opacity-50"
+        >
+          💾 Sauvegarder
+        </motion.button>
+      </div>
     </motion.div>
   );
 }
