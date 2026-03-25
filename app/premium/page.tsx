@@ -1,361 +1,541 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-type BillingPeriod = "monthly" | "annual";
+const KEY_PREMIUM = "vqm_premium";
 
-const features = [
+function loadPremium(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return JSON.parse(localStorage.getItem(KEY_PREMIUM) || "false");
+  } catch {
+    return false;
+  }
+}
+
+// ─── DATA ───
+
+const ADVANTAGES = [
   {
-    icon: "🧠",
-    title: "Questions illimitées",
-    description: "Accès à plus de 1 000 questions exclusives dans toutes les catégories",
-    free: false,
-    premium: true,
-  },
-  {
-    icon: "⚡",
-    title: "Modes de jeu exclusifs",
-    description: "Mode survie, défi chronométré et quiz multijoueur en temps réel",
-    free: false,
-    premium: true,
-  },
-  {
-    icon: "📊",
-    title: "Statistiques avancées",
-    description: "Graphiques de progression, analyses de performance et points faibles",
-    free: false,
-    premium: true,
+    icon: "🚫",
+    gold: "✦",
+    title: "Zéro Pub",
+    desc: "Une expérience immersive, sans aucune interruption ni distraction.",
+    glow: "from-amber-500/20 to-yellow-500/20",
   },
   {
     icon: "🔥",
-    title: "Multiplicateur de streak",
-    description: "Gagnez jusqu'à 3x plus de points avec vos séries de bonnes réponses",
-    free: false,
-    premium: true,
+    gold: "✦",
+    title: "Difficulté Expert Illimitée",
+    desc: "Accès permanent au mode Expert dans toutes les catégories, sans limite de questions.",
+    glow: "from-orange-500/20 to-red-500/20",
+  },
+  {
+    icon: "🤖",
+    gold: "✦",
+    title: "Explications IA",
+    desc: "Chaque réponse est accompagnée d'une explication enrichie par intelligence artificielle.",
+    glow: "from-purple-500/20 to-blue-500/20",
+  },
+  {
+    icon: "📊",
+    gold: "✦",
+    title: "Statistiques Avancées",
+    desc: "Graphiques détaillés, tendances de progression et identification des points faibles.",
+    glow: "from-cyan-500/20 to-teal-500/20",
   },
   {
     icon: "🏆",
-    title: "Tournois hebdomadaires",
-    description: "Participez aux compétitions exclusives avec des prix à gagner",
-    free: false,
-    premium: true,
+    gold: "✦",
+    title: "Tournois Exclusifs",
+    desc: "Participez aux compétitions hebdomadaires réservées aux membres Légende.",
+    glow: "from-yellow-500/20 to-amber-500/20",
   },
   {
-    icon: "🎨",
-    title: "Thèmes et avatars",
-    description: "Personnalisez votre profil avec des skins et avatars exclusifs",
-    free: false,
-    premium: true,
-  },
-  {
-    icon: "📚",
-    title: "Cours et explications",
-    description: "Accès aux explications détaillées et fiches de révision",
-    free: false,
-    premium: true,
-  },
-  {
-    icon: "🚫",
-    title: "Sans publicité",
-    description: "Profitez d'une expérience fluide sans aucune interruption",
-    free: false,
-    premium: true,
+    icon: "⚡",
+    gold: "✦",
+    title: "Multiplicateur x3",
+    desc: "Vos streaks rapportent jusqu'à 3x plus de XP pour grimper au classement.",
+    glow: "from-rose-500/20 to-pink-500/20",
   },
 ];
 
-const freeFeatures = [
-  "8 questions par catégorie",
-  "4 catégories disponibles",
-  "Classement général",
-  "Statistiques de base",
-  "Timer de 15 secondes",
+type Plan = "monthly" | "annual" | "lifetime";
+
+const PLANS: { id: Plan; name: string; price: string; period: string; badge?: string; highlight?: boolean; saving?: string; desc: string }[] = [
+  {
+    id: "monthly",
+    name: "Mensuel",
+    price: "4,99€",
+    period: "/mois",
+    desc: "Flexibilité totale, sans engagement.",
+  },
+  {
+    id: "annual",
+    name: "Annuel",
+    price: "2,49€",
+    period: "/mois",
+    badge: "POPULAIRE",
+    highlight: true,
+    saving: "Économisez 50%",
+    desc: "Facturé 29,90€/an. Le choix malin.",
+  },
+  {
+    id: "lifetime",
+    name: "À Vie",
+    price: "49,90€",
+    period: "une seule fois",
+    badge: "MEILLEUR DEAL",
+    saving: "Payez une fois, c'est fini",
+    desc: "Accès permanent, pas d'abonnement.",
+  },
 ];
 
-const testimonials = [
-  {
-    name: "Alexandre M.",
-    avatar: "🧑‍💻",
-    text: "Vibe Quiz Master Premium m'a aidé à préparer mon concours de culture générale. Les 1000+ questions sont incroyables !",
-    rating: 5,
-    badge: "🏆 Top 1 cette semaine",
-  },
-  {
-    name: "Sophie L.",
-    avatar: "👩‍🔬",
-    text: "Les statistiques avancées m'ont permis d'identifier mes lacunes. Mon score a progressé de 40% en un mois !",
-    rating: 5,
-    badge: "⭐ Membre Premium",
-  },
-  {
-    name: "Camille D.",
-    avatar: "👩‍🍳",
-    text: "Les tournois hebdomadaires sont addictifs. J'ai gagné 3 fois le défi cette semaine grâce au multiplicateur de streak.",
-    rating: 5,
-    badge: "🔥 Streak record : 47",
-  },
-];
+// ─── ANIMATED MESH BACKGROUND ───
+
+function MeshBackground() {
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden>
+      {/* Mesh gradient orbs */}
+      <motion.div
+        animate={{
+          x: [0, 30, -20, 0],
+          y: [0, -40, 20, 0],
+          scale: [1, 1.2, 0.9, 1],
+        }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(255,183,0,0.08) 0%, transparent 70%)",
+        }}
+      />
+      <motion.div
+        animate={{
+          x: [0, -40, 30, 0],
+          y: [0, 30, -30, 0],
+          scale: [1, 0.85, 1.15, 1],
+        }}
+        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(255,45,123,0.06) 0%, transparent 70%)",
+        }}
+      />
+      <motion.div
+        animate={{
+          x: [0, 50, -30, 0],
+          y: [0, -20, 40, 0],
+        }}
+        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(255,200,0,0.05) 0%, transparent 70%)",
+        }}
+      />
+      {/* Subtle grid overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,183,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,183,0,0.3) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+    </div>
+  );
+}
+
+// ─── MAIN PAGE ───
 
 export default function PremiumPage() {
-  const [billing, setBilling] = useState<BillingPeriod>("annual");
+  const [isPremium, setIsPremium] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<Plan>("annual");
+  const [showActivated, setShowActivated] = useState(false);
+  const [hydrated, setHydrated] = useState(false);
 
-  const monthlyPrice = 7.99;
-  const annualMonthlyPrice = 4.99;
-  const annualTotal = (annualMonthlyPrice * 12).toFixed(2);
-  const savings = Math.round(((monthlyPrice - annualMonthlyPrice) / monthlyPrice) * 100);
+  useEffect(() => {
+    setIsPremium(loadPremium());
+    setHydrated(true);
+  }, []);
 
-  return (
-    <div className="max-w-5xl mx-auto px-4 py-10">
-      {/* Hero */}
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
-          ⭐ Passez au niveau supérieur
-        </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Débloquez{" "}
-          <span className="bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">
-            tout le potentiel
-          </span>
-        </h1>
-        <p className="text-slate-400 text-lg max-w-xl mx-auto">
-          Rejoignez plus de 50 000 passionnés qui utilisent Vibe Quiz Master Premium pour améliorer leur culture générale.
-        </p>
-      </div>
+  const activatePremium = useCallback(() => {
+    localStorage.setItem(KEY_PREMIUM, "true");
+    setIsPremium(true);
+    setShowActivated(true);
+  }, []);
 
-      {/* Billing toggle */}
-      <div className="flex justify-center mb-10">
-        <div className="flex bg-white/5 border border-white/10 rounded-2xl p-1 gap-1 items-center">
-          <button
-            onClick={() => setBilling("monthly")}
-            className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
-              billing === "monthly"
-                ? "bg-white/10 text-white shadow"
-                : "text-slate-400 hover:text-white"
-            }`}
+  if (!hydrated) return null;
+
+  // ─── ALREADY PREMIUM ───
+  if (isPremium && !showActivated) {
+    return (
+      <div className="relative min-h-[80vh]">
+        <MeshBackground />
+        <div className="relative z-10 max-w-lg mx-auto px-4 py-20 text-center">
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: "spring", bounce: 0.5 }}
+            className="text-7xl mb-6"
           >
-            Mensuel
-          </button>
-          <button
-            onClick={() => setBilling("annual")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
-              billing === "annual"
-                ? "bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 shadow"
-                : "text-slate-400 hover:text-white"
-            }`}
-          >
-            Annuel
-            <span className="bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded-full border border-green-500/30">
-              -{savings}%
+            👑
+          </motion.div>
+          <h1 className="text-3xl font-bold mb-3">
+            <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
+              Vous êtes Légende
             </span>
-          </button>
-        </div>
-      </div>
-
-      {/* Pricing Cards */}
-      <div className="grid md:grid-cols-2 gap-6 mb-16">
-        {/* Free Plan */}
-        <div
-          className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-white/20 transition-all"
-        >
-          <div className="mb-6">
-            <div className="text-2xl mb-2">🎮</div>
-            <h3 className="text-xl font-bold text-white mb-1">Gratuit</h3>
-            <p className="text-slate-400 text-sm">Pour découvrir Vibe Quiz Master</p>
-          </div>
-          <div className="mb-6">
-            <span className="text-4xl font-bold text-white">0€</span>
-            <span className="text-slate-400 text-sm ml-2">pour toujours</span>
-          </div>
-          <ul className="space-y-3 mb-8">
-            {freeFeatures.map((f) => (
-              <li key={f} className="flex items-center gap-3 text-slate-300 text-sm">
-                <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center text-xs text-slate-400 flex-shrink-0">
-                  ✓
-                </span>
-                {f}
-              </li>
+          </h1>
+          <p className="text-slate-400 mb-8">Tous les avantages Premium sont actifs.</p>
+          <div className="grid grid-cols-3 gap-3 mb-8">
+            {ADVANTAGES.slice(0, 3).map((a) => (
+              <div key={a.title} className="bg-amber-500/5 border border-amber-500/15 rounded-xl p-3 text-center">
+                <div className="text-2xl mb-1">{a.icon}</div>
+                <div className="text-amber-400/80 text-xs font-medium">{a.title}</div>
+              </div>
             ))}
-            <li className="flex items-center gap-3 text-slate-500 text-sm line-through">
-              <span className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center text-xs flex-shrink-0">
-                ✗
-              </span>
-              Questions illimitées
-            </li>
-            <li className="flex items-center gap-3 text-slate-500 text-sm line-through">
-              <span className="w-5 h-5 rounded-full bg-white/5 flex items-center justify-center text-xs flex-shrink-0">
-                ✗
-              </span>
-              Statistiques avancées
-            </li>
-          </ul>
+          </div>
           <Link
             href="/quiz"
-            className="block w-full py-3.5 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/15 transition-all text-center"
+            className="inline-block px-8 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-amber-500/20"
           >
-            Continuer gratuitement
+            Jouer en mode Légende →
           </Link>
         </div>
+      </div>
+    );
+  }
 
-        {/* Premium Plan */}
-        <div className="relative bg-gradient-to-br from-indigo-900/60 via-[#1a1030] to-rose-900/40 border-2 border-indigo-500/50 rounded-3xl p-8 shadow-2xl shadow-indigo-500/10">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span className="bg-gradient-to-r from-indigo-500 to-rose-500 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">
-              ⭐ RECOMMANDÉ
+  // ─── JUST ACTIVATED (celebration) ───
+  if (showActivated) {
+    return (
+      <div className="relative min-h-[80vh]">
+        <MeshBackground />
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="relative z-10 max-w-lg mx-auto px-4 py-16 text-center"
+        >
+          <motion.div
+            initial={{ scale: 0, rotate: -30 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: "spring", bounce: 0.6, delay: 0.2 }}
+            className="text-8xl mb-6 inline-block"
+          >
+            👑
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="text-4xl font-bold mb-3"
+          >
+            <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
+              Bienvenue, Légende !
             </span>
-          </div>
-
-          <div className="mb-6">
-            <div className="text-2xl mb-2">🚀</div>
-            <h3 className="text-xl font-bold text-white mb-1">Premium</h3>
-            <p className="text-slate-400 text-sm">Pour les passionnés de culture générale</p>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex items-end gap-2">
-              <span className="text-4xl font-bold text-white">
-                {billing === "annual" ? `${annualMonthlyPrice}€` : `${monthlyPrice}€`}
-              </span>
-              <span className="text-slate-400 text-sm mb-1">/mois</span>
-            </div>
-            {billing === "annual" && (
-              <p className="text-slate-500 text-xs mt-1">
-                Facturé {annualTotal}€/an · Économisez {savings}%
-              </p>
-            )}
-          </div>
-
-          <ul className="space-y-3 mb-8">
-            {features.slice(0, 6).map((f) => (
-              <li key={f.title} className="flex items-center gap-3 text-slate-200 text-sm">
-                <span className="w-5 h-5 rounded-full bg-indigo-500/30 border border-indigo-500/50 flex items-center justify-center text-xs text-indigo-400 flex-shrink-0">
-                  ✓
-                </span>
-                <span>
-                  <span className="mr-1">{f.icon}</span>
-                  {f.title}
-                </span>
-              </li>
-            ))}
-            <li className="flex items-center gap-3 text-slate-200 text-sm">
-              <span className="w-5 h-5 rounded-full bg-indigo-500/30 border border-indigo-500/50 flex items-center justify-center text-xs text-indigo-400 flex-shrink-0">
-                +
-              </span>
-              <span className="text-slate-400">Et bien plus encore...</span>
-            </li>
-          </ul>
-
-          <button className="w-full py-4 bg-gradient-to-r from-indigo-500 to-rose-500 text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-indigo-500/20">
-            Commencer l&apos;essai gratuit →
-          </button>
-          <p className="text-slate-500 text-xs text-center mt-3">
-            7 jours gratuits · Annulation à tout moment
-          </p>
-        </div>
-      </div>
-
-      {/* All Features */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-white text-center mb-8">
-          Tout ce qui est inclus dans Premium
-        </h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:border-indigo-500/30 hover:bg-indigo-500/5 transition-all group"
-            >
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="font-semibold text-white text-sm mb-1 group-hover:text-indigo-300 transition-colors">
-                {f.title}
-              </h3>
-              <p className="text-slate-500 text-xs leading-relaxed">{f.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Testimonials */}
-      <div className="mb-16">
-        <h2 className="text-2xl font-bold text-white text-center mb-8">
-          Ce que disent nos membres Premium
-        </h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div
-              key={t.name}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/20 flex items-center justify-center text-xl">
-                  {t.avatar}
-                </div>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            className="text-slate-400 text-lg mb-4"
+          >
+            Votre statut Premium est maintenant actif.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="space-y-3 mb-8"
+          >
+            {ADVANTAGES.slice(0, 3).map((a, i) => (
+              <motion.div
+                key={a.title}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1 + i * 0.15 }}
+                className="flex items-center gap-3 bg-amber-500/5 border border-amber-500/15 rounded-xl p-3 text-left"
+              >
+                <span className="text-2xl">{a.icon}</span>
                 <div>
-                  <div className="font-medium text-white text-sm">{t.name}</div>
-                  <div className="text-indigo-400 text-xs">{t.badge}</div>
+                  <span className="text-amber-400 font-semibold text-sm">{a.title}</span>
+                  <span className="text-slate-500 text-xs ml-2">Débloqué</span>
                 </div>
+                <span className="ml-auto text-green-400">&#10003;</span>
+              </motion.div>
+            ))}
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+          >
+            <Link
+              href="/quiz"
+              className="inline-block px-8 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold text-lg rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-amber-500/25"
+            >
+              Commencer maintenant →
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // ─── SALES PAGE ───
+  return (
+    <div className="relative">
+      <MeshBackground />
+
+      <div className="relative z-10 max-w-5xl mx-auto px-4 py-10">
+        {/* Hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            initial={{ scale: 0, rotate: -20 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: "spring", bounce: 0.5, delay: 0.2 }}
+            className="text-7xl mb-6 inline-block"
+          >
+            👑
+          </motion.div>
+          <h1 className="text-4xl md:text-6xl font-black mb-4">
+            <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(255,183,0,0.3)]">
+              Devenir Légende
+            </span>
+          </h1>
+          <p className="text-slate-400 text-lg md:text-xl max-w-xl mx-auto mb-2">
+            Débloquez l&apos;expérience ultime de quiz.
+          </p>
+          <p className="text-amber-400/50 text-sm font-medium tracking-widest uppercase">
+            Premium &middot; Exclusif &middot; Sans limites
+          </p>
+        </motion.div>
+
+        {/* Advantages Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
+          {ADVANTAGES.map((adv, i) => (
+            <motion.div
+              key={adv.title}
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 + i * 0.08 }}
+              className="group relative overflow-hidden rounded-2xl border border-amber-500/10 bg-black/40 p-6 hover:border-amber-500/30 transition-all"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-br ${adv.glow} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-3xl">{adv.icon}</span>
+                  <span className="text-amber-400/30 text-xl font-bold">{adv.gold}</span>
+                </div>
+                <h3 className="font-bold text-white mb-1 group-hover:text-amber-300 transition-colors">
+                  {adv.title}
+                </h3>
+                <p className="text-slate-500 text-sm leading-relaxed">{adv.desc}</p>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed mb-3">&ldquo;{t.text}&rdquo;</p>
-              <div className="flex gap-1">
-                {Array.from({ length: t.rating }).map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-sm">★</span>
-                ))}
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
 
-      {/* FAQ */}
-      <div className="mb-12">
-        <h2 className="text-2xl font-bold text-white text-center mb-8">Questions fréquentes</h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          {[
-            {
-              q: "Puis-je annuler à tout moment ?",
-              a: "Oui, vous pouvez annuler votre abonnement à tout moment depuis votre compte. Votre accès Premium continuera jusqu'à la fin de la période payée.",
-            },
-            {
-              q: "L'essai gratuit nécessite-t-il une carte bancaire ?",
-              a: "Non, votre essai de 7 jours est complètement gratuit et ne nécessite aucune information de paiement.",
-            },
-            {
-              q: "Combien de questions sont disponibles en Premium ?",
-              a: "Plus de 1 000 questions réparties dans 12 catégories, avec de nouvelles questions ajoutées chaque semaine.",
-            },
-            {
-              q: "Y a-t-il des réductions pour les étudiants ?",
-              a: "Oui ! Les étudiants bénéficient de 50% de réduction sur l'abonnement annuel avec une adresse email universitaire valide.",
-            },
-          ].map((faq) => (
-            <div key={faq.q} className="bg-white/5 border border-white/10 rounded-2xl p-5">
-              <h3 className="font-semibold text-white text-sm mb-2">{faq.q}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{faq.a}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Final CTA */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/50 to-rose-900/30 border border-indigo-500/20 rounded-3xl p-10 text-center">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl" />
-          <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-rose-500/10 rounded-full blur-2xl" />
-        </div>
-        <div className="relative z-10">
-          <div className="text-4xl mb-4">🎯</div>
-          <h2 className="text-2xl font-bold text-white mb-3">
-            Prêt à dominer le classement ?
+        {/* Pricing Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-center text-2xl md:text-3xl font-bold text-white mb-2">
+            Choisissez votre <span className="bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent">plan</span>
           </h2>
-          <p className="text-slate-400 mb-6 max-w-md mx-auto">
-            Rejoignez Vibe Quiz Master Premium aujourd&apos;hui et commencez votre essai gratuit de 7 jours.
+          <p className="text-center text-slate-500 mb-10">Un investissement dans votre savoir.</p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {PLANS.map((plan, i) => {
+              const isSelected = selectedPlan === plan.id;
+              return (
+                <motion.div
+                  key={plan.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 + i * 0.1 }}
+                  onClick={() => setSelectedPlan(plan.id)}
+                  className={`relative cursor-pointer rounded-3xl p-8 transition-all duration-300 ${
+                    plan.highlight
+                      ? isSelected
+                        ? "bg-gradient-to-br from-amber-900/40 via-black to-yellow-900/30 border-2 border-amber-400/60 shadow-2xl shadow-amber-500/15 scale-[1.03]"
+                        : "bg-gradient-to-br from-amber-900/20 via-black to-yellow-900/10 border-2 border-amber-500/20 hover:border-amber-500/40"
+                      : isSelected
+                        ? "bg-black/60 border-2 border-amber-400/40 shadow-xl shadow-amber-500/10"
+                        : "bg-black/40 border-2 border-white/[0.06] hover:border-amber-500/20"
+                  }`}
+                >
+                  {plan.badge && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className={`text-xs font-bold px-4 py-1.5 rounded-full shadow-lg ${
+                        plan.id === "lifetime"
+                          ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                          : "bg-gradient-to-r from-amber-400 to-yellow-500 text-black"
+                      }`}>
+                        {plan.badge}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="mb-6 mt-2">
+                    <h3 className={`text-xl font-bold mb-1 ${isSelected ? "text-amber-300" : "text-white"}`}>
+                      {plan.name}
+                    </h3>
+                    {plan.saving && (
+                      <span className="text-green-400 text-xs font-semibold bg-green-500/10 border border-green-500/20 px-2 py-0.5 rounded-full">
+                        {plan.saving}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <span className={`text-4xl font-black ${isSelected ? "text-amber-300" : "text-white"}`}>
+                      {plan.price}
+                    </span>
+                    <span className="text-slate-500 text-sm ml-2">{plan.period}</span>
+                  </div>
+
+                  <p className="text-slate-500 text-sm mb-6">{plan.desc}</p>
+
+                  {/* Selected indicator */}
+                  <div className={`w-full py-2 rounded-xl text-center text-sm font-semibold transition-all ${
+                    isSelected
+                      ? "bg-amber-400/10 border border-amber-400/30 text-amber-400"
+                      : "bg-white/[0.03] border border-white/[0.06] text-slate-600"
+                  }`}>
+                    {isSelected ? "&#10003; Sélectionné" : "Choisir"}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="text-center mb-16"
+        >
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={activatePremium}
+            className="relative px-12 py-5 bg-gradient-to-r from-amber-400 via-yellow-400 to-amber-400 text-black font-black text-xl rounded-2xl shadow-2xl shadow-amber-500/25 hover:shadow-amber-500/40 transition-shadow"
+          >
+            <span className="relative z-10">Essayer Gratuitement →</span>
+            {/* Glow pulse behind button */}
+            <motion.div
+              animate={{ opacity: [0.4, 0.8, 0.4] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-400 blur-xl -z-10"
+            />
+          </motion.button>
+          <p className="text-slate-600 text-sm mt-4">
+            &#10003; 7 jours gratuits &middot; &#10003; Sans carte bancaire &middot; &#10003; Annulation instantanée
           </p>
-          <button className="px-10 py-4 bg-gradient-to-r from-indigo-500 to-rose-500 text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-indigo-500/20">
-            Essayer Premium gratuitement →
-          </button>
-          <p className="text-slate-500 text-sm mt-4">
-            ✓ 7 jours gratuits · ✓ Sans carte bancaire · ✓ Annulation facile
+        </motion.div>
+
+        {/* Social Proof */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+          className="text-center mb-12"
+        >
+          <div className="flex items-center justify-center gap-1 mb-3">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <span key={i} className="text-amber-400 text-xl">&#9733;</span>
+            ))}
+          </div>
+          <p className="text-slate-500 text-sm">
+            Rejoint par <span className="text-amber-400 font-semibold">12 400+</span> joueurs Légende
           </p>
-        </div>
+        </motion.div>
+
+        {/* Comparison Table */}
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.3 }}
+            className="rounded-3xl border border-amber-500/10 bg-black/40 overflow-hidden mb-12"
+          >
+            <div className="grid grid-cols-3 text-center border-b border-white/[0.06]">
+              <div className="p-4" />
+              <div className="p-4 text-slate-400 font-semibold text-sm">Gratuit</div>
+              <div className="p-4 bg-amber-500/5">
+                <span className="bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-bold text-sm">
+                  Légende 👑
+                </span>
+              </div>
+            </div>
+            {[
+              { feature: "Questions par catégorie", free: "20", legend: "Illimité" },
+              { feature: "Mode Expert", free: "10/jour", legend: "Illimité" },
+              { feature: "Explications IA", free: "—", legend: "&#10003;" },
+              { feature: "Publicités", free: "Oui", legend: "Aucune" },
+              { feature: "Multiplicateur XP", free: "x1", legend: "x3" },
+              { feature: "Tournois exclusifs", free: "—", legend: "&#10003;" },
+            ].map((row, i) => (
+              <div
+                key={row.feature}
+                className={`grid grid-cols-3 text-center text-sm ${
+                  i % 2 === 0 ? "" : "bg-white/[0.01]"
+                } border-b border-white/[0.04]`}
+              >
+                <div className="p-3 text-slate-400 text-left pl-6">{row.feature}</div>
+                <div className="p-3 text-slate-600">{row.free}</div>
+                <div
+                  className="p-3 text-amber-400 font-semibold bg-amber-500/[0.03]"
+                  dangerouslySetInnerHTML={{ __html: row.legend }}
+                />
+              </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Final CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="relative overflow-hidden rounded-3xl border border-amber-500/15 bg-gradient-to-br from-amber-900/20 via-black to-yellow-900/10 p-10 text-center"
+        >
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute -top-20 -right-20 w-60 h-60 bg-amber-500/[0.06] rounded-full blur-[80px]" />
+            <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-yellow-500/[0.04] rounded-full blur-[80px]" />
+          </div>
+          <div className="relative z-10">
+            <div className="text-5xl mb-4">👑</div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
+                Prêt à devenir Légende ?
+              </span>
+            </h2>
+            <p className="text-slate-500 mb-6 max-w-md mx-auto">
+              Rejoignez l&apos;élite des quiz et débloquez tout le potentiel de votre savoir.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={activatePremium}
+              className="px-10 py-4 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold text-lg rounded-2xl hover:opacity-90 transition-all shadow-xl shadow-amber-500/20"
+            >
+              Essayer Gratuitement →
+            </motion.button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ const navItems = [
   { href: "/profil", label: "Profil", icon: "👤" },
   { href: "/reviser", label: "Réviser", icon: "📖" },
   { href: "/leaderboard", label: "Classement", icon: "🏆" },
+  { href: "/premium", label: "Légende", icon: "👑" },
 ];
 
 export default function Navbar() {
