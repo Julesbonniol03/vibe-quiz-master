@@ -126,6 +126,29 @@ body::before {
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+/* Animated neon glow border for Daily Odyssey */
+@keyframes glow-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-glow-border {
+  background: linear-gradient(
+    270deg,
+    rgba(0, 240, 255, 0.5),
+    rgba(255, 45, 123, 0.4),
+    rgba(168, 85, 247, 0.4),
+    rgba(0, 240, 255, 0.5)
+  );
+  background-size: 300% 300%;
+  animation: glow-rotate 4s ease-in-out infinite;
+  filter: blur(0px);
+  box-shadow:
+    0 0 15px rgba(0, 240, 255, 0.15),
+    0 0 30px rgba(0, 240, 255, 0.08);
+}
+
 /* Safe areas for iPhone notch / home indicator */
 .safe-main {
   padding-top: calc(4rem + env(safe-area-inset-top, 0px));

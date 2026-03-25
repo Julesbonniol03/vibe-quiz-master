@@ -2,7 +2,9 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta, DailyBanner } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount } from "./DashboardClient";
+
+const FEATURED_CATEGORIES = ["Actualités 2025-2026", "Maîtrise du Français"];
 
 function loadCategories() {
   const dataDir = join(process.cwd(), "data", "questions");
@@ -49,6 +51,7 @@ export default function DashboardPage() {
             <p className="text-slate-500 max-w-md">
               {totalQ} questions · 3 modes de jeu · Système XP
             </p>
+            <OnlineCount />
             <XpBar />
           </div>
           <div className="flex gap-3">
@@ -67,6 +70,9 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+
+      {/* Daily Odyssey */}
+      <DailyOdyssey />
 
       {/* Game Modes */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -117,29 +123,50 @@ export default function DashboardPage() {
           <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
             <span>📚</span> Catégories
           </h2>
-          <div className="space-y-3">
+          <div className="space-y-2">
             {categories.map((cat) => {
               const colors = categoryColors[cat.name] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
               const progress = Math.min(100, Math.round((cat.questions / 50) * 100));
+              const isFeatured = FEATURED_CATEGORIES.includes(cat.name);
+
               return (
                 <Link
                   key={cat.name}
                   href={`/quiz?category=${cat.name}`}
-                  className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/[0.03] transition-colors group"
+                  className={`group relative flex items-center gap-4 rounded-xl transition-all duration-200
+                    hover:scale-[1.025] hover:z-10 active:scale-[0.98]
+                    ${isFeatured
+                      ? "p-4 bg-gradient-to-r from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-neon-cyan/40 hover:bg-white/[0.06] hover:shadow-lg hover:shadow-neon-cyan/5"
+                      : "p-3 hover:bg-white/[0.04] hover:shadow-md hover:shadow-neon-cyan/[0.03]"
+                    }`}
                 >
+                  {/* Neon highlight on hover */}
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neon-cyan/[0.03] to-neon-rose/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
                   <div
-                    className={`w-10 h-10 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-lg flex-shrink-0`}
+                    className={`relative flex-shrink-0 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
+                      isFeatured ? "w-12 h-12 text-xl" : "w-10 h-10 text-lg"
+                    }`}
                   >
                     {colors.icon}
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className={`font-medium ${colors.text}`}>{cat.name}</span>
-                      <span className="text-slate-600 text-xs">{cat.questions} questions</span>
+                  <div className="relative flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className={`font-medium group-hover:text-white transition-colors ${
+                        isFeatured ? `${colors.text} text-base` : colors.text
+                      }`}>
+                        {cat.name}
+                      </span>
+                      {isFeatured && (
+                        <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-400 border border-orange-500/20 whitespace-nowrap">
+                          🔥 TENDANCE
+                        </span>
+                      )}
+                      <span className="ml-auto text-slate-600 text-xs flex-shrink-0">{cat.questions}q</span>
                     </div>
                     <div className="w-full bg-white/[0.06] rounded-full h-1.5">
                       <div
-                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,240,255,0.4)]"
                         style={{
                           width: `${progress}%`,
                           boxShadow: "0 0 8px rgba(0, 240, 255, 0.3)",
@@ -147,7 +174,7 @@ export default function DashboardPage() {
                       />
                     </div>
                   </div>
-                  <span className="text-slate-700 group-hover:text-slate-400 transition-colors text-lg">→</span>
+                  <span className="relative text-slate-700 group-hover:text-neon-cyan group-hover:translate-x-1 transition-all duration-200 text-lg">&rarr;</span>
                 </Link>
               );
             })}

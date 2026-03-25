@@ -1,7 +1,9 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useProgress } from "@/hooks/useProgress";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function StatsGrid() {
   const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed, dailyStreak } = useProgress();
@@ -144,5 +146,136 @@ export function RevisionCta() {
         Réviser →
       </a>
     </motion.div>
+  );
+}
+
+// ─── DAILY ODYSSEY BANNER ───
+function useCountdown() {
+  const [timeLeft, setTimeLeft] = useState("");
+
+  useEffect(() => {
+    const calc = () => {
+      const now = new Date();
+      const tomorrow = new Date(now);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      tomorrow.setHours(0, 0, 0, 0);
+      const diff = tomorrow.getTime() - now.getTime();
+      const h = Math.floor(diff / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      setTimeLeft(`${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`);
+    };
+    calc();
+    const interval = setInterval(calc, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return timeLeft;
+}
+
+export function DailyOdyssey() {
+  const { hydrated, isDailyCompleted, dailyStreak } = useProgress();
+  const countdown = useCountdown();
+
+  if (!hydrated) return null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="relative mb-8 rounded-2xl overflow-hidden"
+    >
+      {/* Animated glow border */}
+      <div className="absolute inset-0 rounded-2xl animate-glow-border" />
+
+      {/* Inner content with 2px inset to show the glow border */}
+      <div className="relative m-[2px] rounded-[14px] bg-cyber-900 p-5 sm:p-6">
+        <div className="absolute inset-0 overflow-hidden rounded-[14px]">
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-cyan/[0.04] rounded-full blur-[80px]" />
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-rose/[0.03] rounded-full blur-[60px]" />
+        </div>
+
+        <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+          <div className="flex items-center gap-4 flex-1">
+            <motion.div
+              animate={{ scale: [1, 1.1, 1] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon-cyan/20 to-neon-rose/20 border border-neon-cyan/20 flex items-center justify-center text-3xl flex-shrink-0"
+            >
+              🎯
+            </motion.div>
+            <div>
+              <div className="flex items-center gap-2 mb-1 flex-wrap">
+                <span className="text-neon-cyan font-bold text-sm uppercase tracking-wider">Quête du Jour</span>
+                {dailyStreak > 0 && (
+                  <span className="bg-orange-500/10 text-orange-400 text-xs px-2 py-0.5 rounded-full border border-orange-500/20 flex items-center gap-1">
+                    🔥 {dailyStreak}j
+                  </span>
+                )}
+                {isDailyCompleted && (
+                  <span className="bg-green-500/10 text-green-400 text-xs px-2 py-0.5 rounded-full border border-green-500/20">
+                    ✅ Accomplie
+                  </span>
+                )}
+              </div>
+              <p className="text-white font-semibold text-sm sm:text-base">
+                5 questions &middot; Tous thèmes &middot; Timer 15s
+              </p>
+              {!isDailyCompleted && (
+                <div className="flex items-center gap-2 mt-1.5">
+                  <span className="text-slate-600 text-xs">Prochaine quête dans</span>
+                  <span className="text-neon-cyan font-mono text-xs font-bold tabular-nums bg-neon-cyan/5 border border-neon-cyan/10 rounded-lg px-2 py-0.5">
+                    {countdown}
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <Link
+            href="/quiz?mode=daily"
+            className={`px-5 py-2.5 font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 whitespace-nowrap ${
+              isDailyCompleted
+                ? "bg-white/5 border border-white/10 text-slate-500 shadow-none"
+                : "bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 shadow-lg shadow-neon-cyan/20"
+            }`}
+          >
+            {isDailyCompleted ? "Revenir demain" : "Relever le défi →"}
+          </Link>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+// ─── ONLINE PLAYERS (simulated social proof) ───
+export function OnlineCount() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Simulated: base 120-180, fluctuates slightly
+    const base = 120 + Math.floor(Math.random() * 60);
+    setCount(base);
+    const interval = setInterval(() => {
+      setCount((c) => c + Math.floor(Math.random() * 7) - 3);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (count === 0) return null;
+
+  return (
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="text-slate-600 text-sm flex items-center gap-1.5 mt-1"
+    >
+      <span className="relative flex h-2 w-2">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
+      </span>
+      <span>⚡️ {count} joueurs en ligne actuellement</span>
+    </motion.p>
   );
 }
