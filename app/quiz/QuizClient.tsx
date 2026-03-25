@@ -63,13 +63,12 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       .then((data) => {
         setCategories(data.categories);
         setTotalQuestions(data.total);
-        // If a category was pre-selected from dashboard, skip to difficulty selection
-        if (initialCategory && initialCategory !== "All" && (!initialMode || initialMode === "classique")) {
-          setPhase("select-difficulty");
-        } else if (initialMode === "daily") {
-          setPhase("select"); // daily shows its own UI on select screen
-        } else {
+        // Daily mode: go to select screen (has its own UI)
+        // All other modes: go straight to difficulty selection
+        if (initialMode === "daily") {
           setPhase("select");
+        } else {
+          setPhase("select-difficulty");
         }
       })
       .catch(() => setPhase("select"));
