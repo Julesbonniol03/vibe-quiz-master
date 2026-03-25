@@ -855,20 +855,6 @@
   },
   {
     "category": "Histoire",
-    "difficulty": "hard",
-    "question": "En quelle année l'esclavage a-t-il été définitivement aboli en France ?",
-    "options": [
-      "1794",
-      "1802",
-      "1848",
-      "1865"
-    ],
-    "correct_index": 2,
-    "explanation": "L'abolition définitive de l'esclavage en France fut décrétée le 27 avril 1848 par Victor Schœlcher.",
-    "period": "XVIIIe-XIXe siècle"
-  },
-  {
-    "category": "Histoire",
     "difficulty": "easy",
     "question": "Quelle reine a régné le plus longtemps sur l'Angleterre ?",
     "options": [
@@ -1118,5 +1104,2399 @@
     "correct_index": 2,
     "explanation": "Jean-Jacques Rousseau publia 'Du contrat social' en 1762, posant les bases de la souveraineté populaire.",
     "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel dieu grec est le roi de l'Olympe ?",
+    "options": [
+      "Poséidon",
+      "Hadès",
+      "Zeus",
+      "Arès"
+    ],
+    "correct_index": 2,
+    "explanation": "Zeus est le roi des dieux de l'Olympe, dieu du ciel et de la foudre dans la mythologie grecque.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle cité antique est célèbre pour ses guerriers spartiates ?",
+    "options": [
+      "Athènes",
+      "Sparte",
+      "Troie",
+      "Thèbes"
+    ],
+    "correct_index": 1,
+    "explanation": "Sparte, située dans le Péloponnèse, était réputée pour son éducation militaire rigoureuse (l'agôgè).",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "En quelle année Rome a-t-elle été fondée selon la tradition ?",
+    "options": [
+      "753 av. J.-C.",
+      "509 av. J.-C.",
+      "476 av. J.-C.",
+      "264 av. J.-C."
+    ],
+    "correct_index": 0,
+    "explanation": "Selon la légende, Rome fut fondée le 21 avril 753 av. J.-C. par Romulus, après avoir tué son frère Rémus.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel fleuve était vital pour la civilisation égyptienne ?",
+    "options": [
+      "L'Euphrate",
+      "Le Tigre",
+      "Le Nil",
+      "Le Jourdain"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Nil, avec ses crues annuelles fertiles, permit l'essor de la civilisation égyptienne pendant trois millénaires.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle bataille opposa les Grecs aux Perses en 490 av. J.-C. ?",
+    "options": [
+      "Bataille de Salamine",
+      "Bataille de Marathon",
+      "Bataille des Thermopyles",
+      "Bataille de Platées"
+    ],
+    "correct_index": 1,
+    "explanation": "La bataille de Marathon (490 av. J.-C.) vit les Athéniens repousser l'invasion perse de Darius Ier.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empereur romain a divisé l'empire en deux parties ?",
+    "options": [
+      "Auguste",
+      "Néron",
+      "Dioclétien",
+      "Trajan"
+    ],
+    "correct_index": 2,
+    "explanation": "Dioclétien instaura la Tétrarchie en 293, divisant l'administration de l'Empire romain en parties occidentale et orientale.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Comment s'appelle l'écriture des anciens Égyptiens ?",
+    "options": [
+      "Cunéiforme",
+      "Hiéroglyphes",
+      "Alphabet grec",
+      "Runes"
+    ],
+    "correct_index": 1,
+    "explanation": "Les hiéroglyphes étaient le système d'écriture sacrée de l'Égypte antique, déchiffrés par Champollion en 1822.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel général carthaginois traversa les Alpes avec des éléphants ?",
+    "options": [
+      "Scipion",
+      "Hamilcar",
+      "Hannibal",
+      "Hasdrubal"
+    ],
+    "correct_index": 2,
+    "explanation": "Hannibal Barca traversa les Alpes en 218 av. J.-C. avec ses éléphants pour attaquer Rome durant la deuxième guerre punique.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle loi romaine de 450 av. J.-C. est considérée comme le fondement du droit romain ?",
+    "options": [
+      "Le Code de Justinien",
+      "La Loi des Douze Tables",
+      "L'Édit de Milan",
+      "Les Lois de Solon"
+    ],
+    "correct_index": 1,
+    "explanation": "La Loi des Douze Tables (450 av. J.-C.) codifiait le droit romain et garantissait des droits aux plébéiens.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel monument athénien fut dédié à la déesse Athéna ?",
+    "options": [
+      "Le Colisée",
+      "Le Parthénon",
+      "Le Forum",
+      "Le Panthéon"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Parthénon, construit au Ve siècle av. J.-C. sur l'Acropole d'Athènes, était dédié à Athéna Parthénos.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi perse envahit la Grèce lors des guerres médiques ?",
+    "options": [
+      "Cyrus",
+      "Darius Ier",
+      "Xerxès Ier",
+      "Cambyse"
+    ],
+    "correct_index": 2,
+    "explanation": "Xerxès Ier lança la seconde guerre médique en 480 av. J.-C., affrontant les Grecs aux Thermopyles puis à Salamine.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "En quelle année Cléopâtre est-elle morte ?",
+    "options": [
+      "44 av. J.-C.",
+      "30 av. J.-C.",
+      "27 av. J.-C.",
+      "14 av. J.-C."
+    ],
+    "correct_index": 1,
+    "explanation": "Cléopâtre VII se suicida en 30 av. J.-C., marquant la fin de la dynastie ptolémaïque et l'annexion de l'Égypte par Rome.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle civilisation a construit Machu Picchu ?",
+    "options": [
+      "Les Mayas",
+      "Les Aztèques",
+      "Les Incas",
+      "Les Olmèques"
+    ],
+    "correct_index": 2,
+    "explanation": "Machu Picchu fut construit par les Incas au XVe siècle, dans les Andes péruviennes, à 2 430 m d'altitude.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel philosophe grec fonda l'Académie à Athènes ?",
+    "options": [
+      "Socrate",
+      "Aristote",
+      "Platon",
+      "Épicure"
+    ],
+    "correct_index": 2,
+    "explanation": "Platon fonda l'Académie vers 387 av. J.-C., considérée comme la première université du monde occidental.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel roi franc fut baptisé à Reims vers 496 ?",
+    "options": [
+      "Charlemagne",
+      "Charles Martel",
+      "Clovis",
+      "Pépin le Bref"
+    ],
+    "correct_index": 2,
+    "explanation": "Clovis Ier, roi des Francs, se convertit au christianisme et fut baptisé à Reims par l'évêque Rémi.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle épidémie décima l'Europe entre 1347 et 1352 ?",
+    "options": [
+      "La variole",
+      "Le choléra",
+      "La peste noire",
+      "La grippe"
+    ],
+    "correct_index": 2,
+    "explanation": "La peste noire tua entre 30 et 50% de la population européenne, soit environ 25 millions de personnes.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité de 843 partagea l'empire carolingien en trois royaumes ?",
+    "options": [
+      "Traité de Meerssen",
+      "Traité de Verdun",
+      "Traité de Ribemont",
+      "Traité de Coulaines"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité de Verdun (843) partagea l'empire de Charlemagne entre ses trois petits-fils : Charles, Lothaire et Louis.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel héros médiéval est célèbre pour la légende de la Table ronde ?",
+    "options": [
+      "Charlemagne",
+      "Roland",
+      "Arthur",
+      "Guillaume Tell"
+    ],
+    "correct_index": 2,
+    "explanation": "Le roi Arthur est une figure légendaire liée aux chevaliers de la Table ronde et à la quête du Graal.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "En quelle année Constantinople tomba-t-elle aux mains des Ottomans ?",
+    "options": [
+      "1389",
+      "1421",
+      "1453",
+      "1492"
+    ],
+    "correct_index": 2,
+    "explanation": "Constantinople tomba le 29 mai 1453 face au sultan Mehmed II, marquant la fin de l'Empire byzantin.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle université européenne est considérée comme la plus ancienne ?",
+    "options": [
+      "Oxford",
+      "Paris (Sorbonne)",
+      "Bologne",
+      "Cambridge"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Université de Bologne, fondée en 1088, est généralement considérée comme la plus ancienne université du monde occidental.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel peuple scandinave lança des raids en Europe du VIIIe au XIe siècle ?",
+    "options": [
+      "Les Huns",
+      "Les Vandales",
+      "Les Vikings",
+      "Les Wisigoths"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Vikings, originaires de Scandinavie, menèrent des expéditions de pillage, commerce et colonisation à travers l'Europe.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle héroïne française fut brûlée à Rouen en 1431 ?",
+    "options": [
+      "Aliénor d'Aquitaine",
+      "Blanche de Castille",
+      "Jeanne d'Arc",
+      "Isabeau de Bavière"
+    ],
+    "correct_index": 2,
+    "explanation": "Jeanne d'Arc, après avoir libéré Orléans et fait sacrer Charles VII, fut capturée et brûlée vive le 30 mai 1431.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel ordre militaire religieux fut fondé en 1119 pour protéger les pèlerins en Terre sainte ?",
+    "options": [
+      "Les Hospitaliers",
+      "Les Templiers",
+      "Les Teutoniques",
+      "Les Cisterciens"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Ordre du Temple fut fondé à Jérusalem vers 1119 par Hugues de Payns pour protéger les pèlerins chrétiens.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel système politique dominait l'Europe médiévale ?",
+    "options": [
+      "La démocratie",
+      "La féodalité",
+      "La république",
+      "L'absolutisme"
+    ],
+    "correct_index": 1,
+    "explanation": "La féodalité organisait la société autour de liens de vassalité entre seigneurs et vassaux, avec le fief comme base.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle bataille de 1066 vit Guillaume le Conquérant prendre le trône d'Angleterre ?",
+    "options": [
+      "Bataille de Crécy",
+      "Bataille d'Azincourt",
+      "Bataille d'Hastings",
+      "Bataille de Bouvines"
+    ],
+    "correct_index": 2,
+    "explanation": "Guillaume de Normandie vainquit Harold II à Hastings le 14 octobre 1066, devenant roi d'Angleterre.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Combien de croisades majeures eurent lieu entre 1096 et 1291 ?",
+    "options": [
+      "5",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct_index": 2,
+    "explanation": "On dénombre traditionnellement 8 croisades majeures entre 1096 (première croisade) et 1270 (huitième croisade).",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel bâtiment religieux gothique est emblématique de Paris ?",
+    "options": [
+      "Le Sacré-Cœur",
+      "Saint-Sulpice",
+      "Notre-Dame de Paris",
+      "La Madeleine"
+    ],
+    "correct_index": 2,
+    "explanation": "Notre-Dame de Paris, cathédrale gothique construite entre 1163 et 1345, est l'un des monuments les plus visités de France.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi de France était surnommé Saint Louis ?",
+    "options": [
+      "Louis VII",
+      "Louis IX",
+      "Louis XI",
+      "Louis XII"
+    ],
+    "correct_index": 1,
+    "explanation": "Louis IX (1214-1270), roi pieux et juste, fut canonisé en 1297. Il participa à deux croisades et rendit la justice sous un chêne.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empire domina le sud de l'Espagne du VIIIe au XVe siècle ?",
+    "options": [
+      "L'Empire byzantin",
+      "L'Empire ottoman",
+      "Le Califat omeyyade puis divers royaumes maures",
+      "L'Empire mongol"
+    ],
+    "correct_index": 2,
+    "explanation": "Al-Andalus, sous domination musulmane de 711 à 1492, fut un centre culturel et scientifique majeur du Moyen Âge.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel instrument de navigation permit les grandes explorations maritimes ?",
+    "options": [
+      "Le sextant",
+      "La boussole",
+      "Le chronomètre",
+      "Le télescope"
+    ],
+    "correct_index": 1,
+    "explanation": "La boussole, inventée en Chine et transmise à l'Europe via les Arabes, rendit possible la navigation hauturière au Moyen Âge.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel artiste italien a peint le plafond de la chapelle Sixtine ?",
+    "options": [
+      "Raphaël",
+      "Léonard de Vinci",
+      "Michel-Ange",
+      "Botticelli"
+    ],
+    "correct_index": 2,
+    "explanation": "Michel-Ange peignit le plafond de la chapelle Sixtine entre 1508 et 1512, sur commande du pape Jules II.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel moine allemand déclencha la Réforme protestante en 1517 ?",
+    "options": [
+      "Jean Calvin",
+      "Jean Hus",
+      "Martin Luther",
+      "Ulrich Zwingli"
+    ],
+    "correct_index": 2,
+    "explanation": "Martin Luther afficha ses 95 thèses à Wittenberg en 1517, contestant les indulgences et lançant la Réforme.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité de 1494 partagea le Nouveau Monde entre l'Espagne et le Portugal ?",
+    "options": [
+      "Traité de Tordesillas",
+      "Traité de Saragosse",
+      "Traité de Cateau-Cambrésis",
+      "Traité de Madrid"
+    ],
+    "correct_index": 0,
+    "explanation": "Le traité de Tordesillas (1494) divisa les terres nouvellement découvertes entre les couronnes espagnole et portugaise.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel explorateur portugais atteignit l'Inde par la mer en 1498 ?",
+    "options": [
+      "Magellan",
+      "Christophe Colomb",
+      "Vasco de Gama",
+      "Bartolomeu Dias"
+    ],
+    "correct_index": 2,
+    "explanation": "Vasco de Gama atteignit Calicut (Inde) en mai 1498, ouvrant la route maritime des Indes par le cap de Bonne-Espérance.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi de France est associé au château de Chambord ?",
+    "options": [
+      "Henri IV",
+      "Louis XIV",
+      "François Ier",
+      "Charles VIII"
+    ],
+    "correct_index": 2,
+    "explanation": "François Ier fit construire Chambord à partir de 1519, joyau de l'architecture Renaissance française.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel astronome publia 'De revolutionibus orbium coelestium' en 1543 ?",
+    "options": [
+      "Galilée",
+      "Kepler",
+      "Copernic",
+      "Tycho Brahe"
+    ],
+    "correct_index": 2,
+    "explanation": "Nicolas Copernic proposa le modèle héliocentrique dans son ouvrage publié l'année de sa mort, en 1543.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle invention de Gutenberg révolutionna la diffusion du savoir ?",
+    "options": [
+      "Le télescope",
+      "La boussole",
+      "L'imprimerie",
+      "La lunette"
+    ],
+    "correct_index": 2,
+    "explanation": "L'imprimerie à caractères mobiles de Gutenberg (vers 1440) permit la reproduction rapide des livres et démocratisa le savoir.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel navigateur réalisa le premier tour du monde (achevé en 1522) ?",
+    "options": [
+      "Christophe Colomb",
+      "Francis Drake",
+      "Vasco de Gama",
+      "Magellan"
+    ],
+    "correct_index": 3,
+    "explanation": "Magellan lança l'expédition en 1519 mais mourut aux Philippines. Juan Sebastián Elcano acheva le tour du monde en 1522.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel massacre de protestants eut lieu en France le 24 août 1572 ?",
+    "options": [
+      "Le massacre de Wassy",
+      "La Saint-Barthélemy",
+      "La Journée des Barricades",
+      "Le Sac de Rome"
+    ],
+    "correct_index": 1,
+    "explanation": "Le massacre de la Saint-Barthélemy (24 août 1572) vit l'assassinat de milliers de protestants à Paris et en province.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel tableau de Léonard de Vinci est exposé au Louvre ?",
+    "options": [
+      "La Naissance de Vénus",
+      "La Joconde",
+      "La Cène",
+      "L'Homme de Vitruve"
+    ],
+    "correct_index": 1,
+    "explanation": "La Joconde (Mona Lisa), peinte vers 1503-1519, est le tableau le plus célèbre du monde, exposé au Louvre depuis 1797.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel édit accorda la liberté de culte aux protestants en France en 1598 ?",
+    "options": [
+      "L'Édit de Nantes",
+      "L'Édit de Fontainebleau",
+      "L'Édit de Tolérance",
+      "L'Édit de Saint-Germain"
+    ],
+    "correct_index": 0,
+    "explanation": "L'Édit de Nantes, signé par Henri IV en 1598, accorda la liberté de culte aux protestants et mit fin aux guerres de Religion.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel philosophe anglais publia 'Utopia' en 1516 ?",
+    "options": [
+      "Francis Bacon",
+      "John Locke",
+      "Thomas More",
+      "William Shakespeare"
+    ],
+    "correct_index": 2,
+    "explanation": "Thomas More publia 'Utopia' en 1516, décrivant une société idéale sur une île fictive. Il fut exécuté par Henri VIII en 1535.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel roi d'Angleterre rompit avec le pape et créa l'Église anglicane ?",
+    "options": [
+      "Richard III",
+      "Henri VII",
+      "Henri VIII",
+      "Édouard VI"
+    ],
+    "correct_index": 2,
+    "explanation": "Henri VIII créa l'Église anglicane en 1534 après le refus du pape d'annuler son mariage avec Catherine d'Aragon.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle famille de banquiers et mécènes domina Florence à la Renaissance ?",
+    "options": [
+      "Les Borgia",
+      "Les Sforza",
+      "Les Médicis",
+      "Les Farnèse"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Médicis, famille de banquiers florentins, furent les plus grands mécènes de la Renaissance italienne.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel concile catholique répondit à la Réforme protestante (1545-1563) ?",
+    "options": [
+      "Concile de Nicée",
+      "Concile de Latran",
+      "Concile de Trente",
+      "Concile de Constance"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Concile de Trente (1545-1563) lança la Contre-Réforme catholique, clarifiant les dogmes et réformant le clergé.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel Empire conquit Constantinople et devint une superpuissance au XVe siècle ?",
+    "options": [
+      "L'Empire mongol",
+      "L'Empire ottoman",
+      "L'Empire perse",
+      "L'Empire moghol"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Empire ottoman, sous Mehmed II, conquit Constantinople en 1453 et devint l'une des grandes puissances mondiales.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel régime politique Napoléon instaura-t-il en 1804 ?",
+    "options": [
+      "La République",
+      "La Monarchie",
+      "Le Premier Empire",
+      "Le Directoire"
+    ],
+    "correct_index": 2,
+    "explanation": "Napoléon Bonaparte se fit sacrer empereur le 2 décembre 1804, fondant le Premier Empire français.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle révolution industrielle débuta en Angleterre au XVIIIe siècle ?",
+    "options": [
+      "Révolution agricole",
+      "Révolution industrielle",
+      "Révolution commerciale",
+      "Révolution scientifique"
+    ],
+    "correct_index": 1,
+    "explanation": "La révolution industrielle, née en Angleterre vers 1760, transforma l'économie grâce à la machine à vapeur et aux usines.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel congrès redessina la carte de l'Europe après la chute de Napoléon ?",
+    "options": [
+      "Congrès de Berlin",
+      "Congrès de Vienne",
+      "Congrès de Westphalie",
+      "Congrès de Paris"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Congrès de Vienne (1814-1815) réorganisa l'Europe après les guerres napoléoniennes, sous l'impulsion de Metternich.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel événement marque le début de la Révolution française ?",
+    "options": [
+      "L'exécution de Louis XVI",
+      "La prise de la Bastille",
+      "Les États généraux",
+      "La Terreur"
+    ],
+    "correct_index": 1,
+    "explanation": "La prise de la Bastille, le 14 juillet 1789, symbolise le début de la Révolution française.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "En quelle année l'Italie fut-elle unifiée ?",
+    "options": [
+      "1848",
+      "1861",
+      "1870",
+      "1882"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Royaume d'Italie fut proclamé en 1861 sous Victor-Emmanuel II, grâce aux efforts de Cavour et Garibaldi.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel penseur écrivit 'Le Capital' en 1867 ?",
+    "options": [
+      "Adam Smith",
+      "Friedrich Engels",
+      "Karl Marx",
+      "John Stuart Mill"
+    ],
+    "correct_index": 2,
+    "explanation": "Karl Marx publia le premier tome du Capital en 1867, analysant le capitalisme et théorisant la lutte des classes.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays déclara son indépendance le 4 juillet 1776 ?",
+    "options": [
+      "Le Canada",
+      "L'Australie",
+      "Les États-Unis",
+      "Le Mexique"
+    ],
+    "correct_index": 2,
+    "explanation": "Les États-Unis déclarèrent leur indépendance de la Grande-Bretagne le 4 juillet 1776, rédigée principalement par Thomas Jefferson.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empereur modernisa la Russie au début du XVIIIe siècle ?",
+    "options": [
+      "Ivan le Terrible",
+      "Catherine II",
+      "Pierre le Grand",
+      "Nicolas II"
+    ],
+    "correct_index": 2,
+    "explanation": "Pierre le Grand (1672-1725) modernisa la Russie en s'inspirant de l'Europe occidentale et fonda Saint-Pétersbourg.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle guerre opposa la France et la Prusse en 1870-1871 ?",
+    "options": [
+      "Guerre de Crimée",
+      "Guerre franco-prussienne",
+      "Guerre de Sept Ans",
+      "Guerre de Succession d'Espagne"
+    ],
+    "correct_index": 1,
+    "explanation": "La guerre franco-prussienne (1870-1871) se solda par la défaite française, la chute du Second Empire et la perte de l'Alsace-Lorraine.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel philosophe des Lumières est célèbre pour son combat contre l'intolérance ?",
+    "options": [
+      "Rousseau",
+      "Diderot",
+      "Voltaire",
+      "Montesquieu"
+    ],
+    "correct_index": 2,
+    "explanation": "Voltaire (1694-1778) combattit le fanatisme religieux et l'injustice, notamment dans l'affaire Calas.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel canal fut ouvert en Égypte en 1869 ?",
+    "options": [
+      "Canal de Panama",
+      "Canal de Suez",
+      "Canal de Corinthe",
+      "Canal de Kiel"
+    ],
+    "correct_index": 1,
+    "explanation": "Le canal de Suez, inauguré en 1869, relie la Méditerranée à la mer Rouge, réduisant considérablement les trajets maritimes.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle guerre civile américaine dura de 1861 à 1865 ?",
+    "options": [
+      "Guerre d'indépendance",
+      "Guerre de Sécession",
+      "Guerre hispano-américaine",
+      "Guerre du Mexique"
+    ],
+    "correct_index": 1,
+    "explanation": "La guerre de Sécession opposa le Nord (Union) au Sud (Confédération) sur les questions de l'esclavage et des droits des États.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle reine régna sur l'Angleterre de 1837 à 1901 ?",
+    "options": [
+      "Élisabeth Ire",
+      "Anne",
+      "Victoria",
+      "Marie Ire"
+    ],
+    "correct_index": 2,
+    "explanation": "La reine Victoria régna 63 ans, donnant son nom à l'ère victorienne, période d'expansion de l'Empire britannique.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel président américain abolit l'esclavage en 1865 ?",
+    "options": [
+      "Thomas Jefferson",
+      "Andrew Jackson",
+      "Abraham Lincoln",
+      "Theodore Roosevelt"
+    ],
+    "correct_index": 2,
+    "explanation": "Abraham Lincoln promulgua le 13e amendement abolissant l'esclavage en 1865, peu avant son assassinat.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel mouvement artistique et littéraire domina le début du XIXe siècle ?",
+    "options": [
+      "Le classicisme",
+      "Les Lumières",
+      "Le romantisme",
+      "Le réalisme"
+    ],
+    "correct_index": 2,
+    "explanation": "Le romantisme (1800-1850) exaltait les sentiments, la nature et la liberté individuelle, avec Hugo, Delacroix et Beethoven.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle invention de James Watt accéléra la révolution industrielle ?",
+    "options": [
+      "La locomotive",
+      "La machine à vapeur améliorée",
+      "Le métier à tisser",
+      "Le télégraphe"
+    ],
+    "correct_index": 1,
+    "explanation": "James Watt améliora la machine à vapeur de Newcomen en 1769, la rendant beaucoup plus efficace et polyvalente.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "En quelle année la Première Guerre mondiale a-t-elle commencé ?",
+    "options": [
+      "1912",
+      "1914",
+      "1916",
+      "1918"
+    ],
+    "correct_index": 1,
+    "explanation": "La Première Guerre mondiale débuta le 28 juillet 1914, déclenchée par l'assassinat de l'archiduc François-Ferdinand.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays lança l'opération Barbarossa en 1941 ?",
+    "options": [
+      "Japon",
+      "Italie",
+      "Allemagne",
+      "URSS"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Allemagne nazie lança l'opération Barbarossa le 22 juin 1941, envahissant l'URSS avec plus de 3 millions de soldats.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel plan américain finança la reconstruction de l'Europe après 1945 ?",
+    "options": [
+      "Plan Dawes",
+      "Plan Marshall",
+      "Plan Morgenthau",
+      "Plan Schuman"
+    ],
+    "correct_index": 1,
+    "explanation": "Le plan Marshall (1948-1952) injecta 13 milliards de dollars pour reconstruire l'Europe occidentale et contrer l'influence soviétique.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel événement marqua le début de la Seconde Guerre mondiale en Europe ?",
+    "options": [
+      "Le bombardement de Pearl Harbor",
+      "L'invasion de la Pologne",
+      "La bataille de Stalingrad",
+      "Le débarquement en Normandie"
+    ],
+    "correct_index": 1,
+    "explanation": "L'invasion de la Pologne par l'Allemagne nazie le 1er septembre 1939 déclencha la Seconde Guerre mondiale en Europe.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel dirigeant soviétique lança la politique de glasnost et perestroïka ?",
+    "options": [
+      "Brejnev",
+      "Andropov",
+      "Gorbatchev",
+      "Eltsine"
+    ],
+    "correct_index": 2,
+    "explanation": "Mikhaïl Gorbatchev lança la glasnost (transparence) et la perestroïka (restructuration) dans les années 1980, menant à la fin de l'URSS.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel mur symbolisait la division de l'Europe pendant la Guerre froide ?",
+    "options": [
+      "Le mur d'Hadrien",
+      "Le mur de Berlin",
+      "Le mur des Lamentations",
+      "La Grande Muraille"
+    ],
+    "correct_index": 1,
+    "explanation": "Le mur de Berlin (1961-1989) séparait Berlin-Est (communiste) de Berlin-Ouest (capitaliste), symbole du rideau de fer.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel génocide eut lieu au Rwanda en 1994 ?",
+    "options": [
+      "Génocide arménien",
+      "Génocide cambodgien",
+      "Génocide des Tutsis",
+      "Génocide bosniaque"
+    ],
+    "correct_index": 2,
+    "explanation": "Le génocide des Tutsis au Rwanda (avril-juillet 1994) fit environ 800 000 morts en seulement 100 jours.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité créa la Communauté économique européenne en 1957 ?",
+    "options": [
+      "Traité de Paris",
+      "Traité de Rome",
+      "Traité de Maastricht",
+      "Traité de Lisbonne"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité de Rome (25 mars 1957) créa la CEE entre six pays fondateurs, ancêtre de l'Union européenne.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays fut divisé en deux après la Seconde Guerre mondiale et la Guerre froide ?",
+    "options": [
+      "Le Japon",
+      "La Chine",
+      "L'Allemagne",
+      "L'Inde"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Allemagne fut divisée en RFA (Ouest) et RDA (Est) de 1949 à 1990, réunifiée après la chute du Mur.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Qui fut le premier secrétaire général de l'ONU ?",
+    "options": [
+      "Dag Hammarskjöld",
+      "Trygve Lie",
+      "U Thant",
+      "Kofi Annan"
+    ],
+    "correct_index": 1,
+    "explanation": "Trygve Lie, diplomate norvégien, fut le premier secrétaire général des Nations unies de 1946 à 1952.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel incident de 1962 faillit déclencher une guerre nucléaire ?",
+    "options": [
+      "La crise de Suez",
+      "La crise des missiles de Cuba",
+      "L'incident du Golfe du Tonkin",
+      "Le blocus de Berlin"
+    ],
+    "correct_index": 1,
+    "explanation": "La crise des missiles de Cuba (octobre 1962) opposa les États-Unis à l'URSS, le monde frôlant la guerre nucléaire.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel leader sud-africain lutta contre l'apartheid et devint président ?",
+    "options": [
+      "Desmond Tutu",
+      "Patrice Lumumba",
+      "Nelson Mandela",
+      "Kwame Nkrumah"
+    ],
+    "correct_index": 2,
+    "explanation": "Nelson Mandela, emprisonné 27 ans, devint le premier président noir d'Afrique du Sud en 1994 après la fin de l'apartheid.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "En quelle année l'URSS s'est-elle effondrée ?",
+    "options": [
+      "1989",
+      "1990",
+      "1991",
+      "1993"
+    ],
+    "correct_index": 2,
+    "explanation": "L'URSS se dissolut officiellement le 26 décembre 1991, mettant fin à la Guerre froide et créant 15 États indépendants.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel mouvement indien de désobéissance civile fut mené par Gandhi ?",
+    "options": [
+      "Le mouvement Quit India",
+      "La marche du sel",
+      "Le mouvement Swadeshi",
+      "Toutes ces réponses"
+    ],
+    "correct_index": 3,
+    "explanation": "Gandhi mena plusieurs mouvements : Swadeshi (boycott des produits britanniques), marche du sel (1930) et Quit India (1942).",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle organisation internationale fut créée en 1945 pour maintenir la paix ?",
+    "options": [
+      "L'OTAN",
+      "L'ONU",
+      "L'UNESCO",
+      "La SDN"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Organisation des Nations unies (ONU) fut fondée le 24 octobre 1945, succédant à la Société des Nations.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel attentat terroriste frappa les États-Unis le 11 septembre 2001 ?",
+    "options": [
+      "Attentat d'Oklahoma City",
+      "Attentats du World Trade Center",
+      "Attentat du marathon de Boston",
+      "Attentat de Times Square"
+    ],
+    "correct_index": 1,
+    "explanation": "Les attentats du 11 septembre 2001 détruisirent les tours du World Trade Center à New York, faisant près de 3 000 victimes.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel procès jugea les criminels de guerre nazis après 1945 ?",
+    "options": [
+      "Procès de Tokyo",
+      "Procès de La Haye",
+      "Procès de Nuremberg",
+      "Procès de Moscou"
+    ],
+    "correct_index": 2,
+    "explanation": "Le procès de Nuremberg (1945-1946) jugea 24 dirigeants nazis pour crimes de guerre et crimes contre l'humanité.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays lança le premier satellite artificiel en 1957 ?",
+    "options": [
+      "États-Unis",
+      "France",
+      "URSS",
+      "Chine"
+    ],
+    "correct_index": 2,
+    "explanation": "L'URSS lança Spoutnik 1 le 4 octobre 1957, débutant la course à l'espace avec les États-Unis.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle guerre opposa les États-Unis au Vietnam ?",
+    "options": [
+      "1945-1954",
+      "1955-1975",
+      "1960-1970",
+      "1965-1980"
+    ],
+    "correct_index": 1,
+    "explanation": "La guerre du Vietnam (1955-1975) opposa le Nord communiste (soutenu par l'URSS) au Sud (soutenu par les USA). Les USA se retirèrent en 1973.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel sommet de 1945 réunit Churchill, Roosevelt et Staline pour planifier l'après-guerre ?",
+    "options": [
+      "Sommet de Téhéran",
+      "Conférence de Yalta",
+      "Conférence de Potsdam",
+      "Sommet de Casablanca"
+    ],
+    "correct_index": 1,
+    "explanation": "La conférence de Yalta (février 1945) réunit les trois Alliés pour organiser le monde d'après-guerre et diviser l'Allemagne.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays fut le premier à utiliser l'arme nucléaire en temps de guerre ?",
+    "options": [
+      "URSS",
+      "Allemagne",
+      "Japon",
+      "États-Unis"
+    ],
+    "correct_index": 3,
+    "explanation": "Les États-Unis larguèrent des bombes atomiques sur Hiroshima (6 août) et Nagasaki (9 août 1945), précipitant la capitulation du Japon.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel mouvement des droits civiques américain est associé à Martin Luther King ?",
+    "options": [
+      "Black Panthers",
+      "Mouvement des droits civiques",
+      "Nation of Islam",
+      "NAACP"
+    ],
+    "correct_index": 1,
+    "explanation": "Martin Luther King Jr. mena le mouvement des droits civiques dans les années 1960, prônant la non-violence. Il reçut le Nobel de la paix en 1964.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel accord mit fin à la guerre d'Algérie en 1962 ?",
+    "options": [
+      "Accords de Genève",
+      "Accords d'Évian",
+      "Accords de Paris",
+      "Accords de Camp David"
+    ],
+    "correct_index": 1,
+    "explanation": "Les accords d'Évian (18 mars 1962) mirent fin à la guerre d'Algérie et conduisirent à l'indépendance algérienne le 5 juillet 1962.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel empire construisit la Grande Muraille de Chine ?",
+    "options": [
+      "Empire mongol",
+      "Empire Han",
+      "Empire Qin",
+      "Empire Ming"
+    ],
+    "correct_index": 2,
+    "explanation": "La construction débuta sous l'empereur Qin Shi Huang au IIIe siècle av. J.-C., puis fut agrandie par les dynasties suivantes, notamment les Ming.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel code de lois est l'un des plus anciens connus ?",
+    "options": [
+      "Code de Justinien",
+      "Code Napoléon",
+      "Code d'Hammurabi",
+      "Loi des Douze Tables"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Code d'Hammurabi, roi de Babylone, date d'environ 1750 av. J.-C. Il contient 282 lois gravées sur une stèle.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle bataille de 31 av. J.-C. consacra la domination d'Octave sur le monde romain ?",
+    "options": [
+      "Bataille de Pharsale",
+      "Bataille d'Actium",
+      "Bataille de Zama",
+      "Bataille de Cannes"
+    ],
+    "correct_index": 1,
+    "explanation": "La bataille d'Actium (31 av. J.-C.) vit Octave vaincre Marc Antoine et Cléopâtre, devenant seul maître de Rome.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel peuple barbare prit Rome en 476 ?",
+    "options": [
+      "Les Huns",
+      "Les Vandales",
+      "Les Ostrogoths",
+      "Les Hérules"
+    ],
+    "correct_index": 3,
+    "explanation": "Odoacre, chef des Hérules, déposa le dernier empereur romain d'Occident en 476, date conventionnelle de la chute de Rome.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle route commerciale reliait la Chine à la Méditerranée ?",
+    "options": [
+      "Route des Indes",
+      "Route de la Soie",
+      "Route des Épices",
+      "Route transsaharienne"
+    ],
+    "correct_index": 1,
+    "explanation": "La route de la Soie, réseau de routes commerciales depuis le IIe siècle av. J.-C., reliait la Chine à l'Europe via l'Asie centrale.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empereur romain accorda la citoyenneté à tous les hommes libres de l'Empire en 212 ?",
+    "options": [
+      "Auguste",
+      "Hadrien",
+      "Caracalla",
+      "Marc Aurèle"
+    ],
+    "correct_index": 2,
+    "explanation": "L'édit de Caracalla (212) étendit la citoyenneté romaine à tous les hommes libres de l'Empire, uniformisant le statut juridique.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Comment s'appelle le premier roi de France capétien ?",
+    "options": [
+      "Clovis",
+      "Charlemagne",
+      "Hugues Capet",
+      "Philippe Auguste"
+    ],
+    "correct_index": 2,
+    "explanation": "Hugues Capet fut élu roi en 987, fondant la dynastie capétienne qui régna sur la France pendant plus de 300 ans.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel sultan ottoman conquit l'Égypte en 1517 ?",
+    "options": [
+      "Soliman le Magnifique",
+      "Mehmed II",
+      "Selim Ier",
+      "Bayezid II"
+    ],
+    "correct_index": 2,
+    "explanation": "Selim Ier conquit l'Égypte mamelouke en 1517, faisant de l'Empire ottoman la puissance dominante du monde musulman.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle révolte paysanne secoua l'Angleterre en 1381 ?",
+    "options": [
+      "Révolte des Ciompi",
+      "Révolte des Paysans",
+      "Jacquerie",
+      "Révolte des Hussites"
+    ],
+    "correct_index": 1,
+    "explanation": "La Révolte des Paysans de 1381, menée par Wat Tyler, protesta contre les impôts excessifs après la peste noire en Angleterre.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel roi de France construisit le château de Versailles ?",
+    "options": [
+      "François Ier",
+      "Henri IV",
+      "Louis XIII",
+      "Louis XIV"
+    ],
+    "correct_index": 3,
+    "explanation": "Louis XIV transforma le pavillon de chasse de son père en palais somptueux, devenu résidence royale en 1682.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel explorateur espagnol conquit l'Empire aztèque ?",
+    "options": [
+      "Francisco Pizarro",
+      "Hernán Cortés",
+      "Vasco Núñez de Balboa",
+      "Juan Ponce de León"
+    ],
+    "correct_index": 1,
+    "explanation": "Hernán Cortés conquit l'Empire aztèque entre 1519 et 1521, capturant Tenochtitlán (actuel Mexico).",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle invention chinoise, transmise aux Arabes puis aux Européens, changea la guerre médiévale ?",
+    "options": [
+      "La poudre à canon",
+      "L'arbalète",
+      "Le trébuchet",
+      "L'armure de plates"
+    ],
+    "correct_index": 0,
+    "explanation": "La poudre à canon, inventée en Chine au IXe siècle, fut transmise à l'Europe au XIIIe siècle, révolutionnant l'art de la guerre.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel mouvement intellectuel du XVIIIe siècle prônait la raison et la liberté ?",
+    "options": [
+      "Le romantisme",
+      "Les Lumières",
+      "L'humanisme",
+      "Le classicisme"
+    ],
+    "correct_index": 1,
+    "explanation": "Le siècle des Lumières (XVIIIe siècle) prônait la raison, la science et la liberté, avec Voltaire, Rousseau et Diderot.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays colonisa la majeure partie de l'Amérique du Sud ?",
+    "options": [
+      "France",
+      "Angleterre",
+      "Portugal",
+      "Espagne"
+    ],
+    "correct_index": 3,
+    "explanation": "L'Espagne colonisa la plus grande partie de l'Amérique du Sud aux XVIe-XVIIe siècles, sauf le Brésil (Portugal).",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel scientifique formula les lois de la gravitation universelle en 1687 ?",
+    "options": [
+      "Galilée",
+      "Kepler",
+      "Newton",
+      "Leibniz"
+    ],
+    "correct_index": 2,
+    "explanation": "Isaac Newton publia les Principia Mathematica en 1687, formulant les lois du mouvement et de la gravitation universelle.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle révolution renversa le tsar de Russie en 1917 ?",
+    "options": [
+      "Révolution de 1905",
+      "Révolution d'Octobre",
+      "Révolution de Février",
+      "La révolution bolchevique"
+    ],
+    "correct_index": 2,
+    "explanation": "La Révolution de Février 1917 renversa le tsar Nicolas II. La Révolution d'Octobre amena ensuite les bolcheviques au pouvoir.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel dictateur italien fonda le fascisme ?",
+    "options": [
+      "Franco",
+      "Salazar",
+      "Mussolini",
+      "Pétain"
+    ],
+    "correct_index": 2,
+    "explanation": "Benito Mussolini fonda le Parti national fasciste et devint dictateur de l'Italie de 1922 à 1943.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel fut le nom de code du débarquement allié en Normandie le 6 juin 1944 ?",
+    "options": [
+      "Opération Torch",
+      "Opération Overlord",
+      "Opération Market Garden",
+      "Opération Barbarossa"
+    ],
+    "correct_index": 1,
+    "explanation": "L'opération Overlord, le 6 juin 1944 (D-Day), fut la plus grande opération amphibie de l'histoire avec 156 000 soldats.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel mur séparait les deux Corées ?",
+    "options": [
+      "Le 17e parallèle",
+      "Le 38e parallèle",
+      "Le Mur de Berlin",
+      "La ligne Maginot"
+    ],
+    "correct_index": 1,
+    "explanation": "Le 38e parallèle nord sert de frontière entre la Corée du Nord et la Corée du Sud depuis l'armistice de 1953.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays africain fut colonisé par la Belgique ?",
+    "options": [
+      "Algérie",
+      "Sénégal",
+      "Congo",
+      "Cameroun"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Congo fut propriété personnelle du roi Léopold II de Belgique (1885-1908), puis colonie belge jusqu'à l'indépendance en 1960.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité de paix mit fin à la guerre de Trente Ans en 1648 ?",
+    "options": [
+      "Traité de Westphalie",
+      "Traité d'Utrecht",
+      "Traité de Nimègue",
+      "Traité de Ryswick"
+    ],
+    "correct_index": 0,
+    "explanation": "Les traités de Westphalie (1648) mirent fin à la guerre de Trente Ans et établirent le principe de souveraineté des États.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays créa la première démocratie au monde ?",
+    "options": [
+      "Rome",
+      "Athènes",
+      "Sparte",
+      "Carthage"
+    ],
+    "correct_index": 1,
+    "explanation": "Athènes instaura une forme de démocratie directe au Ve siècle av. J.-C., où les citoyens votaient directement les lois.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empire domina l'Inde au XVIe-XIXe siècle ?",
+    "options": [
+      "Empire moghol",
+      "Empire gupta",
+      "Empire maurya",
+      "Empire marathe"
+    ],
+    "correct_index": 0,
+    "explanation": "L'Empire moghol domina le sous-continent indien de 1526 à 1857, construisant le Taj Mahal et unifiant une grande partie de l'Inde.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel mouvement du XIXe siècle cherchait à créer un État juif en Palestine ?",
+    "options": [
+      "Le panarabisme",
+      "Le sionisme",
+      "Le panslavisme",
+      "Le pangermanisme"
+    ],
+    "correct_index": 1,
+    "explanation": "Le sionisme, mouvement politique fondé par Theodor Herzl en 1897, visait la création d'un foyer national juif en Palestine.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel monument funéraire indien fut construit par l'empereur Shah Jahan ?",
+    "options": [
+      "Le Fort Rouge",
+      "Le Taj Mahal",
+      "Le Temple d'Or",
+      "Fatehpur Sikri"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Taj Mahal fut construit entre 1631 et 1653 à Agra par Shah Jahan en mémoire de son épouse Mumtaz Mahal.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays fut le premier à abolir la traite négrière en 1807 ?",
+    "options": [
+      "France",
+      "Royaume-Uni",
+      "États-Unis",
+      "Danemark"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Royaume-Uni abolit la traite négrière en 1807 avec le Slave Trade Act, puis l'esclavage en 1833.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle conférence de 1884-1885 partagea l'Afrique entre les puissances européennes ?",
+    "options": [
+      "Conférence de Vienne",
+      "Conférence de Berlin",
+      "Conférence de Londres",
+      "Conférence de Bruxelles"
+    ],
+    "correct_index": 1,
+    "explanation": "La Conférence de Berlin (1884-1885) organisa le partage colonial de l'Afrique entre les puissances européennes sans consulter les Africains.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel événement mondial commença en 1929 avec le krach boursier ?",
+    "options": [
+      "La Première Guerre mondiale",
+      "La Grande Dépression",
+      "La Guerre froide",
+      "La décolonisation"
+    ],
+    "correct_index": 1,
+    "explanation": "Le krach de Wall Street du 24 octobre 1929 ('Jeudi noir') déclencha la Grande Dépression, la pire crise économique du XXe siècle.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel traité fonda la CECA, ancêtre de l'Union européenne, en 1951 ?",
+    "options": [
+      "Traité de Rome",
+      "Traité de Paris",
+      "Traité de Bruxelles",
+      "Traité de Maastricht"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité de Paris (1951) créa la CECA (Communauté européenne du charbon et de l'acier) entre 6 pays, première étape de la construction européenne.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel chef d'État chinois lança le 'Grand Bond en avant' en 1958 ?",
+    "options": [
+      "Sun Yat-sen",
+      "Tchang Kaï-chek",
+      "Mao Zedong",
+      "Deng Xiaoping"
+    ],
+    "correct_index": 2,
+    "explanation": "Mao Zedong lança le Grand Bond en avant (1958-1962), politique de collectivisation qui provoqua une famine ayant causé des millions de morts.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel animal Hannibal utilisa-t-il pour traverser les Alpes ?",
+    "options": [
+      "Des chevaux",
+      "Des chameaux",
+      "Des éléphants",
+      "Des bœufs"
+    ],
+    "correct_index": 2,
+    "explanation": "Hannibal traversa les Alpes avec 37 éléphants de guerre en 218 av. J.-C. pour surprendre Rome par le nord.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empereur romain persécuta massivement les chrétiens au IIIe siècle ?",
+    "options": [
+      "Néron",
+      "Trajan",
+      "Dioclétien",
+      "Caligula"
+    ],
+    "correct_index": 2,
+    "explanation": "Dioclétien lança la Grande Persécution (303-311), la plus systématique contre les chrétiens dans l'Empire romain.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle écriture fut déchiffrée grâce à la pierre de Rosette ?",
+    "options": [
+      "Le cunéiforme",
+      "Les hiéroglyphes",
+      "Le linéaire B",
+      "Le sanskrit"
+    ],
+    "correct_index": 1,
+    "explanation": "Jean-François Champollion déchiffra les hiéroglyphes égyptiens en 1822 grâce à la pierre de Rosette, qui portait le même texte en trois écritures.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel roi de France fut surnommé Philippe Auguste ?",
+    "options": [
+      "Philippe Ier",
+      "Philippe II",
+      "Philippe IV",
+      "Philippe VI"
+    ],
+    "correct_index": 1,
+    "explanation": "Philippe II Auguste (1180-1223) agrandit considérablement le domaine royal et remporta la bataille de Bouvines en 1214.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empire africain prospéra grâce au commerce de l'or au XIVe siècle ?",
+    "options": [
+      "Empire du Ghana",
+      "Empire du Mali",
+      "Empire songhaï",
+      "Royaume du Kongo"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Empire du Mali, sous Mansa Moussa, fut l'un des empires les plus riches du monde grâce au commerce de l'or et du sel.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel concile de 1095 lança la première croisade ?",
+    "options": [
+      "Concile de Latran",
+      "Concile de Clermont",
+      "Concile de Lyon",
+      "Concile de Constance"
+    ],
+    "correct_index": 1,
+    "explanation": "Au concile de Clermont (1095), le pape Urbain II appela à la première croisade pour libérer Jérusalem des Turcs seldjoukides.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel conquistador espagnol détruisit l'Empire inca ?",
+    "options": [
+      "Hernán Cortés",
+      "Francisco Pizarro",
+      "Vasco de Gama",
+      "Ferdinand Magellan"
+    ],
+    "correct_index": 1,
+    "explanation": "Francisco Pizarro conquit l'Empire inca en 1532-1533, capturant et exécutant l'empereur Atahualpa.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel mouvement artistique italien marqua le début de la Renaissance ?",
+    "options": [
+      "Le maniérisme",
+      "Le baroque",
+      "Le quattrocento",
+      "Le néoclassicisme"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Quattrocento (XVe siècle) vit l'essor de la Renaissance à Florence avec Brunelleschi, Donatello et Botticelli.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel navigateur anglais explora la côte est de l'Australie en 1770 ?",
+    "options": [
+      "Francis Drake",
+      "Walter Raleigh",
+      "James Cook",
+      "Henry Hudson"
+    ],
+    "correct_index": 2,
+    "explanation": "Le capitaine James Cook explora et cartographia la côte est de l'Australie en 1770, la revendiquant pour la Couronne britannique.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel général devint le premier président des États-Unis ?",
+    "options": [
+      "Benjamin Franklin",
+      "Thomas Jefferson",
+      "John Adams",
+      "George Washington"
+    ],
+    "correct_index": 3,
+    "explanation": "George Washington, héros de la guerre d'indépendance, fut élu premier président des États-Unis en 1789.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel empire s'effondra après la Première Guerre mondiale ?",
+    "options": [
+      "Empire britannique",
+      "Empire ottoman",
+      "Empire colonial français",
+      "Empire japonais"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Empire ottoman s'effondra après sa défaite en 1918. La République de Turquie fut proclamée par Mustafa Kemal en 1923.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel physicien alerta le président Roosevelt sur la possibilité d'une bombe atomique ?",
+    "options": [
+      "Oppenheimer",
+      "Fermi",
+      "Einstein",
+      "Bohr"
+    ],
+    "correct_index": 2,
+    "explanation": "Albert Einstein signa une lettre au président Roosevelt en 1939, l'alertant sur la possibilité d'une bombe atomique, menant au projet Manhattan.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays construisit le canal de Panama ?",
+    "options": [
+      "France puis États-Unis",
+      "Espagne",
+      "Royaume-Uni",
+      "Colombie"
+    ],
+    "correct_index": 0,
+    "explanation": "La France de Lesseps commença les travaux en 1881, mais échoua. Les États-Unis achevèrent le canal de Panama en 1914.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle doctrine américaine de 1947 promettait d'aider les pays menacés par le communisme ?",
+    "options": [
+      "Doctrine Monroe",
+      "Doctrine Truman",
+      "Doctrine Eisenhower",
+      "Doctrine Nixon"
+    ],
+    "correct_index": 1,
+    "explanation": "La doctrine Truman (1947) engageait les États-Unis à soutenir les peuples libres menacés par le communisme, marquant le début de la Guerre froide.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel régime cambodgien causa le génocide de 1975-1979 ?",
+    "options": [
+      "Les Vietcongs",
+      "Les Khmers rouges",
+      "Le Pathet Lao",
+      "Les Tigres tamouls"
+    ],
+    "correct_index": 1,
+    "explanation": "Les Khmers rouges de Pol Pot instaurèrent un régime totalitaire au Cambodge, causant la mort d'environ 2 millions de personnes.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle organisation terroriste commit les attentats du 11 septembre 2001 ?",
+    "options": [
+      "Hamas",
+      "Hezbollah",
+      "Al-Qaïda",
+      "Daech"
+    ],
+    "correct_index": 2,
+    "explanation": "Al-Qaïda, dirigée par Oussama ben Laden, commit les attentats du 11 septembre 2001 qui firent près de 3 000 victimes.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays fut le premier à reconnaître le droit de vote aux femmes en Europe ?",
+    "options": [
+      "France",
+      "Finlande",
+      "Royaume-Uni",
+      "Suisse"
+    ],
+    "correct_index": 1,
+    "explanation": "La Finlande accorda le droit de vote aux femmes en 1906, première nation européenne à le faire.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle crise économique mondiale éclata en 2008 ?",
+    "options": [
+      "Crise des subprimes",
+      "Crise de la dette européenne",
+      "Bulle Internet",
+      "Crise asiatique"
+    ],
+    "correct_index": 0,
+    "explanation": "La crise des subprimes, née aux États-Unis en 2007-2008, provoqua un effondrement financier mondial et la faillite de Lehman Brothers.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays accueillit les premiers Jeux olympiques modernes en 1896 ?",
+    "options": [
+      "France",
+      "Italie",
+      "Grèce",
+      "Royaume-Uni"
+    ],
+    "correct_index": 2,
+    "explanation": "Les premiers Jeux olympiques modernes se tinrent à Athènes en 1896, à l'initiative de Pierre de Coubertin.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel accord historique fut signé entre Israël et l'Égypte en 1978 ?",
+    "options": [
+      "Accords d'Oslo",
+      "Accords de Camp David",
+      "Accords d'Abraham",
+      "Accords de Madrid"
+    ],
+    "correct_index": 1,
+    "explanation": "Les accords de Camp David (1978), sous l'égide de Jimmy Carter, menèrent au traité de paix entre l'Égypte et Israël en 1979.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel document de 1215 limita le pouvoir royal en Angleterre ?",
+    "options": [
+      "La Déclaration des droits",
+      "Le Bill of Rights",
+      "La Magna Carta",
+      "L'Habeas Corpus"
+    ],
+    "correct_index": 2,
+    "explanation": "La Magna Carta, imposée au roi Jean sans Terre en 1215, est considérée comme l'un des fondements des libertés individuelles.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel empire précolombien avait sa capitale à Tenochtitlán ?",
+    "options": [
+      "Les Incas",
+      "Les Mayas",
+      "Les Aztèques",
+      "Les Olmèques"
+    ],
+    "correct_index": 2,
+    "explanation": "Tenochtitlán, fondée en 1325 sur une île du lac Texcoco, fut la capitale de l'Empire aztèque, actuelle Mexico.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quelle bataille navale de 1805 assura la suprématie maritime britannique ?",
+    "options": [
+      "Bataille du Nil",
+      "Bataille de Trafalgar",
+      "Bataille de Lépante",
+      "Bataille de Midway"
+    ],
+    "correct_index": 1,
+    "explanation": "La bataille de Trafalgar (21 octobre 1805) vit la victoire de Nelson sur la flotte franco-espagnole, assurant la domination navale britannique.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel philosophe chinois fonda le confucianisme au Ve siècle av. J.-C. ?",
+    "options": [
+      "Lao Tseu",
+      "Sun Tzu",
+      "Confucius",
+      "Mencius"
+    ],
+    "correct_index": 2,
+    "explanation": "Confucius (551-479 av. J.-C.) fonda le confucianisme, philosophie morale et politique qui influença profondément la civilisation chinoise.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel instrument de torture médiéval est souvent associé à l'Inquisition ?",
+    "options": [
+      "La guillotine",
+      "Le bûcher",
+      "Le chevalet",
+      "La potence"
+    ],
+    "correct_index": 1,
+    "explanation": "Le bûcher était utilisé pour exécuter les hérétiques condamnés par l'Inquisition, notamment Jeanne d'Arc en 1431.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel amiral japonais planifia l'attaque de Pearl Harbor en 1941 ?",
+    "options": [
+      "Tojo",
+      "Yamamoto",
+      "Hirohito",
+      "Nagumo"
+    ],
+    "correct_index": 1,
+    "explanation": "L'amiral Isoroku Yamamoto planifia l'attaque surprise de Pearl Harbor le 7 décembre 1941, entraînant les États-Unis dans la guerre.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empire fut le plus étendu de l'histoire en termes de superficie contiguë ?",
+    "options": [
+      "Empire britannique",
+      "Empire romain",
+      "Empire mongol",
+      "Empire russe"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Empire mongol de Gengis Khan atteignit 24 millions de km² au XIIIe siècle, le plus grand empire contigu de l'histoire.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel traité mit fin à la Première Guerre mondiale pour l'Allemagne ?",
+    "options": [
+      "Traité de Brest-Litovsk",
+      "Traité de Versailles",
+      "Traité de Saint-Germain",
+      "Traité de Sèvres"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité de Versailles (28 juin 1919) imposa des conditions très dures à l'Allemagne, nourrissant le ressentiment qui mena au nazisme.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pays lança la 'Révolution culturelle' en 1966 ?",
+    "options": [
+      "URSS",
+      "Cuba",
+      "Chine",
+      "Vietnam"
+    ],
+    "correct_index": 2,
+    "explanation": "Mao Zedong lança la Révolution culturelle en Chine (1966-1976), mouvement politique violent visant à purger les 'éléments bourgeois'.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel événement de 1989 symbolisa la fin du communisme en Europe de l'Est ?",
+    "options": [
+      "La dissolution de l'URSS",
+      "La chute du mur de Berlin",
+      "Le printemps de Prague",
+      "La révolution de velours"
+    ],
+    "correct_index": 1,
+    "explanation": "La chute du mur de Berlin le 9 novembre 1989 devint le symbole de l'effondrement du bloc communiste en Europe.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel peuple antique est connu pour avoir inventé l'alphabet phénicien ?",
+    "options": [
+      "Les Grecs",
+      "Les Phéniciens",
+      "Les Hébreux",
+      "Les Assyriens"
+    ],
+    "correct_index": 1,
+    "explanation": "Les Phéniciens créèrent un alphabet de 22 consonnes vers 1050 av. J.-C., ancêtre des alphabets grec, latin et arabe.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi de France fut assassiné par Ravaillac en 1610 ?",
+    "options": [
+      "Louis XIII",
+      "Henri III",
+      "Henri IV",
+      "François II"
+    ],
+    "correct_index": 2,
+    "explanation": "Henri IV, roi de France et de Navarre, fut assassiné le 14 mai 1610 par François Ravaillac, catholique fanatique.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle invention permit la navigation précise en mesurant la longitude ?",
+    "options": [
+      "Le sextant",
+      "Le chronomètre de marine",
+      "L'astrolabe",
+      "Le compas"
+    ],
+    "correct_index": 1,
+    "explanation": "Le chronomètre de marine de John Harrison (1761) permit de mesurer la longitude en mer, résolvant l'un des plus grands défis de la navigation.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quelle est la date de la fête nationale française ?",
+    "options": [
+      "1er mai",
+      "8 mai",
+      "14 juillet",
+      "11 novembre"
+    ],
+    "correct_index": 2,
+    "explanation": "Le 14 juillet commémore la prise de la Bastille (1789) et la Fête de la Fédération (1790), symboles de la Révolution française.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel scientifique découvrit la radioactivité en 1896 ?",
+    "options": [
+      "Marie Curie",
+      "Pierre Curie",
+      "Henri Becquerel",
+      "Ernest Rutherford"
+    ],
+    "correct_index": 2,
+    "explanation": "Henri Becquerel découvrit la radioactivité en 1896 en étudiant les sels d'uranium. Marie et Pierre Curie poursuivirent ses travaux.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel accord de 1938 permit à Hitler d'annexer les Sudètes ?",
+    "options": [
+      "Accords de Yalta",
+      "Accords de Munich",
+      "Pacte germano-soviétique",
+      "Accords de Locarno"
+    ],
+    "correct_index": 1,
+    "explanation": "Les accords de Munich (1938) permirent à Hitler d'annexer les Sudètes tchécoslovaques, Chamberlain déclarant avoir obtenu 'la paix pour notre temps'.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel peuple construisit des aqueducs et des routes à travers l'Europe ?",
+    "options": [
+      "Les Grecs",
+      "Les Celtes",
+      "Les Romains",
+      "Les Germains"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Romains bâtirent un réseau de routes (voies romaines) et d'aqueducs à travers tout leur empire, dont certains sont encore debout.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement mit fin à l'âge du bronze en Méditerranée vers 1200 av. J.-C. ?",
+    "options": [
+      "L'invasion des Peuples de la Mer",
+      "L'éruption du Vésuve",
+      "Le déluge",
+      "La guerre de Troie"
+    ],
+    "correct_index": 0,
+    "explanation": "L'effondrement de l'âge du bronze (vers 1200 av. J.-C.) est lié aux invasions des Peuples de la Mer et à des catastrophes en chaîne.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle bataille de 480 av. J.-C. opposa 300 Spartiates aux Perses ?",
+    "options": [
+      "Bataille de Marathon",
+      "Bataille de Salamine",
+      "Bataille des Thermopyles",
+      "Bataille de Platées"
+    ],
+    "correct_index": 2,
+    "explanation": "Aux Thermopyles (480 av. J.-C.), le roi Léonidas et ses 300 Spartiates résistèrent héroïquement à l'armée perse de Xerxès.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel roi médiéval anglais signa la Magna Carta ?",
+    "options": [
+      "Richard Cœur de Lion",
+      "Henri II",
+      "Jean sans Terre",
+      "Édouard Ier"
+    ],
+    "correct_index": 2,
+    "explanation": "Le roi Jean sans Terre fut contraint de signer la Magna Carta en 1215, limitant le pouvoir royal face aux barons.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel art architectural caractérise les cathédrales médiévales avec arcs-boutants et vitraux ?",
+    "options": [
+      "L'art roman",
+      "L'art gothique",
+      "L'art baroque",
+      "L'art byzantin"
+    ],
+    "correct_index": 1,
+    "explanation": "L'art gothique (XIIe-XVe siècle) se caractérise par les arcs-boutants, les voûtes d'ogives et les immenses vitraux colorés.",
+    "period": "Moyen Âge"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel empire domina l'Afrique de l'Ouest au XVe siècle avec Tombouctou comme centre intellectuel ?",
+    "options": [
+      "Empire du Ghana",
+      "Empire du Mali",
+      "Empire songhaï",
+      "Royaume du Bénin"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Empire songhaï, sous Sonni Ali puis Askia Mohammed, fit de Tombouctou un centre majeur de savoir et de commerce au XVe siècle.",
+    "period": "Renaissance"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel explorateur atteignit le premier le pôle Sud en 1911 ?",
+    "options": [
+      "Robert Scott",
+      "Ernest Shackleton",
+      "Roald Amundsen",
+      "Robert Peary"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Norvégien Roald Amundsen atteignit le pôle Sud le 14 décembre 1911, devançant l'expédition britannique de Scott.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel philosophe écrivit l'Encyclopédie avec d'Alembert au XVIIIe siècle ?",
+    "options": [
+      "Voltaire",
+      "Rousseau",
+      "Diderot",
+      "Montesquieu"
+    ],
+    "correct_index": 2,
+    "explanation": "Denis Diderot dirigea l'Encyclopédie (1751-1772), monument intellectuel des Lumières regroupant tout le savoir de l'époque.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel traité de 1713 mit fin à la guerre de Succession d'Espagne ?",
+    "options": [
+      "Traité de Westphalie",
+      "Traité d'Utrecht",
+      "Traité de Rastatt",
+      "Traité de Ryswick"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité d'Utrecht (1713) mit fin à la guerre de Succession d'Espagne et redessina l'équilibre des puissances en Europe.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays d'Asie fut occupé par le Japon pendant la Seconde Guerre mondiale ?",
+    "options": [
+      "Inde",
+      "Thaïlande",
+      "Chine",
+      "Australie"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Japon envahit et occupa une grande partie de la Chine à partir de 1937, commettant de nombreuses atrocités dont le massacre de Nankin.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel pacte secret de 1939 partagea la Pologne entre l'Allemagne et l'URSS ?",
+    "options": [
+      "Pacte d'Acier",
+      "Pacte germano-soviétique",
+      "Pacte de Varsovie",
+      "Pacte atlantique"
+    ],
+    "correct_index": 1,
+    "explanation": "Le pacte Molotov-Ribbentrop (23 août 1939) contenait un protocole secret partageant la Pologne et les pays baltes.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle guerre de décolonisation opposa la France à l'Indochine de 1946 à 1954 ?",
+    "options": [
+      "Guerre du Vietnam",
+      "Guerre d'Indochine",
+      "Guerre du Tonkin",
+      "Guerre du Cambodge"
+    ],
+    "correct_index": 1,
+    "explanation": "La guerre d'Indochine (1946-1954) opposa la France au Viêt Minh de Hô Chi Minh, se terminant par la défaite française à Diên Biên Phu.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel monument fut offert par la France aux États-Unis en 1886 ?",
+    "options": [
+      "L'Obélisque",
+      "La Statue de la Liberté",
+      "L'Arc de Triomphe",
+      "Big Ben"
+    ],
+    "correct_index": 1,
+    "explanation": "La Statue de la Liberté, œuvre de Bartholdi et Eiffel, fut offerte par la France aux États-Unis et inaugurée en 1886.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel roi de France révoqua l'Édit de Nantes en 1685 ?",
+    "options": [
+      "Louis XIII",
+      "Louis XIV",
+      "Louis XV",
+      "Henri IV"
+    ],
+    "correct_index": 1,
+    "explanation": "Louis XIV révoqua l'Édit de Nantes par l'Édit de Fontainebleau en 1685, interdisant le protestantisme et provoquant l'exil de 200 000 huguenots.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quelle découverte archéologique de 1922 révéla le tombeau intact d'un pharaon ?",
+    "options": [
+      "Tombeau de Ramsès II",
+      "Tombeau de Toutânkhamon",
+      "Tombeau de Cléopâtre",
+      "Tombeau de Khéops"
+    ],
+    "correct_index": 1,
+    "explanation": "Howard Carter découvrit le tombeau intact de Toutânkhamon dans la Vallée des Rois en novembre 1922, avec ses trésors fabuleux.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays fut le berceau de la civilisation mésopotamienne ?",
+    "options": [
+      "Égypte",
+      "Turquie",
+      "Irak",
+      "Iran"
+    ],
+    "correct_index": 2,
+    "explanation": "La Mésopotamie (actuel Irak) vit naître les premières civilisations (Sumer, Babylone, Assyrie) entre le Tigre et l'Euphrate.",
+    "period": "Antiquité"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement de 1848 est connu comme le 'Printemps des peuples' ?",
+    "options": [
+      "Les révolutions européennes",
+      "La ruée vers l'or",
+      "L'abolition de l'esclavage",
+      "La création de la Croix-Rouge"
+    ],
+    "correct_index": 0,
+    "explanation": "En 1848, une vague de révolutions libérales et nationalistes secoua toute l'Europe, de la France à l'Autriche en passant par l'Italie.",
+    "period": "XVIIIe-XIXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "hard",
+    "question": "Quel système d'alliances mena à l'escalade de la Première Guerre mondiale ?",
+    "options": [
+      "OTAN et Pacte de Varsovie",
+      "Triple Alliance et Triple Entente",
+      "Axe et Alliés",
+      "Ligue de Délos et Ligue du Péloponnèse"
+    ],
+    "correct_index": 1,
+    "explanation": "La Triple Alliance (Allemagne, Autriche-Hongrie, Italie) et la Triple Entente (France, Russie, Royaume-Uni) créèrent un système d'engrenage menant à la guerre.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "easy",
+    "question": "Quel pays africain obtint son indépendance de la France en 1960 ?",
+    "options": [
+      "Algérie",
+      "Sénégal",
+      "Maroc",
+      "Tunisie"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Sénégal obtint son indépendance le 4 avril 1960, Léopold Sédar Senghor devenant le premier président.",
+    "period": "XXe siècle"
+  },
+  {
+    "category": "Histoire",
+    "difficulty": "medium",
+    "question": "Quel événement de 2011 est connu comme le 'Printemps arabe' ?",
+    "options": [
+      "La guerre d'Irak",
+      "Des révolutions au Moyen-Orient et en Afrique du Nord",
+      "Le conflit syrien",
+      "L'accord nucléaire iranien"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Printemps arabe (2010-2012) fut une vague de contestations populaires en Tunisie, Égypte, Libye, Syrie et autres pays arabes.",
+    "period": "XXIe siècle"
   }
 ]
