@@ -395,6 +395,12 @@ export const categoryColors: Record<string, { bg: string; text: string; border: 
     border: "border-blue-500/30",
     icon: "📝",
   },
+  "Actualités 2025-2026": {
+    bg: "bg-lime-500/20",
+    text: "text-lime-400",
+    border: "border-lime-500/30",
+    icon: "📰",
+  },
 };
 
 export const difficultyColors = {
