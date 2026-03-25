@@ -12,6 +12,18 @@ const KEY_WRONG_QUESTIONS = "vqm_wrong_questions"; // full question data for fla
 const KEY_DAILY_STREAK = "vqm_daily_streak";
 const KEY_DAILY_LAST_DATE = "vqm_daily_last_date";
 const KEY_DAILY_COMPLETED = "vqm_daily_completed"; // date string of last completed daily
+const KEY_CATEGORY_STATS = "vqm_category_stats"; // { [category]: { played, correct } }
+const KEY_SPEED_RECORDS = "vqm_speed_records"; // { totalTime, totalAnswered } for avg speed
+
+export interface CategoryStats {
+  [category: string]: { played: number; correct: number };
+}
+
+export interface SpeedRecord {
+  totalTime: number;   // cumulative seconds spent answering
+  totalAnswered: number; // total questions answered
+  bestAvg: number;     // best average seconds per question in a single game
+}
 
 export interface WrongQuestion {
   id: number;
@@ -75,6 +87,8 @@ export function useProgress() {
   const [dailyStreak, setDailyStreak] = useState(0);
   const [dailyLastDate, setDailyLastDate] = useState("");
   const [dailyCompleted, setDailyCompleted] = useState("");
+  const [categoryStats, setCategoryStats] = useState<CategoryStats>({});
+  const [speedRecord, setSpeedRecord] = useState<SpeedRecord>({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -89,6 +103,8 @@ export function useProgress() {
     setDailyStreak(load<number>(KEY_DAILY_STREAK, 0));
     setDailyLastDate(load<string>(KEY_DAILY_LAST_DATE, ""));
     setDailyCompleted(load<string>(KEY_DAILY_COMPLETED, ""));
+    setCategoryStats(load<CategoryStats>(KEY_CATEGORY_STATS, {}));
+    setSpeedRecord(load<SpeedRecord>(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 }));
     setHydrated(true);
   }, []);
 
@@ -160,6 +176,34 @@ export function useProgress() {
     });
   }, []);
 
+  const recordCategoryAnswer = useCallback((category: string, isCorrect: boolean) => {
+    setCategoryStats((prev) => {
+      const existing = prev[category] || { played: 0, correct: 0 };
+      const next = {
+        ...prev,
+        [category]: {
+          played: existing.played + 1,
+          correct: existing.correct + (isCorrect ? 1 : 0),
+        },
+      };
+      save(KEY_CATEGORY_STATS, next);
+      return next;
+    });
+  }, []);
+
+  const recordSpeed = useCallback((timeSpentSeconds: number, questionsAnswered: number) => {
+    if (questionsAnswered === 0) return;
+    setSpeedRecord((prev) => {
+      const newTotalTime = prev.totalTime + timeSpentSeconds;
+      const newTotalAnswered = prev.totalAnswered + questionsAnswered;
+      const gameAvg = timeSpentSeconds / questionsAnswered;
+      const newBestAvg = prev.bestAvg === 0 ? gameAvg : Math.min(prev.bestAvg, gameAvg);
+      const next = { totalTime: newTotalTime, totalAnswered: newTotalAnswered, bestAvg: newBestAvg };
+      save(KEY_SPEED_RECORDS, next);
+      return next;
+    });
+  }, []);
+
   const completeDaily = useCallback(() => {
     const today = getTodayStr();
     // Already completed today
@@ -200,6 +244,8 @@ export function useProgress() {
     save(KEY_DAILY_STREAK, 0);
     save(KEY_DAILY_LAST_DATE, "");
     save(KEY_DAILY_COMPLETED, "");
+    save(KEY_CATEGORY_STATS, {});
+    save(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 });
     setWrongIds([]);
     setRightIds([]);
     setTotalPlayed(0);
@@ -211,6 +257,8 @@ export function useProgress() {
     setDailyStreak(0);
     setDailyLastDate("");
     setDailyCompleted("");
+    setCategoryStats({});
+    setSpeedRecord({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
   }, []);
 
   const accuracy =
@@ -238,6 +286,10 @@ export function useProgress() {
     dismissMistake,
     addXp,
     recordGame,
+    categoryStats,
+    speedRecord,
+    recordCategoryAnswer,
+    recordSpeed,
     completeDaily,
     resetAll,
   };

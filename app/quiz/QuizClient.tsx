@@ -80,6 +80,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const blitzTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const gameRecordedRef = useRef(false);
+  const gameStartTimeRef = useRef(0);
 
   const progress = useProgress();
   const router = useRouter();
@@ -184,6 +185,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       setSelectedOption(null);
       setShakeWrong(false);
       setBlitzTimeLeft(BLITZ_DURATION);
+      gameStartTimeRef.current = Date.now();
       setPhase("playing");
     } catch {
       setPhase("select");
@@ -265,11 +267,16 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       progress.completeDaily();
     }
 
-    // Save each answer: mark right/wrong and save wrong question data for flashcards
+    // Record speed
+    const gameTimeSeconds = (Date.now() - gameStartTimeRef.current) / 1000;
+    progress.recordSpeed(gameTimeSeconds, total);
+
+    // Save each answer: mark right/wrong, record category stats, save wrong question data
     const answeredQs = gameQuestions.slice(0, answers.length);
     answeredQs.forEach((q, i) => {
       const ans = answers[i];
       const isCorrect = ans?.selected === q.correctIndex;
+      progress.recordCategoryAnswer(q.category, isCorrect);
       if (isCorrect) {
         progress.markRight(q.id);
       } else {
