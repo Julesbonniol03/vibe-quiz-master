@@ -1,69 +1,66 @@
 import Link from "next/link";
+import { readFileSync, readdirSync } from "fs";
+import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { Category } from "@/lib/types";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner } from "./DashboardClient";
 
-const stats = [
-  { label: "Score Total", value: "2 480", icon: "⭐", color: "text-yellow-400" },
-  { label: "Parties Jouées", value: "34", icon: "🎮", color: "text-indigo-400" },
-  { label: "Meilleur Streak", value: "12", icon: "🔥", color: "text-rose-400" },
-  { label: "Précision", value: "74%", icon: "🎯", color: "text-green-400" },
-];
+function loadCategories() {
+  const dataDir = join(process.cwd(), "data", "questions");
+  const files = readdirSync(dataDir).filter((f) => f.endsWith(".json"));
+  const categoryMap: Record<string, number> = {};
 
-const categories: { name: Category; questions: number; played: number }[] = [
-  { name: "Histoire", questions: 50, played: 320 },
-  { name: "Sciences", questions: 50, played: 280 },
-  { name: "Géographie", questions: 50, played: 150 },
-  { name: "Pop Culture", questions: 50, played: 195 },
-  { name: "Sport", questions: 50, played: 410 },
-  { name: "Arts & Littérature", questions: 50, played: 175 },
-  { name: "Nature & Animaux", questions: 50, played: 120 },
-  { name: "Technologie", questions: 50, played: 90 },
-  { name: "Gastronomie", questions: 50, played: 85 },
-  { name: "Mythologie & Religions", questions: 50, played: 60 },
-];
+  for (const file of files) {
+    const raw = readFileSync(join(dataDir, file), "utf-8");
+    const parsed: { category: string }[] = JSON.parse(raw);
+    for (const q of parsed) {
+      categoryMap[q.category] = (categoryMap[q.category] || 0) + 1;
+    }
+  }
 
-const recentActivity = [
-  { category: "Sport", score: 7, total: 8, streak: 5, time: "Il y a 2h" },
-  { category: "Sciences", score: 5, total: 8, streak: 3, time: "Il y a 5h" },
-  { category: "Histoire", score: 6, total: 8, streak: 6, time: "Hier" },
-  { category: "Arts & Littérature", score: 4, total: 8, streak: 2, time: "Il y a 2j" },
-];
+  return Object.entries(categoryMap)
+    .map(([name, count]) => ({ name, questions: count }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+}
 
 export default function DashboardPage() {
+  const categories = loadCategories();
+  const totalQ = categories.reduce((sum, c) => sum + c.questions, 0);
+
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900/50 via-[#1a1030] to-rose-900/30 border border-white/10 p-8 mb-8">
+      <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-8 mb-8">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl" />
+          <div className="absolute -top-32 -right-32 w-80 h-80 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-rose/[0.04] rounded-full blur-[100px]" />
         </div>
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">👋</span>
-              <span className="text-slate-400 text-sm font-medium">Bienvenue de retour !</span>
+              <span className="text-slate-500 text-sm font-medium">Bienvenue de retour !</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
               Prêt à tester vos{" "}
-              <span className="bg-gradient-to-r from-indigo-400 to-rose-400 bg-clip-text text-transparent">
+              <span className="gradient-text">
                 connaissances ?
               </span>
             </h1>
-            <p className="text-slate-400 max-w-md">
-              Choisissez une catégorie et défiez vos limites avec notre timer de 15 secondes. Construisez votre streak !
+            <p className="text-slate-500 max-w-md">
+              {totalQ} questions · 3 modes de jeu · Système XP
             </p>
+            <XpBar />
           </div>
           <div className="flex gap-3">
             <Link
               href="/quiz"
-              className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-indigo-600 text-white font-semibold rounded-xl hover:from-indigo-600 hover:to-indigo-700 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-500/30 whitespace-nowrap"
+              className="px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20 whitespace-nowrap"
             >
               Jouer maintenant →
             </Link>
             <Link
               href="/leaderboard"
-              className="px-6 py-3 bg-white/10 border border-white/20 text-white font-semibold rounded-xl hover:bg-white/15 transition-all whitespace-nowrap"
+              className="px-6 py-3 bg-white/[0.04] border border-white/[0.08] text-white font-semibold rounded-xl hover:bg-white/[0.07] transition-all whitespace-nowrap"
             >
               Classement 🏆
             </Link>
@@ -71,35 +68,64 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        {stats.map((stat) => (
-          <div
-            key={stat.label}
-            className="bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/8 transition-colors"
-          >
-            <div className="text-3xl mb-2">{stat.icon}</div>
-            <div className={`text-2xl font-bold ${stat.color} mb-1`}>{stat.value}</div>
-            <div className="text-slate-400 text-sm">{stat.label}</div>
+      {/* Game Modes */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <Link
+          href="/quiz?mode=classique"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-neon-cyan/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">📝</div>
+            <h3 className="text-lg font-bold text-neon-cyan mb-1">Classique</h3>
+            <p className="text-slate-500 text-sm">10 questions tranquilles avec timer de 15s par question.</p>
           </div>
-        ))}
+        </Link>
+        <Link
+          href="/quiz?mode=blitz"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-amber-400/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">⚡</div>
+            <h3 className="text-lg font-bold text-amber-400 mb-1">Blitz</h3>
+            <p className="text-slate-500 text-sm">60 secondes au chrono pour marquer un max de points !</p>
+          </div>
+        </Link>
+        <Link
+          href="/quiz?mode=mort-subite"
+          className="group relative overflow-hidden glass-card !rounded-2xl p-6 hover:bg-white/[0.04] transition-all hover:scale-[1.02] active:scale-[0.98] border-2 border-transparent hover:border-neon-rose/30"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-rose/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="relative">
+            <div className="text-4xl mb-3">💀</div>
+            <h3 className="text-lg font-bold text-neon-rose mb-1">Mort Subite</h3>
+            <p className="text-slate-500 text-sm">Première erreur = fin de partie. Combien tiendrez-vous ?</p>
+          </div>
+        </Link>
       </div>
+
+      {/* Dynamic Stats */}
+      <StatsGrid />
+
+      {/* Revision CTA */}
+      <RevisionCta />
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {/* Categories */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+        <div className="glass-card !rounded-2xl p-6">
           <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
             <span>📚</span> Catégories
           </h2>
           <div className="space-y-3">
             {categories.map((cat) => {
-              const colors = categoryColors[cat.name];
-              const progress = Math.round((cat.played / 500) * 100);
+              const colors = categoryColors[cat.name] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
+              const progress = Math.min(100, Math.round((cat.questions / 50) * 100));
               return (
                 <Link
                   key={cat.name}
                   href={`/quiz?category=${cat.name}`}
-                  className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group"
+                  className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/[0.03] transition-colors group"
                 >
                   <div
                     className={`w-10 h-10 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-lg flex-shrink-0`}
@@ -109,112 +135,63 @@ export default function DashboardPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between mb-1">
                       <span className={`font-medium ${colors.text}`}>{cat.name}</span>
-                      <span className="text-slate-500 text-xs">{cat.questions} questions</span>
+                      <span className="text-slate-600 text-xs">{cat.questions} questions</span>
                     </div>
-                    <div className="w-full bg-white/10 rounded-full h-1.5">
+                    <div className="w-full bg-white/[0.06] rounded-full h-1.5">
                       <div
-                        className={`h-1.5 rounded-full bg-gradient-to-r ${
-                          cat.name === "Histoire"
-                            ? "from-amber-500 to-amber-400"
-                            : cat.name === "Sciences"
-                            ? "from-cyan-500 to-cyan-400"
-                            : cat.name === "Arts & Littérature"
-                            ? "from-purple-500 to-purple-400"
-                            : cat.name === "Géographie"
-                            ? "from-blue-500 to-blue-400"
-                            : cat.name === "Pop Culture"
-                            ? "from-pink-500 to-pink-400"
-                            : cat.name === "Nature & Animaux"
-                            ? "from-emerald-500 to-emerald-400"
-                            : cat.name === "Technologie"
-                            ? "from-indigo-500 to-indigo-400"
-                            : cat.name === "Gastronomie"
-                            ? "from-orange-500 to-orange-400"
-                            : cat.name === "Mythologie & Religions"
-                            ? "from-violet-500 to-violet-400"
-                            : "from-green-500 to-green-400"
-                        }`}
-                        style={{ width: `${progress}%` }}
+                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                        style={{
+                          width: `${progress}%`,
+                          boxShadow: "0 0 8px rgba(0, 240, 255, 0.3)",
+                        }}
                       />
                     </div>
                   </div>
-                  <span className="text-slate-600 group-hover:text-slate-400 transition-colors text-lg">→</span>
+                  <span className="text-slate-700 group-hover:text-slate-400 transition-colors text-lg">→</span>
                 </Link>
               );
             })}
           </div>
         </div>
 
-        {/* Recent Activity */}
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+        {/* How XP Works */}
+        <div className="glass-card !rounded-2xl p-6">
           <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
-            <span>📊</span> Activité récente
+            <span>✨</span> Système XP
           </h2>
-          <div className="space-y-3">
-            {recentActivity.map((activity, i) => {
-              const colors = categoryColors[activity.category];
-              const percent = Math.round((activity.score / activity.total) * 100);
-              return (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 p-3 rounded-xl bg-white/3 border border-white/5"
-                >
-                  <div
-                    className={`w-10 h-10 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-lg flex-shrink-0`}
-                  >
-                    {colors.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <span className={`font-medium text-sm ${colors.text}`}>{activity.category}</span>
-                      <span className="text-slate-500 text-xs">{activity.time}</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-1">
-                      <span className="text-white text-sm font-semibold">
-                        {activity.score}/{activity.total}
-                      </span>
-                      <span
-                        className={`text-xs font-medium ${
-                          percent >= 70 ? "text-green-400" : percent >= 50 ? "text-yellow-400" : "text-rose-400"
-                        }`}
-                      >
-                        {percent}%
-                      </span>
-                      <span className="text-rose-400 text-xs flex items-center gap-1">
-                        🔥 {activity.streak}
-                      </span>
-                    </div>
-                  </div>
+          <div className="space-y-4">
+            {[
+              { icon: "✅", label: "Bonne réponse", value: "+10 XP", color: "text-green-400" },
+              { icon: "🔥", label: "Bonus streak", value: "+5 XP / streak", color: "text-neon-rose" },
+              { icon: "🎮", label: "Partie terminée", value: "+20 XP", color: "text-neon-cyan" },
+              { icon: "💯", label: "Sans faute", value: "+50 XP", color: "text-yellow-400" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.01] border border-white/[0.04]">
+                <span className="text-2xl">{item.icon}</span>
+                <div className="flex-1">
+                  <span className="text-slate-300 text-sm font-medium">{item.label}</span>
                 </div>
-              );
-            })}
+                <span className={`font-bold text-sm ${item.color}`}>{item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Daily Challenge Banner */}
-      <div className="bg-gradient-to-r from-rose-900/40 to-indigo-900/40 border border-rose-500/20 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-rose-500/20 border border-rose-500/30 flex items-center justify-center text-2xl">
-            🎯
-          </div>
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-rose-400 text-sm font-semibold uppercase tracking-wider">Défi du jour</span>
-              <span className="bg-rose-500/20 text-rose-400 text-xs px-2 py-0.5 rounded-full border border-rose-500/30">
-                +2x points
-              </span>
-            </div>
-            <p className="text-white font-semibold">Quiz Mixte — Toutes catégories confondues</p>
-            <p className="text-slate-400 text-sm">10 questions · Timer 15s · Difficulté aléatoire</p>
-          </div>
-        </div>
-        <Link
-          href="/quiz?mode=daily"
-          className="px-5 py-2.5 bg-rose-500 hover:bg-rose-600 text-white font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 shadow-lg shadow-rose-500/20 whitespace-nowrap"
-        >
-          Relever le défi →
+      <DailyBanner />
+
+      {/* Footer */}
+      <div className="mt-12 pt-6 border-t border-white/[0.04] flex items-center justify-center gap-4 text-xs text-slate-700 pb-4">
+        <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">
+          Mentions Légales
         </Link>
+        <span>&middot;</span>
+        <Link href="/confidentialite" className="hover:text-slate-400 transition-colors">
+          Confidentialité
+        </Link>
+        <span>&middot;</span>
+        <span>Vibe Quiz Master &copy; 2026</span>
       </div>
     </div>
   );

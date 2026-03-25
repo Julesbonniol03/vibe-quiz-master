@@ -1,0 +1,1952 @@
+[
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Acceuil",
+      "Accueil",
+      "Accueuil",
+      "Acueil"
+    ],
+    "correct_index": 1,
+    "explanation": "On écrit 'accueil' avec le u avant le e. Le groupe 'ueil' s'écrit ainsi après c et g."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Il ___ parti hier.",
+    "options": [
+      "est",
+      "et",
+      "ai",
+      "es"
+    ],
+    "correct_index": 0,
+    "explanation": "'Il est parti' utilise l'auxiliaire être à la 3e personne du singulier."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot est correctement orthographié ?",
+    "options": [
+      "Occurence",
+      "Ocurrence",
+      "Occurrence",
+      "Ocurence"
+    ],
+    "correct_index": 2,
+    "explanation": "'Occurrence' prend deux c et deux r. Astuce : 2c, 2r."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : ___ sont partis très tôt.",
+    "options": [
+      "Ces",
+      "Ses",
+      "C'est",
+      "S'est"
+    ],
+    "correct_index": 1,
+    "explanation": "'Ses' est un déterminant possessif (les siens). 'Ces' est démonstratif (ceux-là)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Je vais au coiffeur",
+      "Je vais chez le coiffeur",
+      "Je vais dans le coiffeur",
+      "Je vais vers le coiffeur"
+    ],
+    "correct_index": 1,
+    "explanation": "On va 'chez' une personne (chez le coiffeur, chez le médecin), pas 'au'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le pluriel de 'un œil' ?",
+    "options": [
+      "Des œils",
+      "Des oeuils",
+      "Des yeux",
+      "Des yeuxs"
+    ],
+    "correct_index": 2,
+    "explanation": "'Œil' a un pluriel irrégulier : 'des yeux'. C'est l'un des rares mots français avec un pluriel totalement différent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Elle ___ mangé une pomme.",
+    "options": [
+      "à",
+      "a",
+      "as",
+      "ah"
+    ],
+    "correct_index": 1,
+    "explanation": "'A' sans accent est le verbe avoir conjugué. 'À' avec accent est une préposition."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Aparament",
+      "Apparemment",
+      "Apparament",
+      "Aparemment"
+    ],
+    "correct_index": 1,
+    "explanation": "'Apparemment' prend deux p et se termine par -emment (comme les adverbes formés sur des adjectifs en -ent)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Je ___ content de te voir.",
+    "options": [
+      "suit",
+      "suis",
+      "sui",
+      "suie"
+    ],
+    "correct_index": 1,
+    "explanation": "'Je suis' est la conjugaison du verbe être à la 1re personne du singulier au présent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot est bien écrit ?",
+    "options": [
+      "Dévelopement",
+      "Développement",
+      "Developpement",
+      "Dévellopement"
+    ],
+    "correct_index": 1,
+    "explanation": "'Développement' prend deux p et un seul l. Le verbe 'développer' prend aussi deux p."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Il fait ___ dehors.",
+    "options": [
+      "beau",
+      "bau",
+      "bo",
+      "beaux"
+    ],
+    "correct_index": 0,
+    "explanation": "'Il fait beau' : l'adjectif est invariable dans cette expression impersonnelle."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Comme même",
+      "Quand même",
+      "Quant même",
+      "Comment même"
+    ],
+    "correct_index": 1,
+    "explanation": "L'expression correcte est 'quand même'. 'Comme même' est une erreur très fréquente à l'oral."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le féminin de 'un héros' ?",
+    "options": [
+      "Une héroine",
+      "Une héroïne",
+      "Une hérose",
+      "Une hérosse"
+    ],
+    "correct_index": 1,
+    "explanation": "Le féminin de 'héros' est 'héroïne' avec un tréma sur le i pour marquer la diérèse."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : ___ va bien aujourd'hui.",
+    "options": [
+      "Sa",
+      "Ça",
+      "Ca",
+      "Çà"
+    ],
+    "correct_index": 1,
+    "explanation": "'Ça' (avec cédille) est la contraction de 'cela'. 'Sa' est un possessif. 'Ca' sans cédille n'existe pas."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Language",
+      "Langage",
+      "Langague",
+      "Languague"
+    ],
+    "correct_index": 1,
+    "explanation": "En français, on écrit 'langage' sans u après le g. Attention à l'anglicisme 'language'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Ils ___ arrivés en retard.",
+    "options": [
+      "son",
+      "sont",
+      "sons",
+      "s'ont"
+    ],
+    "correct_index": 1,
+    "explanation": "'Sont' est le verbe être au présent, 3e personne du pluriel. 'Son' est un possessif singulier."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot est correct ?",
+    "options": [
+      "Parmis",
+      "Parmi",
+      "Parmit",
+      "Parmie"
+    ],
+    "correct_index": 1,
+    "explanation": "'Parmi' ne prend jamais de s final, contrairement à 'hormis' qui en prend un."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Elle est ___ jolie.",
+    "options": [
+      "très",
+      "trés",
+      "trè",
+      "tres"
+    ],
+    "correct_index": 0,
+    "explanation": "'Très' prend un accent grave sur le e, pas un accent aigu."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "J'ai été au cinéma",
+      "Je suis été au cinéma",
+      "J'ai suis au cinéma",
+      "Je été au cinéma"
+    ],
+    "correct_index": 0,
+    "explanation": "Le passé composé de 'être' se forme avec l'auxiliaire avoir : 'j'ai été'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le bon mot ?",
+    "options": [
+      "Entretemps",
+      "Entre-temps",
+      "Entretems",
+      "Entre temps"
+    ],
+    "correct_index": 1,
+    "explanation": "'Entre-temps' s'écrit avec un trait d'union. La forme soudée 'entretemps' est aussi acceptée par les rectifications de 1990."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "La robe qu'elle a mise",
+      "La robe qu'elle a mis",
+      "La robe qu'elle a mit",
+      "La robe qu'elle a mie"
+    ],
+    "correct_index": 0,
+    "explanation": "Le participe passé 'mis' s'accorde avec le COD 'la robe' placé avant : 'mise' (féminin singulier)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Les fleurs que j'ai ___.",
+    "options": [
+      "cueilli",
+      "cueillis",
+      "cueillies",
+      "cueille"
+    ],
+    "correct_index": 2,
+    "explanation": "Avec avoir, le participe passé s'accorde avec le COD placé avant. 'Les fleurs' est féminin pluriel → 'cueillies'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Malgré que je sois fatigué",
+      "Bien que je sois fatigué",
+      "Malgré que je suis fatigué",
+      "Bien que je suis fatigué"
+    ],
+    "correct_index": 1,
+    "explanation": "'Malgré que' est considéré comme incorrect par les puristes. On dit 'bien que' + subjonctif, ou 'malgré' + nom."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Après qu'il ___ parti, elle pleura.",
+    "options": [
+      "soit",
+      "fut",
+      "ait été",
+      "fût"
+    ],
+    "correct_index": 1,
+    "explanation": "'Après que' se construit avec l'indicatif, pas le subjonctif. 'Après qu'il fut parti' (passé antérieur)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le subjonctif présent de 'savoir' à la 1re personne ?",
+    "options": [
+      "Que je sais",
+      "Que je save",
+      "Que je sache",
+      "Que je saive"
+    ],
+    "correct_index": 2,
+    "explanation": "Le subjonctif de 'savoir' est irrégulier : que je sache, que tu saches, qu'il sache..."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Elle s'est ___ les mains.",
+    "options": [
+      "lavé",
+      "lavée",
+      "lavés",
+      "lavées"
+    ],
+    "correct_index": 0,
+    "explanation": "'Les mains' est COD placé après → pas d'accord. 'Elle s'est lavé les mains.' Le 's'' est COI (à elle-même)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Dilemne",
+      "Dilemme",
+      "Dilème",
+      "Dillemme"
+    ],
+    "correct_index": 1,
+    "explanation": "'Dilemme' prend deux m et un e final. Attention à ne pas écrire 'dilemne' par analogie avec 'indemne'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase contient une erreur ?",
+    "options": [
+      "Ci-joint les documents",
+      "Ci-jointe la facture",
+      "Les documents ci-joints",
+      "La facture ci-joint"
+    ],
+    "correct_index": 3,
+    "explanation": "Placé après le nom, 'ci-joint' s'accorde : 'la facture ci-jointe'. Avant le nom ou en tête de phrase, il est invariable."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : ___ les efforts qu'il a fournis.",
+    "options": [
+      "Vu",
+      "Vue",
+      "Vus",
+      "Vues"
+    ],
+    "correct_index": 0,
+    "explanation": "Placé devant le nom, 'vu' est invariable (comme une préposition) : 'Vu les efforts'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Des chemises orange",
+      "Des chemises oranges",
+      "Des chemises orangées",
+      "Des chemises d'orange"
+    ],
+    "correct_index": 0,
+    "explanation": "Les adjectifs de couleur dérivés d'un nom (orange, marron, crème) sont invariables : des chemises orange."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Il faut que tu ___ à l'heure.",
+    "options": [
+      "viens",
+      "viennes",
+      "vient",
+      "venais"
+    ],
+    "correct_index": 1,
+    "explanation": "Après 'il faut que', on utilise le subjonctif. 'Venir' au subjonctif : que tu viennes."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Conscienscieux",
+      "Consciencieux",
+      "Conscientieux",
+      "Conciencieux"
+    ],
+    "correct_index": 1,
+    "explanation": "'Consciencieux' vient de 'conscience'. On garde le groupe -scien- et on ajoute -cieux."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Elle s'est ___ à la tâche.",
+    "options": [
+      "attelé",
+      "attelée",
+      "atteler",
+      "attelés"
+    ],
+    "correct_index": 1,
+    "explanation": "Verbe pronominal réfléchi : le sujet fait l'action sur lui-même. 'Elle' est féminin → 'attelée'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Pallier à un problème",
+      "Pallier un problème",
+      "Palier à un problème",
+      "Palier un problème"
+    ],
+    "correct_index": 1,
+    "explanation": "'Pallier' est transitif direct : on pallie un problème (sans 'à'). De plus, 'pallier' prend deux l."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel pluriel est correct ?",
+    "options": [
+      "Des gentleman",
+      "Des gentlemans",
+      "Des gentlemen",
+      "Des gentlemens"
+    ],
+    "correct_index": 2,
+    "explanation": "'Gentleman' suit le pluriel anglais : 'gentlemen'. En français, 'gentlemans' est aussi toléré."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Quelle que ___ la raison, je refuse.",
+    "options": [
+      "soi",
+      "soie",
+      "soit",
+      "sois"
+    ],
+    "correct_index": 2,
+    "explanation": "'Quelle que soit' : 'soit' est le subjonctif de 'être'. 'Quelle' s'accorde avec le sujet."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Ils se sont téléphoné",
+      "Ils se sont téléphonés",
+      "Ils se sont téléphoné(e)s",
+      "Ils se se sont téléphoner"
+    ],
+    "correct_index": 0,
+    "explanation": "On téléphone 'à' quelqu'un : le 'se' est COI → pas d'accord du participe passé."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Une demi-heure",
+      "Une demie-heure",
+      "Une demi heure",
+      "Une demie heure"
+    ],
+    "correct_index": 0,
+    "explanation": "Placé avant le nom avec trait d'union, 'demi' est invariable : une demi-heure. Après le nom, il s'accorde : une heure et demie."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Il est parti ___ qu'il pleuve.",
+    "options": [
+      "quoi que",
+      "quoique",
+      "quoi qu'",
+      "quoiqu'"
+    ],
+    "correct_index": 3,
+    "explanation": "'Quoique' (en un mot) = bien que. 'Quoi que' (en deux mots) = quelle que soit la chose que. Ici, c'est 'quoiqu'il pleuve'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Abbération",
+      "Abérration",
+      "Aberration",
+      "Abération"
+    ],
+    "correct_index": 2,
+    "explanation": "'Aberration' prend un seul b et deux r. Du latin 'aberratio'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Les enfants se sont ___.",
+    "options": [
+      "disputé",
+      "disputés",
+      "disputées",
+      "disputer"
+    ],
+    "correct_index": 1,
+    "explanation": "Se disputer : verbe pronominal réciproque. Le pronom 'se' est COD → accord avec le sujet 'les enfants' (masculin pluriel)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Je m'en rappelle",
+      "Je me le rappelle",
+      "Je m'en souviens",
+      "Je me souviens de lui"
+    ],
+    "correct_index": 2,
+    "explanation": "On dit 'se souvenir de' ou 'se rappeler' (sans de). 'Je m'en rappelle' est incorrect ; on dit 'je m'en souviens' ou 'je me le rappelle'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel accord est correct ?",
+    "options": [
+      "Elles se sont rendu compte",
+      "Elles se sont rendues compte",
+      "Elles se sont rendus compte",
+      "Elles se sont rendue compte"
+    ],
+    "correct_index": 0,
+    "explanation": "Dans 'se rendre compte', le COD est 'compte' → le participe ne s'accorde pas avec le sujet. 'Se' est COI."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : C'est l'histoire ___ je t'ai parlé.",
+    "options": [
+      "que",
+      "dont",
+      "de laquelle",
+      "qui"
+    ],
+    "correct_index": 1,
+    "explanation": "'Parler de quelque chose' → le pronom relatif est 'dont' (= de laquelle). 'L'histoire dont je t'ai parlé.'"
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Aquérir",
+      "Acquérir",
+      "Aquerir",
+      "Acquèrir"
+    ],
+    "correct_index": 1,
+    "explanation": "'Acquérir' prend 'cqu' au début. Même famille : acquisition, acquis, acquéreur."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Les pommes que j'ai ___ manger.",
+    "options": [
+      "laissé",
+      "laissée",
+      "laissées",
+      "laisser"
+    ],
+    "correct_index": 0,
+    "explanation": "Suivi d'un infinitif, le participe passé de 'laisser' reste invariable selon les rectifications de 1990."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle forme est correcte ?",
+    "options": [
+      "Au temps pour moi",
+      "Autant pour moi",
+      "Aux temps pour moi",
+      "Autans pour moi"
+    ],
+    "correct_index": 0,
+    "explanation": "L'expression correcte est 'au temps pour moi', d'origine militaire. 'Autant pour moi' est toléré mais contesté."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel mot est correct ?",
+    "options": [
+      "Connection",
+      "Connexion",
+      "Conection",
+      "Connxion"
+    ],
+    "correct_index": 1,
+    "explanation": "En français, on écrit 'connexion' avec un x. 'Connection' est l'orthographe anglaise."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : La personne ___ j'ai rencontrée.",
+    "options": [
+      "que",
+      "qui",
+      "dont",
+      "à qui"
+    ],
+    "correct_index": 0,
+    "explanation": "'Rencontrer quelqu'un' (COD) → le pronom relatif COD est 'que'. 'La personne que j'ai rencontrée.'"
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Ils habitent en face de chez moi",
+      "Ils habitent en face chez moi",
+      "Ils habitent face de moi",
+      "Ils habitent en face de moi"
+    ],
+    "correct_index": 0,
+    "explanation": "'En face de chez moi' est la construction correcte. 'En face de moi' signifie directement devant moi."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel accord est correct ?",
+    "options": [
+      "Elle s'est laissée tomber",
+      "Elle s'est laissé tomber",
+      "Elle s'est laissés tomber",
+      "Elle s'est laisse tomber"
+    ],
+    "correct_index": 1,
+    "explanation": "Devant un infinitif, 'laissé' est invariable (rectifications 1990). Le sujet fait l'action de l'infinitif."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Les efforts qu'il a ___ fournir.",
+    "options": [
+      "dû",
+      "du",
+      "due",
+      "dus"
+    ],
+    "correct_index": 0,
+    "explanation": "'Dû' suivi d'un infinitif reste invariable. Le COD est l'infinitif 'fournir', pas 'les efforts'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase utilise correctement le passé simple ?",
+    "options": [
+      "Il mourra à 80 ans",
+      "Il mourut à 80 ans",
+      "Il moura à 80 ans",
+      "Il mourrit à 80 ans"
+    ],
+    "correct_index": 1,
+    "explanation": "Le passé simple de 'mourir' est 'il mourut'. 'Il mourra' est le futur simple."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le subjonctif imparfait de 'avoir' à la 3e personne ?",
+    "options": [
+      "Qu'il ait",
+      "Qu'il eut",
+      "Qu'il eût",
+      "Qu'il aurait"
+    ],
+    "correct_index": 2,
+    "explanation": "Le subjonctif imparfait de 'avoir' : qu'il eût (avec accent circonflexe). Sans accent, c'est le passé simple."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Quelque ___ qu'elles soient.",
+    "options": [
+      "intelligentes",
+      "intelligente",
+      "intelligent",
+      "intelligents"
+    ],
+    "correct_index": 0,
+    "explanation": "'Quelque + adjectif + que + subjonctif' : 'quelque' est ici adverbe mais l'adjectif s'accorde avec le sujet."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Il se peut qu'il vienne",
+      "Il se peut qu'il vient",
+      "Il se peut qu'il viendrait",
+      "Il se peut qu'il viendra"
+    ],
+    "correct_index": 0,
+    "explanation": "'Il se peut que' exige le subjonctif : qu'il vienne. C'est une expression de doute/possibilité."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel accord est correct dans cette phrase ?",
+    "options": [
+      "Elle s'est plu à le contredire",
+      "Elle s'est plue à le contredire",
+      "Elle s'est plus à le contredire",
+      "Elle s'est plut à le contredire"
+    ],
+    "correct_index": 0,
+    "explanation": "'Se plaire à' : le pronom 'se' est COI (plaire à soi-même). Le participe passé reste invariable : 'plu'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Il nous a ___ de bons conseils.",
+    "options": [
+      "prodigué",
+      "prodigués",
+      "prodiguée",
+      "prodiguées"
+    ],
+    "correct_index": 0,
+    "explanation": "Le COD 'de bons conseils' est placé après le verbe → pas d'accord. 'Nous' est COI (prodiguer à nous)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est l'orthographe correcte ?",
+    "options": [
+      "Idiosyncrasie",
+      "Idiosynchraise",
+      "Idyosincrasie",
+      "Idiosincrasie"
+    ],
+    "correct_index": 0,
+    "explanation": "'Idiosyncrasie' vient du grec idios (propre) et synkrasis (mélange). Il désigne un tempérament particulier."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le participe passé correct ?",
+    "options": [
+      "Les dix euros que ce livre m'a coûté",
+      "Les dix euros que ce livre m'a coûtés",
+      "Les dix euros que ce livre m'a coûtée",
+      "Les dix euros que ce livre m'a coûter"
+    ],
+    "correct_index": 0,
+    "explanation": "'Coûter' au sens propre (prix) est intransitif : le participe passé est invariable. Au sens figuré (les efforts que ça m'a coûtés), il peut s'accorder."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez avec le bon temps : S'il ___ venu, je l'aurais su.",
+    "options": [
+      "serait",
+      "était",
+      "eût été",
+      "fut"
+    ],
+    "correct_index": 1,
+    "explanation": "Dans une hypothèse irréelle du passé : Si + plus-que-parfait, conditionnel passé. 'S'il était venu' (plus-que-parfait)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Ils se sont succédé",
+      "Ils se sont succédés",
+      "Ils se sont succèdés",
+      "Ils se sont succéder"
+    ],
+    "correct_index": 0,
+    "explanation": "'Succéder à' : le pronom 'se' est COI → pas d'accord. On succède 'à' quelqu'un."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie le mot 'obséquieux' ?",
+    "options": [
+      "Irrespectueux et grossier",
+      "Excessivement poli et servile",
+      "Obsédé par les détails",
+      "Triste et mélancolique"
+    ],
+    "correct_index": 1,
+    "explanation": "'Obséquieux' signifie qui manifeste une politesse, une déférence excessives. Du latin obsequiosus."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Les histoires qu'elle s'est ___.",
+    "options": [
+      "raconté",
+      "racontée",
+      "racontées",
+      "racontés"
+    ],
+    "correct_index": 2,
+    "explanation": "'Se raconter des histoires' : le COD 'les histoires' (qu') est placé avant → accord au féminin pluriel."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase utilise correctement 'dont' ?",
+    "options": [
+      "C'est de cela dont je parle",
+      "C'est cela dont je parle",
+      "C'est cela de dont je parle",
+      "C'est de cela que je parle"
+    ],
+    "correct_index": 1,
+    "explanation": "'Dont' remplace déjà 'de'. Dire 'de cela dont' est un pléonasme. On dit 'c'est cela dont je parle' ou 'c'est de cela que je parle'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Elles se sont ri de nous",
+      "Elles se sont ries de nous",
+      "Elles se sont rit de nous",
+      "Elles se sont rirent de nous"
+    ],
+    "correct_index": 0,
+    "explanation": "'Se rire de' : le pronom 'se' est COI → le participe 'ri' reste invariable. Même règle que 'se plaire', 'se succéder'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'un hapax' ?",
+    "options": [
+      "Un mot qui n'apparaît qu'une seule fois dans un corpus",
+      "Une faute de grammaire courante",
+      "Un accent régional",
+      "Un mot emprunté à l'anglais"
+    ],
+    "correct_index": 0,
+    "explanation": "Un hapax (du grec 'une seule fois') est un mot qui n'apparaît qu'une seule fois dans un texte ou un corpus donné."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : La moitié des élèves ___ réussi.",
+    "options": [
+      "a",
+      "ont",
+      "as",
+      "on"
+    ],
+    "correct_index": 1,
+    "explanation": "Avec 'la moitié de + pluriel', l'accord se fait généralement au pluriel si on insiste sur la pluralité : 'ont réussi'. L'accord au singulier ('a') est aussi accepté."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle orthographe est correcte ?",
+    "options": [
+      "Onomatopé",
+      "Onomatopée",
+      "Onomatoppée",
+      "Onomathopée"
+    ],
+    "correct_index": 1,
+    "explanation": "'Onomatopée' vient du grec onomatopoiia. C'est un mot qui imite un son (boum, splash, miaou)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le bon usage ?",
+    "options": [
+      "La gent féminine",
+      "La gente féminine",
+      "La gents féminine",
+      "La gens féminine"
+    ],
+    "correct_index": 0,
+    "explanation": "'La gent' (sans e ni s) désigne une catégorie de personnes. C'est un nom féminin singulier. 'Gente' et 'gents' sont incorrects."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Elles se sont ___ la main.",
+    "options": [
+      "serrée",
+      "serré",
+      "serrées",
+      "serrés"
+    ],
+    "correct_index": 1,
+    "explanation": "'Se serrer la main' : le COD est 'la main' (placé après) → pas d'accord. 'Se' est COI."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Resaurant",
+      "Restaurant",
+      "Resterant",
+      "Restaurent"
+    ],
+    "correct_index": 1,
+    "explanation": "'Restaurant' vient du verbe 'restaurer'. Attention à ne pas oublier le 'au'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Je ne sais pas ___ tu parles.",
+    "options": [
+      "de quoi",
+      "de que",
+      "dont quoi",
+      "que quoi"
+    ],
+    "correct_index": 0,
+    "explanation": "'Parler de quelque chose' → pronom interrogatif indirect : 'de quoi tu parles' ou 'de quoi tu parles'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Ils se sont aperçus de l'erreur",
+      "Ils se sont aperçu de l'erreur",
+      "Ils se sont apperçus de l'erreur",
+      "Ils se sont aperçu de l'erreurs"
+    ],
+    "correct_index": 0,
+    "explanation": "'S'apercevoir de' : verbe essentiellement pronominal → accord avec le sujet. 'Ils' masc. pluriel → 'aperçus'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Cet été-là",
+      "Cette été-là",
+      "Cet étée-là",
+      "Cette étée-là"
+    ],
+    "correct_index": 0,
+    "explanation": "'Été' est un nom masculin : on dit 'cet été' et non 'cette été'. Même au sens de la saison."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le contraire de 'synonyme' ?",
+    "options": [
+      "Homonyme",
+      "Antonyme",
+      "Paronyme",
+      "Acronyme"
+    ],
+    "correct_index": 1,
+    "explanation": "Un antonyme est un mot de sens contraire. Un synonyme est un mot de même sens. Un homonyme se prononce pareil."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : ___ tu viens demain ?",
+    "options": [
+      "Est-ce que",
+      "Es-ce que",
+      "Ai-ce que",
+      "Et-ce que"
+    ],
+    "correct_index": 0,
+    "explanation": "La locution interrogative s'écrit 'est-ce que' (verbe être + ce + que)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Elle s'est ___ dire qu'il partirait.",
+    "options": [
+      "entendue",
+      "entendu",
+      "entendus",
+      "entendues"
+    ],
+    "correct_index": 1,
+    "explanation": "Quand le sujet subit l'action de l'infinitif (elle n'a pas dit elle-même), le participe reste invariable."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Enveloppe",
+      "Enveloppe",
+      "Envellopre",
+      "Enveloppe"
+    ],
+    "correct_index": 0,
+    "explanation": "'Enveloppe' prend deux p et un seul l. C'est un piège fréquent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon genre ?",
+    "options": [
+      "Un espèce de monstre",
+      "Une espèce de monstre",
+      "Un espèce d'monstre",
+      "Des espèces de monstre"
+    ],
+    "correct_index": 1,
+    "explanation": "'Espèce' est toujours féminin : 'une espèce de'. Même devant un nom masculin : une espèce de monstre."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Ils s'en sont accaparés",
+      "Ils se sont accaparé le pouvoir",
+      "Ils s'en sont accaparé",
+      "Ils se sont accaparés du pouvoir"
+    ],
+    "correct_index": 1,
+    "explanation": "'Accaparer' est transitif direct (accaparer quelque chose). 'S'accaparer de' est incorrect. Le participe ne s'accorde pas ici car le COD est après."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : ___ froid, ils sont restés à l'intérieur.",
+    "options": [
+      "Ayant",
+      "Étant",
+      "Faisant",
+      "Faisant du"
+    ],
+    "correct_index": 2,
+    "explanation": "L'expression correcte est 'faisant froid' (participe présent de 'faire'). Il fait froid → Faisant froid."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le passé simple correct de 'vaincre' ?",
+    "options": [
+      "Il vaincut",
+      "Il vainqua",
+      "Il vainquit",
+      "Il vainça"
+    ],
+    "correct_index": 2,
+    "explanation": "Le passé simple de 'vaincre' est : je vainquis, tu vainquis, il vainquit. La base est 'vainqu-'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Aggressif",
+      "Agressif",
+      "Agresif",
+      "Agresssif"
+    ],
+    "correct_index": 1,
+    "explanation": "'Agressif' ne prend qu'un seul g, contrairement à l'anglais 'aggressive'. Même chose pour 'agression'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Il préfère rester ___ voyager.",
+    "options": [
+      "plutôt que",
+      "plutôt que de",
+      "plus tôt que",
+      "plutot que"
+    ],
+    "correct_index": 1,
+    "explanation": "Devant un infinitif, on utilise 'plutôt que de' : il préfère rester plutôt que de voyager."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'acrimonie' ?",
+    "options": [
+      "Mauvaise humeur agressive",
+      "Cérémonie religieuse",
+      "Crime passionnel",
+      "Patrimoine historique"
+    ],
+    "correct_index": 0,
+    "explanation": "L'acrimonie désigne une disposition de mauvaise humeur qui s'exprime par des propos acerbes et blessants."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Il a l'air malin",
+      "Il a l'air malins",
+      "Il a l'aire malin",
+      "Il a l'air maline"
+    ],
+    "correct_index": 0,
+    "explanation": "'Avoir l'air' + adjectif : l'adjectif s'accorde avec le sujet ('il' masculin singulier) → 'malin'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Elle a l'air contente",
+      "Elle a l'air content",
+      "Elle a l'air contents",
+      "Elle a l'air contentée"
+    ],
+    "correct_index": 0,
+    "explanation": "'Avoir l'air' + adjectif : l'adjectif s'accorde avec le sujet. 'Elle' → féminin → 'contente'. Les deux accords sont acceptés."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : C'est nous qui ___ raison.",
+    "options": [
+      "a",
+      "avons",
+      "avez",
+      "ont"
+    ],
+    "correct_index": 1,
+    "explanation": "Après 'c'est nous qui', le verbe s'accorde avec 'nous' (1re personne du pluriel) : 'avons'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Cauchemard",
+      "Cauchemar",
+      "Cauchmar",
+      "Cauchemarre"
+    ],
+    "correct_index": 1,
+    "explanation": "'Cauchemar' ne prend pas de d final. L'erreur vient de l'analogie avec des mots comme 'buvard'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Ils ___ à la maison.",
+    "options": [
+      "rentre",
+      "rentres",
+      "rentrent",
+      "rentrents"
+    ],
+    "correct_index": 2,
+    "explanation": "Avec 'ils' (3e personne du pluriel), les verbes du 1er groupe se terminent en -ent : 'rentrent'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel mot est invariable ?",
+    "options": [
+      "Beau",
+      "Toujours",
+      "Petit",
+      "Grand"
+    ],
+    "correct_index": 1,
+    "explanation": "'Toujours' est un adverbe, donc invariable. Les adjectifs (beau, petit, grand) varient en genre et en nombre."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est la règle pour 'quelque' devant un nombre ?",
+    "options": [
+      "Toujours variable",
+      "Toujours invariable",
+      "Variable au pluriel",
+      "Variable au féminin"
+    ],
+    "correct_index": 1,
+    "explanation": "Devant un nombre, 'quelque' est adverbe (= environ) et donc invariable : 'quelque deux cents personnes'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Les nouvelles qu'il m'a ___.",
+    "options": [
+      "appris",
+      "apprise",
+      "apprises",
+      "apprient"
+    ],
+    "correct_index": 2,
+    "explanation": "Le COD 'les nouvelles' (féminin pluriel) est placé avant → le participe s'accorde : 'apprises'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Quoiqu'il en soit",
+      "Quoi qu'il en soit",
+      "Quoi qui en soit",
+      "Quoique en soit"
+    ],
+    "correct_index": 1,
+    "explanation": "'Quoi qu'il en soit' s'écrit en trois mots. 'Quoi que' = quelle que soit la chose. 'Quoique' = bien que."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le féminin de 'frais' ?",
+    "options": [
+      "Fraîs",
+      "Fraiche",
+      "Fraîche",
+      "Freiche"
+    ],
+    "correct_index": 2,
+    "explanation": "Le féminin de 'frais' est 'fraîche' avec un accent circonflexe sur le î. La graphie 'fraiche' (sans accent) est acceptée depuis 1990."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Rythme",
+      "Rithme",
+      "Rhythme",
+      "Ritme"
+    ],
+    "correct_index": 0,
+    "explanation": "'Rythme' s'écrit avec un y et un h. Du grec 'rhythmos'. L'adjectif est 'rythmique'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Elle s'est ___ de son erreur.",
+    "options": [
+      "repentie",
+      "repenti",
+      "repentis",
+      "repentue"
+    ],
+    "correct_index": 0,
+    "explanation": "'Se repentir' est un verbe essentiellement pronominal → accord avec le sujet. 'Elle' féminin → 'repentie'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : ___ amis sont venus.",
+    "options": [
+      "Leur",
+      "Leurs",
+      "Leure",
+      "Leures"
+    ],
+    "correct_index": 1,
+    "explanation": "'Leurs' prend un s quand il détermine un nom pluriel : 'leurs amis'. 'Leur' (sans s) devant un singulier : 'leur ami'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Adresse",
+      "Addresse",
+      "Adrese",
+      "Addrèsse"
+    ],
+    "correct_index": 0,
+    "explanation": "'Adresse' ne prend qu'un seul d en français, contrairement à l'anglais 'address'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Il ___ beau temps.",
+    "options": [
+      "fais",
+      "fait",
+      "fai",
+      "faits"
+    ],
+    "correct_index": 1,
+    "explanation": "'Il fait beau' : verbe 'faire' conjugué à la 3e personne du singulier → 'fait'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Toute la famille est venue",
+      "Toute la famille sont venus",
+      "Toutes la famille est venue",
+      "Tout la famille est venue"
+    ],
+    "correct_index": 0,
+    "explanation": "Le sujet est 'la famille' (féminin singulier) → le verbe est au singulier et le participe s'accorde au féminin."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Fût-___ la dernière fois.",
+    "options": [
+      "ce",
+      "se",
+      "ce que",
+      "ce-ce"
+    ],
+    "correct_index": 0,
+    "explanation": "'Fût-ce' est une locution conjonctive au subjonctif imparfait signifiant 'même si c'était'. L'accent sur 'fût' est essentiel."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Je peux pas venir",
+      "Je ne peux pas venir",
+      "Je ne peux venir pas",
+      "Je peux ne pas venir"
+    ],
+    "correct_index": 1,
+    "explanation": "La négation complète est 'ne... pas'. 'Je ne peux pas venir' est la forme correcte. 'Je peux pas' est familier."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel mot est bien orthographié ?",
+    "options": [
+      "Nénuphare",
+      "Nénuphar",
+      "Nénufar",
+      "Nénufard"
+    ],
+    "correct_index": 1,
+    "explanation": "L'orthographe traditionnelle est 'nénuphar' avec ph. Les rectifications de 1990 acceptent 'nénufar'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'une anaphore' en rhétorique ?",
+    "options": [
+      "Répétition d'un mot en début de phrases successives",
+      "Inversion de l'ordre des mots",
+      "Exagération volontaire",
+      "Comparaison implicite"
+    ],
+    "correct_index": 0,
+    "explanation": "L'anaphore est la répétition d'un mot ou groupe de mots au début de phrases. Ex : 'Moi, président...' (F. Hollande)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : ___ est ton nom ?",
+    "options": [
+      "Quel",
+      "Quelle",
+      "Qu'elle",
+      "Qu'el"
+    ],
+    "correct_index": 0,
+    "explanation": "'Quel' est un déterminant interrogatif qui s'accorde avec 'nom' (masculin singulier). 'Quelle' serait pour un nom féminin."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Il s'est fait avoir",
+      "Il s'est fait eu",
+      "Il s'est fais avoir",
+      "Il s'est fait avé"
+    ],
+    "correct_index": 0,
+    "explanation": "'Se faire avoir' : 'fait' suivi d'un infinitif est toujours invariable. 'Il s'est fait avoir.'"
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le pluriel de 'un vitrail' ?",
+    "options": [
+      "Des vitrails",
+      "Des vitraux",
+      "Des vitrailes",
+      "Des vitrailles"
+    ],
+    "correct_index": 1,
+    "explanation": "Les noms en -ail font leur pluriel en -aux pour certains : vitrail→vitraux, corail→coraux, émail→émaux, travail→travaux."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Definitif",
+      "Définitif",
+      "Déffinitif",
+      "Défenitif"
+    ],
+    "correct_index": 1,
+    "explanation": "'Définitif' prend un accent aigu sur le premier e et un seul f. Du latin 'definitivus'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Ni Pierre ___ Paul ne viendront.",
+    "options": [
+      "et",
+      "ni",
+      "ou",
+      "où"
+    ],
+    "correct_index": 1,
+    "explanation": "La corrélation est 'ni... ni...' : 'Ni Pierre ni Paul ne viendront.' Les deux 'ni' sont nécessaires."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Les trois heures que la réunion a ___.",
+    "options": [
+      "duré",
+      "durée",
+      "durées",
+      "durés"
+    ],
+    "correct_index": 0,
+    "explanation": "'Durer' est intransitif. 'Trois heures' est un complément circonstanciel de temps, pas un COD → invariable."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le bon mot ?",
+    "options": [
+      "Biensûr",
+      "Bien sûr",
+      "Bien sur",
+      "Biensur"
+    ],
+    "correct_index": 1,
+    "explanation": "'Bien sûr' s'écrit en deux mots avec un accent circonflexe sur le u de 'sûr'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Je préfère le café au thé",
+      "Je préfère le café que le thé",
+      "Je préfère le café du thé",
+      "Je préfère le café plutôt le thé"
+    ],
+    "correct_index": 0,
+    "explanation": "On dit 'préférer X à Y'. 'Je préfère le café au thé' est la construction correcte."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "La plupart sont venus",
+      "La plupart est venu",
+      "La plupart sont venu",
+      "La plupart est venus"
+    ],
+    "correct_index": 0,
+    "explanation": "'La plupart' entraîne l'accord au pluriel : 'la plupart sont venus'. C'est une règle de syllepse."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Il ___ du pain.",
+    "options": [
+      "mange",
+      "manges",
+      "mangent",
+      "manger"
+    ],
+    "correct_index": 0,
+    "explanation": "Avec 'il' (3e personne du singulier), le verbe du 1er groupe se termine en -e : 'il mange'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Étymologie",
+      "Éthymologie",
+      "Étimologie",
+      "Éthimologie"
+    ],
+    "correct_index": 0,
+    "explanation": "'Étymologie' s'écrit avec un y et sans h. Du grec 'etymologia' (sens vrai d'un mot)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'apocryphe' ?",
+    "options": [
+      "Très ancien et vénérable",
+      "D'authenticité douteuse",
+      "Écrit en vers",
+      "Traduit du grec"
+    ],
+    "correct_index": 1,
+    "explanation": "'Apocryphe' qualifie un texte dont l'authenticité n'est pas établie. Du grec 'apokryphos' (caché)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Malgrés",
+      "Malgrè",
+      "Malgré",
+      "Malgrés"
+    ],
+    "correct_index": 2,
+    "explanation": "'Malgré' prend un accent aigu sur le e final et ne prend jamais de s."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : C'est ___ plus belle robe.",
+    "options": [
+      "sa",
+      "ça",
+      "ça a",
+      "s'a"
+    ],
+    "correct_index": 0,
+    "explanation": "'Sa' est un déterminant possessif féminin : 'sa plus belle robe'. 'Ça' est un pronom démonstratif (= cela)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Elle s'est vu refuser l'entrée",
+      "Elle s'est vue refuser l'entrée",
+      "Elle s'est vus refuser l'entrée",
+      "Elle s'est vu refusé l'entrée"
+    ],
+    "correct_index": 0,
+    "explanation": "'Vu' suivi d'un infinitif : si le sujet subit l'action de l'infinitif (elle ne refuse pas), le participe reste invariable."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot signifie 'qui peut être mangé' ?",
+    "options": [
+      "Comestible",
+      "Combustible",
+      "Comptable",
+      "Compatible"
+    ],
+    "correct_index": 0,
+    "explanation": "'Comestible' vient du latin 'comestibilis' et signifie qui peut être consommé comme aliment."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Il est venu ___ il était malade.",
+    "options": [
+      "malgré que",
+      "alors que",
+      "bien que",
+      "puisque"
+    ],
+    "correct_index": 2,
+    "explanation": "'Bien que' + subjonctif exprime la concession. 'Malgré que' est critiqué par les grammairiens. 'Alors que' est aussi possible."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le passé simple de 'coudre' à la 3e personne ?",
+    "options": [
+      "Il couda",
+      "Il cousit",
+      "Il cousut",
+      "Il coudrit"
+    ],
+    "correct_index": 2,
+    "explanation": "Le passé simple de 'coudre' est irrégulier : je cousis, tu cousis, il cousut, nous cousîmes."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Profesionnel",
+      "Professionnel",
+      "Professionnelle",
+      "Professionel"
+    ],
+    "correct_index": 1,
+    "explanation": "'Professionnel' prend deux s et deux n. Au féminin : 'professionnelle' (avec -elle)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : Il a agi ___ connaissance de cause.",
+    "options": [
+      "en",
+      "an",
+      "dans",
+      "avec"
+    ],
+    "correct_index": 0,
+    "explanation": "L'expression figée est 'en connaissance de cause', signifiant en sachant ce qu'on fait."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Ce sont eux qui l'a dit",
+      "Ce sont eux qui l'ont dit",
+      "C'est eux qui l'a dit",
+      "C'est eux qui l'ont dit"
+    ],
+    "correct_index": 1,
+    "explanation": "Après 'ce sont eux qui', le verbe s'accorde avec 'eux' (3e personne du pluriel) : 'ont dit'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le féminin de 'beau' devant une voyelle ?",
+    "options": [
+      "Belle",
+      "Beau",
+      "Bel",
+      "Bele"
+    ],
+    "correct_index": 0,
+    "explanation": "Le féminin de 'beau' est 'belle'. Attention : devant voyelle masculine, on dit 'bel' (un bel arbre) mais le féminin reste 'belle'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Ressentir",
+      "Résentir",
+      "Resantir",
+      "Resentir"
+    ],
+    "correct_index": 0,
+    "explanation": "'Ressentir' prend deux s et un e sans accent. C'est le préfixe 're-' + 'sentir'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'un pléonasme' ?",
+    "options": [
+      "Une figure de style par opposition",
+      "Une répétition de mots de même sens",
+      "Une exagération rhétorique",
+      "Un raccourci grammatical"
+    ],
+    "correct_index": 1,
+    "explanation": "Un pléonasme est l'emploi de mots redondants. Ex : 'monter en haut', 'descendre en bas', 'voir de ses propres yeux'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Il y ___ beaucoup de monde.",
+    "options": [
+      "à",
+      "a",
+      "as",
+      "ha"
+    ],
+    "correct_index": 1,
+    "explanation": "'Il y a' : le verbe avoir sans accent. 'À' avec accent est une préposition. Astuce : remplacer par 'avait' → 'il y avait'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Des robes bleu foncé",
+      "Des robes bleues foncées",
+      "Des robes bleus foncés",
+      "Des robes bleue foncée"
+    ],
+    "correct_index": 0,
+    "explanation": "Les adjectifs de couleur composés sont invariables : des robes bleu foncé, des yeux vert clair."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Les musiciens que j'ai ___ jouer.",
+    "options": [
+      "entendu",
+      "entendus",
+      "entendue",
+      "entendues"
+    ],
+    "correct_index": 1,
+    "explanation": "Avec 'entendu' + infinitif : si le COD fait l'action de l'infinitif (les musiciens jouent), on accorde. 'Entendus' (masc. pluriel)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "J'ai fais mes devoirs",
+      "J'ai fait mes devoirs",
+      "J'ai faits mes devoirs",
+      "J'ai faite mes devoirs"
+    ],
+    "correct_index": 1,
+    "explanation": "Le participe passé de 'faire' est 'fait' (invariable ici car le COD est après)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon usage ?",
+    "options": [
+      "Aller au dentiste",
+      "Aller chez le dentiste",
+      "Aller dans le dentiste",
+      "Aller vers le dentiste"
+    ],
+    "correct_index": 1,
+    "explanation": "On va 'chez' un professionnel de santé : chez le dentiste, chez le médecin. 'Au dentiste' est familier."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est la nuance entre 'amener' et 'apporter' ?",
+    "options": [
+      "Aucune différence",
+      "Amener = personnes, apporter = objets",
+      "Amener = formel, apporter = familier",
+      "Amener = aller, apporter = revenir"
+    ],
+    "correct_index": 1,
+    "explanation": "'Amener' s'emploie pour les êtres animés (amener un ami), 'apporter' pour les objets (apporter un cadeau)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Excercice",
+      "Exercice",
+      "Exerscice",
+      "Excerscice"
+    ],
+    "correct_index": 1,
+    "explanation": "'Exercice' s'écrit avec un x puis un c. Attention à ne pas inverser les consonnes."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Complétez : La lettre que j'ai ___ d'écrire.",
+    "options": [
+      "fini",
+      "finie",
+      "finis",
+      "finies"
+    ],
+    "correct_index": 1,
+    "explanation": "Le COD 'la lettre' (féminin) est placé avant → accord du participe : 'finie'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le subjonctif présent de 'aller' à la 1re personne du pluriel ?",
+    "options": [
+      "Que nous allons",
+      "Que nous allions",
+      "Que nous aillons",
+      "Que nous alliions"
+    ],
+    "correct_index": 1,
+    "explanation": "Le subjonctif de 'aller' : que j'aille, que tu ailles, qu'il aille, que nous allions, que vous alliez, qu'ils aillent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Où ___-tu ?",
+    "options": [
+      "va",
+      "vas",
+      "vat",
+      "vais"
+    ],
+    "correct_index": 1,
+    "explanation": "Avec 'tu', le verbe 'aller' au présent prend un s : 'tu vas'. Le s est obligatoire à la 2e personne."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Entr'apercevoir",
+      "Entrapercevoir",
+      "Entre-apercevoir",
+      "Entreapercevoir"
+    ],
+    "correct_index": 1,
+    "explanation": "Depuis les rectifications de 1990, on écrit 'entrapercevoir' en un seul mot sans apostrophe ni trait d'union."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Elles se sont ___ au téléphone pendant une heure.",
+    "options": [
+      "parlé",
+      "parlée",
+      "parlées",
+      "parlés"
+    ],
+    "correct_index": 0,
+    "explanation": "'Parler à quelqu'un' : le 'se' est COI → pas d'accord. 'Elles se sont parlé.' Même règle que 'se téléphoner'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le bon pluriel ?",
+    "options": [
+      "Des journeaux",
+      "Des journaux",
+      "Des journeaus",
+      "Des journals"
+    ],
+    "correct_index": 1,
+    "explanation": "Les noms en -al font leur pluriel en -aux : journal→journaux, animal→animaux, cheval→chevaux."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Transcendant",
+      "Transcandant",
+      "Trancendant",
+      "Transandant"
+    ],
+    "correct_index": 0,
+    "explanation": "'Transcendant' s'écrit avec -scend-. Attention à ne pas confondre avec 'transcendantal' (même racine)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie 'un oxymore' ?",
+    "options": [
+      "Un mot de sens opposé",
+      "Une figure associant deux termes contradictoires",
+      "Un mot à double sens",
+      "Une phrase sans verbe"
+    ],
+    "correct_index": 1,
+    "explanation": "L'oxymore associe deux mots de sens contraire : 'une obscure clarté', 'un silence assourdissant'. Du grec oxys (aigu) et moros (stupide)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Complétez : Pierre et Marie ___ partis.",
+    "options": [
+      "est",
+      "sont",
+      "a",
+      "ont"
+    ],
+    "correct_index": 1,
+    "explanation": "Avec un sujet composé (Pierre et Marie), le verbe 'partir' utilise l'auxiliaire être au pluriel : 'sont partis'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Il faut mieux partir",
+      "Il vaut mieux partir",
+      "Il vaux mieux partir",
+      "Il faut meilleur partir"
+    ],
+    "correct_index": 1,
+    "explanation": "L'expression correcte est 'il vaut mieux' (verbe valoir). 'Il faut mieux' est une erreur courante."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Complétez : Elle ne s'est ___ de rien.",
+    "options": [
+      "douté",
+      "doutée",
+      "doutés",
+      "douter"
+    ],
+    "correct_index": 1,
+    "explanation": "'Se douter de' est un verbe pronominal subjectif → accord avec le sujet. 'Elle' féminin → 'doutée'."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Maintenant",
+      "Maintenent",
+      "Maintnant",
+      "Mentenant"
+    ],
+    "correct_index": 0,
+    "explanation": "'Maintenant' s'écrit avec -aint- puis -enant. Vient de 'main' + 'tenant' (qui tient en main)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le bon accord ?",
+    "options": [
+      "Une demi-journée",
+      "Une demie-journée",
+      "Une demi journée",
+      "Une demie journée"
+    ],
+    "correct_index": 0,
+    "explanation": "'Demi' placé avant le nom avec trait d'union est invariable. Après : 'une journée et demie' (accord)."
+  }
+]

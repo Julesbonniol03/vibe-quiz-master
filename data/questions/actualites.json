@@ -1,0 +1,1302 @@
+[
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a accueilli les Jeux olympiques d'été en 2024 ?",
+    "options": [
+      "Japon",
+      "États-Unis",
+      "France",
+      "Australie"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Jeux olympiques d'été 2024 se sont tenus à Paris, du 26 juillet au 11 août 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel réseau social a été racheté par Elon Musk et renommé 'X' ?",
+    "options": [
+      "Facebook",
+      "Instagram",
+      "Twitter",
+      "TikTok"
+    ],
+    "correct_index": 2,
+    "explanation": "Elon Musk a racheté Twitter en octobre 2022 pour 44 milliards de dollars et l'a renommé X en juillet 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel accord historique a été signé à la COP28 à Dubaï fin 2023 ?",
+    "options": [
+      "Interdiction du charbon",
+      "Transition hors des énergies fossiles",
+      "Taxe carbone mondiale",
+      "Fin des subventions pétrolières"
+    ],
+    "correct_index": 1,
+    "explanation": "La COP28 (décembre 2023) a adopté un accord appelant à une 'transition hors des énergies fossiles', une première historique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel chatbot d'IA a été lancé par OpenAI en novembre 2022 ?",
+    "options": [
+      "Gemini",
+      "Claude",
+      "ChatGPT",
+      "Copilot"
+    ],
+    "correct_index": 2,
+    "explanation": "ChatGPT, basé sur GPT-3.5, a été lancé le 30 novembre 2022 et a atteint 100 millions d'utilisateurs en 2 mois."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel conflit majeur a éclaté au Moyen-Orient le 7 octobre 2023 ?",
+    "options": [
+      "Guerre en Syrie",
+      "Conflit Israël-Hamas",
+      "Guerre au Yémen",
+      "Crise en Iran"
+    ],
+    "correct_index": 1,
+    "explanation": "Le 7 octobre 2023, le Hamas a lancé une attaque contre Israël, déclenchant une guerre à Gaza avec des conséquences humanitaires majeures."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle sonde spatiale de la NASA s'est approchée au plus près du Soleil en 2024 ?",
+    "options": [
+      "Voyager 2",
+      "James Webb",
+      "Parker Solar Probe",
+      "OSIRIS-REx"
+    ],
+    "correct_index": 2,
+    "explanation": "La sonde Parker Solar Probe a battu des records en s'approchant à environ 6 millions de km du Soleil en décembre 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays européen est entré en guerre avec la Russie en février 2022 ?",
+    "options": [
+      "Pologne",
+      "Géorgie",
+      "Moldavie",
+      "Ukraine"
+    ],
+    "correct_index": 3,
+    "explanation": "La Russie a lancé une invasion à grande échelle de l'Ukraine le 24 février 2022, provoquant la plus grande guerre en Europe depuis 1945."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise a lancé le modèle d'IA 'Gemini' en décembre 2023 ?",
+    "options": [
+      "Meta",
+      "Microsoft",
+      "Google",
+      "Apple"
+    ],
+    "correct_index": 2,
+    "explanation": "Google a lancé Gemini (anciennement Bard) en décembre 2023, son modèle d'IA multimodal concurrent de GPT-4."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays nordique a rejoint l'OTAN en 2023 après des décennies de neutralité ?",
+    "options": [
+      "Suède",
+      "Finlande",
+      "Norvège",
+      "Danemark"
+    ],
+    "correct_index": 1,
+    "explanation": "La Finlande a rejoint l'OTAN le 4 avril 2023, abandonnant sa politique de non-alignement après l'invasion russe de l'Ukraine."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle reine du Royaume-Uni est décédée en septembre 2022 ?",
+    "options": [
+      "Élisabeth Ire",
+      "Victoria",
+      "Élisabeth II",
+      "Diana"
+    ],
+    "correct_index": 2,
+    "explanation": "La reine Élisabeth II est décédée le 8 septembre 2022 à 96 ans après 70 ans de règne, la plus longue durée de l'histoire britannique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a organisé la Coupe du monde de football en 2022 ?",
+    "options": [
+      "Russie",
+      "Brésil",
+      "Qatar",
+      "Arabie Saoudite"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Qatar a accueilli la Coupe du monde 2022, la première au Moyen-Orient, remportée par l'Argentine de Lionel Messi."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle mission spatiale a rapporté des échantillons de l'astéroïde Bennu en 2023 ?",
+    "options": [
+      "Hayabusa2",
+      "OSIRIS-REx",
+      "Rosetta",
+      "DART"
+    ],
+    "correct_index": 1,
+    "explanation": "La sonde OSIRIS-REx de la NASA a largué une capsule contenant des échantillons de l'astéroïde Bennu en septembre 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel roi a succédé à Élisabeth II au Royaume-Uni ?",
+    "options": [
+      "William",
+      "Harry",
+      "Charles III",
+      "Andrew"
+    ],
+    "correct_index": 2,
+    "explanation": "Charles III est devenu roi le 8 septembre 2022 à la mort de sa mère, et a été couronné le 6 mai 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays européen a rejoint l'OTAN en mars 2024 ?",
+    "options": [
+      "Ukraine",
+      "Géorgie",
+      "Suède",
+      "Moldavie"
+    ],
+    "correct_index": 2,
+    "explanation": "La Suède a rejoint l'OTAN le 7 mars 2024, après la levée du veto de la Turquie et de la Hongrie."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel terme désigne les modèles d'IA capables de générer du texte, des images et du code ?",
+    "options": [
+      "IA étroite",
+      "IA générative",
+      "IA forte",
+      "IA symbolique"
+    ],
+    "correct_index": 1,
+    "explanation": "L'IA générative (ChatGPT, Midjourney, Claude) peut créer du contenu nouveau à partir de données d'entraînement."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel réseau social de vidéos courtes a été menacé d'interdiction aux États-Unis ?",
+    "options": [
+      "YouTube",
+      "Instagram",
+      "Snapchat",
+      "TikTok"
+    ],
+    "correct_index": 3,
+    "explanation": "TikTok, propriété de ByteDance (Chine), a été menacé d'interdiction aux États-Unis pour des raisons de sécurité nationale."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle fusée de SpaceX est la plus grande jamais construite ?",
+    "options": [
+      "Falcon 9",
+      "Falcon Heavy",
+      "Starship",
+      "Dragon"
+    ],
+    "correct_index": 2,
+    "explanation": "Starship, haute de 120 mètres, est la fusée la plus grande et puissante jamais construite, visant Mars à terme."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel phénomène climatique a provoqué des températures record en 2023 ?",
+    "options": [
+      "La Niña",
+      "El Niño",
+      "L'effet de serre",
+      "Le vortex polaire"
+    ],
+    "correct_index": 1,
+    "explanation": "El Niño, combiné au réchauffement climatique, a fait de 2023 l'année la plus chaude jamais enregistrée (+1,48°C vs. ère préindustrielle)."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle entreprise d'IA a créé Claude, l'assistant conversationnel ?",
+    "options": [
+      "OpenAI",
+      "Google",
+      "Meta",
+      "Anthropic"
+    ],
+    "correct_index": 3,
+    "explanation": "Anthropic, fondée en 2021 par d'anciens chercheurs d'OpenAI, a créé Claude, un assistant IA axé sur la sécurité."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a connu un tremblement de terre dévastateur en février 2023 ?",
+    "options": [
+      "Japon",
+      "Maroc",
+      "Turquie",
+      "Népal"
+    ],
+    "correct_index": 2,
+    "explanation": "Le 6 février 2023, un séisme de magnitude 7,8 a frappé la Turquie et la Syrie, causant plus de 50 000 morts."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle loi européenne sur l'IA a été adoptée en 2024 ?",
+    "options": [
+      "Digital Services Act",
+      "AI Act",
+      "RGPD 2",
+      "Digital Markets Act"
+    ],
+    "correct_index": 1,
+    "explanation": "L'AI Act européen, adopté en mars 2024, est la première réglementation mondiale complète sur l'intelligence artificielle."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel événement sportif s'est tenu à Paris en été 2024 ?",
+    "options": [
+      "Coupe du monde de rugby",
+      "Roland-Garros",
+      "Jeux olympiques",
+      "Euro de football"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Jeux olympiques de Paris 2024 ont réuni 10 500 athlètes de 206 pays, avec des épreuves dans des lieux emblématiques."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel président américain a été élu en novembre 2024 ?",
+    "options": [
+      "Joe Biden",
+      "Kamala Harris",
+      "Donald Trump",
+      "Ron DeSantis"
+    ],
+    "correct_index": 2,
+    "explanation": "Donald Trump a remporté l'élection présidentielle de novembre 2024, devenant le 47e président des États-Unis."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle technologie permet de créer des vidéos réalistes de personnes fictives ?",
+    "options": [
+      "Blockchain",
+      "Deepfake",
+      "NFT",
+      "Métavers"
+    ],
+    "correct_index": 1,
+    "explanation": "Les deepfakes utilisent l'IA pour créer des vidéos hyperréalistes de personnes, posant des défis éthiques majeurs."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a remporté la Coupe du monde de rugby en 2023 ?",
+    "options": [
+      "Nouvelle-Zélande",
+      "France",
+      "Afrique du Sud",
+      "Angleterre"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Afrique du Sud a remporté la Coupe du monde de rugby 2023 en France, battant la Nouvelle-Zélande en finale."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel séisme a frappé le Maroc en septembre 2023 ?",
+    "options": [
+      "Magnitude 5,2",
+      "Magnitude 6,8",
+      "Magnitude 7,5",
+      "Magnitude 8,1"
+    ],
+    "correct_index": 1,
+    "explanation": "Un séisme de magnitude 6,8 a frappé la région de Marrakech le 8 septembre 2023, causant près de 3 000 morts."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle agence spatiale a réussi un alunissage en janvier 2024 ?",
+    "options": [
+      "NASA",
+      "ESA",
+      "JAXA",
+      "ISRO"
+    ],
+    "correct_index": 2,
+    "explanation": "La JAXA (agence spatiale japonaise) a réussi l'alunissage de SLIM en janvier 2024, faisant du Japon le 5e pays à se poser sur la Lune."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle application d'IA génère des images à partir de descriptions textuelles ?",
+    "options": [
+      "ChatGPT",
+      "Midjourney",
+      "Spotify",
+      "Notion"
+    ],
+    "correct_index": 1,
+    "explanation": "Midjourney génère des images par IA à partir de descriptions textuelles (prompts), révolutionnant la création visuelle."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays africain a connu un coup d'État militaire en juillet 2023 ?",
+    "options": [
+      "Mali",
+      "Burkina Faso",
+      "Niger",
+      "Tchad"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Niger a connu un coup d'État le 26 juillet 2023, le président Bazoum étant renversé par la garde présidentielle."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel vaccin à ARN messager a été développé contre le COVID-19 ?",
+    "options": [
+      "AstraZeneca",
+      "Johnson & Johnson",
+      "Pfizer-BioNTech",
+      "Sinovac"
+    ],
+    "correct_index": 2,
+    "explanation": "Le vaccin Pfizer-BioNTech (Comirnaty) utilise la technologie ARNm, une première mondiale approuvée en décembre 2020."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel constructeur de voitures électriques est dirigé par Elon Musk ?",
+    "options": [
+      "Rivian",
+      "Lucid",
+      "Tesla",
+      "BYD"
+    ],
+    "correct_index": 2,
+    "explanation": "Tesla, fondée en 2003, est devenue le leader mondial des véhicules électriques sous la direction d'Elon Musk."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle cryptomonnaie a dépassé les 100 000 dollars fin 2024 ?",
+    "options": [
+      "Ethereum",
+      "Solana",
+      "Bitcoin",
+      "Dogecoin"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Bitcoin a franchi la barre des 100 000 dollars pour la première fois en décembre 2024, porté par l'approbation des ETF spot."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel traité international protège les fonds marins de l'exploitation minière ?",
+    "options": [
+      "Traité sur la haute mer",
+      "Convention UNCLOS",
+      "Traité BBNJ",
+      "Accord de Montego Bay"
+    ],
+    "correct_index": 2,
+    "explanation": "Le traité BBNJ (Biodiversité marine), adopté en 2023, protège la biodiversité en haute mer au-delà des juridictions nationales."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle plateforme de streaming a lancé des restrictions sur le partage de mot de passe en 2023 ?",
+    "options": [
+      "Disney+",
+      "Amazon Prime",
+      "Netflix",
+      "HBO Max"
+    ],
+    "correct_index": 2,
+    "explanation": "Netflix a mis fin au partage de mot de passe entre foyers en 2023, regagnant des millions d'abonnés payants."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise a lancé le casque Vision Pro en février 2024 ?",
+    "options": [
+      "Meta",
+      "Google",
+      "Apple",
+      "Samsung"
+    ],
+    "correct_index": 2,
+    "explanation": "Apple a lancé le Vision Pro en février 2024, un casque de réalité mixte à 3 499 dollars combinant VR et AR."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a atteint la fusion nucléaire pendant 403 secondes en 2023 ?",
+    "options": [
+      "États-Unis",
+      "France",
+      "Chine",
+      "Corée du Sud"
+    ],
+    "correct_index": 2,
+    "explanation": "Le réacteur EAST en Chine a maintenu un plasma de fusion à 70 millions de degrés pendant 403 secondes, un record mondial."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel film d'animation a dépassé le milliard de dollars au box-office en 2023 ?",
+    "options": [
+      "Élémentaire",
+      "Spider-Man: Across the Spider-Verse",
+      "Super Mario Bros. le film",
+      "Wish"
+    ],
+    "correct_index": 2,
+    "explanation": "Super Mario Bros. le film a dépassé 1,36 milliard de dollars au box-office mondial en 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle ville française a été élue capitale européenne de la culture 2024 ?",
+    "options": [
+      "Lyon",
+      "Marseille",
+      "Bourges",
+      "Montpellier"
+    ],
+    "correct_index": 2,
+    "explanation": "Bourges a été sélectionnée comme capitale européenne de la culture 2028 (la candidature française pour 2024 n'a pas abouti). Tartu (Estonie) a été capitale 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel accord de normalisation entre Israël et des pays arabes porte le nom 'Accords d'Abraham' ?",
+    "options": [
+      "Israël-Égypte",
+      "Israël-EAU et Bahreïn",
+      "Israël-Arabie Saoudite",
+      "Israël-Qatar"
+    ],
+    "correct_index": 1,
+    "explanation": "Les Accords d'Abraham (2020) ont normalisé les relations entre Israël et les EAU, Bahreïn, puis le Maroc et le Soudan."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel sport Léon Marchand domine-t-il aux JO de Paris 2024 ?",
+    "options": [
+      "Athlétisme",
+      "Natation",
+      "Judo",
+      "Escrime"
+    ],
+    "correct_index": 1,
+    "explanation": "Léon Marchand a remporté 4 médailles d'or en natation aux JO de Paris 2024, devenant le héros français des Jeux."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle guerre civile a éclaté au Soudan en avril 2023 ?",
+    "options": [
+      "Guerre entre l'armée et les FSR",
+      "Guerre entre le Nord et le Sud",
+      "Guerre entre le Soudan et l'Éthiopie",
+      "Guerre tribale"
+    ],
+    "correct_index": 0,
+    "explanation": "Un conflit entre l'armée soudanaise et les Forces de Soutien Rapide (FSR) a éclaté en avril 2023, provoquant une crise humanitaire massive."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel satellite européen a été lancé en 2023 pour étudier les exoplanètes ?",
+    "options": [
+      "Gaia",
+      "Euclid",
+      "JUICE",
+      "PLATO"
+    ],
+    "correct_index": 1,
+    "explanation": "Euclid, lancé en juillet 2023, est un télescope spatial de l'ESA dédié à l'étude de l'énergie noire et de la matière noire."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a été frappé par des incendies dévastateurs à Hawaï en août 2023 ?",
+    "options": [
+      "Australie",
+      "Grèce",
+      "Canada",
+      "États-Unis"
+    ],
+    "correct_index": 3,
+    "explanation": "Les incendies de Maui (Hawaï) en août 2023 ont détruit la ville historique de Lahaina, causant plus de 100 morts."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle technologie permet de suivre et vérifier les transactions sans intermédiaire ?",
+    "options": [
+      "Cloud computing",
+      "Blockchain",
+      "5G",
+      "IoT"
+    ],
+    "correct_index": 1,
+    "explanation": "La blockchain est un registre distribué décentralisé utilisé pour les cryptomonnaies, les NFT et de nombreuses applications."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays est devenu le 4e à réussir un alunissage en août 2023 ?",
+    "options": [
+      "Japon",
+      "Israël",
+      "Inde",
+      "Corée du Sud"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Inde a réussi l'alunissage de Chandrayaan-3 le 23 août 2023 près du pôle sud lunaire, une première historique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel film de Christopher Nolan sur le père de la bombe atomique est sorti en 2023 ?",
+    "options": [
+      "Tenet",
+      "Interstellar",
+      "Oppenheimer",
+      "Dunkerque"
+    ],
+    "correct_index": 2,
+    "explanation": "Oppenheimer (2023) a remporté 7 Oscars dont Meilleur film, racontant la vie de J. Robert Oppenheimer et le projet Manhattan."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel navigateur français a battu le record du tour du monde en solitaire ?",
+    "options": [
+      "François Gabart",
+      "Thomas Coville",
+      "Charles Caudrelier",
+      "Armel Le Cléac'h"
+    ],
+    "correct_index": 2,
+    "explanation": "Charles Caudrelier a remporté la Route du Rhum 2022. Le record du tour du monde en solitaire reste un défi pour les navigateurs français."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle molécule révolutionnaire a valu le prix Nobel de chimie 2023 ?",
+    "options": [
+      "CRISPR-Cas9",
+      "Les points quantiques",
+      "L'ARN messager",
+      "Les pérovskites"
+    ],
+    "correct_index": 1,
+    "explanation": "Le prix Nobel de chimie 2023 a récompensé Moungi Bawendi, Louis Brus et Alexei Ekimov pour la découverte des points quantiques (quantum dots)."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle chanteuse américaine a battu des records avec sa tournée 'Eras Tour' ?",
+    "options": [
+      "Beyoncé",
+      "Adele",
+      "Taylor Swift",
+      "Billie Eilish"
+    ],
+    "correct_index": 2,
+    "explanation": "Taylor Swift a généré plus de 2 milliards de dollars avec l'Eras Tour, devenant la tournée la plus lucrative de l'histoire."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel géant chinois de l'immobilier a fait défaut sur sa dette en 2023 ?",
+    "options": [
+      "Alibaba",
+      "Huawei",
+      "Evergrande",
+      "Tencent"
+    ],
+    "correct_index": 2,
+    "explanation": "Evergrande, plus grand promoteur immobilier au monde, a fait défaut sur plus de 300 milliards de dollars de dettes en 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a légalisé l'euthanasie et le suicide assisté en 2024 en Europe ?",
+    "options": [
+      "France",
+      "Portugal",
+      "Espagne",
+      "Italie"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Portugal a adopté une loi légalisant l'euthanasie et le suicide assisté en mai 2023, rejoignant les Pays-Bas et la Belgique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise d'IA a levé le plus de fonds en 2023-2024 ?",
+    "options": [
+      "Anthropic",
+      "Mistral AI",
+      "OpenAI",
+      "Stability AI"
+    ],
+    "correct_index": 2,
+    "explanation": "OpenAI a été valorisée à plus de 80 milliards de dollars début 2024, la startup d'IA la plus valorisée au monde."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a adopté le Bitcoin comme monnaie légale en 2021 ?",
+    "options": [
+      "Panama",
+      "El Salvador",
+      "Cuba",
+      "Paraguay"
+    ],
+    "correct_index": 1,
+    "explanation": "El Salvador est devenu le premier pays au monde à adopter le Bitcoin comme monnaie légale en septembre 2021."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle pandémie l'OMS a-t-elle déclarée terminée en mai 2023 ?",
+    "options": [
+      "Ebola",
+      "Grippe H1N1",
+      "COVID-19",
+      "Mpox"
+    ],
+    "correct_index": 2,
+    "explanation": "L'OMS a déclaré la fin de l'urgence sanitaire mondiale du COVID-19 le 5 mai 2023, après plus de 3 ans."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel rappeur français a rempli le Stade de France en 2023 ?",
+    "options": [
+      "Booba",
+      "Jul",
+      "Orelsan",
+      "Ninho"
+    ],
+    "correct_index": 1,
+    "explanation": "Jul est devenu le premier rappeur français à remplir le Stade de France en 2023, confirmant son statut de phénomène."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel observatoire spatial a révélé les images les plus détaillées de l'univers lointain ?",
+    "options": [
+      "Hubble",
+      "Chandra",
+      "James Webb",
+      "Spitzer"
+    ],
+    "correct_index": 2,
+    "explanation": "Le télescope spatial James Webb (JWST), lancé en 2021, a livré des images sans précédent de galaxies lointaines et d'exoplanètes."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel film Barbie a battu des records au box-office en 2023 ?",
+    "options": [
+      "Barbie de Greta Gerwig",
+      "Barbie: Princess Adventure",
+      "Barbie Dreamhouse",
+      "Barbie et le Secret des Fées"
+    ],
+    "correct_index": 0,
+    "explanation": "Barbie de Greta Gerwig avec Margot Robbie a dépassé 1,4 milliard de dollars au box-office mondial en 2023."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle startup française d'IA a été valorisée à 2 milliards d'euros en 2023 ?",
+    "options": [
+      "Hugging Face",
+      "Mistral AI",
+      "Dataiku",
+      "Criteo"
+    ],
+    "correct_index": 1,
+    "explanation": "Mistral AI, fondée en 2023 par d'anciens chercheurs de Meta et DeepMind, a atteint une valorisation de 2 milliards en quelques mois."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a lancé la mission lunaire Luna-25 en 2023, qui s'est soldée par un échec ?",
+    "options": [
+      "Chine",
+      "Inde",
+      "Russie",
+      "Japon"
+    ],
+    "correct_index": 2,
+    "explanation": "La Russie a lancé Luna-25 en août 2023, sa première mission lunaire depuis 1976, mais la sonde s'est écrasée sur la Lune."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel événement climatique extrême a touché le Canada avec des feux record en 2023 ?",
+    "options": [
+      "Inondations",
+      "Tornades",
+      "Feux de forêt",
+      "Sécheresse"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Canada a connu sa pire saison de feux de forêt en 2023, avec plus de 18 millions d'hectares brûlés, enfumant même New York."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel accord commercial géant entre 15 pays asiatiques est entré en vigueur en 2022 ?",
+    "options": [
+      "TPP",
+      "RCEP",
+      "ASEAN",
+      "APEC"
+    ],
+    "correct_index": 1,
+    "explanation": "Le RCEP (Partenariat régional économique global) est entré en vigueur en 2022, créant la plus grande zone de libre-échange au monde."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle découverte scientifique majeure a été annoncée en décembre 2022 sur la fusion nucléaire ?",
+    "options": [
+      "Fusion froide réussie",
+      "Gain net d'énergie au NIF",
+      "Réacteur commercial opérationnel",
+      "Fusion par confinement magnétique"
+    ],
+    "correct_index": 1,
+    "explanation": "Le National Ignition Facility (NIF) a annoncé en décembre 2022 avoir atteint un gain net d'énergie par fusion, une première historique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel ancien président américain a été inculpé à plusieurs reprises en 2023 ?",
+    "options": [
+      "Barack Obama",
+      "George W. Bush",
+      "Donald Trump",
+      "Bill Clinton"
+    ],
+    "correct_index": 2,
+    "explanation": "Donald Trump a été inculpé dans 4 affaires en 2023, une première pour un ancien président américain."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle ville a été dévastée par un ouragan de catégorie 5 en octobre 2023 ?",
+    "options": [
+      "Miami",
+      "Acapulco",
+      "La Havane",
+      "Cancún"
+    ],
+    "correct_index": 1,
+    "explanation": "L'ouragan Otis a frappé Acapulco (Mexique) en octobre 2023, passant de tempête tropicale à catégorie 5 en quelques heures."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays européen a interdit la vente de voitures neuves à essence/diesel à partir de 2035 ?",
+    "options": [
+      "Allemagne",
+      "France",
+      "Toute l'UE",
+      "Norvège"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Union européenne a adopté en 2023 l'interdiction de vente de voitures neuves à moteur thermique à partir de 2035."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle série animée japonaise a battu des records au cinéma avec 'Mugen Train' puis le film final ?",
+    "options": [
+      "One Piece",
+      "Naruto",
+      "Demon Slayer",
+      "Jujutsu Kaisen"
+    ],
+    "correct_index": 2,
+    "explanation": "Demon Slayer (Kimetsu no Yaiba) a battu des records au box-office japonais, dépassant le Voyage de Chihiro."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle monnaie numérique de banque centrale la Chine a-t-elle lancée ?",
+    "options": [
+      "Bitcoin chinois",
+      "e-CNY",
+      "ChinaCoin",
+      "Digital RMB"
+    ],
+    "correct_index": 1,
+    "explanation": "La Chine a lancé l'e-CNY (yuan numérique), la MNBC la plus avancée au monde, testée dans plusieurs villes depuis 2022."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel médicament anti-obésité a révolutionné le marché pharmaceutique en 2023-2024 ?",
+    "options": [
+      "Metformine",
+      "Ozempic/Wegovy",
+      "Aspirine",
+      "Insuline"
+    ],
+    "correct_index": 1,
+    "explanation": "Ozempic (sémaglutide) de Novo Nordisk a révolutionné le traitement de l'obésité et du diabète, devenant un phénomène médical et culturel."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel sport Teddy Riner pratique-t-il ?",
+    "options": [
+      "Boxe",
+      "Lutte",
+      "Judo",
+      "Karaté"
+    ],
+    "correct_index": 2,
+    "explanation": "Teddy Riner, judoka français, a remporté sa 3e médaille d'or olympique en judo aux JO de Paris 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel volcan islandais est entré en éruption à plusieurs reprises en 2023-2024 ?",
+    "options": [
+      "Eyjafjallajökull",
+      "Fagradalsfjall",
+      "Grindavík/Sundhnúkur",
+      "Katla"
+    ],
+    "correct_index": 2,
+    "explanation": "Plusieurs éruptions ont eu lieu près de Grindavík (péninsule de Reykjanes) en 2023-2024, forçant l'évacuation de la ville."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle application de messagerie est la plus utilisée dans le monde en 2024 ?",
+    "options": [
+      "Telegram",
+      "Signal",
+      "WhatsApp",
+      "Messenger"
+    ],
+    "correct_index": 2,
+    "explanation": "WhatsApp compte plus de 2 milliards d'utilisateurs actifs mensuels en 2024, la messagerie la plus populaire au monde."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel accord de paix a été signé entre l'Éthiopie et le Tigré en 2022 ?",
+    "options": [
+      "Accords d'Addis-Abeba",
+      "Accords de Pretoria",
+      "Accords de Nairobi",
+      "Accords de Khartoum"
+    ],
+    "correct_index": 1,
+    "explanation": "Les accords de Pretoria (novembre 2022) ont mis fin à 2 ans de guerre au Tigré, l'un des conflits les plus meurtriers du XXIe siècle."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle avancée majeure en informatique quantique Google a-t-il annoncée avec son processeur Willow en 2024 ?",
+    "options": [
+      "Suprématie quantique",
+      "Correction d'erreurs quantiques",
+      "Téléportation quantique",
+      "Cryptage quantique"
+    ],
+    "correct_index": 1,
+    "explanation": "Google a annoncé fin 2024 que son processeur Willow avait démontré la correction d'erreurs quantiques à grande échelle, un jalon crucial."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a accueilli la COP29 en 2024 ?",
+    "options": [
+      "Brésil",
+      "Émirats arabes unis",
+      "Azerbaïdjan",
+      "Égypte"
+    ],
+    "correct_index": 2,
+    "explanation": "La COP29 s'est tenue à Bakou, en Azerbaïdjan, en novembre 2024, avec des négociations sur le financement climatique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise a lancé Threads, concurrent de X/Twitter, en 2023 ?",
+    "options": [
+      "Google",
+      "Microsoft",
+      "Meta",
+      "Apple"
+    ],
+    "correct_index": 2,
+    "explanation": "Meta (Facebook/Instagram) a lancé Threads en juillet 2023, atteignant 100 millions d'inscriptions en 5 jours."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a lancé avec succès la mission Chang'e 6 pour ramener des échantillons de la face cachée de la Lune ?",
+    "options": [
+      "Inde",
+      "Japon",
+      "États-Unis",
+      "Chine"
+    ],
+    "correct_index": 3,
+    "explanation": "La Chine a réussi la mission Chang'e 6 en 2024, rapportant pour la première fois des échantillons de la face cachée de la Lune."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel événement a paralysé le canal de Suez en 2021 ?",
+    "options": [
+      "Une tempête de sable",
+      "Un navire bloqué (Ever Given)",
+      "Une grève",
+      "Un attentat"
+    ],
+    "correct_index": 1,
+    "explanation": "Le porte-conteneurs Ever Given s'est échoué dans le canal de Suez en mars 2021, bloquant le commerce mondial pendant 6 jours."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel mouvement social a secoué l'Iran après la mort de Mahsa Amini en 2022 ?",
+    "options": [
+      "Printemps persan",
+      "Mouvement 'Femme, Vie, Liberté'",
+      "Révolution verte",
+      "Mouvement réformiste"
+    ],
+    "correct_index": 1,
+    "explanation": "La mort de Mahsa Amini en septembre 2022, arrêtée par la police des mœurs, a déclenché le mouvement 'Femme, Vie, Liberté' en Iran."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle percée médicale a permis la première greffe de rein de porc sur un humain vivant en 2024 ?",
+    "options": [
+      "Clonage",
+      "Xénogreffe",
+      "Impression 3D d'organes",
+      "Cellules souches"
+    ],
+    "correct_index": 1,
+    "explanation": "En mars 2024, une xénogreffe (greffe inter-espèces) de rein de porc génétiquement modifié a été réalisée pour la première fois sur un patient vivant."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel jeu vidéo en monde ouvert de Rockstar Games est très attendu pour 2025 ?",
+    "options": [
+      "Red Dead Redemption 3",
+      "GTA VI",
+      "Bully 2",
+      "Max Payne 4"
+    ],
+    "correct_index": 1,
+    "explanation": "GTA VI, annoncé avec un trailer en décembre 2023, est l'un des jeux les plus attendus de l'histoire, prévu pour 2025."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a adopté une loi pionnière régulant les réseaux sociaux pour les mineurs ?",
+    "options": [
+      "États-Unis",
+      "France",
+      "Australie",
+      "Royaume-Uni"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Australie a voté en 2024 une loi interdisant les réseaux sociaux aux moins de 16 ans, une première mondiale."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel phénomène astronomique rare a traversé l'Amérique du Nord en avril 2024 ?",
+    "options": [
+      "Pluie de météorites",
+      "Éclipse solaire totale",
+      "Supernova visible",
+      "Passage de comète"
+    ],
+    "correct_index": 1,
+    "explanation": "Une éclipse solaire totale a traversé le Mexique, les États-Unis et le Canada le 8 avril 2024, visible par des millions de personnes."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle équipe de football a remporté la Ligue des Champions 2024 ?",
+    "options": [
+      "Manchester City",
+      "Real Madrid",
+      "Bayern Munich",
+      "Inter Milan"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Real Madrid a remporté sa 15e Ligue des Champions en 2024, battant le Borussia Dortmund 2-0 en finale à Wembley."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle technologie de batterie promet de révolutionner les véhicules électriques ?",
+    "options": [
+      "Lithium-ion",
+      "Batteries à état solide",
+      "Piles à hydrogène",
+      "Supercondensateurs"
+    ],
+    "correct_index": 1,
+    "explanation": "Les batteries à état solide promettent plus d'autonomie, une recharge plus rapide et plus de sécurité que le lithium-ion actuel."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel prix Nobel de la paix 2023 a été décerné à une militante iranienne emprisonnée ?",
+    "options": [
+      "Malala Yousafzai",
+      "Narges Mohammadi",
+      "Nadia Murad",
+      "Oleksandra Matviichuk"
+    ],
+    "correct_index": 1,
+    "explanation": "Narges Mohammadi a reçu le Nobel de la paix 2023 pour son combat contre l'oppression des femmes en Iran, alors qu'elle était emprisonnée."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a été le premier à interdire les smartphones dans les écoles primaires ?",
+    "options": [
+      "France",
+      "Pays-Bas",
+      "Finlande",
+      "Japon"
+    ],
+    "correct_index": 1,
+    "explanation": "Les Pays-Bas ont interdit les smartphones dans les écoles à partir de janvier 2024, pour améliorer la concentration des élèves."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle intelligence artificielle de Google a battu le champion du monde de Go en 2016 ?",
+    "options": [
+      "GPT-4",
+      "Watson",
+      "AlphaGo",
+      "Gemini"
+    ],
+    "correct_index": 2,
+    "explanation": "AlphaGo de DeepMind (Google) a battu Lee Sedol en 2016, marquant une avancée majeure de l'IA dans les jeux de stratégie."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel accord mondial sur la biodiversité a été adopté à Montréal en décembre 2022 ?",
+    "options": [
+      "Accord de Nagoya",
+      "Cadre mondial de Kunming-Montréal",
+      "Protocole de Carthagène",
+      "Convention de Berne"
+    ],
+    "correct_index": 1,
+    "explanation": "Le cadre mondial de Kunming-Montréal (COP15, 2022) vise à protéger 30% des terres et océans d'ici 2030."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel artiste a rempli plusieurs fois le Stade de France en 2025 ?",
+    "options": [
+      "Aya Nakamura",
+      "Stromae",
+      "Ed Sheeran",
+      "Coldplay"
+    ],
+    "correct_index": 0,
+    "explanation": "Aya Nakamura, artiste francophone la plus écoutée au monde, a confirmé son statut de star internationale en 2025."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise spatiale a réussi à récupérer le booster de Starship avec des 'bras mécaniques' en 2024 ?",
+    "options": [
+      "Blue Origin",
+      "Rocket Lab",
+      "SpaceX",
+      "Virgin Galactic"
+    ],
+    "correct_index": 2,
+    "explanation": "SpaceX a réussi à attraper le booster Super Heavy de Starship avec les bras de la tour de lancement ('chopsticks') en octobre 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays accueillera les Jeux olympiques d'été en 2028 ?",
+    "options": [
+      "Australie",
+      "France",
+      "États-Unis",
+      "Japon"
+    ],
+    "correct_index": 2,
+    "explanation": "Los Angeles accueillera les Jeux olympiques d'été 2028, 32 ans après les JO d'Atlanta en 1996."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel service de streaming musical est le plus utilisé au monde ?",
+    "options": [
+      "Apple Music",
+      "Deezer",
+      "YouTube Music",
+      "Spotify"
+    ],
+    "correct_index": 3,
+    "explanation": "Spotify comptait plus de 600 millions d'utilisateurs en 2024, dont 220 millions d'abonnés payants."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle technologie d'édition génétique a valu un prix Nobel en 2020 et continue de révolutionner la médecine ?",
+    "options": [
+      "ARN messager",
+      "CRISPR-Cas9",
+      "Thérapie génique virale",
+      "Clonage thérapeutique"
+    ],
+    "correct_index": 1,
+    "explanation": "CRISPR-Cas9, récompensé par le Nobel 2020 (Charpentier/Doudna), permet de modifier l'ADN avec précision. En 2023, le premier traitement CRISPR (Casgevy) a été approuvé."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle marque automobile chinoise est devenue le plus grand exportateur de voitures au monde en 2023 ?",
+    "options": [
+      "BYD",
+      "NIO",
+      "Geely",
+      "Tout le secteur chinois"
+    ],
+    "correct_index": 3,
+    "explanation": "La Chine a dépassé le Japon comme premier exportateur mondial de voitures en 2023, portée par les véhicules électriques."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle catastrophe naturelle a frappé la Libye en septembre 2023 ?",
+    "options": [
+      "Séisme",
+      "Éruption volcanique",
+      "Inondations",
+      "Tsunami"
+    ],
+    "correct_index": 2,
+    "explanation": "La tempête Daniel a provoqué des inondations catastrophiques à Derna (Libye) en septembre 2023, causant plus de 10 000 morts."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle mission de la NASA vise à retourner sur la Lune d'ici 2026 ?",
+    "options": [
+      "Apollo 18",
+      "Gemini II",
+      "Artemis",
+      "Constellation"
+    ],
+    "correct_index": 2,
+    "explanation": "Le programme Artemis de la NASA vise à renvoyer des humains sur la Lune, avec Artemis III prévu pour 2026 au plus tôt."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle série HBO a eu son final en 2025 après 4 saisons très attendues ?",
+    "options": [
+      "Game of Thrones",
+      "The Last of Us",
+      "Succession",
+      "House of the Dragon"
+    ],
+    "correct_index": 3,
+    "explanation": "House of the Dragon, préquel de Game of Thrones, continue de captiver des millions de spectateurs avec l'histoire de la maison Targaryen."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel organisme international a fêté ses 80 ans en 2025 ?",
+    "options": [
+      "l'OTAN",
+      "l'ONU",
+      "l'UNESCO",
+      "la Croix-Rouge"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Organisation des Nations unies, fondée le 24 octobre 1945, a célébré ses 80 ans en 2025."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle avancée en supraconductivité a suscité un débat mondial en 2023 avant d'être réfutée ?",
+    "options": [
+      "LK-99",
+      "Graphène supraconducteur",
+      "Hydrogène métallique",
+      "Cuprate HTC"
+    ],
+    "correct_index": 0,
+    "explanation": "Le LK-99, annoncé par des chercheurs coréens comme supraconducteur à température ambiante en 2023, n'a pas été reproduit et a été réfuté."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a accueilli l'Exposition universelle en 2025 ?",
+    "options": [
+      "Dubaï",
+      "Osaka",
+      "Riyad",
+      "Rome"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Exposition universelle 2025 se tient à Osaka, au Japon, sur le thème 'Concevoir la société du futur pour nos vies'."
+  }
+]

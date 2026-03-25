@@ -3,7 +3,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Combien d'étoiles figurent sur le maillot de l'équipe de France de football, représentant ses titres de Champion du monde ?",
-    "options": ["1", "2", "3", "4"],
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
     "correct_index": 1,
     "explanation": "La France a remporté la Coupe du monde en 1998 et en 2018, ce qui lui vaut deux étoiles sur son maillot."
   },
@@ -11,7 +16,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel sport pratique Rafael Nadal ?",
-    "options": ["Football", "Tennis", "Natation", "Cyclisme"],
+    "options": [
+      "Football",
+      "Tennis",
+      "Natation",
+      "Cyclisme"
+    ],
     "correct_index": 1,
     "explanation": "Rafael Nadal est un joueur de tennis espagnol, célèbre notamment pour ses nombreuses victoires à Roland-Garros."
   },
@@ -19,7 +29,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Dans quel sport le Tour de France est-il une compétition majeure ?",
-    "options": ["Athlétisme", "Natation", "Cyclisme", "Rugby"],
+    "options": [
+      "Athlétisme",
+      "Natation",
+      "Cyclisme",
+      "Rugby"
+    ],
     "correct_index": 2,
     "explanation": "Le Tour de France est la course cycliste la plus prestigieuse au monde, créée en 1903."
   },
@@ -27,7 +42,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel est le nom du stade principal de l'équipe de France de football ?",
-    "options": ["Parc des Princes", "Stade de France", "Stade Vélodrome", "Stade de la Beaujoire"],
+    "options": [
+      "Parc des Princes",
+      "Stade de France",
+      "Stade Vélodrome",
+      "Stade de la Beaujoire"
+    ],
     "correct_index": 1,
     "explanation": "Le Stade de France, situé à Saint-Denis, a été inauguré en 1998 pour la Coupe du monde et accueille les matchs de l'équipe nationale."
   },
@@ -35,7 +55,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
-    "options": ["9", "10", "11", "12"],
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
     "correct_index": 2,
     "explanation": "Une équipe de football est composée de 11 joueurs sur le terrain, gardien de but inclus."
   },
@@ -43,7 +68,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel Français a remporté la médaille d'or du 100 mètres aux Jeux olympiques de 2024 à Paris ?",
-    "options": ["Christophe Lemaitre", "Jimmy Vicaut", "Noah Lyles", "Aucun Français"],
+    "options": [
+      "Christophe Lemaitre",
+      "Jimmy Vicaut",
+      "Noah Lyles",
+      "Aucun Français"
+    ],
     "correct_index": 3,
     "explanation": "Aucun Français n'a remporté le 100 mètres aux JO de Paris 2024. C'est l'Américain Noah Lyles qui a décroché l'or."
   },
@@ -51,7 +81,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel est le surnom de l'équipe de France de football ?",
-    "options": ["Les Bleus", "Les Rouges", "Les Tricolores", "Les Coqs"],
+    "options": [
+      "Les Bleus",
+      "Les Rouges",
+      "Les Tricolores",
+      "Les Coqs"
+    ],
     "correct_index": 0,
     "explanation": "L'équipe de France de football est surnommée « Les Bleus » en raison de la couleur dominante de leur maillot."
   },
@@ -59,7 +94,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Dans quel sport utilise-t-on un ballon ovale ?",
-    "options": ["Football", "Handball", "Rugby", "Volleyball"],
+    "options": [
+      "Football",
+      "Handball",
+      "Rugby",
+      "Volleyball"
+    ],
     "correct_index": 2,
     "explanation": "Le rugby se joue avec un ballon de forme ovale, contrairement au football qui utilise un ballon rond."
   },
@@ -67,7 +107,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quelle ville a accueilli les Jeux olympiques d'été en 2024 ?",
-    "options": ["Londres", "Tokyo", "Paris", "Los Angeles"],
+    "options": [
+      "Londres",
+      "Tokyo",
+      "Paris",
+      "Los Angeles"
+    ],
     "correct_index": 2,
     "explanation": "Paris a accueilli les Jeux olympiques d'été en 2024, cent ans après les derniers JO parisiens de 1924."
   },
@@ -75,7 +120,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel joueur français est considéré comme l'un des meilleurs footballeurs au monde dans les années 2020 ?",
-    "options": ["Zinédine Zidane", "Kylian Mbappé", "Michel Platini", "Thierry Henry"],
+    "options": [
+      "Zinédine Zidane",
+      "Kylian Mbappé",
+      "Michel Platini",
+      "Thierry Henry"
+    ],
     "correct_index": 1,
     "explanation": "Kylian Mbappé, attaquant prodige, s'est imposé comme l'un des meilleurs joueurs au monde dès son plus jeune âge."
   },
@@ -83,7 +133,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Le tournoi de Roland-Garros se joue sur quelle surface ?",
-    "options": ["Gazon", "Dur", "Terre battue", "Moquette"],
+    "options": [
+      "Gazon",
+      "Dur",
+      "Terre battue",
+      "Moquette"
+    ],
     "correct_index": 2,
     "explanation": "Roland-Garros est le seul tournoi du Grand Chelem à se jouer sur terre battue."
   },
@@ -91,7 +146,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel est l'emblème de l'équipe de France dans la plupart des sports ?",
-    "options": ["L'aigle", "Le coq", "Le lion", "Le taureau"],
+    "options": [
+      "L'aigle",
+      "Le coq",
+      "Le lion",
+      "Le taureau"
+    ],
     "correct_index": 1,
     "explanation": "Le coq gaulois est l'emblème traditionnel des équipes de France dans de nombreux sports."
   },
@@ -99,7 +159,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Combien de temps dure un match de football réglementaire (hors prolongations) ?",
-    "options": ["60 minutes", "80 minutes", "90 minutes", "120 minutes"],
+    "options": [
+      "60 minutes",
+      "80 minutes",
+      "90 minutes",
+      "120 minutes"
+    ],
     "correct_index": 2,
     "explanation": "Un match de football dure 90 minutes, divisé en deux mi-temps de 45 minutes chacune."
   },
@@ -107,7 +172,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Quel nageur français a remporté plusieurs médailles d'or olympiques en natation ?",
-    "options": ["Alain Bernard", "Florent Manaudou", "Léon Marchand", "Yannick Agnel"],
+    "options": [
+      "Alain Bernard",
+      "Florent Manaudou",
+      "Léon Marchand",
+      "Yannick Agnel"
+    ],
     "correct_index": 2,
     "explanation": "Léon Marchand a brillé aux JO de Paris 2024 en remportant plusieurs médailles d'or individuelles en natation."
   },
@@ -115,7 +185,12 @@
     "category": "Sport",
     "difficulty": "easy",
     "question": "Dans quel sport Teddy Riner est-il champion ?",
-    "options": ["Boxe", "Lutte", "Judo", "Karaté"],
+    "options": [
+      "Boxe",
+      "Lutte",
+      "Judo",
+      "Karaté"
+    ],
     "correct_index": 2,
     "explanation": "Teddy Riner est un judoka français, multiple champion du monde et champion olympique dans la catégorie des poids lourds."
   },
@@ -123,7 +198,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "En quelle année la France a-t-elle remporté sa première Coupe du monde de football ?",
-    "options": ["1994", "1998", "2002", "2006"],
+    "options": [
+      "1994",
+      "1998",
+      "2002",
+      "2006"
+    ],
     "correct_index": 1,
     "explanation": "La France a remporté sa première Coupe du monde en 1998, à domicile, en battant le Brésil 3-0 en finale."
   },
@@ -131,7 +211,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel pilote français de Formule 1 a été champion du monde quatre fois consécutivement ?",
-    "options": ["Alain Prost", "René Arnoux", "Jean Alesi", "Aucun pilote français"],
+    "options": [
+      "Alain Prost",
+      "René Arnoux",
+      "Jean Alesi",
+      "Aucun pilote français"
+    ],
     "correct_index": 3,
     "explanation": "Aucun pilote français n'a été champion du monde quatre fois consécutivement. Alain Prost a remporté quatre titres mais pas de manière consécutive."
   },
@@ -139,7 +224,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Combien de titres de champion du monde de Formule 1 Alain Prost a-t-il remportés ?",
-    "options": ["2", "3", "4", "5"],
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
     "correct_index": 2,
     "explanation": "Alain Prost a remporté quatre titres de champion du monde de F1, en 1985, 1986, 1989 et 1993."
   },
@@ -147,7 +237,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel est le record de victoires d'étapes sur le Tour de France ?",
-    "options": ["30 (Bernard Hinault)", "34 (Mark Cavendish)", "35 (Mark Cavendish)", "28 (Eddy Merckx)"],
+    "options": [
+      "30 (Bernard Hinault)",
+      "34 (Mark Cavendish)",
+      "35 (Mark Cavendish)",
+      "28 (Eddy Merckx)"
+    ],
     "correct_index": 2,
     "explanation": "Mark Cavendish détient le record avec 35 victoires d'étapes sur le Tour de France, dépassant le record d'Eddy Merckx."
   },
@@ -155,7 +250,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel club français a remporté la Ligue des champions de l'UEFA en 1993 ?",
-    "options": ["Paris Saint-Germain", "Olympique de Marseille", "AS Monaco", "Olympique Lyonnais"],
+    "options": [
+      "Paris Saint-Germain",
+      "Olympique de Marseille",
+      "AS Monaco",
+      "Olympique Lyonnais"
+    ],
     "correct_index": 1,
     "explanation": "L'Olympique de Marseille est le seul club français à avoir remporté la Ligue des champions, en 1993 face à l'AC Milan."
   },
@@ -163,7 +263,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quelle joueuse de tennis française a remporté Roland-Garros en 2000 ?",
-    "options": ["Amélie Mauresmo", "Mary Pierce", "Nathalie Dechy", "Marion Bartoli"],
+    "options": [
+      "Amélie Mauresmo",
+      "Mary Pierce",
+      "Nathalie Dechy",
+      "Marion Bartoli"
+    ],
     "correct_index": 1,
     "explanation": "Mary Pierce a remporté Roland-Garros en 2000 en battant Conchita Martínez en finale."
   },
@@ -171,7 +276,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel est le nom du championnat de France de rugby à XV ?",
-    "options": ["Ligue 1", "Pro D2", "Top 14", "Challenge Cup"],
+    "options": [
+      "Ligue 1",
+      "Pro D2",
+      "Top 14",
+      "Challenge Cup"
+    ],
     "correct_index": 2,
     "explanation": "Le Top 14 est le championnat de France de rugby à XV de première division, regroupant 14 équipes professionnelles."
   },
@@ -179,7 +289,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Qui est le meilleur buteur de l'histoire de l'équipe de France de football ?",
-    "options": ["Thierry Henry", "Michel Platini", "Olivier Giroud", "Antoine Griezmann"],
+    "options": [
+      "Thierry Henry",
+      "Michel Platini",
+      "Olivier Giroud",
+      "Antoine Griezmann"
+    ],
     "correct_index": 2,
     "explanation": "Olivier Giroud est devenu le meilleur buteur de l'histoire des Bleus, dépassant le record de Thierry Henry."
   },
@@ -187,7 +302,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Combien de fois la France a-t-elle accueilli les Jeux olympiques d'été (jusqu'en 2024 inclus) ?",
-    "options": ["2", "3", "4", "5"],
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
     "correct_index": 1,
     "explanation": "La France a accueilli les JO d'été trois fois : à Paris en 1900, 1924 et 2024."
   },
@@ -195,7 +315,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel cycliste français a remporté le Tour de France cinq fois ?",
-    "options": ["Laurent Fignon", "Raymond Poulidor", "Bernard Hinault", "Jacques Anquetil"],
+    "options": [
+      "Laurent Fignon",
+      "Raymond Poulidor",
+      "Bernard Hinault",
+      "Jacques Anquetil"
+    ],
     "correct_index": 2,
     "explanation": "Bernard Hinault a remporté le Tour de France cinq fois (1978, 1979, 1981, 1982, 1985), tout comme Jacques Anquetil."
   },
@@ -203,7 +328,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Dans quel sport Tony Parker s'est-il illustré au plus haut niveau ?",
-    "options": ["Football", "Handball", "Basketball", "Tennis"],
+    "options": [
+      "Football",
+      "Handball",
+      "Basketball",
+      "Tennis"
+    ],
     "correct_index": 2,
     "explanation": "Tony Parker est un basketteur français qui a remporté quatre titres NBA avec les San Antonio Spurs."
   },
@@ -211,7 +341,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel est le stade du Paris Saint-Germain ?",
-    "options": ["Stade de France", "Parc des Princes", "Stade Jean-Bouin", "Stade Charléty"],
+    "options": [
+      "Stade de France",
+      "Parc des Princes",
+      "Stade Jean-Bouin",
+      "Stade Charléty"
+    ],
     "correct_index": 1,
     "explanation": "Le Parc des Princes, situé dans le 16e arrondissement de Paris, est le stade du PSG depuis 1974."
   },
@@ -219,7 +354,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quelle équipe de France a remporté le championnat du monde de handball masculin le plus souvent ?",
-    "options": ["Suède", "Danemark", "France", "Allemagne"],
+    "options": [
+      "Suède",
+      "Danemark",
+      "France",
+      "Allemagne"
+    ],
     "correct_index": 2,
     "explanation": "La France est l'équipe la plus titrée au championnat du monde de handball masculin avec six titres."
   },
@@ -227,7 +367,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel footballeur français a reçu le Ballon d'or en 1998 ?",
-    "options": ["Thierry Henry", "Zinédine Zidane", "Laurent Blanc", "Didier Deschamps"],
+    "options": [
+      "Thierry Henry",
+      "Zinédine Zidane",
+      "Laurent Blanc",
+      "Didier Deschamps"
+    ],
     "correct_index": 1,
     "explanation": "Zinédine Zidane a remporté le Ballon d'or en 1998 après avoir mené la France à la victoire en Coupe du monde."
   },
@@ -235,7 +380,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel est le surnom de l'équipe de France de handball ?",
-    "options": ["Les Bleus", "Les Experts", "Les Barjots", "Les Costauds"],
+    "options": [
+      "Les Bleus",
+      "Les Experts",
+      "Les Barjots",
+      "Les Costauds"
+    ],
     "correct_index": 1,
     "explanation": "L'équipe de France de handball est surnommée « Les Experts » en raison de leur domination sur le handball mondial dans les années 2000-2010."
   },
@@ -243,7 +393,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "En quelle année le Stade toulousain a-t-il remporté sa première Coupe d'Europe de rugby (Heineken Cup) ?",
-    "options": ["1996", "2003", "2005", "2010"],
+    "options": [
+      "1996",
+      "2003",
+      "2005",
+      "2010"
+    ],
     "correct_index": 0,
     "explanation": "Le Stade toulousain a remporté sa première Coupe d'Europe en 1996, devenant l'un des clubs les plus titrés d'Europe."
   },
@@ -251,7 +406,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel sprinter français a été le premier Européen blanc à courir le 100 mètres en moins de 10 secondes ?",
-    "options": ["Jimmy Vicaut", "Christophe Lemaitre", "Mehdi Baala", "Ronald Pognon"],
+    "options": [
+      "Jimmy Vicaut",
+      "Christophe Lemaitre",
+      "Mehdi Baala",
+      "Ronald Pognon"
+    ],
     "correct_index": 1,
     "explanation": "Christophe Lemaitre est devenu en 2010 le premier sprinter européen blanc à passer sous la barre des 10 secondes au 100 mètres."
   },
@@ -259,7 +419,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel est le nom du Grand Prix de Formule 1 qui se déroule sur le circuit Paul Ricard ?",
-    "options": ["Grand Prix de Monaco", "Grand Prix de France", "Grand Prix de Belgique", "Grand Prix d'Espagne"],
+    "options": [
+      "Grand Prix de Monaco",
+      "Grand Prix de France",
+      "Grand Prix de Belgique",
+      "Grand Prix d'Espagne"
+    ],
     "correct_index": 1,
     "explanation": "Le circuit Paul Ricard, situé au Castellet dans le Var, a accueilli le Grand Prix de France de Formule 1."
   },
@@ -267,7 +432,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel joueur de tennis français a remporté la Coupe Davis en tant que capitaine en 2017 ?",
-    "options": ["Guy Forget", "Yannick Noah", "Amélie Mauresmo", "Henri Leconte"],
+    "options": [
+      "Guy Forget",
+      "Yannick Noah",
+      "Amélie Mauresmo",
+      "Henri Leconte"
+    ],
     "correct_index": 1,
     "explanation": "Yannick Noah a mené l'équipe de France à la victoire en Coupe Davis en 2017, après l'avoir déjà fait en 1991 et 1996."
   },
@@ -275,7 +445,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quel club de rugby français est surnommé « le Racing » ?",
-    "options": ["Racing 92", "Stade Français", "Clermont", "La Rochelle"],
+    "options": [
+      "Racing 92",
+      "Stade Français",
+      "Clermont",
+      "La Rochelle"
+    ],
     "correct_index": 0,
     "explanation": "Le Racing 92, basé à Nanterre, est communément appelé « le Racing » et est l'un des clubs historiques du rugby français."
   },
@@ -283,7 +458,12 @@
     "category": "Sport",
     "difficulty": "medium",
     "question": "Quelle nageuse française a remporté trois médailles d'or aux JO d'Athènes en 2004 ?",
-    "options": ["Laure Manaudou", "Camille Muffat", "Roxana Maracineanu", "Coralie Balmy"],
+    "options": [
+      "Laure Manaudou",
+      "Camille Muffat",
+      "Roxana Maracineanu",
+      "Coralie Balmy"
+    ],
     "correct_index": 0,
     "explanation": "Laure Manaudou a remporté l'or sur 400 m nage libre, l'argent sur 800 m et le bronze sur 100 m dos aux JO d'Athènes en 2004. Elle a décroché une médaille d'or, pas trois."
   },
@@ -291,7 +471,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Qui a marqué le but en or qui a donné la victoire à la France lors de l'Euro 2000 en finale contre l'Italie ?",
-    "options": ["Zinédine Zidane", "David Trezeguet", "Sylvain Wiltord", "Robert Pirès"],
+    "options": [
+      "Zinédine Zidane",
+      "David Trezeguet",
+      "Sylvain Wiltord",
+      "Robert Pirès"
+    ],
     "correct_index": 1,
     "explanation": "David Trezeguet a inscrit le but en or en prolongation lors de la finale de l'Euro 2000 contre l'Italie, après l'égalisation de Sylvain Wiltord."
   },
@@ -299,7 +484,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel coureur cycliste français a remporté le Tour de France en 1985 pour la cinquième et dernière fois ?",
-    "options": ["Jacques Anquetil", "Laurent Fignon", "Bernard Hinault", "Louison Bobet"],
+    "options": [
+      "Jacques Anquetil",
+      "Laurent Fignon",
+      "Bernard Hinault",
+      "Louison Bobet"
+    ],
     "correct_index": 2,
     "explanation": "Bernard Hinault a remporté son cinquième et dernier Tour de France en 1985, égalant le record de Jacques Anquetil."
   },
@@ -307,7 +497,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "En quelle année Yannick Noah a-t-il remporté Roland-Garros ?",
-    "options": ["1981", "1983", "1985", "1987"],
+    "options": [
+      "1981",
+      "1983",
+      "1985",
+      "1987"
+    ],
     "correct_index": 1,
     "explanation": "Yannick Noah a remporté Roland-Garros en 1983, devenant le dernier Français à remporter ce tournoi du Grand Chelem en simple messieurs."
   },
@@ -315,7 +510,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel athlète français détient le record du monde du décathlon établi en 1992 ?",
-    "options": ["Kevin Mayer", "Roman Šebrle", "Dan O'Brien", "Aucun Français"],
+    "options": [
+      "Kevin Mayer",
+      "Roman Šebrle",
+      "Dan O'Brien",
+      "Aucun Français"
+    ],
     "correct_index": 3,
     "explanation": "Dan O'Brien détenait le record du monde du décathlon en 1992. Kevin Mayer a établi le record du monde en 2018 avec 9 126 points."
   },
@@ -323,7 +523,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Combien de titres de champion du monde de handball l'équipe de France masculine a-t-elle remportés entre 1995 et 2023 ?",
-    "options": ["4", "5", "6", "7"],
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
     "correct_index": 2,
     "explanation": "La France a remporté six titres mondiaux de handball masculin : 1995, 2001, 2009, 2011, 2015 et 2017."
   },
@@ -331,7 +536,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel pilote français a remporté les 24 Heures du Mans le plus grand nombre de fois ?",
-    "options": ["Jacky Ickx", "Tom Kristensen", "Henri Pescarolo", "Marcel Fässler"],
+    "options": [
+      "Jacky Ickx",
+      "Tom Kristensen",
+      "Henri Pescarolo",
+      "Marcel Fässler"
+    ],
     "correct_index": 2,
     "explanation": "Henri Pescarolo, pilote français, a remporté les 24 Heures du Mans quatre fois (1972, 1973, 1974, 1984), un record pour un pilote français."
   },
@@ -339,7 +549,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quelle équipe de rugby a remporté le plus de titres de champion de France (Bouclier de Brennus) ?",
-    "options": ["Stade Français", "Stade Toulousain", "ASM Clermont", "Toulon"],
+    "options": [
+      "Stade Français",
+      "Stade Toulousain",
+      "ASM Clermont",
+      "Toulon"
+    ],
     "correct_index": 1,
     "explanation": "Le Stade Toulousain est le club le plus titré du championnat de France de rugby avec plus de 20 titres de champion."
   },
@@ -347,7 +562,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel boxeur français a été champion du monde des poids mi-lourds WBA en 2013 ?",
-    "options": ["Brahim Asloum", "Jean-Marc Mormeck", "Tony Yoka", "Hassan N'Dam"],
+    "options": [
+      "Brahim Asloum",
+      "Jean-Marc Mormeck",
+      "Tony Yoka",
+      "Hassan N'Dam"
+    ],
     "correct_index": 3,
     "explanation": "Hassan N'Dam a été champion du monde WBA intérimaire des poids moyens. Jean-Marc Mormeck a été champion du monde des lourds-légers WBA/WBC."
   },
@@ -355,7 +575,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel est le record de France du 100 mètres masculin (en date de 2024) ?",
-    "options": ["9,86 s", "9,92 s", "9,95 s", "10,00 s"],
+    "options": [
+      "9,86 s",
+      "9,92 s",
+      "9,95 s",
+      "10,00 s"
+    ],
     "correct_index": 0,
     "explanation": "Le record de France du 100 mètres est de 9,86 secondes, détenu par Jimmy Vicaut."
   },
@@ -363,7 +588,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel footballeur français a inscrit le fameux coup de tête contre le Brésil en finale de la Coupe du monde 1998 ?",
-    "options": ["Emmanuel Petit", "Zinédine Zidane", "Lilian Thuram", "Laurent Blanc"],
+    "options": [
+      "Emmanuel Petit",
+      "Zinédine Zidane",
+      "Lilian Thuram",
+      "Laurent Blanc"
+    ],
     "correct_index": 1,
     "explanation": "Zinédine Zidane a marqué deux buts de la tête en finale de la Coupe du monde 1998 contre le Brésil, menant la France à une victoire 3-0."
   },
@@ -371,7 +601,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "En quelle année Marie-José Pérec a-t-elle réalisé le doublé 200 m / 400 m aux Jeux olympiques ?",
-    "options": ["1992", "1996", "2000", "1988"],
+    "options": [
+      "1992",
+      "1996",
+      "2000",
+      "1988"
+    ],
     "correct_index": 1,
     "explanation": "Marie-José Pérec a réalisé le doublé 200 m / 400 m aux JO d'Atlanta en 1996, un exploit exceptionnel en athlétisme."
   },
@@ -379,7 +614,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel club de football français a atteint la finale de la Ligue des champions en 2004 ?",
-    "options": ["Olympique Lyonnais", "Paris Saint-Germain", "AS Monaco", "Olympique de Marseille"],
+    "options": [
+      "Olympique Lyonnais",
+      "Paris Saint-Germain",
+      "AS Monaco",
+      "Olympique de Marseille"
+    ],
     "correct_index": 2,
     "explanation": "L'AS Monaco a atteint la finale de la Ligue des champions en 2004, s'inclinant face au FC Porto de José Mourinho."
   },
@@ -387,7 +627,12 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Combien de médailles d'or Teddy Riner a-t-il remportées aux Jeux olympiques (jusqu'en 2024 inclus) ?",
-    "options": ["2", "3", "4", "5"],
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
     "correct_index": 2,
     "explanation": "Teddy Riner a remporté quatre médailles d'or olympiques : en individuel à Londres 2012, Rio 2016, Paris 2024, ainsi qu'en équipe mixte à Tokyo 2020."
   },
@@ -395,8 +640,208 @@
     "category": "Sport",
     "difficulty": "hard",
     "question": "Quel est le nom du vélodrome couvert situé à Saint-Quentin-en-Yvelines utilisé pour les JO 2024 ?",
-    "options": ["Vélodrome de Bordeaux", "Vélodrome national", "Palais omnisports de Bercy", "Stade Pierre de Coubertin"],
+    "options": [
+      "Vélodrome de Bordeaux",
+      "Vélodrome national",
+      "Palais omnisports de Bercy",
+      "Stade Pierre de Coubertin"
+    ],
     "correct_index": 1,
     "explanation": "Le Vélodrome national de Saint-Quentin-en-Yvelines a accueilli les épreuves de cyclisme sur piste lors des JO de Paris 2024."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "easy",
+    "question": "Combien de joueurs composent une équipe de football sur le terrain ?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correct_index": 2,
+    "explanation": "Une équipe de football compte 11 joueurs sur le terrain, dont un gardien de but."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "medium",
+    "question": "Quel pays a remporté le plus de Coupes du monde de football ?",
+    "options": [
+      "Allemagne",
+      "Argentine",
+      "Italie",
+      "Brésil"
+    ],
+    "correct_index": 3,
+    "explanation": "Le Brésil a remporté 5 Coupes du monde (1958, 1962, 1970, 1994, 2002), un record."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "hard",
+    "question": "Quel nageur détient le record de médailles d'or olympiques ?",
+    "options": [
+      "Mark Spitz",
+      "Ian Thorpe",
+      "Michael Phelps",
+      "Ryan Lochte"
+    ],
+    "correct_index": 2,
+    "explanation": "Michael Phelps détient le record absolu avec 23 médailles d'or olympiques en natation."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "easy",
+    "question": "Dans quel sport utilise-t-on un volant ?",
+    "options": [
+      "Tennis",
+      "Badminton",
+      "Squash",
+      "Ping-pong"
+    ],
+    "correct_index": 1,
+    "explanation": "Le badminton se joue avec un volant (shuttlecock) et une raquette, sur un terrain séparé par un filet."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "medium",
+    "question": "Quel athlète jamaïcain est surnommé 'Lightning Bolt' ?",
+    "options": [
+      "Asafa Powell",
+      "Yohan Blake",
+      "Usain Bolt",
+      "Shelly-Ann Fraser-Pryce"
+    ],
+    "correct_index": 2,
+    "explanation": "Usain Bolt, détenteur des records du 100m (9,58s) et 200m (19,19s), est surnommé Lightning Bolt (l'éclair)."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "hard",
+    "question": "En quelle année les femmes ont-elles été autorisées à courir le marathon olympique ?",
+    "options": [
+      "1960",
+      "1972",
+      "1984",
+      "1996"
+    ],
+    "correct_index": 2,
+    "explanation": "Le marathon féminin fut introduit aux Jeux olympiques de Los Angeles en 1984. Joan Benoit remporta l'or."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "easy",
+    "question": "Quel sport se pratique sur un tatami ?",
+    "options": [
+      "Escrime",
+      "Judo",
+      "Natation",
+      "Cyclisme"
+    ],
+    "correct_index": 1,
+    "explanation": "Le judo se pratique sur un tatami (tapis). Sport d'origine japonaise créé par Jigoro Kano en 1882."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "medium",
+    "question": "Combien de sets faut-il gagner pour remporter un match de tennis au Grand Chelem (hommes) ?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct_index": 1,
+    "explanation": "En Grand Chelem masculin, il faut gagner 3 sets sur 5 (best of 5). En féminin, c'est 2 sets sur 3."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "hard",
+    "question": "Quel club de football a remporté le plus de Ligues des Champions ?",
+    "options": [
+      "AC Milan",
+      "FC Barcelone",
+      "Real Madrid",
+      "Bayern Munich"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Real Madrid détient le record avec 15 Ligues des Champions (anciennement Coupe d'Europe des clubs champions)."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "easy",
+    "question": "Quel sport se joue avec une balle orange sur un terrain rectangulaire avec des paniers ?",
+    "options": [
+      "Handball",
+      "Volleyball",
+      "Basketball",
+      "Rugby"
+    ],
+    "correct_index": 2,
+    "explanation": "Le basketball fut inventé par James Naismith en 1891. Le terrain fait 28m × 15m avec des paniers à 3,05m de hauteur."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "medium",
+    "question": "Quel cycliste a remporté 5 Tours de France consécutifs ?",
+    "options": [
+      "Eddy Merckx",
+      "Miguel Indurain",
+      "Bernard Hinault",
+      "Lance Armstrong"
+    ],
+    "correct_index": 1,
+    "explanation": "Miguel Indurain remporta 5 Tours de France consécutifs de 1991 à 1995, un exploit unique dans l'histoire du cyclisme."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "hard",
+    "question": "Quel pays a inventé le cricket ?",
+    "options": [
+      "Inde",
+      "Australie",
+      "Angleterre",
+      "Afrique du Sud"
+    ],
+    "correct_index": 2,
+    "explanation": "Le cricket fut inventé en Angleterre au XVIe siècle et exporté dans les colonies de l'Empire britannique."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "easy",
+    "question": "Combien de minutes dure un match de football réglementaire ?",
+    "options": [
+      "60 minutes",
+      "80 minutes",
+      "90 minutes",
+      "120 minutes"
+    ],
+    "correct_index": 2,
+    "explanation": "Un match de football dure 90 minutes (2 mi-temps de 45 minutes), plus le temps additionnel."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "medium",
+    "question": "Quel pays organise les Jeux olympiques d'été 2028 ?",
+    "options": [
+      "France",
+      "Japon",
+      "Australie",
+      "États-Unis"
+    ],
+    "correct_index": 3,
+    "explanation": "Les Jeux olympiques d'été 2028 se tiendront à Los Angeles, aux États-Unis."
+  },
+  {
+    "category": "Sport",
+    "difficulty": "hard",
+    "question": "Quel est le record du monde du 100 mètres masculin ?",
+    "options": [
+      "9,58 secondes",
+      "9,63 secondes",
+      "9,69 secondes",
+      "9,72 secondes"
+    ],
+    "correct_index": 0,
+    "explanation": "Usain Bolt détient le record du monde du 100m en 9,58 secondes, établi aux Championnats du monde de Berlin en 2009."
   }
 ]

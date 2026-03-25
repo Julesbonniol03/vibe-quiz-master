@@ -8,7 +8,14 @@ export type Category =
   | "Nature & Animaux"
   | "Technologie"
   | "Gastronomie"
-  | "Mythologie & Religions";
+  | "Mythologie & Religions"
+  | "Cinéma"
+  | "Musique"
+  | "Économie & Business"
+  | "Espace & Astronomie"
+  | "Philosophie"
+  | "Maîtrise du Français"
+  | "Actualités 2025-2026";
 
 export interface Question {
   id: number;

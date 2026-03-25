@@ -5,5 +5,10 @@ interface Props {
 }
 
 export default function QuizPage({ searchParams }: Props) {
-  return <QuizClient initialCategory={searchParams.category} />;
+  return (
+    <QuizClient
+      initialCategory={searchParams.category}
+      initialMode={(searchParams.mode as "classique" | "blitz" | "mort-subite" | "daily") || undefined}
+    />
+  );
 }

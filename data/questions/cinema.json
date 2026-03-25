@@ -1,0 +1,704 @@
+[
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Qui a réalisé le film 'Titanic' (1997) ?",
+    "options": [
+      "Steven Spielberg",
+      "James Cameron",
+      "Ridley Scott",
+      "Martin Scorsese"
+    ],
+    "correct_index": 1,
+    "explanation": "James Cameron a réalisé Titanic, qui a remporté 11 Oscars dont celui du meilleur film."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Dans quel film Disney trouve-t-on le personnage de Simba ?",
+    "options": [
+      "Aladdin",
+      "Le Roi Lion",
+      "Bambi",
+      "Dumbo"
+    ],
+    "correct_index": 1,
+    "explanation": "Simba est le personnage principal du Roi Lion, sorti en 1994."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel acteur incarne Harry Potter dans la saga cinématographique ?",
+    "options": [
+      "Rupert Grint",
+      "Tom Felton",
+      "Daniel Radcliffe",
+      "Eddie Redmayne"
+    ],
+    "correct_index": 2,
+    "explanation": "Daniel Radcliffe a incarné Harry Potter dans les 8 films de la saga, de 2001 à 2011."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel film d'animation met en scène un robot nettoyeur nommé WALL-E ?",
+    "options": [
+      "Robots",
+      "WALL-E",
+      "Big Hero 6",
+      "Les Indestructibles"
+    ],
+    "correct_index": 1,
+    "explanation": "WALL-E est un film Pixar sorti en 2008, racontant l'histoire d'un petit robot nettoyeur sur une Terre abandonnée."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Qui joue le rôle de Jack Dawson dans Titanic ?",
+    "options": [
+      "Brad Pitt",
+      "Leonardo DiCaprio",
+      "Matt Damon",
+      "Johnny Depp"
+    ],
+    "correct_index": 1,
+    "explanation": "Leonardo DiCaprio interprète Jack Dawson, le jeune artiste qui tombe amoureux de Rose."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Dans quelle saga de films trouve-t-on le personnage de Frodon ?",
+    "options": [
+      "Harry Potter",
+      "Narnia",
+      "Le Seigneur des Anneaux",
+      "Game of Thrones"
+    ],
+    "correct_index": 2,
+    "explanation": "Frodon Sacquet est le hobbit porteur de l'Anneau dans la trilogie du Seigneur des Anneaux de Peter Jackson."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel studio d'animation a créé Toy Story ?",
+    "options": [
+      "DreamWorks",
+      "Walt Disney Animation",
+      "Pixar",
+      "Illumination"
+    ],
+    "correct_index": 2,
+    "explanation": "Pixar a produit Toy Story en 1995, le premier long-métrage entièrement réalisé en images de synthèse."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel acteur est célèbre pour son rôle de James Bond à partir de 2006 ?",
+    "options": [
+      "Pierce Brosnan",
+      "Sean Connery",
+      "Daniel Craig",
+      "Roger Moore"
+    ],
+    "correct_index": 2,
+    "explanation": "Daniel Craig a incarné James Bond de Casino Royale (2006) à Mourir peut attendre (2021)."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel film raconte l'histoire d'un poisson-clown qui cherche son fils ?",
+    "options": [
+      "Shark Tale",
+      "Le Monde de Nemo",
+      "La Petite Sirène",
+      "Moana"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Monde de Nemo (Finding Nemo) de Pixar raconte la quête de Marin pour retrouver son fils Nemo."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel réalisateur français est connu pour 'Le Fabuleux Destin d'Amélie Poulain' ?",
+    "options": [
+      "Luc Besson",
+      "Jean-Pierre Jeunet",
+      "François Truffaut",
+      "Jacques Audiard"
+    ],
+    "correct_index": 1,
+    "explanation": "Jean-Pierre Jeunet a réalisé Amélie Poulain en 2001, avec Audrey Tautou dans le rôle-titre."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Dans quel film entend-on la réplique 'May the Force be with you' ?",
+    "options": [
+      "Star Trek",
+      "Star Wars",
+      "Dune",
+      "Alien"
+    ],
+    "correct_index": 1,
+    "explanation": "'Que la Force soit avec toi' est la réplique emblématique de la saga Star Wars créée par George Lucas."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel acteur interprète Iron Man dans le MCU ?",
+    "options": [
+      "Chris Evans",
+      "Chris Hemsworth",
+      "Robert Downey Jr.",
+      "Mark Ruffalo"
+    ],
+    "correct_index": 2,
+    "explanation": "Robert Downey Jr. a incarné Tony Stark / Iron Man de 2008 à 2019, devenant le pilier du Marvel Cinematic Universe."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film a remporté la Palme d'Or à Cannes en 2019 ?",
+    "options": [
+      "Joker",
+      "Parasite",
+      "1917",
+      "Once Upon a Time in Hollywood"
+    ],
+    "correct_index": 1,
+    "explanation": "Parasite de Bong Joon-ho a remporté la Palme d'Or 2019, puis l'Oscar du meilleur film en 2020."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Qui a réalisé '2001 : L'Odyssée de l'espace' ?",
+    "options": [
+      "Ridley Scott",
+      "Stanley Kubrick",
+      "Steven Spielberg",
+      "Alfred Hitchcock"
+    ],
+    "correct_index": 1,
+    "explanation": "Stanley Kubrick a réalisé ce chef-d'œuvre de science-fiction sorti en 1968."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film détient le record du plus gros box-office mondial (hors inflation) ?",
+    "options": [
+      "Titanic",
+      "Avengers: Endgame",
+      "Avatar",
+      "Star Wars: Le Réveil de la Force"
+    ],
+    "correct_index": 2,
+    "explanation": "Avatar de James Cameron détient le record avec plus de 2,9 milliards de dollars de recettes mondiales."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Dans quel film de Quentin Tarantino trouve-t-on le personnage de Jules Winnfield ?",
+    "options": [
+      "Kill Bill",
+      "Django Unchained",
+      "Pulp Fiction",
+      "Reservoir Dogs"
+    ],
+    "correct_index": 2,
+    "explanation": "Jules Winnfield, interprété par Samuel L. Jackson, est l'un des personnages principaux de Pulp Fiction (1994)."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel réalisateur est connu pour la trilogie 'Le Parrain' ?",
+    "options": [
+      "Martin Scorsese",
+      "Francis Ford Coppola",
+      "Brian De Palma",
+      "Sergio Leone"
+    ],
+    "correct_index": 1,
+    "explanation": "Francis Ford Coppola a réalisé les trois volets du Parrain entre 1972 et 1990."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quelle actrice française a remporté un Oscar pour 'La Môme' ?",
+    "options": [
+      "Juliette Binoche",
+      "Catherine Deneuve",
+      "Marion Cotillard",
+      "Isabelle Huppert"
+    ],
+    "correct_index": 2,
+    "explanation": "Marion Cotillard a remporté l'Oscar de la meilleure actrice en 2008 pour son rôle d'Édith Piaf dans La Môme."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel est le premier film parlant de l'histoire du cinéma ?",
+    "options": [
+      "Metropolis",
+      "Le Chanteur de jazz",
+      "Les Temps modernes",
+      "Nosferatu"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Chanteur de jazz (The Jazz Singer), sorti en 1927, est considéré comme le premier film parlant."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Qui a composé la musique de la plupart des films de Steven Spielberg ?",
+    "options": [
+      "Hans Zimmer",
+      "John Williams",
+      "Danny Elfman",
+      "Howard Shore"
+    ],
+    "correct_index": 1,
+    "explanation": "John Williams a composé les bandes originales de nombreux films de Spielberg, dont Jurassic Park, Schindler et Indiana Jones."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Dans quel film Christopher Nolan explore-t-il les rêves dans les rêves ?",
+    "options": [
+      "Interstellar",
+      "Tenet",
+      "Inception",
+      "Memento"
+    ],
+    "correct_index": 2,
+    "explanation": "Inception (2010) explore le concept de rêves partagés et imbriqués, avec Leonardo DiCaprio."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film de 1942 est considéré comme l'un des plus grands films romantiques ?",
+    "options": [
+      "Casablanca",
+      "Autant en emporte le vent",
+      "Citizen Kane",
+      "Les Enchaînés"
+    ],
+    "correct_index": 0,
+    "explanation": "Casablanca avec Humphrey Bogart et Ingrid Bergman est un classique indémodable du cinéma hollywoodien."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel réalisateur mexicain a réalisé 'Le Labyrinthe de Pan' ?",
+    "options": [
+      "Alfonso Cuarón",
+      "Alejandro González Iñárritu",
+      "Guillermo del Toro",
+      "Robert Rodriguez"
+    ],
+    "correct_index": 2,
+    "explanation": "Guillermo del Toro a réalisé Le Labyrinthe de Pan en 2006, mêlant conte fantastique et guerre civile espagnole."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel est le vrai nom de la Nouvelle Vague du cinéma français ?",
+    "options": [
+      "Le néoréalisme",
+      "La Nouvelle Vague",
+      "Le cinéma-vérité",
+      "L'expressionnisme"
+    ],
+    "correct_index": 1,
+    "explanation": "La Nouvelle Vague est un mouvement cinématographique français des années 1960, porté par Godard, Truffaut et Chabrol."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film de Denis Villeneuve adapte le roman de Frank Herbert ?",
+    "options": [
+      "Blade Runner 2049",
+      "Arrival",
+      "Dune",
+      "Sicario"
+    ],
+    "correct_index": 2,
+    "explanation": "Dune (2021) est l'adaptation par Denis Villeneuve du roman de science-fiction de Frank Herbert."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Qui a réalisé 'Schindler's List' (La Liste de Schindler) ?",
+    "options": [
+      "Roman Polanski",
+      "Steven Spielberg",
+      "Clint Eastwood",
+      "Oliver Stone"
+    ],
+    "correct_index": 1,
+    "explanation": "Steven Spielberg a réalisé La Liste de Schindler en 1993, remportant l'Oscar du meilleur film et du meilleur réalisateur."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Dans quel film Alfred Hitchcock met-il en scène un motel sinistre ?",
+    "options": [
+      "Les Oiseaux",
+      "Fenêtre sur cour",
+      "Psychose",
+      "Vertigo"
+    ],
+    "correct_index": 2,
+    "explanation": "Psychose (1960) se déroule au Bates Motel, tenu par le troublant Norman Bates."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film d'animation japonais a remporté l'Oscar du meilleur film d'animation en 2003 ?",
+    "options": [
+      "Princesse Mononoké",
+      "Le Voyage de Chihiro",
+      "Mon voisin Totoro",
+      "Le Château ambulant"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Voyage de Chihiro de Hayao Miyazaki a remporté l'Oscar du meilleur film d'animation en 2003."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel acteur a joué dans 'Fight Club', 'Se7en' et 'Inglourious Basterds' ?",
+    "options": [
+      "Edward Norton",
+      "George Clooney",
+      "Brad Pitt",
+      "Matt Damon"
+    ],
+    "correct_index": 2,
+    "explanation": "Brad Pitt a joué dans ces trois films, devenant l'un des acteurs les plus polyvalents d'Hollywood."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film français de 1995 raconte 24 heures dans une banlieue parisienne ?",
+    "options": [
+      "Les Misérables",
+      "La Haine",
+      "Banlieue 13",
+      "Divines"
+    ],
+    "correct_index": 1,
+    "explanation": "La Haine de Mathieu Kassovitz suit trois jeunes de banlieue pendant 24 heures après une émeute."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Combien de films composent la saga 'Fast and Furious' principale (jusqu'en 2023) ?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "correct_index": 2,
+    "explanation": "La saga principale compte 10 films, de Fast and Furious (2001) à Fast X (2023)."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel cinéaste est connu pour ses plans-séquences et a réalisé 'Birdman' ?",
+    "options": [
+      "David Fincher",
+      "Alejandro González Iñárritu",
+      "Wes Anderson",
+      "Paul Thomas Anderson"
+    ],
+    "correct_index": 1,
+    "explanation": "Iñárritu a réalisé Birdman (2014), filmé pour donner l'impression d'un seul plan-séquence, remportant l'Oscar du meilleur film."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "En quelle année les frères Lumière ont-ils organisé la première projection publique de cinéma ?",
+    "options": [
+      "1888",
+      "1891",
+      "1895",
+      "1900"
+    ],
+    "correct_index": 2,
+    "explanation": "Le 28 décembre 1895, les frères Lumière organisèrent la première projection publique payante au Grand Café à Paris."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film de Charlie Chaplin est une satire de l'industrialisation ?",
+    "options": [
+      "Le Kid",
+      "La Ruée vers l'or",
+      "Les Temps modernes",
+      "Le Dictateur"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Temps modernes (1936) est une satire de l'industrialisation et du travail à la chaîne."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel réalisateur danois a fondé le mouvement Dogme 95 ?",
+    "options": [
+      "Nicolas Winding Refn",
+      "Thomas Vinterberg",
+      "Lars von Trier",
+      "Susanne Bier"
+    ],
+    "correct_index": 2,
+    "explanation": "Lars von Trier et Thomas Vinterberg ont cofondé le Dogme 95, mais von Trier en est le principal instigateur."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film de Jean-Luc Godard est considéré comme le manifeste de la Nouvelle Vague ?",
+    "options": [
+      "Le Mépris",
+      "Pierrot le Fou",
+      "À bout de souffle",
+      "Alphaville"
+    ],
+    "correct_index": 2,
+    "explanation": "À bout de souffle (1960) avec Jean-Paul Belmondo est considéré comme le film fondateur de la Nouvelle Vague."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel terme désigne un plan filmé sans coupure ?",
+    "options": [
+      "Plan américain",
+      "Plan-séquence",
+      "Champ-contrechamp",
+      "Travelling"
+    ],
+    "correct_index": 1,
+    "explanation": "Un plan-séquence est un plan tourné en continu, sans montage, couvrant toute une séquence narrative."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film de Sergio Leone est le dernier volet de la 'Trilogie du dollar' ?",
+    "options": [
+      "Il était une fois dans l'Ouest",
+      "Le Bon, la Brute et le Truand",
+      "Pour une poignée de dollars",
+      "Et pour quelques dollars de plus"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Bon, la Brute et le Truand (1966) clôt la trilogie du dollar avec Clint Eastwood."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel cinéaste japonais a réalisé 'Rashômon' et 'Les Sept Samouraïs' ?",
+    "options": [
+      "Yasujirō Ozu",
+      "Akira Kurosawa",
+      "Hayao Miyazaki",
+      "Takeshi Kitano"
+    ],
+    "correct_index": 1,
+    "explanation": "Akira Kurosawa est l'un des plus grands cinéastes de l'histoire, ayant influencé le cinéma mondial."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film a été le premier à utiliser massivement la technique du 'bullet time' ?",
+    "options": [
+      "Inception",
+      "Matrix",
+      "300",
+      "Max Payne"
+    ],
+    "correct_index": 1,
+    "explanation": "Matrix (1999) des Wachowski a popularisé le 'bullet time', technique de ralenti à 360 degrés."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel réalisateur autrichien a réalisé 'Funny Games' et 'Amour' ?",
+    "options": [
+      "Werner Herzog",
+      "Wim Wenders",
+      "Michael Haneke",
+      "Fritz Lang"
+    ],
+    "correct_index": 2,
+    "explanation": "Michael Haneke a réalisé Amour (2012), Palme d'Or et Oscar du meilleur film étranger."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel est le MacGuffin dans le vocabulaire cinématographique ?",
+    "options": [
+      "Un type de caméra",
+      "Un élément scénaristique prétexte",
+      "Un angle de prise de vue",
+      "Un effet sonore"
+    ],
+    "correct_index": 1,
+    "explanation": "Le MacGuffin est un élément scénaristique qui motive l'intrigue sans avoir d'importance en soi, concept popularisé par Hitchcock."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film muet de 1927 de Fritz Lang est un classique de la science-fiction ?",
+    "options": [
+      "Nosferatu",
+      "Le Cabinet du Dr Caligari",
+      "Metropolis",
+      "M le maudit"
+    ],
+    "correct_index": 2,
+    "explanation": "Metropolis (1927) de Fritz Lang est un film expressionniste allemand pionnier de la science-fiction."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel cinéaste a réalisé 'Mulholland Drive' et 'Twin Peaks' ?",
+    "options": [
+      "David Cronenberg",
+      "David Fincher",
+      "David Lynch",
+      "David Lean"
+    ],
+    "correct_index": 2,
+    "explanation": "David Lynch est célèbre pour son style surréaliste et ses œuvres énigmatiques comme Mulholland Drive."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film de Terrence Malick a remporté la Palme d'Or à Cannes en 2011 ?",
+    "options": [
+      "The Thin Red Line",
+      "The Tree of Life",
+      "Knight of Cups",
+      "A Hidden Life"
+    ],
+    "correct_index": 1,
+    "explanation": "The Tree of Life a remporté la Palme d'Or 2011 avec Brad Pitt et Jessica Chastain."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel procédé cinématographique consiste à filmer image par image des objets inanimés ?",
+    "options": [
+      "Rotoscopie",
+      "Stop-motion",
+      "Motion capture",
+      "Compositing"
+    ],
+    "correct_index": 1,
+    "explanation": "Le stop-motion (ou animation en volume) consiste à photographier des objets image par image pour créer l'illusion du mouvement."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film d'Andrei Tarkovski se déroule dans une zone mystérieuse post-catastrophe ?",
+    "options": [
+      "Solaris",
+      "Le Miroir",
+      "Stalker",
+      "Nostalghia"
+    ],
+    "correct_index": 2,
+    "explanation": "Stalker (1979) suit un guide dans une zone interdite où se trouverait une chambre exauçant les vœux."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quelle technique consiste à projeter un film sur un fond derrière les acteurs ?",
+    "options": [
+      "Fond vert",
+      "Rétroprojection",
+      "Matte painting",
+      "Incrustation"
+    ],
+    "correct_index": 1,
+    "explanation": "La rétroprojection (ou back projection) était courante avant l'ère du numérique pour simuler des décors."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel film de Luc Besson met en scène un tueur à gages et une fillette ?",
+    "options": [
+      "Le Cinquième Élément",
+      "Nikita",
+      "Léon",
+      "Lucy"
+    ],
+    "correct_index": 2,
+    "explanation": "Léon (1994) raconte l'histoire d'un tueur à gages (Jean Reno) qui prend sous son aile une fillette (Natalie Portman)."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel réalisateur a créé l'univers cinématographique de 'Jurassic Park' ?",
+    "options": [
+      "James Cameron",
+      "George Lucas",
+      "Steven Spielberg",
+      "Peter Jackson"
+    ],
+    "correct_index": 2,
+    "explanation": "Steven Spielberg a réalisé Jurassic Park en 1993, révolutionnant les effets spéciaux numériques."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Quel film a remporté la Palme d'or à Cannes en 2019 ?",
+    "options": [
+      "Joker",
+      "Parasite",
+      "1917",
+      "Once Upon a Time in Hollywood"
+    ],
+    "correct_index": 1,
+    "explanation": "Parasite de Bong Joon-ho a remporté la Palme d'or à Cannes 2019, puis l'Oscar du meilleur film en 2020."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "medium",
+    "question": "Quel acteur français a joué dans 'Le Grand Bleu' et 'Léon' ?",
+    "options": [
+      "Gérard Depardieu",
+      "Vincent Cassel",
+      "Jean Reno",
+      "Jean-Paul Belmondo"
+    ],
+    "correct_index": 2,
+    "explanation": "Jean Reno a joué dans Le Grand Bleu (1988) de Luc Besson et dans Léon (1994)."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "hard",
+    "question": "Quel film détient le record du plus grand nombre d'Oscars ?",
+    "options": [
+      "Titanic",
+      "Le Seigneur des Anneaux : Le Retour du Roi",
+      "Ben-Hur",
+      "La La Land"
+    ],
+    "correct_index": 2,
+    "explanation": "Ben-Hur (1959), Titanic (1997) et Le Retour du Roi (2003) partagent le record avec 11 Oscars chacun."
+  },
+  {
+    "category": "Cinéma",
+    "difficulty": "easy",
+    "question": "Qui a réalisé le film 'E.T. l'extra-terrestre' ?",
+    "options": [
+      "George Lucas",
+      "James Cameron",
+      "Steven Spielberg",
+      "Ridley Scott"
+    ],
+    "correct_index": 2,
+    "explanation": "Steven Spielberg a réalisé E.T. en 1982, devenu l'un des films les plus emblématiques de l'histoire."
+  }
+]

@@ -2,13 +2,25 @@ import { NextRequest, NextResponse } from "next/server";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 
-interface Question {
+interface RawQuestion {
   category: string;
   difficulty: "easy" | "medium" | "hard";
   question: string;
   options: string[];
   correct_index: number;
   explanation: string;
+  period?: string;
+}
+
+interface Question {
+  id: number;
+  category: string;
+  difficulty: "easy" | "medium" | "hard";
+  question: string;
+  options: string[];
+  correctIndex: number;
+  explanation: string;
+  period?: string;
 }
 
 // Load all questions once at module init
@@ -21,15 +33,25 @@ function loadQuestions(): Question[] {
   const files = readdirSync(dataDir).filter((f) => f.endsWith(".json"));
   const seen = new Set<string>();
   const questions: Question[] = [];
+  let id = 1;
 
   for (const file of files) {
     const raw = readFileSync(join(dataDir, file), "utf-8");
-    const parsed: Question[] = JSON.parse(raw);
+    const parsed: RawQuestion[] = JSON.parse(raw);
     for (const q of parsed) {
       const key = q.question.trim().toLowerCase();
       if (!seen.has(key)) {
         seen.add(key);
-        questions.push(q);
+        questions.push({
+          id: id++,
+          category: q.category,
+          difficulty: q.difficulty,
+          question: q.question,
+          options: q.options,
+          correctIndex: q.correct_index,
+          explanation: q.explanation,
+          period: q.period,
+        });
       }
     }
   }
@@ -42,6 +64,7 @@ export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const category = searchParams.get("category");
   const difficulty = searchParams.get("difficulty");
+  const period = searchParams.get("period");
   const limit = Math.min(
     Math.max(parseInt(searchParams.get("limit") ?? "10", 10) || 10, 1),
     50
@@ -56,6 +79,9 @@ export async function GET(request: NextRequest) {
   }
   if (difficulty) {
     filtered = filtered.filter((q) => q.difficulty === difficulty);
+  }
+  if (period) {
+    filtered = filtered.filter((q) => q.period === period);
   }
 
   if (filtered.length === 0) {
