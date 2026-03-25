@@ -1,52 +1,691 @@
 [
-  {"category":"Musique","difficulty":"easy","question":"Quel groupe britannique a chanté 'Bohemian Rhapsody' ?","options":["The Beatles","Led Zeppelin","Queen","Pink Floyd"],"correct_index":2,"explanation":"Queen a sorti Bohemian Rhapsody en 1975, une chanson devenue mythique, interprétée par Freddie Mercury."},
-  {"category":"Musique","difficulty":"easy","question":"Quel instrument de musique possède 88 touches ?","options":["Orgue","Accordéon","Piano","Clavecin"],"correct_index":2,"explanation":"Le piano standard possède 88 touches : 52 blanches et 36 noires."},
-  {"category":"Musique","difficulty":"easy","question":"Quelle chanteuse est surnommée 'La Reine de la Pop' ?","options":["Beyoncé","Madonna","Lady Gaga","Whitney Houston"],"correct_index":1,"explanation":"Madonna est surnommée la Reine de la Pop depuis les années 1980 grâce à son influence sur la musique et la culture."},
-  {"category":"Musique","difficulty":"easy","question":"Quel chanteur français est connu pour 'La Bohème' ?","options":["Jacques Brel","Georges Brassens","Charles Aznavour","Serge Gainsbourg"],"correct_index":2,"explanation":"Charles Aznavour a chanté La Bohème en 1965, l'une des chansons françaises les plus connues au monde."},
-  {"category":"Musique","difficulty":"easy","question":"Combien de cordes possède une guitare classique standard ?","options":["4","5","6","8"],"correct_index":2,"explanation":"Une guitare classique standard possède 6 cordes, généralement en nylon."},
-  {"category":"Musique","difficulty":"easy","question":"Quel rappeur français a sorti l'album 'Civilisation' ?","options":["Booba","Orelsan","Jul","Nekfeu"],"correct_index":1,"explanation":"Orelsan a sorti l'album Civilisation en 2021, remportant plusieurs Victoires de la Musique."},
-  {"category":"Musique","difficulty":"easy","question":"Quel groupe a chanté 'Stairway to Heaven' ?","options":["Deep Purple","Led Zeppelin","Black Sabbath","The Rolling Stones"],"correct_index":1,"explanation":"Led Zeppelin a sorti Stairway to Heaven en 1971, considéré comme l'un des plus grands morceaux de rock."},
-  {"category":"Musique","difficulty":"easy","question":"Quelle est la note de musique qui suit 'do' dans la gamme ?","options":["Mi","Fa","Ré","Sol"],"correct_index":2,"explanation":"La gamme de do majeur est : do, ré, mi, fa, sol, la, si."},
-  {"category":"Musique","difficulty":"easy","question":"Quel artiste a chanté 'Thriller' ?","options":["Prince","Stevie Wonder","Michael Jackson","James Brown"],"correct_index":2,"explanation":"Thriller de Michael Jackson (1982) est l'album le plus vendu de tous les temps avec plus de 66 millions d'exemplaires."},
-  {"category":"Musique","difficulty":"easy","question":"Quel festival de musique se tient chaque année à Bourges en France ?","options":["Les Eurockéennes","Le Printemps de Bourges","Rock en Seine","Les Vieilles Charrues"],"correct_index":1,"explanation":"Le Printemps de Bourges est un festival de musique créé en 1977, vitrine de la chanson française."},
-  {"category":"Musique","difficulty":"easy","question":"Quelle chanteuse barbadienne est connue pour 'Umbrella' ?","options":["Beyoncé","Rihanna","Nicki Minaj","Alicia Keys"],"correct_index":1,"explanation":"Rihanna, née à la Barbade, a connu un succès mondial avec Umbrella en 2007."},
-  {"category":"Musique","difficulty":"medium","question":"Quel compositeur classique était sourd quand il a composé sa 9e symphonie ?","options":["Mozart","Bach","Beethoven","Chopin"],"correct_index":2,"explanation":"Beethoven a composé sa 9e symphonie alors qu'il était presque totalement sourd, un exploit musical extraordinaire."},
-  {"category":"Musique","difficulty":"medium","question":"Quel groupe de rock a sorti l'album 'The Dark Side of the Moon' ?","options":["The Who","Pink Floyd","Genesis","King Crimson"],"correct_index":1,"explanation":"The Dark Side of the Moon de Pink Floyd (1973) est resté dans les charts pendant plus de 900 semaines."},
-  {"category":"Musique","difficulty":"medium","question":"Quel DJ français a sorti l'album 'Discovery' avec Daft Punk ?","options":["David Guetta","Martin Solveig","Thomas Bangalter et Guy-Manuel","Bob Sinclar"],"correct_index":2,"explanation":"Daft Punk (Thomas Bangalter et Guy-Manuel de Homem-Christo) a sorti Discovery en 2001."},
-  {"category":"Musique","difficulty":"medium","question":"Quel est le tempo standard d'un battement de cœur au repos, souvent utilisé en musique ?","options":["60 BPM","80 BPM","120 BPM","100 BPM"],"correct_index":0,"explanation":"Le cœur bat environ à 60-80 BPM au repos, et 60 BPM correspond à un tempo de type Adagio."},
-  {"category":"Musique","difficulty":"medium","question":"Quel chanteur a popularisé le reggae dans le monde ?","options":["Peter Tosh","Jimmy Cliff","Bob Marley","Burning Spear"],"correct_index":2,"explanation":"Bob Marley a popularisé le reggae internationalement avec des titres comme No Woman, No Cry et Redemption Song."},
-  {"category":"Musique","difficulty":"medium","question":"Quel opéra de Mozart met en scène Don Juan ?","options":["La Flûte enchantée","Les Noces de Figaro","Don Giovanni","Così fan tutte"],"correct_index":2,"explanation":"Don Giovanni (1787) est un opéra de Mozart basé sur le mythe de Don Juan, le séducteur légendaire."},
-  {"category":"Musique","difficulty":"medium","question":"Quel genre musical est né à la Nouvelle-Orléans au début du XXe siècle ?","options":["Blues","Jazz","Rock","Gospel"],"correct_index":1,"explanation":"Le jazz est né à La Nouvelle-Orléans vers 1900, mêlant influences africaines, blues et musique européenne."},
-  {"category":"Musique","difficulty":"medium","question":"Quel groupe français a chanté 'Partenaire Particulier' ?","options":["Indochine","Partenaire Particulier","Téléphone","Les Rita Mitsouko"],"correct_index":1,"explanation":"Le groupe Partenaire Particulier a connu un immense succès en 1985 avec ce titre éponyme."},
-  {"category":"Musique","difficulty":"medium","question":"Quel artiste a composé 'Les Quatre Saisons' ?","options":["Bach","Vivaldi","Haendel","Mozart"],"correct_index":1,"explanation":"Antonio Vivaldi a composé Les Quatre Saisons vers 1723, l'une des œuvres baroques les plus célèbres."},
-  {"category":"Musique","difficulty":"medium","question":"Quel rappeur américain a sorti l'album 'The Marshall Mathers LP' ?","options":["Jay-Z","Kanye West","Eminem","50 Cent"],"correct_index":2,"explanation":"Eminem (Marshall Mathers) a sorti cet album en 2000, devenu l'un des albums de rap les plus vendus."},
-  {"category":"Musique","difficulty":"medium","question":"Quel instrument à vent en bois possède une anche simple ?","options":["Hautbois","Clarinette","Basson","Flûte traversière"],"correct_index":1,"explanation":"La clarinette utilise une anche simple, contrairement au hautbois et au basson qui ont une anche double."},
-  {"category":"Musique","difficulty":"medium","question":"Quel festival français se tient à Carhaix en Bretagne ?","options":["Hellfest","Solidays","Les Vieilles Charrues","Garorock"],"correct_index":2,"explanation":"Les Vieilles Charrues à Carhaix est le plus grand festival de musique en France en termes de fréquentation."},
-  {"category":"Musique","difficulty":"medium","question":"Quel groupe a chanté 'Smells Like Teen Spirit' ?","options":["Pearl Jam","Soundgarden","Nirvana","Alice in Chains"],"correct_index":2,"explanation":"Nirvana a sorti Smells Like Teen Spirit en 1991, symbole du mouvement grunge."},
-  {"category":"Musique","difficulty":"hard","question":"Quel système de notation musicale utilise les lettres A à G ?","options":["Le solfège latin","La notation anglo-saxonne","La notation byzantine","Le système Kodály"],"correct_index":1,"explanation":"La notation anglo-saxonne utilise les lettres A (la) à G (sol), contrairement au solfège latin (do, ré, mi...)."},
-  {"category":"Musique","difficulty":"hard","question":"Quel compositeur a écrit 'Le Sacre du printemps', créant un scandale à sa première ?","options":["Claude Debussy","Maurice Ravel","Igor Stravinsky","Sergueï Prokofiev"],"correct_index":2,"explanation":"Le Sacre du printemps de Stravinsky a provoqué une émeute lors de sa première à Paris en 1913."},
-  {"category":"Musique","difficulty":"hard","question":"Combien de symphonies Beethoven a-t-il composées ?","options":["7","9","10","12"],"correct_index":1,"explanation":"Beethoven a composé 9 symphonies, la dernière contenant le célèbre 'Ode à la joie'."},
-  {"category":"Musique","difficulty":"hard","question":"Quel mode musical est souvent associé à la musique médiévale et au chant grégorien ?","options":["Mode majeur","Mode mineur","Mode dorien","Mode lydien"],"correct_index":2,"explanation":"Le mode dorien est l'un des modes ecclésiastiques utilisés dans le chant grégorien médiéval."},
-  {"category":"Musique","difficulty":"hard","question":"Quel mouvement musical français des années 1990 a donné naissance à la French Touch ?","options":["La musique concrète","L'électro house","La French Touch","Le yéyé"],"correct_index":2,"explanation":"La French Touch est un mouvement de musique électronique française des années 1990, avec Daft Punk, Air et Cassius."},
-  {"category":"Musique","difficulty":"hard","question":"Quel instrument de musique indien à cordes est joué par Ravi Shankar ?","options":["Tabla","Sitar","Sarangi","Tanpura"],"correct_index":1,"explanation":"Ravi Shankar était un virtuose du sitar, instrument à cordes indien, qui a influencé les Beatles."},
-  {"category":"Musique","difficulty":"hard","question":"Quelle est la tonalité d'un morceau qui n'a ni dièse ni bémol à la clé ?","options":["Sol majeur","Ré majeur","Do majeur","Fa majeur"],"correct_index":2,"explanation":"Do majeur (ou la mineur relatif) est la tonalité sans altération à la clé."},
-  {"category":"Musique","difficulty":"hard","question":"Quel compositeur minimaliste américain a composé 'Music for 18 Musicians' ?","options":["Philip Glass","Steve Reich","Terry Riley","John Adams"],"correct_index":1,"explanation":"Steve Reich a composé Music for 18 Musicians en 1976, chef-d'œuvre du minimalisme musical."},
-  {"category":"Musique","difficulty":"hard","question":"Quel intervalle musical est appelé 'le diable en musique' (diabolus in musica) ?","options":["La quinte juste","Le triton","La septième majeure","La seconde mineure"],"correct_index":1,"explanation":"Le triton (intervalle de trois tons) était surnommé 'diabolus in musica' au Moyen Âge pour sa dissonance."},
-  {"category":"Musique","difficulty":"hard","question":"Quel album de Serge Gainsbourg a fait scandale avec sa pochette et ses thèmes provocateurs ?","options":["Melody Nelson","Love on the Beat","L'Homme à tête de chou","Aux armes et cætera"],"correct_index":1,"explanation":"Love on the Beat (1984) a fait scandale par sa pochette et ses thèmes provocateurs, typiques de Gainsbourg."},
-  {"category":"Musique","difficulty":"medium","question":"Quel chanteur belge est connu pour 'Ne me quitte pas' ?","options":["Stromae","Jacques Brel","Plastic Bertrand","Adamo"],"correct_index":1,"explanation":"Jacques Brel a interprété Ne me quitte pas en 1959, devenue l'une des plus grandes chansons francophones."},
-  {"category":"Musique","difficulty":"easy","question":"Quel groupe de K-pop est devenu un phénomène mondial dans les années 2010 ?","options":["BLACKPINK","EXO","BTS","TWICE"],"correct_index":2,"explanation":"BTS (Bangtan Sonyeondan) est devenu le groupe de K-pop le plus populaire au monde."},
-  {"category":"Musique","difficulty":"medium","question":"Quel artiste a chanté 'Formidable' en français ?","options":["Maître Gims","Stromae","Angèle","Damso"],"correct_index":1,"explanation":"Stromae a sorti Formidable en 2013, un titre devenu viral grâce à un clip tourné dans les rues de Bruxelles."},
-  {"category":"Musique","difficulty":"easy","question":"Quel type de voix masculine est le plus grave ?","options":["Ténor","Baryton","Basse","Contre-ténor"],"correct_index":2,"explanation":"La basse est le registre vocal masculin le plus grave, suivi du baryton puis du ténor."},
-  {"category":"Musique","difficulty":"medium","question":"Quel album d'Adele porte le nom de son âge au moment de l'écriture ?","options":["19","21","25","30"],"correct_index":1,"explanation":"Chacun de ses albums porte son âge : 19, 21, 25 et 30. L'album 21 (2011) s'est vendu à plus de 31 millions d'exemplaires."},
-  {"category":"Musique","difficulty":"hard","question":"Quel compositeur français a écrit 'Boléro', l'une des œuvres orchestrales les plus jouées ?","options":["Claude Debussy","Camille Saint-Saëns","Maurice Ravel","Hector Berlioz"],"correct_index":2,"explanation":"Maurice Ravel a composé le Boléro en 1928, une pièce basée sur un crescendo progressif d'un même thème."},
-  {"category":"Musique","difficulty":"medium","question":"Quel est le nom du festival de musique électronique qui se tient à Boom en Belgique ?","options":["Tomorrowland","Ultra","Sonar","Awakenings"],"correct_index":0,"explanation":"Tomorrowland se tient à Boom en Belgique et est l'un des plus grands festivals de musique électronique au monde."},
-  {"category":"Musique","difficulty":"easy","question":"Quel instrument à percussion est composé de peaux tendues sur un cadre cylindrique ?","options":["Xylophone","Cymbale","Tambour","Triangle"],"correct_index":2,"explanation":"Le tambour est un instrument à percussion membranophone composé de peaux tendues sur un cadre."},
-  {"category":"Musique","difficulty":"hard","question":"Quel procédé musical consiste à superposer plusieurs lignes mélodiques indépendantes ?","options":["L'harmonie","La polyphonie","Le contrepoint","L'homophonie"],"correct_index":2,"explanation":"Le contrepoint est l'art de superposer des lignes mélodiques indépendantes, maîtrisé par Bach."},
-  {"category":"Musique","difficulty":"medium","question":"Quel groupe britannique a sorti l'album 'Abbey Road' en 1969 ?","options":["The Rolling Stones","The Who","The Beatles","The Kinks"],"correct_index":2,"explanation":"Abbey Road des Beatles est sorti en 1969, avec sa pochette iconique du passage piéton."},
-  {"category":"Musique","difficulty":"easy","question":"Quel type de musique est traditionnellement associé à Nashville, Tennessee ?","options":["Jazz","Blues","Country","Rock"],"correct_index":2,"explanation":"Nashville est surnommée 'Music City' et est considérée comme la capitale mondiale de la musique country."},
-  {"category":"Musique","difficulty":"hard","question":"Quel système d'accordage divise l'octave en 12 demi-tons égaux ?","options":["L'accordage pythagoricien","Le tempérament mésotonique","Le tempérament égal","L'intonation juste"],"correct_index":2,"explanation":"Le tempérament égal divise l'octave en 12 demi-tons égaux, standard de la musique occidentale moderne."},
-  {"category":"Musique","difficulty":"medium","question":"Quelle chanteuse française a interprété 'La Vie en rose' ?","options":["Dalida","Édith Piaf","Mireille Mathieu","Barbara"],"correct_index":1,"explanation":"La Vie en rose, interprétée par Édith Piaf en 1946, est l'une des chansons françaises les plus connues au monde."},
-  {"category":"Musique","difficulty":"easy","question":"Quel rappeur français est connu sous le nom de 'Petit Frère' et a sorti 'Bande organisée' ?","options":["SCH","Jul","Ninho","Soprano"],"correct_index":1,"explanation":"Jul, rappeur marseillais, a participé au titre collectif Bande organisée en 2020, devenu un phénomène viral."},
-  {"category":"Musique","difficulty":"hard","question":"Quelle œuvre de Jean-Sébastien Bach est considérée comme un monument de la musique pour clavier ?","options":["Les Variations Goldberg","Le Clavier bien tempéré","L'Art de la fugue","Les Suites pour violoncelle"],"correct_index":1,"explanation":"Le Clavier bien tempéré (1722/1742) explore les 24 tonalités majeures et mineures en préludes et fugues."},
-  {"category":"Musique","difficulty":"medium","question":"Quel genre musical mêle chant et paroles parlées sur une base rythmique ?","options":["R&B","Rap","Funk","Soul"],"correct_index":1,"explanation":"Le rap (Rhythm And Poetry) combine paroles scandées ou parlées sur un accompagnement rythmique."}
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel groupe britannique a chanté 'Bohemian Rhapsody' ?",
+    "options": [
+      "The Beatles",
+      "Led Zeppelin",
+      "Queen",
+      "Pink Floyd"
+    ],
+    "correct_index": 2,
+    "explanation": "Queen a sorti Bohemian Rhapsody en 1975, une chanson devenue mythique, interprétée par Freddie Mercury."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel instrument de musique possède 88 touches ?",
+    "options": [
+      "Orgue",
+      "Accordéon",
+      "Piano",
+      "Clavecin"
+    ],
+    "correct_index": 2,
+    "explanation": "Le piano standard possède 88 touches : 52 blanches et 36 noires."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quelle chanteuse est surnommée 'La Reine de la Pop' ?",
+    "options": [
+      "Beyoncé",
+      "Madonna",
+      "Lady Gaga",
+      "Whitney Houston"
+    ],
+    "correct_index": 1,
+    "explanation": "Madonna est surnommée la Reine de la Pop depuis les années 1980 grâce à son influence sur la musique et la culture."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel chanteur français est connu pour 'La Bohème' ?",
+    "options": [
+      "Jacques Brel",
+      "Georges Brassens",
+      "Charles Aznavour",
+      "Serge Gainsbourg"
+    ],
+    "correct_index": 2,
+    "explanation": "Charles Aznavour a chanté La Bohème en 1965, l'une des chansons françaises les plus connues au monde."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Combien de cordes possède une guitare classique standard ?",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "correct_index": 2,
+    "explanation": "Une guitare classique standard possède 6 cordes, généralement en nylon."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel rappeur français a sorti l'album 'Civilisation' ?",
+    "options": [
+      "Booba",
+      "Orelsan",
+      "Jul",
+      "Nekfeu"
+    ],
+    "correct_index": 1,
+    "explanation": "Orelsan a sorti l'album Civilisation en 2021, remportant plusieurs Victoires de la Musique."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel groupe a chanté 'Stairway to Heaven' ?",
+    "options": [
+      "Deep Purple",
+      "Led Zeppelin",
+      "Black Sabbath",
+      "The Rolling Stones"
+    ],
+    "correct_index": 1,
+    "explanation": "Led Zeppelin a sorti Stairway to Heaven en 1971, considéré comme l'un des plus grands morceaux de rock."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quelle est la note de musique qui suit 'do' dans la gamme ?",
+    "options": [
+      "Mi",
+      "Fa",
+      "Ré",
+      "Sol"
+    ],
+    "correct_index": 2,
+    "explanation": "La gamme de do majeur est : do, ré, mi, fa, sol, la, si."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel artiste a chanté 'Thriller' ?",
+    "options": [
+      "Prince",
+      "Stevie Wonder",
+      "Michael Jackson",
+      "James Brown"
+    ],
+    "correct_index": 2,
+    "explanation": "Thriller de Michael Jackson (1982) est l'album le plus vendu de tous les temps avec plus de 66 millions d'exemplaires."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel festival de musique se tient chaque année à Bourges en France ?",
+    "options": [
+      "Les Eurockéennes",
+      "Le Printemps de Bourges",
+      "Rock en Seine",
+      "Les Vieilles Charrues"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Printemps de Bourges est un festival de musique créé en 1977, vitrine de la chanson française."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quelle chanteuse barbadienne est connue pour 'Umbrella' ?",
+    "options": [
+      "Beyoncé",
+      "Rihanna",
+      "Nicki Minaj",
+      "Alicia Keys"
+    ],
+    "correct_index": 1,
+    "explanation": "Rihanna, née à la Barbade, a connu un succès mondial avec Umbrella en 2007."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel compositeur classique était sourd quand il a composé sa 9e symphonie ?",
+    "options": [
+      "Mozart",
+      "Bach",
+      "Beethoven",
+      "Chopin"
+    ],
+    "correct_index": 2,
+    "explanation": "Beethoven a composé sa 9e symphonie alors qu'il était presque totalement sourd, un exploit musical extraordinaire."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel groupe de rock a sorti l'album 'The Dark Side of the Moon' ?",
+    "options": [
+      "The Who",
+      "Pink Floyd",
+      "Genesis",
+      "King Crimson"
+    ],
+    "correct_index": 1,
+    "explanation": "The Dark Side of the Moon de Pink Floyd (1973) est resté dans les charts pendant plus de 900 semaines."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel DJ français a sorti l'album 'Discovery' avec Daft Punk ?",
+    "options": [
+      "David Guetta",
+      "Martin Solveig",
+      "Thomas Bangalter et Guy-Manuel",
+      "Bob Sinclar"
+    ],
+    "correct_index": 2,
+    "explanation": "Daft Punk (Thomas Bangalter et Guy-Manuel de Homem-Christo) a sorti Discovery en 2001."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel est le tempo standard d'un battement de cœur au repos, souvent utilisé en musique ?",
+    "options": [
+      "60 BPM",
+      "80 BPM",
+      "120 BPM",
+      "100 BPM"
+    ],
+    "correct_index": 0,
+    "explanation": "Le cœur bat environ à 60-80 BPM au repos, et 60 BPM correspond à un tempo de type Adagio."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel chanteur a popularisé le reggae dans le monde ?",
+    "options": [
+      "Peter Tosh",
+      "Jimmy Cliff",
+      "Bob Marley",
+      "Burning Spear"
+    ],
+    "correct_index": 2,
+    "explanation": "Bob Marley a popularisé le reggae internationalement avec des titres comme No Woman, No Cry et Redemption Song."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel opéra de Mozart met en scène Don Juan ?",
+    "options": [
+      "La Flûte enchantée",
+      "Les Noces de Figaro",
+      "Don Giovanni",
+      "Così fan tutte"
+    ],
+    "correct_index": 2,
+    "explanation": "Don Giovanni (1787) est un opéra de Mozart basé sur le mythe de Don Juan, le séducteur légendaire."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel genre musical est né à la Nouvelle-Orléans au début du XXe siècle ?",
+    "options": [
+      "Blues",
+      "Jazz",
+      "Rock",
+      "Gospel"
+    ],
+    "correct_index": 1,
+    "explanation": "Le jazz est né à La Nouvelle-Orléans vers 1900, mêlant influences africaines, blues et musique européenne."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel groupe français a chanté 'Partenaire Particulier' ?",
+    "options": [
+      "Indochine",
+      "Partenaire Particulier",
+      "Téléphone",
+      "Les Rita Mitsouko"
+    ],
+    "correct_index": 1,
+    "explanation": "Le groupe Partenaire Particulier a connu un immense succès en 1985 avec ce titre éponyme."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel artiste a composé 'Les Quatre Saisons' ?",
+    "options": [
+      "Bach",
+      "Vivaldi",
+      "Haendel",
+      "Mozart"
+    ],
+    "correct_index": 1,
+    "explanation": "Antonio Vivaldi a composé Les Quatre Saisons vers 1723, l'une des œuvres baroques les plus célèbres."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel rappeur américain a sorti l'album 'The Marshall Mathers LP' ?",
+    "options": [
+      "Jay-Z",
+      "Kanye West",
+      "Eminem",
+      "50 Cent"
+    ],
+    "correct_index": 2,
+    "explanation": "Eminem (Marshall Mathers) a sorti cet album en 2000, devenu l'un des albums de rap les plus vendus."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel instrument à vent en bois possède une anche simple ?",
+    "options": [
+      "Hautbois",
+      "Clarinette",
+      "Basson",
+      "Flûte traversière"
+    ],
+    "correct_index": 1,
+    "explanation": "La clarinette utilise une anche simple, contrairement au hautbois et au basson qui ont une anche double."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel festival français se tient à Carhaix en Bretagne ?",
+    "options": [
+      "Hellfest",
+      "Solidays",
+      "Les Vieilles Charrues",
+      "Garorock"
+    ],
+    "correct_index": 2,
+    "explanation": "Les Vieilles Charrues à Carhaix est le plus grand festival de musique en France en termes de fréquentation."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel groupe a chanté 'Smells Like Teen Spirit' ?",
+    "options": [
+      "Pearl Jam",
+      "Soundgarden",
+      "Nirvana",
+      "Alice in Chains"
+    ],
+    "correct_index": 2,
+    "explanation": "Nirvana a sorti Smells Like Teen Spirit en 1991, symbole du mouvement grunge."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel système de notation musicale utilise les lettres A à G ?",
+    "options": [
+      "Le solfège latin",
+      "La notation anglo-saxonne",
+      "La notation byzantine",
+      "Le système Kodály"
+    ],
+    "correct_index": 1,
+    "explanation": "La notation anglo-saxonne utilise les lettres A (la) à G (sol), contrairement au solfège latin (do, ré, mi...)."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel compositeur a écrit 'Le Sacre du printemps', créant un scandale à sa première ?",
+    "options": [
+      "Claude Debussy",
+      "Maurice Ravel",
+      "Igor Stravinsky",
+      "Sergueï Prokofiev"
+    ],
+    "correct_index": 2,
+    "explanation": "Le Sacre du printemps de Stravinsky a provoqué une émeute lors de sa première à Paris en 1913."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Combien de symphonies Beethoven a-t-il composées ?",
+    "options": [
+      "7",
+      "9",
+      "10",
+      "12"
+    ],
+    "correct_index": 1,
+    "explanation": "Beethoven a composé 9 symphonies, la dernière contenant le célèbre 'Ode à la joie'."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel mode musical est souvent associé à la musique médiévale et au chant grégorien ?",
+    "options": [
+      "Mode majeur",
+      "Mode mineur",
+      "Mode dorien",
+      "Mode lydien"
+    ],
+    "correct_index": 2,
+    "explanation": "Le mode dorien est l'un des modes ecclésiastiques utilisés dans le chant grégorien médiéval."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel mouvement musical français des années 1990 a donné naissance à la French Touch ?",
+    "options": [
+      "La musique concrète",
+      "L'électro house",
+      "La French Touch",
+      "Le yéyé"
+    ],
+    "correct_index": 2,
+    "explanation": "La French Touch est un mouvement de musique électronique française des années 1990, avec Daft Punk, Air et Cassius."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel instrument de musique indien à cordes est joué par Ravi Shankar ?",
+    "options": [
+      "Tabla",
+      "Sitar",
+      "Sarangi",
+      "Tanpura"
+    ],
+    "correct_index": 1,
+    "explanation": "Ravi Shankar était un virtuose du sitar, instrument à cordes indien, qui a influencé les Beatles."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quelle est la tonalité d'un morceau qui n'a ni dièse ni bémol à la clé ?",
+    "options": [
+      "Sol majeur",
+      "Ré majeur",
+      "Do majeur",
+      "Fa majeur"
+    ],
+    "correct_index": 2,
+    "explanation": "Do majeur (ou la mineur relatif) est la tonalité sans altération à la clé."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel compositeur minimaliste américain a composé 'Music for 18 Musicians' ?",
+    "options": [
+      "Philip Glass",
+      "Steve Reich",
+      "Terry Riley",
+      "John Adams"
+    ],
+    "correct_index": 1,
+    "explanation": "Steve Reich a composé Music for 18 Musicians en 1976, chef-d'œuvre du minimalisme musical."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel intervalle musical est appelé 'le diable en musique' (diabolus in musica) ?",
+    "options": [
+      "La quinte juste",
+      "Le triton",
+      "La septième majeure",
+      "La seconde mineure"
+    ],
+    "correct_index": 1,
+    "explanation": "Le triton (intervalle de trois tons) était surnommé 'diabolus in musica' au Moyen Âge pour sa dissonance."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel album de Serge Gainsbourg a fait scandale avec sa pochette et ses thèmes provocateurs ?",
+    "options": [
+      "Melody Nelson",
+      "Love on the Beat",
+      "L'Homme à tête de chou",
+      "Aux armes et cætera"
+    ],
+    "correct_index": 1,
+    "explanation": "Love on the Beat (1984) a fait scandale par sa pochette et ses thèmes provocateurs, typiques de Gainsbourg."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel chanteur belge est connu pour 'Ne me quitte pas' ?",
+    "options": [
+      "Stromae",
+      "Jacques Brel",
+      "Plastic Bertrand",
+      "Adamo"
+    ],
+    "correct_index": 1,
+    "explanation": "Jacques Brel a interprété Ne me quitte pas en 1959, devenue l'une des plus grandes chansons francophones."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel groupe de K-pop est devenu un phénomène mondial dans les années 2010 ?",
+    "options": [
+      "BLACKPINK",
+      "EXO",
+      "BTS",
+      "TWICE"
+    ],
+    "correct_index": 2,
+    "explanation": "BTS (Bangtan Sonyeondan) est devenu le groupe de K-pop le plus populaire au monde."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel artiste a chanté 'Formidable' en français ?",
+    "options": [
+      "Maître Gims",
+      "Stromae",
+      "Angèle",
+      "Damso"
+    ],
+    "correct_index": 1,
+    "explanation": "Stromae a sorti Formidable en 2013, un titre devenu viral grâce à un clip tourné dans les rues de Bruxelles."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel type de voix masculine est le plus grave ?",
+    "options": [
+      "Ténor",
+      "Baryton",
+      "Basse",
+      "Contre-ténor"
+    ],
+    "correct_index": 2,
+    "explanation": "La basse est le registre vocal masculin le plus grave, suivi du baryton puis du ténor."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel album d'Adele porte le nom de son âge au moment de l'écriture ?",
+    "options": [
+      "19",
+      "21",
+      "25",
+      "30"
+    ],
+    "correct_index": 1,
+    "explanation": "Chacun de ses albums porte son âge : 19, 21, 25 et 30. L'album 21 (2011) s'est vendu à plus de 31 millions d'exemplaires."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel compositeur français a écrit 'Boléro', l'une des œuvres orchestrales les plus jouées ?",
+    "options": [
+      "Claude Debussy",
+      "Camille Saint-Saëns",
+      "Maurice Ravel",
+      "Hector Berlioz"
+    ],
+    "correct_index": 2,
+    "explanation": "Maurice Ravel a composé le Boléro en 1928, une pièce basée sur un crescendo progressif d'un même thème."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel est le nom du festival de musique électronique qui se tient à Boom en Belgique ?",
+    "options": [
+      "Tomorrowland",
+      "Ultra",
+      "Sonar",
+      "Awakenings"
+    ],
+    "correct_index": 0,
+    "explanation": "Tomorrowland se tient à Boom en Belgique et est l'un des plus grands festivals de musique électronique au monde."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel instrument à percussion est composé de peaux tendues sur un cadre cylindrique ?",
+    "options": [
+      "Xylophone",
+      "Cymbale",
+      "Tambour",
+      "Triangle"
+    ],
+    "correct_index": 2,
+    "explanation": "Le tambour est un instrument à percussion membranophone composé de peaux tendues sur un cadre."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel procédé musical consiste à superposer plusieurs lignes mélodiques indépendantes ?",
+    "options": [
+      "L'harmonie",
+      "La polyphonie",
+      "Le contrepoint",
+      "L'homophonie"
+    ],
+    "correct_index": 2,
+    "explanation": "Le contrepoint est l'art de superposer des lignes mélodiques indépendantes, maîtrisé par Bach."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel groupe britannique a sorti l'album 'Abbey Road' en 1969 ?",
+    "options": [
+      "The Rolling Stones",
+      "The Who",
+      "The Beatles",
+      "The Kinks"
+    ],
+    "correct_index": 2,
+    "explanation": "Abbey Road des Beatles est sorti en 1969, avec sa pochette iconique du passage piéton."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel type de musique est traditionnellement associé à Nashville, Tennessee ?",
+    "options": [
+      "Jazz",
+      "Blues",
+      "Country",
+      "Rock"
+    ],
+    "correct_index": 2,
+    "explanation": "Nashville est surnommée 'Music City' et est considérée comme la capitale mondiale de la musique country."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel système d'accordage divise l'octave en 12 demi-tons égaux ?",
+    "options": [
+      "L'accordage pythagoricien",
+      "Le tempérament mésotonique",
+      "Le tempérament égal",
+      "L'intonation juste"
+    ],
+    "correct_index": 2,
+    "explanation": "Le tempérament égal divise l'octave en 12 demi-tons égaux, standard de la musique occidentale moderne."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quelle chanteuse française a interprété 'La Vie en rose' ?",
+    "options": [
+      "Dalida",
+      "Édith Piaf",
+      "Mireille Mathieu",
+      "Barbara"
+    ],
+    "correct_index": 1,
+    "explanation": "La Vie en rose, interprétée par Édith Piaf en 1946, est l'une des chansons françaises les plus connues au monde."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel rappeur français est connu sous le nom de 'Petit Frère' et a sorti 'Bande organisée' ?",
+    "options": [
+      "SCH",
+      "Jul",
+      "Ninho",
+      "Soprano"
+    ],
+    "correct_index": 1,
+    "explanation": "Jul, rappeur marseillais, a participé au titre collectif Bande organisée en 2020, devenu un phénomène viral."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quelle œuvre de Jean-Sébastien Bach est considérée comme un monument de la musique pour clavier ?",
+    "options": [
+      "Les Variations Goldberg",
+      "Le Clavier bien tempéré",
+      "L'Art de la fugue",
+      "Les Suites pour violoncelle"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Clavier bien tempéré (1722/1742) explore les 24 tonalités majeures et mineures en préludes et fugues."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel genre musical mêle chant et paroles parlées sur une base rythmique ?",
+    "options": [
+      "R&B",
+      "Rap",
+      "Funk",
+      "Soul"
+    ],
+    "correct_index": 1,
+    "explanation": "Le rap (Rhythm And Poetry) combine paroles scandées ou parlées sur un accompagnement rythmique."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "easy",
+    "question": "Quel instrument Beethoven jouait-il principalement ?",
+    "options": [
+      "Violon",
+      "Piano",
+      "Guitare",
+      "Flûte"
+    ],
+    "correct_index": 1,
+    "explanation": "Ludwig van Beethoven était pianiste et compositeur. Il continua à composer même après être devenu sourd."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "medium",
+    "question": "Quel groupe a chanté 'Bohemian Rhapsody' ?",
+    "options": [
+      "The Beatles",
+      "Led Zeppelin",
+      "Queen",
+      "Pink Floyd"
+    ],
+    "correct_index": 2,
+    "explanation": "Bohemian Rhapsody de Queen (1975), écrite par Freddie Mercury, est l'une des chansons les plus célèbres du rock."
+  },
+  {
+    "category": "Musique",
+    "difficulty": "hard",
+    "question": "Quel compositeur français a écrit 'Boléro' ?",
+    "options": [
+      "Claude Debussy",
+      "Camille Saint-Saëns",
+      "Maurice Ravel",
+      "Hector Berlioz"
+    ],
+    "correct_index": 2,
+    "explanation": "Maurice Ravel composa le Boléro en 1928, une pièce orchestrale célèbre pour son crescendo continu de 15 minutes."
+  }
 ]
