@@ -8,7 +8,13 @@ export type Category =
   | "Nature & Animaux"
   | "Technologie"
   | "Gastronomie"
-  | "Mythologie & Religions";
+  | "Mythologie & Religions"
+  | "Cinéma"
+  | "Musique"
+  | "Économie & Business"
+  | "Espace & Astronomie"
+  | "Philosophie"
+  | "Maîtrise du Français";
 
 export interface Question {
   id: number;

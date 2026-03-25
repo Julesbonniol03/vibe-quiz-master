@@ -359,6 +359,42 @@ export const categoryColors: Record<string, { bg: string; text: string; border: 
     border: "border-violet-500/30",
     icon: "⚡",
   },
+  Cinéma: {
+    bg: "bg-red-500/20",
+    text: "text-red-400",
+    border: "border-red-500/30",
+    icon: "🎬",
+  },
+  Musique: {
+    bg: "bg-fuchsia-500/20",
+    text: "text-fuchsia-400",
+    border: "border-fuchsia-500/30",
+    icon: "🎵",
+  },
+  "Économie & Business": {
+    bg: "bg-teal-500/20",
+    text: "text-teal-400",
+    border: "border-teal-500/30",
+    icon: "💰",
+  },
+  "Espace & Astronomie": {
+    bg: "bg-sky-500/20",
+    text: "text-sky-400",
+    border: "border-sky-500/30",
+    icon: "🚀",
+  },
+  Philosophie: {
+    bg: "bg-rose-500/20",
+    text: "text-rose-400",
+    border: "border-rose-500/30",
+    icon: "🤔",
+  },
+  "Maîtrise du Français": {
+    bg: "bg-blue-600/20",
+    text: "text-blue-300",
+    border: "border-blue-500/30",
+    icon: "📝",
+  },
 };
 
 export const difficultyColors = {
