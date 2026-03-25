@@ -586,6 +586,31 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           )}
         </div>
 
+        {/* Histoire: period revision shortcut */}
+        {selectedCategory === "Histoire" && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            className="mb-4"
+          >
+            <div className="glass-card !rounded-2xl p-4 flex items-center gap-4">
+              <div className="text-2xl">🏛️</div>
+              <div className="flex-1">
+                <p className="text-white font-semibold text-sm">Révision Chronologique</p>
+                <p className="text-slate-500 text-xs">Flashcards par période historique</p>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => router.push("/reviser/histoire")}
+                className="px-3 py-1.5 bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold rounded-lg hover:bg-amber-500/20 transition-colors text-xs whitespace-nowrap"
+              >
+                Réviser une Période →
+              </motion.button>
+            </div>
+          </motion.div>
+        )}
+
         <div className="flex gap-3">
           <motion.button
             whileHover={{ scale: 1.02 }}
