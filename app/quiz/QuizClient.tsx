@@ -63,9 +63,17 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       .then((data) => {
         setCategories(data.categories);
         setTotalQuestions(data.total);
-        setPhase("select");
+        // If a category was pre-selected from dashboard, skip to difficulty selection
+        if (initialCategory && initialCategory !== "All" && (!initialMode || initialMode === "classique")) {
+          setPhase("select-difficulty");
+        } else if (initialMode === "daily") {
+          setPhase("select"); // daily shows its own UI on select screen
+        } else {
+          setPhase("select");
+        }
       })
       .catch(() => setPhase("select"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [gameQuestions, setGameQuestions] = useState<Question[]>([]);

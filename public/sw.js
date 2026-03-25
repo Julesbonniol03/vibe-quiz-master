@@ -1,7 +1,7 @@
 /// <reference lib="webworker" />
 
-const CACHE_NAME = "vqm-v1";
-const QUESTION_CACHE = "vqm-questions-v1";
+const CACHE_NAME = "vqm-v2";
+const QUESTION_CACHE = "vqm-questions-v2";
 
 // Static assets to pre-cache on install
 const STATIC_ASSETS = [
