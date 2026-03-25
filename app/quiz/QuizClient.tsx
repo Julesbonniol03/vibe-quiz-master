@@ -54,6 +54,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [totalQuestions, setTotalQuestions] = useState(0);
   const [shakeWrong, setShakeWrong] = useState(false);
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty>("easy");
+  const [reviewOpenId, setReviewOpenId] = useState<number | null>(null);
 
   useEffect(() => {
     fetch("/api/categories")
@@ -726,30 +727,51 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </motion.div>
           </div>
 
-          {/* Answer review */}
+          {/* Answer review with "Pourquoi ?" */}
           <div className="space-y-2 mb-8 text-left">
             {answeredQuestions.map((q, i) => {
               const ans = answers[i];
               const isCorrect = ans?.selected === q.correctIndex;
               const isTimedOut = ans?.selected === null;
               const catCol = categoryColors[q.category] || { text: "text-slate-400", icon: "❓" };
+              const isOpen = reviewOpenId === q.id;
               return (
                 <motion.div
                   key={q.id}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 + i * 0.05 }}
-                  className={`flex items-center gap-3 p-3 rounded-xl border ${
-                    isCorrect
-                      ? "bg-green-500/5 border-green-500/15"
-                      : "bg-neon-rose/5 border-neon-rose/15"
-                  }`}
                 >
-                  <span className="text-lg">{isCorrect ? "✅" : isTimedOut ? "⏰" : "❌"}</span>
-                  <span className="text-slate-400 text-sm flex-1 truncate">{q.question}</span>
-                  <span className={`text-xs font-medium ${catCol.text}`}>
-                    {catCol.icon}
-                  </span>
+                  <div
+                    className={`flex items-center gap-3 p-3 rounded-xl border ${
+                      isCorrect
+                        ? "bg-green-500/5 border-green-500/15"
+                        : "bg-neon-rose/5 border-neon-rose/15"
+                    }`}
+                  >
+                    <span className="text-lg">{isCorrect ? "✅" : isTimedOut ? "⏰" : "❌"}</span>
+                    <span className="text-slate-400 text-sm flex-1 truncate">{q.question}</span>
+                    {!isCorrect && (
+                      <button
+                        onClick={() => setReviewOpenId(isOpen ? null : q.id)}
+                        className={`text-xs font-semibold px-2.5 py-1 rounded-lg transition-all flex-shrink-0 ${
+                          isOpen
+                            ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+                            : "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-transparent"
+                        }`}
+                      >
+                        Pourquoi ?
+                      </button>
+                    )}
+                    {isCorrect && (
+                      <span className={`text-xs font-medium ${catCol.text}`}>{catCol.icon}</span>
+                    )}
+                  </div>
+                  <AnimatePresence>
+                    {isOpen && !isCorrect && (
+                      <WhyPanel question={q} userAnswer={ans?.selected} />
+                    )}
+                  </AnimatePresence>
                 </motion.div>
               );
             })}
@@ -1211,6 +1233,80 @@ function ShareScoreButton({
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </motion.button>
+    </motion.div>
+  );
+}
+
+// ─── WHY PANEL (explanation for wrong answers) ───
+const KEY_PREMIUM = "vqm_premium";
+
+function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: number | null | undefined }) {
+  const [isPremium, setIsPremium] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    try {
+      setIsPremium(JSON.parse(localStorage.getItem(KEY_PREMIUM) || "false"));
+    } catch {
+      setIsPremium(false);
+    }
+  }, []);
+
+  const userAnswerText = userAnswer != null && userAnswer >= 0
+    ? question.options[userAnswer]
+    : "Temps écoulé";
+  const correctText = question.options[question.correctIndex];
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.25 }}
+      className="overflow-hidden"
+    >
+      <div className="mt-1 mb-1 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 space-y-3">
+        {/* What you answered vs correct */}
+        <div className="flex gap-3">
+          <div className="flex-1 rounded-lg bg-neon-rose/5 border border-neon-rose/15 p-2.5 text-center">
+            <p className="text-slate-600 text-[10px] uppercase tracking-wider mb-1">Votre réponse</p>
+            <p className="text-neon-rose text-sm font-semibold">{userAnswerText}</p>
+          </div>
+          <div className="flex-1 rounded-lg bg-green-500/5 border border-green-500/15 p-2.5 text-center">
+            <p className="text-slate-600 text-[10px] uppercase tracking-wider mb-1">Bonne réponse</p>
+            <p className="text-green-400 text-sm font-semibold">{correctText}</p>
+          </div>
+        </div>
+
+        {/* Explanation: premium = visible, free = blurred + paywall */}
+        {isPremium ? (
+          <div className="rounded-lg bg-neon-cyan/5 border border-neon-cyan/15 p-3">
+            <p className="text-slate-300 text-sm leading-relaxed">
+              <span className="text-neon-cyan font-semibold">💡 </span>
+              {question.explanation}
+            </p>
+          </div>
+        ) : (
+          <div className="relative">
+            <div className="rounded-lg bg-white/[0.02] border border-white/[0.06] p-3 select-none" style={{ filter: "blur(5px)", WebkitFilter: "blur(5px)" }}>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                {question.explanation}
+              </p>
+            </div>
+            {/* Overlay paywall */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-cyber-950/60 backdrop-blur-sm">
+              <span className="text-lg mb-1">👑</span>
+              <p className="text-amber-400 font-semibold text-sm mb-2">Explication réservée aux Légendes</p>
+              <button
+                onClick={() => router.push("/premium")}
+                className="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-bold rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/20"
+              >
+                Débloquer →
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
     </motion.div>
   );
 }
