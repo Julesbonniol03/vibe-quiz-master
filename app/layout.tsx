@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
+import SplashScreen from "@/components/SplashScreen";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className="antialiased bg-cyber-950 text-slate-100 min-h-screen">
+        <SplashScreen />
         <Navbar />
         <main className="safe-main">{children}</main>
         <ServiceWorkerRegister />

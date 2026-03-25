@@ -180,6 +180,19 @@ export default function DashboardPage() {
 
       {/* Daily Challenge Banner */}
       <DailyBanner />
+
+      {/* Footer */}
+      <div className="mt-12 pt-6 border-t border-white/[0.04] flex items-center justify-center gap-4 text-xs text-slate-700 pb-4">
+        <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">
+          Mentions Légales
+        </Link>
+        <span>&middot;</span>
+        <Link href="/confidentialite" className="hover:text-slate-400 transition-colors">
+          Confidentialité
+        </Link>
+        <span>&middot;</span>
+        <span>Vibe Quiz Master &copy; 2026</span>
+      </div>
     </div>
   );
 }
