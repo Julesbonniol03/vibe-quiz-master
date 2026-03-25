@@ -5,12 +5,14 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
+import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
 
-type GameMode = "classique" | "blitz" | "mort-subite";
+type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
 type GamePhase = "loading" | "select" | "playing" | "answered" | "finished";
 
 const TIMER_SECONDS = 15;
 const CLASSIC_QUESTIONS = 10;
+const DAILY_QUESTIONS = 5;
 const BLITZ_QUESTIONS = 50; // large pool, game ends by timer
 const BLITZ_DURATION = 60;
 const SUDDEN_DEATH_QUESTIONS = 50; // large pool, game ends on first error
@@ -19,6 +21,7 @@ const MODE_INFO: Record<GameMode, { label: string; icon: string; desc: string; c
   classique: { label: "Classique", icon: "📝", desc: "10 questions tranquilles", color: "neon-cyan" },
   blitz: { label: "Blitz", icon: "⚡", desc: "60s chrono, max de points", color: "amber-400" },
   "mort-subite": { label: "Mort Subite", icon: "💀", desc: "Première erreur = fin", color: "neon-rose" },
+  daily: { label: "Défi du Jour", icon: "🎯", desc: "5 questions, même pour tous", color: "purple-400" },
 };
 
 interface CategoryInfo {
@@ -28,12 +31,12 @@ interface CategoryInfo {
 
 interface Props {
   initialCategory?: string;
-  initialMode?: GameMode;
+  initialMode?: GameMode | string;
 }
 
 export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [phase, setPhase] = useState<GamePhase>("loading");
-  const [gameMode, setGameMode] = useState<GameMode>(initialMode || "classique");
+  const [gameMode, setGameMode] = useState<GameMode>((initialMode as GameMode) || "classique");
   const [selectedCategory, setSelectedCategory] = useState<Category | "All">(
     (initialCategory as Category) || "All"
   );
@@ -62,8 +65,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [bestStreak, setBestStreak] = useState(0);
   const [answers, setAnswers] = useState<{ selected: number | null; correct: number }[]>([]);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [xpGained, setXpGained] = useState(0);
+  const [prevLevel, setPrevLevel] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const blitzTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const gameRecordedRef = useRef(false);
+
+  const progress = useProgress();
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -132,15 +140,21 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     return () => stopTimer();
   }, [phase, currentIndex, handleTimeout, stopTimer, gameMode]);
 
-  const questionsLimit = gameMode === "classique" ? CLASSIC_QUESTIONS : gameMode === "blitz" ? BLITZ_QUESTIONS : SUDDEN_DEATH_QUESTIONS;
+  const questionsLimit = gameMode === "daily" ? DAILY_QUESTIONS : gameMode === "classique" ? CLASSIC_QUESTIONS : gameMode === "blitz" ? BLITZ_QUESTIONS : SUDDEN_DEATH_QUESTIONS;
 
   const startGame = useCallback(async () => {
     setPhase("loading");
     try {
-      const params = new URLSearchParams({ limit: String(questionsLimit) });
-      if (selectedCategory !== "All") params.set("category", selectedCategory);
-      const res = await fetch(`/api/questions/random?${params}`);
-      const data = await res.json();
+      let data;
+      if (gameMode === "daily") {
+        const res = await fetch("/api/questions/daily");
+        data = await res.json();
+      } else {
+        const params = new URLSearchParams({ limit: String(questionsLimit) });
+        if (selectedCategory !== "All") params.set("category", selectedCategory);
+        const res = await fetch(`/api/questions/random?${params}`);
+        data = await res.json();
+      }
       if (!data.questions || data.questions.length === 0) {
         setPhase("select");
         return;
@@ -148,6 +162,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       setGameQuestions(data.questions);
       setCurrentIndex(0);
       setScore(0);
+      gameRecordedRef.current = false;
+      setXpGained(0);
       setStreak(0);
       setBestStreak(0);
       setAnswers([]);
@@ -205,6 +221,47 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setPhase("playing");
   }, [currentIndex, gameQuestions.length]);
 
+  // Record XP & wrong questions when game finishes
+  useEffect(() => {
+    if (phase !== "finished" || gameRecordedRef.current || !progress.hydrated) return;
+    gameRecordedRef.current = true;
+
+    const total = answers.length;
+    const earned = calculateGameXp(score, bestStreak, total);
+    const levelBefore = getLevel(progress.xp).level;
+    setPrevLevel(levelBefore);
+    setXpGained(earned);
+    progress.addXp(earned);
+    progress.recordGame(bestStreak);
+
+    // Mark daily challenge as completed
+    if (gameMode === "daily") {
+      progress.completeDaily();
+    }
+
+    // Save each answer: mark right/wrong and save wrong question data for flashcards
+    const answeredQs = gameQuestions.slice(0, answers.length);
+    answeredQs.forEach((q, i) => {
+      const ans = answers[i];
+      const isCorrect = ans?.selected === q.correctIndex;
+      if (isCorrect) {
+        progress.markRight(q.id);
+      } else {
+        progress.markWrong(q.id);
+        progress.saveWrongQuestion({
+          id: q.id,
+          category: q.category,
+          difficulty: q.difficulty,
+          question: q.question,
+          options: q.options,
+          correctIndex: q.correctIndex,
+          explanation: q.explanation,
+        });
+      }
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
+
   const currentQ = gameQuestions[currentIndex];
   const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
   const timerPercent = (timeLeft / perQuestionTime) * 100;
@@ -259,9 +316,19 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         </div>
 
         {/* Mode selector */}
-        <div className="grid grid-cols-3 gap-3 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
           {(Object.entries(MODE_INFO) as [GameMode, typeof modeInfo][]).map(([mode, info]) => {
             const isActive = gameMode === mode;
+            const activeClass =
+              mode === "blitz" ? "border-amber-400/50 bg-amber-400/10 shadow-lg shadow-amber-400/10"
+              : mode === "mort-subite" ? "border-neon-rose/50 bg-neon-rose/10 shadow-lg shadow-neon-rose/10"
+              : mode === "daily" ? "border-purple-400/50 bg-purple-400/10 shadow-lg shadow-purple-400/10"
+              : "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10";
+            const activeText =
+              mode === "blitz" ? "text-amber-400"
+              : mode === "mort-subite" ? "text-neon-rose"
+              : mode === "daily" ? "text-purple-400"
+              : "text-neon-cyan";
             return (
               <motion.button
                 key={mode}
@@ -270,20 +337,12 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 onClick={() => setGameMode(mode)}
                 className={`p-4 rounded-2xl border-2 text-center transition-all ${
                   isActive
-                    ? mode === "blitz"
-                      ? "border-amber-400/50 bg-amber-400/10 shadow-lg shadow-amber-400/10"
-                      : mode === "mort-subite"
-                      ? "border-neon-rose/50 bg-neon-rose/10 shadow-lg shadow-neon-rose/10"
-                      : "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10"
+                    ? activeClass
                     : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
                 }`}
               >
                 <div className="text-2xl mb-1">{info.icon}</div>
-                <div className={`font-semibold text-sm ${
-                  isActive
-                    ? mode === "blitz" ? "text-amber-400" : mode === "mort-subite" ? "text-neon-rose" : "text-neon-cyan"
-                    : "text-white"
-                }`}>
+                <div className={`font-semibold text-sm ${isActive ? activeText : "text-white"}`}>
                   {info.label}
                 </div>
                 <div className="text-slate-600 text-xs mt-1">{info.desc}</div>
@@ -292,38 +351,56 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           })}
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
-          {allCategoryNames.map((cat, i) => {
-            const colors = cat !== "All" ? categoryColors[cat] : null;
-            const isSelected = selectedCategory === cat;
-            const catInfo = categories.find((c) => c.name === cat);
-            const questionCount = cat === "All" ? totalQuestions : (catInfo?.count ?? 0);
-            return (
-              <motion.button
-                key={cat}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.04 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSelectedCategory(cat as Category | "All")}
-                className={`p-5 rounded-2xl border-2 transition-colors text-left ${
-                  isSelected
-                    ? "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10"
-                    : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
-                }`}
-              >
-                <div className="text-3xl mb-2">{colors ? colors.icon : "🌍"}</div>
-                <div className={`font-semibold ${isSelected ? "text-neon-cyan" : "text-white"}`}>
-                  {cat === "All" ? "Tout" : cat}
-                </div>
-                <div className="text-slate-600 text-xs mt-1">
-                  {questionCount} questions
-                </div>
-              </motion.button>
-            );
-          })}
-        </div>
+        {gameMode === "daily" ? (
+          <div className="glass-card !rounded-2xl p-6 mb-8 text-center">
+            <div className="text-4xl mb-3">🎯</div>
+            <p className="text-white font-semibold mb-1">5 questions identiques pour tout le monde</p>
+            <p className="text-slate-500 text-sm">Toutes catégories confondues · Timer 15s · Changent chaque jour</p>
+            {progress.isDailyCompleted && (
+              <div className="mt-4 bg-green-500/10 border border-green-500/20 rounded-xl px-4 py-2 inline-flex items-center gap-2">
+                <span className="text-green-400 font-semibold text-sm">✅ Défi du jour déjà complété !</span>
+              </div>
+            )}
+            {progress.dailyStreak > 0 && (
+              <div className="mt-3 flex items-center justify-center gap-2">
+                <span className="text-orange-400 font-bold">🔥 {progress.dailyStreak} jour{progress.dailyStreak > 1 ? "s" : ""} d&apos;affilée</span>
+              </div>
+            )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-8">
+            {allCategoryNames.map((cat, i) => {
+              const colors = cat !== "All" ? categoryColors[cat] : null;
+              const isSelected = selectedCategory === cat;
+              const catInfo = categories.find((c) => c.name === cat);
+              const questionCount = cat === "All" ? totalQuestions : (catInfo?.count ?? 0);
+              return (
+                <motion.button
+                  key={cat}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedCategory(cat as Category | "All")}
+                  className={`p-5 rounded-2xl border-2 transition-colors text-left ${
+                    isSelected
+                      ? "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10"
+                      : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
+                  }`}
+                >
+                  <div className="text-3xl mb-2">{colors ? colors.icon : "🌍"}</div>
+                  <div className={`font-semibold ${isSelected ? "text-neon-cyan" : "text-white"}`}>
+                    {cat === "All" ? "Tout" : cat}
+                  </div>
+                  <div className="text-slate-600 text-xs mt-1">
+                    {questionCount} questions
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+        )}
 
         <motion.button
           whileHover={{ scale: 1.02 }}
@@ -331,7 +408,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           onClick={startGame}
           className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
         >
-          {gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
+          {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
         </motion.button>
       </motion.div>
     );
@@ -366,11 +443,74 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </motion.div>
           <h2 className={`text-3xl font-bold mb-1 ${grade.color}`}>{grade.label}</h2>
           <p className="text-slate-500 mb-2">Quiz terminé !</p>
-          <p className="text-slate-600 text-sm mb-8">
+          <p className="text-slate-600 text-sm mb-2">
             {modeLabel.icon} Mode {modeLabel.label}
             {gameMode === "blitz" && ` · ${BLITZ_DURATION - blitzTimeLeft}s utilisées`}
             {gameMode === "mort-subite" && score === total && " · Sans faute !"}
           </p>
+
+          {/* Daily streak badge */}
+          {gameMode === "daily" && progress.dailyStreak > 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, type: "spring" }}
+              className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-1.5 mb-4"
+            >
+              <span className="text-lg">🔥</span>
+              <span className="text-orange-400 font-bold">{progress.dailyStreak} jour{progress.dailyStreak > 1 ? "s" : ""} d&apos;affilée !</span>
+            </motion.div>
+          )}
+
+          {/* XP Gain Banner */}
+          {xpGained > 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, type: "spring", bounce: 0.4 }}
+              className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-500/20"
+            >
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-2xl">✨</span>
+                <span className="text-amber-400 font-bold text-xl">+{xpGained} XP</span>
+              </div>
+              {(() => {
+                const newLevelInfo = getLevel(progress.xp);
+                const leveledUp = newLevelInfo.level > prevLevel;
+                return (
+                  <>
+                    {leveledUp && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="text-yellow-400 font-bold text-center mb-2"
+                      >
+                        🎉 Niveau {newLevelInfo.level} atteint !
+                      </motion.p>
+                    )}
+                    <div className="flex items-center gap-3">
+                      <span className="text-slate-500 text-xs whitespace-nowrap">
+                        Niv. {newLevelInfo.level}
+                      </span>
+                      <div className="flex-1 bg-white/[0.06] rounded-full h-2 overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${newLevelInfo.progress}%` }}
+                          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+                          className="h-2 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400"
+                          style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.4)" }}
+                        />
+                      </div>
+                      <span className="text-slate-600 text-xs whitespace-nowrap">
+                        {newLevelInfo.currentXp}/{newLevelInfo.xpForNext}
+                      </span>
+                    </div>
+                  </>
+                );
+              })()}
+            </motion.div>
+          )}
 
           <div className="grid grid-cols-3 gap-4 mb-8">
             <motion.div
@@ -431,6 +571,15 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             })}
           </div>
 
+          {/* Share button */}
+          <ShareScoreButton
+            answers={answers}
+            score={score}
+            total={total}
+            gameMode={gameMode}
+            dailyStreak={progress.dailyStreak}
+          />
+
           <div className="flex gap-3">
             <motion.button
               whileHover={{ scale: 1.02 }}
@@ -448,17 +597,29 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               onClick={startGame}
-              className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15"
+              className={`flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15 ${
+                gameMode === "daily" && progress.isDailyCompleted ? "opacity-50" : ""
+              }`}
             >
-              Rejouer
+              {gameMode === "daily" ? "Revenir demain !" : "Rejouer"}
             </motion.button>
           </div>
-          <Link
-            href="/leaderboard"
-            className="block mt-3 py-3 text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
-          >
-            Voir le classement →
-          </Link>
+          <div className="flex gap-3 mt-3">
+            {score < total && (
+              <Link
+                href="/reviser"
+                className="flex-1 py-3 text-center text-amber-400/70 hover:text-amber-400 text-sm font-medium transition-colors"
+              >
+                📖 Réviser mes erreurs
+              </Link>
+            )}
+            <Link
+              href="/leaderboard"
+              className="flex-1 py-3 text-center text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
+            >
+              Voir le classement →
+            </Link>
+          </div>
         </div>
       </motion.div>
     );
@@ -467,7 +628,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   // ─── PLAYING / ANSWERED ───
   const catColors = categoryColors[currentQ.category] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
   const diffColors = difficultyColors[currentQ.difficulty];
-  const progressPercent = gameMode === "classique"
+  const progressPercent = (gameMode === "classique" || gameMode === "daily")
     ? ((currentIndex + (phase === "answered" ? 1 : 0)) / gameQuestions.length) * 100
     : 100; // non-classic modes: no fixed progress
 
@@ -518,13 +679,21 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </div>
           )}
 
-          {gameMode === "classique" && (
+          {/* Daily indicator */}
+          {gameMode === "daily" && (
+            <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-purple-400/20">
+              <span className="text-lg">🎯</span>
+              <span className="text-purple-400 text-sm font-bold">Défi du Jour</span>
+            </div>
+          )}
+
+          {(gameMode === "classique" || gameMode === "daily") && (
             <div className="text-slate-600 text-sm font-medium tabular-nums">
               {currentIndex + 1} / {gameQuestions.length}
             </div>
           )}
 
-          {gameMode !== "classique" && (
+          {gameMode !== "classique" && gameMode !== "daily" && (
             <div className="text-slate-600 text-sm font-medium tabular-nums">
               Q{currentIndex + 1}
             </div>
@@ -543,7 +712,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       </div>
 
       {/* Glowing progress bar */}
-      {gameMode === "classique" && (
+      {(gameMode === "classique" || gameMode === "daily") && (
         <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
           <motion.div
             className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-glow-bar"
@@ -779,5 +948,97 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         )}
       </AnimatePresence>
     </div>
+  );
+}
+
+// ─── SHARE SCORE BUTTON ───
+function ShareScoreButton({
+  answers,
+  score,
+  total,
+  gameMode,
+  dailyStreak,
+}: {
+  answers: { selected: number | null; correct: number }[];
+  score: number;
+  total: number;
+  gameMode: GameMode;
+  dailyStreak: number;
+}) {
+  const [copied, setCopied] = useState(false);
+
+  const generateShareText = () => {
+    const emojiGrid = answers
+      .map((a) => (a.selected === a.correct ? "🟩" : a.selected === null ? "🟨" : "🟥"))
+      .join("");
+
+    const modeLabel = MODE_INFO[gameMode];
+    const today = new Date();
+    const dateStr = `${String(today.getDate()).padStart(2, "0")}/${String(today.getMonth() + 1).padStart(2, "0")}/${today.getFullYear()}`;
+
+    let text = `🧠 Vibe Quiz Master ${gameMode === "daily" ? `— Défi du ${dateStr}` : `— ${modeLabel.label}`}\n`;
+    text += `${emojiGrid}\n`;
+    text += `${score}/${total} `;
+    text += score === total ? "💯" : score >= total * 0.7 ? "⭐" : "💪";
+    if (dailyStreak > 1 && gameMode === "daily") {
+      text += ` 🔥 ${dailyStreak}j d'affilée`;
+    }
+    return text;
+  };
+
+  const handleShare = async () => {
+    const text = generateShareText();
+
+    // Try native share (mobile)
+    if (typeof navigator !== "undefined" && navigator.share) {
+      try {
+        await navigator.share({ text });
+        return;
+      } catch {
+        // User cancelled or not supported, fall through
+      }
+    }
+
+    // Copy to clipboard
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback
+    }
+  };
+
+  const handleWhatsApp = () => {
+    const text = generateShareText();
+    const encoded = encodeURIComponent(text);
+    window.open(`https://wa.me/?text=${encoded}`, "_blank");
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.5 }}
+      className="flex gap-3 mb-6"
+    >
+      <motion.button
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.97 }}
+        onClick={handleShare}
+        className="flex-1 py-3 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors text-sm flex items-center justify-center gap-2"
+      >
+        {copied ? "✅ Copié !" : "📋 Copier mon score"}
+      </motion.button>
+      <motion.button
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.97 }}
+        onClick={handleWhatsApp}
+        className="py-3 px-5 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] font-semibold rounded-xl hover:bg-[#25D366]/20 transition-colors text-sm flex items-center gap-2"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </motion.button>
+    </motion.div>
   );
 }
