@@ -14,6 +14,12 @@ const KEY_DAILY_LAST_DATE = "vqm_daily_last_date";
 const KEY_DAILY_COMPLETED = "vqm_daily_completed"; // date string of last completed daily
 const KEY_CATEGORY_STATS = "vqm_category_stats"; // { [category]: { played, correct } }
 const KEY_SPEED_RECORDS = "vqm_speed_records"; // { totalTime, totalAnswered } for avg speed
+const KEY_LEITNER = "vqm_leitner"; // Spaced repetition: { [questionId]: 1|2|3 }
+
+export type LeitnerLevel = 1 | 2 | 3;
+export interface LeitnerMap {
+  [questionId: string]: LeitnerLevel;
+}
 
 export interface CategoryStats {
   [category: string]: { played: number; correct: number };
@@ -89,6 +95,7 @@ export function useProgress() {
   const [dailyCompleted, setDailyCompleted] = useState("");
   const [categoryStats, setCategoryStats] = useState<CategoryStats>({});
   const [speedRecord, setSpeedRecord] = useState<SpeedRecord>({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
+  const [leitner, setLeitner] = useState<LeitnerMap>({});
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -105,6 +112,7 @@ export function useProgress() {
     setDailyCompleted(load<string>(KEY_DAILY_COMPLETED, ""));
     setCategoryStats(load<CategoryStats>(KEY_CATEGORY_STATS, {}));
     setSpeedRecord(load<SpeedRecord>(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 }));
+    setLeitner(load<LeitnerMap>(KEY_LEITNER, {}));
     setHydrated(true);
   }, []);
 
@@ -134,10 +142,15 @@ export function useProgress() {
 
   const saveWrongQuestion = useCallback((q: Omit<WrongQuestion, "answeredAt">) => {
     setWrongQuestions((prev) => {
-      // Replace if already exists, else add
       const filtered = prev.filter((wq) => wq.id !== q.id);
       const next = [...filtered, { ...q, answeredAt: Date.now() }];
       save(KEY_WRONG_QUESTIONS, next);
+      return next;
+    });
+    // Assign Leitner level 1 (reset if already higher)
+    setLeitner((prev) => {
+      const next = { ...prev, [String(q.id)]: 1 as LeitnerLevel };
+      save(KEY_LEITNER, next);
       return next;
     });
   }, []);
@@ -153,7 +166,38 @@ export function useProgress() {
       save(KEY_WRONG_QUESTIONS, next);
       return next;
     });
+    setLeitner((prev) => {
+      const next = { ...prev };
+      delete next[String(id)];
+      save(KEY_LEITNER, next);
+      return next;
+    });
   }, []);
+
+  // Leitner: promote a question (correct in revision) — 1→2→3
+  const promoteLeitner = useCallback((id: number) => {
+    setLeitner((prev) => {
+      const key = String(id);
+      const current = prev[key] || 1;
+      const next = { ...prev, [key]: Math.min(current + 1, 3) as LeitnerLevel };
+      save(KEY_LEITNER, next);
+      return next;
+    });
+  }, []);
+
+  // Leitner: demote a question (wrong in revision) — back to 1
+  const demoteLeitner = useCallback((id: number) => {
+    setLeitner((prev) => {
+      const next = { ...prev, [String(id)]: 1 as LeitnerLevel };
+      save(KEY_LEITNER, next);
+      return next;
+    });
+  }, []);
+
+  // Leitner: get level for a question
+  const getLeitnerLevel = useCallback((id: number): LeitnerLevel => {
+    return leitner[String(id)] || 1;
+  }, [leitner]);
 
   const addXp = useCallback((amount: number) => {
     setXp((prev) => {
@@ -246,6 +290,7 @@ export function useProgress() {
     save(KEY_DAILY_COMPLETED, "");
     save(KEY_CATEGORY_STATS, {});
     save(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 });
+    save(KEY_LEITNER, {});
     setWrongIds([]);
     setRightIds([]);
     setTotalPlayed(0);
@@ -259,6 +304,7 @@ export function useProgress() {
     setDailyCompleted("");
     setCategoryStats({});
     setSpeedRecord({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
+    setLeitner({});
   }, []);
 
   const accuracy =
@@ -288,8 +334,12 @@ export function useProgress() {
     recordGame,
     categoryStats,
     speedRecord,
+    leitner,
     recordCategoryAnswer,
     recordSpeed,
+    promoteLeitner,
+    demoteLeitner,
+    getLeitnerLevel,
     completeDaily,
     resetAll,
   };
