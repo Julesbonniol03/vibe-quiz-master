@@ -2,13 +2,7 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-
-const stats = [
-  { label: "Score Total", value: "2 480", icon: "⭐", color: "text-yellow-400" },
-  { label: "Parties Jouées", value: "34", icon: "🎮", color: "text-neon-cyan" },
-  { label: "Meilleur Streak", value: "12", icon: "🔥", color: "text-neon-rose" },
-  { label: "Précision", value: "74%", icon: "🎯", color: "text-green-400" },
-];
+import { StatsGrid, XpBar, RevisionCta } from "./DashboardClient";
 
 function loadCategories() {
   const dataDir = join(process.cwd(), "data", "questions");
@@ -27,13 +21,6 @@ function loadCategories() {
     .map(([name, count]) => ({ name, questions: count }))
     .sort((a, b) => a.name.localeCompare(b.name));
 }
-
-const recentActivity = [
-  { category: "Sport", score: 7, total: 8, streak: 5, time: "Il y a 2h" },
-  { category: "Sciences", score: 5, total: 8, streak: 3, time: "Il y a 5h" },
-  { category: "Histoire", score: 6, total: 8, streak: 6, time: "Hier" },
-  { category: "Arts & Littérature", score: 4, total: 8, streak: 2, time: "Il y a 2j" },
-];
 
 export default function DashboardPage() {
   const categories = loadCategories();
@@ -60,8 +47,9 @@ export default function DashboardPage() {
               </span>
             </h1>
             <p className="text-slate-500 max-w-md">
-              {totalQ} questions · 3 modes de jeu · Streak system
+              {totalQ} questions · 3 modes de jeu · Système XP
             </p>
+            <XpBar />
           </div>
           <div className="flex gap-3">
             <Link
@@ -117,19 +105,11 @@ export default function DashboardPage() {
         </Link>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        {stats.map((stat) => (
-          <div
-            key={stat.label}
-            className="glass-card !rounded-2xl p-5 hover:bg-white/[0.04] transition-colors"
-          >
-            <div className="text-3xl mb-2">{stat.icon}</div>
-            <div className={`text-2xl font-bold ${stat.color} mb-1`}>{stat.value}</div>
-            <div className="text-slate-600 text-sm">{stat.label}</div>
-          </div>
-        ))}
-      </div>
+      {/* Dynamic Stats */}
+      <StatsGrid />
+
+      {/* Revision CTA */}
+      <RevisionCta />
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {/* Categories */}
@@ -174,49 +154,26 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* Recent Activity */}
+        {/* How XP Works */}
         <div className="glass-card !rounded-2xl p-6">
           <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
-            <span>📊</span> Activité récente
+            <span>✨</span> Système XP
           </h2>
-          <div className="space-y-3">
-            {recentActivity.map((activity, i) => {
-              const colors = categoryColors[activity.category] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
-              const percent = Math.round((activity.score / activity.total) * 100);
-              return (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.01] border border-white/[0.04]"
-                >
-                  <div
-                    className={`w-10 h-10 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-lg flex-shrink-0`}
-                  >
-                    {colors.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <span className={`font-medium text-sm ${colors.text}`}>{activity.category}</span>
-                      <span className="text-slate-600 text-xs">{activity.time}</span>
-                    </div>
-                    <div className="flex items-center gap-3 mt-1">
-                      <span className="text-white text-sm font-semibold">
-                        {activity.score}/{activity.total}
-                      </span>
-                      <span
-                        className={`text-xs font-medium ${
-                          percent >= 70 ? "text-green-400" : percent >= 50 ? "text-yellow-400" : "text-neon-rose"
-                        }`}
-                      >
-                        {percent}%
-                      </span>
-                      <span className="text-neon-rose text-xs flex items-center gap-1">
-                        🔥 {activity.streak}
-                      </span>
-                    </div>
-                  </div>
+          <div className="space-y-4">
+            {[
+              { icon: "✅", label: "Bonne réponse", value: "+10 XP", color: "text-green-400" },
+              { icon: "🔥", label: "Bonus streak", value: "+5 XP / streak", color: "text-neon-rose" },
+              { icon: "🎮", label: "Partie terminée", value: "+20 XP", color: "text-neon-cyan" },
+              { icon: "💯", label: "Sans faute", value: "+50 XP", color: "text-yellow-400" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.01] border border-white/[0.04]">
+                <span className="text-2xl">{item.icon}</span>
+                <div className="flex-1">
+                  <span className="text-slate-300 text-sm font-medium">{item.label}</span>
                 </div>
-              );
-            })}
+                <span className={`font-bold text-sm ${item.color}`}>{item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

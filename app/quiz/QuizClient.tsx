@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { categoryColors, difficultyColors } from "@/lib/questions";
 import { Category, Question } from "@/lib/types";
+import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
 
 type GameMode = "classique" | "blitz" | "mort-subite";
 type GamePhase = "loading" | "select" | "playing" | "answered" | "finished";
@@ -62,8 +63,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [bestStreak, setBestStreak] = useState(0);
   const [answers, setAnswers] = useState<{ selected: number | null; correct: number }[]>([]);
   const [showExplanation, setShowExplanation] = useState(false);
+  const [xpGained, setXpGained] = useState(0);
+  const [prevLevel, setPrevLevel] = useState(1);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const blitzTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const gameRecordedRef = useRef(false);
+
+  const progress = useProgress();
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -148,6 +154,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       setGameQuestions(data.questions);
       setCurrentIndex(0);
       setScore(0);
+      gameRecordedRef.current = false;
+      setXpGained(0);
       setStreak(0);
       setBestStreak(0);
       setAnswers([]);
@@ -204,6 +212,42 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setShakeWrong(false);
     setPhase("playing");
   }, [currentIndex, gameQuestions.length]);
+
+  // Record XP & wrong questions when game finishes
+  useEffect(() => {
+    if (phase !== "finished" || gameRecordedRef.current || !progress.hydrated) return;
+    gameRecordedRef.current = true;
+
+    const total = answers.length;
+    const earned = calculateGameXp(score, bestStreak, total);
+    const levelBefore = getLevel(progress.xp).level;
+    setPrevLevel(levelBefore);
+    setXpGained(earned);
+    progress.addXp(earned);
+    progress.recordGame(bestStreak);
+
+    // Save each answer: mark right/wrong and save wrong question data for flashcards
+    const answeredQs = gameQuestions.slice(0, answers.length);
+    answeredQs.forEach((q, i) => {
+      const ans = answers[i];
+      const isCorrect = ans?.selected === q.correctIndex;
+      if (isCorrect) {
+        progress.markRight(q.id);
+      } else {
+        progress.markWrong(q.id);
+        progress.saveWrongQuestion({
+          id: q.id,
+          category: q.category,
+          difficulty: q.difficulty,
+          question: q.question,
+          options: q.options,
+          correctIndex: q.correctIndex,
+          explanation: q.explanation,
+        });
+      }
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase]);
 
   const currentQ = gameQuestions[currentIndex];
   const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
@@ -366,11 +410,61 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </motion.div>
           <h2 className={`text-3xl font-bold mb-1 ${grade.color}`}>{grade.label}</h2>
           <p className="text-slate-500 mb-2">Quiz terminé !</p>
-          <p className="text-slate-600 text-sm mb-8">
+          <p className="text-slate-600 text-sm mb-4">
             {modeLabel.icon} Mode {modeLabel.label}
             {gameMode === "blitz" && ` · ${BLITZ_DURATION - blitzTimeLeft}s utilisées`}
             {gameMode === "mort-subite" && score === total && " · Sans faute !"}
           </p>
+
+          {/* XP Gain Banner */}
+          {xpGained > 0 && (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, type: "spring", bounce: 0.4 }}
+              className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-yellow-500/10 border border-amber-500/20"
+            >
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-2xl">✨</span>
+                <span className="text-amber-400 font-bold text-xl">+{xpGained} XP</span>
+              </div>
+              {(() => {
+                const newLevelInfo = getLevel(progress.xp);
+                const leveledUp = newLevelInfo.level > prevLevel;
+                return (
+                  <>
+                    {leveledUp && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="text-yellow-400 font-bold text-center mb-2"
+                      >
+                        🎉 Niveau {newLevelInfo.level} atteint !
+                      </motion.p>
+                    )}
+                    <div className="flex items-center gap-3">
+                      <span className="text-slate-500 text-xs whitespace-nowrap">
+                        Niv. {newLevelInfo.level}
+                      </span>
+                      <div className="flex-1 bg-white/[0.06] rounded-full h-2 overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          animate={{ width: `${newLevelInfo.progress}%` }}
+                          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+                          className="h-2 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400"
+                          style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.4)" }}
+                        />
+                      </div>
+                      <span className="text-slate-600 text-xs whitespace-nowrap">
+                        {newLevelInfo.currentXp}/{newLevelInfo.xpForNext}
+                      </span>
+                    </div>
+                  </>
+                );
+              })()}
+            </motion.div>
+          )}
 
           <div className="grid grid-cols-3 gap-4 mb-8">
             <motion.div
@@ -453,12 +547,22 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               Rejouer
             </motion.button>
           </div>
-          <Link
-            href="/leaderboard"
-            className="block mt-3 py-3 text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
-          >
-            Voir le classement →
-          </Link>
+          <div className="flex gap-3 mt-3">
+            {score < total && (
+              <Link
+                href="/reviser"
+                className="flex-1 py-3 text-center text-amber-400/70 hover:text-amber-400 text-sm font-medium transition-colors"
+              >
+                📖 Réviser mes erreurs
+              </Link>
+            )}
+            <Link
+              href="/leaderboard"
+              className="flex-1 py-3 text-center text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
+            >
+              Voir le classement →
+            </Link>
+          </div>
         </div>
       </motion.div>
     );
