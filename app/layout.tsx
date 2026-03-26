@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import SplashScreen from "@/components/SplashScreen";
+import OnboardingModal from "@/components/OnboardingModal";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -63,6 +64,7 @@ export default function RootLayout({
     <html lang="fr" className="dark">
       <body className="antialiased bg-cyber-950 text-slate-100 min-h-screen">
         <SplashScreen />
+        <OnboardingModal />
         <Navbar />
         <main className="safe-main">{children}</main>
         <ServiceWorkerRegister />

@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useProfile } from "@/hooks/useProfile";
+import { getAvatarById } from "@/components/OnboardingModal";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: "🏠" },
   { href: "/quiz", label: "Quiz", icon: "🧠" },
-  { href: "/profil", label: "Profil", icon: "👤" },
+  { href: "/profil", label: "Profil", icon: "👤", isProfile: true },
   { href: "/reviser", label: "Réviser", icon: "📖" },
   { href: "/leaderboard", label: "Classement", icon: "🏆" },
   { href: "/premium", label: "Légende", icon: "👑" },
@@ -14,6 +16,7 @@ const navItems = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { profile, hydrated } = useProfile();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
@@ -32,6 +35,30 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
+
+            // Profile button with avatar
+            if (item.isProfile && hydrated && profile) {
+              const av = getAvatarById(profile.avatarId);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                    isActive
+                      ? `${av.bg} border ${av.border}`
+                      : "text-slate-500 hover:text-white hover:bg-white/5"
+                  }`}
+                >
+                  <div
+                    className={`w-7 h-7 rounded-full ${av.bg} border ${av.border} flex items-center justify-center flex-shrink-0`}
+                  >
+                    <av.Icon size={14} style={{ color: av.color }} strokeWidth={2.2} />
+                  </div>
+                  <span className={isActive ? "text-white" : ""}>{profile.pseudo}</span>
+                </Link>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
@@ -59,6 +86,28 @@ export default function Navbar() {
         <div className="md:hidden flex items-center gap-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href;
+
+            // Profile button with avatar on mobile
+            if (item.isProfile && hydrated && profile) {
+              const av = getAvatarById(profile.avatarId);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`p-1.5 rounded-lg transition-all ${
+                    isActive ? av.bg : "hover:bg-white/5"
+                  }`}
+                  title={profile.pseudo}
+                >
+                  <div
+                    className={`w-7 h-7 rounded-full ${av.bg} border ${av.border} flex items-center justify-center`}
+                  >
+                    <av.Icon size={14} style={{ color: av.color }} strokeWidth={2.2} />
+                  </div>
+                </Link>
+              );
+            }
+
             return (
               <Link
                 key={item.href}
