@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useProgress, getLevel, GameHistoryEntry } from "@/hooks/useProgress";
+import { useAchievements, ACHIEVEMENTS } from "@/hooks/useAchievements";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
 import { categoryColors } from "@/lib/questions";
@@ -170,6 +171,7 @@ const MODE_LABELS: Record<string, string> = { classique: "Classique", blitz: "Bl
 export default function ProfilPage() {
   const progress = useProgress();
   const { profile, hydrated: profileHydrated } = useProfile();
+  const { unlocked, isUnlocked } = useAchievements();
 
   if (!progress.hydrated || !profileHydrated) {
     return (
@@ -281,6 +283,67 @@ export default function ProfilPage() {
           </motion.div>
         ))}
       </div>
+
+      {/* ── ACHIEVEMENTS GALLERY ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+        className="glass-card !rounded-2xl p-6 mb-8"
+      >
+        <h2 className="text-lg font-semibold text-white mb-2 flex items-center gap-2">
+          <span>🏅</span> Succès
+          <span className="ml-auto text-slate-600 text-xs font-normal">{unlocked.length}/{ACHIEVEMENTS.length}</span>
+        </h2>
+        <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-5 overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${(unlocked.length / ACHIEVEMENTS.length) * 100}%` }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="h-1.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400"
+            style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.4)" }}
+          />
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+          {ACHIEVEMENTS.map((badge, i) => {
+            const achieved = isUnlocked(badge.id);
+            return (
+              <motion.div
+                key={badge.id}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 + i * 0.04 }}
+                className={`relative p-3 rounded-xl border text-center transition-all ${
+                  achieved
+                    ? "bg-white/[0.03] border-white/[0.1]"
+                    : "bg-white/[0.01] border-white/[0.04] opacity-40"
+                }`}
+                style={achieved ? {
+                  boxShadow: `0 0 15px ${badge.glowColor.replace("0.5", "0.15")}, 0 0 30px ${badge.glowColor.replace("0.5", "0.06")}`,
+                } : undefined}
+              >
+                <div className={`text-2xl mb-1.5 ${achieved ? "" : "grayscale"}`}>
+                  {badge.icon}
+                </div>
+                <div className={`text-[11px] font-bold leading-tight mb-0.5 ${achieved ? badge.color : "text-slate-700"}`}>
+                  {badge.name}
+                </div>
+                <div className="text-[9px] text-slate-600 leading-tight">
+                  {badge.desc}
+                </div>
+                {achieved && (
+                  <div
+                    className="absolute -top-1 -right-1 w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold text-black"
+                    style={{ backgroundColor: badge.glowColor.replace("0.5", "1").replace("rgba", "rgb").replace(",0.5)", ")").replace("rgba(", "rgb(") }}
+                  >
+                    &#10003;
+                  </div>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+      </motion.div>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         {/* ── RADAR CHART ── */}

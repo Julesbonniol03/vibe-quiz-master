@@ -9,6 +9,8 @@ import { Category, Question } from "@/lib/types";
 import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
 import { useFeedback } from "@/hooks/useFeedback";
 import confetti from "canvas-confetti";
+import { useAchievements, evaluateAchievements } from "@/hooks/useAchievements";
+import AchievementToast from "@/components/AchievementToast";
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
 type Difficulty = "easy" | "medium" | "hard";
@@ -94,6 +96,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const progress = useProgress();
   const router = useRouter();
   const { correctFeedback, wrongFeedback } = useFeedback();
+  const achievements = useAchievements();
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -310,6 +313,26 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         });
       }
     });
+
+    // Evaluate achievements
+    if (achievements.hydrated) {
+      const newlyUnlocked = evaluateAchievements({
+        score,
+        total,
+        category: selectedCategory,
+        mode: gameMode,
+        difficulty: selectedDifficulty,
+        streak: bestStreak,
+        totalPlayed: progress.totalPlayed + total,
+        globalBestStreak: Math.max(progress.globalBestStreak, bestStreak),
+        dailyStreak: progress.dailyStreak,
+        categoryStats: progress.categoryStats,
+        gameHistory: progress.gameHistory,
+      }, achievements.unlocked);
+      if (newlyUnlocked.length > 0) {
+        achievements.unlock(newlyUnlocked);
+      }
+    }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
@@ -654,6 +677,11 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     const modeLabel = MODE_INFO[gameMode];
 
     return (
+      <>
+      <AchievementToast
+        achievement={achievements.pending[0] || null}
+        onDismiss={achievements.dismissToast}
+      />
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -879,6 +907,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </div>
         </div>
       </motion.div>
+      </>
     );
   }
 
