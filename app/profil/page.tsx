@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useProgress, getLevel, GameHistoryEntry } from "@/hooks/useProgress";
@@ -201,34 +202,60 @@ export default function ProfilPage() {
         </div>
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6">
-          {/* Avatar + Pseudo */}
-          {avatar && profile ? (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
-              className={`w-20 h-20 rounded-3xl ${avatar.bg} border-2 ${avatar.border} flex items-center justify-center shadow-xl`}
-            >
-              <avatar.Icon size={40} style={{ color: avatar.color }} strokeWidth={2} />
-            </motion.div>
-          ) : (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
-              className={`w-20 h-20 rounded-3xl ${rank.bg} border-2 ${rank.border} flex items-center justify-center text-4xl shadow-xl`}
-            >
-              {rank.icon}
-            </motion.div>
-          )}
+          {/* Avatar with XP ring */}
+          <div className="flex flex-col items-center gap-2">
+            {avatar && profile ? (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
+                className="relative"
+              >
+                <div className={`w-22 h-22 rounded-3xl ${avatar.bg} border-2 ${avatar.border} flex items-center justify-center shadow-xl`}
+                  style={{ width: 88, height: 88 }}>
+                  <avatar.Icon size={42} style={{ color: avatar.color }} strokeWidth={2} />
+                </div>
+                {/* Level badge */}
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-xs font-black text-white shadow-lg shadow-neon-cyan/30">
+                  {levelInfo.level}
+                </div>
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
+                className={`w-20 h-20 rounded-3xl ${rank.bg} border-2 ${rank.border} flex items-center justify-center text-4xl shadow-xl`}
+              >
+                {rank.icon}
+              </motion.div>
+            )}
+            {/* XP bar under avatar */}
+            <div className="w-24 bg-white/[0.06] rounded-full h-2 overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: `${levelInfo.progress}%` }}
+                transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-pulse-glow"
+              />
+            </div>
+            <span className="text-slate-600 text-[10px] tabular-nums">
+              {levelInfo.currentXp}/{levelInfo.xpForNext} XP
+            </span>
+          </div>
 
           <div className="text-center sm:text-left flex-1">
-            <p className="text-slate-500 text-sm mb-0.5">{rank.icon} {rank.name}</p>
-            <h1 className="text-2xl font-bold text-white mb-1">
+            <h1 className="text-2xl font-bold text-white mb-0.5">
               {profile?.pseudo || "Joueur"}
             </h1>
+            <p className={`text-sm font-semibold ${levelInfo.titleColor} mb-1`}>
+              {levelInfo.title}
+            </p>
+            <p className="text-slate-600 text-xs mb-2">
+              {rank.icon} {rank.name} &middot; Niv. {levelInfo.level} &middot; {progress.xp.toLocaleString()} XP
+            </p>
             {rank.nextRank && (
-              <div className="mt-2">
+              <div>
                 <div className="flex items-center gap-2 text-xs mb-1">
                   <span className="text-slate-500">Prochain rang :</span>
                   <span className={rank.nextRank.color}>{rank.nextRank.icon} {rank.nextRank.name}</span>
@@ -254,7 +281,7 @@ export default function ProfilPage() {
             className="glass-card !rounded-2xl px-5 py-3 text-center"
           >
             <p className="text-xl font-bold gradient-text">{progress.xp.toLocaleString()}</p>
-            <p className="text-slate-600 text-[10px]">XP &middot; Niv. {levelInfo.level}</p>
+            <p className="text-slate-600 text-[10px]">XP totale</p>
           </motion.div>
         </div>
       </motion.div>
@@ -477,7 +504,7 @@ export default function ProfilPage() {
       )}
 
       {/* Actions */}
-      <div className="flex gap-3">
+      <div className="flex gap-3 mb-10">
         <Link href="/quiz" className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15">
           Jouer un quiz →
         </Link>
@@ -485,6 +512,9 @@ export default function ProfilPage() {
           📖 Réviser
         </Link>
       </div>
+
+      {/* Reset Section */}
+      <ResetSection onReset={progress.resetAll} />
     </div>
   );
 }
@@ -533,5 +563,71 @@ function GameRow({ game, index }: { game: GameHistoryEntry; index: number }) {
         {accuracy}%
       </div>
     </motion.div>
+  );
+}
+
+// ─── RESET SECTION ───
+function ResetSection({ onReset }: { onReset: () => void }) {
+  const [step, setStep] = useState<0 | 1 | 2>(0); // 0=idle, 1=first confirm, 2=done
+
+  const handleFirstClick = () => setStep(1);
+
+  const handleConfirm = () => {
+    onReset();
+    // Also clear achievements and profile
+    localStorage.removeItem("vqm_achievements");
+    localStorage.removeItem("vqm_profile");
+    setStep(2);
+    setTimeout(() => window.location.reload(), 1200);
+  };
+
+  if (step === 2) {
+    return (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="text-center py-6"
+      >
+        <p className="text-green-400 font-semibold">&#10003; Progression réinitialisée. Rechargement...</p>
+      </motion.div>
+    );
+  }
+
+  return (
+    <div className="border-t border-white/[0.04] pt-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-slate-500 text-sm font-medium">Zone dangereuse</p>
+          <p className="text-slate-700 text-xs">Efface toutes vos données : XP, badges, historique</p>
+        </div>
+        {step === 0 ? (
+          <button
+            onClick={handleFirstClick}
+            className="px-4 py-2 text-xs font-semibold text-red-400/70 border border-red-500/15 rounded-xl hover:bg-red-500/10 hover:text-red-400 transition-all"
+          >
+            Réinitialiser
+          </button>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="flex items-center gap-2"
+          >
+            <button
+              onClick={() => setStep(0)}
+              className="px-3 py-2 text-xs font-semibold text-slate-500 hover:text-white transition-colors"
+            >
+              Annuler
+            </button>
+            <button
+              onClick={handleConfirm}
+              className="px-4 py-2 text-xs font-bold text-white bg-red-500/80 hover:bg-red-500 rounded-xl transition-all shadow-lg shadow-red-500/20"
+            >
+              Confirmer la suppression
+            </button>
+          </motion.div>
+        )}
+      </div>
+    </div>
   );
 }

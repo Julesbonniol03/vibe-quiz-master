@@ -70,7 +70,7 @@ function save<T>(key: string, value: T) {
 
 // XP thresholds: level N requires N*100 XP total
 // Level 1: 0 XP, Level 2: 100 XP, Level 3: 300 XP, Level 4: 600 XP, etc.
-export function getLevel(xp: number): { level: number; currentXp: number; xpForNext: number; progress: number } {
+export function getLevel(xp: number): { level: number; currentXp: number; xpForNext: number; progress: number; title: string; titleColor: string } {
   let level = 1;
   let cumulative = 0;
   while (cumulative + level * 100 <= xp) {
@@ -80,7 +80,28 @@ export function getLevel(xp: number): { level: number; currentXp: number; xpForN
   const currentXp = xp - cumulative;
   const xpForNext = level * 100;
   const progress = Math.round((currentXp / xpForNext) * 100);
-  return { level, currentXp, xpForNext, progress };
+  const { title, color: titleColor } = getPrestigeTitle(level);
+  return { level, currentXp, xpForNext, progress, title, titleColor };
+}
+
+const PRESTIGE_TITLES = [
+  { minLevel: 1,  title: "Citoyen", color: "text-slate-400" },
+  { minLevel: 6,  title: "Érudit du Réseau", color: "text-sky-400" },
+  { minLevel: 11, title: "Architecte du Savoir", color: "text-blue-400" },
+  { minLevel: 16, title: "Stratège Cérébral", color: "text-purple-400" },
+  { minLevel: 21, title: "Maître de la Grille", color: "text-amber-400" },
+  { minLevel: 26, title: "Sentinelle de l'Info", color: "text-yellow-400" },
+  { minLevel: 30, title: "Oracle de la Matrice", color: "text-neon-cyan" },
+  { minLevel: 40, title: "Conscience Ultime", color: "text-neon-rose" },
+];
+
+function getPrestigeTitle(level: number): { title: string; color: string } {
+  let result = PRESTIGE_TITLES[0];
+  for (const t of PRESTIGE_TITLES) {
+    if (level >= t.minLevel) result = t;
+    else break;
+  }
+  return result;
 }
 
 // XP earned per game: 10 per correct + 5 bonus per streak point + 20 completion bonus
