@@ -249,17 +249,19 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setPhase("playing");
   }, [currentIndex, gameQuestions.length]);
 
-  // Auto-advance to next question after 1.2s
+  // Auto-advance: 1.2s if correct, 3s if wrong (time to read explanation)
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     if (phase !== "answered") return;
+    const isCorrect = selectedOption !== null && selectedOption >= 0 && gameQuestions[currentIndex] && selectedOption === gameQuestions[currentIndex].correctIndex;
+    const delay = isCorrect ? 1200 : 3000;
     autoAdvanceRef.current = setTimeout(() => {
       handleNext();
-    }, 1200);
+    }, delay);
     return () => {
       if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
     };
-  }, [phase, handleNext]);
+  }, [phase, handleNext, selectedOption, gameQuestions, currentIndex]);
 
   // Record XP & wrong questions when game finishes
   useEffect(() => {
@@ -1172,52 +1174,75 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             exit={{ opacity: 0, y: -10 }}
           >
             {selectedOption === -1 ? (
-              <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-4 text-center">
-                <p className="text-amber-400 font-semibold">⏰ Temps écoulé !</p>
-                <p className="text-slate-500 text-sm mt-1">La bonne réponse était surlignée en vert.</p>
-              </div>
+              /* Timeout */
+              <>
+                <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-3 text-center">
+                  <p className="text-amber-400 font-semibold">&#x23F0; Temps écoulé !</p>
+                  <p className="text-slate-500 text-sm mt-1">
+                    La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
+                  </p>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
+                >
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    <span className="text-neon-cyan font-medium">&#128161; </span>
+                    {currentQ.explanation}
+                  </p>
+                </motion.div>
+              </>
             ) : selectedOption === currentQ.correctIndex ? (
+              /* Correct — brief congratulation, no explanation */
               <motion.div
                 initial={{ scale: 0.95 }}
                 animate={{ scale: 1 }}
-                className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-4 text-center"
+                className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-3 text-center"
                 style={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.08)" }}
               >
                 <p className="text-green-400 font-semibold text-lg">
-                  ✅ Bonne réponse !{streak > 1 && ` 🔥 Streak x${streak}`}
+                  &#10003; Bravo !{streak > 1 && ` &#128293; Série x${streak}`}
                 </p>
               </motion.div>
             ) : (
-              <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-4 text-center">
-                <p className="text-neon-rose font-semibold text-lg">❌ Mauvaise réponse</p>
-                <p className="text-slate-500 text-sm mt-1">
-                  La bonne réponse : {currentQ.options[currentQ.correctIndex]}
-                </p>
-              </div>
+              /* Wrong — show correct answer + explanation */
+              <>
+                <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
+                  <p className="text-neon-rose font-semibold text-lg">&#10007; Raté !</p>
+                  <p className="text-slate-500 text-sm mt-1">
+                    La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
+                  </p>
+                </div>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
+                >
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    <span className="text-neon-cyan font-medium">&#128161; </span>
+                    {currentQ.explanation}
+                  </p>
+                </motion.div>
+              </>
             )}
 
-            {/* Explanation shown inline */}
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              className="glass-card !rounded-2xl p-4 mb-4 overflow-hidden"
-            >
-              <p className="text-slate-400 text-sm leading-relaxed">
-                <span className="text-neon-cyan font-medium">💡 </span>
-                {currentQ.explanation}
-              </p>
-            </motion.div>
-
-            {/* Auto-advance progress bar */}
+            {/* Auto-advance progress bar (duration matches delay) */}
+            {(() => {
+              const isCorrectAnswer = selectedOption !== null && selectedOption >= 0 && selectedOption === currentQ.correctIndex;
+              const barDuration = isCorrectAnswer ? 1.2 : 3;
+              return (
             <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
               <motion.div
                 initial={{ width: "100%" }}
                 animate={{ width: "0%" }}
-                transition={{ duration: 1.2, ease: "linear" }}
+                transition={{ duration: barDuration, ease: "linear" }}
                 className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
                 style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
               />
             </div>
+              );
+            })()}
           </motion.div>
         )}
       </AnimatePresence>
