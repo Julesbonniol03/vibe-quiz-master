@@ -40,7 +40,7 @@ const RADAR_CATEGORIES = [
   { key: "Maîtrise du Français", label: "Français", icon: "📝" },
   { key: "Actualités 2025-2026", label: "Actu", icon: "📰" },
   { key: "Sciences", label: "Sciences", icon: "🔬" },
-  { key: "Pop Culture", label: "Pop Culture", icon: "🎬" },
+  { key: "Pop Culture", label: "Culture Pop", icon: "🎬" },
 ] as const;
 
 function RadarChart({ stats }: { stats: Record<string, { played: number; correct: number }> }) {
@@ -160,9 +160,11 @@ function formatTime(seconds: number): string {
   return `${m}m${String(s).padStart(2, "0")}s`;
 }
 
+const MOIS_FR = ["Janv.", "Fév.", "Mars", "Avr.", "Mai", "Juin", "Juil.", "Août", "Sept.", "Oct.", "Nov.", "Déc."];
+
 function formatDate(ts: number): string {
   const d = new Date(ts);
-  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`;
+  return `${d.getDate()} ${MOIS_FR[d.getMonth()]}`;
 }
 
 const DIFF_LABELS: Record<string, string> = { easy: "Débutant", medium: "Inter.", hard: "Expert" };
@@ -190,6 +192,18 @@ export default function ProfilPage() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
+      {/* ── PAGE TITLE ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-6"
+      >
+        <h1 className="text-3xl font-bold text-white">
+          Tes Statistiques de{" "}
+          <span className="gradient-text">Teub&eacute;</span>
+        </h1>
+      </motion.div>
+
       {/* ── HERO CARD ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -289,10 +303,10 @@ export default function ProfilPage() {
       {/* ── STATS CARDS ── */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
-          { icon: "📝", label: "Questions", value: progress.totalPlayed.toLocaleString(), color: "text-neon-cyan", glow: "neon-cyan" },
-          { icon: "🎯", label: "Précision", value: `${progress.accuracy}%`, color: progress.accuracy >= 70 ? "text-green-400" : "text-amber-400", glow: progress.accuracy >= 70 ? "green-500" : "amber-500" },
-          { icon: "🔥", label: "Meilleur Streak", value: `${progress.globalBestStreak}x`, color: "text-neon-rose", glow: "neon-rose" },
-          { icon: "⏱️", label: "Temps de jeu", value: totalTimeStr, color: "text-purple-400", glow: "purple-500" },
+          { icon: "📝", label: "Questions Répondues", value: progress.totalPlayed.toLocaleString(), color: "text-neon-cyan", glow: "neon-cyan" },
+          { icon: "🎯", label: "Taux de Réussite", value: `${progress.accuracy}%`, color: progress.accuracy >= 70 ? "text-green-400" : "text-amber-400", glow: progress.accuracy >= 70 ? "green-500" : "amber-500" },
+          { icon: "🔥", label: "Série de Victoires", value: `${progress.globalBestStreak}x`, color: "text-neon-rose", glow: "neon-rose" },
+          { icon: "⏱️", label: "Temps de Jeu", value: totalTimeStr, color: "text-purple-400", glow: "purple-500" },
         ].map((stat, i) => (
           <motion.div
             key={stat.label}
@@ -381,14 +395,14 @@ export default function ProfilPage() {
           className="glass-card !rounded-2xl p-6"
         >
           <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <span>📊</span> Forces par thème
+            <span>📊</span> Tes forces par domaine
           </h2>
           {Object.keys(progress.categoryStats).length === 0 ? (
             <div className="text-center py-8">
               <div className="text-4xl mb-3 opacity-50">📊</div>
-              <p className="text-slate-500 text-sm">Jouez quelques quiz pour voir vos forces !</p>
+              <p className="text-slate-500 text-sm">Joue quelques quiz pour voir tes forces !</p>
               <Link href="/quiz" className="inline-block mt-3 text-neon-cyan text-sm hover:underline">
-                Jouer maintenant →
+                Lancer un quiz →
               </Link>
             </div>
           ) : (
@@ -404,14 +418,14 @@ export default function ProfilPage() {
           className="glass-card !rounded-2xl p-6"
         >
           <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-            <span>📜</span> Dernières parties
+            <span>📜</span> Derni&egrave;res Parties
           </h2>
           {progress.gameHistory.length === 0 ? (
             <div className="text-center py-8">
               <div className="text-4xl mb-3 opacity-50">🎮</div>
-              <p className="text-slate-500 text-sm">Aucune partie jouée pour le moment</p>
+              <p className="text-slate-500 text-sm">Aucune partie jou&eacute;e pour le moment</p>
               <Link href="/quiz" className="inline-block mt-3 text-neon-cyan text-sm hover:underline">
-                Lancer un quiz →
+                Lance ton premier quiz →
               </Link>
             </div>
           ) : (
@@ -506,10 +520,10 @@ export default function ProfilPage() {
       {/* Actions */}
       <div className="flex gap-3 mb-10">
         <Link href="/quiz" className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15">
-          Jouer un quiz →
+          Lancer un quiz →
         </Link>
         <Link href="/reviser" className="flex-1 py-3 text-center bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors">
-          📖 Réviser
+          📖 R&eacute;viser
         </Link>
       </div>
 
@@ -588,7 +602,7 @@ function ResetSection({ onReset }: { onReset: () => void }) {
         animate={{ opacity: 1 }}
         className="text-center py-6"
       >
-        <p className="text-green-400 font-semibold">&#10003; Progression réinitialisée. Rechargement...</p>
+        <p className="text-green-400 font-semibold">&#10003; Progression r&eacute;initialis&eacute;e. Rechargement...</p>
       </motion.div>
     );
   }
@@ -598,14 +612,14 @@ function ResetSection({ onReset }: { onReset: () => void }) {
       <div className="flex items-center justify-between">
         <div>
           <p className="text-slate-500 text-sm font-medium">Zone dangereuse</p>
-          <p className="text-slate-700 text-xs">Efface toutes vos données : XP, badges, historique</p>
+          <p className="text-slate-700 text-xs">Efface toutes tes donn&eacute;es : XP, badges, historique</p>
         </div>
         {step === 0 ? (
           <button
             onClick={handleFirstClick}
             className="px-4 py-2 text-xs font-semibold text-red-400/70 border border-red-500/15 rounded-xl hover:bg-red-500/10 hover:text-red-400 transition-all"
           >
-            Réinitialiser
+            R&eacute;initialiser
           </button>
         ) : (
           <motion.div
