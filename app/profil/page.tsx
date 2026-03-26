@@ -250,7 +250,7 @@ export default function ProfilPage() {
                 initial={{ width: 0 }}
                 animate={{ width: `${levelInfo.progress}%` }}
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-pulse-glow"
+                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-xp-pulse"
               />
             </div>
             <span className="text-slate-600 text-[10px] tabular-nums">

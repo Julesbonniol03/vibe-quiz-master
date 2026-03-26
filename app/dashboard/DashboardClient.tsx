@@ -68,8 +68,7 @@ export function XpBar() {
           initial={{ width: 0 }}
           animate={{ width: `${levelInfo.progress}%` }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="h-2 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400"
-          style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.4)" }}
+          className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-xp-pulse"
         />
       </div>
       <span className="text-slate-600 text-xs tabular-nums whitespace-nowrap">

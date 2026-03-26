@@ -85,14 +85,10 @@ export function getLevel(xp: number): { level: number; currentXp: number; xpForN
 }
 
 const PRESTIGE_TITLES = [
-  { minLevel: 1,  title: "Citoyen", color: "text-slate-400" },
-  { minLevel: 6,  title: "Érudit du Réseau", color: "text-sky-400" },
-  { minLevel: 11, title: "Architecte du Savoir", color: "text-blue-400" },
-  { minLevel: 16, title: "Stratège Cérébral", color: "text-purple-400" },
-  { minLevel: 21, title: "Maître de la Grille", color: "text-amber-400" },
-  { minLevel: 26, title: "Sentinelle de l'Info", color: "text-yellow-400" },
-  { minLevel: 30, title: "Oracle de la Matrice", color: "text-neon-cyan" },
-  { minLevel: 40, title: "Conscience Ultime", color: "text-neon-rose" },
+  { minLevel: 1,  title: "Apprenti Teubé", color: "text-slate-400" },
+  { minLevel: 6,  title: "Teubé Éclairé", color: "text-sky-400" },
+  { minLevel: 16, title: "Maître du Réseau", color: "text-amber-400" },
+  { minLevel: 31, title: "Oracle de la Matrice", color: "text-neon-cyan" },
 ];
 
 function getPrestigeTitle(level: number): { title: string; color: string } {
