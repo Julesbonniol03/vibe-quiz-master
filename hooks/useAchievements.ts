@@ -14,23 +14,27 @@ export interface Achievement {
 }
 
 export const ACHIEVEMENTS: Achievement[] = [
-  // Mastery
-  { id: "moliere", name: "Molière", desc: "100% de précision en Français", icon: "📝", color: "text-blue-400", glowColor: "rgba(96,165,250,0.5)" },
-  { id: "einstein", name: "Einstein", desc: "100% de précision en Sciences", icon: "🔬", color: "text-cyan-400", glowColor: "rgba(34,211,238,0.5)" },
-  { id: "herodote", name: "Hérodote", desc: "100% de précision en Histoire", icon: "🏛️", color: "text-amber-400", glowColor: "rgba(251,191,36,0.5)" },
+  // Maîtrise par catégorie
+  { id: "moliere", name: "Molière", desc: "Zéro faute en Français", icon: "📝", color: "text-blue-400", glowColor: "rgba(96,165,250,0.5)" },
+  { id: "napoleon", name: "Napoléon", desc: "Roi de l'Histoire — zéro faute", icon: "🏛️", color: "text-amber-400", glowColor: "rgba(251,191,36,0.5)" },
+  { id: "pasteur", name: "Pasteur", desc: "Zéro faute en Sciences", icon: "🔬", color: "text-cyan-400", glowColor: "rgba(34,211,238,0.5)" },
 
-  // Special modes
-  { id: "flash", name: "Flash", desc: "10/10 en mode Blitz", icon: "⚡", color: "text-yellow-400", glowColor: "rgba(250,204,21,0.5)" },
-  { id: "survivant", name: "Survivant", desc: "20+ questions en Mort Subite", icon: "💀", color: "text-rose-400", glowColor: "rgba(251,113,133,0.5)" },
-  { id: "voyageur", name: "Voyageur Temporel", desc: "Toutes les époques d'Histoire révisées", icon: "🕰️", color: "text-purple-400", glowColor: "rgba(192,132,252,0.5)" },
+  // Modes spéciaux
+  { id: "leclair", name: "L'Éclair", desc: "10/10 en mode Blitz", icon: "⚡", color: "text-yellow-400", glowColor: "rgba(250,204,21,0.5)" },
+  { id: "increvable", name: "L'Increvable", desc: "20 questions en Mort Subite", icon: "💀", color: "text-rose-400", glowColor: "rgba(251,113,133,0.5)" },
+  { id: "cerveau", name: "Le Cerveau", desc: "10/10 en mode Expert", icon: "🧠", color: "text-neon-cyan", glowColor: "rgba(0,240,255,0.5)" },
+
+  // Exploration
+  { id: "voyageur", name: "Le Voyageur Temporel", desc: "50+ questions d'Histoire jouées", icon: "🕰️", color: "text-purple-400", glowColor: "rgba(192,132,252,0.5)" },
+  { id: "premiere-partie", name: "La Recrue", desc: "Terminer sa première partie", icon: "🎮", color: "text-green-400", glowColor: "rgba(74,222,128,0.5)" },
+
+  // Séries
+  { id: "streak5", name: "En Flammes", desc: "Série de 5 bonnes réponses", icon: "🔥", color: "text-orange-400", glowColor: "rgba(251,146,60,0.5)" },
+  { id: "streak10", name: "L'Inarrêtable", desc: "Série de 10 bonnes réponses", icon: "💥", color: "text-red-400", glowColor: "rgba(248,113,113,0.5)" },
 
   // Progression
-  { id: "premiere-partie", name: "Premier Pas", desc: "Terminer sa première partie", icon: "🎮", color: "text-green-400", glowColor: "rgba(74,222,128,0.5)" },
-  { id: "streak5", name: "En Feu", desc: "Atteindre un streak de 5", icon: "🔥", color: "text-orange-400", glowColor: "rgba(251,146,60,0.5)" },
-  { id: "streak10", name: "Inarrêtable", desc: "Atteindre un streak de 10", icon: "💥", color: "text-red-400", glowColor: "rgba(248,113,113,0.5)" },
-  { id: "cent-questions", name: "Centurion", desc: "Répondre à 100 questions", icon: "🏅", color: "text-amber-400", glowColor: "rgba(251,191,36,0.5)" },
-  { id: "expert-parfait", name: "Cerveau d'Acier", desc: "10/10 en mode Expert", icon: "🧠", color: "text-neon-cyan", glowColor: "rgba(0,240,255,0.5)" },
-  { id: "daily7", name: "Rituel", desc: "7 jours de défi quotidien d'affilée", icon: "📅", color: "text-indigo-400", glowColor: "rgba(129,140,248,0.5)" },
+  { id: "cent-questions", name: "Le Centurion", desc: "Répondre à 100 questions", icon: "🏅", color: "text-amber-400", glowColor: "rgba(251,191,36,0.5)" },
+  { id: "daily7", name: "Le Rituel", desc: "7 jours de défi quotidien d'affilée", icon: "📅", color: "text-indigo-400", glowColor: "rgba(129,140,248,0.5)" },
 ];
 
 export interface GameContext {
@@ -57,28 +61,28 @@ export function evaluateAchievements(ctx: GameContext, unlocked: string[]): stri
   const accuracy = ctx.total > 0 ? ctx.score / ctx.total : 0;
   const isPerfect = ctx.total > 0 && ctx.score === ctx.total;
 
-  // Mastery per category (100% in a single game with 10+ questions)
+  // Maîtrise par catégorie (zéro faute, 10+ questions)
   check("moliere", ctx.category === "Maîtrise du Français" && isPerfect && ctx.total >= 10);
-  check("einstein", ctx.category === "Sciences" && isPerfect && ctx.total >= 10);
-  check("herodote", ctx.category === "Histoire" && isPerfect && ctx.total >= 10);
+  check("napoleon", ctx.category === "Histoire" && isPerfect && ctx.total >= 10);
+  check("pasteur", ctx.category === "Sciences" && isPerfect && ctx.total >= 10);
 
-  // Special modes
-  check("flash", ctx.mode === "blitz" && isPerfect && ctx.total >= 10);
-  check("survivant", ctx.mode === "mort-subite" && ctx.score >= 20);
-  check("expert-parfait", ctx.difficulty === "hard" && isPerfect && ctx.total >= 10);
+  // Modes spéciaux
+  check("leclair", ctx.mode === "blitz" && isPerfect && ctx.total >= 10);
+  check("increvable", ctx.mode === "mort-subite" && ctx.score >= 20);
+  check("cerveau", ctx.difficulty === "hard" && isPerfect && ctx.total >= 10);
 
-  // Progression
-  check("premiere-partie", true); // always unlocked on first game
-  check("streak5", ctx.globalBestStreak >= 5 || ctx.streak >= 5);
-  check("streak10", ctx.globalBestStreak >= 10 || ctx.streak >= 10);
-  check("cent-questions", ctx.totalPlayed >= 100);
-  check("daily7", ctx.dailyStreak >= 7);
-
-  // Voyageur Temporel: check if all 5 history periods have been played
-  const historyPeriodCategories = ["Antiquité", "Moyen Âge", "Renaissance", "XVIIIe-XIXe siècle", "XXe siècle"];
-  // We check game history for distinct history games — approximation based on having stats
+  // Exploration
   const histStats = ctx.categoryStats["Histoire"];
   check("voyageur", histStats !== undefined && histStats.played >= 50);
+  check("premiere-partie", true);
+
+  // Séries
+  check("streak5", ctx.globalBestStreak >= 5 || ctx.streak >= 5);
+  check("streak10", ctx.globalBestStreak >= 10 || ctx.streak >= 10);
+
+  // Progression
+  check("cent-questions", ctx.totalPlayed >= 100);
+  check("daily7", ctx.dailyStreak >= 7);
 
   return newlyUnlocked;
 }
