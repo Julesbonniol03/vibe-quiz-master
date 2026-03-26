@@ -270,6 +270,14 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setXpGained(earned);
     progress.addXp(earned);
     progress.recordGame(bestStreak);
+    progress.recordGameHistory({
+      score,
+      total,
+      category: selectedCategory,
+      mode: gameMode,
+      difficulty: selectedDifficulty,
+      streak: bestStreak,
+    });
 
     // Mark daily challenge as completed
     if (gameMode === "daily") {

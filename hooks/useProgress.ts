@@ -15,6 +15,7 @@ const KEY_DAILY_COMPLETED = "vqm_daily_completed"; // date string of last comple
 const KEY_CATEGORY_STATS = "vqm_category_stats"; // { [category]: { played, correct } }
 const KEY_SPEED_RECORDS = "vqm_speed_records"; // { totalTime, totalAnswered } for avg speed
 const KEY_LEITNER = "vqm_leitner"; // Spaced repetition: { [questionId]: 1|2|3 }
+const KEY_GAME_HISTORY = "vqm_game_history"; // last N games played
 
 export type LeitnerLevel = 1 | 2 | 3;
 export interface LeitnerMap {
@@ -29,6 +30,16 @@ export interface SpeedRecord {
   totalTime: number;   // cumulative seconds spent answering
   totalAnswered: number; // total questions answered
   bestAvg: number;     // best average seconds per question in a single game
+}
+
+export interface GameHistoryEntry {
+  date: number;        // timestamp
+  score: number;
+  total: number;
+  category: string;    // "All" or category name
+  mode: string;        // classique, blitz, etc.
+  difficulty: string;  // easy, medium, hard
+  streak: number;
 }
 
 export interface WrongQuestion {
@@ -96,6 +107,7 @@ export function useProgress() {
   const [categoryStats, setCategoryStats] = useState<CategoryStats>({});
   const [speedRecord, setSpeedRecord] = useState<SpeedRecord>({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
   const [leitner, setLeitner] = useState<LeitnerMap>({});
+  const [gameHistory, setGameHistory] = useState<GameHistoryEntry[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
@@ -113,6 +125,7 @@ export function useProgress() {
     setCategoryStats(load<CategoryStats>(KEY_CATEGORY_STATS, {}));
     setSpeedRecord(load<SpeedRecord>(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 }));
     setLeitner(load<LeitnerMap>(KEY_LEITNER, {}));
+    setGameHistory(load<GameHistoryEntry[]>(KEY_GAME_HISTORY, []));
     setHydrated(true);
   }, []);
 
@@ -248,6 +261,14 @@ export function useProgress() {
     });
   }, []);
 
+  const recordGameHistory = useCallback((entry: Omit<GameHistoryEntry, "date">) => {
+    setGameHistory((prev) => {
+      const next = [{ ...entry, date: Date.now() }, ...prev].slice(0, 20); // keep last 20
+      save(KEY_GAME_HISTORY, next);
+      return next;
+    });
+  }, []);
+
   const completeDaily = useCallback(() => {
     const today = getTodayStr();
     // Already completed today
@@ -291,6 +312,7 @@ export function useProgress() {
     save(KEY_CATEGORY_STATS, {});
     save(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 });
     save(KEY_LEITNER, {});
+    save(KEY_GAME_HISTORY, []);
     setWrongIds([]);
     setRightIds([]);
     setTotalPlayed(0);
@@ -305,6 +327,7 @@ export function useProgress() {
     setCategoryStats({});
     setSpeedRecord({ totalTime: 0, totalAnswered: 0, bestAvg: 0 });
     setLeitner({});
+    setGameHistory([]);
   }, []);
 
   const accuracy =
@@ -335,8 +358,10 @@ export function useProgress() {
     categoryStats,
     speedRecord,
     leitner,
+    gameHistory,
     recordCategoryAnswer,
     recordSpeed,
+    recordGameHistory,
     promoteLeitner,
     demoteLeitner,
     getLeitnerLevel,

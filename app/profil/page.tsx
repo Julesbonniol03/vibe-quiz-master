@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useProgress, getLevel } from "@/hooks/useProgress";
+import { useProgress, getLevel, GameHistoryEntry } from "@/hooks/useProgress";
+import { useProfile } from "@/hooks/useProfile";
+import { getAvatarById } from "@/components/OnboardingModal";
 import { categoryColors } from "@/lib/questions";
 
 // ─── RANK SYSTEM ───
@@ -30,43 +32,45 @@ function getRank(xp: number) {
   return { ...rank, nextRank, progressToNext };
 }
 
-// ─── SVG RADAR CHART ───
+// ─── SVG RADAR CHART (5 axes) ───
 const RADAR_CATEGORIES = [
-  "Histoire", "Sciences", "Géographie", "Sport", "Cinéma",
-  "Musique", "Technologie", "Nature & Animaux",
+  { key: "Histoire", label: "Histoire", icon: "🏛️" },
+  { key: "Maîtrise du Français", label: "Français", icon: "📝" },
+  { key: "Actualités 2025-2026", label: "Actu", icon: "📰" },
+  { key: "Sciences", label: "Sciences", icon: "🔬" },
+  { key: "Pop Culture", label: "Pop Culture", icon: "🎬" },
 ] as const;
 
 function RadarChart({ stats }: { stats: Record<string, { played: number; correct: number }> }) {
-  const cx = 150, cy = 150, r = 110;
+  const cx = 150, cy = 150, r = 105;
   const n = RADAR_CATEGORIES.length;
   const angleStep = (2 * Math.PI) / n;
 
-  // Compute accuracy per category (0-1)
-  const values = RADAR_CATEGORIES.map((cat) => {
-    const s = stats[cat];
+  const values = RADAR_CATEGORIES.map(({ key }) => {
+    const s = stats[key];
     if (!s || s.played === 0) return 0;
     return s.correct / s.played;
   });
 
-  // Generate polygon points
-  const pointsAt = (vals: number[]) =>
-    vals.map((v, i) => {
-      const angle = angleStep * i - Math.PI / 2;
-      return `${cx + r * v * Math.cos(angle)},${cy + r * v * Math.sin(angle)}`;
-    }).join(" ");
+  const pointAt = (val: number, i: number) => {
+    const angle = angleStep * i - Math.PI / 2;
+    return { x: cx + r * val * Math.cos(angle), y: cy + r * val * Math.sin(angle) };
+  };
 
-  // Grid levels
+  const dataPoints = values.map((v, i) => pointAt(v, i));
+  const polygonStr = dataPoints.map((p) => `${p.x},${p.y}`).join(" ");
+
   const gridLevels = [0.25, 0.5, 0.75, 1];
 
   return (
-    <svg viewBox="0 0 300 300" className="w-full max-w-[320px] mx-auto">
-      {/* Grid circles */}
+    <svg viewBox="0 0 300 300" className="w-full max-w-[300px] mx-auto">
+      {/* Grid pentagons */}
       {gridLevels.map((level) => (
         <polygon
           key={level}
           points={Array.from({ length: n }, (_, i) => {
-            const angle = angleStep * i - Math.PI / 2;
-            return `${cx + r * level * Math.cos(angle)},${cy + r * level * Math.sin(angle)}`;
+            const p = pointAt(level, i);
+            return `${p.x},${p.y}`;
           }).join(" ")}
           fill="none"
           stroke="rgba(255,255,255,0.06)"
@@ -76,82 +80,62 @@ function RadarChart({ stats }: { stats: Record<string, { played: number; correct
 
       {/* Axis lines */}
       {RADAR_CATEGORIES.map((_, i) => {
-        const angle = angleStep * i - Math.PI / 2;
+        const p = pointAt(1, i);
         return (
-          <line
-            key={i}
-            x1={cx} y1={cy}
-            x2={cx + r * Math.cos(angle)}
-            y2={cy + r * Math.sin(angle)}
-            stroke="rgba(255,255,255,0.06)"
-            strokeWidth="1"
-          />
+          <line key={i} x1={cx} y1={cy} x2={p.x} y2={p.y}
+            stroke="rgba(255,255,255,0.06)" strokeWidth="1" />
         );
       })}
 
       {/* Data polygon */}
       <motion.polygon
-        initial={{ opacity: 0, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.3 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         style={{ transformOrigin: `${cx}px ${cy}px` }}
-        points={pointsAt(values)}
+        points={polygonStr}
         fill="url(#radarGradient)"
         stroke="url(#radarStroke)"
-        strokeWidth="2"
+        strokeWidth="2.5"
         strokeLinejoin="round"
       />
 
-      {/* Data points */}
-      {values.map((v, i) => {
-        const angle = angleStep * i - Math.PI / 2;
-        const px = cx + r * v * Math.cos(angle);
-        const py = cy + r * v * Math.sin(angle);
-        return (
-          <motion.circle
-            key={i}
-            initial={{ r: 0 }}
-            animate={{ r: v > 0 ? 4 : 0 }}
-            transition={{ delay: 0.5 + i * 0.05 }}
-            cx={px} cy={py}
-            fill="#00f0ff"
-            filter="url(#glow)"
-          />
-        );
-      })}
+      {/* Data points with glow */}
+      {dataPoints.map((p, i) => (
+        <motion.circle
+          key={i}
+          initial={{ r: 0 }}
+          animate={{ r: values[i] > 0 ? 5 : 0 }}
+          transition={{ delay: 0.6 + i * 0.08 }}
+          cx={p.x} cy={p.y}
+          fill="#00f0ff"
+          filter="url(#glow)"
+        />
+      ))}
 
       {/* Labels */}
       {RADAR_CATEGORIES.map((cat, i) => {
-        const angle = angleStep * i - Math.PI / 2;
-        const labelR = r + 22;
-        const lx = cx + labelR * Math.cos(angle);
-        const ly = cy + labelR * Math.sin(angle);
-        const colors = categoryColors[cat];
+        const lp = pointAt(1.28, i);
         const pct = values[i] > 0 ? Math.round(values[i] * 100) : 0;
         return (
-          <text
-            key={cat}
-            x={lx} y={ly}
-            textAnchor="middle"
-            dominantBaseline="central"
-            className="text-[9px] font-medium"
-            fill={pct > 0 ? (colors?.text ? "currentColor" : "#94a3b8") : "#475569"}
-          >
-            <tspan className={colors?.text || "text-slate-400"}>
-              {colors?.icon || "?"} {cat.length > 10 ? cat.slice(0, 9) + "." : cat}
-            </tspan>
+          <g key={cat.key}>
+            <text x={lp.x} y={lp.y - 6} textAnchor="middle" dominantBaseline="central"
+              className="text-[10px] font-semibold" fill={pct > 0 ? "#e2e8f0" : "#475569"}>
+              {cat.icon} {cat.label}
+            </text>
             {pct > 0 && (
-              <tspan x={lx} dy="12" className="text-[8px]" fill="#64748b">{pct}%</tspan>
+              <text x={lp.x} y={lp.y + 8} textAnchor="middle" className="text-[9px]" fill="#64748b">
+                {pct}%
+              </text>
             )}
-          </text>
+          </g>
         );
       })}
 
-      {/* Defs */}
       <defs>
         <linearGradient id="radarGradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="rgba(0,240,255,0.15)" />
-          <stop offset="100%" stopColor="rgba(255,45,123,0.15)" />
+          <stop offset="0%" stopColor="rgba(0,240,255,0.18)" />
+          <stop offset="100%" stopColor="rgba(255,45,123,0.18)" />
         </linearGradient>
         <linearGradient id="radarStroke" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#00f0ff" />
@@ -159,21 +143,35 @@ function RadarChart({ stats }: { stats: Record<string, { played: number; correct
         </linearGradient>
         <filter id="glow">
           <feGaussianBlur stdDeviation="3" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
+          <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
         </filter>
       </defs>
     </svg>
   );
 }
 
+// ─── FORMAT HELPERS ───
+function formatTime(seconds: number): string {
+  if (seconds < 60) return `${Math.round(seconds)}s`;
+  const m = Math.floor(seconds / 60);
+  const s = Math.round(seconds % 60);
+  return `${m}m${String(s).padStart(2, "0")}s`;
+}
+
+function formatDate(ts: number): string {
+  const d = new Date(ts);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`;
+}
+
+const DIFF_LABELS: Record<string, string> = { easy: "Débutant", medium: "Inter.", hard: "Expert" };
+const MODE_LABELS: Record<string, string> = { classique: "Classique", blitz: "Blitz", "mort-subite": "Mort Subite", daily: "Défi" };
+
 // ─── MAIN PAGE ───
 export default function ProfilPage() {
   const progress = useProgress();
+  const { profile, hydrated: profileHydrated } = useProfile();
 
-  if (!progress.hydrated) {
+  if (!progress.hydrated || !profileHydrated) {
     return (
       <div className="max-w-2xl mx-auto px-4 py-20 text-center">
         <div className="text-6xl mb-6 animate-pulse">👤</div>
@@ -184,22 +182,12 @@ export default function ProfilPage() {
 
   const rank = getRank(progress.xp);
   const levelInfo = getLevel(progress.xp);
-  const avgSpeed = progress.speedRecord.totalAnswered > 0
-    ? (progress.speedRecord.totalTime / progress.speedRecord.totalAnswered).toFixed(1)
-    : null;
-  const bestAvg = progress.speedRecord.bestAvg > 0
-    ? progress.speedRecord.bestAvg.toFixed(1)
-    : null;
-
-  // Sort categories by accuracy for the ranking list
-  const catRanking = Object.entries(progress.categoryStats)
-    .filter(([, s]) => s.played >= 3)
-    .map(([cat, s]) => ({ cat, accuracy: Math.round((s.correct / s.played) * 100), played: s.played }))
-    .sort((a, b) => b.accuracy - a.accuracy);
+  const totalTimeStr = formatTime(progress.speedRecord.totalTime);
+  const avatar = profile ? getAvatarById(profile.avatarId) : null;
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
-      {/* Hero Card */}
+      {/* ── HERO CARD ── */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -210,105 +198,96 @@ export default function ProfilPage() {
           <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-neon-rose/[0.04] rounded-full blur-[80px]" />
         </div>
 
-        <div className="relative z-10">
-          {/* Rank Badge */}
-          <div className="flex flex-col sm:flex-row items-center gap-6">
+        <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6">
+          {/* Avatar + Pseudo */}
+          {avatar && profile ? (
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{ type: "spring", bounce: 0.5, delay: 0.15 }}
-              className={`w-24 h-24 rounded-3xl ${rank.bg} border-2 ${rank.border} flex items-center justify-center text-5xl shadow-xl`}
+              transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
+              className={`w-20 h-20 rounded-3xl ${avatar.bg} border-2 ${avatar.border} flex items-center justify-center shadow-xl`}
+            >
+              <avatar.Icon size={40} style={{ color: avatar.color }} strokeWidth={2} />
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", bounce: 0.5, delay: 0.1 }}
+              className={`w-20 h-20 rounded-3xl ${rank.bg} border-2 ${rank.border} flex items-center justify-center text-4xl shadow-xl`}
             >
               {rank.icon}
             </motion.div>
-            <div className="text-center sm:text-left flex-1">
-              <motion.div
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.2 }}
-              >
-                <p className="text-slate-500 text-sm mb-1">Rang actuel</p>
-                <h1 className={`text-3xl font-bold ${rank.color} mb-1`}>{rank.name}</h1>
-                {rank.nextRank && (
-                  <div className="mt-2">
-                    <div className="flex items-center gap-2 text-sm mb-1">
-                      <span className="text-slate-500">Prochain :</span>
-                      <span className={rank.nextRank.color}>{rank.nextRank.icon} {rank.nextRank.name}</span>
-                      <span className="text-slate-600">({rank.nextRank.minXp.toLocaleString()} XP)</span>
-                    </div>
-                    <div className="w-full max-w-xs bg-white/[0.06] rounded-full h-2 overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${rank.progressToNext}%` }}
-                        transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                        className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                        style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
-                      />
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            </div>
+          )}
 
-            {/* XP / Level badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-center"
-            >
-              <div className="glass-card !rounded-2xl px-6 py-4">
-                <p className="text-2xl font-bold gradient-text">{progress.xp.toLocaleString()}</p>
-                <p className="text-slate-500 text-xs mt-1">XP totale</p>
-                <div className="mt-2 flex items-center gap-2">
-                  <span className="text-amber-400 text-sm font-bold">Niv. {levelInfo.level}</span>
+          <div className="text-center sm:text-left flex-1">
+            <p className="text-slate-500 text-sm mb-0.5">{rank.icon} {rank.name}</p>
+            <h1 className="text-2xl font-bold text-white mb-1">
+              {profile?.pseudo || "Joueur"}
+            </h1>
+            {rank.nextRank && (
+              <div className="mt-2">
+                <div className="flex items-center gap-2 text-xs mb-1">
+                  <span className="text-slate-500">Prochain rang :</span>
+                  <span className={rank.nextRank.color}>{rank.nextRank.icon} {rank.nextRank.name}</span>
+                </div>
+                <div className="w-full max-w-xs bg-white/[0.06] rounded-full h-2 overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${rank.progressToNext}%` }}
+                    transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                    className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                  />
                 </div>
               </div>
-            </motion.div>
+            )}
           </div>
+
+          {/* XP Badge */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            className="glass-card !rounded-2xl px-5 py-3 text-center"
+          >
+            <p className="text-xl font-bold gradient-text">{progress.xp.toLocaleString()}</p>
+            <p className="text-slate-600 text-[10px]">XP &middot; Niv. {levelInfo.level}</p>
+          </motion.div>
         </div>
       </motion.div>
 
-      {/* Rank Ladder */}
-      <motion.div
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15 }}
-        className="glass-card !rounded-2xl p-6 mb-8"
-      >
-        <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-          <span>🏅</span> Rangs
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          {RANKS.map((r) => {
-            const achieved = progress.xp >= r.minXp;
-            const isCurrent = r.name === rank.name;
-            return (
-              <div
-                key={r.name}
-                className={`p-3 rounded-xl border text-center transition-all ${
-                  isCurrent
-                    ? `${r.bg} ${r.border} shadow-lg`
-                    : achieved
-                    ? `bg-white/[0.02] border-white/[0.08] opacity-80`
-                    : "bg-white/[0.01] border-white/[0.04] opacity-40"
-                }`}
-              >
-                <div className={`text-2xl mb-1 ${achieved ? "" : "grayscale"}`}>{r.icon}</div>
-                <div className={`text-xs font-bold ${achieved ? r.color : "text-slate-600"}`}>{r.name}</div>
-                <div className="text-slate-600 text-[10px] mt-0.5">{r.minXp.toLocaleString()} XP</div>
-              </div>
-            );
-          })}
-        </div>
-      </motion.div>
+      {/* ── STATS CARDS ── */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        {[
+          { icon: "📝", label: "Questions", value: progress.totalPlayed.toLocaleString(), color: "text-neon-cyan", glow: "neon-cyan" },
+          { icon: "🎯", label: "Précision", value: `${progress.accuracy}%`, color: progress.accuracy >= 70 ? "text-green-400" : "text-amber-400", glow: progress.accuracy >= 70 ? "green-500" : "amber-500" },
+          { icon: "🔥", label: "Meilleur Streak", value: `${progress.globalBestStreak}x`, color: "text-neon-rose", glow: "neon-rose" },
+          { icon: "⏱️", label: "Temps de jeu", value: totalTimeStr, color: "text-purple-400", glow: "purple-500" },
+        ].map((stat, i) => (
+          <motion.div
+            key={stat.label}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 + i * 0.08 }}
+            className={`relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 text-center group hover:border-${stat.glow}/30 transition-all`}
+          >
+            <div className={`absolute inset-0 bg-gradient-to-br from-${stat.glow}/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
+            <div className="relative">
+              <div className="text-2xl mb-2">{stat.icon}</div>
+              <div className={`text-2xl font-bold ${stat.color} tabular-nums mb-1`}>{stat.value}</div>
+              <div className="text-slate-600 text-xs">{stat.label}</div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
-        {/* Radar Chart */}
+        {/* ── RADAR CHART ── */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.25 }}
+          transition={{ delay: 0.3 }}
           className="glass-card !rounded-2xl p-6"
         >
           <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
@@ -327,72 +306,70 @@ export default function ProfilPage() {
           )}
         </motion.div>
 
-        {/* Stats & Speed */}
-        <div className="space-y-6">
-          {/* Speed Record */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35 }}
-            className="glass-card !rounded-2xl p-6"
-          >
-            <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <span>⚡</span> Vitesse
-            </h2>
-            {avgSpeed ? (
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-neon-cyan/5 border border-neon-cyan/15 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-neon-cyan tabular-nums">{avgSpeed}s</div>
-                  <div className="text-slate-500 text-xs mt-1">Moyenne / question</div>
-                </div>
-                <div className="bg-amber-500/5 border border-amber-500/15 rounded-xl p-4 text-center">
-                  <div className="text-2xl font-bold text-amber-400 tabular-nums">{bestAvg}s</div>
-                  <div className="text-slate-500 text-xs mt-1">Record de vitesse</div>
-                </div>
-                <div className="col-span-2 text-center">
-                  <p className="text-slate-600 text-xs">
-                    {progress.speedRecord.totalAnswered} questions en {Math.round(progress.speedRecord.totalTime)}s au total
-                  </p>
-                </div>
-              </div>
-            ) : (
-              <div className="text-center py-4">
-                <div className="text-3xl mb-2 opacity-50">⏱️</div>
-                <p className="text-slate-500 text-sm">Terminez un quiz pour voir vos stats de vitesse</p>
-              </div>
-            )}
-          </motion.div>
-
-          {/* General Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="glass-card !rounded-2xl p-6"
-          >
-            <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-              <span>📈</span> Statistiques
-            </h2>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                { label: "Parties jouées", value: progress.gamesPlayed, icon: "🎮", color: "text-neon-cyan" },
-                { label: "Précision", value: `${progress.accuracy}%`, icon: "🎯", color: progress.accuracy >= 70 ? "text-green-400" : "text-amber-400" },
-                { label: "Meilleur streak", value: `${progress.globalBestStreak}x`, icon: "🔥", color: "text-neon-rose" },
-                { label: "Questions jouées", value: progress.totalPlayed, icon: "📝", color: "text-purple-400" },
-              ].map((stat) => (
-                <div key={stat.label} className="bg-white/[0.02] border border-white/[0.06] rounded-xl p-3 text-center">
-                  <div className="text-lg mb-1">{stat.icon}</div>
-                  <div className={`text-lg font-bold ${stat.color} tabular-nums`}>{stat.value}</div>
-                  <div className="text-slate-600 text-[10px] mt-0.5">{stat.label}</div>
-                </div>
+        {/* ── GAME HISTORY ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.35 }}
+          className="glass-card !rounded-2xl p-6"
+        >
+          <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+            <span>📜</span> Dernières parties
+          </h2>
+          {progress.gameHistory.length === 0 ? (
+            <div className="text-center py-8">
+              <div className="text-4xl mb-3 opacity-50">🎮</div>
+              <p className="text-slate-500 text-sm">Aucune partie jouée pour le moment</p>
+              <Link href="/quiz" className="inline-block mt-3 text-neon-cyan text-sm hover:underline">
+                Lancer un quiz →
+              </Link>
+            </div>
+          ) : (
+            <div className="space-y-2">
+              {progress.gameHistory.slice(0, 5).map((game, i) => (
+                <GameRow key={`${game.date}-${i}`} game={game} index={i} />
               ))}
             </div>
-          </motion.div>
-        </div>
+          )}
+        </motion.div>
       </div>
 
-      {/* Category Ranking */}
-      {catRanking.length > 0 && (
+      {/* ── RANK LADDER ── */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="glass-card !rounded-2xl p-6 mb-8"
+      >
+        <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <span>🏅</span> Rangs
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {RANKS.map((r) => {
+            const achieved = progress.xp >= r.minXp;
+            const isCurrent = r.name === rank.name;
+            return (
+              <div
+                key={r.name}
+                className={`p-3 rounded-xl border text-center transition-all ${
+                  isCurrent
+                    ? `${r.bg} ${r.border} shadow-lg`
+                    : achieved
+                    ? "bg-white/[0.02] border-white/[0.08] opacity-80"
+                    : "bg-white/[0.01] border-white/[0.04] opacity-40"
+                }`}
+              >
+                <div className={`text-2xl mb-1 ${achieved ? "" : "grayscale"}`}>{r.icon}</div>
+                <div className={`text-xs font-bold ${achieved ? r.color : "text-slate-600"}`}>{r.name}</div>
+                <div className="text-slate-600 text-[10px] mt-0.5">{r.minXp.toLocaleString()} XP</div>
+              </div>
+            );
+          })}
+        </div>
+      </motion.div>
+
+      {/* ── CATEGORY RANKING ── */}
+      {Object.keys(progress.categoryStats).length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -403,52 +380,95 @@ export default function ProfilPage() {
             <span>🏆</span> Classement par catégorie
           </h2>
           <div className="space-y-2">
-            {catRanking.map((item, i) => {
-              const colors = categoryColors[item.cat] || { icon: "❓", text: "text-slate-400", bg: "bg-slate-500/20", border: "border-slate-500/30" };
-              const medals = ["🥇", "🥈", "🥉"];
-              return (
-                <motion.div
-                  key={item.cat}
-                  initial={{ opacity: 0, x: -15 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.5 + i * 0.05 }}
-                  className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
-                >
-                  <span className="text-lg w-6 text-center">{medals[i] || `${i + 1}.`}</span>
-                  <div className={`w-8 h-8 rounded-lg ${colors.bg} border ${colors.border} flex items-center justify-center text-sm flex-shrink-0`}>
-                    {colors.icon}
-                  </div>
-                  <span className={`font-medium flex-1 ${colors.text}`}>{item.cat}</span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-slate-500 text-xs">{item.played} Q</span>
+            {Object.entries(progress.categoryStats)
+              .filter(([, s]) => s.played >= 1)
+              .map(([cat, s]) => ({ cat, accuracy: Math.round((s.correct / s.played) * 100), played: s.played }))
+              .sort((a, b) => b.accuracy - a.accuracy)
+              .map((item, i) => {
+                const colors = categoryColors[item.cat] || { icon: "❓", text: "text-slate-400", bg: "bg-slate-500/20", border: "border-slate-500/30" };
+                const medals = ["🥇", "🥈", "🥉"];
+                return (
+                  <motion.div
+                    key={item.cat}
+                    initial={{ opacity: 0, x: -15 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5 + i * 0.04 }}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
+                  >
+                    <span className="text-lg w-6 text-center">{medals[i] || `${i + 1}.`}</span>
+                    <div className={`w-8 h-8 rounded-lg ${colors.bg} border ${colors.border} flex items-center justify-center text-sm flex-shrink-0`}>
+                      {colors.icon}
+                    </div>
+                    <span className={`font-medium flex-1 text-sm ${colors.text}`}>{item.cat}</span>
+                    <span className="text-slate-600 text-xs">{item.played}q</span>
                     <span className={`font-bold text-sm tabular-nums ${
                       item.accuracy >= 80 ? "text-green-400" : item.accuracy >= 60 ? "text-amber-400" : "text-neon-rose"
                     }`}>
                       {item.accuracy}%
                     </span>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
           </div>
         </motion.div>
       )}
 
       {/* Actions */}
       <div className="flex gap-3">
-        <Link
-          href="/quiz"
-          className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15"
-        >
+        <Link href="/quiz" className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15">
           Jouer un quiz →
         </Link>
-        <Link
-          href="/reviser"
-          className="flex-1 py-3 text-center bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors"
-        >
+        <Link href="/reviser" className="flex-1 py-3 text-center bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors">
           📖 Réviser
         </Link>
       </div>
     </div>
+  );
+}
+
+// ─── GAME HISTORY ROW ───
+function GameRow({ game, index }: { game: GameHistoryEntry; index: number }) {
+  const accuracy = game.total > 0 ? Math.round((game.score / game.total) * 100) : 0;
+  const catLabel = game.category === "All" ? "Tout" : game.category;
+  const colors = game.category !== "All" ? categoryColors[game.category] : null;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -10 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.35 + index * 0.06 }}
+      className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04]"
+    >
+      <div className="text-center flex-shrink-0 w-10">
+        <div className="text-slate-600 text-[10px]">{formatDate(game.date)}</div>
+        <div className={`text-lg font-bold tabular-nums ${
+          accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-rose"
+        }`}>
+          {game.score}/{game.total}
+        </div>
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-1.5 mb-0.5">
+          <span className="text-xs">{colors?.icon || "🌍"}</span>
+          <span className="text-white text-xs font-medium truncate">{catLabel}</span>
+        </div>
+        <div className="flex items-center gap-2 text-[10px] text-slate-600">
+          <span>{MODE_LABELS[game.mode] || game.mode}</span>
+          <span>&middot;</span>
+          <span>{DIFF_LABELS[game.difficulty] || game.difficulty}</span>
+          {game.streak > 0 && (
+            <>
+              <span>&middot;</span>
+              <span className="text-orange-400">🔥{game.streak}</span>
+            </>
+          )}
+        </div>
+      </div>
+      <div className={`text-sm font-bold tabular-nums ${
+        accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-rose"
+      }`}>
+        {accuracy}%
+      </div>
+    </motion.div>
   );
 }
