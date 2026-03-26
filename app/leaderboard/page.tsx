@@ -80,7 +80,7 @@ export default function LeaderboardPage() {
       <div className="text-center mb-8">
         <div className="text-5xl mb-3">🏆</div>
         <h1 className="text-3xl font-bold text-white mb-2">Classement</h1>
-        <p className="text-slate-400">Les meilleurs joueurs de Vibe Quiz Master</p>
+        <p className="text-slate-400">Les meilleurs joueurs de Teubé</p>
       </div>
 
       {/* Period selector */}

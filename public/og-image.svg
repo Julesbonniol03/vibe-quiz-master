@@ -46,10 +46,10 @@
 
   <!-- Logo -->
   <rect x="520" y="120" width="160" height="160" rx="40" fill="url(#cyan)" filter="url(#glow)"/>
-  <text x="600" y="225" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="100" fill="white">V</text>
+  <text x="600" y="225" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="900" font-size="100" fill="white">T</text>
 
   <!-- Title -->
-  <text x="600" y="350" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="52" fill="url(#textGrad)">Vibe Quiz Master</text>
+  <text x="600" y="350" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="52" fill="url(#textGrad)">Teubé</text>
 
   <!-- Subtitle -->
   <text x="600" y="405" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="24" fill="#94a3b8">L'élite de la Culture G en mode Cyber-Luxe</text>

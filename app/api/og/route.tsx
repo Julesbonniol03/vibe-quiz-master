@@ -70,7 +70,7 @@ export async function GET() {
             boxShadow: "0 0 40px rgba(0,240,255,0.3), 0 0 80px rgba(0,240,255,0.1)",
           }}
         >
-          <span style={{ fontSize: 80, fontWeight: 900, color: "white" }}>V</span>
+          <span style={{ fontSize: 80, fontWeight: 900, color: "white" }}>T</span>
         </div>
 
         {/* Title */}
@@ -85,7 +85,7 @@ export async function GET() {
             display: "flex",
           }}
         >
-          Vibe Quiz Master
+          Teubé
         </div>
 
         {/* Subtitle */}

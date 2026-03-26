@@ -1313,7 +1313,7 @@ function ShareScoreCard({
     ctx.fillText("V", 32, 50);
     ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.5)";
-    ctx.fillText("Vibe Quiz Master", 54, 50);
+    ctx.fillText("Teubé", 54, 50);
 
     // Mode badge
     ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";

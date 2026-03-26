@@ -218,7 +218,7 @@ export default function DashboardPage() {
           Confidentialité
         </Link>
         <span>&middot;</span>
-        <span>Vibe Quiz Master &copy; 2026</span>
+        <span>Teubé &copy; 2026</span>
       </div>
     </div>
   );

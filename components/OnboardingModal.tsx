@@ -4,21 +4,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useProfile } from "@/hooks/useProfile";
 import {
-  Zap,
-  Shield,
-  Flame,
-  Ghost,
-  Bot,
+  Cpu,
+  BookOpen,
   Skull,
+  ShieldHalf,
+  Eye,
+  Swords,
 } from "lucide-react";
 
 export const AVATARS = [
-  { id: "zap", label: "Volt", Icon: Zap, color: "#00f0ff", bg: "bg-cyan-500/15", border: "border-cyan-500/30", shadow: "shadow-cyan-500/20" },
-  { id: "shield", label: "Aegis", Icon: Shield, color: "#a855f7", bg: "bg-purple-500/15", border: "border-purple-500/30", shadow: "shadow-purple-500/20" },
-  { id: "flame", label: "Blaze", Icon: Flame, color: "#ff2d7b", bg: "bg-rose-500/15", border: "border-rose-500/30", shadow: "shadow-rose-500/20" },
-  { id: "ghost", label: "Specter", Icon: Ghost, color: "#34d399", bg: "bg-emerald-500/15", border: "border-emerald-500/30", shadow: "shadow-emerald-500/20" },
-  { id: "bot", label: "Nexus", Icon: Bot, color: "#f59e0b", bg: "bg-amber-500/15", border: "border-amber-500/30", shadow: "shadow-amber-500/20" },
-  { id: "skull", label: "Reaper", Icon: Skull, color: "#f43f5e", bg: "bg-red-500/15", border: "border-red-500/30", shadow: "shadow-red-500/20" },
+  { id: "hacker", label: "Le Hacker", Icon: Cpu, color: "#00f0ff", bg: "bg-cyan-500/15", border: "border-cyan-500/30", shadow: "shadow-cyan-500/20" },
+  { id: "erudit", label: "L'Érudit", Icon: BookOpen, color: "#a855f7", bg: "bg-purple-500/15", border: "border-purple-500/30", shadow: "shadow-purple-500/20" },
+  { id: "cyberpunk", label: "Le Cyber-Punk", Icon: Skull, color: "#ff2d7b", bg: "bg-rose-500/15", border: "border-rose-500/30", shadow: "shadow-rose-500/20" },
+  { id: "recrue", label: "La Recrue", Icon: ShieldHalf, color: "#34d399", bg: "bg-emerald-500/15", border: "border-emerald-500/30", shadow: "shadow-emerald-500/20" },
+  { id: "visionnaire", label: "Le Visionnaire", Icon: Eye, color: "#f59e0b", bg: "bg-amber-500/15", border: "border-amber-500/30", shadow: "shadow-amber-500/20" },
+  { id: "rebelle", label: "Le Rebelle", Icon: Swords, color: "#f43f5e", bg: "bg-red-500/15", border: "border-red-500/30", shadow: "shadow-red-500/20" },
 ] as const;
 
 export function getAvatarById(id: string) {
@@ -80,22 +80,23 @@ export default function OnboardingModal() {
                 🧠
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-1">
-                Initialisation du <span className="gradient-text">Profil</span>
+                Bienvenue chez les{" "}
+                <span className="gradient-text">Teub&eacute;s</span>
               </h2>
-              <p className="text-slate-500 text-sm">Créez votre identité de joueur</p>
+              <p className="text-slate-500 text-sm">Cr&eacute;ation de ton identit&eacute;</p>
             </div>
 
             {/* Pseudo Input */}
             <div className="mb-6">
               <label className="text-slate-400 text-xs font-medium uppercase tracking-wider mb-2 block">
-                Pseudo
+                Ton pseudo
               </label>
               <input
                 type="text"
                 value={pseudo}
                 onChange={(e) => { setPseudo(e.target.value); setError(""); }}
                 onKeyDown={(e) => { if (e.key === "Enter") handleSubmit(); }}
-                placeholder="Entrez votre pseudo..."
+                placeholder="Choisis ton pseudo..."
                 maxLength={20}
                 className="w-full px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-cyan/40 focus:ring-1 focus:ring-neon-cyan/20 transition-all text-sm"
                 autoFocus
@@ -108,7 +109,7 @@ export default function OnboardingModal() {
             {/* Avatar Selection */}
             <div className="mb-6">
               <label className="text-slate-400 text-xs font-medium uppercase tracking-wider mb-3 block">
-                Avatar Cyberpunk
+                Choisis ton avatar
               </label>
               <div className="grid grid-cols-3 gap-3">
                 {AVATARS.map((av, i) => {
@@ -134,7 +135,7 @@ export default function OnboardingModal() {
                         style={{ color: isSelected ? av.color : "#64748b" }}
                         className="transition-colors"
                       />
-                      <span className={`text-[11px] font-semibold ${isSelected ? "text-white" : "text-slate-600"}`}>
+                      <span className={`text-[10px] font-semibold leading-tight text-center ${isSelected ? "text-white" : "text-slate-600"}`}>
                         {av.label}
                       </span>
                       {isSelected && (
@@ -163,7 +164,7 @@ export default function OnboardingModal() {
                 <p className="text-white text-sm font-semibold">
                   {pseudo.trim() || "Pseudo..."}
                 </p>
-                <p className="text-slate-600 text-[10px]">Aperçu du profil</p>
+                <p className="text-slate-600 text-[10px]">Aper&ccedil;u de ton profil</p>
               </div>
             </div>
 

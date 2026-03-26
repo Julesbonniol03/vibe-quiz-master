@@ -63,7 +63,7 @@ export default function SplashScreen() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="w-24 h-24 rounded-3xl bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center"
             >
-              <span className="text-white font-black text-5xl select-none">V</span>
+              <span className="text-white font-black text-5xl select-none">T</span>
             </motion.div>
           </motion.div>
 
@@ -75,7 +75,7 @@ export default function SplashScreen() {
             className="text-2xl font-bold mb-2"
           >
             <span className="bg-gradient-to-r from-neon-cyan to-neon-rose bg-clip-text text-transparent">
-              Vibe Quiz Master
+              Teubé
             </span>
           </motion.h1>
 
@@ -86,7 +86,7 @@ export default function SplashScreen() {
             transition={{ delay: 0.7, duration: 0.5 }}
             className="text-slate-500 text-sm"
           >
-            Culture G&eacute;n&eacute;rale &middot; 1000+ Questions
+            Le quiz des Teub&eacute;s &middot; 1000+ Questions
           </motion.p>
 
           {/* Loading bar */}

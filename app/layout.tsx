@@ -15,8 +15,8 @@ export const viewport: Viewport = {
 const APP_URL = "https://vibe-quiz-master.vercel.app";
 
 export const metadata: Metadata = {
-  title: "Vibe Quiz Master - Quiz Culture Générale",
-  description: "L'élite de la Culture G en mode Cyber-Luxe. 1000+ questions, 17 catégories, 3 modes de jeu. Testez vos connaissances !",
+  title: "Teubé - Quiz Culture Générale",
+  description: "Le quiz des Teubés. 1000+ questions, 17 catégories, 3 modes de jeu. Testez vos connaissances en mode Cyber-Luxe !",
   manifest: "/manifest.json",
   metadataBase: new URL(APP_URL),
   icons: {
@@ -30,28 +30,28 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: APP_URL,
-    siteName: "Vibe Quiz Master",
-    title: "Vibe Quiz Master — L'élite de la Culture G",
+    siteName: "Teubé",
+    title: "Teubé — L'élite de la Culture G",
     description: "1000+ questions · 17 catégories · 3 modes de jeu. Testez vos connaissances en mode Cyber-Luxe et défiez vos amis !",
     images: [
       {
         url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Vibe Quiz Master — Quiz Culture Générale",
+        alt: "Teubé — Quiz Culture Générale",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vibe Quiz Master — L'élite de la Culture G",
+    title: "Teubé — L'élite de la Culture G",
     description: "1000+ questions · 17 catégories · 3 modes de jeu. Testez vos connaissances en mode Cyber-Luxe !",
     images: ["/api/og"],
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Vibe Quiz",
+    title: "Teubé",
   },
 };
 

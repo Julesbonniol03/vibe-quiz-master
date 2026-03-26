@@ -24,10 +24,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-neon-cyan/20 group-hover:scale-110 group-hover:shadow-neon-cyan/40 transition-all">
-            V
+            T
           </div>
           <span className="font-bold text-lg bg-gradient-to-r from-neon-cyan to-neon-rose bg-clip-text text-transparent">
-            Vibe Quiz Master
+            Teubé
           </span>
         </Link>
 

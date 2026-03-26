@@ -37,7 +37,7 @@ export default function Confidentialite() {
       <div className="space-y-8 text-slate-400 text-sm leading-relaxed">
         <Section title="1. Introduction">
           <p>
-            La présente politique de confidentialité décrit comment <strong className="text-white">Vibe Quiz Master</strong> traite
+            La présente politique de confidentialité décrit comment <strong className="text-white">Teubé</strong> traite
             vos informations lorsque vous utilisez notre application de quiz.
             Nous nous engageons à respecter votre vie privée conformément au
             Règlement Général sur la Protection des Données (RGPD) et à la loi
@@ -47,7 +47,7 @@ export default function Confidentialite() {
 
         <Section title="2. Données collectées">
           <p>
-            <strong className="text-neon-cyan">Vibe Quiz Master ne collecte aucune donnée personnelle.</strong>
+            <strong className="text-neon-cyan">Teubé ne collecte aucune donnée personnelle.</strong>
           </p>
           <p className="mt-2">
             Les seules données stockées sont vos données de progression de jeu :
@@ -121,7 +121,7 @@ export default function Confidentialite() {
 
         <Section title="8. Mineurs">
           <p>
-            Vibe Quiz Master est une application éducative adaptée à tous les âges.
+            Teubé est une application éducative adaptée à tous les âges.
             Aucune donnée personnelle n&apos;étant collectée, aucun consentement parental
             spécifique n&apos;est requis.
           </p>
