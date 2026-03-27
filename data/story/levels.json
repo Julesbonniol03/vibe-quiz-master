@@ -16,7 +16,22 @@
         "Zeus = roi des dieux + eclairs. Poseidon = mer + trident. Hades = monde des morts. Retiens le trio de freres qui se sont partage le monde.",
         "Athena est sortie de la TETE de Zeus. C'est la deesse de la sagesse ET de la guerre strategique. Pas le muscle, le cerveau.",
         "Les 12 Olympiens c'est le roster principal. Comme les Avengers : y'a les titulaires (Zeus, Hera, Athena, Apollon...) et les remplacants."
-      ]
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Zeus",
+          "look": "Zeus en survêt Nike, claquettes-chaussettes, lunettes aviator dorees, un eclair dans la main droite et un gobelet Starbucks dans l'autre. Barbe de hipster bien taillee. T-shirt marque 'CEO of Olympe'.",
+          "color": "#f59e0b"
+        },
+        "carteVibe": {
+          "description": "Au centre : le Mont Olympe (triangle dore). En haut : ZEUS avec une couronne + eclair. A gauche : POSEIDON avec un trident + vagues bleues. A droite : HADES avec des flammes violettes + crane. En dessous, 9 icones en cercle pour les autres Olympiens avec leurs attributs (arc pour Apollon, colombe pour Aphrodite, casque pour Ares, caducee pour Hermes...). Des fleches rouges relient les beefs entre dieux.",
+          "color": "#ef4444"
+        },
+        "meme": {
+          "description": "Image : Zeus assis sur un trone avec des eclairs partout. Texte du haut : 'HERA : T'ETAIS OU CETTE NUIT ?'. Texte du bas : 'ZEUS : J'ETAIS UN CYGNE MDR'. Sous-titre : Quand t'es dieu mais que t'as zero game pour mentir.",
+          "color": "#f59e0b"
+        }
+      }
     }
   },
   {

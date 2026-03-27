@@ -2,10 +2,24 @@
 
 import { motion } from "framer-motion";
 
+interface VisualItem {
+  description: string;
+  color: string;
+  name?: string;
+  look?: string;
+}
+
+interface Visuals {
+  avatar: VisualItem;
+  carteVibe: VisualItem;
+  meme: VisualItem;
+}
+
 interface Brief {
   contextCheck: string;
   topoNoCap: string;
   cheatCodes: string[];
+  visuals?: Visuals;
 }
 
 interface LessonNarrativeProps {
@@ -19,6 +33,9 @@ interface LessonNarrativeProps {
 }
 
 export default function LessonNarrative({ title, description, screenshot, lienModerne, day, brief, onStart }: LessonNarrativeProps) {
+  const hasVisuals = brief?.visuals;
+  const baseDelay = 0.1;
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -35,7 +52,7 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: baseDelay }}
             className="inline-flex items-center gap-2 bg-neon-cyan/10 border border-neon-cyan/20 rounded-full px-4 py-1.5 mb-6"
           >
             <span className="text-neon-cyan font-bold text-sm">JOUR {day}</span>
@@ -46,19 +63,20 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
           <motion.h1
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: baseDelay + 0.1 }}
             className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
           >
             {title}
           </motion.h1>
 
-          {/* Brief - Context Check */}
+          {/* Brief sections */}
           {brief ? (
             <>
+              {/* Context-Check */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
+                transition={{ delay: baseDelay + 0.15 }}
                 className="bg-gradient-to-r from-purple-500/[0.08] to-neon-rose/[0.05] border border-purple-500/20 rounded-2xl p-5 mb-5"
               >
                 <div className="flex items-start gap-3">
@@ -70,11 +88,35 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
                 </div>
               </motion.div>
 
+              {/* Avatar de l'Epoque */}
+              {hasVisuals && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: baseDelay + 0.25 }}
+                  className="rounded-2xl p-5 mb-5 border"
+                  style={{
+                    background: `linear-gradient(135deg, ${brief.visuals!.avatar.color}12, transparent)`,
+                    borderColor: `${brief.visuals!.avatar.color}30`,
+                  }}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl flex-shrink-0">🎭</span>
+                    <div>
+                      <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: brief.visuals!.avatar.color }}>
+                        Avatar de l&apos;Epoque : {brief.visuals!.avatar.name}
+                      </p>
+                      <p className="text-slate-300 text-sm leading-relaxed italic">{brief.visuals!.avatar.look || brief.visuals!.avatar.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
               {/* Topo No-Cap */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: baseDelay + 0.35 }}
                 className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 mb-5"
               >
                 <div className="flex items-start gap-3">
@@ -86,11 +128,35 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
                 </div>
               </motion.div>
 
+              {/* Carte Mentale Vibe */}
+              {hasVisuals && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: baseDelay + 0.45 }}
+                  className="rounded-2xl p-5 mb-5 border"
+                  style={{
+                    background: `linear-gradient(135deg, ${brief.visuals!.carteVibe.color}10, ${brief.visuals!.carteVibe.color}05)`,
+                    borderColor: `${brief.visuals!.carteVibe.color}25`,
+                  }}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl flex-shrink-0">🗺️</span>
+                    <div>
+                      <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: brief.visuals!.carteVibe.color }}>
+                        Carte Mentale Vibe
+                      </p>
+                      <p className="text-slate-300 text-sm leading-relaxed">{brief.visuals!.carteVibe.description}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
               {/* Cheat Codes */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: baseDelay + 0.55 }}
                 className="bg-gradient-to-r from-neon-cyan/[0.06] to-green-500/[0.04] border border-neon-cyan/20 rounded-2xl p-5 mb-5"
               >
                 <div className="flex items-start gap-3">
@@ -110,6 +176,32 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
                   </div>
                 </div>
               </motion.div>
+
+              {/* Meme Historique */}
+              {hasVisuals && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: baseDelay + 0.65 }}
+                  className="rounded-2xl p-5 mb-5 border"
+                  style={{
+                    background: `linear-gradient(135deg, ${brief.visuals!.meme.color}10, transparent)`,
+                    borderColor: `${brief.visuals!.meme.color}30`,
+                  }}
+                >
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl flex-shrink-0">😂</span>
+                    <div>
+                      <p className="font-semibold text-sm uppercase tracking-wider mb-2" style={{ color: brief.visuals!.meme.color }}>
+                        Meme Historique
+                      </p>
+                      <div className="bg-black/30 rounded-xl p-4 border border-white/[0.06]">
+                        <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-line">{brief.visuals!.meme.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
             </>
           ) : (
             /* Fallback: original simple layout */
@@ -127,7 +219,7 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: brief ? 0.55 : 0.4 }}
+            transition={{ delay: hasVisuals ? baseDelay + 0.75 : brief ? baseDelay + 0.55 : baseDelay + 0.3 }}
             className="bg-white/[0.03] border border-white/[0.08] rounded-2xl p-5 mb-5"
           >
             <div className="flex items-start gap-3">
@@ -143,7 +235,7 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: brief ? 0.6 : 0.5 }}
+            transition={{ delay: hasVisuals ? baseDelay + 0.8 : brief ? baseDelay + 0.6 : baseDelay + 0.4 }}
             className="bg-white/[0.03] border border-neon-rose/10 rounded-2xl p-5 mb-8"
           >
             <div className="flex items-start gap-3">
@@ -159,7 +251,7 @@ export default function LessonNarrative({ title, description, screenshot, lienMo
           <motion.button
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: brief ? 0.7 : 0.6 }}
+            transition={{ delay: hasVisuals ? baseDelay + 0.9 : brief ? baseDelay + 0.7 : baseDelay + 0.5 }}
             onClick={onStart}
             className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold text-lg rounded-2xl hover:opacity-90 transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-neon-cyan/20"
           >
