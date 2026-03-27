@@ -1948,5 +1948,915 @@
     ],
     "correct_index": 0,
     "explanation": "'Demi' placé avant le nom avec trait d'union est invariable. Après : 'une journée et demie' (accord)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le pluriel de « œil » ?",
+    "options": [
+      "Œils",
+      "Yeux",
+      "Œux",
+      "Œilles"
+    ],
+    "correct_index": 1,
+    "explanation": "« Yeux » est le pluriel irrégulier de « œil ». Si tu savais pas ça, retourne en CE1."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment écrit-on correctement : « J'ai ___ à la plage » ?",
+    "options": [
+      "été",
+      "étais",
+      "êté",
+      "eter"
+    ],
+    "correct_index": 0,
+    "explanation": "« J'ai été » avec le participe passé. Pas de piège, juste du bon sens de Teubé."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot est un adverbe ?",
+    "options": [
+      "Rapidement",
+      "Rapide",
+      "Rapidité",
+      "Rapider"
+    ],
+    "correct_index": 0,
+    "explanation": "Les adverbes en -ment sont formés à partir d'adjectifs. Facile, même pour un Teubé débutant."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "« Malgré que » est-il correct en français soutenu ?",
+    "options": [
+      "Oui, toujours",
+      "Non, on dit « bien que »",
+      "Seulement à l'oral",
+      "Uniquement au passé"
+    ],
+    "correct_index": 1,
+    "explanation": "« Malgré que » fait pleurer l'Académie française. On dit « bien que » + subjonctif."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le féminin de « malin » ?",
+    "options": [
+      "Maline",
+      "Maligne",
+      "Malinne",
+      "Malyne"
+    ],
+    "correct_index": 1,
+    "explanation": "« Maligne » est le féminin correct. Même ton correcteur automatique le sait."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment s'écrit le son [s] dans « leçon » ?",
+    "options": [
+      "ss",
+      "s",
+      "ç",
+      "c"
+    ],
+    "correct_index": 2,
+    "explanation": "La cédille sous le C donne le son [s] devant a, o, u. Le Ç, ce héros méconnu."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quelle phrase est correcte ?",
+    "options": [
+      "Je me rappelle de toi",
+      "Je me rappelle toi",
+      "Je me souviens de toi",
+      "Je me souviens toi"
+    ],
+    "correct_index": 2,
+    "explanation": "On se souvient DE quelqu'un, on se rappelle quelque chose. Piège classique de Teubé."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le contraire de « prolixe » ?",
+    "options": [
+      "Concis",
+      "Bavard",
+      "Long",
+      "Verbeux"
+    ],
+    "correct_index": 0,
+    "explanation": "Prolixe = trop de mots. Concis = juste ce qu'il faut. Sois concis, jeune Teubé."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "« Avoir l'air » : quel accord pour l'adjectif ?",
+    "options": [
+      "Toujours avec « air »",
+      "Toujours avec le sujet",
+      "Les deux sont possibles",
+      "Jamais d'accord"
+    ],
+    "correct_index": 2,
+    "explanation": "« Elle a l'air contente » ou « Elle a l'air content » — les deux marchent. Même l'Académie hésite."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment écrit-on : « des pommes de ___ » ?",
+    "options": [
+      "terre",
+      "terres",
+      "tères",
+      "terrs"
+    ],
+    "correct_index": 0,
+    "explanation": "« Pommes de terre » : terre reste au singulier. Oui c'est bizarre, bienvenue en français."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel mot contient un tréma ?",
+    "options": [
+      "Naif",
+      "Naïf",
+      "Nayf",
+      "Nahif"
+    ],
+    "correct_index": 1,
+    "explanation": "Le tréma sur le ï sépare les voyelles : na-ïf. Sans tréma, on lirait « nèf »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le participe passé de « résoudre » ?",
+    "options": [
+      "Résolu",
+      "Résous",
+      "Résolvé",
+      "Résoulu"
+    ],
+    "correct_index": 0,
+    "explanation": "« Résolu » est le participe passé. C'est résolu, comme ton doute sur cette question."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Que signifie « pléonasme » ?",
+    "options": [
+      "Répétition inutile",
+      "Figure de style élégante",
+      "Mot rare",
+      "Faute de grammaire"
+    ],
+    "correct_index": 0,
+    "explanation": "« Monter en haut », « descendre en bas » : des pléonasmes. Le français a horreur de la redondance."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment s'écrit « quel que soit » ?",
+    "options": [
+      "Quelque soit",
+      "Quel que soit",
+      "Quelquesoit",
+      "Quels que soit"
+    ],
+    "correct_index": 1,
+    "explanation": "C'est « quel que soit » en trois mots. 90% des gens se trompent, ne sois pas ce Teubé-là."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le synonyme de « obséquieux » ?",
+    "options": [
+      "Servile",
+      "Obsédé",
+      "Obscur",
+      "Obstiné"
+    ],
+    "correct_index": 0,
+    "explanation": "Obséquieux = excessivement poli, servile. Rien à voir avec une obsession."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment conjugue-t-on « aller » au subjonctif présent ?",
+    "options": [
+      "Que j'alle",
+      "Que j'aille",
+      "Que je va",
+      "Que j'allais"
+    ],
+    "correct_index": 1,
+    "explanation": "« Que j'aille » avec le subjonctif. Le verbe aller est le boss final de la conjugaison."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le genre du mot « pétale » ?",
+    "options": [
+      "Féminin",
+      "Masculin",
+      "Les deux",
+      "Ça dépend du contexte"
+    ],
+    "correct_index": 1,
+    "explanation": "UN pétale. Oui, c'est masculin. Même les fleuristes se trompent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la bonne orthographe ?",
+    "options": [
+      "Acceuil",
+      "Accueil",
+      "Acceuille",
+      "Accueille"
+    ],
+    "correct_index": 1,
+    "explanation": "A-C-C-U-E-I-L. Le U avant le E, toujours. Ce mot piège même les profs."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "« Pallier » se construit avec quelle préposition ?",
+    "options": [
+      "Pallier à",
+      "Pallier de",
+      "Pallier (rien)",
+      "Pallier pour"
+    ],
+    "correct_index": 2,
+    "explanation": "On pallie quelque chose, JAMAIS « pallier à ». C'est un verbe transitif direct, point final."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le subjonctif imparfait de « avoir » à la 3e personne ?",
+    "options": [
+      "Qu'il ait",
+      "Qu'il avait",
+      "Qu'il eût",
+      "Qu'il aurait"
+    ],
+    "correct_index": 2,
+    "explanation": "« Qu'il eût » — le subjonctif imparfait, cette relique magnifique que plus personne n'utilise."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Comment s'écrit « apparemment » ?",
+    "options": [
+      "Apparament",
+      "Apparemment",
+      "Aparemment",
+      "Apparement"
+    ],
+    "correct_index": 1,
+    "explanation": "Deux P, deux M. « Apparemment » vient de « apparent ». Mémorise-le, ça te servira."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Que signifie l'expression « avoir maille à partir » ?",
+    "options": [
+      "Être en conflit",
+      "Avoir de l'argent",
+      "Tricoter ensemble",
+      "Partir en voyage"
+    ],
+    "correct_index": 0,
+    "explanation": "La maille était la plus petite pièce de monnaie. Se disputer pour si peu = conflit. Culture de Teubé éclairé."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel accord est correct : « la robe qu'elle s'est ___ » ?",
+    "options": [
+      "achetée",
+      "acheté",
+      "achetés",
+      "acheter"
+    ],
+    "correct_index": 0,
+    "explanation": "Le COD « que » (la robe) est placé avant le verbe → accord au féminin singulier. Règle de ouf."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Lequel de ces mots prend un accent circonflexe ?",
+    "options": [
+      "Chateau",
+      "Château",
+      "Les deux",
+      "Aucun"
+    ],
+    "correct_index": 1,
+    "explanation": "« Château » avec son bel accent circonflexe. L'accent remplace le S de l'ancien français « chastel »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle est la forme correcte du conditionnel passé ?",
+    "options": [
+      "J'aurais voulu",
+      "J'aurai voulu",
+      "J'avais voulu",
+      "J'eusse voulu"
+    ],
+    "correct_index": 0,
+    "explanation": "« J'aurais voulu » = conditionnel passé. « J'aurai voulu » = futur antérieur. La nuance est fine."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Que signifie « procrastiner » ?",
+    "options": [
+      "Avancer vite",
+      "Remettre à plus tard",
+      "Réfléchir longtemps",
+      "Abandonner"
+    ],
+    "correct_index": 1,
+    "explanation": "Procrastiner = remettre au lendemain. Tu fais ça quand tu joues à Teubé au lieu de bosser."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "« Après que » est suivi de quel mode ?",
+    "options": [
+      "Subjonctif",
+      "Indicatif",
+      "Conditionnel",
+      "Impératif"
+    ],
+    "correct_index": 1,
+    "explanation": "« Après que » + indicatif (fait accompli). « Avant que » + subjonctif (fait incertain). Logique !"
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le pluriel de « festival » ?",
+    "options": [
+      "Festivals",
+      "Festivaux",
+      "Festivales",
+      "Festivalles"
+    ],
+    "correct_index": 0,
+    "explanation": "« Festivals » — les mots en -al ne font pas tous -aux. Bal, carnaval, festival font -als."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Comment écrit-on « je vous serais gré » correctement ?",
+    "options": [
+      "Je vous serais gré",
+      "Je vous saurais gré",
+      "Je vous serai gré",
+      "Je vous saurai grès"
+    ],
+    "correct_index": 1,
+    "explanation": "On SAIT gré, on ne l'EST pas. « Savoir gré » = être reconnaissant. Erreur ultra-fréquente."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle figure de style est « une obscure clarté » ?",
+    "options": [
+      "Métaphore",
+      "Oxymore",
+      "Hyperbole",
+      "Litote"
+    ],
+    "correct_index": 1,
+    "explanation": "L'oxymore associe deux termes contradictoires. Corneille en était le roi dans Le Cid."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le genre du mot « écritoire » ?",
+    "options": [
+      "Masculin",
+      "Féminin",
+      "Neutre",
+      "Variable"
+    ],
+    "correct_index": 1,
+    "explanation": "UNE écritoire. Encore un mot dont le genre surprend tout le monde."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Comment s'écrit le verbe à l'impératif : « ___ tranquille » ?",
+    "options": [
+      "Sois",
+      "Soit",
+      "Soie",
+      "Soi"
+    ],
+    "correct_index": 0,
+    "explanation": "Impératif de « être » : sois. « Soit » c'est le subjonctif. Pas la même chose du tout."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Que veut dire « amphigourique » ?",
+    "options": [
+      "Clair et précis",
+      "Incompréhensible",
+      "Musical",
+      "Ancien"
+    ],
+    "correct_index": 1,
+    "explanation": "Un discours amphigourique est confus et incompréhensible. Comme les CGU que personne ne lit."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Dans « les enfants que j'ai vus jouer », pourquoi accorde-t-on « vus » ?",
+    "options": [
+      "Car « enfants » est COD",
+      "Car « enfants » font l'action de jouer",
+      "On n'accorde pas",
+      "Car c'est un verbe d'état"
+    ],
+    "correct_index": 1,
+    "explanation": "On accorde car les enfants font l'action de jouer. Si c'était « les chansons que j'ai entendu chanter », pas d'accord."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel mot est invariable ?",
+    "options": [
+      "Bleu",
+      "Marron",
+      "Grand",
+      "Petit"
+    ],
+    "correct_index": 1,
+    "explanation": "Les couleurs dérivées de noms (marron, orange, crème) sont invariables. Des chaussures marron, pas marrons."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le passé simple de « coudre » à la 1re personne ?",
+    "options": [
+      "Je cousis",
+      "Je coudis",
+      "Je cousus",
+      "Je coudrai"
+    ],
+    "correct_index": 0,
+    "explanation": "« Je cousis » — le passé simple de coudre. Si tu connaissais, t'es pas un Teubé ordinaire."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est la bonne forme : « Feu la reine » ou « Feue la reine » ?",
+    "options": [
+      "Feu la reine",
+      "Feue la reine",
+      "Les deux selon la position",
+      "Aucune"
+    ],
+    "correct_index": 2,
+    "explanation": "« Feu » est invariable avant l'article (feu la reine) mais s'accorde après (la feue reine). Règle dingue."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie « lénifiant » ?",
+    "options": [
+      "Énervant",
+      "Apaisant",
+      "Lent",
+      "Brillant"
+    ],
+    "correct_index": 1,
+    "explanation": "Lénifiant = qui adoucit, apaise. Du latin « lenis » (doux). Vocabulaire de Teubé lettré."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Comment conjugue-t-on « traire » au passé simple ?",
+    "options": [
+      "Je tris",
+      "Je trayis",
+      "Ce verbe n'a pas de passé simple",
+      "Je trais"
+    ],
+    "correct_index": 2,
+    "explanation": "« Traire » n'a pas de passé simple ni de subjonctif imparfait. C'est un verbe défectif, ce rebelle."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est l'étymologie du mot « travail » ?",
+    "options": [
+      "Tripalium (instrument de torture)",
+      "Trovare (trouver)",
+      "Tractare (traiter)",
+      "Tribuere (distribuer)"
+    ],
+    "correct_index": 0,
+    "explanation": "« Travail » vient du latin « tripalium », un instrument de torture à trois pieux. Ça explique les lundis."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Dans « c'en est fait de lui », quel est le rôle de « en » ?",
+    "options": [
+      "Pronom complément",
+      "Adverbe",
+      "Préposition",
+      "Conjonction"
+    ],
+    "correct_index": 0,
+    "explanation": "« En » est ici pronom complément reprenant une idée. Expression figée signifiant « c'est terminé pour lui »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le pluriel de « gentilhomme » ?",
+    "options": [
+      "Gentilhommes",
+      "Gentilshommes",
+      "Gentilhomms",
+      "Gentils hommes"
+    ],
+    "correct_index": 1,
+    "explanation": "« Gentilshommes » — le S se place au milieu. Un des pluriels les plus étranges du français."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie « hiératique » ?",
+    "options": [
+      "Sacré et solennel",
+      "Hilarant",
+      "Héréditaire",
+      "Hystérique"
+    ],
+    "correct_index": 0,
+    "explanation": "Hiératique = qui a la raideur solennelle des statues sacrées. Du grec « hieratikos »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le subjonctif présent de « asseoir » ?",
+    "options": [
+      "Que j'assoie",
+      "Que j'assois",
+      "Que j'asseye",
+      "Les formes A et C sont correctes"
+    ],
+    "correct_index": 3,
+    "explanation": "« Que j'assoie » ET « que j'asseye » sont tous les deux corrects. Double conjugaison, double plaisir."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "« Solutionner » est-il un mot correct ?",
+    "options": [
+      "Oui, tout à fait",
+      "Non, on dit résoudre",
+      "Seulement en langage technique",
+      "Seulement au Québec"
+    ],
+    "correct_index": 1,
+    "explanation": "Les puristes disent « résoudre ». « Solutionner » est considéré comme un barbarisme par l'Académie."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle est la différence entre « amener » et « apporter » ?",
+    "options": [
+      "Aucune",
+      "Amener = personnes, Apporter = choses",
+      "Amener = choses, Apporter = personnes",
+      "C'est une question de registre"
+    ],
+    "correct_index": 1,
+    "explanation": "On amène des gens, on apporte des choses. « J'amène mon ami et j'apporte le dessert. » CQFD."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie « thuriféraire » ?",
+    "options": [
+      "Porteur d'encens, flatteur",
+      "Voleur",
+      "Théoricien",
+      "Humoriste"
+    ],
+    "correct_index": 0,
+    "explanation": "Un thuriféraire porte l'encens (thurifer) à l'église. Par extension : un flatteur excessif."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel temps utilise-t-on après « si » dans une condition irréelle au passé ?",
+    "options": [
+      "Plus-que-parfait",
+      "Passé composé",
+      "Conditionnel passé",
+      "Imparfait"
+    ],
+    "correct_index": 0,
+    "explanation": "« Si j'avais su » (plus-que-parfait) + conditionnel passé. Les « si » n'aiment pas les « rais »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le participe passé de « absoudre » ?",
+    "options": [
+      "Absous",
+      "Absolu",
+      "Absout",
+      "Absolvé"
+    ],
+    "correct_index": 0,
+    "explanation": "« Absous » au masculin, « absoute » au féminin. Un des participes les plus traîtres du français."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le féminin de « cheval » ?",
+    "options": [
+      "Chevale",
+      "Jument",
+      "Chevalière",
+      "Chevalle"
+    ],
+    "correct_index": 1,
+    "explanation": "La jument est la femelle du cheval. Pas de logique morphologique, juste du vocabulaire."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Que signifie « davantage » ?",
+    "options": [
+      "D'avantage (un bénéfice)",
+      "Plus",
+      "Avant",
+      "Pendant"
+    ],
+    "correct_index": 1,
+    "explanation": "Davantage = plus. Ne pas confondre avec « d'avantage » (un bénéfice). Deux mots piégeux."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel temps est « je mangeais » ?",
+    "options": [
+      "Passé composé",
+      "Imparfait",
+      "Passé simple",
+      "Plus-que-parfait"
+    ],
+    "correct_index": 1,
+    "explanation": "L'imparfait, le temps de la description et des habitudes passées. Le BFF du passé simple."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Comment écrit-on : « des ___ neufs » ?",
+    "options": [
+      "pneu",
+      "pneus",
+      "pneuxs",
+      "pneues"
+    ],
+    "correct_index": 1,
+    "explanation": "Des pneus, avec un S. Les mots en -eu font -eux sauf bleu et pneu."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "easy",
+    "question": "Quel est le synonyme de « éphémère » ?",
+    "options": [
+      "Éternel",
+      "Passager",
+      "Énorme",
+      "Épais"
+    ],
+    "correct_index": 1,
+    "explanation": "Éphémère = qui dure très peu. Comme ta motivation le lundi matin."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel mot est un paronyme de « conjecture » ?",
+    "options": [
+      "Conjoncture",
+      "Conjonctive",
+      "Conjugaison",
+      "Conjonction"
+    ],
+    "correct_index": 0,
+    "explanation": "Conjecture = hypothèse. Conjoncture = situation économique. Les confondre = faute de Teubé classique."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Dans « ils se sont ___ la main », quel accord ?",
+    "options": [
+      "serrée",
+      "serré",
+      "serrés",
+      "serrées"
+    ],
+    "correct_index": 1,
+    "explanation": "Pas d'accord car « la main » est COD, placé après. On a serré QUOI ? La main. À QUI ? Se (COI)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Que signifie « aréopage » ?",
+    "options": [
+      "Assemblée de savants",
+      "Aéroport ancien",
+      "Terrain vague",
+      "Arène romaine"
+    ],
+    "correct_index": 0,
+    "explanation": "L'Aréopage était le tribunal d'Athènes. Aujourd'hui = assemblée de personnes compétentes."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le pluriel de « vitrail » ?",
+    "options": [
+      "Vitrails",
+      "Vitraux",
+      "Vitrailles",
+      "Vitrailes"
+    ],
+    "correct_index": 1,
+    "explanation": "Des vitraux. Les mots en -ail font -aux : travail/travaux, vitrail/vitraux. Mais des chandails !"
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "« Au temps pour moi » ou « autant pour moi » ?",
+    "options": [
+      "Au temps pour moi (officiel)",
+      "Autant pour moi (officiel)",
+      "Les deux sont acceptés",
+      "Aucun des deux"
+    ],
+    "correct_index": 2,
+    "explanation": "Débat éternel ! L'Académie préfère « au temps » (origine militaire) mais « autant » est très répandu."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Comment écrit-on « nous ___ » au présent de « envoyer » ?",
+    "options": [
+      "envoyons",
+      "envoyions",
+      "envoions",
+      "envoyont"
+    ],
+    "correct_index": 0,
+    "explanation": "« Nous envoyons » au présent. Attention : « nous envoyions » c'est l'imparfait. Un Y de différence."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quelle expression est correcte ?",
+    "options": [
+      "Faire long feu",
+      "Ne pas faire long feu",
+      "Les deux selon le sens",
+      "Aucune"
+    ],
+    "correct_index": 2,
+    "explanation": "Piège absolu ! « Faire long feu » = durer. « Ne pas faire long feu » = ne pas durer. Les deux existent."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "Quel est le sens de « acrimonie » ?",
+    "options": [
+      "Acidité du caractère",
+      "Cérémonie",
+      "Accusation",
+      "Acrobatie"
+    ],
+    "correct_index": 0,
+    "explanation": "L'acrimonie est une aigreur, une amertume dans le ton. Du latin « acrimonia » (âcreté)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "medium",
+    "question": "« Quoique » et « quoi que » : quelle différence ?",
+    "options": [
+      "Aucune",
+      "Quoique = bien que, Quoi que = quelle que soit la chose",
+      "Quoique = parce que",
+      "C'est la même chose"
+    ],
+    "correct_index": 1,
+    "explanation": "Quoique = bien que (un mot). Quoi que = quelle que soit la chose que (deux mots)."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le passé simple de « mouvoir » à la 3e personne ?",
+    "options": [
+      "Il mouvit",
+      "Il mut",
+      "Il mouva",
+      "Il mût"
+    ],
+    "correct_index": 3,
+    "explanation": "« Il mût » avec accent circonflexe au passé simple. Ce verbe est un cauchemar conjugationnel."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que signifie « épistolaire » ?",
+    "options": [
+      "Relatif aux lettres/courriers",
+      "Relatif à la connaissance",
+      "Relatif aux étoiles",
+      "Relatif aux épîtres religieuses uniquement"
+    ],
+    "correct_index": 0,
+    "explanation": "Épistolaire = qui se rapporte aux lettres. Un roman épistolaire est composé de lettres. Du grec « epistolê »."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quelle phrase respecte la concordance des temps ?",
+    "options": [
+      "Il dit qu'il viendra",
+      "Il a dit qu'il viendrait",
+      "Il a dit qu'il viendra",
+      "Les trois sont correctes"
+    ],
+    "correct_index": 1,
+    "explanation": "Passé + conditionnel : « Il a dit qu'il viendrait ». C'est la concordance des temps, le boss final du français."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Que veut dire « apocryphe » ?",
+    "options": [
+      "D'origine douteuse",
+      "Très ancien",
+      "Apocalyptique",
+      "Apostolique"
+    ],
+    "correct_index": 0,
+    "explanation": "Un texte apocryphe est d'authenticité douteuse. Comme ce message WhatsApp de ton oncle complotiste."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le genre du mot « tentacule » ?",
+    "options": [
+      "Féminin",
+      "Masculin",
+      "Épicène",
+      "Ça dépend"
+    ],
+    "correct_index": 1,
+    "explanation": "UN tentacule. Masculin. Oui, ça sonne féminin, mais non. Le français adore ces pièges."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Comment appelle-t-on un mot qui s'écrit pareil mais change de sens selon le genre ?",
+    "options": [
+      "Homonyme",
+      "Homographe",
+      "Épicène",
+      "Hétéronyme"
+    ],
+    "correct_index": 1,
+    "explanation": "Un/une livre, un/une tour : ce sont des homographes. Même graphie, sens différent selon le genre."
+  },
+  {
+    "category": "Maîtrise du Français",
+    "difficulty": "hard",
+    "question": "Quel est le pluriel de « bonhomme » ?",
+    "options": [
+      "Bonhommes",
+      "Bonshommes",
+      "Bons hommes",
+      "Bonhoms"
+    ],
+    "correct_index": 1,
+    "explanation": "Des bonshommes. Comme gentilshommes, le S migre au milieu. Le français est trolleur professionnel."
   }
 ]

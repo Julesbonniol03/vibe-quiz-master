@@ -1298,5 +1298,629 @@
     ],
     "correct_index": 1,
     "explanation": "L'Exposition universelle 2025 se tient à Osaka, au Japon, sur le thème 'Concevoir la société du futur pour nos vies'."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quelle ville a accueilli les Jeux Olympiques d'été 2024 ?",
+    "options": [
+      "Tokyo",
+      "Los Angeles",
+      "Paris",
+      "Londres"
+    ],
+    "correct_index": 2,
+    "explanation": "Paris 2024, la fête du siècle. Si t'as raté ça, t'es resté dans ta grotte."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Qui a remporté l'élection présidentielle américaine de 2024 ?",
+    "options": [
+      "Joe Biden",
+      "Donald Trump",
+      "Kamala Harris",
+      "Ron DeSantis"
+    ],
+    "correct_index": 1,
+    "explanation": "Le retour de Trump à la Maison-Blanche en 2024. L'histoire bégaie, disaient-ils."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel outil d'intelligence artificielle a battu des records d'utilisateurs en 2024 ?",
+    "options": [
+      "Siri",
+      "ChatGPT",
+      "Alexa",
+      "Cortana"
+    ],
+    "correct_index": 1,
+    "explanation": "ChatGPT d'OpenAI a dépassé les 200 millions d'utilisateurs. L'IA, c'est maintenant."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel conflit majeur persiste en Europe depuis 2022 ?",
+    "options": [
+      "Guerre en Syrie",
+      "Guerre Russie-Ukraine",
+      "Guerre des Balkans",
+      "Conflit Chypre-Turquie"
+    ],
+    "correct_index": 1,
+    "explanation": "Le conflit Russie-Ukraine, la plus grande guerre en Europe depuis 1945."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel sportif français a été le porte-drapeau aux JO de Paris 2024 ?",
+    "options": [
+      "Kylian Mbappé",
+      "Teddy Riner",
+      "Florent Manaudou",
+      "Antoine Griezmann"
+    ],
+    "correct_index": 1,
+    "explanation": "Teddy Riner, légende du judo, a porté le drapeau tricolore sur la Seine."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel réseau social a été rebaptisé « X » par Elon Musk ?",
+    "options": [
+      "Facebook",
+      "Instagram",
+      "Twitter",
+      "TikTok"
+    ],
+    "correct_index": 2,
+    "explanation": "Twitter est devenu X en 2023. L'oiseau bleu s'est envolé pour de bon."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Où s'est tenue la COP28 en 2023 ?",
+    "options": [
+      "Paris",
+      "Dubaï",
+      "New York",
+      "Le Caire"
+    ],
+    "correct_index": 1,
+    "explanation": "La COP28 à Dubaï, un pays pétrolier qui parle de climat. L'ironie n'a pas échappé à grand monde."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a rejoint l'Union européenne comme candidat officiel en 2024 ?",
+    "options": [
+      "Turquie",
+      "Ukraine",
+      "Suisse",
+      "Norvège"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Ukraine a obtenu le statut de candidat officiel. Le rapprochement avec l'UE s'accélère."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel club Kylian Mbappé a-t-il rejoint en 2024 ?",
+    "options": [
+      "Manchester City",
+      "FC Barcelone",
+      "Real Madrid",
+      "Bayern Munich"
+    ],
+    "correct_index": 2,
+    "explanation": "Mbappé au Real Madrid, le transfert le plus attendu de la décennie."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel événement astronomique rare a traversé l'Amérique du Nord en avril 2024 ?",
+    "options": [
+      "Pluie de météorites",
+      "Éclipse solaire totale",
+      "Aurore boréale",
+      "Passage de comète"
+    ],
+    "correct_index": 1,
+    "explanation": "L'éclipse solaire totale du 8 avril 2024. Des millions de gens ont levé la tête."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a lancé la mission lunaire Chandrayaan-3 avec succès ?",
+    "options": [
+      "Chine",
+      "Japon",
+      "Inde",
+      "Russie"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Inde a posé Chandrayaan-3 sur la Lune en août 2023. Le pôle Sud lunaire, rien que ça."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Combien de médailles d'or la France a-t-elle remportées aux JO 2024 ?",
+    "options": [
+      "8",
+      "12",
+      "16",
+      "20"
+    ],
+    "correct_index": 2,
+    "explanation": "16 médailles d'or pour la France à domicile. Record historique pour les Bleus !"
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise a lancé le modèle d'IA « Gemini » en 2024 ?",
+    "options": [
+      "OpenAI",
+      "Meta",
+      "Google",
+      "Microsoft"
+    ],
+    "correct_index": 2,
+    "explanation": "Google a lancé Gemini, son modèle multimodal. La guerre de l'IA bat son plein."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel accord historique a été signé lors de la COP28 concernant les énergies fossiles ?",
+    "options": [
+      "Interdiction immédiate",
+      "Transition progressive",
+      "Taxe mondiale",
+      "Aucun accord"
+    ],
+    "correct_index": 1,
+    "explanation": "Un accord historique pour « transitionner hors des énergies fossiles ». Un premier pas, disent les optimistes."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays est entré dans les BRICS en 2024 ?",
+    "options": [
+      "Turquie",
+      "Argentine",
+      "Arabie saoudite",
+      "Les trois"
+    ],
+    "correct_index": 2,
+    "explanation": "L'Arabie saoudite, les ÉAU, l'Iran, l'Égypte et l'Éthiopie ont rejoint les BRICS en 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel procès majeur de Donald Trump s'est tenu en 2024 ?",
+    "options": [
+      "Fraude fiscale",
+      "Documents classifiés",
+      "Affaire Stormy Daniels",
+      "Tous les trois"
+    ],
+    "correct_index": 3,
+    "explanation": "Trump a cumulé les procès en 2024. Un record pour un candidat à la présidence."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle loi européenne sur l'intelligence artificielle a été adoptée en 2024 ?",
+    "options": [
+      "AI Ban Act",
+      "EU AI Act",
+      "Digital Services Act",
+      "AI Safety Treaty"
+    ],
+    "correct_index": 1,
+    "explanation": "L'EU AI Act, première législation mondiale complète sur l'IA. L'Europe prend les devants."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel constructeur automobile a annoncé la fin des moteurs thermiques pour 2035 en Europe ?",
+    "options": [
+      "Un seul",
+      "Quelques-uns",
+      "Tous, par obligation européenne",
+      "Aucun"
+    ],
+    "correct_index": 2,
+    "explanation": "L'UE a voté l'interdiction des ventes de voitures thermiques neuves à partir de 2035."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a été frappé par un séisme dévastateur en février 2023 ?",
+    "options": [
+      "Japon",
+      "Turquie",
+      "Iran",
+      "Grèce"
+    ],
+    "correct_index": 1,
+    "explanation": "Le séisme en Turquie et Syrie a fait plus de 50 000 morts. Une catastrophe humanitaire majeure."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle entreprise d'Elon Musk a envoyé le plus gros lanceur spatial jamais construit ?",
+    "options": [
+      "Blue Origin",
+      "SpaceX",
+      "Virgin Galactic",
+      "NASA"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Starship de SpaceX, le plus gros lanceur de l'histoire. Le rêve martien prend forme."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel footballeur a remporté son 8e Ballon d'Or ?",
+    "options": [
+      "Cristiano Ronaldo",
+      "Lionel Messi",
+      "Kylian Mbappé",
+      "Erling Haaland"
+    ],
+    "correct_index": 1,
+    "explanation": "Messi, 8e Ballon d'Or en 2023 après sa Coupe du monde. Le GOAT, tout simplement."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel phénomène climatique a provoqué des records de chaleur mondiaux en 2024 ?",
+    "options": [
+      "La Niña",
+      "El Niño",
+      "L'effet de serre seul",
+      "Le trou de la couche d'ozone"
+    ],
+    "correct_index": 1,
+    "explanation": "El Niño combiné au réchauffement climatique a fait de 2024 l'année la plus chaude jamais enregistrée."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a interdit TikTok pour les moins de 16 ans en 2024 ?",
+    "options": [
+      "France",
+      "Australie",
+      "États-Unis",
+      "Chine"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Australie a voté l'interdiction de TikTok et des réseaux sociaux pour les moins de 16 ans."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle mission spatiale vise à ramener des humains sur la Lune ?",
+    "options": [
+      "Apollo 20",
+      "Artemis",
+      "Starlink",
+      "Voyager 3"
+    ],
+    "correct_index": 1,
+    "explanation": "Le programme Artemis de la NASA vise un retour lunaire avec équipage. Direction : pôle Sud."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel est le nom du premier traité international sur la haute mer adopté en 2023 ?",
+    "options": [
+      "Traité de Paris",
+      "Traité BBNJ",
+      "Accord de Montego Bay II",
+      "Pacte des Océans"
+    ],
+    "correct_index": 1,
+    "explanation": "Le traité BBNJ protège la biodiversité en haute mer. 20 ans de négociations pour y arriver."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Combien de pays membres comptent les BRICS après l'élargissement de 2024 ?",
+    "options": [
+      "7",
+      "9",
+      "10",
+      "12"
+    ],
+    "correct_index": 2,
+    "explanation": "De 5 à 10 membres. Les BRICS+ pèsent désormais 46% de la population mondiale."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel modèle d'IA d'Anthropic est sorti en 2024 ?",
+    "options": [
+      "GPT-5",
+      "Gemini Ultra",
+      "Claude 3",
+      "LLaMA 3"
+    ],
+    "correct_index": 2,
+    "explanation": "Claude 3 d'Anthropic, concurrent direct de GPT-4. La course à l'IA générative s'intensifie."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a élu son plus jeune président en 2024 à 37 ans ?",
+    "options": [
+      "Argentine",
+      "Chili",
+      "Équateur",
+      "Salvador"
+    ],
+    "correct_index": 2,
+    "explanation": "Daniel Noboa, 35 ans, élu président de l'Équateur fin 2023. La jeunesse au pouvoir."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pourcentage du PIB mondial les pays du G7 représentent-ils environ en 2025 ?",
+    "options": [
+      "25%",
+      "30%",
+      "43%",
+      "60%"
+    ],
+    "correct_index": 2,
+    "explanation": "Le G7 pèse encore ~43% du PIB mondial mais les BRICS gagnent du terrain chaque année."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel organisme a déclaré la fin de l'urgence sanitaire mondiale du Covid-19 ?",
+    "options": [
+      "ONU",
+      "OMS",
+      "UE",
+      "CDC"
+    ],
+    "correct_index": 1,
+    "explanation": "L'OMS a officiellement mis fin à l'urgence sanitaire du Covid en mai 2023. Enfin."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel est le nom du vaisseau spatial réutilisable chinois testé en 2024 ?",
+    "options": [
+      "Shenlong",
+      "Tianhe",
+      "Chang'e 7",
+      "Zhurong"
+    ],
+    "correct_index": 0,
+    "explanation": "Le Shenlong (Dragon divin), avion spatial réutilisable chinois. La Chine vise les étoiles."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle température moyenne mondiale a été dépassée pour la première fois en 2024 ?",
+    "options": [
+      "+1°C vs préindustriel",
+      "+1.5°C vs préindustriel",
+      "+2°C vs préindustriel",
+      "+0.5°C vs préindustriel"
+    ],
+    "correct_index": 1,
+    "explanation": "Le seuil de +1.5°C a été franchi sur une année complète pour la première fois. L'alarme climatique."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays africain a connu un coup d'État militaire en 2023 ?",
+    "options": [
+      "Sénégal",
+      "Niger",
+      "Côte d'Ivoire",
+      "Ghana"
+    ],
+    "correct_index": 1,
+    "explanation": "Le Niger a vécu un coup d'État en juillet 2023. Le Sahel en pleine instabilité."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel géant de la tech a été valorisé à plus de 3 000 milliards de dollars en 2024 ?",
+    "options": [
+      "Amazon",
+      "Google",
+      "Apple",
+      "Microsoft"
+    ],
+    "correct_index": 2,
+    "explanation": "Apple a franchi les 3 000 milliards de capitalisation. Plus que le PIB de la France."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel pays a organisé la Coupe du monde de rugby 2023 ?",
+    "options": [
+      "Angleterre",
+      "France",
+      "Afrique du Sud",
+      "Japon"
+    ],
+    "correct_index": 1,
+    "explanation": "La France a accueilli le Mondial de rugby 2023. Les All Blacks et les Boks ont régalé."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel animal marin géant a été filmé vivant pour la première fois en 2025 ?",
+    "options": [
+      "Baleine bleue",
+      "Calmar géant",
+      "Requin du Groenland",
+      "Poisson-lune géant"
+    ],
+    "correct_index": 2,
+    "explanation": "Le requin du Groenland, vieux de 400 ans, filmé dans son habitat naturel. Plus vieux que ta famille."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "easy",
+    "question": "Quel chanteur français a rempli le Stade de France en 2025 ?",
+    "options": [
+      "Stromae",
+      "Orelsan",
+      "Jul",
+      "Ninho"
+    ],
+    "correct_index": 2,
+    "explanation": "Jul au Stade de France, le rappeur marseillais bat tous les records de ventes."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a légalisé le cannabis à usage récréatif en Europe en 2024 ?",
+    "options": [
+      "France",
+      "Allemagne",
+      "Espagne",
+      "Pays-Bas"
+    ],
+    "correct_index": 1,
+    "explanation": "L'Allemagne a légalisé le cannabis récréatif en avril 2024. Le premier grand pays européen."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel volcan islandais est entré en éruption fin 2023 près de Grindavík ?",
+    "options": [
+      "Eyjafjallajökull",
+      "Fagradalsfjall",
+      "Katla",
+      "Hekla"
+    ],
+    "correct_index": 1,
+    "explanation": "Fagradalsfjall et la péninsule de Reykjanes. Essaye de prononcer ça trois fois vite."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle monnaie numérique la Banque centrale européenne prépare-t-elle ?",
+    "options": [
+      "Eurocoin",
+      "Euro numérique",
+      "CryptoEUR",
+      "E-Euro"
+    ],
+    "correct_index": 1,
+    "explanation": "L'euro numérique est en préparation. Une version dématérialisée de ta monnaie, contrôlée par la BCE."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel pays a atteint un record de production d'énergie éolienne en 2024 ?",
+    "options": [
+      "France",
+      "Danemark",
+      "Chine",
+      "États-Unis"
+    ],
+    "correct_index": 2,
+    "explanation": "La Chine est le premier producteur mondial d'énergie éolienne. Ils installent un parc éolien par semaine."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quel est le nom du robot humanoïde de Tesla ?",
+    "options": [
+      "Atlas",
+      "Optimus",
+      "Pepper",
+      "Spot"
+    ],
+    "correct_index": 1,
+    "explanation": "Optimus de Tesla, le robot humanoïde qui veut remplacer... enfin, aider les humains."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "medium",
+    "question": "Quelle série Netflix a battu des records de visionnage en 2024 ?",
+    "options": [
+      "Squid Game saison 2",
+      "Stranger Things 5",
+      "Wednesday 2",
+      "One Piece 2"
+    ],
+    "correct_index": 0,
+    "explanation": "Squid Game saison 2, le retour du phénomène coréen. Le monde entier a re-bingé."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel satellite européen a été lancé pour cartographier les forêts depuis l'espace en 2024 ?",
+    "options": [
+      "Sentinel-6",
+      "Biomass",
+      "Copernicus-3",
+      "ForestSat"
+    ],
+    "correct_index": 1,
+    "explanation": "Le satellite Biomass de l'ESA mesure la biomasse forestière mondiale depuis l'orbite."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel accord commercial majeur entre l'UE et le Mercosur a avancé en 2024 ?",
+    "options": [
+      "CETA 2",
+      "Accord UE-Mercosur",
+      "Trans-Pacifique",
+      "ALENA 3"
+    ],
+    "correct_index": 1,
+    "explanation": "L'accord UE-Mercosur, en négociation depuis 25 ans, a fait un bond en avant en 2024."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pourcentage de l'électricité mondiale provient des énergies renouvelables en 2025 ?",
+    "options": [
+      "15%",
+      "22%",
+      "30%",
+      "40%"
+    ],
+    "correct_index": 2,
+    "explanation": "~30% de l'électricité mondiale est renouvelable. Le solaire explose, le charbon recule."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quel pays a lancé la première centrale à fusion nucléaire expérimentale ?",
+    "options": [
+      "France (ITER)",
+      "Chine",
+      "États-Unis",
+      "Japon"
+    ],
+    "correct_index": 1,
+    "explanation": "La Chine a fait tourner son « soleil artificiel » EAST pendant des durées record. La fusion avance."
+  },
+  {
+    "category": "Actualités 2025-2026",
+    "difficulty": "hard",
+    "question": "Quelle organisation a fêté ses 80 ans en 2025 ?",
+    "options": [
+      "OTAN",
+      "ONU",
+      "UE",
+      "UNICEF"
+    ],
+    "correct_index": 1,
+    "explanation": "L'ONU, fondée en 1945, a célébré ses 80 ans en 2025. Toujours debout, malgré les critiques."
   }
 ]
