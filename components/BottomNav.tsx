@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
   { href: "/dashboard",   label: "Accueil",    icon: HomeIcon },
-  { href: "/reviser",     label: "Réviser",    icon: BookIcon },
+  { href: "/story-mode",  label: "Épopée",     icon: SwordIcon },
   { href: "/quiz",        label: "Jouer",      icon: PlayIcon },
   { href: "/leaderboard", label: "Classement", icon: TrophyIcon },
   { href: "/premium",     label: "Premium",    icon: StarIcon },
@@ -54,14 +54,6 @@ function HomeIcon({ size, active }: { size: number; active: boolean }) {
     </svg>
   );
 }
-function BookIcon({ size, active }: { size: number; active: boolean }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.2 : 1.8} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
-      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
-    </svg>
-  );
-}
 function PlayIcon({ size, active }: { size: number; active: boolean }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "currentColor" : "none"} stroke="currentColor" strokeWidth={active ? 0 : 1.8} strokeLinecap="round" strokeLinejoin="round">
@@ -77,6 +69,16 @@ function TrophyIcon({ size, active }: { size: number; active: boolean }) {
       <path d="M6 9H3V4h3M18 9h3V4h-3" />
       <path d="M6 4h12v6a6 6 0 01-12 0V4z" />
       <path d="M12 15v3M8 21h8" />
+    </svg>
+  );
+}
+function SwordIcon({ size, active }: { size: number; active: boolean }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.2 : 1.8} strokeLinecap="round" strokeLinejoin="round">
+      <polyline points="14.5 17.5 3 6 3 3 6 3 17.5 14.5" />
+      <line x1="13" y1="19" x2="19" y2="13" />
+      <line x1="16" y1="16" x2="20" y2="20" />
+      <line x1="19" y1="21" x2="21" y2="19" />
     </svg>
   );
 }

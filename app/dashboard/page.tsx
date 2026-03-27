@@ -74,6 +74,20 @@ export default function DashboardPage() {
       {/* Daily Odyssey */}
       <DailyOdyssey />
 
+      {/* Mode Épopée CTA */}
+      <Link
+        href="/story-mode"
+        className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-500/[0.08] to-neon-rose/[0.08] border border-purple-500/20 hover:border-purple-500/40 p-6 mb-8 flex items-center gap-5 transition-all hover:scale-[1.01] active:scale-[0.99]"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-rose/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="relative text-5xl">⚔️</div>
+        <div className="relative flex-1">
+          <h3 className="text-lg font-bold bg-gradient-to-r from-purple-400 to-neon-rose bg-clip-text text-transparent mb-1">Mode Epopee</h3>
+          <p className="text-slate-500 text-sm">Apprentissage en 30 jours - De l&apos;Antiquite au Futur, niveau par niveau.</p>
+        </div>
+        <span className="relative text-purple-400 group-hover:translate-x-1 transition-transform text-lg">→</span>
+      </Link>
+
       {/* Game Modes */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <Link
