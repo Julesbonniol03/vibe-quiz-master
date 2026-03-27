@@ -111,7 +111,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
               <span className="gradient-text">Culture G</span>
             </h1>
             <p className="text-slate-500 max-w-lg">
-              De l&apos;Empire Romain au Moyen-Age. Chaque jour, une pépite d&apos;histoire racontée comme un débrief en terrasse.
+              De l&apos;Empire Romain à l&apos;Imprimerie. Chaque jour, une pépite d&apos;histoire racontée comme un débrief en terrasse.
             </p>
           </div>
         </div>
@@ -194,7 +194,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
         {/* Coming soon placeholder */}
         <div className="mt-6 p-5 rounded-2xl border border-dashed border-white/[0.08] text-center">
           <p className="text-slate-600 text-sm">
-            Jours 7-10 bientôt disponibles...
+            Jours 11-20 bientôt disponibles... Renaissance, Lumières &amp; Révolutions 🔥
           </p>
         </div>
 
@@ -233,7 +233,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
             <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 to-transparent" />
               <span className="relative text-6xl">
-                {selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : "👑"}
+                {selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : "🏛️"}
               </span>
             </div>
 

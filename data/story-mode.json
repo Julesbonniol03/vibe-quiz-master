@@ -134,5 +134,141 @@
         "answer": "Rome"
       }
     ]
+  },
+  {
+    "id": 7,
+    "title": "Les Croisades : Le Road Trip Religieux Qui A Dérapé",
+    "brief": "1096-1291. Le Pape Urbain II lâche un discours tellement hype en 1095 que des milliers de mecs partent en mode YOLO direction Jérusalem pour 'libérer le tombeau du Christ'. Sauf que c'est pas un pèlerinage chill, c'est la guerre. La première croisade, c'est le banger : les croisés prennent Jérusalem en 1099, bain de sang total, zéro modération. Ils créent des États latins au Moyen-Orient, genre des bases avancées. Mais Saladin, le boss final côté musulman, récupère Jérusalem en 1187 — le comeback ultime. Résultat : 8 croisades en 200 ans, des millions de morts, et au final les croisés perdent tout. Le vrai plot twist ? Ces guerres ont ouvert le commerce entre l'Europe et l'Orient : épices, soie, mathématiques, médecine. L'Europe est sortie de son délire guerrier avec un cheat code culturel. Le ratio entre l'objectif et le résultat, c'est le plus gros de l'histoire médiévale.",
+    "visualDescription": "Un chevalier croisé en armure streetwear blanche avec croix rouge LED sur le torse, épée néon cyan. Face à lui, Saladin en cape noire avec cimeterre holographique doré. Jérusalem en fond : dômes en néon or, murs de pierre en dark mode, ciel violet électrique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1548013146-72479768bada",
+    "quiz": [
+      {
+        "question": "Qui a lancé l'appel à la première croisade en 1095 ?",
+        "options": ["Le roi de France", "Le Pape Urbain II", "Charlemagne", "Richard Cœur de Lion"],
+        "answer": "Le Pape Urbain II"
+      },
+      {
+        "question": "En quelle année Jérusalem a-t-elle été reprise par Saladin ?",
+        "options": ["1099", "1147", "1187", "1291"],
+        "answer": "1187"
+      },
+      {
+        "question": "Combien de croisades majeures y a-t-il eu au total ?",
+        "options": ["4", "6", "8", "12"],
+        "answer": "8"
+      },
+      {
+        "question": "Quel a été un effet positif inattendu des croisades ?",
+        "options": ["La paix mondiale", "Le commerce et les échanges culturels avec l'Orient", "La fin de la monarchie", "La découverte de l'Amérique"],
+        "answer": "Le commerce et les échanges culturels avec l'Orient"
+      },
+      {
+        "question": "Comment appelle-t-on les territoires créés par les croisés au Moyen-Orient ?",
+        "options": ["Les colonies chrétiennes", "Les États latins d'Orient", "Les royaumes francs", "Les provinces papales"],
+        "answer": "Les États latins d'Orient"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "La Peste Noire : Le Nerf Le Plus Broken de l'Histoire",
+    "brief": "1347-1353. Imagine un virus avec un taux de létalité de 60%, aucun vaccin, aucun traitement, et zéro compréhension de comment ça se propage. Bienvenue en 1347. La Peste Noire débarque en Europe via des bateaux marchands à Messine (Sicile), transportée par des puces sur des rats — le combo le plus relou de l'histoire. En 5 ans, elle extermine entre 25 et 50 millions d'Européens, soit un tiers de la population du continent. Les gens pensent que c'est une punition divine, du coup certains se flagellent en public (les flagellants, ambiance zéro). D'autres accusent les Juifs et lancent des pogroms — le flop moral absolu. Mais le plot twist économique est dingue : avec moins de monde, les survivants ont plus de pouvoir de négociation. Les salaires montent, le servage recule, et la société féodale commence à craquer. La Peste a involontairement posé les bases de la fin du Moyen-Âge. Le nerf le plus broken qui a reset la meta sociale de l'Europe.",
+    "visualDescription": "Une rue médiévale sombre en dark mode total, brouillard vert toxique néon au sol. Un médecin de peste avec son masque à bec porte un long manteau noir streetwear avec des coutures LED vertes. Des rats mécaniques cyberpunk courent sur les pavés. Ciel rouge sang avec particules flottantes.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144",
+    "quiz": [
+      {
+        "question": "Quel pourcentage de la population européenne la Peste Noire a-t-elle tué environ ?",
+        "options": ["10%", "33%", "50%", "75%"],
+        "answer": "33%"
+      },
+      {
+        "question": "Par quel moyen la peste est-elle arrivée en Europe ?",
+        "options": ["Par des soldats revenant de croisade", "Par des bateaux marchands via la Sicile", "Par des voyageurs venant de Chine à pied", "Par des oiseaux migrateurs"],
+        "answer": "Par des bateaux marchands via la Sicile"
+      },
+      {
+        "question": "Quel animal transportait les puces porteuses de la peste ?",
+        "options": ["Les chiens", "Les chevaux", "Les rats", "Les chats"],
+        "answer": "Les rats"
+      },
+      {
+        "question": "Quelle conséquence économique positive inattendue la peste a-t-elle eue ?",
+        "options": ["Baisse des impôts", "Hausse des salaires des survivants", "Découverte de l'or", "Invention de la banque"],
+        "answer": "Hausse des salaires des survivants"
+      },
+      {
+        "question": "Pendant combien d'années la grande vague de Peste Noire a-t-elle sévi ?",
+        "options": ["2 ans", "5 ans", "10 ans", "20 ans"],
+        "answer": "5 ans"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Jeanne d'Arc : La Meuf de 17 Ans Qui A Carry la France",
+    "brief": "1412-1431. On est en pleine Guerre de Cent Ans, la France est en train de se faire ratio par l'Angleterre. Le roi Charles VII est même pas couronné, la moitié du pays est occupé, c'est le flop total. Et là, une meuf de 17 ans, fille de paysans à Domrémy, débarque et dit : 'J'ai entendu des voix divines, elles m'ont dit de sauver la France.' Tout le monde la prend pour une folle, mais elle insiste tellement qu'on lui file une armée. Et là, le banger : elle libère Orléans en 9 jours en 1429, un siège que personne arrivait à briser. Elle fait couronner Charles VII à Reims, le flex ultime. Mais le revers est brutal : capturée par les Bourguignons, vendue aux Anglais, jugée pour hérésie et sorcellerie par un tribunal truqué, et brûlée vive à Rouen à 19 ans. Le procès le plus injuste de l'histoire. 25 ans plus tard, un nouveau procès l'innocente. En 1920, elle est canonisée sainte. De paysanne à martyre à sainte patronne de la France : le character arc le plus insane du Moyen-Âge.",
+    "visualDescription": "Jeanne d'Arc en armure futuriste argentée avec des reflets néon bleu, brandissant un étendard holographique blanc et or. Derrière elle, Orléans en flammes avec des tours médiévales en mode cyberpunk, néons bleus et oranges. Cheveux courts sous un casque translucide LED. Ciel d'orage violet avec éclairs cyan.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1565711561500-49678a10a63f",
+    "quiz": [
+      {
+        "question": "Quel âge avait Jeanne d'Arc quand elle a libéré Orléans ?",
+        "options": ["15 ans", "17 ans", "19 ans", "21 ans"],
+        "answer": "17 ans"
+      },
+      {
+        "question": "Quelle ville Jeanne d'Arc a-t-elle libérée en 1429 ?",
+        "options": ["Paris", "Reims", "Orléans", "Rouen"],
+        "answer": "Orléans"
+      },
+      {
+        "question": "Où Charles VII a-t-il été couronné grâce à Jeanne ?",
+        "options": ["Paris", "Orléans", "Reims", "Rouen"],
+        "answer": "Reims"
+      },
+      {
+        "question": "Comment Jeanne d'Arc est-elle morte ?",
+        "options": ["En bataille", "De maladie", "Brûlée vive à Rouen", "Empoisonnée"],
+        "answer": "Brûlée vive à Rouen"
+      },
+      {
+        "question": "En quelle année Jeanne d'Arc a-t-elle été canonisée sainte ?",
+        "options": ["1456", "1789", "1920", "1950"],
+        "answer": "1920"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "L'Imprimerie : Le Cheat Code Qui A Changé le Game",
+    "brief": "1440. Johannes Gutenberg, un orfèvre allemand de Mayence, invente l'imprimerie à caractères mobiles et change le monde pour toujours. Avant lui, un livre c'était un objet de luxe : des moines passaient des mois à recopier un seul exemplaire à la main (les scribes, les devs front-end du Moyen-Âge). Résultat : 99% de la population ne lisait jamais rien. Gutenberg arrive avec sa presse et son alliage de plomb, et c'est le speedrun. Son premier banger : la Bible à 42 lignes, imprimée vers 1455, environ 180 exemplaires. Ça a l'air ridicule aujourd'hui mais c'était le premier mass-produced content de l'histoire. En 50 ans, 20 millions de livres sont imprimés en Europe. Le savoir n'est plus verrouillé derrière les murs des monastères. Les idées circulent, les gens commencent à penser par eux-mêmes. Sans Gutenberg, pas de Renaissance, pas de Réforme protestante, pas de révolution scientifique. C'est littéralement le print('Hello World') de la civilisation. Le mec a inventé la viralité avant Internet. Et le plot twist relou ? Il est mort ruiné, ses associés lui ont pris son business. Le ratio financier ultime pour le mec qui a démocratisé le savoir.",
+    "visualDescription": "Gutenberg devant sa presse massive en mode steampunk-cyberpunk, engrenages en néon doré et cuivre. Des pages imprimées s'envolent autour de lui comme des écrans holographiques avec du texte en LED blanc. Il porte un tablier en cuir noir streetwear, lunettes rondes néon. Atelier sombre, éclairage dramatique cyan et ambre.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d",
+    "quiz": [
+      {
+        "question": "En quelle année Gutenberg a-t-il inventé l'imprimerie à caractères mobiles ?",
+        "options": ["1350", "1440", "1492", "1517"],
+        "answer": "1440"
+      },
+      {
+        "question": "Quel a été le premier grand livre imprimé par Gutenberg ?",
+        "options": ["Un dictionnaire", "La Bible à 42 lignes", "Un traité scientifique", "Les œuvres d'Aristote"],
+        "answer": "La Bible à 42 lignes"
+      },
+      {
+        "question": "Combien de livres ont été imprimés en Europe dans les 50 ans suivant l'invention ?",
+        "options": ["500 000", "5 millions", "20 millions", "100 millions"],
+        "answer": "20 millions"
+      },
+      {
+        "question": "Dans quelle ville allemande Gutenberg a-t-il développé son invention ?",
+        "options": ["Berlin", "Munich", "Mayence", "Cologne"],
+        "answer": "Mayence"
+      },
+      {
+        "question": "Quel a été le destin financier de Gutenberg ?",
+        "options": ["Il est devenu le plus riche d'Europe", "Il est mort ruiné", "Il a vendu son invention au Pape", "Il a ouvert une chaîne d'imprimeries"],
+        "answer": "Il est mort ruiné"
+      }
+    ]
   }
 ]
