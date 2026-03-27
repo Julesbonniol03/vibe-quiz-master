@@ -5,6 +5,7 @@ const nextConfig = {
       "/api/questions/random": ["./data/questions/**"],
       "/api/categories": ["./data/questions/**"],
       "/dashboard": ["./data/questions/**"],
+      "/story-mode": ["./data/story-mode.json"],
     },
   },
 };

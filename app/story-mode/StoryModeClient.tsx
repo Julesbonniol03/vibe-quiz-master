@@ -1,0 +1,448 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
+
+interface QuizQuestion {
+  question: string;
+  options: string[];
+  answer: string;
+}
+
+interface StoryLevel {
+  id: number;
+  title: string;
+  brief: string;
+  visualDescription: string;
+  imagePlaceholder: string;
+  quiz: QuizQuestion[];
+}
+
+const STORAGE_KEY = "vqm_story_progress";
+
+function getProgress(): Record<number, { completed: boolean; score: number }> {
+  if (typeof window === "undefined") return {};
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function saveProgress(levelId: number, score: number) {
+  const progress = getProgress();
+  progress[levelId] = { completed: true, score };
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+}
+
+export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
+  const [selectedLevel, setSelectedLevel] = useState<StoryLevel | null>(null);
+  const [phase, setPhase] = useState<"map" | "brief" | "quiz" | "results">("map");
+  const [currentQ, setCurrentQ] = useState(0);
+  const [score, setScore] = useState(0);
+  const [selected, setSelected] = useState<number | null>(null);
+  const [answered, setAnswered] = useState(false);
+  const [progress, setProgress] = useState<Record<number, { completed: boolean; score: number }>>({});
+
+  useEffect(() => {
+    setProgress(getProgress());
+  }, []);
+
+  const handleSelectLevel = (level: StoryLevel) => {
+    setSelectedLevel(level);
+    setPhase("brief");
+    setCurrentQ(0);
+    setScore(0);
+    setSelected(null);
+    setAnswered(false);
+  };
+
+  const handleStartQuiz = () => {
+    setPhase("quiz");
+  };
+
+  const handleAnswer = (idx: number) => {
+    if (answered || !selectedLevel) return;
+    setSelected(idx);
+    setAnswered(true);
+    const correct = selectedLevel.quiz[currentQ].options[idx] === selectedLevel.quiz[currentQ].answer;
+    if (correct) setScore((s: number) => s + 1);
+  };
+
+  const handleNext = () => {
+    if (!selectedLevel) return;
+    if (currentQ + 1 < selectedLevel.quiz.length) {
+      setCurrentQ((q: number) => q + 1);
+      setSelected(null);
+      setAnswered(false);
+    } else {
+      const finalScore = score;
+      saveProgress(selectedLevel.id, finalScore);
+      setProgress(getProgress());
+      setPhase("results");
+    }
+  };
+
+  const handleBackToMap = () => {
+    setPhase("map");
+    setSelectedLevel(null);
+  };
+
+  // ─── MAP VIEW ───
+  if (phase === "map") {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-8 mb-8">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-32 -right-32 w-80 h-80 bg-purple-500/[0.04] rounded-full blur-[100px]" />
+            <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
+          </div>
+          <div className="relative z-10">
+            <div className="flex items-center gap-3 mb-3">
+              <span className="text-3xl">📖</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded-full">
+                Story Mode
+              </span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              L&apos;Odyssée de la{" "}
+              <span className="gradient-text">Culture G</span>
+            </h1>
+            <p className="text-slate-500 max-w-lg">
+              De l&apos;Empire Romain au Moyen-Age. Chaque jour, une pépite d&apos;histoire racontée comme un débrief en terrasse.
+            </p>
+          </div>
+        </div>
+
+        {/* Level Cards */}
+        <div className="space-y-4">
+          {levels.map((level, i) => {
+            const done = progress[level.id]?.completed;
+            const levelScore = progress[level.id]?.score ?? 0;
+            const isLocked = i > 0 && !progress[levels[i - 1].id]?.completed;
+
+            return (
+              <motion.button
+                key={level.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.1 }}
+                onClick={() => !isLocked && handleSelectLevel(level)}
+                disabled={isLocked}
+                className={`w-full text-left group relative overflow-hidden rounded-2xl border transition-all duration-300
+                  ${isLocked
+                    ? "opacity-40 cursor-not-allowed border-white/[0.04] bg-white/[0.01]"
+                    : done
+                      ? "border-green-500/20 bg-green-500/[0.03] hover:bg-green-500/[0.06] hover:scale-[1.01] active:scale-[0.99]"
+                      : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-neon-cyan/30 hover:scale-[1.01] active:scale-[0.99]"
+                  }`}
+              >
+                {!isLocked && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/[0.02] to-purple-500/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
+                )}
+                <div className="relative p-5 flex items-center gap-5">
+                  {/* Day Number */}
+                  <div className={`flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center text-lg font-bold border
+                    ${isLocked
+                      ? "bg-white/[0.03] border-white/[0.06] text-slate-700"
+                      : done
+                        ? "bg-green-500/10 border-green-500/20 text-green-400"
+                        : "bg-gradient-to-br from-neon-cyan/10 to-purple-500/10 border-neon-cyan/20 text-neon-cyan"
+                    }`}>
+                    {isLocked ? "🔒" : done ? "✅" : `J${level.id}`}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className={`font-bold truncate ${done ? "text-green-400" : "text-white"}`}>
+                        Jour {level.id} — {level.title}
+                      </h3>
+                    </div>
+                    <p className="text-slate-500 text-sm line-clamp-2">
+                      {level.brief.slice(0, 120)}...
+                    </p>
+                    {done && (
+                      <div className="flex items-center gap-2 mt-2">
+                        <div className="flex gap-1">
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <div
+                              key={j}
+                              className={`w-2 h-2 rounded-full ${j < levelScore ? "bg-green-400" : "bg-white/10"}`}
+                            />
+                          ))}
+                        </div>
+                        <span className="text-green-400/70 text-xs font-medium">{levelScore}/5</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Arrow */}
+                  {!isLocked && (
+                    <span className="text-slate-700 group-hover:text-neon-cyan group-hover:translate-x-1 transition-all text-xl flex-shrink-0">
+                      &rarr;
+                    </span>
+                  )}
+                </div>
+              </motion.button>
+            );
+          })}
+        </div>
+
+        {/* Coming soon placeholder */}
+        <div className="mt-6 p-5 rounded-2xl border border-dashed border-white/[0.08] text-center">
+          <p className="text-slate-600 text-sm">
+            Jours 7-10 bientôt disponibles...
+          </p>
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/dashboard"
+            className="text-slate-600 hover:text-slate-400 transition-colors text-sm"
+          >
+            &larr; Retour au dashboard
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  // ─── BRIEF VIEW ───
+  if (phase === "brief" && selectedLevel) {
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="space-y-6"
+        >
+          {/* Back button */}
+          <button
+            onClick={handleBackToMap}
+            className="text-slate-600 hover:text-slate-400 transition-colors text-sm flex items-center gap-1"
+          >
+            &larr; Retour à la carte
+          </button>
+
+          {/* Header */}
+          <div className="rounded-3xl overflow-hidden border border-white/[0.08]">
+            {/* Image */}
+            <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 to-transparent" />
+              <span className="relative text-6xl">
+                {selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : "👑"}
+              </span>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 bg-white/[0.02]">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xs font-bold uppercase tracking-wider text-neon-cyan bg-neon-cyan/10 border border-neon-cyan/20 px-2 py-1 rounded-full">
+                  Jour {selectedLevel.id}
+                </span>
+                <span className="text-xs text-slate-600">5 questions</span>
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-4">{selectedLevel.title}</h2>
+              <p className="text-slate-400 text-sm leading-relaxed whitespace-pre-line">
+                {selectedLevel.brief}
+              </p>
+
+              {/* Visual description */}
+              <div className="mt-5 p-4 rounded-xl bg-purple-500/[0.05] border border-purple-500/10">
+                <p className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2">Visualise le truc</p>
+                <p className="text-slate-500 text-sm italic">{selectedLevel.visualDescription}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Start Quiz Button */}
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleStartQuiz}
+            className="w-full py-4 bg-gradient-to-r from-neon-cyan to-purple-500 text-white font-bold rounded-2xl text-lg shadow-lg shadow-neon-cyan/20 hover:shadow-neon-cyan/30 transition-shadow"
+          >
+            Lancer le Quiz &rarr;
+          </motion.button>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // ─── QUIZ VIEW ───
+  if (phase === "quiz" && selectedLevel) {
+    const q = selectedLevel.quiz[currentQ];
+    const correctIdx = q.options.indexOf(q.answer);
+    const isCorrect = selected !== null && q.options[selected] === q.answer;
+
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-8">
+        <motion.div
+          key={currentQ}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="space-y-6"
+        >
+          {/* Progress bar */}
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-slate-600 font-medium">
+              {currentQ + 1}/{selectedLevel.quiz.length}
+            </span>
+            <div className="flex-1 bg-white/[0.06] rounded-full h-2">
+              <motion.div
+                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-purple-500"
+                initial={{ width: `${(currentQ / selectedLevel.quiz.length) * 100}%` }}
+                animate={{ width: `${((currentQ + 1) / selectedLevel.quiz.length) * 100}%` }}
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+            <span className="text-xs font-bold text-neon-cyan">{score} pts</span>
+          </div>
+
+          {/* Question */}
+          <div className="glass-card !rounded-2xl p-6">
+            <h3 className="text-lg font-bold text-white leading-relaxed">{q.question}</h3>
+          </div>
+
+          {/* Options */}
+          <div className="space-y-3">
+            {q.options.map((opt, idx) => {
+              let style = "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.15]";
+              if (answered) {
+                if (idx === correctIdx) {
+                  style = "border-green-500/40 bg-green-500/[0.08] ring-1 ring-green-500/20";
+                } else if (idx === selected && !isCorrect) {
+                  style = "border-red-500/40 bg-red-500/[0.08] ring-1 ring-red-500/20 animate-shake";
+                } else {
+                  style = "border-white/[0.04] bg-white/[0.01] opacity-50";
+                }
+              } else if (idx === selected) {
+                style = "border-neon-cyan/40 bg-neon-cyan/[0.05]";
+              }
+
+              return (
+                <motion.button
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.08 }}
+                  onClick={() => handleAnswer(idx)}
+                  disabled={answered}
+                  className={`w-full text-left p-4 rounded-xl border transition-all duration-200 ${style}`}
+                >
+                  <div className="flex items-center gap-3">
+                    <span className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold
+                      ${answered && idx === correctIdx
+                        ? "bg-green-500/20 text-green-400"
+                        : answered && idx === selected && !isCorrect
+                          ? "bg-red-500/20 text-red-400"
+                          : "bg-white/[0.06] text-slate-500"
+                      }`}>
+                      {answered && idx === correctIdx ? "✓" : answered && idx === selected && !isCorrect ? "✗" : String.fromCharCode(65 + idx)}
+                    </span>
+                    <span className={`font-medium text-sm ${answered && idx === correctIdx ? "text-green-400" : answered && idx === selected && !isCorrect ? "text-red-400" : "text-slate-300"}`}>
+                      {opt}
+                    </span>
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+
+          {/* Feedback + Next */}
+          <AnimatePresence>
+            {answered && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0 }}
+                className="space-y-4"
+              >
+                <div className={`p-4 rounded-xl border ${isCorrect ? "bg-green-500/[0.05] border-green-500/20" : "bg-red-500/[0.05] border-red-500/20"}`}>
+                  <p className={`font-bold text-sm ${isCorrect ? "text-green-400" : "text-red-400"}`}>
+                    {isCorrect ? "Bien joué ! 🔥" : `Raté ! La bonne réponse : ${q.answer}`}
+                  </p>
+                </div>
+                <button
+                  onClick={handleNext}
+                  className="w-full py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-all"
+                >
+                  {currentQ + 1 < selectedLevel.quiz.length ? "Question suivante &rarr;" : "Voir les résultats"}
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // ─── RESULTS VIEW ───
+  if (phase === "results" && selectedLevel) {
+    const perfect = score === selectedLevel.quiz.length;
+    return (
+      <div className="max-w-2xl mx-auto px-4 py-8">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center space-y-6"
+        >
+          <div className="glass-card !rounded-3xl p-8">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ type: "spring", bounce: 0.5, delay: 0.2 }}
+              className="text-6xl mb-4"
+            >
+              {perfect ? "🏆" : score >= 3 ? "🔥" : "💪"}
+            </motion.div>
+            <h2 className="text-2xl font-bold text-white mb-2">
+              {perfect ? "Sans faute !" : score >= 3 ? "Bien joué !" : "Continue comme ça !"}
+            </h2>
+            <p className="text-slate-500 mb-4">Jour {selectedLevel.id} — {selectedLevel.title}</p>
+
+            {/* Score circles */}
+            <div className="flex items-center justify-center gap-2 mb-6">
+              {Array.from({ length: selectedLevel.quiz.length }).map((_, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: 0.4 + i * 0.1 }}
+                  className={`w-4 h-4 rounded-full ${i < score ? "bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.5)]" : "bg-white/10"}`}
+                />
+              ))}
+            </div>
+
+            <div className={`text-4xl font-bold mb-1 ${perfect ? "text-yellow-400" : score >= 3 ? "text-green-400" : "text-neon-cyan"}`}>
+              {score}/{selectedLevel.quiz.length}
+            </div>
+            <p className="text-slate-600 text-sm">
+              {perfect ? "T'es un vrai OG de l'histoire" : score >= 3 ? "Pas mal du tout, t'as capté l'essentiel" : "Relis le brief et retente ta chance"}
+            </p>
+          </div>
+
+          <div className="flex gap-3">
+            <button
+              onClick={() => handleSelectLevel(selectedLevel)}
+              className="flex-1 py-3 bg-white/[0.04] border border-white/[0.08] text-white font-semibold rounded-xl hover:bg-white/[0.07] transition-all"
+            >
+              Rejouer
+            </button>
+            <button
+              onClick={handleBackToMap}
+              className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-all"
+            >
+              Continuer &rarr;
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
+
+  return null;
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "id": 3,
+    "title": "Rome : L'Empire du Flex Absolu",
+    "brief": "Masterclass de domination mondiale. Rome, c'est le mec qui arrive en soirée, rachète le bar, et impose ses règles à tout le monde. Ils ont construit des routes partout (les autoroutes avant les autoroutes), des aqueducs (l'eau courante avant que ce soit cool), et des arènes où des mecs se tapaient dessus pour le divertissement — le premier stream Twitch en gros. Le Sénat, c'était leur groupe WhatsApp de décision, sauf que ça partait en embrouille H24. Jules César a flex tellement fort qu'il s'est fait poignarder par ses propres potes (le ratio ultime). Puis Auguste a pris le relais et a lancé la Pax Romana : 200 ans de paix relative. Le flex ? Un empire de 60 millions de personnes, du Maroc à l'Irak. Banger civilisationnel, personne a fait mieux pendant 1000 ans.",
+    "visualDescription": "Le Colisée en mode néon violet et or, avec des gladiateurs en armure streetwear Nike Tech Fleece. Des hologrammes de légionnaires romains marchent sur une route pavée qui brille en LED cyan. Ambiance dark mode avec fumée violette.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "quiz": [
+      {
+        "question": "Combien de temps a duré la Pax Romana environ ?",
+        "options": ["50 ans", "200 ans", "500 ans", "1000 ans"],
+        "answer": "200 ans"
+      },
+      {
+        "question": "Comment est mort Jules César ?",
+        "options": ["Empoisonné", "En bataille", "Poignardé par des sénateurs", "De vieillesse"],
+        "answer": "Poignardé par des sénateurs"
+      },
+      {
+        "question": "Qui a lancé la Pax Romana ?",
+        "options": ["Jules César", "Néron", "Auguste", "Caligula"],
+        "answer": "Auguste"
+      },
+      {
+        "question": "À quoi servaient les aqueducs romains ?",
+        "options": ["Transporter des soldats", "Acheminer l'eau", "Faire du commerce", "Stocker du grain"],
+        "answer": "Acheminer l'eau"
+      },
+      {
+        "question": "Quelle était la taille approximative de l'Empire romain à son apogée ?",
+        "options": ["10 millions d'habitants", "30 millions", "60 millions", "100 millions"],
+        "answer": "60 millions"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "La Chute de Rome : Le Gros Rage Quit de l'Histoire",
+    "brief": "476 après J.-C. : Game Over pour l'Empire romain d'Occident. Le plus gros flop de l'Antiquité. Comment t'en arrives là ? Facile : corruption dans tous les sens, des empereurs plus nuls les uns que les autres (Néron qui crame sa propre ville, Caligula qui nomme son cheval sénateur — le troll ultime), et surtout des barbares (Goths, Vandales, Huns) qui spawn de partout aux frontières. L'Empire était devenu trop gros pour être géré, comme un groupe Discord avec 60 millions de membres et zéro modérateur. Ils l'ont splitté en deux (Est et Ouest) pour essayer de sauver les meubles. L'Est (Byzance) a tenu 1000 ans de plus, le flex. L'Ouest s'est fait ratio par Odoacre, un chef barbare qui a viré le dernier empereur comme un stagiaire un vendredi soir. Résultat : l'Europe plonge dans le Moyen-Âge. Ambiance reset total.",
+    "visualDescription": "Le Colisée en ruines, fissuré, avec des néons rouges qui clignotent et s'éteignent un par un. Des guerriers barbares en bomber jackets cuir noir avec des haches lumineuses cyan défoncent les murs. Ciel orageux en dark mode, éclairs violets.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8",
+    "quiz": [
+      {
+        "question": "En quelle année l'Empire romain d'Occident est-il tombé ?",
+        "options": ["332 ap. J.-C.", "476 ap. J.-C.", "510 ap. J.-C.", "612 ap. J.-C."],
+        "answer": "476 ap. J.-C."
+      },
+      {
+        "question": "Quel empereur aurait nommé son cheval sénateur ?",
+        "options": ["Néron", "Auguste", "Caligula", "Commode"],
+        "answer": "Caligula"
+      },
+      {
+        "question": "Qui a déposé le dernier empereur romain d'Occident ?",
+        "options": ["Attila", "Alaric", "Odoacre", "Genséric"],
+        "answer": "Odoacre"
+      },
+      {
+        "question": "Comment ont-ils tenté de sauver l'Empire ?",
+        "options": ["Construire plus de murs", "Le diviser en deux", "Payer les barbares", "Déménager la capitale en Afrique"],
+        "answer": "Le diviser en deux"
+      },
+      {
+        "question": "Combien de temps l'Empire romain d'Orient (Byzance) a-t-il survécu après la chute de l'Ouest ?",
+        "options": ["100 ans", "500 ans", "1000 ans", "1500 ans"],
+        "answer": "1000 ans"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Les Vikings : Les Mecs Qui Ont Spawn Partout",
+    "brief": "VIIIe-XIe siècle. Les Vikings, c'est le clan qui a activé le mode exploration hardcore. Ces Scandinaves (Norvège, Suède, Danemark) avaient des bateaux (les drakkars) tellement broken qu'ils pouvaient naviguer en mer ET remonter les fleuves. Résultat : ils ont spawn en Angleterre, en France, en Russie, en Islande, et même en Amérique du Nord 500 ans avant Christophe Colomb — le flex que personne connaît. Leif Erikson, le vrai OG de la découverte. En France, ils ont tellement terrorisé tout le monde que le roi leur a filé la Normandie pour qu'ils arrêtent (le deal le plus random de l'histoire). Leur société était plus avancée qu'on croit : des femmes pouvaient divorcer et posséder des terres (masterclass féministe pour l'époque). Leur religion avec Odin, Thor et le Valhalla, c'est littéralement le lore de la moitié des films Marvel. Banger culturel sous-estimé.",
+    "visualDescription": "Un drakkar viking en néon bleu glacial naviguant sur une mer sombre et agitée. Le capitaine viking porte un hoodie oversized noir avec des runes LED vertes, casque à cornes holographique (même si c'est un mythe). Aurores boréales cyberpunk en fond, reflets roses et cyan.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc",
+    "quiz": [
+      {
+        "question": "Quel Viking a découvert l'Amérique du Nord avant Colomb ?",
+        "options": ["Ragnar Lothbrok", "Erik le Rouge", "Leif Erikson", "Harald Hardrada"],
+        "answer": "Leif Erikson"
+      },
+      {
+        "question": "Comment s'appellent les célèbres bateaux vikings ?",
+        "options": ["Galères", "Caravelles", "Drakkars", "Jonques"],
+        "answer": "Drakkars"
+      },
+      {
+        "question": "Quelle région de France a été donnée aux Vikings ?",
+        "options": ["La Bretagne", "La Normandie", "L'Aquitaine", "La Provence"],
+        "answer": "La Normandie"
+      },
+      {
+        "question": "Quel dieu viking est aussi un personnage Marvel ?",
+        "options": ["Odin", "Freya", "Loki", "Thor"],
+        "answer": "Thor"
+      },
+      {
+        "question": "De quels pays venaient principalement les Vikings ?",
+        "options": ["Allemagne, Pologne, Russie", "Norvège, Suède, Danemark", "Islande, Irlande, Écosse", "Finlande, Estonie, Lettonie"],
+        "answer": "Norvège, Suède, Danemark"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Charlemagne : Le Mec Qui A Forcé Sur l'École",
+    "brief": "742-814. Charles Le Grand, alias Charlemagne, c'est le CEO de l'Europe médiévale. Ce Franc a unifié une bonne partie de l'Europe occidentale à coups de conquêtes (il a mené plus de 50 campagnes militaires — le grind ultime). En 800, le Pape lui met la couronne d'Empereur sur la tête à Rome le jour de Noël, le plot twist que personne avait vu venir. Mais son vrai banger, c'est la Renaissance carolingienne : il a forcé sur l'éducation comme jamais. Il a ouvert des écoles dans les monastères, standardisé l'écriture (la minuscule caroline, l'ancêtre de notre alphabet), et fait copier des manuscrits antiques (sans lui, on aurait perdu 90% de la littérature latine — le save ultime). Le flop ? Il savait à peine écrire lui-même. Le mec qui impose l'école à tout le monde mais qui galère à signer son nom, c'est le ratio le plus ironique de l'Histoire. Après sa mort, ses petits-fils se sont partagé l'Empire en 3 (Traité de Verdun, 843) et ont posé les bases de la France et de l'Allemagne.",
+    "visualDescription": "Charlemagne en long manteau streetwear noir à bordures dorées LED, une couronne impériale en néon doré, tenant une épée laser et un livre holographique. Derrière lui, une cathédrale d'Aix-la-Chapelle en mode cyberpunk avec vitraux en écrans LED multicolores. Sol en damier noir et or.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1461360370896-922624d12571",
+    "quiz": [
+      {
+        "question": "En quelle année Charlemagne a-t-il été couronné Empereur ?",
+        "options": ["700", "768", "800", "843"],
+        "answer": "800"
+      },
+      {
+        "question": "Quel est le paradoxe ironique de Charlemagne et l'éducation ?",
+        "options": ["Il détestait les livres", "Il savait à peine écrire lui-même", "Il n'est jamais allé à l'école", "Il parlait une seule langue"],
+        "answer": "Il savait à peine écrire lui-même"
+      },
+      {
+        "question": "Comment s'appelle le traité qui a divisé l'Empire en 3 ?",
+        "options": ["Traité de Westphalie", "Traité de Verdun", "Traité de Paris", "Traité de Rome"],
+        "answer": "Traité de Verdun"
+      },
+      {
+        "question": "Qu'est-ce que la minuscule caroline ?",
+        "options": ["Une monnaie", "Un type d'écriture standardisée", "Une loi sur l'éducation", "Un style architectural"],
+        "answer": "Un type d'écriture standardisée"
+      },
+      {
+        "question": "Où Charlemagne a-t-il été couronné Empereur ?",
+        "options": ["Paris", "Aix-la-Chapelle", "Rome", "Constantinople"],
+        "answer": "Rome"
+      }
+    ]
+  }
+]
