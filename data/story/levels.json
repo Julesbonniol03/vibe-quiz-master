@@ -8,18 +8,36 @@
     "lienModerne": "Zeus = Thanos avec un ego surdimensionne.",
     "category": "Mythologie & Religions",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "brief": {
+      "contextCheck": "Ok frerot, on est en -1200 avant J.-C. Bienvenue sur le Mont Olympe. C'est le QG des dieux grecs : un penthouse au-dessus des nuages ou tout le monde se trompe, se trahit et fait des gosses avec n'importe qui. C'est la tele-realite la plus goatesque de l'Histoire et personne a encore invente la tele.",
+      "topoNoCap": "Zeus, c'est le patron. Le mec lance des eclairs quand il est en PLS et trompe sa meuf Hera tous les quatre matins. Athena, sa fille, elle est sortie directement de son crane - oui, LITERALEMENT de sa tete, un banger. Poseidon gere les oceans comme un videur de boite, et Hades en bas c'est le manager du monde des morts, le bail le plus relou de la famille. Chaque dieu a son domaine, ses beefs et ses mythos. Hermes c'est le livreur Uber Eats de l'Olympe, Aphrodite c'est la go qui met le seum a tout le monde, et Ares c'est le mec qui cherche la bagarre h24. La mythologie c'est pas juste des vieux textes : c'est la Masterclass originale du drama humain.",
+      "cheatCodes": [
+        "Zeus = roi des dieux + eclairs. Poseidon = mer + trident. Hades = monde des morts. Retiens le trio de freres qui se sont partage le monde.",
+        "Athena est sortie de la TETE de Zeus. C'est la deesse de la sagesse ET de la guerre strategique. Pas le muscle, le cerveau.",
+        "Les 12 Olympiens c'est le roster principal. Comme les Avengers : y'a les titulaires (Zeus, Hera, Athena, Apollon...) et les remplacants."
+      ]
+    }
   },
   {
     "id": 2,
     "day": 2,
-    "title": "Pharaons & Pyramides : Le Premier Flex",
-    "description": "L'Egypte ancienne a invente le flex architectural 3000 ans avant Dubai.",
-    "screenshot": "Une pyramide = un CV en pierre de 146 metres pour dire 'je suis eternel'.",
-    "lienModerne": "Les Pharaons = les premiers influenceurs lifestyle.",
-    "category": "Histoire",
+    "title": "Socrate & Platon : Les OG de la Reflexion",
+    "description": "Socrate c'etait le relou du quartier qui te posait des questions jusqu'a ce que tu begayes.",
+    "screenshot": "Un vieux bonhomme en toge qui pointe du doigt un mec gene devant tout le monde.",
+    "lienModerne": "Socrate = le prof qui te dit 'mais POURQUOI tu penses ca ?' jusqu'a ce que tu ragequit.",
+    "category": "Philosophie",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "brief": {
+      "contextCheck": "Ok on est en -400 a Athenes. Bienvenue dans la ville ou les mecs passent leur temps a debattre en toge alors qu'ils ont meme pas invente le deo. Ici, c'est pas les muscles qui font la loi, c'est celui qui parle le mieux. Et le king du game, c'est un vieux chauve qui pue et qui pose des questions relou a tout le monde : SOCRATE.",
+      "topoNoCap": "Socrate, c'etait le mec qui t'approchait dans la rue et te disait 'hep, tu penses quoi de la justice ?' et il te retournait le cerveau en 3 questions. Son cheat code : la maeutique. Ca veut dire qu'il accouchait les idees des gens en les faisant reflechir. Le probleme c'est que le gouvernement a pas kiffe le bail. Resultat : ils l'ont condamne a boire de la cigue (un poison) en -399. Le mec a refuse de s'evader et il a bu son verre comme un goat. Platon, c'est son eleve numero 1. Lui il a cree l'Academie, la premiere ecole de philo du monde. Son plus gros banger c'est l'Allegorie de la Caverne : imagine des mecs enchaines dans une grotte qui croient que les ombres sur le mur c'est la realite. S'enballec pas, c'est exactement toi sur ton tel a 3h du mat. Et apres Platon y'a Aristote, l'eleve de l'eleve, qui lui va devenir le prof d'Alexandre le Grand. La chaine de ouf.",
+      "cheatCodes": [
+        "Socrate n'a RIEN ecrit. C'est Platon qui a tout note. Le maitre parle, l'eleve prend des notes - comme en cours sauf que la c'est goatesque.",
+        "L'Allegorie de la Caverne = des prisonniers qui voient des ombres et croient que c'est le reel. Message : faut sortir de ta zone de confort pour voir la verite.",
+        "La triade : Socrate forme Platon, Platon forme Aristote, Aristote forme Alexandre le Grand. C'est le plus gros arbre de skill de l'histoire."
+      ]
+    }
   },
   {
     "id": 3,

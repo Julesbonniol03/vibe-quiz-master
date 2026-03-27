@@ -8,6 +8,12 @@ import { useFeedback } from "@/hooks/useFeedback";
 import LessonNarrative from "@/components/LessonNarrative";
 import Link from "next/link";
 
+interface StoryBrief {
+  contextCheck: string;
+  topoNoCap: string;
+  cheatCodes: string[];
+}
+
 interface StoryLevelData {
   id: number;
   day: number;
@@ -18,6 +24,7 @@ interface StoryLevelData {
   category: string;
   difficulty: string;
   questionsCount: number;
+  brief?: StoryBrief;
 }
 
 interface Question {
@@ -161,6 +168,7 @@ export default function StoryLevelClient({ level }: { level: StoryLevelData }) {
           screenshot={level.screenshot}
           lienModerne={level.lienModerne}
           day={level.day}
+          brief={level.brief}
           onStart={startQuiz}
         />
       </div>
