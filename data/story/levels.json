@@ -57,90 +57,260 @@
   {
     "id": 3,
     "day": 3,
-    "title": "Sparte vs Athenes : Le Beef Originel",
-    "description": "Deux villes, deux vibes : les muscles contre les cerveaux.",
-    "screenshot": "A gauche un mec a la salle, a droite un mec qui lit Platon au cafe.",
-    "lienModerne": "C'est le match Real Madrid vs FC Barcelone version antique.",
+    "title": "Rome : L'Empire du Flex",
+    "description": "Le plus gros serveur de l'Antiquite, gere par un PDG qu'on appelle Empereur.",
+    "screenshot": "Jules Cesar en ensemble de survetement en soie rouge avec des broderies de lauriers en or, des lunettes de soleil futuristes, pose sur un char romain customise avec des jantes en chrome.",
+    "lienModerne": "Rome = Amazon des empires : ils ont tout absorbe.",
     "category": "Histoire",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Jules Cesar en costume Gucci holographique rouge sang, assis sur un trone de serveurs informatiques empiles, couronne de lauriers en neon rouge pulsant. Fond de datacenter antique avec des colonnes romaines en marbre noir et des cables fiber optique dores.",
+    "brief": {
+      "contextCheck": "Ok frerot, on est en -27 avant J.-C. Oublie les petites cites de paysans, la on parle du plus gros serveur de l'Antiquite : L'Empire Romain. Imagine une multinationale qui possede toute la Mediterranee, geree par un PDG qu'on appelle Empereur et qui a le droit de vie ou de mort sur tout le monde.",
+      "topoNoCap": "Jules Cesar a fait tout le sale boulot (la guerre des Gaules, le bendo a Alesia), mais c'est son neveu Auguste qui devient le premier vrai Empereur. C'est la Pax Romana : les mecs construisent des routes partout (l'ancetre de la fibre), des aqueducs pour avoir l'eau courante et des Colisees pour le divertissement. C'est le premier grand flex technologique et militaire de l'histoire.",
+      "cheatCodes": [
+        "Auguste = Le premier vrai Empereur (le GOAT de l'organisation).",
+        "Pax Romana = 200 ans de paix relative ou Rome a domine le game sans trembler.",
+        "Le Droit Romain = La base de nos lois actuelles, les mecs ont tout code."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Jules Cesar",
+          "look": "Jules Cesar en ensemble de survetement en soie rouge avec des broderies de lauriers en or, des lunettes de soleil futuristes, pose sur un char romain customise avec des jantes en chrome.",
+          "color": "#ef4444"
+        },
+        "carteVibe": {
+          "description": "Au centre : carte de la Mediterranee en neon rouge. Fleche partant de Rome (point lumineux) vers la Gaule, l'Egypte, la Grece, l'Espagne. Icone route pour les voies romaines, icone epee pour les legions, icone balance pour le Droit Romain. En haut : timeline -753 (fondation) -> -27 (Auguste) -> 476 (chute).",
+          "color": "#ef4444"
+        },
+        "meme": {
+          "description": "Image : Jules Cesar qui se fait poignarder au Senat. Texte du haut : 'CESAR : C'EST BON LES GARS, ON EST POTES HEIN ?'. Texte du bas : 'BRUTUS : LOL NON'. Sous-titre : Quand ton pote te ratio devant tout le monde.",
+          "color": "#ef4444"
+        }
+      }
+    }
   },
   {
     "id": 4,
     "day": 4,
-    "title": "Rome : La Startup qui a Scale",
-    "description": "D'un village a un empire mondial, Rome a invente le scaling avant la Silicon Valley. [[1](https://fr.wikipedia.org/wiki/Rome)]",
-    "screenshot": "Un petit point sur la carte qui grossit jusqu'a couvrir tout le bassin mediterraneen.",
-    "lienModerne": "Rome = Amazon des empires : ils ont tout absorbe.",
+    "title": "La Chute de Rome : Le Gros Rage Quit",
+    "description": "Le serveur Rome surchauffe. Trop de corruption, trop de frontieres, les Barbares debarquent.",
+    "screenshot": "Le Colisee a moitie en ruine, tague avec des graffitis neon Game Over, avec un barbare en armure de cuir et casque audio qui s'assoit sur le trone de l'Empereur.",
+    "lienModerne": "C'est comme quand un serveur Minecraft trop gros finit par crash.",
     "category": "Histoire",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Le Colisee en ruines sous un ciel violet cyberpunk, couvert de graffitis neon 'GAME OVER' en rose et cyan. Un barbare en armure de cuir streetwear avec un casque Beats Audio assis sur le trone imperial dore, les pieds sur la table. Des hologrammes de l'ancien Empire qui se dissolvent en pixels.",
+    "brief": {
+      "contextCheck": "On avance en 476 apres J.-C. Le serveur Rome est en train de surchauffer. C'est la fin du game. Trop de corruption, trop de frontieres a garder, et surtout des mecs venus du Nord (les Barbares) qui veulent leur part du gateau.",
+      "topoNoCap": "L'Empire s'est coupe en deux (Est et Ouest) parce que c'etait devenu impossible a gerer. A l'Ouest, c'est le Flop total. Les Wisigoths et les Vandales debarquent et font un carnage. Le dernier empereur, Romulus Augustule, se fait ejecter par un chef barbare nomme Odoacre. C'est le plus gros Rage Quit de l'histoire : l'Antiquite s'arrete, on eteint la lumiere et on passe au Moyen-Age.",
+      "cheatCodes": [
+        "476 = L'annee ou Rome s'effondre officiellement (le grand reset).",
+        "Les Barbares = Pas des sauvages, juste des peuples qui voulaient s'installer sur le serveur.",
+        "Empire d'Orient (Byzance) = Eux ils ont survecu encore 1000 ans, ils etaient plus smart."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Odoacre le Barbare",
+          "look": "Un chef barbare en armure de cuir noir customisee avec des rivets neon, une cape en fourrure synthetique violette, des tatouages tribaux luminescents sur les bras, tenant une epee geante avec 'GG' grave dessus.",
+          "color": "#8b5cf6"
+        },
+        "carteVibe": {
+          "description": "Carte de l'Empire Romain coupee en deux avec une ligne de fracture neon : a gauche OUEST en rouge qui s'eteint, a droite EST (Byzance) en bleu qui brille. Fleches de Barbares (icone epee) arrivant du nord. Timeline en bas : 395 (division) -> 410 (sac de Rome) -> 476 (game over).",
+          "color": "#8b5cf6"
+        },
+        "meme": {
+          "description": "Image : Un ecran bleu Windows 'FATAL ERROR' mais avec l'aigle romain dessus. Texte du haut : 'EMPIRE ROMAIN D'OCCIDENT'. Texte du bas : 'A CESSE DE FONCTIONNER'. Sous-titre : Quand t'as pas fait les mises a jour pendant 200 ans.",
+          "color": "#8b5cf6"
+        }
+      }
+    }
   },
   {
     "id": 5,
     "day": 5,
-    "title": "Gladiateurs & Colisee : Le Premier Battle Royale",
-    "description": "Le Colisee c'etait Fortnite en live devant 50 000 spectateurs.",
-    "screenshot": "Une arene ronde, du sable, des lions et un pouce vers le bas.",
-    "lienModerne": "Hunger Games s'est directement inspire de ca.",
+    "title": "Les Vikings : Les Rois du Spawn",
+    "description": "Il fait froid, y'a rien a graille, du coup les mecs deviennent les meilleurs marins du monde.",
+    "screenshot": "Un Viking muscle avec des tresses bleues neon, portant une doudoune en fourrure technologique, debout sur un Drakkar volant au-dessus d'une mer de pixels sombres.",
+    "lienModerne": "Assassin's Creed Valhalla mais en vrai et sans les bugs.",
     "category": "Histoire",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Un Viking colosse aux tresses bleues neon, portant une doudoune The North Face en fourrure synthetique, des Nike Air Max aux pieds, debout sur la proue d'un Drakkar cyberpunk volant au-dessus d'une mer de donnees sombres avec des vagues de code binaire.",
+    "brief": {
+      "contextCheck": "On fait un saut vers l'an 800. Bienvenue en Scandinavie. Il fait froid, y'a rien a graille, du coup les mecs decident de devenir les meilleurs marins du monde pour aller braquer tout le monde. C'est l'epoque des Vikings.",
+      "topoNoCap": "Oublie les casques a cornes (c'est un mytho total). Les mecs avaient des bateaux revolutionnaires, les Drakkars, qui pouvaient remonter les rivieres. Ils ont debarque partout : en Angleterre, en France (ils ont assiege Paris ces fous), et meme en Amerique 500 ans avant Colomb ! C'etait pas juste des brutes, c'etait des commercants de genie qui savaient naviguer aux etoiles.",
+      "cheatCodes": [
+        "Drakkar = Le cheat code pour voyager vite et partout (le SUV des mers).",
+        "Ragnar Lodbrok = La legende, le Main Character de l'epoque.",
+        "Normandie = C'est juste des Vikings (Northmen) a qui le roi de France a donne une region pour qu'ils arretent de le taper."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Ragnar Lodbrok",
+          "look": "Ragnar en doudoune The North Face en fourrure grise, des tresses bleues neon dans les cheveux, un bandeau LED sur le front, une hache high-tech dans une main et un GPS holographique dans l'autre. Barbe tressee avec des perles lumineuses.",
+          "color": "#3b82f6"
+        },
+        "carteVibe": {
+          "description": "Carte de l'Europe du Nord avec la Scandinavie au centre en bleu glacier. Fleches partant dans toutes les directions : vers l'Angleterre, Paris, la Mediterranee, l'Islande, le Groenland et l'Amerique (!). Icone drakkar sur chaque fleche. En bas : 'Normandie = Northmen Land' encadre en neon bleu.",
+          "color": "#3b82f6"
+        },
+        "meme": {
+          "description": "Image : Un Viking qui debarque sur une plage avec une hache. Texte du haut : 'ROI DE FRANCE : ON EST TRANQUILLES LA NON ?'. Texte du bas : 'VIKINGS : LOL ON ARRIVE'. Sous-titre : Quand t'as pas verrouille ta porte et que les voisins du Nord debarquent.",
+          "color": "#3b82f6"
+        }
+      }
+    }
   },
   {
     "id": 6,
     "day": 6,
-    "title": "Moyen Age : Le Mode Survie Active",
-    "description": "Peste, guerres, chateaux forts : le Moyen Age c'est Dark Souls IRL.",
-    "screenshot": "Un chateau fort entoure de douves avec un drapeau qui flotte.",
-    "lienModerne": "Game of Thrones mais sans les dragons (quoique...).",
+    "title": "Charlemagne : Le Mec qui a Force sur l'Ecole",
+    "description": "En 800, un barbu devient Empereur et decide que tout le monde doit aller en cours.",
+    "screenshot": "Charlemagne en blazer d'university americaine, une pomme dans la main, devant un tableau noir holographique qui affiche 'A B C' en neon.",
+    "lienModerne": "Charlemagne = le ministre de l'Education Nationale mais avec une epee.",
     "category": "Histoire",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Charlemagne en blazer universitaire Harvard bleu nuit, une couronne imperiale en neon dore sur la tete, tenant un iPad holographique dans une main et Joyeuse (son epee) dans l'autre. Derriere lui, un tableau noir cyberpunk avec 'READ OR DIE' en lettres neon.",
+    "brief": {
+      "contextCheck": "On est en l'an 800. L'Europe c'est le bordel complet depuis la chute de Rome. Mais la, un mec arrive et decide de reconstruire le game from scratch. Ce mec c'est CHARLEMAGNE, et il va devenir Empereur le jour de Noel. Le flex ultime.",
+      "topoNoCap": "Charlemagne, c'est le mec qui a unifie une bonne partie de l'Europe a coups d'epee et de foi. Mais son vrai banger, c'est pas la guerre : c'est l'ECOLE. Le mec a cree les ecoles dans tout l'Empire pour que les gens arretent d'etre des teubés. Il a lance la Renaissance carolingienne : on recopie les textes antiques, on apprend a lire et a ecrire. Sans lui, on aurait perdu 90% du savoir grec et romain. Quand il meurt en 814, ses petits-fils se battent pour l'heritage et divisent l'Empire en trois (traite de Verdun, 843). C'est la naissance de la France et de l'Allemagne. Oui frerot, la France existe a cause d'un beef de famille.",
+      "cheatCodes": [
+        "Charlemagne = Couronne en 800 le jour de Noel par le Pape. Le flex de la decade.",
+        "Les ecoles carolingiennes = Sans lui, on aurait perdu les textes antiques. Le premier cloud backup.",
+        "Traite de Verdun (843) = Ses petits-fils divisent l'Empire en 3. C'est la on split la France et l'Allemagne."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Charlemagne",
+          "look": "Charlemagne en blazer d'university americaine bleu nuit, couronne imperiale en neon dore, une pomme rouge dans la main gauche et son epee Joyeuse dans la droite. Barbe blanche bien taillee, lunettes de lecture sur le nez.",
+          "color": "#f59e0b"
+        },
+        "carteVibe": {
+          "description": "Carte de l'Empire carolingien en dore sur fond noir. Au centre : Aix-la-Chapelle (capitale) en etoile lumineuse. Icone epee pour les conquetes, icone livre pour les ecoles. En bas : timeline 768 (roi) -> 800 (empereur) -> 843 (Verdun = split en 3). Trois zones colorees : France (bleu), Allemagne (rouge), Lotharingie (vert).",
+          "color": "#f59e0b"
+        },
+        "meme": {
+          "description": "Image : Charlemagne devant un tableau noir. Texte du haut : 'CHARLEMAGNE : TOUT LE MONDE A L'ECOLE'. Texte du bas : 'LES FRANCS : MAIS ON SAVAIT MEME PAS QU'CA EXISTAIT'. Sous-titre : Quand ton boss te force a faire une formation que t'as pas demandee.",
+          "color": "#f59e0b"
+        }
+      }
+    }
   },
   {
     "id": 7,
     "day": 7,
-    "title": "Les Vikings : Les Premiers Speedrunners",
-    "description": "Naviguer, piller, coloniser : les Vikings ont explore le monde avant Google Maps.",
-    "screenshot": "Un drakkar fendant les vagues avec une boussole cassee.",
-    "lienModerne": "Assassin's Creed Valhalla mais en vrai.",
+    "title": "Le Moyen Age : Le Mode Survie Active",
+    "description": "Peste, guerres, chateaux forts : le Moyen Age c'est Dark Souls IRL.",
+    "screenshot": "Un chateau fort cyberpunk entoure de douves de liquide neon vert, avec un chevalier en armure streetwear sur le pont-levis.",
+    "lienModerne": "Game of Thrones mais sans les dragons (quoique...).",
     "category": "Histoire",
     "difficulty": "easy",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Un chateau fort gothique en pierre noire avec des tourelles eclairees par des neons violets. Des douves remplies de liquide vert toxique luminescent. Un chevalier en armure customisee avec des LED bleues, une cape Supreme et des Jordan aux pieds, monte sur un cheval mecanique.",
+    "brief": {
+      "contextCheck": "Bienvenue dans le Moyen Age, frerot. On est quelque part entre le 5eme et le 15eme siecle. C'est 1000 ans de mode survie : famines, pestes, guerres de seigneurs, et des paysans qui triment du matin au soir pour que des mecs en armure puissent se taper dessus. Le systeme feodal c'est la pyramide du MLM version medievale.",
+      "topoNoCap": "Le systeme feodal, c'est simple : le Roi file des terres aux seigneurs, les seigneurs filent de la protection aux paysans, et les paysans filent 80% de leur recolte a tout le monde. C'est le pire abonnement premium de l'histoire. Les chevaliers c'est les influenceurs de l'epoque : armure custom, tournois pour le clout, code de la chevalerie (le premier code de conduite). L'Eglise, elle, gere TOUT : l'education, la justice, le calendrier, meme le droit de manger du poulet le vendredi. Et puis y'a la Peste Noire en 1347 qui ratio un tiers de l'Europe. Le plus gros nerf de l'histoire humaine.",
+      "cheatCodes": [
+        "Systeme feodal = Roi > Seigneurs > Chevaliers > Paysans. La pyramide du game medieval.",
+        "La Peste Noire (1347) = Elle a tue 1 personne sur 3 en Europe. Le ratio le plus violent de l'histoire.",
+        "Les Croisades = Les guerres religieuses pour Jerusalem. 200 ans de beef entre Chretiens et Musulmans."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Le Chevalier",
+          "look": "Un chevalier en armure noire mate customisee avec des rivets dores et des LED bleues sur le casque. Cape en velours violet avec le logo Supreme brode. Des Jordan 1 en acier trempe aux pieds. Epee gravee 'NO CAP' sur la lame.",
+          "color": "#6366f1"
+        },
+        "carteVibe": {
+          "description": "Pyramide feodale en neon : tout en haut le ROI (couronne doree), en dessous les SEIGNEURS (chateau), puis les CHEVALIERS (epee), et a la base les PAYSANS (ble). Des fleches montrent les echanges : terres vers le bas, impots vers le haut. A cote : une croix rouge pour la Peste Noire avec un skull et '1/3 de l'Europe'.",
+          "color": "#6366f1"
+        },
+        "meme": {
+          "description": "Image : Un paysan epuise dans un champ. Texte du haut : 'SEIGNEUR : TU GARDES 20% DE TA RECOLTE'. Texte du bas : 'PAYSAN : C'EST PIRE QUE LES CHARGES URSSAF'. Sous-titre : Quand ton proprio medieval est encore plus greedy que ton proprio en 2026.",
+          "color": "#6366f1"
+        }
+      }
+    }
   },
   {
     "id": 8,
     "day": 8,
     "title": "Le Grand Patch Note de l'Humanite",
-    "description": "La Renaissance c'est quand l'Europe a fait une mise a jour majeure. [[2](https://fr.wikipedia.org/wiki/Renaissance)]",
-    "screenshot": "Leonard de Vinci tenant un smartphone qu'il vient d'inventer 500 ans trop tot.",
+    "description": "La Renaissance c'est quand l'Europe a fait une mise a jour majeure.",
+    "screenshot": "Leonard de Vinci en hoodie tech, tenant un smartphone qu'il vient d'inventer 500 ans trop tot, devant la Joconde affichee sur un ecran OLED geant.",
     "lienModerne": "La Renaissance = le passage de Windows XP a Windows 11.",
     "category": "Arts & Litterature",
     "difficulty": "medium",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Leonard de Vinci en hoodie Apple gris, des AirPods Pro aux oreilles, dessinant l'Homme de Vitruve sur une tablette graphique holographique. Derriere lui, la Joconde affichee sur un ecran OLED courbe geant. Atelier renaissance futuriste avec des engrenages dores et des circuits imprimes.",
+    "brief": {
+      "contextCheck": "On debarque au 15eme siecle en Italie. Apres 1000 ans de mode survie medieval, l'Europe decide de faire un gros Ctrl+Z et de retourner aux sources : la Grece et Rome antiques. C'est la RENAISSANCE, la plus grosse mise a jour de l'humanite.",
+      "topoNoCap": "Tout part de Florence, en Italie. Les Medicis (une famille de banquiers ultra-riches) financent des artistes de dingue. Leonard de Vinci c'est le mec le plus OP de l'histoire : peintre, sculpteur, ingenieur, anatomiste, inventeur. Il a dessine des helicopteres et des chars d'assaut en 1490. Michel-Ange peint le plafond de la Chapelle Sixtine a lui tout seul (un flex de 4 ans allonge sur un echafaudage). Gutenberg invente l'imprimerie en 1450 : c'est le premier Internet. Avant, un livre coutait une maison. Apres, tout le monde peut lire. Game changer absolu.",
+      "cheatCodes": [
+        "Leonard de Vinci = Le joueur le plus polyvalent de l'histoire. Peinture + Science + Ingenierie. Build hybride goatesque.",
+        "Gutenberg + imprimerie (1450) = Le premier Internet. Les livres deviennent accessibles a tous. Information = pouvoir.",
+        "Les Medicis de Florence = Les premiers venture capitalists. Ils ont finance la Renaissance avec leur argent de banquiers."
+      ],
+      "visuals": {
+        "avatar": {
+          "name": "Leonard de Vinci",
+          "look": "Leonard de Vinci en hoodie Apple gris, barbe longue bien entretenue, des AirPods Pro aux oreilles, tenant un pinceau d'une main et une tablette graphique de l'autre. Beret en cuir noir avec un petit logo 'LDV' brode.",
+          "color": "#10b981"
+        },
+        "carteVibe": {
+          "description": "Au centre : FLORENCE en etoile doree. Autour, les piliers de la Renaissance : ARTS (Joconde), SCIENCE (telescope), IMPRIMERIE (livre ouvert), EXPLORATION (boussole). Fleches montrant l'expansion vers le reste de l'Europe. En bas : avant/apres - a gauche 'Moyen Age' en gris terne, a droite 'Renaissance' en couleurs vives neon.",
+          "color": "#10b981"
+        },
+        "meme": {
+          "description": "Image : Leonard de Vinci montrant ses plans d'helicoptere. Texte du haut : 'VINCI : J'AI INVENTE UN TRUC QUI VOLE'. Texte du bas : 'TOUT LE MONDE EN 1490 : T'ES MYTHO FRERE'. Sous-titre : Quand t'es en avance de 400 ans mais que personne te croit.",
+          "color": "#10b981"
+        }
+      }
+    }
   },
   {
     "id": 9,
     "day": 9,
     "title": "Les Rois de France : La Dynastie du Drama",
     "description": "Trahisons, alliances, mariages calcules : les Capetiens c'est Les Feux de l'Amour version royale.",
-    "screenshot": "Une couronne posee sur un trone avec 10 mains qui essaient de l'attraper.",
+    "screenshot": "Une couronne posee sur un trone holographique avec 10 mains en neon qui essaient de l'attraper.",
     "lienModerne": "Succession (HBO) s'est inspire de ca sans le savoir.",
     "category": "Histoire",
     "difficulty": "medium",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Un trone dore futuriste sur une estrade de verre noir, eclaire par des spots neon roses et dores. Autour, des silhouettes de pretendants au trone avec des yeux lumineux rouges. La couronne de France flotte au-dessus, entouree d'un halo holographique. Ambiance drama royal cyberpunk.",
+    "brief": {
+      "contextCheck": "On traverse la France du 10eme au 17eme siecle. Bienvenue dans la plus longue saison de tele-realite de l'histoire : les Rois de France. Des Capetiens aux Bourbons, c'est trahisons, mariages arranges, guerres de religion et backstab en famille.",
+      "topoNoCap": "Les Capetiens c'est la premiere grosse dynastie. Ils gerent la France pendant 300 ans en mode 'de pere en fils'. Puis les Valois arrivent avec la Guerre de 100 ans contre l'Angleterre (oui, 100 ANS de beef). Jeanne d'Arc debarque, une meuf de 17 ans qui dit que Dieu lui parle et qui retourne la guerre. Ensuite les guerres de religion entre cathos et protestants : Henri IV regle le bail avec l'Edit de Nantes en 1598 ('Paris vaut bien une messe', le plus gros compromis de l'histoire).",
+      "cheatCodes": [
+        "Guerre de 100 ans = France vs Angleterre, 1337-1453. Jeanne d'Arc clutch la game en 1429.",
+        "Henri IV + Edit de Nantes (1598) = 'Paris vaut bien une messe'. Il se convertit au catholicisme pour la paix.",
+        "Les dynasties : Capetiens -> Valois -> Bourbons. Retiens cet ordre, c'est le skill tree royal."
+      ]
+    }
   },
   {
     "id": 10,
     "day": 10,
     "title": "Louis XIV : Le Premier Influenceur",
     "description": "Versailles c'etait son feed Instagram geant : tout pour l'image.",
-    "screenshot": "Un mec en talons avec une perruque XXL devant un palace dore.",
-    "lienModerne": "Louis XIV = Kim Kardashian du 17eme : le personnal branding avant l'heure.",
+    "screenshot": "Un mec en talons avec une perruque XXL devant un palace dore holographique, prenant un selfie avec un telephone en or.",
+    "lienModerne": "Louis XIV = Kim Kardashian du 17eme : le personal branding avant l'heure.",
     "category": "Histoire",
     "difficulty": "medium",
-    "questionsCount": 5
+    "questionsCount": 5,
+    "visualDescription": "Louis XIV en costume Versace dore integral, perruque XXL en fibres optiques lumineuses, talons hauts Jimmy Choo en or massif. Il prend un selfie devant le Chateau de Versailles illumine en neon rose et dore. Le reflet dans la Galerie des Glaces montre des ecrans LED a l'infini.",
+    "brief": {
+      "contextCheck": "On est au 17eme siecle. Un seul mec gere toute la France d'une main de fer et d'une perruque de 3 kilos. Il s'appelle Louis XIV, le Roi-Soleil. Le mec a regne 72 ANS (de 1643 a 1715), le plus long regne de l'histoire de France. Il avait 5 ans quand il a commence. Five. Years. Old.",
+      "topoNoCap": "Louis XIV c'est l'inventeur du personal branding. Il construit Versailles, le plus gros palace du monde, juste pour montrer a tout le monde qui est le boss. Il force tous les nobles a vivre a Versailles pour les surveiller (le premier groupe WhatsApp force). Il dit 'L'Etat, c'est moi' et il le pense vraiment. Il revoque l'Edit de Nantes et vire les protestants (gros flop economique). Mais son vrai flex c'est la culture : Moliere, Racine, La Fontaine, Le Notre pour les jardins. La France devient LA reference culturelle mondiale. Tout le monde parle francais dans les cours d'Europe.",
+      "cheatCodes": [
+        "Louis XIV = Le Roi-Soleil. 72 ans de regne. 'L'Etat, c'est moi'. Le premier CEO de la France-Entreprise.",
+        "Versailles = Le plus gros flex immobilier de l'histoire. Palace construit pour surveiller et impressionner les nobles.",
+        "Revocation de l'Edit de Nantes (1685) = Il vire les protestants. Gros brain drain : les meilleurs artisans partent."
+      ]
+    }
   },
   {
     "id": 11,
