@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 const tabs = [
   { href: "/dashboard",   label: "Accueil",    icon: HomeIcon },
-  { href: "/story-mode",  label: "Épopée",     icon: SwordIcon },
+  { href: "/story-mode",  label: "Aventure",     icon: SwordIcon },
   { href: "/quiz",        label: "Jouer",      icon: PlayIcon },
   { href: "/leaderboard", label: "Classement", icon: TrophyIcon },
   { href: "/premium",     label: "Premium",    icon: StarIcon },

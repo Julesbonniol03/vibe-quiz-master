@@ -7,7 +7,7 @@ import { getAvatarById } from "@/components/OnboardingModal";
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: "🏠" },
-  { href: "/story-mode", label: "Épopée", icon: "⚔️" },
+  { href: "/story-mode", label: "Aventure", icon: "⚔️" },
   { href: "/quiz", label: "Quiz", icon: "🧠" },
   { href: "/profil", label: "Profil", icon: "👤", isProfile: true },
   { href: "/reviser", label: "Réviser", icon: "📖" },

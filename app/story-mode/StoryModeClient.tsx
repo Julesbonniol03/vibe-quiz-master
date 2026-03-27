@@ -58,7 +58,7 @@ export default function StoryModeClient({ levels }: StoryModeClientProps) {
               <h1 className="text-3xl md:text-4xl font-bold text-white">
                 Mode{" "}
                 <span className="bg-gradient-to-r from-purple-400 to-neon-rose bg-clip-text text-transparent">
-                  Epopee
+                  Aventure
                 </span>
               </h1>
               <p className="text-slate-500 text-sm">Apprentissage en 30 jours</p>
@@ -116,7 +116,7 @@ export default function StoryModeClient({ levels }: StoryModeClientProps) {
             Mode Libre
           </Link>
           <div className="px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-purple-500/20 to-neon-rose/20 border border-purple-500/20 rounded-xl">
-            Mode Epopee
+            Mode Aventure
           </div>
         </div>
       </div>
