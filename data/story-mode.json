@@ -270,5 +270,250 @@
         "answer": "Il est mort ruiné"
       }
     ]
+  },
+  {
+    "id": 11,
+    "title": "La Renaissance : Le Grand Update de la Civilisation",
+    "brief": "📍 Context-Check : XIVe-XVIe siècle, Italie. L'Europe sort du Moyen-Âge, Florence est la capitale mondiale du flex culturel. Les Médicis, banquiers milliardaires de l'époque, financent tout : peinture, sculpture, architecture. C'est le premier mécénat au sens moderne.\n\n🎤 Topo No-Cap : La Renaissance c'est le patch 2.0 de la civilisation occidentale. Les artistes retrouvent les textes antiques grecs et romains (merci Gutenberg), et tout explose. Léonard de Vinci code des inventions 500 ans en avance : parachute, tank, hélicoptère — le mec était un dev full-stack humain. Michel-Ange peint la Chapelle Sixtine allongé sur le dos pendant 4 ans (les deadlines, ça existait déjà). Raphaël, Botticelli, Donatello — des GOAT à chaque coin de rue. Et c'est pas que l'art : Machiavel invente la science politique, Léonard de Vinci révolutionne l'anatomie. Le tout financé par des familles de banquiers qui voulaient flex leur culture. Le premier 'pay-to-win' de l'histoire intellectuelle.\n\n🎮 Cheat Codes : 1) La Renaissance démarre à Florence grâce aux Médicis. 2) Léonard de Vinci était à la fois peintre, ingénieur, scientifique et musicien. 3) La Chapelle Sixtine a pris 4 ans à Michel-Ange (1508-1512).",
+    "visualDescription": "Florence en mode cyberpunk doré : le Duomo en néon or et cyan, des artistes en streetwear noir avec tablettes holographiques. Léonard de Vinci dessine des schematics 3D holographiques en lévitation. Sol en marbre blanc avec reflets LED dorés. Ciel bleu de Renaissance avec des nuages en wire-frame.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1534294228306-bd54eb9a7ba8",
+    "quiz": [
+      {
+        "question": "Quelle famille florentine a financé la Renaissance ?",
+        "options": ["Les Borgia", "Les Médicis", "Les Sforza", "Les Este"],
+        "answer": "Les Médicis"
+      },
+      {
+        "question": "Combien de temps Michel-Ange a-t-il mis pour peindre la Chapelle Sixtine ?",
+        "options": ["1 an", "2 ans", "4 ans", "8 ans"],
+        "answer": "4 ans"
+      },
+      {
+        "question": "Léonard de Vinci a esquissé des inventions qui ont anticipé quel objet moderne ?",
+        "options": ["La voiture", "Le parachute", "L'avion à réaction", "Le téléphone"],
+        "answer": "Le parachute"
+      },
+      {
+        "question": "Dans quelle ville la Renaissance a-t-elle principalement démarré ?",
+        "options": ["Rome", "Venise", "Florence", "Milan"],
+        "answer": "Florence"
+      },
+      {
+        "question": "Quel livre de Machiavel pose les bases de la science politique ?",
+        "options": ["L'Art de la Guerre", "Le Prince", "La République", "Les Essais"],
+        "answer": "Le Prince"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "1492 : Colomb Trouve le Mauvais Continent et Flex Quand Même",
+    "brief": "📍 Context-Check : 1492, Espagne. L'Europe cherche une route maritime vers les Indes pour le commerce des épices — l'or liquide de l'époque. Tout le monde passe par l'Afrique mais c'est long. Christophe Colomb a une idée : aller vers l'ouest. Problème : il sous-estime la taille de la Terre d'un facteur 4.\n\n🎤 Topo No-Cap : Colomb débarque sur une île des Caraïbes le 12 octobre 1492, convaincu d'être arrivé en Asie. Il appelle les habitants 'Indiens' — l'erreur géographique la plus célèbre de l'histoire. Il est mort persuadé d'avoir atteint les Indes. C'est Amerigo Vespucci qui réalise que c'est un nouveau continent, et le continent prend son prénom. Colomb a découvert l'Amérique sans le savoir, et quelqu'un d'autre a eu le droit de nommer la chose. Le ratio ultime. Côté conséquences : échange colombien (tomates, pommes de terre, maïs arrivent en Europe), et l'une des plus grandes catastrophes humanitaires de l'histoire : 90% des populations autochtones décimées par les maladies européennes.\n\n🎮 Cheat Codes : 1) Colomb pensait être arrivé en Asie, pas en Amérique. 2) Le continent est nommé d'après Amerigo Vespucci, pas Colomb. 3) L'échange colombien a transformé l'alimentation mondiale.",
+    "visualDescription": "Une caravelle espagnole en mode cyberpunk, voiles en LED blanc et rouge, naviguant sur un océan sombre en dark mode. Colomb sur le pont porte un manteau de capitaine noir avec des épaulettes LED dorées, regardant une map holographique. Horizon rougeoyant avec une île tropicale en néon vert à l'horizon.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1534536281715-e28d76689b4d",
+    "quiz": [
+      {
+        "question": "En quelle année Christophe Colomb a-t-il débarqué en Amérique ?",
+        "options": ["1488", "1492", "1498", "1504"],
+        "answer": "1492"
+      },
+      {
+        "question": "Pourquoi Colomb a-t-il appelé les habitants 'Indiens' ?",
+        "options": ["Ils ressemblaient aux Indiens d'Asie", "Il croyait être arrivé aux Indes", "C'était leur vrai nom", "Le roi d'Espagne l'avait demandé"],
+        "answer": "Il croyait être arrivé aux Indes"
+      },
+      {
+        "question": "D'après qui le continent américain a-t-il été nommé ?",
+        "options": ["Christophe Colomb", "Ferdinand d'Espagne", "Amerigo Vespucci", "Vasco de Gama"],
+        "answer": "Amerigo Vespucci"
+      },
+      {
+        "question": "Quel aliment originaire d'Amérique est devenu central dans la cuisine européenne ?",
+        "options": ["Le blé", "La tomate", "Le riz", "Le raisin"],
+        "answer": "La tomate"
+      },
+      {
+        "question": "Quel pays finançait l'expédition de Colomb ?",
+        "options": ["Le Portugal", "La France", "L'Espagne", "L'Angleterre"],
+        "answer": "L'Espagne"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Martin Luther : Le Premier Thread Viral de l'Histoire",
+    "brief": "📍 Context-Check : 1517, Allemagne. L'Église catholique est au sommet de sa puissance... et de sa corruption. Le Pape Léon X vend des 'indulgences' — des pardons de péchés contre de l'argent. Littéralement un pay-to-win pour aller au paradis.\n\n🎤 Topo No-Cap : Martin Luther, moine allemand, est tellement dégoûté qu'il rédige 95 thèses (95 points de critique) et les affiche sur la porte de l'église de Wittenberg le 31 octobre 1517. Le coup d'envoi de la Réforme protestante. Grâce à l'imprimerie de Gutenberg, ses thèses sont copiées et distribuées dans toute l'Europe en quelques semaines — le premier thread qui est devenu viral. L'Église le convoque pour qu'il se rétracte. Luther répond : 'Je ne me rétracte de rien.' Le giga chad move. Il est excommunié, mais continue à traduire la Bible en allemand pour que tout le monde puisse la lire sans intermédiaire. Il lance le protestantisme — une nouvelle branche du christianisme. Résultat : des guerres de religion pendant 130 ans, mais aussi la liberté de conscience et le début de la pensée individuelle moderne.\n\n🎮 Cheat Codes : 1) Luther affiche ses 95 thèses le 31 octobre 1517 (Halloween, coïncidence ?). 2) Il traduit la Bible en allemand — révolution de l'accès au texte sacré. 3) Ses idées se propagent grâce à l'imprimerie de Gutenberg.",
+    "visualDescription": "Martin Luther en hoodie noir avec une capuche relevée, martelant ses 95 thèses LED sur une porte de cathédrale gothique cyberpunk. Les thèses se transforment en notifications holographiques qui se propagent dans la ville médiévale néon. Fond sombre avec des néons rouges et blancs, fumée violette.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1548407260-da850faa41e3",
+    "quiz": [
+      {
+        "question": "Quelle était la pratique de l'Église que Luther critiquait principalement ?",
+        "options": ["Les croisades", "La vente d'indulgences", "Le latin dans les messes", "Le célibat des prêtres"],
+        "answer": "La vente d'indulgences"
+      },
+      {
+        "question": "Combien de thèses Luther a-t-il rédigées ?",
+        "options": ["12", "50", "95", "120"],
+        "answer": "95"
+      },
+      {
+        "question": "En quelle année Luther a-t-il affiché ses thèses ?",
+        "options": ["1492", "1510", "1517", "1525"],
+        "answer": "1517"
+      },
+      {
+        "question": "Qu'a fait Luther pour rendre la Bible accessible au peuple ?",
+        "options": ["Il l'a illustrée", "Il l'a traduite en allemand", "Il en a baissé le prix", "Il l'a distribuée gratuitement"],
+        "answer": "Il l'a traduite en allemand"
+      },
+      {
+        "question": "Quel mouvement religieux Luther a-t-il fondé ?",
+        "options": ["L'Anglicanisme", "Le Calvinisme", "Le Protestantisme", "L'Orthodoxie"],
+        "answer": "Le Protestantisme"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Les Guerres de Religion : Le Clan War Qui A Déchiré la France",
+    "brief": "📍 Context-Check : France, 1562-1598. La Réforme protestante a divisé l'Europe en deux camps : catholiques vs protestants (appelés Huguenots en France). La tension monte jusqu'à exploser en guerre civile.\n\n🎤 Topo No-Cap : La France passe 36 ans en mode guerre civile religieuse. Le summum du flop ? La Nuit de la Saint-Barthélemy, 24 août 1572 : le roi Charles IX ordonne le massacre des chefs protestants. En quelques heures, entre 3 000 et 30 000 Huguenots sont tués dans toute la France. La rumeur dit que la reine mère Catherine de Médicis était derrière le plan — le plot twist le plus dark de l'histoire française. Henri de Navarre, protestant, survit en convertissant au catholicisme sur le moment (speed run de la survie). Il finit par devenir Henri IV, le premier roi Bourbon. Et là, le banger : il signe l'Édit de Nantes en 1598, qui accorde la liberté de culte aux protestants. Première loi de tolérance religieuse de l'histoire moderne. Sa phrase légendaire : 'Paris vaut bien une messe.' Le pragmatisme politique élevé au rang d'art.\n\n🎮 Cheat Codes : 1) La Nuit de la Saint-Barthélemy (1572) est le massacre le plus marquant des guerres de religion. 2) Henri IV signe l'Édit de Nantes en 1598 — première tolérance religieuse légale. 3) 'Paris vaut bien une messe' : Henri IV se convertit pour prendre le pouvoir.",
+    "visualDescription": "Paris en 1572, ciel rouge sang avec des néons sombres. Des soldats en armure médiévale cyberpunk (casques à visière LED) s'affrontent dans des rues pavées. D'un côté, croix catholique dorée en néon ; de l'autre, croix huguenote en néon cyan. Au centre, Henri IV en manteau royal vert avec l'Édit de Nantes holographique en main. Ambiance dark mode total.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+    "quiz": [
+      {
+        "question": "Comment appelle-t-on les protestants français du XVIe siècle ?",
+        "options": ["Les Puritains", "Les Huguenots", "Les Luthériens", "Les Calvinistes"],
+        "answer": "Les Huguenots"
+      },
+      {
+        "question": "Qu'est-ce que la Nuit de la Saint-Barthélemy ?",
+        "options": ["Une fête religieuse", "Un traité de paix", "Un massacre de protestants", "Une bataille navale"],
+        "answer": "Un massacre de protestants"
+      },
+      {
+        "question": "Qui a signé l'Édit de Nantes en 1598 ?",
+        "options": ["François Ier", "Charles IX", "Henri III", "Henri IV"],
+        "answer": "Henri IV"
+      },
+      {
+        "question": "Que garantissait l'Édit de Nantes ?",
+        "options": ["La fin des impôts", "La liberté de culte pour les protestants", "L'interdiction du catholicisme", "La paix avec l'Espagne"],
+        "answer": "La liberté de culte pour les protestants"
+      },
+      {
+        "question": "Quelle phrase célèbre Henri IV aurait-il prononcée pour justifier sa conversion ?",
+        "options": ["'Dieu le veut !'", "'L'État c'est moi'", "'Paris vaut bien une messe'", "'Je maintiendrai'"],
+        "answer": "'Paris vaut bien une messe'"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "⚡ BOSS : La Révolution Scientifique — Le Grand Patch de l'Humanité",
+    "brief": "📍 Context-Check : XVIe-XVIIe siècle, Europe. Pendant 1500 ans, tout le monde croit qu'Aristote et la Bible ont réponse à tout. La Terre est au centre de l'univers. Les maladies viennent de miasmes. Les étoiles sont fixées sur des sphères de cristal. C'est la meta de l'époque. Et puis boum.\n\n🎤 Topo No-Cap : La Révolution Scientifique c'est le patch qui a tout réécrit. Copernic démontre en 1543 que la Terre tourne autour du Soleil (l'héliocentrisme) — l'Église pète un câble. Galilée confirme avec son télescope et finit en résidence surveillée par l'Inquisition (ratio par l'institution). Kepler mathématise les orbites planétaires. Vésale rewrite l'anatomie humaine en disséquant de vrais corps (interdit à l'époque). Harvey découvre la circulation sanguine. Et Newton arrive en 1687 avec ses Principia Mathematica et décrit la gravité universelle — la physique complète en un seul livre, le lore dump ultime. Ces mecs ont remplacé 1500 ans de dogmes par l'expérience et les maths. C'est la naissance de la méthode scientifique : observer, mesurer, tester, conclure. Sans eux, pas d'Lumières, pas de Révolution industrielle, pas d'iPhone. C'est le commit le plus impactant du repo de l'humanité.\n\n🎮 Cheat Codes : 1) Copernic (1543) prouve que la Terre tourne autour du Soleil. 2) Galilée est condamné par l'Église pour avoir confirmé l'héliocentrisme. 3) Newton (1687) formalise la gravité et les lois du mouvement — base de toute la physique moderne.",
+    "visualDescription": "Salle d'observations astronomique cyberpunk : un énorme télescope en cuivre et néon pointe vers un ciel étoilé en dark mode. Newton en sweat à capuche noir est assis sous un pommier avec des pommes LED dorées qui tombent en orbite autour de lui. Des équations holographiques (F=ma, E=mc²) flottent dans l'air. Galilée regarde dans son télescope au fond, l'Église en ombre menaçante derrière lui. Ambiance steampunk-cyberpunk, lumières ambre et cyan.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1446941303453-9f65c0d7af01",
+    "quiz": [
+      {
+        "question": "Quelle théorie Copernic a-t-il proposée en 1543 ?",
+        "options": ["La Terre est plate", "La Terre tourne autour du Soleil", "Le Soleil tourne autour de la Terre", "La Lune est une étoile"],
+        "answer": "La Terre tourne autour du Soleil"
+      },
+      {
+        "question": "Pourquoi Galilée a-t-il été condamné par l'Inquisition ?",
+        "options": ["Il avait inventé une arme", "Il avait critiqué le Pape", "Il confirmait que la Terre tournait autour du Soleil", "Il pratiquait la magie"],
+        "answer": "Il confirmait que la Terre tournait autour du Soleil"
+      },
+      {
+        "question": "Quel outil Galilée a-t-il amélioré pour observer le ciel ?",
+        "options": ["Le microscope", "Le télescope", "Le sextant", "L'astrolabe"],
+        "answer": "Le télescope"
+      },
+      {
+        "question": "Qui a décrit la circulation sanguine ?",
+        "options": ["Vésale", "Harvey", "Paracelse", "Galien"],
+        "answer": "Harvey"
+      },
+      {
+        "question": "Qu'est-ce que Vésale a révolutionné ?",
+        "options": ["L'astronomie", "La chimie", "L'anatomie humaine", "La physique"],
+        "answer": "L'anatomie humaine"
+      },
+      {
+        "question": "Quel ouvrage Newton a-t-il publié en 1687 ?",
+        "options": ["De Revolutionibus", "Principia Mathematica", "Discours de la Méthode", "Dialogue sur les deux grands systèmes"],
+        "answer": "Principia Mathematica"
+      },
+      {
+        "question": "Quelle loi Newton a-t-il formalisée après avoir vu (selon la légende) une pomme tomber ?",
+        "options": ["La loi de la relativité", "La loi de la gravité", "La loi de la thermodynamique", "La loi de l'électromagnétisme"],
+        "answer": "La loi de la gravité"
+      },
+      {
+        "question": "Qu'est-ce que la méthode scientifique introduite par la Révolution Scientifique ?",
+        "options": ["Lire les anciens textes grecs", "Observer, mesurer, tester, conclure", "Prier pour obtenir des réponses", "Consulter les astres"],
+        "answer": "Observer, mesurer, tester, conclure"
+      },
+      {
+        "question": "Quel astronome a mathématisé les orbites elliptiques des planètes ?",
+        "options": ["Copernic", "Galilée", "Kepler", "Tycho Brahe"],
+        "answer": "Kepler"
+      },
+      {
+        "question": "Dans quelle discipline Paracelse a-t-il révolutionné les pratiques ?",
+        "options": ["L'astronomie", "La médecine et la chimie", "La physique", "La géographie"],
+        "answer": "La médecine et la chimie"
+      },
+      {
+        "question": "Quelle institution s'opposait principalement aux nouvelles théories scientifiques ?",
+        "options": ["Les universités", "L'Église catholique", "Les guildes marchandes", "Les monarchies"],
+        "answer": "L'Église catholique"
+      },
+      {
+        "question": "Quelle théorie dominait avant la Révolution Scientifique pour expliquer les maladies ?",
+        "options": ["Les microbes", "Les péchés", "Les miasmes (mauvais airs)", "Les démons"],
+        "answer": "Les miasmes (mauvais airs)"
+      },
+      {
+        "question": "Quel philosophe a énoncé 'Je pense donc je suis' en posant les bases de la raison moderne ?",
+        "options": ["Bacon", "Locke", "Descartes", "Spinoza"],
+        "answer": "Descartes"
+      },
+      {
+        "question": "Quelle est la première loi du mouvement de Newton ?",
+        "options": ["F = ma", "Un corps reste en repos ou en mouvement uniforme sauf si une force agit sur lui", "Pour chaque action il y a une réaction égale et opposée", "L'énergie se conserve"],
+        "answer": "Un corps reste en repos ou en mouvement uniforme sauf si une force agit sur lui"
+      },
+      {
+        "question": "Quel philosophe anglais a promu la méthode empirique (expériences avant théories) ?",
+        "options": ["Thomas Hobbes", "John Locke", "Francis Bacon", "David Hume"],
+        "answer": "Francis Bacon"
+      },
+      {
+        "question": "Quel instrument a permis de découvrir les microbes et révolutionner la biologie ?",
+        "options": ["Le télescope", "Le baromètre", "Le microscope", "Le thermomètre"],
+        "answer": "Le microscope"
+      },
+      {
+        "question": "Combien d'années séparent la publication de Copernic (1543) des Principia de Newton (1687) ?",
+        "options": ["100 ans", "144 ans", "200 ans", "50 ans"],
+        "answer": "144 ans"
+      },
+      {
+        "question": "Quelle découverte Galilée a-t-il faite en observant Jupiter ?",
+        "options": ["Des anneaux autour de Jupiter", "Quatre lunes en orbite autour de Jupiter", "Une tempête géante sur Jupiter", "Des éruptions volcaniques sur Jupiter"],
+        "answer": "Quatre lunes en orbite autour de Jupiter"
+      },
+      {
+        "question": "Quel scientifique a découvert que l'air exerce une pression et inventé le baromètre ?",
+        "options": ["Galilée", "Torricelli", "Pascal", "Boyle"],
+        "answer": "Torricelli"
+      },
+      {
+        "question": "Quelle est la conséquence majeure de la Révolution Scientifique pour le monde moderne ?",
+        "options": ["La fin des guerres de religion", "La naissance de la méthode scientifique, base de toute la science moderne", "L'invention de la démocratie", "La disparition de l'Église"],
+        "answer": "La naissance de la méthode scientifique, base de toute la science moderne"
+      }
+    ]
   }
 ]
