@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "title": "Préhistoire : Le Tuto du Jeu",
+    "emoji": "🦴",
+    "isBoss": false,
+    "contextCheck": "Bienvenue dans le tuto. Avant les villes, avant l'écriture, avant TOUT, y'avait des mecs en peau de bête qui grindaient la survie 24/7. La Préhistoire, c'est le mode tutorial de l'humanité — 3 millions d'années de farm pour débloquer la civilisation.",
+    "topoNoCap": "Les premiers humains (Homo habilis, puis Erectus, puis Sapiens) ont d'abord été nomades : ils suivaient le gibier et cueillaient des baies, zéro base fixe. Le vrai game-changer ? Le feu, maîtrisé par Homo Erectus il y a ~400 000 ans — premier buff de l'histoire (cuisson, protection, chaleur). Ensuite, y'a eu la Révolution Néolithique vers -10 000 : les mecs ont découvert l'agriculture et l'élevage. Du coup, ils se sont posés, ont construit des villages, et ont commencé à flex avec la poterie et les outils en pierre polie. Les peintures de Lascaux (-18 000 ans) c'est littéralement le premier fanart de l'humanité. Et l'invention de la roue vers -3500 ? Le patch mobilité qui a changé la méta pour toujours.",
+    "cheatCodes": "Homo Sapiens = notre espèce, apparue il y a ~300 000 ans • Le feu maîtrisé par Homo Erectus (~400 000 ans) • Révolution Néolithique = passage nomade → sédentaire (~-10 000) • Lascaux = grotte peinte en Dordogne (~-18 000 ans)",
+    "quiz": [
+      {
+        "question": "Quel Homo a maîtrisé le feu en premier ?",
+        "options": ["Homo Sapiens", "Homo Erectus", "Homo Habilis", "Néandertal"],
+        "answer": "Homo Erectus"
+      },
+      {
+        "question": "Qu'est-ce que la Révolution Néolithique ?",
+        "options": ["L'invention de l'écriture", "Le passage du nomadisme à l'agriculture", "La découverte du feu", "La première guerre"],
+        "answer": "Le passage du nomadisme à l'agriculture"
+      },
+      {
+        "question": "Vers quelle date situe-t-on les peintures de Lascaux ?",
+        "options": ["-5 000 ans", "-18 000 ans", "-100 000 ans", "-1 000 ans"],
+        "answer": "-18 000 ans"
+      },
+      {
+        "question": "Qu'a permis l'invention de la roue ?",
+        "options": ["Cuire la nourriture", "Se déplacer et transporter plus facilement", "Écrire sur des tablettes", "Construire des pyramides"],
+        "answer": "Se déplacer et transporter plus facilement"
+      },
+      {
+        "question": "Homo Sapiens est apparu il y a environ combien d'années ?",
+        "options": ["50 000 ans", "300 000 ans", "1 million d'années", "10 000 ans"],
+        "answer": "300 000 ans"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mésopotamie : Les Premiers Devs",
+    "emoji": "📜",
+    "isBoss": false,
+    "contextCheck": "Entre le Tigre et l'Euphrate (Irak actuel), des mecs ont inventé l'écriture, les maths, les lois, et les premières villes. La Mésopotamie, c'est littéralement le berceau de la civilisation — les OGs absolus qui ont codé les bases du jeu.",
+    "topoNoCap": "Vers -3300, les Sumériens inventent l'écriture cunéiforme : des petits dessins sur des tablettes d'argile. C'est le premier système d'info — imagine un Google Docs en terre cuite. Ils ont aussi créé les premières villes (Ur, Uruk, Babylone) avec des temples géants appelés ziggourats, les premiers skyscrapers de l'humanité. Le vrai banger ? Le Code d'Hammurabi (~-1750), gravé par le roi de Babylone : 282 lois gravées sur une stèle de pierre. C'est le premier Terms of Service de l'Histoire. Le concept 'œil pour œil, dent pour dent' vient de là. Ils ont aussi inventé la roue (perfectionnée), le système sexagésimal (60 secondes dans une minute, 360° dans un cercle — oui c'est eux), et l'irrigation pour farmer à grande échelle.",
+    "cheatCodes": "Écriture cunéiforme inventée par les Sumériens (~-3300) • Babylone = ville légendaire, Code d'Hammurabi (~-1750) • Ziggourats = temples-pyramides mésopotamiens • Système sexagésimal (base 60) = héritage mésopotamien",
+    "quiz": [
+      {
+        "question": "Qui a inventé l'écriture cunéiforme ?",
+        "options": ["Les Égyptiens", "Les Sumériens", "Les Grecs", "Les Romains"],
+        "answer": "Les Sumériens"
+      },
+      {
+        "question": "Qu'est-ce que le Code d'Hammurabi ?",
+        "options": ["Un langage informatique", "Un recueil de 282 lois gravées", "Un traité de paix", "Une recette de cuisine"],
+        "answer": "Un recueil de 282 lois gravées"
+      },
+      {
+        "question": "Comment s'appellent les temples-pyramides mésopotamiens ?",
+        "options": ["Pyramides", "Ziggourats", "Panthéons", "Mausolées"],
+        "answer": "Ziggourats"
+      },
+      {
+        "question": "Pourquoi une minute fait 60 secondes ?",
+        "options": ["C'est une invention romaine", "Grâce au système sexagésimal mésopotamien", "C'est un hasard", "Les Égyptiens l'ont décidé"],
+        "answer": "Grâce au système sexagésimal mésopotamien"
+      },
+      {
+        "question": "Entre quels fleuves se situe la Mésopotamie ?",
+        "options": ["Nil et Congo", "Tigre et Euphrate", "Rhin et Danube", "Seine et Loire"],
+        "answer": "Tigre et Euphrate"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Égypte Ancienne : Le Branding Ultime",
+    "emoji": "🏺",
+    "isBoss": false,
+    "contextCheck": "L'Égypte, c'est la civilisation qui a inventé le branding avant tout le monde. Pyramides géantes, pharaons divinisés, hiéroglyphes stylés — 3000 ans de flex ininterrompu le long du Nil. Le marketing avant le marketing.",
+    "topoNoCap": "Tout commence avec l'unification de la Haute et Basse-Égypte par le pharaon Narmer vers -3100. Les Égyptiens ont construit les pyramides de Gizeh vers -2500 (celle de Khéops fait 146m de haut, et on sait toujours pas exactement comment ils ont fait — le mystère OG). Le pharaon, c'était pas juste un roi, c'était un dieu vivant — le premier influenceur avec un branding divin. Ils croyaient à la vie après la mort, d'où la momification, les sarcophages, et les trésors enterrés (le tombeau de Toutânkhamon découvert en 1922 était rempli d'or). L'écriture ? Les hiéroglyphes, déchiffrés en 1822 grâce à la Pierre de Rosette par Champollion. Et le Nil, c'était leur autoroute + leur champ : les crues annuelles fertilisaient les terres pour l'agriculture. Banger logistique.",
+    "cheatCodes": "Pyramide de Khéops = ~-2500, 146m, seule merveille antique encore debout • Hiéroglyphes déchiffrés par Champollion (1822) grâce à la Pierre de Rosette • Toutânkhamon = pharaon célèbre, tombeau découvert en 1922 • Le Nil = clé de la civilisation égyptienne (crues fertiles)",
+    "quiz": [
+      {
+        "question": "Qui a unifié la Haute et Basse-Égypte ?",
+        "options": ["Toutânkhamon", "Ramsès II", "Narmer", "Cléopâtre"],
+        "answer": "Narmer"
+      },
+      {
+        "question": "Qui a déchiffré les hiéroglyphes ?",
+        "options": ["Napoléon", "Champollion", "Howard Carter", "Hérodote"],
+        "answer": "Champollion"
+      },
+      {
+        "question": "En quelle année le tombeau de Toutânkhamon a-t-il été découvert ?",
+        "options": ["1822", "1899", "1922", "1945"],
+        "answer": "1922"
+      },
+      {
+        "question": "Pourquoi le Nil était vital pour l'Égypte ?",
+        "options": ["Il contenait de l'or", "Ses crues fertilisaient les terres", "Il protégeait des envahisseurs", "Il servait de frontière"],
+        "answer": "Ses crues fertilisaient les terres"
+      },
+      {
+        "question": "Quelle est la seule merveille du monde antique encore debout ?",
+        "options": ["Le Colosse de Rhodes", "Les Jardins de Babylone", "La Pyramide de Khéops", "Le Phare d'Alexandrie"],
+        "answer": "La Pyramide de Khéops"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Grèce Antique : La Démocratie Beta",
+    "emoji": "🏛️",
+    "isBoss": false,
+    "contextCheck": "La Grèce antique, c'est le labo R&D de la civilisation occidentale. Démocratie, philosophie, théâtre, Jeux Olympiques, maths — tout a été inventé ou perfectionné par ces mecs entre le VIIIe et le IVe siècle av. J.-C. Version beta de tout ce qu'on connaît.",
+    "topoNoCap": "Athènes invente la démocratie vers -508 grâce à Clisthène : pour la première fois, les citoyens (hommes libres, pas les femmes ni les esclaves — c'était la beta, y'avait des bugs) votent les lois. Sparte, de l'autre côté, c'est le clan full PvP : des guerriers entraînés dès l'enfance, zéro chill. Les Jeux Olympiques commencent en -776 à Olympie — le premier tournoi esport mais en vrai. Côté cerveau, t'as Socrate, Platon et Aristote qui inventent la philo. Pythagore pose les maths. Hippocrate lance la médecine (serment d'Hippocrate, les médecins le prêtent encore). Et les Guerres Médiques (-490 à -479) où les Grecs repoussent l'Empire Perse malgré un ratio 1 contre 10 — Marathon et les Thermopyles, les clutchs les plus légendaires de l'Antiquité.",
+    "cheatCodes": "Démocratie athénienne = Clisthène, ~-508 (mais que pour les hommes libres) • Premiers JO en -776 à Olympie • Socrate → Platon → Aristote = la chaîne de la philo • Marathon (-490) et Thermopyles (-480) = victoires grecques vs Perse",
+    "quiz": [
+      {
+        "question": "Qui est considéré comme le père de la démocratie athénienne ?",
+        "options": ["Périclès", "Socrate", "Clisthène", "Alexandre"],
+        "answer": "Clisthène"
+      },
+      {
+        "question": "En quelle année ont lieu les premiers Jeux Olympiques ?",
+        "options": ["-1000", "-776", "-508", "-490"],
+        "answer": "-776"
+      },
+      {
+        "question": "Quelle cité grecque était réputée pour ses guerriers ?",
+        "options": ["Athènes", "Corinthe", "Thèbes", "Sparte"],
+        "answer": "Sparte"
+      },
+      {
+        "question": "Quel philosophe est le maître de Platon ?",
+        "options": ["Aristote", "Pythagore", "Socrate", "Hippocrate"],
+        "answer": "Socrate"
+      },
+      {
+        "question": "Quelle bataille a donné son nom à une course de 42 km ?",
+        "options": ["Thermopyles", "Salamine", "Marathon", "Platées"],
+        "answer": "Marathon"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "BOSS — Alexandre le Grand : Le Speedrun Mondial",
+    "emoji": "⚔️",
+    "isBoss": true,
+    "contextCheck": "Alexandre III de Macédoine, alias Alexandre le Grand, c'est le speedrunner de l'Antiquité. En 13 ans (de -336 à -323), il a conquis un empire de la Grèce à l'Inde. Mort à 32 ans. Le grind le plus intense de l'Histoire.",
+    "topoNoCap": "Fils de Philippe II de Macédoine, Alexandre a été formé par Aristote himself — imagine avoir le meilleur tuteur du monde. À 20 ans, il devient roi après l'assassinat de son père. À 25 ans, il a déjà battu l'Empire Perse de Darius III (le plus gros empire du monde à l'époque) aux batailles d'Issos et de Gaugamèles. Il fonde Alexandrie en Égypte, qui deviendra la plus grande bibliothèque du monde antique. Il pousse jusqu'en Inde mais ses troupes en ont marre et refusent d'aller plus loin — le premier rage quit collectif. Il meurt à Babylone en -323, probablement de fièvre (ou empoisonné, le mystère reste entier). Son empire est splitté en 3 entre ses généraux. Son héritage ? La diffusion de la culture grecque sur tout le monde connu : c'est l'époque hellénistique.",
+    "cheatCodes": "Alexandre = roi à 20 ans (-336), mort à 32 ans (-323) • Formé par Aristote • Batailles clés : Issos (-333) et Gaugamèles (-331) contre Darius III • A fondé Alexandrie en Égypte • Empire splitté en 3 après sa mort (période hellénistique)",
+    "quiz": [
+      {
+        "question": "Qui était le professeur d'Alexandre le Grand ?",
+        "options": ["Socrate", "Platon", "Aristote", "Pythagore"],
+        "answer": "Aristote"
+      },
+      {
+        "question": "À quel âge Alexandre est-il devenu roi ?",
+        "options": ["16 ans", "18 ans", "20 ans", "25 ans"],
+        "answer": "20 ans"
+      },
+      {
+        "question": "Quel empire Alexandre a-t-il vaincu ?",
+        "options": ["L'Empire Romain", "L'Empire Perse", "L'Empire Égyptien", "L'Empire Chinois"],
+        "answer": "L'Empire Perse"
+      },
+      {
+        "question": "Quelle ville célèbre Alexandre a-t-il fondée en Égypte ?",
+        "options": ["Le Caire", "Alexandrie", "Thèbes", "Memphis"],
+        "answer": "Alexandrie"
+      },
+      {
+        "question": "En quelle année Alexandre est-il mort ?",
+        "options": ["-356", "-333", "-323", "-301"],
+        "answer": "-323"
+      },
+      {
+        "question": "Quelle bataille décisive a eu lieu en -331 ?",
+        "options": ["Marathon", "Issos", "Gaugamèles", "Thermopyles"],
+        "answer": "Gaugamèles"
+      },
+      {
+        "question": "Pourquoi les troupes d'Alexandre ont-elles refusé d'avancer ?",
+        "options": ["Elles manquaient d'eau", "Elles étaient épuisées après des années de campagne", "Elles avaient peur des éléphants", "Elles voulaient rentrer à Sparte"],
+        "answer": "Elles étaient épuisées après des années de campagne"
+      },
+      {
+        "question": "Comment s'appelle le roi perse vaincu par Alexandre ?",
+        "options": ["Cyrus", "Xerxès", "Darius III", "Cambyse"],
+        "answer": "Darius III"
+      },
+      {
+        "question": "Qu'est-ce que l'époque hellénistique ?",
+        "options": ["Le règne d'Alexandre", "La période de diffusion de la culture grecque après Alexandre", "La guerre du Péloponnèse", "L'âge d'or d'Athènes"],
+        "answer": "La période de diffusion de la culture grecque après Alexandre"
+      },
+      {
+        "question": "Qui était le père d'Alexandre ?",
+        "options": ["Darius III", "Périclès", "Philippe II de Macédoine", "Léonidas"],
+        "answer": "Philippe II de Macédoine"
+      },
+      {
+        "question": "Où Alexandre est-il mort ?",
+        "options": ["Athènes", "Alexandrie", "Babylone", "Persépolis"],
+        "answer": "Babylone"
+      },
+      {
+        "question": "Jusqu'où Alexandre a-t-il poussé ses conquêtes ?",
+        "options": ["L'Espagne", "L'Afrique du Sud", "L'Inde", "La Chine"],
+        "answer": "L'Inde"
+      },
+      {
+        "question": "Quelle civilisation a inventé la démocratie, enseignée à Alexandre ?",
+        "options": ["Les Perses", "Les Romains", "Les Grecs", "Les Égyptiens"],
+        "answer": "Les Grecs"
+      },
+      {
+        "question": "En combien de parties l'empire d'Alexandre a-t-il été divisé ?",
+        "options": ["2", "3", "4", "5"],
+        "answer": "3"
+      },
+      {
+        "question": "Quel était le surnom d'Alexandre ?",
+        "options": ["Le Conquérant", "Le Grand", "Le Magnifique", "Le Terrible"],
+        "answer": "Le Grand"
+      }
+    ]
+  }
+]

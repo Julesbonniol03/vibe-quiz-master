@@ -71,24 +71,25 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Story Mode CTA */}
+      {/* Aventure CTA */}
       <Link
-        href="/story-mode"
+        href="/aventure"
         className="group relative block overflow-hidden rounded-2xl border border-purple-500/20 bg-gradient-to-r from-purple-500/[0.05] to-neon-cyan/[0.03] p-5 mb-8 hover:border-purple-500/40 transition-all hover:scale-[1.01] active:scale-[0.99]"
+        style={{ boxShadow: "0 0 20px rgba(168,85,247,0.1), 0 0 40px rgba(168,85,247,0.05)" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-cyan/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative flex items-center gap-4">
           <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl flex-shrink-0">
-            📖
+            🗺️
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-2 mb-0.5">
-              <span className="font-bold text-white text-sm">Story Mode</span>
+              <span className="font-bold text-white text-sm">AVENTURE</span>
               <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400 border border-purple-500/20">
-                NOUVEAU
+                30 NIVEAUX
               </span>
             </div>
-            <p className="text-slate-500 text-xs">L&apos;Odyssée de la Culture G — De Rome au Moyen-Âge</p>
+            <p className="text-slate-500 text-xs">De la Préhistoire à l&apos;Ère Numérique — Map S-Curve</p>
           </div>
           <span className="text-slate-700 group-hover:text-purple-400 group-hover:translate-x-1 transition-all text-lg">&rarr;</span>
         </div>
