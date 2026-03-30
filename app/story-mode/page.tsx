@@ -1,5 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
+import { Suspense } from "react";
 import StoryModeClient from "./StoryModeClient";
 
 const EXPERT_CATEGORIES = [
@@ -43,5 +44,9 @@ export const metadata = {
 export default function StoryModePage() {
   const levels = loadStoryLevels();
   const expertCategories = loadExpertCategories();
-  return <StoryModeClient levels={levels} expertCategories={expertCategories} />;
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="text-slate-500 text-sm">Chargement...</div></div>}>
+      <StoryModeClient levels={levels} expertCategories={expertCategories} />
+    </Suspense>
+  );
 }
