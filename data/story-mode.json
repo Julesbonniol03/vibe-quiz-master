@@ -515,5 +515,259 @@
         "answer": "La naissance de la méthode scientifique, base de toute la science moderne"
       }
     ]
+  },
+  {
+    "id": 16,
+    "title": "Les Lumières : Le Grand Update de la Pensée",
+    "brief": "XVIIIe siècle, l'Europe intellectuelle pète un câble — dans le bon sens. Voltaire, Rousseau, Montesquieu, Diderot : une bande de têtes pensantes qui ont décidé que la raison, c'était la seule vérité valable. Fini de croire sur parole, on réfléchit, on critique, on débat. Montesquieu invente la séparation des pouvoirs (l'ancêtre de notre démocratie moderne). Rousseau balance le Contrat Social : le peuple est souverain, le roi peut aller se rhabiller. Voltaire troll l'Église et les rois avec une ironie chirurgicale. Et Diderot compile tout ça dans l'Encyclopédie, le premier Wikipedia de l'histoire. Ce mouvement a posé les bases de la Révolution Française, de la démocratie américaine, et de nos droits fondamentaux. Le vrai soft power intellectuel du XVIIIe siècle.",
+    "visualDescription": "Une bibliothèque néon-punk flottante dans le vide cosmique. Des livres qui s'ouvrent et projettent des rayons de lumière cyan. Voltaire en mode cyberpunk avec une plume-stylet qui écrit en feu violet. L'Encyclopédie comme un écran holographique géant. Ambiance 'connaissance = pouvoir'.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
+    "quiz": [
+      {
+        "question": "Qui a théorisé la séparation des pouvoirs (exécutif, législatif, judiciaire) ?",
+        "options": ["Voltaire", "Rousseau", "Montesquieu", "Diderot"],
+        "answer": "Montesquieu"
+      },
+      {
+        "question": "Selon le Contrat Social de Rousseau, à qui appartient la souveraineté ?",
+        "options": ["Au roi de droit divin", "Au peuple", "À l'Église", "À la noblesse"],
+        "answer": "Au peuple"
+      },
+      {
+        "question": "Qui a dirigé la rédaction de l'Encyclopédie, le grand projet des Lumières ?",
+        "options": ["Voltaire", "Rousseau", "Montesquieu", "Diderot"],
+        "answer": "Diderot"
+      },
+      {
+        "question": "Quel philosophe des Lumières est célèbre pour sa défense de la tolérance religieuse ?",
+        "options": ["Descartes", "Voltaire", "Pascal", "Leibniz"],
+        "answer": "Voltaire"
+      },
+      {
+        "question": "Quel mouvement politique majeur les Lumières ont-elles directement inspiré ?",
+        "options": ["La Révolution industrielle", "La Révolution française de 1789", "La Contre-Réforme", "Le Romantisme"],
+        "answer": "La Révolution française de 1789"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "La Révolution Française : Game Over pour la Monarchie",
+    "brief": "14 juillet 1789. Un peuple affamé en a marre, et ça se voit. La prise de la Bastille, c'est le moment où le serveur du royaume crashe définitivement. Louis XVI et Marie-Antoinette (la reine du flex inutile pendant que le peuple crevait de faim) ont mal lu la situation. La Déclaration des Droits de l'Homme en août 1789, c'est le patch officiel de l'humanité : liberté, égalité, fraternité. Mais ça dérape vite. Robespierre et la Terreur (1793-1794) : des milliers de guillotinés, une révolution qui mange ses propres enfants. Robespierre lui-même finit à la guillotine — le ratio final. La Révolution a quand même changé le monde : fin de l'Ancien Régime, naissance de la démocratie moderne, et preuve qu'un peuple peut renverser ses dirigeants.",
+    "visualDescription": "La Bastille qui explose en pixels néon rouge et violet. Une guillotine chromée avec des reflets laser. La Déclaration des Droits de l'Homme comme un hologramme doré flottant. Des sans-culottes en streetwear révolutionnaire, drapeaux bleu-blanc-rouge qui brillent en LED. Ambiance chaos organisé.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a",
+    "quiz": [
+      {
+        "question": "Quelle date symbolise le début de la Révolution Française ?",
+        "options": ["4 août 1789", "14 juillet 1789", "26 août 1789", "5 mai 1789"],
+        "answer": "14 juillet 1789"
+      },
+      {
+        "question": "Quel bâtiment a été pris d'assaut le 14 juillet 1789 ?",
+        "options": ["Le Palais de Versailles", "Notre-Dame de Paris", "La Bastille", "Les Tuileries"],
+        "answer": "La Bastille"
+      },
+      {
+        "question": "Quelle est la devise de la République française, née de la Révolution ?",
+        "options": ["Dieu, Roi, Nation", "Liberté, Égalité, Fraternité", "Travail, Famille, Patrie", "Honneur, Patrie, Valeur"],
+        "answer": "Liberté, Égalité, Fraternité"
+      },
+      {
+        "question": "Qui a dirigé la période de la Terreur (1793-1794) ?",
+        "options": ["Louis XVI", "Danton", "Robespierre", "Marat"],
+        "answer": "Robespierre"
+      },
+      {
+        "question": "Comment s'appelle le texte fondateur des droits proclamé en août 1789 ?",
+        "options": ["Le Code Civil", "La Constitution de 1791", "La Déclaration des Droits de l'Homme et du Citoyen", "Le Manifeste du Peuple"],
+        "answer": "La Déclaration des Droits de l'Homme et du Citoyen"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Napoléon : Le Speedrun de l'Europe",
+    "brief": "Un gars de 1m69 qui a failli conquérir l'Europe entière. Napoléon Bonaparte, c'est le personnage de jeu en mode no-life qui a grindé jusqu'au rang maximum. Général à 24 ans, Consul à 30, Empereur à 35. Il a réécrit les codes de la guerre (stratégie de génie, l'armée la plus mobile de l'époque), redesigné la France (le Code Napoléon, base de nos lois actuelles), et humilié toutes les grandes puissances européennes. Son run s'est terminé sur deux fails épiques : la campagne de Russie de 1812 (aller en Russie en hiver — le plus gros skill issue de l'histoire militaire) et Waterloo en 1815. Exilé à Sainte-Hélène, il est mort en 1821. Mais son héritage juridique, administratif et militaire a façonné la France moderne. Le speedrun le plus fou de l'histoire.",
+    "visualDescription": "Napoléon en armure cyberpunk dorée sur fond de carte d'Europe holographique. Des flèches de conquête qui s'étendent comme un virus sur la map. Couronne néon violette et or. Waterloo en arrière-plan en flammes violettes. Ambiance epic boss fight solo contre l'Europe entière.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    "quiz": [
+      {
+        "question": "Quel titre Napoléon s'est-il attribué en 1804 ?",
+        "options": ["Consul à vie", "Roi de France", "Empereur des Français", "Dictateur de la République"],
+        "answer": "Empereur des Français"
+      },
+      {
+        "question": "Quelle grande erreur stratégique a signé le début de la fin pour Napoléon ?",
+        "options": ["La bataille d'Austerlitz", "L'invasion de la Russie en 1812", "La bataille de Trafalgar", "La campagne d'Égypte"],
+        "answer": "L'invasion de la Russie en 1812"
+      },
+      {
+        "question": "Quelle bataille a définitivement mis fin au règne de Napoléon ?",
+        "options": ["Iéna", "Austerlitz", "Waterloo", "Borodino"],
+        "answer": "Waterloo"
+      },
+      {
+        "question": "Quel est l'héritage juridique majeur de Napoléon encore utilisé aujourd'hui ?",
+        "options": ["La Constitution de 1793", "Le Code Napoléon (Code Civil)", "La Déclaration des Droits de l'Homme", "Le Traité de Tilsit"],
+        "answer": "Le Code Napoléon (Code Civil)"
+      },
+      {
+        "question": "Où Napoléon a-t-il été exilé après Waterloo ?",
+        "options": ["L'île d'Elbe", "La Corse", "Sainte-Hélène", "L'île de Ré"],
+        "answer": "Sainte-Hélène"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "La Révolution Industrielle : Le DLC Vapeur & Charbon",
+    "brief": "XVIIIe-XIXe siècle, l'Angleterre lance le plus gros update de l'histoire économique. James Watt améliore la machine à vapeur et change le monde à jamais. Les usines remplacent les champs. Les villes explosent — Manchester passe de village à mégapole en 50 ans. Les enfants bossent dans les mines à 8 ans, l'époque la plus dark de la modernité. Le chemin de fer connecte les pays comme le premier internet physique. La bourgeoisie industrielle monte en puissance, le prolétariat souffre et s'organise. Marx et Engels observent tout ça et pondent le Manifeste Communiste (1848) : le débrief le plus influent du capitalisme. En 100 ans, l'humanité produit plus de richesses que dans les 10 000 ans précédents — mais la distribution est catastrophique. Le game changer absolu qui a créé notre monde moderne.",
+    "visualDescription": "Des usines victoriennes en néon steampunk — cheminées qui crachent de la fumée cyan et violette. Des trains à vapeur sur des rails qui brillent en or. Des ouvriers en tenues d'époque avec des visages éclairés d'écrans. Engrenages géants en arrière-plan. Ambiance révolution mécanique dark mode.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    "quiz": [
+      {
+        "question": "Qui a perfectionné la machine à vapeur de façon décisive à la fin du XVIIIe siècle ?",
+        "options": ["Isaac Newton", "James Watt", "George Stephenson", "Charles Darwin"],
+        "answer": "James Watt"
+      },
+      {
+        "question": "Dans quel pays la Révolution Industrielle a-t-elle démarré en premier ?",
+        "options": ["France", "Allemagne", "États-Unis", "Angleterre"],
+        "answer": "Angleterre"
+      },
+      {
+        "question": "Quel ouvrage Marx et Engels ont-ils publié en 1848 ?",
+        "options": ["Das Kapital", "Le Manifeste Communiste", "L'Origine des Espèces", "La Richesse des Nations"],
+        "answer": "Le Manifeste Communiste"
+      },
+      {
+        "question": "Quelle invention a révolutionné les transports terrestres pendant la Révolution Industrielle ?",
+        "options": ["L'automobile", "Le tramway électrique", "Le chemin de fer à vapeur", "Le canal artificiel"],
+        "answer": "Le chemin de fer à vapeur"
+      },
+      {
+        "question": "Quel terme désigne la classe ouvrière exploitée selon Marx ?",
+        "options": ["La bourgeoisie", "L'aristocratie", "Le prolétariat", "La plèbe"],
+        "answer": "Le prolétariat"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "1848 : Le Printemps des Peuples",
+    "brief": "1848, l'Europe tremble. En quelques semaines, des révolutions éclatent dans une cinquantaine de pays — France, Allemagne, Autriche, Italie, Hongrie. C'est le plus grand mouvement révolutionnaire simultané de l'histoire. La cause ? Un combo explosif : misère ouvrière post-Révolution Industrielle, nationalisme montant, et idées libérales des Lumières qui fermentent depuis 60 ans. En France, c'est la IIe République, et Louis-Napoléon Bonaparte (neveu du célèbre Napoléon) est élu président. Mais la plupart des révolutions sont écrasées en quelques mois — les élites se ressaisissent, les armées reprennent le contrôle. Un fail collectif ? Pas vraiment. Ces révolutions ont accéléré la fin du féodalisme, posé les bases des droits sociaux, et planté les graines des États-nations modernes. Le crash qui a préparé le futur.",
+    "visualDescription": "Des barricades parisiennes en néon rouge et or. Des drapeaux de dix nations différentes qui flottent dans le même ciel de feu. Des ouvriers et étudiants en tenues d'époque coordonnant la révolution sur des tablettes holographiques. Ambiance soulèvement mondial synchronisé, dark mode révolutionnaire.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2",
+    "quiz": [
+      {
+        "question": "En quelle année a eu lieu le 'Printemps des Peuples' ?",
+        "options": ["1830", "1848", "1871", "1789"],
+        "answer": "1848"
+      },
+      {
+        "question": "Combien de pays environ ont été touchés par les révolutions de 1848 ?",
+        "options": ["10 pays", "25 pays", "Une cinquantaine", "5 pays"],
+        "answer": "Une cinquantaine"
+      },
+      {
+        "question": "Qui est élu président de la IIe République française en 1848 ?",
+        "options": ["Victor Hugo", "Louis-Napoléon Bonaparte", "Adolphe Thiers", "Alphonse de Lamartine"],
+        "answer": "Louis-Napoléon Bonaparte"
+      },
+      {
+        "question": "Quel texte marxiste majeur a été publié peu avant les révolutions de 1848 ?",
+        "options": ["Das Kapital", "Le Manifeste Communiste", "L'Origine des Espèces", "Le Contrat Social"],
+        "answer": "Le Manifeste Communiste"
+      },
+      {
+        "question": "Quelle est la principale cause de l'échec des révolutions de 1848 ?",
+        "options": ["Un manque de soutien populaire", "Des épidémies qui ont décimé les révolutionnaires", "La répression militaire par les élites", "Des désaccords insurmontables entre révolutionnaires"],
+        "answer": "La répression militaire par les élites"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "⚡ BOSS : Lumières, Révolutions & Ère Napoléonienne",
+    "brief": "Arc 2 terminé. C'est le boss fight. De Voltaire à 1848, tu as traversé 200 ans de bouleversements qui ont créé le monde moderne. Les Lumières ont fourni les idées, la Révolution Française a renversé les trônes, Napoléon a redessiné les cartes, la Révolution Industrielle a transformé l'économie, et 1848 a prouvé que les peuples pouvaient s'organiser à l'échelle mondiale. 15 questions. Pas de pitié. Si t'as tout suivi, t'as les keys. Sinon, retourne aux Lumières et recommence. GG à ceux qui passent.",
+    "visualDescription": "Une arène cyberpunk épique avec les figures de chaque époque en hologramme : Voltaire avec sa plume-laser, Robespierre devant une guillotine néon, Napoléon à cheval holographique, une machine à vapeur géante crachant de la vapeur cyan, et des drapeaux révolutionnaires de 20 nations. Dark mode violet et or. BOSS MUSIC INTENSIFIES.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    "quiz": [
+      {
+        "question": "Qui a théorisé la séparation des pouvoirs exécutif, législatif et judiciaire ?",
+        "options": ["Voltaire", "Rousseau", "Montesquieu", "Diderot"],
+        "answer": "Montesquieu"
+      },
+      {
+        "question": "Quel grand projet encyclopédique a compilé le savoir des Lumières ?",
+        "options": ["Le Dictionnaire de l'Académie", "L'Encyclopédie de Diderot et d'Alembert", "La Somme Théologique", "La Bibliothèque Nationale"],
+        "answer": "L'Encyclopédie de Diderot et d'Alembert"
+      },
+      {
+        "question": "Selon Rousseau, à qui appartient la souveraineté politique ?",
+        "options": ["Au roi de droit divin", "À l'Église", "Au peuple", "Aux philosophes"],
+        "answer": "Au peuple"
+      },
+      {
+        "question": "Quelle date symbolise le déclenchement de la Révolution Française ?",
+        "options": ["4 août 1789", "26 août 1789", "14 juillet 1789", "5 mai 1789"],
+        "answer": "14 juillet 1789"
+      },
+      {
+        "question": "Qui a dirigé la Terreur et a lui-même fini guillotiné en 1794 ?",
+        "options": ["Danton", "Marat", "Robespierre", "Saint-Just"],
+        "answer": "Robespierre"
+      },
+      {
+        "question": "Quelle est la devise républicaine issue de la Révolution Française ?",
+        "options": ["Dieu, Roi, Nation", "Liberté, Égalité, Fraternité", "Travail, Famille, Patrie", "Justice, Vérité, Progrès"],
+        "answer": "Liberté, Égalité, Fraternité"
+      },
+      {
+        "question": "Quel titre Napoléon a-t-il pris en 1804 ?",
+        "options": ["Consul à vie", "Roi de France", "Empereur des Français", "Président de la République"],
+        "answer": "Empereur des Français"
+      },
+      {
+        "question": "Quelle erreur fatale a précipité la chute de Napoléon dès 1812 ?",
+        "options": ["La défaite à Trafalgar", "L'invasion de la Russie en hiver", "La révolte de Paris", "La perte de l'Égypte"],
+        "answer": "L'invasion de la Russie en hiver"
+      },
+      {
+        "question": "Quel code juridique napoléonien est encore en vigueur aujourd'hui ?",
+        "options": ["Le Code Pénal de 1810", "Le Code Napoléon (Code Civil)", "La Constitution de l'An VIII", "Le Concordat de 1801"],
+        "answer": "Le Code Napoléon (Code Civil)"
+      },
+      {
+        "question": "Où Napoléon a-t-il été définitivement exilé après Waterloo (1815) ?",
+        "options": ["L'île d'Elbe", "La Corse", "Sainte-Hélène", "La Martinique"],
+        "answer": "Sainte-Hélène"
+      },
+      {
+        "question": "Qui a perfectionné la machine à vapeur, déclenchant la Révolution Industrielle ?",
+        "options": ["George Stephenson", "James Watt", "Richard Arkwright", "Isambard Kingdom Brunel"],
+        "answer": "James Watt"
+      },
+      {
+        "question": "Dans quel pays la Révolution Industrielle a-t-elle démarré ?",
+        "options": ["France", "Belgique", "Angleterre", "Prusse"],
+        "answer": "Angleterre"
+      },
+      {
+        "question": "Quel concept Marx oppose à la bourgeoisie dans sa théorie des classes ?",
+        "options": ["Le lumpenproletariat", "Le prolétariat", "La paysannerie", "L'intelligentsia"],
+        "answer": "Le prolétariat"
+      },
+      {
+        "question": "Combien de pays environ ont connu des révolutions lors du Printemps des Peuples de 1848 ?",
+        "options": ["10", "20", "50", "100"],
+        "answer": "50"
+      },
+      {
+        "question": "Qui a été élu président de la IIe République française après les révolutions de 1848 ?",
+        "options": ["Alphonse de Lamartine", "Victor Hugo", "Louis-Napoléon Bonaparte", "Adolphe Thiers"],
+        "answer": "Louis-Napoléon Bonaparte"
+      }
+    ]
   }
 ]
