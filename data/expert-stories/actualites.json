@@ -1,171 +1,296 @@
 [
   {
     "id": 1,
-    "title": "La Chute du Mur de Berlin : Le Boss Final de la Guerre Froide",
-    "brief": "9 novembre 1989. Des millions de gens regardent la télé et n'en croient pas leurs yeux : des Allemands de l'Est tapent le Mur de Berlin à coups de marteau et passent à l'Ouest. Game over pour la Guerre Froide. Comment on en est arrivé là ? Mikhaïl Gorbatchev, secrétaire général de l'URSS depuis 1985, lance deux concepts révolutionnaires : la Glasnost (transparence) et la Perestroïka (restructuration). Il veut réformer le système soviétique, pas le tuer — mais il le tue quand même. Les pays satellites d'Europe de l'Est sautent sur l'occasion : Pologne, Hongrie, Tchécoslovaquie, RDA. Le Mur était là depuis 1961, symbole ultime de la division du monde en deux blocs. Sa chute entraîne la réunification de l'Allemagne le 3 octobre 1990, puis la dissolution officielle de l'URSS le 25 décembre 1991. Boris Eltsine monte sur un char à Moscou. L'empire s'effondre. Un achievement débloqué par une population entière qui a dit non.",
-    "visualDescription": "Le Mur de Berlin qui s'effondre en fragments lumineux cyan et magenta néon. Des foules en silhouettes qui passent à travers les brèches illuminées. Gorbatchev en portrait holographique avec ses réformes comme des lignes de code. La carte de l'Europe qui se redessine en temps réel sur un écran géant. Ambiance fin d'empire cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1587825045191-bc29e65fcb7f",
+    "title": "Les Institutions Mondiales 🌐 — Le Mode d'Emploi du Monde",
+    "brief": "Imagine un OS pour planète entière : c'est un peu ce que sont les grandes institutions internationales. L'ONU, créée en 1945 sur les ruines de la Seconde Guerre Mondiale, c'est le premier vrai système d'exploitation multilatéral de l'histoire — conçu pour éviter qu'on refasse les mêmes erreurs catastrophiques. Avec 193 États membres aujourd'hui, c'est le forum politique le plus inclusif qui ait jamais existé.\n\nL'Union Européenne, elle, est un projet encore plus ambitieux : faire fusionner des nations qui se sont battues pendant des siècles dans un espace commun de paix, de commerce et de droit. Le marché unique, l'euro, la libre circulation — c'est un hack géopolitique sans précédent. Le G7 joue un rôle différent : c'est le groupe de discussion des sept économies les plus avancées, une sorte de réunion de conseil d'administration pour les grandes orientations mondiales.\n\nLe FMI et la Banque Mondiale complètent le tableau en gérant la plomberie financière internationale. Le FMI, c'est l'équivalent d'une banque centrale mondiale — il surveille les monnaies, prête en urgence aux pays en crise, un peu comme un service de dépannage financier disponible 24h/24. Comprendre ces institutions, c'est comprendre les règles du jeu qui régissent presque toutes les décisions politiques mondiales.",
+    "visualDescription": "Un globe terrestre holographique suspendu dans un espace cyberpunk, avec des lignes de connexion néon reliant les capitales mondiales. Les logos stylisés de l'ONU, de l'UE et du FMI apparaissent en bleu électrique et argent. Des flux de données représentant les échanges diplomatiques et financiers tourbillonnent autour du globe comme une aurore boréale numérique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle date est retenue pour la chute du Mur de Berlin ?",
-        "options": ["3 octobre 1990", "9 novembre 1989", "25 décembre 1991", "13 août 1961"],
-        "answer": "9 novembre 1989"
+        "question": "En quelle année l'Organisation des Nations Unies (ONU) a-t-elle été officiellement fondée ?",
+        "options": [
+          "1919",
+          "1939",
+          "1945",
+          "1948"
+        ],
+        "answer": "1945"
       },
       {
-        "question": "Quels sont les deux concepts de réforme lancés par Gorbatchev pour moderniser l'URSS ?",
-        "options": ["Détente et Ostpolitik", "Glasnost et Perestroïka", "Solidarité et Liberté", "Démocratie et Capitalisme"],
-        "answer": "Glasnost et Perestroïka"
+        "question": "Combien d'États membres composent actuellement l'ONU ?",
+        "options": [
+          "150",
+          "167",
+          "193",
+          "201"
+        ],
+        "answer": "193"
       },
       {
-        "question": "En quelle année l'Allemagne a-t-elle été officiellement réunifiée après la chute du Mur ?",
-        "options": ["1989", "1991", "1990", "1992"],
-        "answer": "1990"
+        "question": "Quel est le rôle principal du Fonds Monétaire International (FMI) ?",
+        "options": [
+          "Financer les projets d'infrastructure dans les pays pauvres",
+          "Promouvoir la stabilité financière internationale et aider les pays en crise",
+          "Réguler le commerce international des marchandises",
+          "Superviser les accords militaires entre nations"
+        ],
+        "answer": "Promouvoir la stabilité financière internationale et aider les pays en crise"
       },
       {
-        "question": "Quand l'Union soviétique a-t-elle officiellement été dissoute ?",
-        "options": ["9 novembre 1989", "3 octobre 1990", "25 décembre 1991", "1er janvier 1993"],
-        "answer": "25 décembre 1991"
+        "question": "Quel traité, signé en 1992, est à la base de la création de l'Union Européenne telle qu'on la connaît ?",
+        "options": [
+          "Le Traité de Rome",
+          "Le Traité de Lisbonne",
+          "Le Traité de Maastricht",
+          "Le Traité de Paris"
+        ],
+        "answer": "Le Traité de Maastricht"
       },
       {
-        "question": "En quelle année le Mur de Berlin avait-il été construit pour séparer l'Est et l'Ouest ?",
-        "options": ["1945", "1953", "1961", "1968"],
-        "answer": "1961"
+        "question": "Quels pays composent le G7 (Groupe des Sept) ?",
+        "options": [
+          "USA, Chine, Russie, Inde, Brésil, Japon, Allemagne",
+          "USA, Canada, Royaume-Uni, France, Allemagne, Italie, Japon",
+          "USA, France, Allemagne, Chine, Japon, Russie, Australie",
+          "USA, Canada, Mexique, France, Allemagne, Italie, Espagne"
+        ],
+        "answer": "USA, Canada, Royaume-Uni, France, Allemagne, Italie, Japon"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Le 11 Septembre 2001 : Le Jour où le Monde a Changé de Save File",
-    "brief": "11 septembre 2001, 8h46 heure locale. Un Boeing 767 s'écrase dans la Tour Nord du World Trade Center à New York. Le monde entier croit à un accident. Dix-sept minutes plus tard, un second avion percute la Tour Sud en direct devant des millions de téléspectateurs. Ce ne sont pas des accidents — ce sont des attentats. Al-Qaïda, l'organisation dirigée par Oussama Ben Laden depuis l'Afghanistan sous régime taliban, revendique les attaques. Bilan : 2 977 morts. Conséquences immédiates : l'article 5 de l'OTAN — attaque contre un, attaque contre tous — est invoqué pour la première fois de son histoire. Les États-Unis envahissent l'Afghanistan en octobre 2001 pour renverser les Talibans et chasser Al-Qaïda. En 2003, c'est l'Irak qui est attaqué, dans le contexte de la Guerre contre le Terrorisme. Le Patriot Act, Guantánamo, la surveillance de masse généralisée. Le monde post-11 septembre est une autre map — et on joue encore dessus.",
-    "visualDescription": "La skyline de Manhattan en silhouette néon avec deux colonnes de lumière blanche s'élevant vers le ciel. Un aigle américain holographique sur fond de carte du Moyen-Orient en rouge. Des écrans de surveillance et des flux d'actualités en boucle. L'icône de l'OTAN qui s'allume pour la première fois. Ambiance thriller géopolitique cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1568827999250-2aef98500e08",
+    "title": "Les Grandes Crises du XXIe Siècle 🌊 — Quand le Monde Bascule",
+    "brief": "Le XXIe siècle a à peine démarré qu'il nous a déjà offert plusieurs chocs mondiaux d'une ampleur historique. Le 11 septembre 2001, c'est le moment où le monde a compris que la menace sécuritaire avait changé de nature — plus d'armée conventionnelle en face, mais des cellules décentralisées capables de frapper au cœur des superpuissances. Le monde d'avant et le monde d'après, avec une ligne de fracture nette entre les deux.\n\nLa crise financière de 2008, c'est l'autre grande rupture : un système financier tellement interconnecté qu'une bulle immobilière américaine a déclenché une récession mondiale en quelques semaines. Les prêts subprimes, les produits financiers toxiques, les banques « too big to fail » — c'est un bug dans le code du capitalisme mondial qui a coûté des millions d'emplois et des années de croissance. Le genre de crash système qui remet tout à plat.\n\nEt puis il y a le COVID-19, la crise la plus globale et la plus simultanée de l'histoire moderne. Pour la première fois, presque tous les pays du monde ont vécu la même expérience au même moment : confinements, masques, vaccins express, télétravail de masse. En moins de deux ans, l'humanité a produit plusieurs vaccins efficaces — un record absolu qui illustre ce que la science peut faire quand toutes les ressources mondiales sont mobilisées.",
+    "visualDescription": "Une timeline holographique fracturée affichant les grandes crises mondiales, chaque événement représenté par une explosion de données en rouge et orange sur fond noir. Des graphiques boursiers en chute libre côtoient des cartes de propagation virale en temps réel. L'esthétique de salle de crise high-tech se mêle à des éléments d'architecture urbaine en ruines illuminées au néon.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=800&q=80",
     "quiz": [
       {
-        "question": "Combien de personnes ont perdu la vie lors des attentats du 11 septembre 2001 ?",
-        "options": ["1 200", "2 977", "4 500", "800"],
-        "answer": "2 977"
-      },
-      {
-        "question": "Quelle organisation terroriste a planifié et revendiqué les attentats du 11 septembre ?",
-        "options": ["Daech (État islamique)", "Hamas", "Al-Qaïda", "Les Talibans"],
+        "question": "Quel groupe terroriste a revendiqué les attaques du 11 septembre 2001 aux États-Unis ?",
+        "options": [
+          "l'État islamique (Daech)",
+          "Al-Qaïda",
+          "le Hamas",
+          "les Taliban"
+        ],
         "answer": "Al-Qaïda"
       },
       {
-        "question": "Quel article de l'OTAN, invoqué pour la première fois de son histoire, stipule qu'une attaque contre un membre est une attaque contre tous ?",
-        "options": ["Article 1", "Article 3", "Article 5", "Article 7"],
-        "answer": "Article 5"
+        "question": "Qu'est-ce qu'un « subprime » au cœur de la crise financière de 2008 ?",
+        "options": [
+          "Un bon du Trésor américain à taux élevé",
+          "Un prêt immobilier accordé à des emprunteurs peu solvables à taux variable",
+          "Un produit dérivé lié aux matières premières",
+          "Une obligation d'entreprise à haut rendement"
+        ],
+        "answer": "Un prêt immobilier accordé à des emprunteurs peu solvables à taux variable"
       },
       {
-        "question": "Quel pays a été envahi par les États-Unis en octobre 2001, directement après les attentats ?",
-        "options": ["Irak", "Iran", "Afghanistan", "Pakistan"],
-        "answer": "Afghanistan"
+        "question": "En quelle année la pandémie de COVID-19 a-t-elle été déclarée officiellement par l'OMS ?",
+        "options": [
+          "2019",
+          "2020",
+          "2021",
+          "2022"
+        ],
+        "answer": "2020"
       },
       {
-        "question": "Quel chef d'Al-Qaïda était le commanditaire des attentats du 11 septembre 2001 ?",
-        "options": ["Al-Zarkaoui", "Al-Baghdadi", "Oussama Ben Laden", "Ayman Al-Zawahiri"],
-        "answer": "Oussama Ben Laden"
+        "question": "Quelle banque d'investissement américaine, l'une des plus grandes du monde, a fait faillite en septembre 2008 ?",
+        "options": [
+          "Goldman Sachs",
+          "Morgan Stanley",
+          "Lehman Brothers",
+          "Citibank"
+        ],
+        "answer": "Lehman Brothers"
+      },
+      {
+        "question": "Quel vaccin contre le COVID-19, développé en un temps record, utilise la technologie ARN messager (ARNm) ?",
+        "options": [
+          "AstraZeneca",
+          "Pfizer-BioNTech",
+          "Sputnik V",
+          "Janssen"
+        ],
+        "answer": "Pfizer-BioNTech"
       }
     ]
   },
   {
     "id": 3,
-    "title": "La Crise Financière de 2008 : Le Blue Screen of Death du Capitalisme",
-    "brief": "2008. Le système financier mondial crash comme un vieux PC en fin de vie. L'origine ? Les subprimes — des prêts immobiliers accordés à des ménages américains qui ne pouvaient pas se les payer, transformés en produits financiers complexes (les fameux CDO) et revendus à des banques du monde entier comme des actifs sûrs. Tout repose sur une hypothèse folle : les prix de l'immobilier ne baisseront jamais. Spoiler : ils baissent. En septembre 2008, Lehman Brothers, l'une des plus grandes banques d'investissement au monde avec 639 milliards de dollars d'actifs, fait faillite. Panique totale. Les marchés s'effondrent, le crédit se fige, les entreprises ne peuvent plus emprunter. Résultat : la pire récession mondiale depuis 1929. Les gouvernements injectent des milliers de milliards pour sauver les banques — trop grosses pour faillir. En France, le chômage grimpe, les ménages trinquent. Et certains traders qui ont causé la crise reçoivent quand même leurs bonus. Le monde a sauté, mais les DLC ont été facturés aux contribuables.",
-    "visualDescription": "Une salle de trading à Wall Street en néon rouge sang avec des graphiques qui s'effondrent en cascade. Le logo de Lehman Brothers qui explose en pixels. Des billets de dollars qui tombent comme de la neige dans une ville cyberpunk. Des écrans d'ordinateur en Blue Screen of Death. Des banquiers en silhouettes qui regardent les chiffres plonger. Ambiance krach financier dystopique.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "title": "L'Environnement & le Changement Climatique 🌿 — La Crise qui Change Tout",
+    "brief": "Le changement climatique, c'est la mise à jour forcée du système Terre que personne n'a commandée. Le GIEC (Groupe d'experts Intergouvernemental sur l'Évolution du Climat) joue le rôle de moteur de recherche scientifique planétaire : il agrège les travaux de milliers de chercheurs et produit des rapports qui font autorité mondiale. Quand le GIEC publie, les gouvernements et les marchés écoutent.\n\nL'Accord de Paris de 2015, c'est le patch de sécurité que la communauté internationale a essayé d'appliquer. L'objectif : limiter le réchauffement à 1,5°C par rapport aux niveaux préindustriels. Facile à dire, titanesque à faire. Cela implique de réorienter des billions de dollars d'investissements, de transformer des systèmes énergétiques construits sur 150 ans de pétrole et de charbon, et de changer des habitudes de consommation ancrées dans les modes de vie modernes.\n\nLes chiffres sont là et ils ne mentent pas : la décennie 2011-2020 est la plus chaude jamais enregistrée, le niveau des mers monte à un rythme accéléré, et les événements météorologiques extrêmes se multiplient. La bonne nouvelle ? Les énergies renouvelables ne sont plus une utopie marginale — le solaire et l'éolien sont désormais les sources d'énergie les moins chères à construire dans la plupart des régions du monde.",
+    "visualDescription": "Une Terre vue depuis l'espace divisée en deux : d'un côté une planète verdoyante et bleue, de l'autre une surface aride traversée de fissures incandescentes en orange néon. Des graphiques de température en hologramme montent en spirale autour de la planète. Des panneaux solaires et éoliennes futuristes émergent d'un paysage post-industriel illuminé en vert électrique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle grande banque américaine a fait faillite en septembre 2008, déclenchant la panique financière mondiale ?",
-        "options": ["Goldman Sachs", "Citigroup", "Lehman Brothers", "JPMorgan Chase"],
-        "answer": "Lehman Brothers"
+        "question": "Quel est l'objectif principal de l'Accord de Paris sur le climat, signé en 2015 ?",
+        "options": [
+          "Éliminer totalement les émissions de CO2 d'ici 2030",
+          "Limiter le réchauffement climatique bien en dessous de 2°C, idéalement 1,5°C",
+          "Créer un marché mondial unique du carbone",
+          "Interdire les énergies fossiles d'ici 2050"
+        ],
+        "answer": "Limiter le réchauffement climatique bien en dessous de 2°C, idéalement 1,5°C"
       },
       {
-        "question": "Que sont les 'subprimes' à l'origine de la crise de 2008 ?",
-        "options": ["Des obligations d'État américaines à haut rendement", "Des prêts immobiliers à risque accordés à des emprunteurs peu solvables", "Des actions technologiques surévaluées", "Des contrats pétroliers spéculatifs"],
-        "answer": "Des prêts immobiliers à risque accordés à des emprunteurs peu solvables"
+        "question": "Que signifie l'acronyme GIEC ?",
+        "options": [
+          "Groupe International des Experts en Climatologie",
+          "Groupement Intergouvernemental pour l'Environnement et le Climat",
+          "Groupe d'experts Intergouvernemental sur l'Évolution du Climat",
+          "Grand Institut Européen du Changement climatique"
+        ],
+        "answer": "Groupe d'experts Intergouvernemental sur l'Évolution du Climat"
       },
       {
-        "question": "Comment s'appellent les produits financiers complexes dans lesquels les subprimes étaient regroupés et revendus à des banques du monde entier ?",
-        "options": ["ETF (Exchange Traded Funds)", "Actions préférentielles", "CDO (Collateralized Debt Obligations)", "Futures sur matières premières"],
-        "answer": "CDO (Collateralized Debt Obligations)"
+        "question": "Quel gaz à effet de serre, principalement issu des élevages et de la décomposition des déchets, est 80 fois plus puissant que le CO2 sur 20 ans ?",
+        "options": [
+          "Le protoxyde d'azote (N2O)",
+          "L'ozone (O3)",
+          "Le méthane (CH4)",
+          "Les CFC"
+        ],
+        "answer": "Le méthane (CH4)"
       },
       {
-        "question": "À quelle précédente grande crise économique la récession de 2008 est-elle le plus souvent comparée ?",
-        "options": ["La crise pétrolière de 1973", "La Grande Dépression de 1929", "La crise asiatique de 1997", "La crise des dot-com de 2000"],
-        "answer": "La Grande Dépression de 1929"
+        "question": "En quelle année a été créé le GIEC ?",
+        "options": [
+          "1972",
+          "1980",
+          "1988",
+          "1992"
+        ],
+        "answer": "1988"
       },
       {
-        "question": "Quelle mesure d'urgence exceptionnelle les gouvernements ont-ils prise pour éviter l'effondrement total du système bancaire ?",
-        "options": ["La fermeture des marchés boursiers pendant 6 mois", "La nationalisation de toutes les banques privées", "L'injection massive d'argent public pour sauver les banques (plans de sauvetage)", "Le retour à l'étalon-or"],
-        "answer": "L'injection massive d'argent public pour sauver les banques (plans de sauvetage)"
+        "question": "Quel grand pays émetteur de CO2 a choisi de se retirer de l'Accord de Paris en 2017, avant d'y réadhérer en 2021 ?",
+        "options": [
+          "La Russie",
+          "La Chine",
+          "l'Australie",
+          "les États-Unis"
+        ],
+        "answer": "les États-Unis"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Le Printemps Arabe : Twitter et Facebook comme Armes de Révolution",
-    "brief": "Décembre 2010. Mohamed Bouazizi, vendeur ambulant tunisien, s'immole par le feu après s'être fait confisquer sa marchandise par la police. Son geste déclenche une révolte qui va embraser tout le monde arabe — le premier soulèvement de masse de l'ère des réseaux sociaux. La Tunisie tombe d'abord : Ben Ali, dictateur depuis 23 ans, fuit en Arabie Saoudite le 14 janvier 2011. Puis l'Égypte : Hosni Moubarak, 30 ans de règne, chassé par des millions de manifestants place Tahrir après 18 jours de mobilisation. La Libye : Mouammar Kadhafi renversé et tué après une guerre civile. La Syrie bascule dans un conflit qui va durer des décennies. Le game changer ? Facebook et Twitter permettent d'organiser les manifestations en temps réel, contournant les médias d'État contrôlés. Certains gouvernements coupent internet — trop tard. C'est la première révolution coordonnée sur les réseaux sociaux. GG WP aux peuples qui ont osé.",
-    "visualDescription": "La place Tahrir au Caire en pleine révolution, des foules comme des pixels lumineux sur fond noir. Des tweets et posts Facebook qui flottent comme des hologrammes dans le ciel. Un smartphone comme torche révolutionnaire tenu par une main en néon. La carte du monde arabe avec des points d'explosion lumineux en cascade. Ambiance soulèvement digital cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0",
+    "title": "La Géopolitique Mondiale 🗺️ — Le Grand Jeu du XXIe Siècle",
+    "brief": "La géopolitique du XXIe siècle, c'est la saison la plus complexe d'une série qui dure depuis des siècles. Les BRICS — Brésil, Russie, Inde, Chine, Afrique du Sud, et maintenant plusieurs nouveaux membres — représentent l'ambition d'un rééquilibrage du pouvoir mondial face à l'Occident. La Chine est le moteur de ce groupe : deuxième économie mondiale, premier exportateur, elle construit patiemment une influence globale par ses investissements et sa diplomatie.\n\nLa rivalité USA-Chine structure une grande partie de la géopolitique actuelle — guerre commerciale, bataille technologique sur les semi-conducteurs, tensions autour de Taïwan. C'est une compétition systémique entre deux modèles de développement, deux visions d'internet, deux conceptions de l'ordre mondial. Les entreprises tech sont en première ligne : Huawei, TikTok, les puces NVIDIA — tout est désormais géopolitique.\n\nLe conflit en Ukraine, déclenché par l'invasion russe en février 2022, a redessiné les cartes de la sécurité européenne du jour au lendemain. L'OTAN retrouve une raison d'être, les dépenses de défense augmentent partout en Europe, et l'Allemagne opère ce qu'elle appelle un Zeitenwende — un tournant historique. Pendant ce temps, le Moyen-Orient reste une zone de tensions structurelles mêlant enjeux pétroliers, religieux et historiques.",
+    "visualDescription": "Une carte du monde transformée en plateau de jeu holographique cyberpunk, avec des zones d'influence illuminées en rouge, bleu et or. Des trajectoires de missiles balistiques et de câbles sous-marins de données se croisent en lignes néon. Les capitales mondiales s'allument et s'éteignent comme des nœuds de réseau, tandis que des indicateurs économiques et militaires tourbillonnent en temps réel.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel événement dramatique en Tunisie fin 2010 a déclenché le Printemps arabe ?",
-        "options": ["Un coup d'État militaire à Tunis", "L'immolation de Mohamed Bouazizi, vendeur ambulant", "Un attentat terroriste à Sfax", "Des élections truquées massivement contestées"],
-        "answer": "L'immolation de Mohamed Bouazizi, vendeur ambulant"
+        "question": "Quel est le nom du projet d'infrastructure mondial lancé par la Chine pour investir dans des pays d'Asie, d'Afrique et d'Europe ?",
+        "options": [
+          "Le Plan Marshall chinois",
+          "La Route de la Soie ou Initiative Ceinture et Route (BRI)",
+          "Le Forum de Boao",
+          "Le Programme Asia Connect"
+        ],
+        "answer": "La Route de la Soie ou Initiative Ceinture et Route (BRI)"
       },
       {
-        "question": "Après combien d'années de règne Hosni Moubarak a-t-il quitté le pouvoir en Égypte en 2011 ?",
-        "options": ["10 ans", "20 ans", "30 ans", "40 ans"],
-        "answer": "30 ans"
+        "question": "En quelle année la Russie a-t-elle lancé son invasion à grande échelle de l'Ukraine ?",
+        "options": [
+          "2014",
+          "2019",
+          "2022",
+          "2023"
+        ],
+        "answer": "2022"
       },
       {
-        "question": "Quelle place du Caire est devenue l'épicentre et le symbole de la révolution égyptienne de 2011 ?",
-        "options": ["Place Al-Azhar", "Place Ramses", "Place Tahrir", "Place Abdine"],
-        "answer": "Place Tahrir"
+        "question": "Combien de pays fondateurs composaient le groupe BRICS à sa création (avant les élargissements récents) ?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "7"
+        ],
+        "answer": "5"
       },
       {
-        "question": "Quel outil technologique a joué un rôle clé dans l'organisation et la diffusion des révolutions du Printemps arabe ?",
-        "options": ["Les SMS en masse via les opérateurs téléphoniques", "Les chaînes de télévision satellitaires uniquement", "Les réseaux sociaux comme Facebook et Twitter", "Les forums de discussion sur internet"],
-        "answer": "Les réseaux sociaux comme Facebook et Twitter"
+        "question": "Quel terme allemand, signifiant « tournant historique », a été utilisé par le chancelier Scholz pour décrire le virage de la politique de défense allemande en 2022 ?",
+        "options": [
+          "Realpolitik",
+          "Ostpolitik",
+          "Zeitenwende",
+          "Wandel durch Handel"
+        ],
+        "answer": "Zeitenwende"
       },
       {
-        "question": "Quel dictateur libyen, au pouvoir depuis 1969, a été renversé et tué lors des soulèvements de 2011 ?",
-        "options": ["Zine El Abidine Ben Ali", "Bachar al-Assad", "Mouammar Kadhafi", "Ali Abdallah Saleh"],
-        "answer": "Mouammar Kadhafi"
+        "question": "Quel détroit stratégique, séparant la Chine continentale de l'île de Taïwan, est au cœur des tensions géopolitiques entre Pékin et Washington ?",
+        "options": [
+          "Le détroit de Malacca",
+          "Le détroit de Formose (Taiwan)",
+          "Le détroit d'Ormuz",
+          "Le détroit de Corée"
+        ],
+        "answer": "Le détroit de Formose (Taiwan)"
       }
     ]
   },
   {
     "id": 5,
-    "title": "COVID-19 : La Pandémie Mondiale qui a Mis le Jeu en Pause",
-    "brief": "Décembre 2019, Wuhan, Chine. Un nouveau coronavirus — le SARS-CoV-2 — commence à se propager. Le 11 mars 2020, l'OMS déclare officiellement la pandémie mondiale. Ce qui suit est sans précédent dans l'histoire moderne : des milliards de personnes confinées chez elles, les frontières fermées, les avions cloués au sol, les hôpitaux débordés. La France entre en confinement le 17 mars 2020, Emmanuel Macron annonce solennellement : 'Nous sommes en guerre.' Les économies mondiales s'effondrent — le PIB mondial recule de 3,1% en 2020, pire choc depuis la Seconde Guerre mondiale. Et puis la course aux vaccins : en moins d'un an, des vaccins à ARN messager (Pfizer-BioNTech, Moderna) sont développés et validés — un record absolu dans l'histoire de la médecine. Plus de 13 milliards de doses injectées dans le monde. Le COVID a officiellement tué plus de 7 millions de personnes selon l'OMS. Mais il a aussi forcé 10 ans de transformation numérique en 10 mois. Le patch le plus brutal de l'histoire moderne.",
-    "visualDescription": "Une carte du monde en néon avec des hotspots rouges qui pulsent comme des virus se propagent. Un masque chirurgical en style cyberpunk parcouru de circuits imprimés lumineux. Des seringues de vaccins qui brillent en bleu ARN messager. Des graphiques de courbes épidémiques en vert néon sur fond noir absolu. Des villes désertes en hologramme. Ambiance pandémie dystopique.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1584483766114-2cea6facdf57",
+    "title": "Les Tendances & Technologies d'Avenir 🚀 — Le Futur qui Arrive Vite",
+    "brief": "Bienvenue dans le futur qui se construit maintenant. L'intelligence artificielle générative a franchi en 2022-2023 un seuil qu'on n'attendait pas si tôt : des IA capables de rédiger, coder, composer, dessiner au niveau d'un humain compétent. ChatGPT a atteint 100 millions d'utilisateurs en deux mois — le record de croissance d'adoption dans l'histoire des technologies. Ce n'est pas juste un outil : c'est une transformation de fond de la façon dont on travaille, crée et pense.\n\nL'énergie verte, elle, est en train de gagner la bataille économique. Le coût du solaire photovoltaïque a chuté de 90% en dix ans. Les batteries se démocratisent. L'hydrogène vert commence à trouver ses cas d'usage. La transition énergétique n'est plus une question de volonté politique seulement — c'est désormais une question de vitesse d'exécution face à une opportunité économique massive.\n\nLe spatial commercial est peut-être la révolution la plus discrète mais la plus profonde : SpaceX a rendu le lancement de satellites 10 à 20 fois moins cher en dix ans. Des constellations de milliers de satellites (Starlink) couvrent désormais internet partout sur Terre. Et des projets de retour sur la Lune, puis de colonisation de Mars, ne relèvent plus de la science-fiction mais d'un calendrier réel. Le transhumanisme, enfin, pose des questions fondamentales : jusqu'où peut-on augmenter les capacités humaines ? Les interfaces cerveau-machine de Neuralink ouvrent un débat éthique majeur.",
+    "visualDescription": "Un laboratoire de futurologie immersif baigné de lumière cyan et violet, où des cerveaux humains connectés à des réseaux neuronaux artificiels flottent en hologramme. Des fusées SpaceX décollent en miniature depuis une maquette de Mars illuminée. Des algorithmes d'IA génèrent en temps réel des œuvres d'art sur des écrans géants tandis que des panneaux solaires en origami se déploient dans le fond.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle organisation internationale a officiellement déclaré la pandémie de COVID-19 le 11 mars 2020 ?",
-        "options": ["L'ONU", "L'UNICEF", "L'OMS (Organisation Mondiale de la Santé)", "L'OCDE"],
-        "answer": "L'OMS (Organisation Mondiale de la Santé)"
+        "question": "En combien de temps ChatGPT d'OpenAI a-t-il atteint 100 millions d'utilisateurs, établissant un record de croissance ?",
+        "options": [
+          "6 mois",
+          "2 mois",
+          "1 an",
+          "3 semaines"
+        ],
+        "answer": "2 mois"
       },
       {
-        "question": "Dans quelle ville chinoise le SARS-CoV-2 a-t-il été identifié pour la première fois fin 2019 ?",
-        "options": ["Pékin", "Shanghai", "Wuhan", "Guangzhou"],
-        "answer": "Wuhan"
+        "question": "Comment appelle-t-on la fusion de l'intelligence artificielle avec la biologie humaine pour améliorer les capacités cognitives et physiques ?",
+        "options": [
+          "Le posthumanisme",
+          "Le transhumanisme",
+          "L'augmentation humaine",
+          "Le cyberhumanisme"
+        ],
+        "answer": "Le transhumanisme"
       },
       {
-        "question": "Quelle innovation technologique majeure caractérise les vaccins Pfizer-BioNTech et Moderna contre le COVID-19 ?",
-        "options": ["Ils sont à base de virus vivant atténué", "Ils utilisent la technologie de l'ARN messager (ARNm)", "Ils sont fabriqués à partir de protéines purifiées uniquement", "Ils reposent sur un vecteur adénoviral comme AstraZeneca"],
-        "answer": "Ils utilisent la technologie de l'ARN messager (ARNm)"
+        "question": "Quel est le nom de la constellation de satellites d'internet broadband développée par SpaceX ?",
+        "options": [
+          "OneWeb",
+          "Starlink",
+          "Kuiper",
+          "Telesat Lightspeed"
+        ],
+        "answer": "Starlink"
       },
       {
-        "question": "En quelle date la France a-t-elle débuté son premier confinement national lors de la pandémie de COVID-19 ?",
-        "options": ["11 mars 2020", "17 mars 2020", "1er avril 2020", "23 mars 2020"],
-        "answer": "17 mars 2020"
+        "question": "De combien environ le coût des panneaux solaires photovoltaïques a-t-il baissé entre 2010 et 2020 ?",
+        "options": [
+          "30%",
+          "50%",
+          "70%",
+          "90%"
+        ],
+        "answer": "90%"
       },
       {
-        "question": "Quel a été approximativement l'impact économique mondial du COVID-19 en termes de variation du PIB mondial en 2020 ?",
-        "options": ["Hausse de 1,5%", "Baisse de 0,5%", "Baisse de 3,1%", "Baisse de 8%"],
-        "answer": "Baisse de 3,1%"
+        "question": "Quel terme désigne les systèmes d'IA capables de créer du contenu original (textes, images, code) comme GPT-4 ou DALL-E ?",
+        "options": [
+          "IA supervisée",
+          "IA générative",
+          "IA analytique",
+          "IA renforcée"
+        ],
+        "answer": "IA générative"
       }
     ]
   }

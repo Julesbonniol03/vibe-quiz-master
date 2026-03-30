@@ -3,169 +3,294 @@
     "id": 1,
     "title": "L'Antiquité Orientale & Grecque 🏛️ — Les Premiers Codes du Monde",
     "brief": "Avant internet, avant l'imprimerie, avant même l'alphabet tel qu'on le connaît, des civilisations entières ont posé les bases de tout ce qu'on est aujourd'hui. La Mésopotamie — le pays entre le Tigre et l'Euphrate, grosso modo l'Irak actuel — a inventé l'écriture cunéiforme vers 3300 avant J.-C. C'était le premier système de stockage d'information de l'histoire : des tablettes d'argile qui fonctionnaient comme le premier cloud de l'humanité. Le Code d'Hammurabi, vers 1750 avant J.-C., c'est le premier code pénal connu — l'ancêtre de nos systèmes juridiques modernes, avec ses 282 lois gravées dans la pierre.\n\nL'Égypte ancienne, elle, a construit une civilisation d'une stabilité incroyable — plus de 3 000 ans de continuité, ce qui en ferait la nation la plus durable de l'histoire humaine. Les pyramides ne sont pas juste des tombeaux impressionnants : ce sont des projets de management pharaoniques qui mobilisaient des dizaines de milliers de travailleurs avec une logistique d'une précision remarquable. Les hiéroglyphes, le papyrus, la momification — autant de technologies de leur époque.\n\nLa Grèce classique, entre le Ve et le IVe siècle avant J.-C., a inventé quelque chose de révolutionnaire : la démocratie (à Athènes), la philosophie systématique (Socrate, Platon, Aristote), le théâtre, l'histoire en tant que discipline. Sparte et Athènes représentent deux modèles de société radicalement opposés — l'un militariste et communautaire, l'autre culturel et démocratique. Ce dualisme traverse encore nos débats politiques aujourd'hui.",
-    "visualDescription": "Une carte du monde antique en néon avec quatre foyers de civilisation qui brillent comme des étoiles : Mésopotamie en or, Égypte en turquoise, Indus en vert, Chine en rouge. Des tablettes cunéiformes et des hiéroglyphes qui flottent comme des hologrammes. Des pyramides cyberpunk qui se dressent sous un ciel étoilé de données. Ambiance aube de l'humanité futuriste.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750",
+    "visualDescription": "Un paysage de ruines grecques et égyptiennes reconstruit en architecture holographique cyberpunk, où le Parthénon et les pyramides coexistent dans une dimension lumineuse. Des hiéroglyphes et des caractères cunéiformes défilent comme du code sur des colonnes de marbre illuminées en or et cyan. L'Agora d'Athènes vibre d'activité holographique, avec des philosophes représentés comme des avatars numériques en discussion.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel peuple de Mésopotamie est généralement crédité de l'invention de l'écriture cunéiforme vers 3300 av. J.-C. ?",
-        "options": ["Les Babyloniens", "Les Assyriens", "Les Sumériens", "Les Akkadiens"],
-        "answer": "Les Sumériens"
+        "question": "Quelle civilisation antique a développé l'écriture cunéiforme, considérée comme l'une des premières écritures de l'histoire ?",
+        "options": [
+          "Les Égyptiens",
+          "Les Sumériens de Mésopotamie",
+          "Les Grecs",
+          "Les Phéniciens"
+        ],
+        "answer": "Les Sumériens de Mésopotamie"
       },
       {
-        "question": "Dans quelle région géographique la civilisation de la vallée de l'Indus, avec ses cités planifiées comme Mohenjo-Daro, s'est-elle développée ?",
-        "options": ["L'actuelle Égypte et Soudan", "L'actuel Pakistan et nord-ouest de l'Inde", "L'actuelle Chine centrale", "L'actuelle Mésopotamie (Irak)"],
-        "answer": "L'actuel Pakistan et nord-ouest de l'Inde"
+        "question": "Comment s'appelait la cité-état grecque connue pour son régime militariste et sa discipline guerrière extrême ?",
+        "options": [
+          "Corinthe",
+          "Athènes",
+          "Sparte",
+          "Thèbes"
+        ],
+        "answer": "Sparte"
       },
       {
-        "question": "Quelle grande innovation agricole, apparue vers 10 000 av. J.-C., a permis la naissance des premières civilisations sédentaires ?",
-        "options": ["La métallurgie du fer", "La révolution néolithique (agriculture et élevage)", "L'invention de la roue", "La domestication du cheval"],
-        "answer": "La révolution néolithique (agriculture et élevage)"
+        "question": "Quel pharaon égyptien est généralement associé à la construction de la plus grande pyramide de Gizeh ?",
+        "options": [
+          "Ramsès II",
+          "Toutankhamon",
+          "Khéops",
+          "Akhenaton"
+        ],
+        "answer": "Khéops"
       },
       {
-        "question": "Quel fleuve a joué un rôle central dans le développement de la civilisation égyptienne antique, assurant irrigation et fertilité des terres ?",
-        "options": ["Le Tigre", "L'Euphrate", "Le Jourdain", "Le Nil"],
-        "answer": "Le Nil"
+        "question": "Quel philosophe grec, maître de Platon, fut condamné à mort par la cité d'Athènes en 399 avant J.-C. ?",
+        "options": [
+          "Aristote",
+          "Socrate",
+          "Épicure",
+          "Héraclite"
+        ],
+        "answer": "Socrate"
       },
       {
-        "question": "Sur les rives de quel fleuve la première civilisation chinoise, la culture Shang, s'est-elle principalement développée ?",
-        "options": ["Le Yangtsé", "Le fleuve Jaune (Huang He)", "Le Mékong", "Le fleuve Bleu"],
-        "answer": "Le fleuve Jaune (Huang He)"
+        "question": "Quel roi babylonien est célèbre pour avoir fait graver l'un des premiers codes de lois connus de l'histoire, vers 1750 avant J.-C. ?",
+        "options": [
+          "Nabuchodonosor",
+          "Hammurabi",
+          "Sargon d'Akkad",
+          "Assurbanipal"
+        ],
+        "answer": "Hammurabi"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Les Empires Antiques : Quand des Hommes ont Voulu Tout Runner",
-    "brief": "L'Antiquité, c'est l'ère des speed-runners géopolitiques — des hommes qui ont voulu conquérir le monde connu le plus vite possible. L'Empire achéménide perse, fondé par Cyrus le Grand au VIe siècle av. J.-C., devient le premier grand empire mondial avec près de 50 millions de sujets — du Pakistan actuel à la Turquie. Alexandre le Grand, roi de Macédoine, bat les Perses et étend son empire de la Grèce jusqu'à l'Inde entre 336 et 323 av. J.-C. Rome, elle, joue long game : la République romaine devient Empire sous Auguste en 27 av. J.-C. et domine le monde méditerranéen pendant des siècles — droit, aqueducs, routes, légions. En Chine, la dynastie Han (206 av. J.-C. - 220 ap. J.-C.) gouverne un empire aussi vaste que Rome, invente le papier et la sériciculture. Deux empires, deux extrémités du monde, connectés par la Route de la Soie.",
-    "visualDescription": "Une carte du monde antique en néon avec les empires Perse, Macédonien, Romain et Han délimités en couleurs vives et brillantes. Alexandre le Grand en silhouette holographique sur son cheval Bucéphale. Des légionnaires romains en armure cyberpunk. La Route de la Soie comme un fil lumineux reliant Rome à Chang'an. Ambiance conquête épique futuriste.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
+    "title": "Rome : de la République à l'Empire ⚔️ — Le Plus Grand Startup de l'Antiquité",
+    "brief": "Rome, c'est l'histoire d'une startup de village qui est devenue une multinationale contrôlant la moitié du monde connu. En 753 avant J.-C. (selon la tradition), un village du Latium. En 117 après J.-C., sous Trajan, un empire de 5 millions de km². La croissance la plus spectaculaire de l'Antiquité. Le SPQR — Senatus Populusque Romanus, le Sénat et le Peuple Romain — c'était le slogan sur tous les standards militaires, un peu comme le logo d'une marque qui conquiert des marchés.\n\nLa République romaine a inventé des institutions remarquablement modernes : les deux consuls élus annuellement (pour éviter la concentration du pouvoir), le Sénat comme chambre délibérative, les tribuns de la plèbe comme contre-pouvoir populaire. Jules César a fait craquer ce système en traversant le Rubicon en 49 avant J.-C. avec son armée — un acte de trahison légale qui transformait un général en dictateur. Son assassinat aux Ides de Mars en 44 avant J.-C. par Brutus et Cassius n'a pas sauvé la République — il a déclenché les guerres civiles qui y ont mis fin.\n\nOctave Auguste, le neveu adopté de César, a réussi là où César avait échoué : transformer Rome en empire tout en gardant les apparences républicaines. La Pax Romana qu'il inaugure — deux siècles de paix relative dans tout le bassin méditerranéen — est l'une des périodes de stabilité les plus longues de l'histoire occidentale. Les routes romaines, les aqueducs, le droit romain, le latin : autant d'héritages qui structurent encore notre monde.",
+    "visualDescription": "Le Forum Romain reconstruit en méga-cité cyberpunk, avec le Colisée illuminé en rouge sang et or impérial. Des légions romaines représentées comme des armées de robots holographiques défilent sous des arcs de triomphe néon. Les chiffres SPQR apparaissent en lettres monumentales lumineuses sur fond de ciel étoilé. Jules César et Auguste se font face en portraits holographiques géants.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel roi perse a fondé l'Empire achéménide au VIe siècle av. J.-C., créant le premier grand empire de l'histoire mondiale ?",
-        "options": ["Darius Ier", "Xerxès", "Cyrus le Grand", "Cambyse"],
-        "answer": "Cyrus le Grand"
+        "question": "Que signifie l'acronyme SPQR que l'on trouve sur les standards militaires romains ?",
+        "options": [
+          "Supremus Populus Quintus Romanus",
+          "Senatus Populusque Romanus",
+          "Sub Protectione Quiritium Romanorum",
+          "Senatus Primus Quintus Rex"
+        ],
+        "answer": "Senatus Populusque Romanus"
       },
       {
-        "question": "Jusqu'à quelle frontière géographique les conquêtes d'Alexandre le Grand ont-elles atteint leur point le plus oriental ?",
-        "options": ["La Perse (actuel Iran)", "La Mésopotamie (actuel Irak)", "L'Inde (actuel Pakistan/nord de l'Inde)", "L'Égypte"],
-        "answer": "L'Inde (actuel Pakistan/nord de l'Inde)"
+        "question": "Quel fleuve Jules César traversa-t-il avec son armée en 49 avant J.-C., déclenchant la guerre civile contre Pompée ?",
+        "options": [
+          "Le Tibre",
+          "Le Rubicon",
+          "Le Pô",
+          "Le Rhône"
+        ],
+        "answer": "Le Rubicon"
       },
       {
-        "question": "Quelle année marque officiellement le début de l'Empire romain, avec Auguste comme premier empereur ?",
-        "options": ["509 av. J.-C.", "264 av. J.-C.", "27 av. J.-C.", "14 ap. J.-C."],
-        "answer": "27 av. J.-C."
+        "question": "Jules César fut assassiné aux Ides de Mars : quelle date correspond aux Ides de Mars dans le calendrier romain ?",
+        "options": [
+          "1er mars",
+          "7 mars",
+          "15 mars",
+          "21 mars"
+        ],
+        "answer": "15 mars"
       },
       {
-        "question": "Quelle invention majeure est attribuée à la Chine sous la dynastie Han, révolutionnant la transmission du savoir ?",
-        "options": ["L'imprimerie à caractères mobiles", "L'invention du papier", "La poudre à canon", "La boussole magnétique"],
-        "answer": "L'invention du papier"
+        "question": "Comment s'appelait le premier véritable empereur romain, neveu adoptif de Jules César ?",
+        "options": [
+          "Marc Antoine",
+          "Lépide",
+          "Octave Auguste",
+          "Tibère"
+        ],
+        "answer": "Octave Auguste"
       },
       {
-        "question": "Comment s'appelait la route commerciale reliant l'Empire romain à la Chine Han, permettant l'échange de soie, d'épices et d'idées ?",
-        "options": ["La Route des Épices", "La Route de la Soie", "La Route de l'Ambre", "La Route des Indes"],
-        "answer": "La Route de la Soie"
+        "question": "Quelle période de paix et de prospérité relative dans l'Empire romain, qui dure environ deux siècles, est connue sous le nom de Pax Romana ?",
+        "options": [
+          "Du Ier siècle avant J.-C. au IIIe siècle après J.-C.",
+          "Du IIe siècle avant J.-C. au IIe siècle après J.-C.",
+          "Du Ier au IIe siècle après J.-C.",
+          "Du IIIe au Ve siècle après J.-C."
+        ],
+        "answer": "Du Ier au IIe siècle après J.-C."
       }
     ]
   },
   {
     "id": 3,
-    "title": "Le Moyen Âge Mondial : Un World Server avec Plusieurs Empires",
-    "brief": "Le Moyen Âge, c'est pas juste les châteaux et les chevaliers en Europe — c'est un monde entier en pleine ébullition. L'Empire byzantin, héritier de Rome à Constantinople, survit 1000 ans après la chute de Rome occidentale et préserve la culture grecque et romaine. L'Islam médiéval, c'est l'âge d'or scientifique : entre le VIIIe et le XIIIe siècle, les savants arabes et persans traduisent, compilent et inventent en mathématiques, astronomie, médecine et philosophie — Avicenne, Al-Khawarizmi (père de l'algèbre), Al-Biruni. L'Empire mongol de Gengis Khan (XIIIe siècle) devient le plus grand empire terrestre contigu de l'histoire — 24 millions de km². En Afrique, les empires du Mali et du Ghana contrôlent les routes de l'or et du sel. Pendant que l'Europe médiévale est en guerre, le monde swappe ses ressources, ses idées et ses épidémies.",
-    "visualDescription": "Un planisphère médiéval en hologramme néon avec l'Empire byzantin en or, le monde islamique en vert émeraude, l'Empire mongol en rouge sang et les empires africains en or cuivré. Gengis Khan en silhouette cyberpunk à cheval. La bibliothèque de Bagdad en mode serveur de données lumineux. Des caravanes de chameaux holographiques sur fond de désert numérique. Ambiance Moyen Âge global futuriste.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1579762715459-67e7f48a1e63",
+    "title": "Le Moyen-Âge Européen 🏰 — L'Ère du Boss Mode Féodal",
+    "brief": "Le Moyen-Âge a longtemps été présenté comme une parenthèse sombre entre l'Antiquité brillante et la Renaissance lumineuse — c'est une caricature historique. C'est en réalité une période de construction intense, où les structures politiques, religieuses et culturelles de l'Europe moderne se forgent. Le féodalisme, c'est le système d'exploitation de l'époque : un réseau hiérarchique de liens de vassalité, où chaque niveau tient un rôle précis comme un nœud dans un réseau distribué.\n\nCharlemagne, couronné Empereur des Romains le 25 décembre 800 par le pape Léon III, réalise quelque chose d'extraordinaire : il unifie une grande partie de l'Europe de l'Ouest sous une autorité commune et lance une renaissance culturelle — la 'renaissance carolingienne' — qui préserve et copie des textes antiques dans les monastères. Sans ces scriptoria médiévaux, une bonne partie de la littérature gréco-latine aurait disparu. Les moines du Moyen-Âge, c'était les archivistes et les serveurs de backup de la culture antique.\n\nLes croisades (1096-1291) sont souvent réduites à des guerres de religion, mais c'est bien plus complexe : elles sont aussi des flux commerciaux, des transferts de technologie, des échanges culturels entre le monde chrétien et le monde islamique. Les cathédrales gothiques, elles, sont les gratte-ciels de leur époque : des projets d'ingénierie colossaux qui ont mobilisé des générations entières et incarnent la maîtrise technique de l'Europe médiévale.",
+    "visualDescription": "Un château médiéval transformé en forteresse cyberpunk, avec des remparts de pierre illuminés de lumières néon violet et argent. Une cathédrale gothique dont les vitraux projettent des hologrammes colorés dans un espace numérique. La hiérarchie féodale représentée comme un organigramme 3D flottant, avec Charlemagne en avatar impérial au sommet d'un réseau de vassaux lumineux.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1548625149-720754977a95?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle ville était la capitale de l'Empire byzantin, héritier de l'Empire romain d'Orient ?",
-        "options": ["Rome", "Athènes", "Constantinople (Istanbul)", "Alexandrie"],
-        "answer": "Constantinople (Istanbul)"
+        "question": "En quelle année Charlemagne fut-il couronné Empereur des Romains par le pape Léon III ?",
+        "options": [
+          "771",
+          "800",
+          "843",
+          "912"
+        ],
+        "answer": "800"
       },
       {
-        "question": "Quel mathématicien de l'âge d'or islamique est considéré comme le père de l'algèbre ?",
-        "options": ["Avicenne (Ibn Sina)", "Al-Biruni", "Al-Khawarizmi", "Al-Farabi"],
-        "answer": "Al-Khawarizmi"
+        "question": "Quelle est la date traditionnellement retenue pour le début de la Première Croisade ?",
+        "options": [
+          "1054",
+          "1066",
+          "1095",
+          "1099"
+        ],
+        "answer": "1095"
       },
       {
-        "question": "L'Empire mongol fondé par Gengis Khan est-il considéré comme quoi dans l'histoire ?",
-        "options": ["Le premier empire maritime de l'histoire", "Le plus grand empire terrestre contigu jamais constitué", "Le premier empire à utiliser la poudre à canon", "Le seul empire à avoir conquis la Chine et l'Europe simultanément"],
-        "answer": "Le plus grand empire terrestre contigu jamais constitué"
+        "question": "Comment appelle-t-on le lien de dépendance entre un seigneur et son vassal dans le système féodal ?",
+        "options": [
+          "La servitude",
+          "La suzeraineté",
+          "La vassalité",
+          "La servilité"
+        ],
+        "answer": "La vassalité"
       },
       {
-        "question": "Quelle ressource précieuse les empires africains du Mali et du Ghana contrôlaient-ils principalement au Moyen Âge, faisant leur richesse ?",
-        "options": ["Le cuivre et le fer", "L'ivoire et les esclaves", "L'or et le sel", "Les épices et le coton"],
-        "answer": "L'or et le sel"
+        "question": "Quelle grande cathédrale parisienne, emblème de l'architecture gothique, a commencé sa construction en 1163 ?",
+        "options": [
+          "La cathédrale de Chartres",
+          "La cathédrale de Reims",
+          "Notre-Dame de Paris",
+          "La Sainte-Chapelle"
+        ],
+        "answer": "Notre-Dame de Paris"
       },
       {
-        "question": "Quelle grande catastrophe du XIVe siècle, propagée le long des routes commerciales, a décimé entre un tiers et la moitié de la population européenne ?",
-        "options": ["La Grande Famine de 1315-1322", "La Guerre de Cent Ans", "La Peste Noire (1347-1353)", "Les invasions mongoles de l'Europe"],
-        "answer": "La Peste Noire (1347-1353)"
+        "question": "Quel traité de 843 a partagé l'empire de Charlemagne entre ses trois petits-fils, posant les bases des futures France et Allemagne ?",
+        "options": [
+          "Le Traité de Verdun",
+          "Le Traité de Mersen",
+          "Le Traité d'Aix-la-Chapelle",
+          "Le Traité de Prüm"
+        ],
+        "answer": "Le Traité de Verdun"
       }
     ]
   },
   {
     "id": 4,
-    "title": "L'Ère des Découvertes : Quand l'Europe a Découvert le Reste du Monde",
-    "brief": "XVe-XVIe siècle. L'Europe cherche de nouvelles routes commerciales vers les Indes pour contourner le monopole ottoman sur les épices. Ce que les Européens 'découvrent', c'est un monde déjà habité par des centaines de millions de personnes — et ça va finir très mal pour elles. Vasco de Gama double le cap de Bonne-Espérance en 1498 et atteint l'Inde en naviguant autour de l'Afrique. Christophe Colomb, financé par l'Espagne, touche les Caraïbes en 1492, croyant être aux Indes. Fernand Magellan entame la première circumnavigation du globe en 1519 — son équipage finit le tour en 1522, sans lui (il meurt aux Philippines). Ces explorations ouvrent les échanges entre continents mais aussi la colonisation, l'esclavage et la destruction des civilisations aztèque, inca et maya. Le 'Choc colombien' tue 90% des populations amérindiennes par les épidémies. Le plus grand crash démographique de l'histoire.",
-    "visualDescription": "Une carte du monde du XVIe siècle en style cyberpunk avec les routes des explorateurs tracées en néon — rouge pour Colomb, bleu pour Vasco de Gama, vert pour Magellan. Des caravelles holographiques qui naviguent sur un océan de données. Les continents américain et africain illuminés comme des territoires nouvellement scannés. Ambiance exploration coloniale dystopique.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1524661135-423995f22d0b",
+    "title": "Renaissance & Découvertes 🌍 — Le Reboot de l'Europe",
+    "brief": "La Renaissance, c'est le plus grand reboot culturel de l'histoire occidentale. À partir du XIVe siècle en Italie, puis dans toute l'Europe, une nouvelle façon de penser s'impose : l'humanisme. L'idée que l'être humain est au centre, que la raison et l'observation comptent autant que la foi, que la beauté mérite d'être cultivée pour elle-même. Léonard de Vinci incarne parfaitement cet idéal : peintre, sculpteur, architecte, ingénieur, anatomiste, musicien — le premier vrai 'homme renaissance' au sens littéral, un génie multi-disciplinaire avant que le mot n'existe.\n\nGutenberg invente l'imprimerie à caractères mobiles vers 1450, et c'est le plus grand choc médiatique de l'histoire avant internet. La reproduction des textes passe de quelques centaines de copies par an à des millions. Les idées voyagent à une vitesse inédite. Sans l'imprimerie, la Réforme protestante de Luther (1517) n'aurait jamais pris une telle ampleur : les 95 Thèses d'un moine obscur de Wittenberg deviennent virales dans toute l'Europe en quelques semaines — le premier exemple de contenu qui 'buzz' à l'échelle continentale.\n\nChristophe Colomb part en 1492 avec trois caravelles et une carte approximative, persuadé de trouver une route occidentale vers les Indes. Il trouve les Amériques. La conséquence ? L'échange colombien — une révolution agraire mondiale où les tomates, pommes de terre, maïs, cacao traversent l'Atlantique et transforment les cuisines et les économies de l'Ancien Monde. Notre pizza tomate-mozzarella n'existerait pas sans Colomb.",
+    "visualDescription": "La Florence de la Renaissance reconstruite en cité holographique flottante, avec les fresques de Léonard de Vinci animées en 3D sur les murs d'un palais cyberpunk. Une presse de Gutenberg transformée en serveur d'impression numérique propulse des feuillets lumineux dans tous les sens. Les caravelles de Colomb naviguent sur un océan de données, avec des flux d'échanges commerciaux visibles comme des lignes de lumière.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel navigateur portugais a été le premier Européen à atteindre l'Inde par voie maritime en contournant l'Afrique, en 1498 ?",
-        "options": ["Bartolomeu Dias", "Fernand Magellan", "Vasco de Gama", "Pedro Álvares Cabral"],
-        "answer": "Vasco de Gama"
-      },
-      {
-        "question": "En quelle année Christophe Colomb a-t-il atteint les Caraïbes, ouvrant la voie à la colonisation européenne des Amériques ?",
-        "options": ["1488", "1492", "1498", "1504"],
+        "question": "En quelle année Christophe Colomb a-t-il débarqué pour la première fois aux Amériques ?",
+        "options": [
+          "1487",
+          "1492",
+          "1498",
+          "1502"
+        ],
         "answer": "1492"
       },
       {
-        "question": "Qui a entrepris la première circumnavigation du globe en 1519, même s'il n'en a pas vu la fin (mort aux Philippines) ?",
-        "options": ["Francis Drake", "Juan Sebastián Elcano", "Fernand Magellan", "Amerigo Vespucci"],
-        "answer": "Fernand Magellan"
+        "question": "Quelle invention de Gutenberg, vers 1450, a révolutionné la diffusion du savoir en Europe ?",
+        "options": [
+          "Le télégraphe optique",
+          "L'imprimerie à caractères mobiles",
+          "Le papier",
+          "La lunette astronomique"
+        ],
+        "answer": "L'imprimerie à caractères mobiles"
       },
       {
-        "question": "Quelle civilisation amérindienne, dirigée par Moctezuma II, a été conquise par Hernán Cortés entre 1519 et 1521 ?",
-        "options": ["L'Empire inca", "L'Empire maya", "L'Empire aztèque (mexica)", "L'Empire muisca"],
-        "answer": "L'Empire aztèque (mexica)"
+        "question": "Quelle œuvre de Léonard de Vinci, peinte entre 1503 et 1519, est aujourd'hui conservée au Louvre ?",
+        "options": [
+          "La Cène",
+          "La Vierge aux Rochers",
+          "La Joconde",
+          "Le Baptême du Christ"
+        ],
+        "answer": "La Joconde"
       },
       {
-        "question": "Quelle est la principale cause de la mort massive des populations amérindiennes après l'arrivée des Européens — le 'Choc colombien' ?",
-        "options": ["Les guerres de conquête directes", "Les épidémies (variole, rougeole) contre lesquelles les Amérindiens n'avaient aucune immunité", "Les famines causées par la destruction des cultures", "Le travail forcé dans les mines d'argent"],
-        "answer": "Les épidémies (variole, rougeole) contre lesquelles les Amérindiens n'avaient aucune immunité"
+        "question": "En quelle année Martin Luther a-t-il affiché ses 95 Thèses à Wittenberg, acte fondateur de la Réforme protestante ?",
+        "options": [
+          "1483",
+          "1507",
+          "1517",
+          "1525"
+        ],
+        "answer": "1517"
+      },
+      {
+        "question": "Quel navigateur portugais a été le premier à relier l'Europe à l'Asie par voie maritime en contournant l'Afrique, en 1498 ?",
+        "options": [
+          "Fernand de Magellan",
+          "Bartolomeu Dias",
+          "Vasco de Gama",
+          "Pedro Álvares Cabral"
+        ],
+        "answer": "Vasco de Gama"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Les Révolutions Modernes : Le Triptyque qui a Rebooté le Monde",
-    "brief": "Fin XVIIIe siècle, trois révolutions simultanées changent les règles du jeu mondial pour toujours. La Révolution américaine (1775-1783) : treize colonies britanniques déclarent leur indépendance le 4 juillet 1776. Thomas Jefferson écrit que 'tous les hommes sont créés égaux' — même si l'esclavage continue. Premier état démocratique moderne fondé sur une constitution écrite. La Révolution française (1789-1799) : Louis XVI convoque les États Généraux, le Tiers État crée l'Assemblée nationale, la Bastille tombe le 14 juillet 1789. Liberté, Égalité, Fraternité. La Déclaration des Droits de l'Homme. Puis la Terreur, puis Napoléon. La Révolution industrielle (Angleterre, fin XVIIIe) : James Watt améliore la machine à vapeur en 1769, les usines remplacent les ateliers artisanaux, les villes explosent, le capitalisme industriel naît. Trois révolutions, trois ruptures absolues avec l'Ancien Monde. Le patch qui a tout changé.",
-    "visualDescription": "Un triptyque holographique néon : à gauche la Liberty Bell américaine en bleu électrique, au centre la prise de la Bastille en rouge et noir, à droite une machine à vapeur victorienne crachant de la vapeur dorée. Les déclarations fondatrices flottent comme des lignes de code sur fond noir. Des engrenages industriels et des drapeaux révolutionnaires s'entremêlent. Ambiance révolutions fondatrices cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d",
+    "title": "Révolutions Modernes ⚡ — Quand le Monde Change de Système",
+    "brief": "Le XVIIIe et le XIXe siècle sont l'ère des révolutions — pas seulement politiques, mais industrielles, sociales, technologiques. La Révolution Française de 1789 est le big bang politique de l'ère moderne : elle envoie au tapis l'Ancien Régime, décrète les droits de l'Homme et du Citoyen, invente la citoyenneté républicaine et diffuse dans le monde entier les idées de Liberté, Égalité, Fraternité. Elle est aussi terriblement violente — la Terreur de Robespierre montre comment les idéaux les plus purs peuvent se transformer en machine répressive.\n\nNapoléon Bonaparte surgit de cette révolution comme un power-up inattendu. Général prodige, réformateur administratif, législateur (le Code Civil Napoléonien structure encore le droit français), conquérant — il réorganise l'Europe entière en une décennie. La Grande Armée, Austerlitz, Waterloo — une épopée militaire sans équivalent. Et le Code Civil, son héritage le plus durable, a été adopté ou a inspiré les législations de dizaines de pays dans le monde.\n\nLa Révolution Industrielle qui démarre en Angleterre dans les années 1760-1780 est l'autre grande rupture : vapeur, charbon, fer, machines textiles — en cinquante ans, le mode de production humain qui n'avait presque pas changé depuis des millénaires est bouleversé. L'urbanisation explose, la classe ouvrière se forme, le capitalisme industriel prend son visage moderne. Les révolutions de 1848 — le Printemps des Peuples — en sont la conséquence directe : des soulèvements simultanés dans toute l'Europe qui réclament liberté politique et justice sociale.",
+    "visualDescription": "Une scène révolutionnaire transformée en dystopie cyberpunk : la prise de la Bastille représentée comme l'assaut d'un datacenter néo-gothique fortifié. Les idéaux des Lumières codés en lumières bleu-blanc-rouge défilent sur des murs de brique industrielle. Napoléon en avatar holographique survole une carte d'Europe en train de se remodeler. Des usines à vapeur du XIXe siècle se fondent avec des complexes industriels futuristes.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle date est célébrée comme fête nationale américaine, commémorant la Déclaration d'Indépendance des États-Unis ?",
-        "options": ["4 mars 1776", "4 juillet 1776", "17 septembre 1787", "30 avril 1789"],
-        "answer": "4 juillet 1776"
-      },
-      {
-        "question": "Quelle date symbolise le début de la Révolution française avec la prise de la Bastille ?",
-        "options": ["5 mai 1789", "20 juin 1789", "14 juillet 1789", "26 août 1789"],
+        "question": "Quelle date marque le début symbolique de la Révolution Française avec la prise de la Bastille ?",
+        "options": [
+          "5 mai 1789",
+          "14 juillet 1789",
+          "26 août 1789",
+          "21 septembre 1792"
+        ],
         "answer": "14 juillet 1789"
       },
       {
-        "question": "Quel inventeur écossais est associé à l'amélioration décisive de la machine à vapeur en 1769, moteur de la Révolution industrielle ?",
-        "options": ["George Stephenson", "Richard Arkwright", "James Watt", "Thomas Newcomen"],
-        "answer": "James Watt"
+        "question": "Quel grand code juridique, rédigé sous Napoléon Bonaparte, est encore en vigueur en France avec des modifications ?",
+        "options": [
+          "Le Code Pénal",
+          "Le Code Civil",
+          "Le Code Commercial",
+          "Le Code Constitutionnel"
+        ],
+        "answer": "Le Code Civil"
       },
       {
-        "question": "Quel document fondateur de la Révolution française (1789) proclame les droits naturels et imprescriptibles de l'homme ?",
-        "options": ["Le Contrat Social de Rousseau", "La Constitution de 1791", "La Déclaration des Droits de l'Homme et du Citoyen", "Le Cahier des Doléances"],
-        "answer": "La Déclaration des Droits de l'Homme et du Citoyen"
+        "question": "Dans quel pays la Révolution Industrielle a-t-elle démarré, dans la seconde moitié du XVIIIe siècle ?",
+        "options": [
+          "La France",
+          "La Belgique",
+          "L'Allemagne",
+          "L'Angleterre"
+        ],
+        "answer": "L'Angleterre"
       },
       {
-        "question": "Dans quel pays la Révolution industrielle a-t-elle démarré au XVIIIe siècle avant de se propager au reste du monde ?",
-        "options": ["La France", "Les États-Unis", "L'Allemagne", "L'Angleterre (Grande-Bretagne)"],
-        "answer": "L'Angleterre (Grande-Bretagne)"
+        "question": "Comment appelle-t-on la période de la Révolution Française (1793-1794) marquée par la répression politique massive sous Robespierre ?",
+        "options": [
+          "La Terreur",
+          "La Thermidor",
+          "La Vendémiaire",
+          "La Frimaire"
+        ],
+        "answer": "La Terreur"
+      },
+      {
+        "question": "Lors de quelle bataille de 1815 Napoléon a-t-il subi sa défaite définitive face aux armées de la coalition européenne ?",
+        "options": [
+          "La bataille d'Austerlitz",
+          "La bataille de Leipzig",
+          "La bataille de Waterloo",
+          "La bataille de Borodino"
+        ],
+        "answer": "La bataille de Waterloo"
       }
     ]
   }

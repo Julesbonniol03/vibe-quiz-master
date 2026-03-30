@@ -1,171 +1,296 @@
 [
   {
     "id": 1,
-    "title": "Les Origines du Français : Du Latin Vulgaire au Vieux Français",
-    "brief": "Le français qu'on parle aujourd'hui, c'est le résultat d'un long run depuis le latin vulgaire — la langue parlée des légionnaires et marchands romains, très différente du latin classique de Cicéron. Quand l'Empire romain s'effondre au Ve siècle, les Francs envahissent la Gaule et apportent leur langue germanique — environ 500 mots francs s'intègrent au fond latin. Le premier document écrit en français ? Les Serments de Strasbourg de 842, un accord politique entre Charles le Chauve et Louis le Germanique. C'est le vieux français, presque incompréhensible pour nous aujourd'hui. Puis vient la Chanson de Roland (XIe siècle), première grande épopée littéraire en français. En 1539, l'Ordonnance de Villers-Cotterêts impose le français comme langue administrative officielle à la place du latin — François Ier vient de faire le plus grand flex linguistique de l'histoire de France. La langue nationale est officiellement née.",
-    "visualDescription": "Un parchemin ancien qui se déroule en hologramme néon, avec les premières lignes des Serments de Strasbourg en vieux français lumineux. Des légionnaires romains en silhouettes cyberpunk qui se transforment progressivement en chevaliers médiévaux. L'arbre généalogique du français depuis le latin affiché en lignes de code cyan sur fond noir. Ambiance archéologie linguistique futuriste.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8",
+    "title": "Orthographe & Pièges Courants ✍️ — Le Bug dans le Texte",
+    "brief": "L'orthographe française, c'est un peu comme un OS legacy plein de règles héritées de plusieurs siècles de bricolage linguistique. Des emprunts au latin, au grec, au vieux français — et un tas d'exceptions qui font qu'aucune règle n'est totalement fiable. Le résultat ? Un système qui piège même les locuteurs natifs, avec des homophones vicieux qui sonnent identique mais s'écrivent différemment et changent tout au sens.\n\nLes pièges les plus classiques : a/à (verbe avoir vs préposition), ou/où (conjonction vs adverbe de lieu), ces/ses/c'est/s'est — quatre formes qui se prononcent pareil mais obéissent à des logiques grammaticales totalement différentes. La technique pour les démasquer ? La substitution : remplace a par avait, ou par ou bien, c'est par cela est. Si ça marche, bingo — tu as la bonne orthographe.\n\nCe qui rend ces pièges aussi dangereux, c'est qu'ils passent sous les radars du cerveau. Quand tu lis vite, ton cerveau complète automatiquement le sens sans vérifier l'orthographe — c'est l'autocorrect biologique qui fait des erreurs. La maîtrise de ces distinctions n'est pas juste une question de prestige : c'est une compétence de précision qui fait la différence dans toute communication écrite professionnelle.",
+    "visualDescription": "Un écran de terminal cyberpunk où des mots en français apparaissent et se transforment, les erreurs orthographiques brillant en rouge néon avant d'être corrigées en vert électrique. Des homophones se dédoublent en hologramme, montrant leurs différences de sens par des formes géométriques distinctes. L'interface ressemble à un éditeur de code ultra-futuriste où chaque mot est un objet à déboguer.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel est le premier document écrit en langue française (proto-roman), daté de 842 ?",
-        "options": ["La Chanson de Roland", "Les Serments de Strasbourg", "L'Ordonnance de Villers-Cotterêts", "La Séquence de Sainte Eulalie"],
-        "answer": "Les Serments de Strasbourg"
+        "question": "Laquelle de ces phrases est correctement orthographiée ?",
+        "options": [
+          "Il à mangé tout le gâteau.",
+          "Il a mangé tout le gâteau.",
+          "Il as mangé tout le gâteau.",
+          "Il â mangé tout le gâteau."
+        ],
+        "answer": "Il a mangé tout le gâteau."
       },
       {
-        "question": "De quelle langue le français est-il principalement issu ?",
-        "options": ["Du latin classique (langue littéraire)", "Du latin vulgaire (langue parlée populaire)", "Du gaulois celtique", "Du francique germanique"],
-        "answer": "Du latin vulgaire (langue parlée populaire)"
+        "question": "Complétez : « Je ne sais plus ___ j'ai mis mes clés. »",
+        "options": [
+          "ou",
+          "où",
+          "ou bien",
+          "oû"
+        ],
+        "answer": "où"
       },
       {
-        "question": "Quelle grande épopée médiévale en vieux français, rédigée au XIe siècle, raconte les batailles de Charlemagne contre les Sarrasins ?",
-        "options": ["Le Roman de la Rose", "Tristan et Iseut", "La Chanson de Roland", "Perceval ou le Conte du Graal"],
-        "answer": "La Chanson de Roland"
+        "question": "Quelle est la forme correcte dans : « ___ son anniversaire aujourd'hui. » ?",
+        "options": [
+          "C'est",
+          "S'est",
+          "Ces",
+          "Ses"
+        ],
+        "answer": "C'est"
       },
       {
-        "question": "Quelle ordonnance royale de 1539 a imposé le français comme langue officielle des actes administratifs à la place du latin ?",
-        "options": ["L'Ordonnance de Blois", "L'Édit de Nantes", "L'Ordonnance de Villers-Cotterêts", "L'Ordonnance de Moulins"],
-        "answer": "L'Ordonnance de Villers-Cotterêts"
+        "question": "Dans « Elle s'est blessée en tombant », que représente « s'est » ?",
+        "options": [
+          "La conjonction de coordination 'c'est' avec un pronom",
+          "Le verbe 'être' à la forme pronominale au passé composé",
+          "Le verbe 'savoir' conjugué au présent",
+          "Un adverbe de manière"
+        ],
+        "answer": "Le verbe 'être' à la forme pronominale au passé composé"
       },
       {
-        "question": "Quel peuple germanique, en envahissant la Gaule au Ve siècle, a enrichi le vocabulaire français de plusieurs centaines de mots ?",
-        "options": ["Les Wisigoths", "Les Normands", "Les Francs", "Les Burgondes"],
-        "answer": "Les Francs"
+        "question": "Quelle astuce permet de distinguer 'a' (verbe) de 'à' (préposition) ?",
+        "options": [
+          "Remplacer par 'était' : si la phrase reste correcte, c'est le verbe 'a'",
+          "Compter les syllabes de la phrase",
+          "Vérifier si le mot suivant commence par une voyelle",
+          "Remplacer par 'avait' : si la phrase reste correcte, c'est le verbe 'a'"
+        ],
+        "answer": "Remplacer par 'avait' : si la phrase reste correcte, c'est le verbe 'a'"
       }
     ]
   },
   {
     "id": 2,
-    "title": "La Grammaire Française : Le Boss Final que Même les Natifs Loupent",
-    "brief": "La grammaire française, c'est ce boss final que tout le monde pense avoir battu et qui te sort un move inédit en plein examen. L'accord sujet-verbe paraît simple — le verbe s'accorde avec son sujet en nombre et en personne. Sauf que 'c'est eux qui l'ont fait' ou 'ni l'un ni l'autre ne sont venus' te font déjà douter. L'accord du participe passé, c'est un autre niveau : avec être, il s'accorde avec le sujet ; avec avoir, il s'accorde avec le COD seulement si celui-ci est placé avant le verbe. 'La lettre que j'ai écrite' vs 'J'ai écrit des lettres' — le COD est avant ou après, telle est la question. Et puis il y a le subjonctif, ce mode qu'on utilise pour exprimer le doute, la volonté, la crainte. 'Bien qu'il soit parti', 'Pour que tu comprennes', 'Il faut que nous sachions'. Maîtriser la grammaire française, c'est avoir le cheat code de la communication précise.",
-    "visualDescription": "Un tableau noir holographique en néon vert avec des règles grammaticales qui s'écrivent comme du code source. Des participes passés qui se transforment sous l'effet des accords comme des variables dans un programme. Des flèches cyan qui relient le COD et le verbe pour indiquer l'accord. Un subjonctif présent qui clignote en orange comme une alerte système critique. Ambiance grammaire cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b",
+    "title": "Conjugaison Essentielle 🔧 — Les Temps qui Font Peur",
+    "brief": "La conjugaison française, c'est le firmware complexe de la langue — des dizaines de modes et de temps dont certains sont en quasi-extinction dans le langage oral mais restent vivants à l'écrit. Le subjonctif, par exemple, est le mode du doute, du souhait, de la nécessité — et son utilisation correcte est l'un des marqueurs les plus sûrs d'un français maîtrisé. On dit 'il faut que tu fasses' (subjonctif) et pas 'il faut que tu fais' (indicatif).\n\nLe conditionnel, lui, ouvre le champ du possible et de l'hypothétique. Il se construit sur le radical du futur + les terminaisons de l'imparfait — une logique que peu de gens savent expliquer mais que tout le monde utilise quotidiennement : 'je voudrais', 'ce serait bien', 'il faudrait'. Et puis il y a l'accord du participe passé, le grand cauchemar : avec être, le participe s'accorde avec le sujet ; avec avoir, il s'accorde avec le COD si celui-ci est placé avant.\n\nPourquoi ces règles complexes ? Parce que le français a hérité d'un système latin très rigoureux d'accord en genre et en nombre, puis l'a simplifié partiellement — créant des zones hybrides où certaines règles s'appliquent et d'autres non. Maîtriser ces nuances, c'est avoir accès au niveau de précision d'un chirurgien du texte.",
+    "visualDescription": "Un tableau de conjugaison transformé en matrice holographique, avec les terminaisons verbales qui s'illuminent en code néon cyan et magenta. Des arbres de décision pour l'accord du participe passé flottent comme des organigrammes futuristes. L'atmosphère d'une salle de contrôle linguistique high-tech, où chaque forme verbale est un module à activer.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
     "quiz": [
       {
-        "question": "Avec quel auxiliaire le participe passé s'accorde-t-il systématiquement avec le sujet du verbe ?",
-        "options": ["Avec l'auxiliaire 'avoir'", "Avec l'auxiliaire 'être'", "Avec les deux auxiliaires indifféremment", "Jamais, le participe passé est invariable"],
-        "answer": "Avec l'auxiliaire 'être'"
+        "question": "Quelle est la conjugaison correcte au subjonctif présent de 'faire' à la 2e personne du singulier ?",
+        "options": [
+          "tu fais",
+          "tu fasses",
+          "tu faises",
+          "tu fassiez"
+        ],
+        "answer": "tu fasses"
       },
       {
-        "question": "Dans 'La lettre que j'ai écrite', pourquoi le participe passé 'écrite' s'accorde-t-il au féminin ?",
-        "options": ["Parce que 'lettre' est le sujet du verbe avoir", "Parce que le COD 'que' (= la lettre) est placé avant le verbe", "Parce que l'auxiliaire 'avoir' impose toujours l'accord", "Par convention orthographique arbitraire"],
-        "answer": "Parce que le COD 'que' (= la lettre) est placé avant le verbe"
+        "question": "Complétez correctement : « Les lettres qu'il ___ envoyées sont arrivées. »",
+        "options": [
+          "a",
+          "as",
+          "est",
+          "ont"
+        ],
+        "answer": "a"
       },
       {
-        "question": "Quel mode verbal exprime le doute, la volonté, la crainte ou le souhait, et s'emploie souvent dans une subordonnée introduite par 'que' ?",
-        "options": ["L'indicatif", "Le conditionnel", "L'impératif", "Le subjonctif"],
-        "answer": "Le subjonctif"
+        "question": "Dans « Elle s'est lavé les mains », pourquoi 'lavé' ne s'accorde-t-il PAS avec 'elle' ?",
+        "options": [
+          "Parce que le verbe est à l'infinitif",
+          "Parce que le COD 'les mains' est placé après le verbe",
+          "Parce que les verbes pronominaux ne s'accordent jamais",
+          "Parce que 's'' est un COI, pas un COD"
+        ],
+        "answer": "Parce que le COD 'les mains' est placé après le verbe"
+      },
+      {
+        "question": "Quel est le conditionnel présent de 'venir' à la 1re personne du singulier ?",
+        "options": [
+          "je venais",
+          "je viendrai",
+          "je viendrais",
+          "je viens"
+        ],
+        "answer": "je viendrais"
       },
       {
         "question": "Laquelle de ces phrases utilise correctement le subjonctif ?",
-        "options": ["Je pense qu'il soit là.", "Bien qu'il soit fatigué, il travaille.", "Il dit que nous avons raison.", "Je crois qu'elle soit venue."],
-        "answer": "Bien qu'il soit fatigué, il travaille."
-      },
-      {
-        "question": "Quelle est la règle d'accord du verbe lorsque des sujets sont reliés par 'ni... ni...' ?",
-        "options": ["Le verbe est toujours au singulier", "Le verbe est toujours au pluriel", "Le verbe s'accorde uniquement avec le dernier sujet", "Le verbe peut être au singulier ou au pluriel selon le sens et le contexte"],
-        "answer": "Le verbe peut être au singulier ou au pluriel selon le sens et le contexte"
+        "options": [
+          "Je pense qu'il soit là.",
+          "Bien qu'il est fatigué, il continue.",
+          "Il faut que vous partiez maintenant.",
+          "Depuis qu'elle parte, tout a changé."
+        ],
+        "answer": "Il faut que vous partiez maintenant."
       }
     ]
   },
   {
     "id": 3,
-    "title": "Les Grandes Figures Littéraires Françaises : Le Hall of Fame",
-    "brief": "La littérature française, c'est un roster de légendes absolues qui ont shapé la façon dont le monde pense et écrit. Molière d'abord — Jean-Baptiste Poquelin de son vrai nom, XVIIe siècle, il invente la comédie moderne avec 'L'Avare', 'Le Misanthrope', 'Tartuffe'. Victor Hugo, XIXe siècle, c'est le multi-class suprême : poète, romancier, dramaturge, homme politique en exil. 'Les Misérables', 'Notre-Dame de Paris' — des fresques sociales qui ont influencé le monde entier. Balzac tente de décrire toute la société française dans 'La Comédie Humaine' — 90 romans et nouvelles, un projet démesuré et accompli. Flaubert révolutionne le style avec 'Madame Bovary' et invente le style indirect libre. Et Zola clôt le siècle avec le naturalisme : les Rougon-Macquart, 20 romans, une saga sur 5 générations. Des builds narratifs d'une puissance folle.",
-    "visualDescription": "Une bibliothèque infinie en perspective cyberpunk avec des livres qui flottent et brillent en néon doré. Les portraits holographiques de Molière, Hugo, Balzac, Flaubert et Zola comme des cartes de personnages dans un jeu de rôle littéraire. Les titres de leurs œuvres majeures s'allument comme des achievements débloqués en cascade. Ambiance panthéon littéraire français futuriste.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570",
+    "title": "Grammaire : Accords & Syntaxe 🔍 — L'Architecture de la Phrase",
+    "brief": "Si l'orthographe est le firmware et la conjugaison le système d'exploitation, la grammaire c'est l'architecture complète du langage. L'accord sujet-verbe semble simple en surface — le verbe prend la personne et le nombre de son sujet — mais ça se complique vite dès qu'on introduit des sujets multiples, des pronoms relatifs ou des collectifs. 'La plupart des gens pensent' vs 'la plupart pense' : lequel est correct ? (Les deux peuvent l'être selon le contexte.)\n\nLes pronoms relatifs — qui, que, dont, où, lequel — sont les connecteurs qui permettent de relier des propositions et de construire des phrases complexes. 'Dont' indique une relation de possession ou de complément introduit par 'de' : 'le livre dont je t'ai parlé' = le livre de lequel je t'ai parlé. Une économie de mots et une précision maximale.\n\nLa distinction COD/COI est fondamentale car elle conditionne l'accord du participe passé et le choix des pronoms. Le COD répond à la question 'quoi ?' ou 'qui ?' sans préposition : 'Je mange une pomme' (COD : une pomme). Le COI répond à 'à qui ?', 'de quoi ?' avec une préposition : 'Je parle à Marie' (COI : à Marie). Cette distinction architecturale structure toute la grammaire française.",
+    "visualDescription": "Un diagramme syntaxique tridimensionnel flottant dans un espace cyberpunk, où les sujets, verbes, COD et COI sont représentés par des nœuds lumineux reliés par des arcs de données colorés. Des flèches d'accord grammatical traversent l'espace comme des lasers verts et rouges. L'ambiance évoque un scanner MRI grammatical qui révèle la structure profonde des phrases.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel est le vrai nom de Molière, le grand dramaturge comique du XVIIe siècle ?",
-        "options": ["François-Marie Arouet", "Jean-Baptiste Poquelin", "Pierre Corneille", "Jean Racine"],
-        "answer": "Jean-Baptiste Poquelin"
+        "question": "Quel est le sujet dans la phrase : « Pendant les vacances, mes amis et moi partons à la montagne. » ?",
+        "options": [
+          "les vacances",
+          "mes amis",
+          "mes amis et moi",
+          "la montagne"
+        ],
+        "answer": "mes amis et moi"
       },
       {
-        "question": "Comment s'appelle le projet littéraire monumental de Balzac, composé de plus de 90 romans et nouvelles ?",
-        "options": ["Les Rougon-Macquart", "La Comédie Humaine", "Les Contes drolatiques", "La Recherche du Temps Perdu"],
-        "answer": "La Comédie Humaine"
+        "question": "Dans « C'est le film dont je t'avais parlé », quel est le rôle de 'dont' ?",
+        "options": [
+          "Sujet de la proposition relative",
+          "Complément d'objet direct de 'parlé'",
+          "Complément du verbe 'parler' (introduit normalement par 'de')",
+          "Complément circonstanciel de lieu"
+        ],
+        "answer": "Complément du verbe 'parler' (introduit normalement par 'de')"
       },
       {
-        "question": "Quel roman de Gustave Flaubert (1857), jugé scandaleux à sa publication, raconte la désillusion d'Emma, femme d'un médecin de province ?",
-        "options": ["L'Éducation sentimentale", "Salammbô", "Bouvard et Pécuchet", "Madame Bovary"],
-        "answer": "Madame Bovary"
+        "question": "Identifiez le COD dans : « Elle lui a offert un livre magnifique. »",
+        "options": [
+          "elle",
+          "lui",
+          "un livre magnifique",
+          "offert"
+        ],
+        "answer": "un livre magnifique"
       },
       {
-        "question": "Combien de romans composent la saga 'Les Rougon-Macquart' d'Émile Zola, qui suit une famille sur cinq générations sous le Second Empire ?",
-        "options": ["7 romans", "12 romans", "20 romans", "30 romans"],
-        "answer": "20 romans"
+        "question": "Laquelle de ces phrases contient une erreur d'accord sujet-verbe ?",
+        "options": [
+          "Les enfants jouent dans le jardin.",
+          "Ni lui ni elle ne savent la réponse.",
+          "C'est toi et moi qui avons raison.",
+          "Tout le monde ont compris la leçon."
+        ],
+        "answer": "Tout le monde ont compris la leçon."
       },
       {
-        "question": "Quel roman de Victor Hugo, publié en 1831, se déroule autour de la cathédrale gothique de Paris et met en scène Quasimodo ?",
-        "options": ["Les Misérables", "Les Travailleurs de la mer", "Notre-Dame de Paris", "L'Homme qui rit"],
-        "answer": "Notre-Dame de Paris"
+        "question": "Dans « Je pense à mes amis », quel est le complément du verbe 'penser' ?",
+        "options": [
+          "Un COD (complément d'objet direct)",
+          "Un COI (complément d'objet indirect)",
+          "Un COS (complément d'objet second)",
+          "Un complément circonstanciel"
+        ],
+        "answer": "Un COI (complément d'objet indirect)"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Le Vocabulaire & les Pièges du Français : Le Dark Mode de l'Orthographe",
-    "brief": "Le français, c'est la langue avec le plus grand nombre de pièges au kilomètre carré. Les homophones d'abord : 'a' vs 'à', 'ou' vs 'où', 'ce' vs 'se', 'son' vs 'sont'. Ces petits mots qui se prononcent exactement pareil mais changent tout au sens de la phrase. Les barbarismes : des constructions incorrectes comme 'pallier à un problème' (faux — on pallie quelque chose directement, sans préposition), ou 'au jour d'aujourd'hui' (pléonasme catastrophique — 'aujourd'hui' signifie déjà 'au jour de ce jour'). Les faux amis avec l'anglais : 'sensible' en français signifie emotionally sensitive — pas 'sensible' au sens anglais de raisonnable. Les pléonasmes : 'monter en haut', 'descendre en bas', 'prévoir à l'avance'. La maîtrise de la langue, c'est éviter ces bugs autant qu'enchaîner les combos stylistiques.",
-    "visualDescription": "Un champ de mines lexical holographique en néon rouge et vert, où chaque bonne orthographe s'allume en vert et chaque piège explose en rouge vif. Des homophones qui se dédoublent comme des ennemis en miroir face à face. Des barbarismes barrés en rouge sang sur fond noir absolu. Une interface de correcteur orthographique cyberpunk en temps réel qui scanne chaque phrase. Ambiance orthographe de combat.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1455390582262-044cdead277a",
+    "title": "Vocabulaire & Registres 💬 — Parler la Bonne Langue au Bon Endroit",
+    "brief": "Le vocabulaire, c'est ta palette de couleurs : plus elle est riche, plus tu peux exprimer des nuances subtiles. Mais en français, la maîtrise du vocabulaire ne suffit pas — il faut aussi maîtriser les registres de langue. Un registre, c'est comme un mode de communication : familier, courant, soutenu. Utiliser le mauvais registre dans le mauvais contexte, c'est comme envoyer un email en verlan à un recruteur ou parler comme un essai philosophique à tes amis au bar.\n\nLe registre familier est la langue du quotidien, avec ses ellipses, ses argots et ses raccourcis : 'c'est ouf', 'j'ai kiffé', 'un truc de ouf'. Le registre courant est la norme de la communication standard : correct, neutre, compris par tous. Le registre soutenu emprunte au vocabulaire littéraire et juridique, avec des constructions plus élaborées — c'est la langue des discours officiels, des textes académiques, de la correspondance formelle.\n\nLes synonymes et les nuances sont les microprocesseurs du vocabulaire. 'Peur', 'frayeur', 'terreur', 'effroi', 'crainte', 'appréhension' : tous évoquent la même émotion mais avec des intensités, des nuances et des connotations différentes. Maîtriser ces distinctions, c'est avoir la précision d'un chirurgien des mots — savoir choisir exactement le terme qui exprime ce qu'on veut dire, ni plus ni moins.",
+    "visualDescription": "Un espace linguistique cyberpunk où des mots français flottent en différentes couleurs selon leur registre : rouge néon pour le familier, blanc pur pour le courant, or pour le soutenu. Des nuages de synonymes gravitent les uns autour des autres comme des atomes dans un accélérateur de particules. Une interface de traduction de registres transforme en temps réel le même message d'un niveau de langue à un autre.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1546521343-4eb2c01aa44b?w=800&q=80",
     "quiz": [
       {
-        "question": "Laquelle de ces phrases est correctement construite ?",
-        "options": ["Il faut pallier à ce problème.", "Il faut palier ce problème.", "Il faut pallier ce problème.", "Il faut palier à ce problème."],
-        "answer": "Il faut pallier ce problème."
+        "question": "Quel est l'équivalent soutenu de l'expression familière « c'est nul » ?",
+        "options": [
+          "C'est pas bien",
+          "C'est médiocre",
+          "C'est pas top",
+          "Ça le fait pas"
+        ],
+        "answer": "C'est médiocre"
       },
       {
-        "question": "Quel est l'homophone correct dans la phrase : 'Je ne sais plus ___ j'ai posé mes clés.' ?",
-        "options": ["ou", "où", "au", "ô"],
-        "answer": "où"
+        "question": "Parmi ces synonymes de 'dire', lequel appartient au registre soutenu ?",
+        "options": [
+          "raconter",
+          "balancer",
+          "proférer",
+          "causer"
+        ],
+        "answer": "proférer"
       },
       {
-        "question": "Qu'est-ce qu'un pléonasme en grammaire française ?",
-        "options": ["Une figure qui répète la même idée en termes différents, de façon redondante et inutile", "Un mot emprunté à une langue étrangère et francisé", "Une faute d'accord grammatical entre le sujet et le verbe", "Un mot inventé par déformation phonétique"],
-        "answer": "Une figure qui répète la même idée en termes différents, de façon redondante et inutile"
+        "question": "Quelle nuance distingue 'célèbre' de 'notoire' ?",
+        "options": [
+          "Célèbre est plus formel que notoire",
+          "Notoire implique souvent une réputation négative, célèbre est neutre ou positif",
+          "Notoire s'utilise uniquement pour les personnes, célèbre pour les choses",
+          "Il n'y a aucune différence de nuance entre ces deux mots"
+        ],
+        "answer": "Notoire implique souvent une réputation négative, célèbre est neutre ou positif"
       },
       {
-        "question": "Que signifie le mot 'sensible' en français (faux ami avec l'anglais 'sensible') ?",
-        "options": ["Raisonnable et plein de bon sens", "Qui ressent facilement les émotions, impressionnable", "Pratique et fonctionnel", "Intelligent et perspicace"],
-        "answer": "Qui ressent facilement les émotions, impressionnable"
+        "question": "Quel registre de langue est employé dans la phrase : « Nous vous prions d'agréer l'expression de nos salutations distinguées » ?",
+        "options": [
+          "Familier",
+          "Courant",
+          "Soutenu",
+          "Populaire"
+        ],
+        "answer": "Soutenu"
       },
       {
-        "question": "Laquelle de ces expressions est un barbarisme ou une faute de construction ?",
-        "options": ["Bien que tu sois fatigué", "Malgré la pluie, il est sorti", "Au jour d'aujourd'hui, tout va bien", "À cause de lui, nous avons raté le train"],
-        "answer": "Au jour d'aujourd'hui, tout va bien"
+        "question": "Parmi ces mots, lequel est un synonyme de 'commencer' au registre courant ?",
+        "options": [
+          "inaugurer",
+          "initier",
+          "entamer",
+          "déclencher"
+        ],
+        "answer": "entamer"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Le Français dans le Monde : 300 Millions de Joueurs sur le Même Serveur",
-    "brief": "Le français, c'est pas juste la langue de la baguette et du béret — c'est la 5e langue la plus parlée dans le monde, avec environ 300 millions de locuteurs répartis sur 5 continents. La Francophonie, c'est l'Organisation Internationale de la Francophonie (OIF) fondée en 1970 : 88 États et gouvernements membres. Le français est langue officielle dans 29 pays — de la France au Sénégal, de la Belgique au Québec, de la Suisse à Madagascar. La plus grande communauté francophone d'Afrique subsaharienne ? La République Démocratique du Congo. L'Académie française, fondée en 1635 par le cardinal Richelieu, est la gardienne officielle de la langue. En 2050, selon certaines projections, le français pourrait être la langue la plus parlée du monde grâce à la démographie africaine. Le serveur Francophonie, c'est en pleine expansion.",
-    "visualDescription": "Un planisphère néon avec les pays francophones illuminés en bleu électrique et or. Des bulles de conversation en français qui émergent simultanément de Paris, Dakar, Montréal, Kinshasa, Bruxelles et Genève. Le logo de l'OIF comme une console centrale coordonnant un réseau planétaire. L'Académie française représentée comme une forteresse holographique gardant le Grand Dictionnaire. Ambiance réseau linguistique mondial cyberpunk.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1526470608268-f674ce90ebd4",
+    "title": "Expression & Style ✨ — L'Art de Manier les Mots",
+    "brief": "Bienvenue au niveau master de la maîtrise du français : l'art de l'expression et du style. Les figures de style ne sont pas de simples ornements rhétoriques — ce sont des outils cognitifs qui permettent de faire comprendre, ressentir et retenir des idées avec une puissance que les formulations plates ne peuvent pas atteindre. Une métaphore bien choisie encode une idée complexe en une image mémorable. Une anaphore martèle un message jusqu'à ce qu'il devienne irréfutable.\n\nLa cohérence textuelle, c'est la discipline qui assure que ton texte avance dans une direction claire, que chaque phrase prépare la suivante, que les idées s'enchaînent de façon logique. Les connecteurs logiques — mais, donc, or, car, ainsi, pourtant — sont les routeurs de ton texte : ils indiquent au lecteur comment les idées sont reliées (cause, conséquence, opposition, illustration). Un texte sans connecteurs logiques, c'est un réseau sans protocoles — des données qui arrivent en vrac.\n\nLa rédaction efficace combine toutes ces compétences : clarté du propos, précision du vocabulaire, variété des constructions, cohérence de l'ensemble. Les meilleurs rédacteurs ne font pas de longues phrases pour paraître intelligent — ils font des phrases de longueur variable pour créer un rythme. Ils choisissent le mot exact plutôt que trois approximations. Et ils relisent. Toujours. Plusieurs fois.",
+    "visualDescription": "Un atelier d'écriture futuriste immergé dans une lumière ambre et électrique, où des phrases se construisent en hologramme et se transforment en œuvres d'art typographiques. Des figures de style apparaissent comme des modules interchangeables dans un IDE littéraire. Des flux de texte s'organisent en architectures de données élégantes, comme si écrire était une forme de programmation.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
     "quiz": [
       {
-        "question": "Combien de locuteurs environ parle-t-on pour la langue française dans le monde aujourd'hui ?",
-        "options": ["80 millions", "150 millions", "300 millions", "500 millions"],
-        "answer": "300 millions"
+        "question": "Quelle figure de style consiste à donner des caractéristiques humaines à un objet inanimé ou à une abstraction ?",
+        "options": [
+          "La métaphore",
+          "La personnification",
+          "L'allégorie",
+          "L'antithèse"
+        ],
+        "answer": "La personnification"
       },
       {
-        "question": "En quelle année l'Académie française a-t-elle été fondée, et par qui ?",
-        "options": ["En 1539, par François Ier", "En 1635, par le cardinal Richelieu", "En 1789, par la Convention nationale", "En 1902, par la IIIe République"],
-        "answer": "En 1635, par le cardinal Richelieu"
+        "question": "Dans « Je vis, je meurs ; je me brûle et me noie » (Louise Labé), quelle figure de style est employée ?",
+        "options": [
+          "L'anaphore",
+          "L'oxymore",
+          "L'antithèse",
+          "La litote"
+        ],
+        "answer": "L'antithèse"
       },
       {
-        "question": "Quel pays africain abrite la plus grande communauté francophone d'Afrique subsaharienne ?",
-        "options": ["Le Sénégal", "La Côte d'Ivoire", "La République Démocratique du Congo", "Le Cameroun"],
-        "answer": "La République Démocratique du Congo"
+        "question": "Quel connecteur logique exprime le mieux une CONCESSION dans : « Il pleut, ___ nous partons quand même. » ?",
+        "options": [
+          "donc",
+          "car",
+          "pourtant",
+          "ainsi"
+        ],
+        "answer": "pourtant"
       },
       {
-        "question": "Dans combien de pays le français est-il reconnu comme langue officielle ?",
-        "options": ["14 pays", "22 pays", "29 pays", "38 pays"],
-        "answer": "29 pays"
+        "question": "Quelle est la différence entre une métaphore et une comparaison ?",
+        "options": [
+          "La métaphore porte sur les sentiments, la comparaison sur les objets",
+          "La comparaison utilise un outil comparatif (comme, tel que), la métaphore établit l'identification directement",
+          "La métaphore est plus longue que la comparaison",
+          "Il n'y a aucune différence, ce sont deux noms pour la même figure"
+        ],
+        "answer": "La comparaison utilise un outil comparatif (comme, tel que), la métaphore établit l'identification directement"
       },
       {
-        "question": "Qu'est-ce que le 'verlan', forme d'argot très présente dans le français contemporain parlé ?",
-        "options": ["Un emprunt à la langue arabe intégré en français", "Un procédé qui consiste à inverser les syllabes des mots", "Un dialecte régional du sud de la France", "Un registre de langue formel de l'administration"],
-        "answer": "Un procédé qui consiste à inverser les syllabes des mots"
+        "question": "Qu'est-ce qu'une « litote » en rhétorique ?",
+        "options": [
+          "Une figure qui exagère une réalité pour la rendre plus frappante",
+          "Une figure qui dit moins pour suggérer davantage (ex : 'ce n'est pas mal')",
+          "Une répétition d'un même mot en début de phrase",
+          "Une rupture de construction syntaxique volontaire"
+        ],
+        "answer": "Une figure qui dit moins pour suggérer davantage (ex : 'ce n'est pas mal')"
       }
     ]
   }
