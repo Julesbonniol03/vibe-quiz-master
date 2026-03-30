@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -37,6 +38,9 @@ function saveProgress(levelId: number, score: number) {
 }
 
 export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
+  const searchParams = useSearchParams();
+  const isPreview = searchParams.get("preview") === "true";
+
   const [selectedLevel, setSelectedLevel] = useState<StoryLevel | null>(null);
   const [phase, setPhase] = useState<"map" | "brief" | "quiz" | "results">("map");
   const [currentQ, setCurrentQ] = useState(0);
@@ -116,12 +120,20 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
           </div>
         </div>
 
+        {/* Preview mode banner */}
+        {isPreview && (
+          <div className="mb-4 px-4 py-2 rounded-xl border border-yellow-500/30 bg-yellow-500/[0.06] flex items-center gap-2">
+            <span className="text-yellow-400 text-sm font-bold">⚡ MODE PREVIEW</span>
+            <span className="text-yellow-400/60 text-xs">— Tous les niveaux débloqués pour test. <Link href="/story-mode" className="underline hover:text-yellow-300">Quitter le preview</Link></span>
+          </div>
+        )}
+
         {/* Level Cards */}
         <div className="space-y-4">
           {levels.map((level, i) => {
             const done = progress[level.id]?.completed;
             const levelScore = progress[level.id]?.score ?? 0;
-            const isLocked = i > 0 && !progress[levels[i - 1].id]?.completed;
+            const isLocked = !isPreview && i > 0 && !progress[levels[i - 1].id]?.completed;
 
             return (
               <motion.button
