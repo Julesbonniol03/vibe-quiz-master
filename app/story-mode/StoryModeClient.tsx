@@ -134,7 +134,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
                 className={`w-full text-left group relative overflow-hidden rounded-2xl border transition-all duration-300
                   ${isLocked
                     ? "opacity-40 cursor-not-allowed border-white/[0.04] bg-white/[0.01]"
-                    : [15, 21].includes(level.id)
+                    : [15, 21, 30].includes(level.id)
                       ? done
                         ? "border-yellow-500/30 bg-yellow-500/[0.04] hover:bg-yellow-500/[0.08] hover:scale-[1.01] active:scale-[0.99]"
                         : "border-yellow-500/30 bg-yellow-500/[0.04] hover:bg-yellow-500/[0.08] hover:border-yellow-400/50 hover:scale-[1.01] active:scale-[0.99]"
@@ -149,10 +149,10 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
                 <div className="relative p-5 flex items-center gap-5">
                   {/* Day Number */}
                   <div className={`flex-shrink-0 rounded-2xl flex items-center justify-center font-bold border
-                    ${[15, 21].includes(level.id) ? "w-16 h-16 text-2xl" : "w-14 h-14 text-lg"}
+                    ${[15, 21, 30].includes(level.id) ? "w-16 h-16 text-2xl" : "w-14 h-14 text-lg"}
                     ${isLocked
                       ? "bg-white/[0.03] border-white/[0.06] text-slate-700"
-                      : [15, 21].includes(level.id)
+                      : [15, 21, 30].includes(level.id)
                         ? done
                           ? "bg-yellow-500/20 border-yellow-500/30 text-yellow-300"
                           : "bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30 text-yellow-300"
@@ -160,7 +160,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
                           ? "bg-green-500/10 border-green-500/20 text-green-400"
                           : "bg-gradient-to-br from-neon-cyan/10 to-purple-500/10 border-neon-cyan/20 text-neon-cyan"
                     }`}>
-                    {isLocked ? "🔒" : done ? ([15, 21].includes(level.id) ? "🏆" : "✅") : [15, 21].includes(level.id) ? "⚡" : `J${level.id}`}
+                    {isLocked ? "🔒" : done ? ([15, 21, 30].includes(level.id) ? "🏆" : "✅") : [15, 21, 30].includes(level.id) ? "⚡" : `J${level.id}`}
                   </div>
 
                   {/* Content */}
@@ -200,13 +200,6 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
           })}
         </div>
 
-        {/* Coming soon placeholder */}
-        <div className="mt-6 p-5 rounded-2xl border border-dashed border-white/[0.08] text-center">
-          <p className="text-slate-600 text-sm">
-            Jours 22-30 bientôt disponibles... Belle Époque, Grande Guerre &amp; Ère Contemporaine 🔥
-          </p>
-        </div>
-
         <div className="mt-8 text-center">
           <Link
             href="/dashboard"
@@ -242,15 +235,15 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
             <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 to-transparent" />
               <span className="relative text-6xl">
-                {selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : "🏛️"}
+                {selectedLevel.id === 1 ? "🦴" : selectedLevel.id === 2 ? "🏺" : selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : selectedLevel.id === 22 ? "🪖" : selectedLevel.id === 23 ? "📈" : selectedLevel.id === 24 ? "💣" : selectedLevel.id === 25 ? "☢️" : selectedLevel.id === 26 ? "🌍" : selectedLevel.id === 27 ? "🚀" : selectedLevel.id === 28 ? "🌐" : selectedLevel.id === 29 ? "📱" : selectedLevel.id === 30 ? "⚡" : "🏛️"}
               </span>
             </div>
 
             {/* Content */}
             <div className="p-6 bg-white/[0.02]">
               <div className="flex items-center gap-2 mb-3">
-                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${[15, 21].includes(selectedLevel.id) ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20" : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"}`}>
-                  {[15, 21].includes(selectedLevel.id) ? `⚡ BOSS — Jour ${selectedLevel.id}` : `Jour ${selectedLevel.id}`}
+                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${[15, 21, 30].includes(selectedLevel.id) ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20" : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"}`}>
+                  {selectedLevel.id === 30 ? "⚡ ULTIMATE BOSS — Jour 30" : [15, 21].includes(selectedLevel.id) ? `⚡ BOSS — Jour ${selectedLevel.id}` : `Jour ${selectedLevel.id}`}
                 </span>
                 <span className="text-xs text-slate-600">{selectedLevel.quiz.length} questions</span>
               </div>
