@@ -401,6 +401,12 @@ export const categoryColors: Record<string, { bg: string; text: string; border: 
     border: "border-lime-500/30",
     icon: "📰",
   },
+  "Vocabulaire des Jeunes": {
+    bg: "bg-pink-500/20",
+    text: "text-pink-300",
+    border: "border-pink-500/30",
+    icon: "🗣️",
+  },
 };
 
 export const difficultyColors = {
