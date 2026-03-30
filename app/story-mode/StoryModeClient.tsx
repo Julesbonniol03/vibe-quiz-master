@@ -124,6 +124,13 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
     setPhase("quiz");
   };
 
+  const handleSeedProgress = () => {
+    const seeded: Record<number, { completed: boolean; score: number }> = {};
+    levels.forEach((l) => { seeded[l.id] = { completed: true, score: l.quiz.length }; });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(seeded));
+    setProgress(seeded);
+  };
+
   const handleAnswer = (idx: number) => {
     if (answered || !selectedLevel) return;
     setSelected(idx);
@@ -186,9 +193,18 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
 
         {/* Preview mode banner */}
         {isPreview && (
-          <div className="mb-4 px-4 py-2 rounded-xl border border-yellow-500/30 bg-yellow-500/[0.06] flex items-center gap-2">
+          <div className="mb-4 px-4 py-3 rounded-xl border border-yellow-500/30 bg-yellow-500/[0.06] flex flex-wrap items-center gap-3">
             <span className="text-yellow-400 text-sm font-bold">⚡ MODE PREVIEW</span>
-            <span className="text-yellow-400/60 text-xs">— Tous les niveaux débloqués pour test. <Link href="/story-mode" className="underline hover:text-yellow-300">Quitter le preview</Link></span>
+            <span className="text-yellow-400/60 text-xs flex-1">Tous les niveaux débloqués pour test.</span>
+            <button
+              onClick={handleSeedProgress}
+              className="text-xs font-bold px-3 py-1.5 rounded-lg bg-yellow-500/20 border border-yellow-500/30 text-yellow-300 hover:bg-yellow-500/30 transition-colors"
+            >
+              🎮 Simuler joueur niveau 30
+            </button>
+            <Link href="/story-mode" className="text-xs text-yellow-400/50 underline hover:text-yellow-300">
+              Quitter
+            </Link>
           </div>
         )}
 
