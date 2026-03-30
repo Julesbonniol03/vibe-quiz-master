@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "Les Comics & Super-Héros",
+    "subtitle": "Quand des gars en collants ont sauvé le monde",
+    "brief": "C'est le mec qui dessine dans un appartement minuscule de New York dans les années 30, qui invente des personnages avec des super-pouvoirs pour donner espoir à des gens qui vivent la Grande Dépression — c'est comme ça que les super-héros sont nés. Superman débarque en 1938 dans Action Comics #1, un gars en cape rouge qui soulève des voitures, et le monde n'est plus jamais pareil. Les gamins se ruent dans les kiosques, et l'industrie du comics est lancée.\n\nDC Comics pose les bases avec Superman en 1938 et Batman en 1939, mais Marvel arrive quelques décennies plus tard avec une approche radicalement différente : des héros imparfaits, avec des problèmes du quotidien. Stan Lee et Jack Kirby créent les Fantastic Four en 1961, Spider-Man en 1962, les X-Men en 1963 — en gros, ils inventent le super-héros humain, celui qui a des angoisses, des dettes, des problèmes de boulot. Peter Parker est pas juste Spider-Man, c'est aussi un étudiant fauché qui galère.\n\nAujourd'hui le MCU (Marvel Cinematic Universe) est la franchise cinématographique la plus lucrative de l'histoire avec plus de 29 milliards de dollars de recettes mondiales. Ces personnages nés dans des magazines en papier noir et blanc vendus 10 cents sont devenus une religion pop mondiale. Stan Lee, décédé en 2018, aura vu ses créations conquérir la planète entière.",
+    "visualDescription": "Ville de nuit style Gotham cyberpunk avec des buildings couverts de néons colorés, des silhouettes de super-héros projetées en hologrammes géants sur les façades, des cases de comics animées qui flottent dans les airs comme des portails lumineux, palette violet foncé, rouge et or",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année Superman a-t-il fait sa première apparition dans un comic book ?",
+        "options": [
+          "1933",
+          "1935",
+          "1938",
+          "1941"
+        ],
+        "answer": "1938"
+      },
+      {
+        "question": "Qui sont les deux créateurs principaux de Spider-Man chez Marvel Comics ?",
+        "options": [
+          "Bob Kane et Bill Finger",
+          "Stan Lee et Jack Kirby",
+          "Neal Adams et Dennis O'Neil",
+          "Joe Simon et Jack Kirby"
+        ],
+        "answer": "Stan Lee et Jack Kirby"
+      },
+      {
+        "question": "Dans quel comic book Batman a-t-il fait sa première apparition en 1939 ?",
+        "options": [
+          "Action Comics #1",
+          "Detective Comics #27",
+          "Batman #1",
+          "World's Finest #1"
+        ],
+        "answer": "Detective Comics #27"
+      },
+      {
+        "question": "Quel est le vrai nom de Tony Stark, alias Iron Man dans les comics Marvel ?",
+        "options": [
+          "Anthony Edward Stark",
+          "Thomas James Stark",
+          "Robert John Stark",
+          "Edward Bruce Stark"
+        ],
+        "answer": "Anthony Edward Stark"
+      },
+      {
+        "question": "En quelle année Stan Lee, le père de nombreux super-héros Marvel, est-il décédé ?",
+        "options": [
+          "2015",
+          "2016",
+          "2017",
+          "2018"
+        ],
+        "answer": "2018"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Les Jeux Vidéo",
+    "subtitle": "Du Pong aux mondes ouverts infinis",
+    "brief": "C'est le mec qui colle une pièce dans une borne d'arcade en 1978 pour jouer à Space Invaders et qui passe trois heures à essayer de battre le score de l'inconnu dont le nom est gravé dans la machine — bienvenue dans l'histoire du jeu vidéo, la forme artistique la plus jeune et la plus rentable jamais créée par l'humanité. Les jeux vidéo ont dépassé le cinéma en termes de revenus mondiaux en 2019. Voilà ce qui se passe quand la geekerie prend le pouvoir.\n\nAtari lance Pong en 1972 — deux traits et un carré sur l'écran — et ça devient un phénomène de société. Nintendo arrive en 1983 avec la NES et sauve littéralement l'industrie du jeu vidéo après le grand crash de 1983. Mario, Zelda, Donkey Kong — ces personnages deviennent des icônes culturelles mondiales. Puis Sony entre dans la danse avec la PlayStation en 1994 et le jeu vidéo devient adulte, plus sérieux, plus cinématographique.\n\nAujourd'hui les jeux vidéo c'est 200 milliards de dollars de marché annuel, des tournois d'esport remplis de stades entiers, des streamers qui font des millions sur Twitch. Minecraft a été vendu à plus de 300 millions d'exemplaires, le plus vendu de l'histoire. Le petit carré de Pong a fait un chemin incroyable.",
+    "visualDescription": "Salle d'arcade rétro-futuriste avec des bornes classiques recouvertes de néons, des personnages de jeux vidéo iconiques en pixel art 3D géants flottant dans l'espace, écrans holographiques superposés montrant des générations de consoles, ambiance violet électrique et vert néon",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année Atari a-t-il lancé le jeu Pong, considéré comme l'un des premiers jeux vidéo commerciaux à succès ?",
+        "options": [
+          "1968",
+          "1972",
+          "1975",
+          "1978"
+        ],
+        "answer": "1972"
+      },
+      {
+        "question": "Quel jeu vidéo est le plus vendu de tous les temps avec plus de 300 millions d'exemplaires vendus ?",
+        "options": [
+          "Tetris",
+          "Grand Theft Auto V",
+          "Minecraft",
+          "Wii Sports"
+        ],
+        "answer": "Minecraft"
+      },
+      {
+        "question": "En quelle année Nintendo a-t-il sorti la Nintendo Entertainment System (NES) au Japon, relançant l'industrie du jeu vidéo ?",
+        "options": [
+          "1981",
+          "1983",
+          "1985",
+          "1987"
+        ],
+        "answer": "1983"
+      },
+      {
+        "question": "Quel est le nom du plombier moustachu créé par Nintendo, devenu l'une des mascotes de jeux vidéo les plus reconnaissables au monde ?",
+        "options": [
+          "Luigi",
+          "Mario",
+          "Wario",
+          "Toad"
+        ],
+        "answer": "Mario"
+      },
+      {
+        "question": "En quelle année Sony a-t-il lancé la première PlayStation (PS1) au Japon ?",
+        "options": [
+          "1992",
+          "1993",
+          "1994",
+          "1996"
+        ],
+        "answer": "1994"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Séries TV Cultes",
+    "subtitle": "Ces histoires dont on n'arrive pas à sortir",
+    "brief": "C'est le mec qui regarde le dernier épisode de Breaking Bad à 2h du matin, les yeux grands ouverts, incapable de dormir parce qu'il vient de vivre quelque chose d'intense — voilà ce que font les grandes séries. Elles te capturent, te hantent, te font parler de personnages fictifs comme s'ils étaient de vrais amis ou de vrais ennemis. « T'as vu le truc que Walter White a fait ? » — et là t'es parti pour une heure de discussion.\n\nFriends, lancé en 1994, a révolutionné la sitcom en mettant en scène six amis new-yorkais dont tout le monde pouvait se sentir proche. La série a tourné pendant 10 saisons, et même aujourd'hui elle continue d'exploser sur Netflix avec des audiences composées de gens qui n'étaient pas nés quand elle a été diffusée. Game of Thrones, de 2011 à 2019, a transformé la fantasy en phénomène culturel de masse — des gens qui n'avaient jamais lu de fantasy de leur vie se levaient à 3h du matin pour voir les épisodes en avant-première.\n\nOn vit dans l'âge d'or des séries. Netflix, HBO, Amazon Prime ont investi des milliards pour créer des contenus qui rivalisent avec le cinéma — et parfois le surpassent. Breaking Bad a souvent été classé comme la meilleure série de l'histoire de la télévision. The Wire, Sopranos, Chernobyl, Fleabag — on est clairement dans une renaissance narrative sans précédent.",
+    "visualDescription": "Salon ultra-moderne cyberpunk avec un écran holographique géant diffusant des scènes de séries iconiques, canapé entouré de projections de personnages célèbres en néon, commandes de télécommande flottant dans les airs, ambiance nuit bleutée avec des reflets de téléviseurs",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année la série Friends a-t-elle été diffusée pour la première fois aux États-Unis ?",
+        "options": [
+          "1992",
+          "1993",
+          "1994",
+          "1996"
+        ],
+        "answer": "1994"
+      },
+      {
+        "question": "Combien de saisons compte la série Breaking Bad, créée par Vince Gilligan ?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "answer": "5"
+      },
+      {
+        "question": "Sur quelle chaîne américaine Game of Thrones a-t-il été diffusé de 2011 à 2019 ?",
+        "options": [
+          "Netflix",
+          "AMC",
+          "HBO",
+          "Showtime"
+        ],
+        "answer": "HBO"
+      },
+      {
+        "question": "Quel acteur incarne le personnage de Walter White dans la série Breaking Bad ?",
+        "options": [
+          "Aaron Paul",
+          "Bryan Cranston",
+          "Bob Odenkirk",
+          "Jonathan Banks"
+        ],
+        "answer": "Bryan Cranston"
+      },
+      {
+        "question": "Dans la série Friends, quel personnage est interprété par Jennifer Aniston ?",
+        "options": [
+          "Monica Geller",
+          "Phoebe Buffay",
+          "Rachel Green",
+          "Janice Litman"
+        ],
+        "answer": "Rachel Green"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Internet & Mèmes",
+    "subtitle": "La culture du LOL et du partage viral",
+    "brief": "C'est le mec qui poste une photo d'un chat avec une légende absurde à 3h du matin et qui se réveille le lendemain avec 2 millions de vues — bienvenue dans l'économie des mèmes, la forme de communication la plus étrange et la plus efficace jamais inventée par l'humanité connectée. Un mème, c'est une idée qui se réplique et mute en traversant les esprits, comme un gène culturel. Le terme vient de Richard Dawkins, qui l'a inventé en 1976, bien avant internet.\n\nLes premiers mèmes internet, c'était les années 2000 : Lolcats, le « All Your Base Are Belong to Us », le Rickroll, Dancing Baby. YouTube arrive en 2005 et change tout — n'importe qui peut désormais devenir viral en une nuit. En 2007, Charlie Bit My Finger cumule des millions de vues alors que YouTube n'a que deux ans. En 2012, Gangnam Style de PSY devient le premier clip à atteindre 1 milliard de vues sur YouTube.\n\nAujourd'hui les mèmes sont devenus un langage à part entière, utilisé en politique, en marketing, en communication internationale. Les jeunes generations communiquent autant par mèmes que par mots. TikTok a turbo-chargé la viralité avec un algorithme qui peut propulser n'importe quelle vidéo à des millions de personnes en quelques heures. On vit dans la civilisation du mème.",
+    "visualDescription": "Écran géant fragmenté en milliers de petits écrans affichant des mèmes et vidéos virales en néon multicolore, interface internet futuriste avec flux de données et commentaires qui défilent à toute vitesse, décor de serveurs lumineux et câbles holographiques, ambiance vert terminal et cyan",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année YouTube a-t-il été fondé, révolutionnant le partage de vidéos en ligne ?",
+        "options": [
+          "2003",
+          "2004",
+          "2005",
+          "2006"
+        ],
+        "answer": "2005"
+      },
+      {
+        "question": "Quel clip musical est devenu le premier à dépasser 1 milliard de vues sur YouTube en 2012 ?",
+        "options": [
+          "Baby de Justin Bieber",
+          "Gangnam Style de PSY",
+          "Wrecking Ball de Miley Cyrus",
+          "Roar de Katy Perry"
+        ],
+        "answer": "Gangnam Style de PSY"
+      },
+      {
+        "question": "Quel philosophe et biologiste britannique a inventé le terme « mème » en 1976, bien avant internet ?",
+        "options": [
+          "Stephen Hawking",
+          "Richard Dawkins",
+          "Carl Sagan",
+          "Daniel Dennett"
+        ],
+        "answer": "Richard Dawkins"
+      },
+      {
+        "question": "En quelle année Facebook a-t-il été fondé par Mark Zuckerberg ?",
+        "options": [
+          "2002",
+          "2003",
+          "2004",
+          "2005"
+        ],
+        "answer": "2004"
+      },
+      {
+        "question": "Comment s'appelle le phénomène viral consistant à rediriger quelqu'un vers la vidéo de « Never Gonna Give You Up » de Rick Astley sans le prévenir ?",
+        "options": [
+          "Duckroll",
+          "Rickroll",
+          "Trollface",
+          "Baitswitch"
+        ],
+        "answer": "Rickroll"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La K-Pop & Culture Mondiale",
+    "subtitle": "Quand la Corée a conquis la planète",
+    "brief": "C'est le mec qui ne comprend pas un mot de coréen mais qui connaît par cœur les paroles de Dynamite de BTS et tous les mouvements de la chorégraphie — c'est ça la magie de la K-Pop et plus largement de la Hallyu, la vague culturelle coréenne qui a littéralement envahi le monde. BTS, Blackpink, EXO, TWICE — ces groupes ont des armées de fans (les BTS ARMY, c'est officiel) qui peuvent faire crasher des sites web en quelques minutes.\n\nMais la K-Pop, c'est pas tombé du ciel. C'est le fruit de décennies de travail acharné, d'un système de formation des artistes extrêmement rigoureux, d'une production musicale et visuelle de haute qualité, et d'une stratégie de fan engagement révolutionnaire. Les agences coréennes comme SM Entertainment, YG et HYBE ont créé un modèle qui fait école dans le monde entier. BTS a été reçu à la Maison Blanche et s'est adressé à l'Assemblée Générale de l'ONU.\n\nEt puis il y a Squid Game. Sorti en 2021, ce drama coréen est devenu la série non-anglophone la plus regardée de l'histoire de Netflix, avec 1,65 milliard d'heures de visionnage en 28 jours. La même année, le film Parasite de Bong Joon-ho avait remporté l'Oscar du meilleur film — une première pour un film non-anglophone. La Corée a définitivement changé la donne de la culture mondiale.",
+    "visualDescription": "Scène de concert K-Pop futuriste avec des dizaines de milliers de lightsticks colorés dans le public, hologrammes d'idoles coréens dansant sur une scène couverte de néons rose et cyan, écrans géants avec des graphiques de streaming et de votes de fans, ville de Séoul cyberpunk en arrière-plan",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Comment s'appelle le mouvement culturel coréen qui désigne la propagation de la culture pop coréenne dans le monde entier ?",
+        "options": [
+          "Hanbok",
+          "Hallyu",
+          "Hangul",
+          "Hanji"
+        ],
+        "answer": "Hallyu"
+      },
+      {
+        "question": "En quelle année le film Parasite de Bong Joon-ho a-t-il remporté l'Oscar du meilleur film, une première pour un film non-anglophone ?",
+        "options": [
+          "2018",
+          "2019",
+          "2020",
+          "2021"
+        ],
+        "answer": "2020"
+      },
+      {
+        "question": "Comment s'appelle la fanbase officielle du groupe de K-Pop BTS ?",
+        "options": [
+          "BLINK",
+          "ARMY",
+          "EXO-L",
+          "ONCE"
+        ],
+        "answer": "ARMY"
+      },
+      {
+        "question": "Sur quelle plateforme de streaming Squid Game (2021) est-il devenu la série non-anglophone la plus regardée de l'histoire ?",
+        "options": [
+          "Amazon Prime",
+          "Disney+",
+          "Netflix",
+          "HBO Max"
+        ],
+        "answer": "Netflix"
+      },
+      {
+        "question": "Quel groupe de K-Pop féminin, lancé par YG Entertainment en 2016, est devenu l'un des plus populaires au monde avec des membres comme Jennie, Lisa, Rosé et Jisoo ?",
+        "options": [
+          "TWICE",
+          "BLACKPINK",
+          "aespa",
+          "Red Velvet"
+        ],
+        "answer": "BLACKPINK"
+      }
+    ]
+  }
+]

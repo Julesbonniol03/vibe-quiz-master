@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Les Origines de l'Économie : Adam Smith & la Main Invisible",
+    "brief": "1776, la même année que la Déclaration d'Indépendance américaine, Adam Smith publie 'La Richesse des Nations' — le livre fondateur de l'économie moderne. Son concept phare : la 'main invisible'. L'idée c'est que quand chaque individu cherche son propre intérêt, il contribue sans le vouloir au bien commun — comme si une main invisible guidait l'économie vers l'efficacité. C'est le capitalisme dans sa version theory. La Révolution Industrielle qui suit va tester ce modèle à grande échelle : usines, machines à vapeur, prolétariat exploité. Un certain Karl Marx observe ça de près et publie en 1848 'Le Manifeste du Parti Communiste' avec son pote Engels, puis 'Le Capital' en 1867. Pour Marx, le capitalisme exploite les travailleurs et se détruira lui-même. Deux visions du monde opposées qui ont structuré les 250 ans qui suivent. Le patch note qui a tout changé.",
+    "visualDescription": "Un marché en néon holographique avec des flèches d'offre et de demande en cyan brillant. Adam Smith en silhouette dorée avec une main invisible en transparence guidant des engrenages économiques. Une usine de la révolution industrielle en vapeur violet. Marx et Engels en ombres sombres tenant un manifeste rouge. Ambiance capitalisme vs communisme, round 1.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "quiz": [
+      {
+        "question": "Quel économiste écossais est considéré comme le père de l'économie moderne et a théorisé la 'main invisible' ?",
+        "options": ["David Ricardo", "John Maynard Keynes", "Adam Smith", "Thomas Malthus"],
+        "answer": "Adam Smith"
+      },
+      {
+        "question": "En quelle année Adam Smith publie-t-il 'La Richesse des Nations' ?",
+        "options": ["1748", "1776", "1803", "1848"],
+        "answer": "1776"
+      },
+      {
+        "question": "Quel ouvrage Karl Marx et Friedrich Engels publient-ils en 1848 ?",
+        "options": ["Le Capital", "L'Idéologie Allemande", "Le Manifeste du Parti Communiste", "Das Kapital"],
+        "answer": "Le Manifeste du Parti Communiste"
+      },
+      {
+        "question": "Que désigne le concept de 'main invisible' selon Adam Smith ?",
+        "options": ["L'intervention de l'État dans l'économie", "La régulation naturelle du marché par les intérêts individuels", "Le contrôle des prix par les monopoles", "La puissance des syndicats ouvriers"],
+        "answer": "La régulation naturelle du marché par les intérêts individuels"
+      },
+      {
+        "question": "Quel événement économique majeur du 18e-19e siècle a transformé la production artisanale en production industrielle de masse ?",
+        "options": ["La Révolution Française", "La Révolution Industrielle", "La Révolution Commerciale", "La Révolution Agricole"],
+        "answer": "La Révolution Industrielle"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Le Crash de 1929 : La Grande Démo du Bug Capitaliste",
+    "brief": "24 octobre 1929. 'Black Thursday'. La Bourse de New York s'effondre. Le krach est total : en quelques semaines, des fortunes entières s'évaporent, des banques ferment, des entreprises font faillite. C'est le début de la Grande Dépression, la pire crise économique du XXe siècle. Au pic, 25% des Américains sont au chômage. Les raisons ? Spéculation excessive dans les années 20 (les 'Roaring Twenties'), crédit facile, bulle boursière, agriculture déjà en crise, surproduction. Les gouvernements européens imitent les erreurs américaines. En réponse, Franklin D. Roosevelt lance en 1933 le 'New Deal' — un programme massif d'intervention de l'État : travaux publics, allocations chômage, régulation bancaire. C'est la naissance de l'État-providence moderne. Une leçon brutale sur ce qui se passe quand le marché déraille sans garde-fous.",
+    "visualDescription": "Wall Street en octobre 1929 en mode catastrophe néon. Des graphiques boursiers en chute libre rouge plasma. Des buildings de New York en ombre sombre avec des traders en silhouettes paniquées. Un ticker de cours de bourse en rouge sang. Roosevelt en hologramme doré avec le New Deal. Ambiance game over économique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f",
+    "quiz": [
+      {
+        "question": "Comment appelle-t-on le jeudi du krach boursier de Wall Street en octobre 1929 ?",
+        "options": ["Black Monday", "Black Friday", "Black Thursday", "Black Wednesday"],
+        "answer": "Black Thursday"
+      },
+      {
+        "question": "Quel était approximativement le taux de chômage aux États-Unis au pic de la Grande Dépression ?",
+        "options": ["10 %", "15 %", "25 %", "40 %"],
+        "answer": "25 %"
+      },
+      {
+        "question": "Quel président américain a lancé le New Deal pour répondre à la Grande Dépression ?",
+        "options": ["Herbert Hoover", "Woodrow Wilson", "Harry Truman", "Franklin D. Roosevelt"],
+        "answer": "Franklin D. Roosevelt"
+      },
+      {
+        "question": "En quelle année Roosevelt lance-t-il le New Deal ?",
+        "options": ["1929", "1931", "1933", "1936"],
+        "answer": "1933"
+      },
+      {
+        "question": "Quel mécanisme spéculatif des années 1920 a contribué à gonfler la bulle boursière avant le krach de 1929 ?",
+        "options": ["Les nationalisations massives", "L'achat d'actions à crédit (sur marge)", "La dévaluation du dollar", "Le protectionnisme agricole"],
+        "answer": "L'achat d'actions à crédit (sur marge)"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Théories Économiques Modernes : Keynes vs Friedman",
+    "brief": "Le 20e siècle est l'arène d'un combat de titans entre deux visions de l'économie. Dans le coin gauche : John Maynard Keynes, économiste britannique. Sa théorie post-Dépression : quand l'économie est en crise et les marchés ne se régulent plus, l'État doit dépenser massivement pour relancer la demande. Déficit budgétaire assumé, travaux publics, allocations — c'est le keynésianisme, base de l'État-providence. Dans le coin droit : Milton Friedman, américain, chef de file de l'École de Chicago. Sa théorie : l'État intervient trop, ça crée de l'inflation et de l'inefficacité. Solution ? Libéralisme maximum, privatisations, contrôle de la masse monétaire. C'est le monétarisme. Ces deux écoles ont littéralement façonné les politiques de tous les gouvernements depuis 80 ans. Thatcher et Reagan étaient friedmaniens. L'Europe post-2008 a re-découvert Keynes. Le débat continue en 2024.",
+    "visualDescription": "Un ring de boxe économique en néon. À gauche, Keynes en bleu avec des graphiques de dépenses publiques ascendantes. À droite, Friedman en rouge avec des courbes de libéralisation. Au centre, le PIB mondial en oscillation entre les deux. Des formules économiques en hologrammes verts. Ambiance clash idéologique économique en direct.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "quiz": [
+      {
+        "question": "Quelle est la thèse centrale du keynésianisme en période de crise économique ?",
+        "options": ["Réduire les dépenses publiques pour équilibrer le budget", "Augmenter les impôts pour financer la dette", "L'État doit dépenser massivement pour relancer la demande", "Laisser le marché se réguler seul sans intervention"],
+        "answer": "L'État doit dépenser massivement pour relancer la demande"
+      },
+      {
+        "question": "De quelle école économique Milton Friedman était-il le chef de file ?",
+        "options": ["L'École de Harvard", "L'École Keynésienne", "L'École de Cambridge", "L'École de Chicago"],
+        "answer": "L'École de Chicago"
+      },
+      {
+        "question": "Quelle politique économique, inspirée de Friedman, Margaret Thatcher et Ronald Reagan ont-ils appliquée dans les années 1980 ?",
+        "options": ["Le keynésianisme de relance", "Le libéralisme économique et les privatisations", "L'économie planifiée", "Le protectionnisme industriel"],
+        "answer": "Le libéralisme économique et les privatisations"
+      },
+      {
+        "question": "Quel concept de Keynes désigne l'idée que les dépenses de l'État génèrent un effet d'entraînement supérieur à la mise initiale ?",
+        "options": ["L'effet de levier", "Le multiplicateur keynésien", "L'accélérateur économique", "La demande globale"],
+        "answer": "Le multiplicateur keynésien"
+      },
+      {
+        "question": "Sur quel élément Milton Friedman préconisait-il que les banques centrales devaient concentrer leur action pour stabiliser l'économie ?",
+        "options": ["Le taux de chômage", "Le niveau des dépenses publiques", "La masse monétaire", "Le cours des changes"],
+        "answer": "La masse monétaire"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "La Mondialisation & le Commerce : Le Monde Devient un Seul Marché",
+    "brief": "Après la Seconde Guerre mondiale, les nations décident de ne plus jouer solo. En 1947, naissance du GATT (devenu OMC en 1995) pour fluidifier le commerce international. L'idée du libre-échange : supprimer les barrières douanières, laisser chaque pays se spécialiser dans ce qu'il fait le mieux — la théorie des avantages comparatifs de Ricardo. Résultat : des chaînes d'approvisionnement mondiales ultra-complexes. Un iPhone est conçu en Californie, ses composants viennent d'une dizaine de pays, assemblé à Shenzhen, vendu partout. Les multinationales comme Toyota, Nestlé, Samsung jouent sur plusieurs continents, arbitrent les fiscalités, emploient des millions de personnes. La mondialisation a sorti des centaines de millions de personnes de la pauvreté — notamment en Chine et en Asie du Sud-Est. Mais elle a aussi créé des inégalités et désindustrialisé des régions entières en Occident. Le patch qui a changé les règles du jeu global.",
+    "visualDescription": "Un globe terrestre en hologramme avec des flux de commerce lumineux en cyan reliant les continents. Un porte-containers géant en néon bleu traversant un océan pixélisé. Des logos de multinationales flottant comme des satellites autour de la Terre. L'OMC en building de verre futuriste à Genève. Des chaînes d'approvisionnement comme des circuits électroniques entourant la planète.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1578575437130-527eed3abbec",
+    "quiz": [
+      {
+        "question": "En quelle année l'Organisation Mondiale du Commerce (OMC) a-t-elle officiellement remplacé le GATT ?",
+        "options": ["1947", "1989", "1995", "2001"],
+        "answer": "1995"
+      },
+      {
+        "question": "Quel économiste a théorisé le principe des 'avantages comparatifs', fondement théorique du libre-échange international ?",
+        "options": ["Adam Smith", "David Ricardo", "John Maynard Keynes", "Paul Samuelson"],
+        "answer": "David Ricardo"
+      },
+      {
+        "question": "Dans quel pays les iPhones d'Apple sont-ils principalement assemblés ?",
+        "options": ["Corée du Sud", "Japon", "Inde", "Chine"],
+        "answer": "Chine"
+      },
+      {
+        "question": "Quel terme désigne l'ensemble des étapes de production d'un bien, de la matière première au consommateur final, réparties à l'échelle mondiale ?",
+        "options": ["La division du travail", "La chaîne d'approvisionnement mondiale", "Le commerce triangulaire", "La délocalisation"],
+        "answer": "La chaîne d'approvisionnement mondiale"
+      },
+      {
+        "question": "Quel accord commercial nord-américain, signé en 1994, a créé une zone de libre-échange entre les États-Unis, le Canada et le Mexique ?",
+        "options": ["Le TTIP", "L'ALENA (NAFTA)", "Le TPP", "Le MERCOSUR"],
+        "answer": "L'ALENA (NAFTA)"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Les Entreprises qui ont Changé le Monde : Tech Titans & Disruption",
+    "brief": "Apple, Amazon, Google, Tesla — ces quatre noms résument à eux seuls une des plus grandes révolutions économiques de l'histoire. Steve Jobs sort l'iPhone en 2007 et réinvente ce qu'est un téléphone, une caméra, un GPS, un lecteur MP3 et une banque. Amazon commence comme librairie en ligne en 1994, devient la place de marché du monde, puis invente le cloud computing avec AWS — maintenant le moteur invisible d'internet. Google indexe tout le savoir humain, monétise l'attention avec AdWords, et devient la première porte d'entrée du web. Tesla prouve que la voiture électrique peut être sexy et performante, et Elon Musk redevient le milliardaire le plus riche du monde. Ces entreprises ont en commun : partir d'un garage ou d'un dortoir, des fondateurs obsessionnels, une vision de disruption totale du statu quo. Et aujourd'hui, leur capitalisation boursière dépasse le PIB de la plupart des pays. Le final boss du capitalisme.",
+    "visualDescription": "Un panthéon tech en néon : le logo Apple en pomme lumineuse blanche, le sourire Amazon en jaune néon, le G de Google multicolore holographique, le T de Tesla en rouge plasma. Des serveurs AWS en arrière-plan comme une forteresse numérique. Steve Jobs en silhouette tenant un iPhone brillant. Des graphiques de capitalisation boursière montant jusqu'aux étoiles.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    "quiz": [
+      {
+        "question": "En quelle année Steve Jobs présente-t-il le premier iPhone, révolutionnant l'industrie du mobile ?",
+        "options": ["2005", "2007", "2009", "2010"],
+        "answer": "2007"
+      },
+      {
+        "question": "Qu'est-ce qu'Amazon a lancé en 2006 pour révolutionner l'infrastructure d'internet ?",
+        "options": ["Amazon Prime Video", "Amazon Alexa", "Amazon Web Services (AWS)", "Amazon Marketplace"],
+        "answer": "Amazon Web Services (AWS)"
+      },
+      {
+        "question": "En quelle année Jeff Bezos fonde-t-il Amazon, initialement comme librairie en ligne ?",
+        "options": ["1990", "1994", "1998", "2000"],
+        "answer": "1994"
+      },
+      {
+        "question": "Quel modèle économique Google a-t-il révolutionné pour devenir l'une des entreprises les plus rentables au monde ?",
+        "options": ["L'abonnement mensuel payant", "La publicité ciblée en ligne (AdWords)", "La vente de matériel informatique", "Les licences de moteur de recherche"],
+        "answer": "La publicité ciblée en ligne (AdWords)"
+      },
+      {
+        "question": "Quel était le modèle du premier véhicule Tesla commercialisé en grande série, sorti en 2012, qui a imposé la voiture électrique comme alternative crédible ?",
+        "options": ["Tesla Roadster", "Tesla Model S", "Tesla Model 3", "Tesla Model X"],
+        "answer": "Tesla Model S"
+      }
+    ]
+  }
+]

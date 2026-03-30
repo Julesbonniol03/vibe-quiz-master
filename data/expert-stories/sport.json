@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "title": "Les JO Antiques & Origines du Sport",
+    "subtitle": "Quand les Grecs inventaient le cardio",
+    "brief": "C'est le mec qui court nu sous le soleil d'Olympie, offert aux dieux et à la gloire éternelle — bienvenue dans le sport à son état le plus pur, le plus brutal, le plus badass. On parle d'une époque où gagner une course, c'était littéralement devenir une légende vivante, avec une couronne d'olivier sur la tête et des poètes qui écrivaient des odes pour toi. Pas de médaille d'or, pas de podium télévisé, juste la gloire pure.\n\nLes Jeux Olympiques antiques, c'est pas juste du sport — c'est de la religion, de la politique, et du flex ultime mélangés ensemble. Pendant les Jeux, les guerres s'arrêtaient. La trêve sacrée, l'ekecheiria, c'était le moment où même les ennemis mortels posaient leurs armes pour venir compéter à Olympie. Le sport comme langage universel ? Les Grecs l'avaient compris 800 ans avant J.-C., bien avant tout le monde.\n\nDu pentathlon au pugilat — leur version du MMA, mais sans arbitre et sans règles très strictes — ces gars-là ont posé les bases de tout ce qu'on appelle la compétition sportive aujourd'hui. Les épreuves d'Olympie couvraient la course à pied, la lutte, le saut en longueur, le lancer de disque et de javelot. Alors avant de matter les prochains JO en pyjama dans ton canapé, rends hommage aux OG du game.",
+    "visualDescription": "Un stade grec antique baigné de lumière néon dorée et violette, des colonnes de marbre avec des reflets holographiques, des athlètes aux silhouettes pixelisées courant sur une piste cyberpunk, le mont Olympe visible en arrière-plan avec des nuages électriques",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1569517282132-25d22f4573e6?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Dans quelle ville grecque se tenaient les Jeux Olympiques antiques ?",
+        "options": [
+          "Athènes",
+          "Sparte",
+          "Olympie",
+          "Corinthe"
+        ],
+        "answer": "Olympie"
+      },
+      {
+        "question": "En quelle année ont eu lieu les premiers Jeux Olympiques antiques recensés ?",
+        "options": [
+          "776 avant J.-C.",
+          "490 avant J.-C.",
+          "500 avant J.-C.",
+          "1200 avant J.-C."
+        ],
+        "answer": "776 avant J.-C."
+      },
+      {
+        "question": "À quel dieu grec les Jeux Olympiques antiques étaient-ils dédiés ?",
+        "options": [
+          "Apollon",
+          "Arès",
+          "Poséidon",
+          "Zeus"
+        ],
+        "answer": "Zeus"
+      },
+      {
+        "question": "Quel était le prix décerné aux vainqueurs des Jeux Olympiques antiques ?",
+        "options": [
+          "Une couronne de laurier",
+          "Une couronne d'olivier",
+          "Un bouclier en or",
+          "Une amphore d'huile"
+        ],
+        "answer": "Une couronne d'olivier"
+      },
+      {
+        "question": "Comment s'appelait la trêve sacrée pendant laquelle les guerres s'arrêtaient pour les Jeux Olympiques ?",
+        "options": [
+          "La Paix d'Athènes",
+          "L'Ekecheiria",
+          "La Trêve de Zeus",
+          "L'Olympiade sacrée"
+        ],
+        "answer": "L'Ekecheiria"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Le Football",
+    "subtitle": "Le sport qui a unifié (et divisé) la planète",
+    "brief": "C'est le mec qui dribble dans une ruelle de Rio, qui tire dans une cour d'école à Dakar, qui marque en pleurant devant 80 000 personnes en délire — le football, c'est littéralement le sport qui parle à tout le monde, dans toutes les langues. Aucun autre truc sur Terre n'a cette capacité à réunir autant de gens autour d'un ballon rond. Un ballon, deux buts improvisés, et t'as déjà un match qui peut durer des heures.\n\nMais avant d'en arriver aux maillots fluo et aux transferts à 200 millions d'euros, le foot a eu une vraie histoire de dingue. Les Anglais du XIXe siècle qui codifient les règles dans un pub londonien en 1863, la création de la FIFA à Paris en 1904, la première Coupe du Monde en Uruguay en 1930 — c'est un voyage dans le temps qui explique pourquoi ce sport est devenu une religion mondiale avec 4 milliards de supporters.\n\nAujourd'hui, la Coupe du Monde, c'est l'événement le plus regardé sur la planète, devant les JO et n'importe quoi d'autre. La finale 2022 entre France et Argentine a réuni plus d'un milliard de téléspectateurs en simultané. Des milliards de personnes qui regardent le même truc en même temps — le foot a réussi quelque chose qu'aucune autre invention humaine n'a pu faire à cette échelle.",
+    "visualDescription": "Un stade de football la nuit, éclairé par des projecteurs néon cyan et magenta, des hologrammes de joueurs iconiques flottant au-dessus de la pelouse, un ballon de foot en lévitation avec des circuits électroniques lumineux incrustés dessus",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année la FIFA (Fédération Internationale de Football Association) a-t-elle été fondée ?",
+        "options": [
+          "1896",
+          "1900",
+          "1904",
+          "1912"
+        ],
+        "answer": "1904"
+      },
+      {
+        "question": "Dans quel pays s'est déroulée la première Coupe du Monde de football en 1930 ?",
+        "options": [
+          "Brésil",
+          "Argentine",
+          "France",
+          "Uruguay"
+        ],
+        "answer": "Uruguay"
+      },
+      {
+        "question": "Quelle équipe nationale a remporté le plus de Coupes du Monde de football (5 titres) ?",
+        "options": [
+          "Allemagne",
+          "Italie",
+          "Argentine",
+          "Brésil"
+        ],
+        "answer": "Brésil"
+      },
+      {
+        "question": "Dans quelle ville anglaise les premières règles codifiées du football moderne ont-elles été rédigées en 1863 ?",
+        "options": [
+          "Manchester",
+          "Londres",
+          "Birmingham",
+          "Liverpool"
+        ],
+        "answer": "Londres"
+      },
+      {
+        "question": "Quel est le vrai nom complet de Pelé, légende brésilienne du football ?",
+        "options": [
+          "Ronaldo Pelé Silva",
+          "Edson Arantes do Nascimento",
+          "Carlos Alberto Santos",
+          "João Pelé Ferreira"
+        ],
+        "answer": "Edson Arantes do Nascimento"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les JO Modernes",
+    "subtitle": "La renaissance du mythe olympique",
+    "brief": "C'est le mec qui, en 1896, regarde des athlètes du monde entier courir sur un stade athénien et qui réalise qu'il vient de ressusciter quelque chose d'endormi depuis 1 500 ans. Ce mec, c'est Pierre de Coubertin, un baron français visionnaire qui a eu l'idée de remettre les Jeux Olympiques au goût du jour — et franchement, quel move légendaire pour l'humanité.\n\nLes premiers JO modernes d'Athènes en 1896, c'était artisanal, bricolé, mais tellement émouvant. 14 pays, 241 athlètes, des épreuves en plein air dans un stade en marbre blanc reconstruit pour l'occasion. Depuis, les Jeux ont explosé pour devenir le plus grand spectacle sportif humain — avec ses controverses, ses records impossibles, ses moments de larmes et ses histoires qui dépassent le cadre du sport.\n\nDes JO de Berlin 1936 sous l'ombre de Hitler, à ceux de Munich 1972 et leur tragédie, en passant par les boycotts de la Guerre Froide — les JO modernes reflètent l'histoire du monde autant que ses exploits sportifs. La flamme olympique, allumée à Olympie par le soleil et le miroir parabolique, portée en relais jusqu'à la ville hôte, est devenue l'un des symboles les plus puissants de l'humanité.",
+    "visualDescription": "La flamme olympique en version néon holographique, des anneaux olympiques lumineux flottant dans un ciel nocturne cyberpunk, un stade futuriste avec des drones de lumière formant les drapeaux des nations participantes, architecture néoclassique mixée avec du verre et de l'acier futuriste",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Dans quelle ville se sont tenus les premiers Jeux Olympiques modernes en 1896 ?",
+        "options": [
+          "Paris",
+          "Londres",
+          "Athènes",
+          "Stockholm"
+        ],
+        "answer": "Athènes"
+      },
+      {
+        "question": "Qui est considéré comme le fondateur des Jeux Olympiques modernes ?",
+        "options": [
+          "Thomas Arnold",
+          "Dimitrios Vikelas",
+          "Pierre de Coubertin",
+          "Wendell Garrett"
+        ],
+        "answer": "Pierre de Coubertin"
+      },
+      {
+        "question": "Combien de pays ont participé aux premiers Jeux Olympiques modernes de 1896 ?",
+        "options": [
+          "8",
+          "14",
+          "22",
+          "31"
+        ],
+        "answer": "14"
+      },
+      {
+        "question": "Lors de quels Jeux Olympiques le relais de la flamme olympique depuis Olympie (Grèce) a-t-il été organisé pour la première fois ?",
+        "options": [
+          "Amsterdam 1928",
+          "Los Angeles 1932",
+          "Berlin 1936",
+          "Londres 1948"
+        ],
+        "answer": "Berlin 1936"
+      },
+      {
+        "question": "Quel athlète américain a remporté 4 médailles d'or aux JO de Berlin 1936, contrariant l'idéologie nazie ?",
+        "options": [
+          "Jesse Owens",
+          "Carl Lewis",
+          "Jim Thorpe",
+          "Ralph Metcalfe"
+        ],
+        "answer": "Jesse Owens"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Les Légendes",
+    "subtitle": "Ces êtres humains qui semblaient venir d'ailleurs",
+    "brief": "C'est le mec qui flotte sur le ring de Kinshasa au milieu de la nuit, qui dribble comme si le ballon était attaché à son pied, qui sert à 200 km/h avec une précision chirurgicale, qui sourit à mi-parcours du 100m parce qu'il sait déjà qu'il a gagné — les légendes du sport, c'est une autre espèce. Des humains qui ont repoussé tellement loin les limites du possible qu'on avait du mal à croire que c'était réel.\n\nMuhammad Ali, Pelé, Roger Federer, Michael Jordan, Usain Bolt — ces noms-là résonnent bien au-delà du sport. Ce sont des icônes culturelles, des symboles, des preuves vivantes que l'être humain peut transcender sa propre condition. Ali qui refuse la guerre du Vietnam et perd son titre pour ses convictions, Jordan qui transforme le basketball en religion mondiale et Nike en empire global, Bolt qui établit un record du monde en 2009 que personne n'a encore approché.\n\nLa vraie question, c'est pas juste « sont-ils les meilleurs de leur sport ? » — c'est « comment des humains normaux deviennent des mythes de leur vivant ? » La réponse, c'est quelque part entre le talent brut, le travail acharné, et cette chose indéfinissable qu'on appelle le charisme. Ces légendes avaient les trois.",
+    "visualDescription": "Des silhouettes néon de grands sportifs légendaires en mouvement — un boxeur, un footballeur, un basketteur, un sprinter — projetées comme des hologrammes géants sur les murs d'une arène cyberpunk, lumières violet et or, foule pixelisée en délire",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel était le vrai nom de Muhammad Ali avant sa conversion à l'islam ?",
+        "options": [
+          "Malcolm Clay",
+          "Cassius Clay",
+          "Charles Ali",
+          "Joseph Muhammad"
+        ],
+        "answer": "Cassius Clay"
+      },
+      {
+        "question": "Combien de fois Michael Jordan a-t-il remporté le titre NBA avec les Chicago Bulls ?",
+        "options": [
+          "4",
+          "5",
+          "6",
+          "8"
+        ],
+        "answer": "6"
+      },
+      {
+        "question": "Quel est le record du monde du 100 mètres masculin établi par Usain Bolt en 2009, toujours en vigueur ?",
+        "options": [
+          "9.58 secondes",
+          "9.63 secondes",
+          "9.69 secondes",
+          "9.72 secondes"
+        ],
+        "answer": "9.58 secondes"
+      },
+      {
+        "question": "Combien de titres du Grand Chelem Roger Federer a-t-il remportés au cours de sa carrière ?",
+        "options": [
+          "17",
+          "18",
+          "20",
+          "22"
+        ],
+        "answer": "20"
+      },
+      {
+        "question": "À quel âge Pelé a-t-il remporté sa première Coupe du Monde avec le Brésil en 1958 ?",
+        "options": [
+          "16 ans",
+          "17 ans",
+          "18 ans",
+          "19 ans"
+        ],
+        "answer": "17 ans"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Les Records & Moments Iconiques",
+    "subtitle": "Ces secondes qui ont arrêté le temps",
+    "brief": "C'est le moment où le monde entier retient son souffle. La barre qui tombe à 9.58 secondes. Le saut de 8,90 mètres dans le sable. Le mur des 4 minutes au mile qui s'effondre. Les records sportifs, c'est l'humanité qui se dépasse elle-même en temps réel, devant des millions de témoins ébahis. Chaque record brisé, c'est une preuve que nos limites ne sont que temporaires et que le prochain humain capable de les repousser est déjà en train de s'entraîner quelque part.\n\nMais au-delà des chiffres, ce sont les moments qui font l'histoire du sport : le poing levé de Tommie Smith à Mexico 1968, le « Hand of God » de Maradona en 1986, la révolution du « Fosbury Flop » au saut en hauteur, les 23 médailles d'or de Michael Phelps. Ces instants cristallisent quelque chose d'universel — l'effort extrême, l'émotion brute, la victoire sur l'adversité.\n\nLes records s'effacent, mais les moments restent gravés. Dans 50 ans, des gens parleront encore de l'exploit de Bolt, du ballet de Federer, du courage d'Ali. Le sport, c'est la seule chose qui crée ces capsules temporelles d'émotion pure que des générations entières peuvent partager. Et ça, aucun algorithme ne peut le simuler.",
+    "visualDescription": "Un tableau de records lumineux style LED géant dans un stade futuriste, des instants iconiques figés dans des hologrammes flottants — un sprinter qui franchit la ligne, un sauteur en plein vol — ambiance salle des trophées cyberpunk avec des particules d'or en suspension",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Qui a été le premier athlète à courir le mile en moins de 4 minutes, le 6 mai 1954 ?",
+        "options": [
+          "Jim Ryun",
+          "Roger Bannister",
+          "Herb Elliott",
+          "John Landy"
+        ],
+        "answer": "Roger Bannister"
+      },
+      {
+        "question": "Lors des JO de Mexico 1968, quelle discipline pratiquait Dick Fosbury quand il révolutionna son sport avec son saut « Fosbury Flop » ?",
+        "options": [
+          "Saut à la perche",
+          "Triple saut",
+          "Saut en longueur",
+          "Saut en hauteur"
+        ],
+        "answer": "Saut en hauteur"
+      },
+      {
+        "question": "Combien de médailles d'or Michael Phelps a-t-il remportées au total dans sa carrière olympique ?",
+        "options": [
+          "18",
+          "20",
+          "23",
+          "25"
+        ],
+        "answer": "23"
+      },
+      {
+        "question": "En quelle année Nadia Comaneci a-t-elle obtenu la première note parfaite de 10 en gymnastique aux Jeux Olympiques ?",
+        "options": [
+          "1972",
+          "1976",
+          "1980",
+          "1984"
+        ],
+        "answer": "1976"
+      },
+      {
+        "question": "Lors de quelle Coupe du Monde Diego Maradona a-t-il marqué le célèbre but de la « Main de Dieu » contre l'Angleterre ?",
+        "options": [
+          "Coupe du Monde 1982 en Espagne",
+          "Coupe du Monde 1986 au Mexique",
+          "Coupe du Monde 1990 en Italie",
+          "Coupe du Monde 1994 aux USA"
+        ],
+        "answer": "Coupe du Monde 1986 au Mexique"
+      }
+    ]
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Les Continents & Océans : Le Layout de la Planète",
+    "brief": "La Terre, c'est grosso modo 71 % d'eau et 29 % de terre ferme — autrement dit, si la planète était un disque dur, les océans prendraient les trois quarts du stockage. On recense 7 continents et 5 océans officiels, mais c'est déjà une question de convention : certains géographes en comptent 6, d'autres 4 pour les océans. L'Asie est le continent le plus grand et le plus peuplé, presque trois fois plus grande que l'Amérique du Nord. L'océan Pacifique à lui seul est plus grand que tous les continents réunis — c'est la map de base avant même de zoomer sur les détails. Maîtriser ce layout, c'est le tutoriel obligatoire avant de s'attaquer au reste de la géographie mondiale.",
+    "visualDescription": "Un globe terrestre holographique en néon cyan sur fond d'espace sombre. Les continents en relief lumineux vert émeraude et or. Les océans en bleu électrique profond avec des courants marins animés en blanc. Les pôles scintillent en blanc glacé. Ambiance carte du monde cyberpunk vue depuis l'orbite.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa",
+    "quiz": [
+      {
+        "question": "Quel est le plus grand continent du monde en superficie ?",
+        "options": ["L'Afrique", "L'Amérique du Nord", "L'Asie", "L'Antarctique"],
+        "answer": "L'Asie"
+      },
+      {
+        "question": "Quel océan est le plus grand du monde, couvrant plus d'un tiers de la surface terrestre ?",
+        "options": ["L'océan Atlantique", "L'océan Indien", "L'océan Arctique", "L'océan Pacifique"],
+        "answer": "L'océan Pacifique"
+      },
+      {
+        "question": "Combien de continents compte-t-on dans la convention géographique la plus courante ?",
+        "options": ["5", "6", "7", "8"],
+        "answer": "7"
+      },
+      {
+        "question": "Quel continent est entièrement recouvert de glace et ne possède aucun état souverain permanent ?",
+        "options": ["L'Arctique", "L'Islande", "L'Antarctique", "Le Groenland"],
+        "answer": "L'Antarctique"
+      },
+      {
+        "question": "Quel est le plus petit océan du monde ?",
+        "options": ["L'océan Indien", "L'océan Austral", "L'océan Atlantique", "L'océan Arctique"],
+        "answer": "L'océan Arctique"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "L'Europe : Le Continent en Mode Patchwork Politique",
+    "brief": "L'Europe, c'est le continent qui a eu le plus d'updates politiques de l'histoire : empires, royaumes, révolutions, guerres mondiales, Union européenne — le patch note est interminable. Avec une superficie d'environ 10,5 millions de km², elle est le deuxième plus petit continent, mais elle regroupe plus de 44 pays reconnus, ce qui en fait une des zones les plus denses en frontières et en diversité culturelle au monde. Paris, Berlin, Rome, Madrid, Varsovie — les capitales européennes sont autant de serveurs différents sur le même réseau. La péninsule ibérique à l'ouest, les pays baltes au nord-est, les Balkans au sud-est — chaque sous-région a son propre lore géopolitique. Connaître l'Europe, c'est connaître les fondations de la politique et de la culture mondiales modernes.",
+    "visualDescription": "Une carte de l'Europe en vue satellite stylisée, avec des frontières en néon doré qui pulsent doucement. Les capitales marquées par des points lumineux cyan. La Méditerranée en bleu électrique profond. Les Alpes en relief néon blanc. L'Union européenne illuminée comme un circuit imprimé. Ambiance géopolitique européenne cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1519677100203-a0e668c92439",
+    "quiz": [
+      {
+        "question": "Quelle est la capitale de l'Allemagne ?",
+        "options": ["Munich", "Hambourg", "Berlin", "Francfort"],
+        "answer": "Berlin"
+      },
+      {
+        "question": "Quel est le plus grand pays d'Europe en superficie (hors Russie) ?",
+        "options": ["La France", "L'Ukraine", "L'Espagne", "La Suède"],
+        "answer": "L'Ukraine"
+      },
+      {
+        "question": "Quel fleuve traverse Paris ?",
+        "options": ["La Loire", "La Seine", "La Garonne", "Le Rhône"],
+        "answer": "La Seine"
+      },
+      {
+        "question": "Quelle est la capitale de la Pologne ?",
+        "options": ["Cracovie", "Gdansk", "Varsovie", "Lodz"],
+        "answer": "Varsovie"
+      },
+      {
+        "question": "Quel pays européen comprend les îles de Sicile et de Sardaigne ?",
+        "options": ["La Grèce", "L'Espagne", "La France", "L'Italie"],
+        "answer": "L'Italie"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "L'Asie & l'Afrique : Les Deux Titans du Monde",
+    "brief": "L'Asie et l'Afrique ensemble, c'est plus de 70 % de la population mondiale sur deux continents qui n'ont rien à envier au reste de la planète en termes de diversité géographique. L'Asie, c'est l'Himalaya au nord, les déserts d'Arabie au centre, les jungles tropicales d'Asie du Sud-Est et les méga-cités comme Tokyo ou Shanghai — la map la plus variée du jeu. L'Afrique, souvent réduite à quelques clichés, c'est en réalité 54 pays, le plus long fleuve du monde (le Nil), le plus grand désert chaud (le Sahara) et la savane qui s'étend sur des milliers de kilomètres. Le Congo, le Niger, le Zambèze — les fleuves africains sont les autoroutes naturelles d'un continent immense. Deux continents, des milliers d'années d'histoire, et encore tant à explorer.",
+    "visualDescription": "Une double vue holographique côte à côte : l'Asie à gauche avec l'Himalaya en relief néon blanc et les lumières de nuit des mégalopoles en or. L'Afrique à droite avec le Sahara en orange lumineux et le Nil en bleu électrique qui serpente vers la Méditerranée. Des flèches de population qui pulsent en cyan. Ambiance géographie titanesque cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e",
+    "quiz": [
+      {
+        "question": "Quel est le plus long fleuve d'Afrique ?",
+        "options": ["Le Congo", "Le Niger", "Le Zambèze", "Le Nil"],
+        "answer": "Le Nil"
+      },
+      {
+        "question": "Quel est le plus grand désert chaud du monde, situé en Afrique du Nord ?",
+        "options": ["Le désert du Kalahari", "Le désert de Namibie", "Le Sahara", "Le désert d'Arabie"],
+        "answer": "Le Sahara"
+      },
+      {
+        "question": "Quelle est la capitale du Japon ?",
+        "options": ["Osaka", "Tokyo", "Kyoto", "Hiroshima"],
+        "answer": "Tokyo"
+      },
+      {
+        "question": "Quel fleuve prend sa source dans l'Himalaya et traverse l'Inde avant de se jeter dans le golfe du Bengale ?",
+        "options": ["Le Mékong", "Le Yangtsé", "Le Gange", "L'Indus"],
+        "answer": "Le Gange"
+      },
+      {
+        "question": "Quelle est la capitale de l'Égypte ?",
+        "options": ["Alexandrie", "Louxor", "Le Caire", "Assouan"],
+        "answer": "Le Caire"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Les Amériques & l'Océanie : Les Nouveaux Mondes",
+    "brief": "Les Amériques, c'est le continent double — Nord et Sud réunis par un isthme, l'Amérique centrale, qui tient lieu de câble de connexion entre deux mondes géographiques radicalement différents. L'Amérique du Nord avec ses plaines infinies, ses Rocheuses et ses Grands Lacs. L'Amérique du Sud avec l'Amazonie — le plus grand poumon vert de la planète, la Cordillère des Andes qui longe tout le continent comme un firewall naturel, et l'Amazone, le plus grand fleuve du monde en débit. L'Océanie, elle, c'est le continent le plus isolé : l'Australie immense et aride au centre, la Nouvelle-Zélande volcanique au sud, et des milliers d'îles du Pacifique éparpillées comme des pixels sur un écran bleu. Le dernier continent colonisé, le moins peuplé hors Antarctique, et peut-être le plus photogénique.",
+    "visualDescription": "Un panorama hémisphérique néon : l'Amazonie en vert intense avec des rivières en bleu électrique. Les Andes comme une muraille de néon blanc du nord au sud. L'Australie en rouge désertique avec un cœur en orange vif — Uluru. Les îles du Pacifique comme des LEDs éparpillées sur fond d'océan profond. Ambiance Nouveaux Mondes cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1485738422979-f5c462d49f74",
+    "quiz": [
+      {
+        "question": "Quel est le plus long fleuve d'Amérique du Sud en termes de débit ?",
+        "options": ["Le Nil", "L'Orénoque", "Le Paraná", "L'Amazone"],
+        "answer": "L'Amazone"
+      },
+      {
+        "question": "Quelle est la capitale du Brésil ?",
+        "options": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+        "answer": "Brasília"
+      },
+      {
+        "question": "Quel est le plus grand pays d'Océanie en superficie ?",
+        "options": ["La Nouvelle-Zélande", "La Papouasie-Nouvelle-Guinée", "L'Australie", "Fidji"],
+        "answer": "L'Australie"
+      },
+      {
+        "question": "Quel est le plus grand lac d'Amérique du Nord ?",
+        "options": ["Le lac Supérieur", "Le lac Michigan", "Le lac Érié", "Le lac Huron"],
+        "answer": "Le lac Supérieur"
+      },
+      {
+        "question": "Quelle chaîne de montagnes longe toute la côte ouest de l'Amérique du Sud ?",
+        "options": ["Les Appalaches", "Les Rocheuses", "La Sierra Madre", "La Cordillère des Andes"],
+        "answer": "La Cordillère des Andes"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Records & Géographie Physique : Les Stats Ultime de la Planète",
+    "brief": "Tout le monde connaît le niveau 50 d'un jeu — celui où les stats sont au max et où les boss sont des records absolus. La géographie physique, c'est ce niveau-là : le sommet le plus haut, le fleuve le plus long, la fosse la plus profonde, le désert le plus froid. L'Everest culmine à 8 849 mètres, le Nil s'étire sur 6 650 km, la fosse des Mariannes plonge à 11 034 mètres — plus profond que l'Everest est haut. Le désert de l'Antarctique est à la fois le plus grand et le plus froid. Le lac Baïkal contient à lui seul 20 % de l'eau douce liquide de la planète. Ces records ne sont pas que des trivia — ils dessinent les extrêmes d'une planète extraordinairement diverse, et certains évoluent même avec le temps à cause du changement climatique.",
+    "visualDescription": "Un mur de données géographiques style leaderboard holographique : chaque record affiché comme un score en néon doré. L'Everest en sommet lumineux blanc qui perce les nuages. La fosse des Mariannes comme un gouffre cyan profond. Le Nil en ligne bleue infinie sur fond de désert. Le lac Baïkal en cristal de glace scintillant. Ambiance géographie records cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+    "quiz": [
+      {
+        "question": "Quelle est la hauteur officielle du mont Everest, le point culminant de la Terre ?",
+        "options": ["8 611 m", "8 849 m", "8 091 m", "8 516 m"],
+        "answer": "8 849 m"
+      },
+      {
+        "question": "Quelle est la fosse océanique la plus profonde du monde ?",
+        "options": ["La fosse de Porto Rico", "La fosse de Tonga", "La fosse des Mariannes", "La fosse de Java"],
+        "answer": "La fosse des Mariannes"
+      },
+      {
+        "question": "Quel lac sibérien contient environ 20 % de l'eau douce liquide de surface de la planète ?",
+        "options": ["Le lac Baïkal", "Le lac Supérieur", "La mer Caspienne", "Le lac Tanganyika"],
+        "answer": "Le lac Baïkal"
+      },
+      {
+        "question": "Quel est le plus grand désert du monde, souvent méconnu car composé de glace et non de sable ?",
+        "options": ["Le Sahara", "Le désert de Gobi", "Le désert d'Arabie", "L'Antarctique"],
+        "answer": "L'Antarctique"
+      },
+      {
+        "question": "Sur quel continent se trouve le point le plus bas de la surface terrestre (hors océan), la mer Morte ?",
+        "options": ["En Afrique", "En Europe", "En Asie", "En Amérique du Sud"],
+        "answer": "En Asie"
+      }
+    ]
+  }
+]

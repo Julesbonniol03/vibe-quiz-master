@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "Notre Système Solaire — Le Quartier dont on Connaît encore Mal les Voisins",
+    "brief": "Notre système solaire, c'est une étoile de taille moyenne entourée de huit planètes, des centaines de lunes, des millions d'astéroïdes, des milliards de comètes et une immensité de vide quasi absolu. Et pourtant, on appelle ça «notre quartier». Le Soleil concentre 99,86 % de la masse totale du système — le chef de bande gravitationnel qui contrôle tout. Il faut huit minutes et demi à la lumière du Soleil pour atteindre la Terre, et plus de cinq heures pour atteindre Pluton.\n\nLes planètes se divisent en deux familles bien distinctes. Les planètes rocheuses — Mercure, Vénus, Terre, Mars — sont petites, denses, proches du Soleil. Les géantes gazeuses et glaciales — Jupiter, Saturne, Uranus, Neptune — sont massives, composées de gaz et de glace, et s'étendent sur des distances qui donnent le vertige. Jupiter à elle seule pourrait contenir plus de 1 300 Terres. Et Saturne, avec sa densité si faible qu'elle flotterait dans l'eau si on trouvait une baignoire assez grande.\n\nNos lunes, elles, sont des mondes en elles-mêmes. La Lune terrestre est exceptionnellement grande par rapport à sa planète. Europe, lune de Jupiter, abrite un océan d'eau liquide sous sa croûte de glace — un des meilleurs candidats à la vie extraterrestre du système solaire. Titan, lune de Saturne, a une atmosphère dense et des lacs de méthane liquide. Notre système solaire, c'est déjà une galaxie miniature à explorer.",
+    "visualDescription": "Le système solaire vu du dessus, rendu en carte cosmique néon. Le Soleil en plasma doré au centre, entouré des orbites planétaires traçant des anneaux lumineux en blanc électrique. Chaque planète brille de sa couleur caractéristique : bleu profond pour Neptune, orange brûlé pour Mars, beige crème pour Saturne avec ses anneaux en arc de cercle irisé. Des traînées de comètes sillonnent l'image comme des lignes de code. L'espace lui-même pulse d'un violet sombre.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1614642264762-d0a3b8bf3700?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle proportion de la masse totale du système solaire le Soleil représente-t-il environ ?",
+        "options": [
+          "85,5 %",
+          "92,3 %",
+          "99,86 %",
+          "74 %"
+        ],
+        "answer": "99,86 %"
+      },
+      {
+        "question": "Combien de temps met la lumière du Soleil pour atteindre la Terre ?",
+        "options": [
+          "2 minutes environ",
+          "8 minutes et demie environ",
+          "20 minutes environ",
+          "1 heure environ"
+        ],
+        "answer": "8 minutes et demie environ"
+      },
+      {
+        "question": "Quelle lune du système solaire est considérée comme l'un des meilleurs candidats à la vie extraterrestre en raison d'un océan d'eau liquide sous sa croûte de glace ?",
+        "options": [
+          "Titan (Saturne)",
+          "Callisto (Jupiter)",
+          "Europe (Jupiter)",
+          "Encelade (Saturne)"
+        ],
+        "answer": "Europe (Jupiter)"
+      },
+      {
+        "question": "Quelle est la caractéristique physique exceptionnelle de Saturne qui la distingue de toutes les autres planètes du système solaire ?",
+        "options": [
+          "Elle est la plus froide",
+          "Sa densité est si faible qu'elle flotterait sur l'eau",
+          "Elle tourne le plus vite sur elle-même",
+          "Elle est la seule à avoir des anneaux"
+        ],
+        "answer": "Sa densité est si faible qu'elle flotterait sur l'eau"
+      },
+      {
+        "question": "Mars possède le plus grand volcan du système solaire. Quel est son nom et sa hauteur approximative ?",
+        "options": [
+          "Arsia Mons, 9 km",
+          "Elysium Mons, 14 km",
+          "Olympus Mons, 21 km",
+          "Alba Mons, 30 km"
+        ],
+        "answer": "Olympus Mons, 21 km"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Les Étoiles & les Galaxies — Les Serveurs de l'Univers",
+    "brief": "Une étoile, c'est une boule de plasma maintenue en équilibre parfait entre deux forces qui s'affrontent : la gravité qui veut tout écraser vers le centre, et la pression de radiation de la fusion nucléaire qui pousse vers l'extérieur. Pendant des milliards d'années, cet équilibre tient. Puis un jour, le carburant s'épuise, et les choses deviennent intéressantes. Le Soleil transforme chaque seconde 600 millions de tonnes d'hydrogène en hélium — c'est la centrale nucléaire la plus efficace que l'univers ait produite.\n\nLa fin d'une étoile dépend entièrement de sa masse. Une étoile comme le Soleil finit sa vie en géante rouge, puis expulse ses couches externes pour former une magnifique nébuleuse planétaire, laissant derrière elle un résidu dense appelé naine blanche. Une étoile bien plus massive, elle, finit dans une explosion cataclysmique appelée supernova — brièvement plus brillante que toute sa galaxie — puis se contracte en étoile à neutrons ou, si la masse est suffisante, en trou noir. Des fins à la hauteur de ces géants de feu.\n\nLa Voie Lactée, notre galaxie, est une spirale barrée contenant entre 100 et 400 milliards d'étoiles, s'étendant sur environ 100 000 années-lumière. Notre Soleil se trouve à environ 26 000 années-lumière du centre galactique. Et l'univers observable contient plus de 2 000 milliards de galaxies. Chaque point lumineux dans le ciel nocturne est une étoile. Et au-delà de la limite de notre vision, des milliards d'autres. Le vertige est la réponse normale.",
+    "visualDescription": "La Voie Lactée en vue du dessus : une spirale galactique lumineuse en blanc laiteux et bleu cobalt sur le noir absolu de l'espace. En insert, une supernova en pleine explosion — boule de feu orangée et rouge, onde de choc en arc de cercle lumineux. Des étoiles de différents types brillent selon leur couleur : rouge grenat pour les géantes rouges, blanc intense pour les naines blanches, bleu électrique pour les supergéantes chaudes. Le tout ressemble à une œuvre d'art cosmique générée par IA.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel phénomène physique est à l'origine de l'énergie colossale produite par les étoiles ?",
+        "options": [
+          "La fission nucléaire",
+          "La combustion chimique à haute température",
+          "La fusion nucléaire",
+          "La réaction annihilation matière-antimatière"
+        ],
+        "answer": "La fusion nucléaire"
+      },
+      {
+        "question": "En quelle sorte d'objet une étoile de masse comparable au Soleil se transforme-t-elle en fin de vie ?",
+        "options": [
+          "En trou noir",
+          "En étoile à neutrons",
+          "En naine blanche",
+          "En pulsar"
+        ],
+        "answer": "En naine blanche"
+      },
+      {
+        "question": "Combien d'étoiles environ contient la Voie Lactée ?",
+        "options": [
+          "1 à 10 milliards",
+          "100 à 400 milliards",
+          "1 000 milliards",
+          "10 000 milliards"
+        ],
+        "answer": "100 à 400 milliards"
+      },
+      {
+        "question": "À quelle distance approximative du centre galactique notre Soleil se trouve-t-il dans la Voie Lactée ?",
+        "options": [
+          "5 000 années-lumière",
+          "15 000 années-lumière",
+          "26 000 années-lumière",
+          "50 000 années-lumière"
+        ],
+        "answer": "26 000 années-lumière"
+      },
+      {
+        "question": "Combien de galaxies environ contient l'univers observable selon les estimations cosmologiques actuelles ?",
+        "options": [
+          "200 millions",
+          "10 milliards",
+          "2 000 milliards",
+          "100 000 milliards"
+        ],
+        "answer": "2 000 milliards"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "La Conquête Spatiale — Le Launch Day de l'Humanité",
+    "brief": "4 octobre 1957. L'URSS lance Spoutnik 1, une sphère métallique de 58 centimètres qui bipe dans l'espace. Le monde entier est sous le choc. La guerre froide vient de gagner une nouvelle dimension, littéralement. En réponse à cette humiliation technologique, les États-Unis fondent la NASA en 1958. La course à l'espace est officiellement lancée, et elle va aller très vite. Quatre ans seulement après Spoutnik, Youri Gagarine — 27 ans, pilote de chasse soviétique — devient le premier humain à voyager dans l'espace. 108 minutes en orbite le 12 avril 1961. Il revient vivant en se parachutant après éjection de sa capsule Vostok 1.\n\nLa réponse américaine est historique : JFK annonce en mai 1961 devant le Congrès l'objectif d'envoyer un homme sur la Lune avant la fin de la décennie. Un pari fou, avec une technologie à peine capable d'envoyer quelqu'un en orbite. Et pourtant, le 20 juillet 1969, Neil Armstrong pose le pied sur la surface lunaire. En tout, douze astronautes ont marché sur la Lune entre 1969 et 1972. Aucun être humain n'est retourné sur la Lune depuis.\n\nAujourd'hui, la Station Spatiale Internationale flotte en orbite à 400 km d'altitude depuis 1998, symbole d'une coopération internationale inédite même en période de tensions géopolitiques. Et une nouvelle ère s'ouvre avec SpaceX, les ambitions martiennes d'Elon Musk, le programme Artemis de retour sur la Lune et les projets de colonisation. La conquête spatiale est de retour, plus ambitieuse et plus commerciale que jamais.",
+    "visualDescription": "Un compte à rebours néon rouge sur fond noir spatial. À droite, Spoutnik 1 en sphère argentée avec ses antennes déployées, entouré d'une aura de signal radio en cercles concentriques lumineux. Youri Gagarine en combinaison orange Vostok, son casque réfléchissant les étoiles. L'empreinte de botte d'Armstrong sur le sol lunaire gris-beige, illuminée par un projecteur unique. L'ISS en structure modulaire dorée en orbite. Ambiance épopée spatiale cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année l'URSS lance-t-elle Spoutnik 1, le tout premier satellite artificiel de l'histoire ?",
+        "options": [
+          "1955",
+          "1957",
+          "1959",
+          "1961"
+        ],
+        "answer": "1957"
+      },
+      {
+        "question": "Combien de temps a duré le vol spatial historique de Youri Gagarine à bord de Vostok 1 en 1961 ?",
+        "options": [
+          "27 minutes",
+          "65 minutes",
+          "108 minutes",
+          "3 heures 24 minutes"
+        ],
+        "answer": "108 minutes"
+      },
+      {
+        "question": "Quelle est la date exacte du premier alunissage habité lors de la mission Apollo 11 ?",
+        "options": [
+          "21 décembre 1968",
+          "20 juillet 1969",
+          "11 avril 1970",
+          "14 novembre 1969"
+        ],
+        "answer": "20 juillet 1969"
+      },
+      {
+        "question": "Combien d'astronautes ont au total marché sur la Lune lors des missions Apollo entre 1969 et 1972 ?",
+        "options": [
+          "6",
+          "9",
+          "12",
+          "24"
+        ],
+        "answer": "12"
+      },
+      {
+        "question": "Depuis quelle année la Station Spatiale Internationale (ISS) est-elle en orbite continue autour de la Terre ?",
+        "options": [
+          "1993",
+          "1995",
+          "1998",
+          "2001"
+        ],
+        "answer": "1998"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Les Exoplanètes & la Recherche de Vie — Le Grand Scan de l'Univers",
+    "brief": "Pendant des siècles, la question de savoir s'il existait d'autres planètes en dehors de notre système solaire était purement philosophique. Tout ça a changé en 1995 quand Michel Mayor et Didier Queloz — qui recevront le Nobel de physique en 2019 — annoncent la découverte de 51 Pegasi b, la première exoplanète confirmée en orbite autour d'une étoile similaire au Soleil. Depuis, le flot n'a pas cessé. Le télescope spatial Kepler, lancé en 2009, a à lui seul découvert plus de 2 600 exoplanètes en observant des milliers d'étoiles.\n\nLe système TRAPPIST-1, découvert en 2017, est devenu une célébrité scientifique : une naine rouge à 39 années-lumière avec sept planètes de taille terrestre en orbite, dont trois dans la zone habitable — cette région ni trop chaude ni trop froide où l'eau liquide peut exister en surface. Des noms comme TRAPPIST-1e ou TRAPPIST-1f font désormais rêver les astrobiologistes. Sont-elles rocheuses ? Ont-elles une atmosphère ? De l'eau ? On ne sait pas encore.\n\nLa recherche de biosignatures — des indices chimiques de vie dans les atmosphères exoplanétaires — est devenue l'un des programmes scientifiques les plus excitants du siècle. Le télescope James Webb, lancé en 2021, est capable d'analyser la composition chimique des atmosphères d'exoplanètes lointaines. De l'oxygène, du méthane, de la vapeur d'eau en combinaison inhabituelle ? Ce pourrait être la signature d'une vie microbienne. La réponse à la plus grande question de l'humanité pourrait venir dans les décennies qui viennent.",
+    "visualDescription": "Un tableau de bord d'exoplanètes : des centaines de sphères planétaires holographiques flottent dans l'espace, classées par taille et couleur. Les planètes dans la zone habitable brillent d'un vert espoir. Le télescope Kepler en structure dorée déploie ses panneaux solaires. TRAPPIST-1 apparaît comme une naine rouge chaude entourée de ses sept mondes en orbite serrée. Le James Webb Space Telescope, plié comme un origami doré, se déploie lentement dans l'obscurité. Des spectres d'atmosphères planétaires s'affichent en graphiques néon.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle a été la première exoplanète confirmée en orbite autour d'une étoile similaire au Soleil, découverte en 1995 ?",
+        "options": [
+          "HD 209458 b",
+          "51 Pegasi b",
+          "Kepler-186f",
+          "Proxima Centauri b"
+        ],
+        "answer": "51 Pegasi b"
+      },
+      {
+        "question": "Le télescope spatial Kepler, spécialisé dans la chasse aux exoplanètes, a été lancé en quelle année ?",
+        "options": [
+          "2003",
+          "2006",
+          "2009",
+          "2012"
+        ],
+        "answer": "2009"
+      },
+      {
+        "question": "Le système TRAPPIST-1 comprend combien de planètes de taille terrestre, dont certaines dans la zone habitable ?",
+        "options": [
+          "3",
+          "5",
+          "7",
+          "9"
+        ],
+        "answer": "7"
+      },
+      {
+        "question": "Qu'appelle-t-on la «zone habitable» d'une étoile ?",
+        "options": [
+          "La zone où les radiations sont suffisamment faibles pour les humains",
+          "La région de l'espace où la lumière stellaire permet la photosynthèse",
+          "La zone orbitale où l'eau liquide peut exister en surface d'une planète",
+          "La ceinture d'astéroïdes qui protège les planètes des impacts"
+        ],
+        "answer": "La zone orbitale où l'eau liquide peut exister en surface d'une planète"
+      },
+      {
+        "question": "Quelle méthode de détection d'exoplanètes utilise la mesure des infimes variations de luminosité d'une étoile quand une planète passe devant elle ?",
+        "options": [
+          "La méthode des vitesses radiales",
+          "L'interférométrie différentielle",
+          "La méthode des transits",
+          "La microlentille gravitationnelle"
+        ],
+        "answer": "La méthode des transits"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Les Mystères de l'Univers — Les Questions de Boss Final",
+    "brief": "Après deux siècles de physique moderne, d'Einstein à Hawking, on pourrait croire qu'on a à peu près compris l'univers. Mauvaise nouvelle : on ne comprend que 5 % de ce qui existe. Le reste ? 27 % de matière noire — quelque chose qui a une masse, exerce une gravité, mais ne réfléchit ni n'émet de lumière. On la détecte uniquement par ses effets gravitationnels sur les galaxies. Et 68 % d'énergie noire — une force mystérieuse qui non seulement s'oppose à la gravité mais accélère l'expansion de l'univers. On a aucune idée de ce que c'est vraiment.\n\nLes trous noirs, eux, sont désormais observés directement. En 2019, l'Event Horizon Telescope — un réseau de radiotélescopes couvrant toute la Terre — a produit la première image d'un trou noir, celui au centre de la galaxie M87. Un anneau de lumière orange entourant une ombre noire. En 2022, le trou noir supermassif au centre de notre propre galaxie, Sagittarius A*, a aussi été photographié. Des objets d'une densité qui défie l'imagination : des millions à des milliards de masses solaires compressées en un espace infiniment petit.\n\nLe Big Bang, lui, reste le modèle cosmologique standard pour l'origine de l'univers il y a 13,8 milliards d'années. Mais il soulève des questions vertigineuses : qu'est-ce qu'il y avait «avant» ? Notre univers est-il seul, ou fait-il partie d'un multivers ? La physique quantique et la relativité générale sont incompatibles entre elles — quelle est la vraie théorie qui les unifie ? Ces questions ne sont pas rhétoriques. Elles sont les frontières actuelles de la connaissance humaine.",
+    "visualDescription": "L'infini cosmique rendu en dashboard de données. Un camembert holographique flotte au centre : 5 % en blanc brillant pour la matière ordinaire, 27 % en gris fantôme pour la matière noire, 68 % en violet abyssal pour l'énergie noire. Un trou noir supermassif apparaît avec son disque d'accrétion en néon orangé brûlant — la première vraie image de M87. Des ondes gravitationnelles se propagent comme des rides sur un lac de pixels. À l'horizon, le rayonnement fossile du Big Bang pulse comme un écho numérique de la création.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel âge a l'univers selon les mesures cosmologiques les plus récentes ?",
+        "options": [
+          "4,6 milliards d'années",
+          "10,2 milliards d'années",
+          "13,8 milliards d'années",
+          "20 milliards d'années"
+        ],
+        "answer": "13,8 milliards d'années"
+      },
+      {
+        "question": "Quelle proportion de l'univers la matière ordinaire (baryonique, visible) représente-t-elle environ ?",
+        "options": [
+          "5 %",
+          "27 %",
+          "50 %",
+          "68 %"
+        ],
+        "answer": "5 %"
+      },
+      {
+        "question": "En quelle année l'Event Horizon Telescope a-t-il publié la toute première image d'un trou noir (trou noir central de la galaxie M87) ?",
+        "options": [
+          "2015",
+          "2017",
+          "2019",
+          "2022"
+        ],
+        "answer": "2019"
+      },
+      {
+        "question": "Comment s'appelle le trou noir supermassif au centre de notre galaxie, la Voie Lactée, dont la première image a été publiée en 2022 ?",
+        "options": [
+          "Cygnus X-1",
+          "NGC 4319*",
+          "Sagittarius A*",
+          "TON 618"
+        ],
+        "answer": "Sagittarius A*"
+      },
+      {
+        "question": "L'énergie noire, qui représente 68 % de l'univers, quel effet produit-elle sur l'expansion cosmique ?",
+        "options": [
+          "Elle la ralentit progressivement",
+          "Elle l'accélère",
+          "Elle la maintient constante",
+          "Elle provoque des oscillations périodiques"
+        ],
+        "answer": "Elle l'accélère"
+      }
+    ]
+  }
+]

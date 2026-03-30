@@ -32,7 +32,17 @@ function loadExpertCategories() {
   return EXPERT_CATEGORIES.map((cat) => {
     const filePath = join(process.cwd(), "data", "questions", `${cat.key}.json`);
     const questions = JSON.parse(readFileSync(filePath, "utf-8"));
-    return { ...cat, questions };
+
+    // Load expert story if available
+    let story = null;
+    try {
+      const storyPath = join(process.cwd(), "data", "expert-stories", `${cat.key}.json`);
+      story = JSON.parse(readFileSync(storyPath, "utf-8"));
+    } catch {
+      // No story for this category yet
+    }
+
+    return { ...cat, questions, story };
   });
 }
 

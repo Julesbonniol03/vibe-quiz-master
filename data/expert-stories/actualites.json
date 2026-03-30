@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "La Chute du Mur de Berlin : Le Boss Final de la Guerre Froide",
+    "brief": "9 novembre 1989. Des millions de gens regardent la télé et n'en croient pas leurs yeux : des Allemands de l'Est tapent le Mur de Berlin à coups de marteau et passent à l'Ouest. Game over pour la Guerre Froide. Comment on en est arrivé là ? Mikhaïl Gorbatchev, secrétaire général de l'URSS depuis 1985, lance deux concepts révolutionnaires : la Glasnost (transparence) et la Perestroïka (restructuration). Il veut réformer le système soviétique, pas le tuer — mais il le tue quand même. Les pays satellites d'Europe de l'Est sautent sur l'occasion : Pologne, Hongrie, Tchécoslovaquie, RDA. Le Mur était là depuis 1961, symbole ultime de la division du monde en deux blocs. Sa chute entraîne la réunification de l'Allemagne le 3 octobre 1990, puis la dissolution officielle de l'URSS le 25 décembre 1991. Boris Eltsine monte sur un char à Moscou. L'empire s'effondre. Un achievement débloqué par une population entière qui a dit non.",
+    "visualDescription": "Le Mur de Berlin qui s'effondre en fragments lumineux cyan et magenta néon. Des foules en silhouettes qui passent à travers les brèches illuminées. Gorbatchev en portrait holographique avec ses réformes comme des lignes de code. La carte de l'Europe qui se redessine en temps réel sur un écran géant. Ambiance fin d'empire cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1587825045191-bc29e65fcb7f",
+    "quiz": [
+      {
+        "question": "Quelle date est retenue pour la chute du Mur de Berlin ?",
+        "options": ["3 octobre 1990", "9 novembre 1989", "25 décembre 1991", "13 août 1961"],
+        "answer": "9 novembre 1989"
+      },
+      {
+        "question": "Quels sont les deux concepts de réforme lancés par Gorbatchev pour moderniser l'URSS ?",
+        "options": ["Détente et Ostpolitik", "Glasnost et Perestroïka", "Solidarité et Liberté", "Démocratie et Capitalisme"],
+        "answer": "Glasnost et Perestroïka"
+      },
+      {
+        "question": "En quelle année l'Allemagne a-t-elle été officiellement réunifiée après la chute du Mur ?",
+        "options": ["1989", "1991", "1990", "1992"],
+        "answer": "1990"
+      },
+      {
+        "question": "Quand l'Union soviétique a-t-elle officiellement été dissoute ?",
+        "options": ["9 novembre 1989", "3 octobre 1990", "25 décembre 1991", "1er janvier 1993"],
+        "answer": "25 décembre 1991"
+      },
+      {
+        "question": "En quelle année le Mur de Berlin avait-il été construit pour séparer l'Est et l'Ouest ?",
+        "options": ["1945", "1953", "1961", "1968"],
+        "answer": "1961"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Le 11 Septembre 2001 : Le Jour où le Monde a Changé de Save File",
+    "brief": "11 septembre 2001, 8h46 heure locale. Un Boeing 767 s'écrase dans la Tour Nord du World Trade Center à New York. Le monde entier croit à un accident. Dix-sept minutes plus tard, un second avion percute la Tour Sud en direct devant des millions de téléspectateurs. Ce ne sont pas des accidents — ce sont des attentats. Al-Qaïda, l'organisation dirigée par Oussama Ben Laden depuis l'Afghanistan sous régime taliban, revendique les attaques. Bilan : 2 977 morts. Conséquences immédiates : l'article 5 de l'OTAN — attaque contre un, attaque contre tous — est invoqué pour la première fois de son histoire. Les États-Unis envahissent l'Afghanistan en octobre 2001 pour renverser les Talibans et chasser Al-Qaïda. En 2003, c'est l'Irak qui est attaqué, dans le contexte de la Guerre contre le Terrorisme. Le Patriot Act, Guantánamo, la surveillance de masse généralisée. Le monde post-11 septembre est une autre map — et on joue encore dessus.",
+    "visualDescription": "La skyline de Manhattan en silhouette néon avec deux colonnes de lumière blanche s'élevant vers le ciel. Un aigle américain holographique sur fond de carte du Moyen-Orient en rouge. Des écrans de surveillance et des flux d'actualités en boucle. L'icône de l'OTAN qui s'allume pour la première fois. Ambiance thriller géopolitique cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1568827999250-2aef98500e08",
+    "quiz": [
+      {
+        "question": "Combien de personnes ont perdu la vie lors des attentats du 11 septembre 2001 ?",
+        "options": ["1 200", "2 977", "4 500", "800"],
+        "answer": "2 977"
+      },
+      {
+        "question": "Quelle organisation terroriste a planifié et revendiqué les attentats du 11 septembre ?",
+        "options": ["Daech (État islamique)", "Hamas", "Al-Qaïda", "Les Talibans"],
+        "answer": "Al-Qaïda"
+      },
+      {
+        "question": "Quel article de l'OTAN, invoqué pour la première fois de son histoire, stipule qu'une attaque contre un membre est une attaque contre tous ?",
+        "options": ["Article 1", "Article 3", "Article 5", "Article 7"],
+        "answer": "Article 5"
+      },
+      {
+        "question": "Quel pays a été envahi par les États-Unis en octobre 2001, directement après les attentats ?",
+        "options": ["Irak", "Iran", "Afghanistan", "Pakistan"],
+        "answer": "Afghanistan"
+      },
+      {
+        "question": "Quel chef d'Al-Qaïda était le commanditaire des attentats du 11 septembre 2001 ?",
+        "options": ["Al-Zarkaoui", "Al-Baghdadi", "Oussama Ben Laden", "Ayman Al-Zawahiri"],
+        "answer": "Oussama Ben Laden"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "La Crise Financière de 2008 : Le Blue Screen of Death du Capitalisme",
+    "brief": "2008. Le système financier mondial crash comme un vieux PC en fin de vie. L'origine ? Les subprimes — des prêts immobiliers accordés à des ménages américains qui ne pouvaient pas se les payer, transformés en produits financiers complexes (les fameux CDO) et revendus à des banques du monde entier comme des actifs sûrs. Tout repose sur une hypothèse folle : les prix de l'immobilier ne baisseront jamais. Spoiler : ils baissent. En septembre 2008, Lehman Brothers, l'une des plus grandes banques d'investissement au monde avec 639 milliards de dollars d'actifs, fait faillite. Panique totale. Les marchés s'effondrent, le crédit se fige, les entreprises ne peuvent plus emprunter. Résultat : la pire récession mondiale depuis 1929. Les gouvernements injectent des milliers de milliards pour sauver les banques — trop grosses pour faillir. En France, le chômage grimpe, les ménages trinquent. Et certains traders qui ont causé la crise reçoivent quand même leurs bonus. Le monde a sauté, mais les DLC ont été facturés aux contribuables.",
+    "visualDescription": "Une salle de trading à Wall Street en néon rouge sang avec des graphiques qui s'effondrent en cascade. Le logo de Lehman Brothers qui explose en pixels. Des billets de dollars qui tombent comme de la neige dans une ville cyberpunk. Des écrans d'ordinateur en Blue Screen of Death. Des banquiers en silhouettes qui regardent les chiffres plonger. Ambiance krach financier dystopique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "quiz": [
+      {
+        "question": "Quelle grande banque américaine a fait faillite en septembre 2008, déclenchant la panique financière mondiale ?",
+        "options": ["Goldman Sachs", "Citigroup", "Lehman Brothers", "JPMorgan Chase"],
+        "answer": "Lehman Brothers"
+      },
+      {
+        "question": "Que sont les 'subprimes' à l'origine de la crise de 2008 ?",
+        "options": ["Des obligations d'État américaines à haut rendement", "Des prêts immobiliers à risque accordés à des emprunteurs peu solvables", "Des actions technologiques surévaluées", "Des contrats pétroliers spéculatifs"],
+        "answer": "Des prêts immobiliers à risque accordés à des emprunteurs peu solvables"
+      },
+      {
+        "question": "Comment s'appellent les produits financiers complexes dans lesquels les subprimes étaient regroupés et revendus à des banques du monde entier ?",
+        "options": ["ETF (Exchange Traded Funds)", "Actions préférentielles", "CDO (Collateralized Debt Obligations)", "Futures sur matières premières"],
+        "answer": "CDO (Collateralized Debt Obligations)"
+      },
+      {
+        "question": "À quelle précédente grande crise économique la récession de 2008 est-elle le plus souvent comparée ?",
+        "options": ["La crise pétrolière de 1973", "La Grande Dépression de 1929", "La crise asiatique de 1997", "La crise des dot-com de 2000"],
+        "answer": "La Grande Dépression de 1929"
+      },
+      {
+        "question": "Quelle mesure d'urgence exceptionnelle les gouvernements ont-ils prise pour éviter l'effondrement total du système bancaire ?",
+        "options": ["La fermeture des marchés boursiers pendant 6 mois", "La nationalisation de toutes les banques privées", "L'injection massive d'argent public pour sauver les banques (plans de sauvetage)", "Le retour à l'étalon-or"],
+        "answer": "L'injection massive d'argent public pour sauver les banques (plans de sauvetage)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Le Printemps Arabe : Twitter et Facebook comme Armes de Révolution",
+    "brief": "Décembre 2010. Mohamed Bouazizi, vendeur ambulant tunisien, s'immole par le feu après s'être fait confisquer sa marchandise par la police. Son geste déclenche une révolte qui va embraser tout le monde arabe — le premier soulèvement de masse de l'ère des réseaux sociaux. La Tunisie tombe d'abord : Ben Ali, dictateur depuis 23 ans, fuit en Arabie Saoudite le 14 janvier 2011. Puis l'Égypte : Hosni Moubarak, 30 ans de règne, chassé par des millions de manifestants place Tahrir après 18 jours de mobilisation. La Libye : Mouammar Kadhafi renversé et tué après une guerre civile. La Syrie bascule dans un conflit qui va durer des décennies. Le game changer ? Facebook et Twitter permettent d'organiser les manifestations en temps réel, contournant les médias d'État contrôlés. Certains gouvernements coupent internet — trop tard. C'est la première révolution coordonnée sur les réseaux sociaux. GG WP aux peuples qui ont osé.",
+    "visualDescription": "La place Tahrir au Caire en pleine révolution, des foules comme des pixels lumineux sur fond noir. Des tweets et posts Facebook qui flottent comme des hologrammes dans le ciel. Un smartphone comme torche révolutionnaire tenu par une main en néon. La carte du monde arabe avec des points d'explosion lumineux en cascade. Ambiance soulèvement digital cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0",
+    "quiz": [
+      {
+        "question": "Quel événement dramatique en Tunisie fin 2010 a déclenché le Printemps arabe ?",
+        "options": ["Un coup d'État militaire à Tunis", "L'immolation de Mohamed Bouazizi, vendeur ambulant", "Un attentat terroriste à Sfax", "Des élections truquées massivement contestées"],
+        "answer": "L'immolation de Mohamed Bouazizi, vendeur ambulant"
+      },
+      {
+        "question": "Après combien d'années de règne Hosni Moubarak a-t-il quitté le pouvoir en Égypte en 2011 ?",
+        "options": ["10 ans", "20 ans", "30 ans", "40 ans"],
+        "answer": "30 ans"
+      },
+      {
+        "question": "Quelle place du Caire est devenue l'épicentre et le symbole de la révolution égyptienne de 2011 ?",
+        "options": ["Place Al-Azhar", "Place Ramses", "Place Tahrir", "Place Abdine"],
+        "answer": "Place Tahrir"
+      },
+      {
+        "question": "Quel outil technologique a joué un rôle clé dans l'organisation et la diffusion des révolutions du Printemps arabe ?",
+        "options": ["Les SMS en masse via les opérateurs téléphoniques", "Les chaînes de télévision satellitaires uniquement", "Les réseaux sociaux comme Facebook et Twitter", "Les forums de discussion sur internet"],
+        "answer": "Les réseaux sociaux comme Facebook et Twitter"
+      },
+      {
+        "question": "Quel dictateur libyen, au pouvoir depuis 1969, a été renversé et tué lors des soulèvements de 2011 ?",
+        "options": ["Zine El Abidine Ben Ali", "Bachar al-Assad", "Mouammar Kadhafi", "Ali Abdallah Saleh"],
+        "answer": "Mouammar Kadhafi"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "COVID-19 : La Pandémie Mondiale qui a Mis le Jeu en Pause",
+    "brief": "Décembre 2019, Wuhan, Chine. Un nouveau coronavirus — le SARS-CoV-2 — commence à se propager. Le 11 mars 2020, l'OMS déclare officiellement la pandémie mondiale. Ce qui suit est sans précédent dans l'histoire moderne : des milliards de personnes confinées chez elles, les frontières fermées, les avions cloués au sol, les hôpitaux débordés. La France entre en confinement le 17 mars 2020, Emmanuel Macron annonce solennellement : 'Nous sommes en guerre.' Les économies mondiales s'effondrent — le PIB mondial recule de 3,1% en 2020, pire choc depuis la Seconde Guerre mondiale. Et puis la course aux vaccins : en moins d'un an, des vaccins à ARN messager (Pfizer-BioNTech, Moderna) sont développés et validés — un record absolu dans l'histoire de la médecine. Plus de 13 milliards de doses injectées dans le monde. Le COVID a officiellement tué plus de 7 millions de personnes selon l'OMS. Mais il a aussi forcé 10 ans de transformation numérique en 10 mois. Le patch le plus brutal de l'histoire moderne.",
+    "visualDescription": "Une carte du monde en néon avec des hotspots rouges qui pulsent comme des virus se propagent. Un masque chirurgical en style cyberpunk parcouru de circuits imprimés lumineux. Des seringues de vaccins qui brillent en bleu ARN messager. Des graphiques de courbes épidémiques en vert néon sur fond noir absolu. Des villes désertes en hologramme. Ambiance pandémie dystopique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1584483766114-2cea6facdf57",
+    "quiz": [
+      {
+        "question": "Quelle organisation internationale a officiellement déclaré la pandémie de COVID-19 le 11 mars 2020 ?",
+        "options": ["L'ONU", "L'UNICEF", "L'OMS (Organisation Mondiale de la Santé)", "L'OCDE"],
+        "answer": "L'OMS (Organisation Mondiale de la Santé)"
+      },
+      {
+        "question": "Dans quelle ville chinoise le SARS-CoV-2 a-t-il été identifié pour la première fois fin 2019 ?",
+        "options": ["Pékin", "Shanghai", "Wuhan", "Guangzhou"],
+        "answer": "Wuhan"
+      },
+      {
+        "question": "Quelle innovation technologique majeure caractérise les vaccins Pfizer-BioNTech et Moderna contre le COVID-19 ?",
+        "options": ["Ils sont à base de virus vivant atténué", "Ils utilisent la technologie de l'ARN messager (ARNm)", "Ils sont fabriqués à partir de protéines purifiées uniquement", "Ils reposent sur un vecteur adénoviral comme AstraZeneca"],
+        "answer": "Ils utilisent la technologie de l'ARN messager (ARNm)"
+      },
+      {
+        "question": "En quelle date la France a-t-elle débuté son premier confinement national lors de la pandémie de COVID-19 ?",
+        "options": ["11 mars 2020", "17 mars 2020", "1er avril 2020", "23 mars 2020"],
+        "answer": "17 mars 2020"
+      },
+      {
+        "question": "Quel a été approximativement l'impact économique mondial du COVID-19 en termes de variation du PIB mondial en 2020 ?",
+        "options": ["Hausse de 1,5%", "Baisse de 0,5%", "Baisse de 3,1%", "Baisse de 8%"],
+        "answer": "Baisse de 3,1%"
+      }
+    ]
+  }
+]

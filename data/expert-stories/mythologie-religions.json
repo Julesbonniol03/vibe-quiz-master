@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "La Mythologie Grecque : Le Lore Ultime de l'Antiquité",
+    "brief": "Imagine un univers partagé avec des dieux, des monstres, des héros OP et des quêtes impossibles — c'est exactement la mythologie grecque, sauf qu'elle a été inventée il y a 3000 ans. Au sommet de tout, Zeus, le PDG de l'Olympe, qui gère 12 dieux et lâche des éclairs quand il est de mauvaise humeur. Héra, sa femme (et sœur, parce que la mythologie grecque ne joue pas les mêmes règles), jalouse level 100. Poséidon gère les mers, Hadès le monde des morts. Et les héros : Hercule avec ses 12 travaux impossibles, Ulysse qui met 10 ans à rentrer chez lui après la guerre de Troie et croise des cyclopes, des sirènes et une sorcière. L'Iliade et l'Odyssée d'Homère, c'est le premier best-seller épique de l'histoire humaine. Le lore de base de toute la civilisation occidentale.",
+    "visualDescription": "Le mont Olympe en version cyberpunk — des colonnes de marbre blanc illuminées de néon doré et cyan. Zeus sur son trône avec un éclair de plasma bleu dans la main. Des dieux en armures holographiques flottant dans les nuages. Hercule en néon orange en train de combattre l'Hydre de Lerne. Ulysse sur une mer pixélisée sous un ciel étoilé.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1555993539-1732b0258235",
+    "quiz": [
+      {
+        "question": "Combien de travaux Héraclès (Hercule) devait-il accomplir pour se racheter ?",
+        "options": ["10", "12", "7", "15"],
+        "answer": "12"
+      },
+      {
+        "question": "Qui est le dieu des mers et des océans dans la mythologie grecque ?",
+        "options": ["Zeus", "Hadès", "Poséidon", "Apollon"],
+        "answer": "Poséidon"
+      },
+      {
+        "question": "Quel poème épique d'Homère raconte le retour d'Ulysse après la guerre de Troie ?",
+        "options": ["L'Iliade", "L'Énéide", "La Théogonie", "L'Odyssée"],
+        "answer": "L'Odyssée"
+      },
+      {
+        "question": "Quel cheval de bois, utilisé comme stratagème, a permis aux Grecs de prendre Troie ?",
+        "options": ["Le Cheval de Poséidon", "Le Cheval de Troie", "Le Cheval d'Ulysse", "Le Cheval d'Achille"],
+        "answer": "Le Cheval de Troie"
+      },
+      {
+        "question": "Quel héros grec, presque invulnérable, avait son seul point faible au talon ?",
+        "options": ["Ulysse", "Persée", "Achille", "Thésée"],
+        "answer": "Achille"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "La Mythologie Nordique : Les Vikings et leurs Dieux de Guerre",
+    "brief": "Avant Marvel, il y avait les vrais. Odin, le dieu borgne de la sagesse qui a sacrifié un œil pour boire à la fontaine de la connaissance — giga sacrifice pour un giga buff. Thor, dieu du tonnerre avec Mjolnir, son marteau légendaire. Et Loki, le dieu de la ruse, le troll OG de la mythologie qui sème le chaos pour le fun. Les Vikings croyaient à un arbre cosmique, Yggdrasil, qui connecte les 9 royaumes dont Asgard (les dieux), Midgard (les humains) et Jötunheimr (les géants). Et le end game ? Le Ragnarök : la fin du monde, une bataille apocalyptique où la plupart des dieux meurent, y compris Odin mangé par le loup Fenrir et Thor tué par le serpent Jörmungandr. Un lore dark et fascinant qui vient de Scandinavie et a inspiré une culture entière.",
+    "visualDescription": "Asgard en forteresse néon suspendue dans le vide cosmique, reliée à Midgard par un pont arc-en-ciel lumineux. Odin en armure sombre avec un corbeau holographique sur l'épaule et un œil manquant brillant en néon rouge. Thor en armure dorée tenant Mjolnir qui crépite d'éclairs cyan. Loki en ombre verte ricanante. Yggdrasil en arbre de données luminescent.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7",
+    "quiz": [
+      {
+        "question": "Quel sacrifice Odin a-t-il fait pour obtenir la sagesse en buvant à la fontaine de Mímir ?",
+        "options": ["Son bras droit", "Un œil", "Sa barbe", "Sa lance Gungnir"],
+        "answer": "Un œil"
+      },
+      {
+        "question": "Comment s'appelle le marteau de Thor dans la mythologie nordique ?",
+        "options": ["Gungnir", "Excalibur", "Mjolnir", "Durandal"],
+        "answer": "Mjolnir"
+      },
+      {
+        "question": "Comment s'appelle la fin du monde dans la mythologie nordique ?",
+        "options": ["Ragnarök", "Armageddon", "Götterdämmerung", "Valhalla"],
+        "answer": "Ragnarök"
+      },
+      {
+        "question": "Comment s'appelle l'arbre cosmique qui relie les 9 royaumes dans la mythologie nordique ?",
+        "options": ["Bifröst", "Yggdrasil", "Midgard", "Jötunheimr"],
+        "answer": "Yggdrasil"
+      },
+      {
+        "question": "Quel est le royaume des dieux dans la mythologie nordique ?",
+        "options": ["Midgard", "Valhalla", "Asgard", "Niflheim"],
+        "answer": "Asgard"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Grandes Religions Monothéistes : Un Dieu, Trois Histoires",
+    "brief": "Judaïsme, Christianisme, Islam — les trois grandes religions monothéistes partagent le même ancêtre : Abraham. Même Dieu, même base, mais trois histoires et pratiques différentes. Le Judaïsme est le premier des trois, né il y a environ 4000 ans. Moïse reçoit les 10 commandements sur le mont Sinaï, et la Torah est le livre sacré. Le Christianisme émerge au 1er siècle avec Jésus de Nazareth, considéré comme le Messie et Fils de Dieu. La Bible est le texte central, et notamment le Nouveau Testament. L'Islam naît au 7e siècle avec Mohammed, le Prophète, qui reçoit la révélation divine à La Mecque. Le Coran est la parole directe d'Allah, et les 5 piliers structurent la vie du croyant. Trois religions abrahamiques, trois livres sacrés, une foi en un Dieu unique.",
+    "visualDescription": "Une triple spirale lumineuse en néon : doré pour le Judaïsme avec la menorah holographique, blanc pour le Christianisme avec une croix de lumière, vert émeraude pour l'Islam avec un croissant de lune et une étoile. Le tout fusionné en une étoile de David, une croix et un croissant au centre. Ambiance convergence des grandes traditions sur fond de ciel étoilé du Moyen-Orient.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8",
+    "quiz": [
+      {
+        "question": "Quel est le livre sacré de l'Islam ?",
+        "options": ["La Torah", "La Bible", "Le Coran", "Le Talmud"],
+        "answer": "Le Coran"
+      },
+      {
+        "question": "Sur quelle montagne Moïse aurait-il reçu les Dix Commandements selon la Torah et la Bible ?",
+        "options": ["Mont Sinaï", "Mont Olympe", "Mont Ararat", "Mont Carmel"],
+        "answer": "Mont Sinaï"
+      },
+      {
+        "question": "Quel prophète est considéré comme le fondateur de l'Islam au 7e siècle ?",
+        "options": ["Abraham", "Moïse", "Jésus", "Mohammed"],
+        "answer": "Mohammed"
+      },
+      {
+        "question": "Quel patriarche est considéré comme l'ancêtre commun des trois grandes religions monothéistes ?",
+        "options": ["Adam", "Noé", "Abraham", "Jacob"],
+        "answer": "Abraham"
+      },
+      {
+        "question": "Combien de piliers structurent la pratique de l'Islam ?",
+        "options": ["3", "10", "7", "5"],
+        "answer": "5"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Les Religions de l'Orient : Bouddha, Vishnu & le Tao",
+    "brief": "À l'est, le jeu se passe différemment. L'Hindouisme, la plus ancienne des grandes religions encore pratiquées, est né en Inde il y a plus de 3000 ans. Pas un fondateur unique, mais un panthéon immense avec Brahma le créateur, Vishnu le protecteur, Shiva le destructeur — et des millions d'autres divinités. Le Bouddhisme naît au 5e siècle avant J.-C. quand Siddhartha Gautama, un prince indien, abandonne sa vie de luxe, médite sous l'Arbre de la Bodhi et atteint l'Éveil. Son message : la vie est souffrance, mais on peut s'en libérer via le Dharma et le Nirvana. Le Taoïsme est une philosophie-religion chinoise fondée sur les textes de Laozi et le concept du Tao — le flux naturel de l'univers. Yin et Yang pour l'équilibre. Ces traditions ont façonné des milliards d'existences en Asie.",
+    "visualDescription": "Un mandala holographique en néon orange et doré au centre. Bouddha en méditation sous l'Arbre de la Bodhi avec des feuilles de lumière. Vishnu en bleu cosmique avec ses attributs divins holographiques. Le symbole Yin-Yang en cyan et blanc tournant dans l'espace. Des temples asiatiques en silhouette néon sur fond de montagne brumeuse.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1545569341-9eb8b30979d9",
+    "quiz": [
+      {
+        "question": "Quel est le vrai nom de Bouddha, le fondateur du Bouddhisme ?",
+        "options": ["Vishnu Kapila", "Siddhartha Gautama", "Mahavira Jain", "Laozi"],
+        "answer": "Siddhartha Gautama"
+      },
+      {
+        "question": "Dans la trilogie hindoue (Trimurti), quel dieu incarne le rôle de Protecteur de l'univers ?",
+        "options": ["Brahma", "Shiva", "Vishnu", "Indra"],
+        "answer": "Vishnu"
+      },
+      {
+        "question": "Quel concept central du Bouddhisme désigne l'état d'éveil suprême et la fin du cycle des renaissances ?",
+        "options": ["Dharma", "Karma", "Nirvana", "Samsara"],
+        "answer": "Nirvana"
+      },
+      {
+        "question": "Quel philosophe chinois est associé à la fondation du Taoïsme et au texte du Tao Te Ching ?",
+        "options": ["Confucius", "Zhuangzi", "Sun Tzu", "Laozi"],
+        "answer": "Laozi"
+      },
+      {
+        "question": "Comment s'appelle le symbole représentant l'équilibre des forces opposées et complémentaires dans le Taoïsme ?",
+        "options": ["Mandala", "Dharma Wheel", "Yin-Yang", "Om"],
+        "answer": "Yin-Yang"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mythes & Symboles Universels : Le DLC Commun de l'Humanité",
+    "brief": "Voici le truc fascinant : des cultures qui n'ont jamais eu contact les unes avec les autres partagent les mêmes récits. Un déluge gigantesque qui détruit l'humanité ? Présent dans la Genèse avec Noé, dans l'épopée de Gilgamesh babylonienne, dans la mythologie hindoue, chez les Aztèques, chez les Aborigènes australiens. Un héros qui vole le feu ou la connaissance au profit des humains ? C'est Prométhée chez les Grecs, mais on retrouve un schéma similaire dans d'innombrables cultures. Un mythe de création à partir du chaos ou du néant ? Universel. Carl Jung a appelé ça les 'archétypes' — des structures fondamentales de la psyché humaine qui produisent les mêmes stories partout dans le monde. Joseph Campbell a théorisé le 'monomythe' ou 'voyage du héros' : une structure narrative universelle qu'on retrouve de l'Odyssée à Star Wars. L'humanité partage un même fond mythologique.",
+    "visualDescription": "Une mappemonde holographique en néon avec des fils de lumière reliant les civilisations. Au centre, l'Arche de Noé flottant sur une mer pixélisée. Prométhée en silhouette tenant une flamme de plasma. Des symboles de création — un œuf cosmique, une onde primordiale — entourant le globe. Ambiance conscience collective de l'humanité connectée.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564",
+    "quiz": [
+      {
+        "question": "Quel héros de la mythologie grecque a volé le feu aux dieux pour le donner aux humains ?",
+        "options": ["Hermès", "Héphaïstos", "Prométhée", "Épiméthée"],
+        "answer": "Prométhée"
+      },
+      {
+        "question": "Quel texte mésopotamien, antérieur à la Bible, contient déjà un récit de déluge similaire à celui de Noé ?",
+        "options": ["Le Livre des Morts égyptien", "L'Épopée de Gilgamesh", "Les Vedas hindous", "Le Code de Hammurabi"],
+        "answer": "L'Épopée de Gilgamesh"
+      },
+      {
+        "question": "Quel psychologue suisse a théorisé le concept d'archétypes — des symboles universels communs à toutes les cultures ?",
+        "options": ["Sigmund Freud", "Carl Jung", "Abraham Maslow", "Alfred Adler"],
+        "answer": "Carl Jung"
+      },
+      {
+        "question": "Joseph Campbell a théorisé une structure narrative universelle présente dans les mythes du monde entier. Comment l'a-t-il appelée ?",
+        "options": ["L'Archétype Suprême", "Le Grand Récit", "Le Voyage du Héros (Monomythe)", "La Structure Narrative Fondamentale"],
+        "answer": "Le Voyage du Héros (Monomythe)"
+      },
+      {
+        "question": "Quel symbole cosmique, représentant l'œuf primordial à l'origine de l'univers, se retrouve dans les mythologies hindoue, grecque, égyptienne et phénicienne ?",
+        "options": ["Le Serpent Ouroboros", "L'Œuf Cosmique", "L'Arbre du Monde", "La Grande Mère"],
+        "answer": "L'Œuf Cosmique"
+      }
+    ]
+  }
+]

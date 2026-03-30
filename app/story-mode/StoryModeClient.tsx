@@ -34,10 +34,12 @@ interface ExpertCategory {
   name: string;
   emoji: string;
   questions: CategoryQuestion[];
+  story?: StoryLevel[];
 }
 
 const STORAGE_KEY = "vqm_story_progress";
 const EXPERT_KEY = "vqm_expert_progress";
+const EXPERT_STORY_PREFIX = "vqm_expert_story_";
 
 function getProgress(): Record<number, { completed: boolean; score: number }> {
   if (typeof window === "undefined") return {};
@@ -69,6 +71,21 @@ function saveExpertProgress(categoryKey: string, score: number) {
   localStorage.setItem(EXPERT_KEY, JSON.stringify(progress));
 }
 
+function getExpertStoryProgress(categoryKey: string): Record<number, { completed: boolean; score: number }> {
+  if (typeof window === "undefined") return {};
+  try {
+    return JSON.parse(localStorage.getItem(EXPERT_STORY_PREFIX + categoryKey) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function saveExpertStoryProgress(categoryKey: string, levelId: number, score: number) {
+  const progress = getExpertStoryProgress(categoryKey);
+  progress[levelId] = { completed: true, score };
+  localStorage.setItem(EXPERT_STORY_PREFIX + categoryKey, JSON.stringify(progress));
+}
+
 function sampleExpertQuestions(questions: CategoryQuestion[], count: number): QuizQuestion[] {
   const shuffled = [...questions].sort(() => Math.random() - 0.5);
   return shuffled.slice(0, count).map((q) => ({
@@ -91,6 +108,8 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
   const [progress, setProgress] = useState<Record<number, { completed: boolean; score: number }>>({});
   const [expertProgress, setExpertProgress] = useState<Record<string, { completed: boolean; score: number }>>({});
   const [activeExpertCategory, setActiveExpertCategory] = useState<ExpertCategory | null>(null);
+  const [expertStoryCategory, setExpertStoryCategory] = useState<ExpertCategory | null>(null);
+  const [expertStoryProgress, setExpertStoryProgress] = useState<Record<number, { completed: boolean; score: number }>>({});
 
   useEffect(() => {
     setProgress(getProgress());
@@ -104,6 +123,16 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
     setScore(0);
     setSelected(null);
     setAnswered(false);
+  };
+
+  const handleSelectExpertStory = (cat: ExpertCategory) => {
+    setExpertStoryCategory(cat);
+    setExpertStoryProgress(getExpertStoryProgress(cat.key));
+  };
+
+  const handleBackToMainMap = () => {
+    setExpertStoryCategory(null);
+    setExpertStoryProgress({});
   };
 
   const handleSelectExpertCategory = (cat: ExpertCategory) => {
@@ -147,7 +176,10 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
       setAnswered(false);
     } else {
       const finalScore = score;
-      if (activeExpertCategory) {
+      if (expertStoryCategory) {
+        saveExpertStoryProgress(expertStoryCategory.key, selectedLevel.id, finalScore);
+        setExpertStoryProgress(getExpertStoryProgress(expertStoryCategory.key));
+      } else if (activeExpertCategory) {
         saveExpertProgress(activeExpertCategory.key, finalScore);
         setExpertProgress(getExpertProgress());
       } else {
@@ -162,7 +194,99 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
     setPhase("map");
     setSelectedLevel(null);
     setActiveExpertCategory(null);
+    // Keep expertStoryCategory so we return to the expert story map
   };
+
+  // ─── EXPERT STORY MAP VIEW ───
+  if (phase === "map" && expertStoryCategory && expertStoryCategory.story) {
+    const story = expertStoryCategory.story;
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-6 mb-6">
+          <div className="relative z-10">
+            <button onClick={handleBackToMainMap} className="text-slate-600 hover:text-slate-400 text-sm mb-3 flex items-center gap-1">
+              &larr; Mode Expert
+            </button>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-3xl">{expertStoryCategory.emoji}</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded-full">
+                Mode Histoire — {expertStoryCategory.name}
+              </span>
+            </div>
+            <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
+              L&apos;Histoire du <span className="gradient-text">{expertStoryCategory.name}</span>
+            </h1>
+            <p className="text-slate-500 text-sm">{story.length} niveaux — les grandes étapes à connaître.</p>
+          </div>
+        </div>
+
+        {/* Story Levels */}
+        <div className="space-y-3">
+          {story.map((level, i) => {
+            const done = expertStoryProgress[level.id]?.completed;
+            const lvlScore = expertStoryProgress[level.id]?.score ?? 0;
+            const isLocked = !isPreview && i > 0 && !expertStoryProgress[story[i - 1].id]?.completed;
+            const isBoss = level.id === story.length;
+
+            return (
+              <motion.button
+                key={level.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.06 }}
+                onClick={() => !isLocked && handleSelectLevel(level)}
+                disabled={isLocked}
+                className={`w-full text-left group relative overflow-hidden rounded-2xl border transition-all duration-300
+                  ${isLocked
+                    ? "opacity-40 cursor-not-allowed border-white/[0.04] bg-white/[0.01]"
+                    : isBoss
+                      ? done
+                        ? "border-yellow-500/30 bg-yellow-500/[0.04] hover:bg-yellow-500/[0.08] hover:scale-[1.01] active:scale-[0.99]"
+                        : "border-yellow-500/30 bg-yellow-500/[0.04] hover:border-yellow-400/50 hover:scale-[1.01] active:scale-[0.99]"
+                      : done
+                        ? "border-purple-500/20 bg-purple-500/[0.03] hover:bg-purple-500/[0.06] hover:scale-[1.01] active:scale-[0.99]"
+                        : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-purple-400/30 hover:scale-[1.01] active:scale-[0.99]"
+                  }`}
+              >
+                <div className="relative p-4 flex items-center gap-4">
+                  <div className={`flex-shrink-0 rounded-xl flex items-center justify-center font-bold border
+                    ${isBoss ? "w-14 h-14 text-xl" : "w-12 h-12 text-base"}
+                    ${isLocked ? "bg-white/[0.03] border-white/[0.06] text-slate-700"
+                      : isBoss ? "bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30 text-yellow-300"
+                      : done ? "bg-purple-500/10 border-purple-500/20 text-purple-400"
+                      : "bg-gradient-to-br from-purple-500/10 to-neon-cyan/10 border-purple-400/20 text-purple-300"}`}>
+                    {isLocked ? "🔒" : done ? (isBoss ? "🏆" : "✅") : isBoss ? "⚡" : `N${level.id}`}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-bold text-sm truncate ${done ? "text-purple-400" : "text-white"}`}>
+                      {level.title}
+                    </h3>
+                    <p className="text-slate-500 text-xs line-clamp-1 mt-0.5">{level.brief.slice(0, 100)}...</p>
+                    {done && (
+                      <div className="flex items-center gap-1.5 mt-1.5">
+                        {Array.from({ length: Math.min(level.quiz.length, 5) }).map((_, j) => (
+                          <div key={j} className={`w-1.5 h-1.5 rounded-full ${j < lvlScore ? "bg-purple-400" : "bg-white/10"}`} />
+                        ))}
+                        <span className="text-purple-400/60 text-xs">{lvlScore}/{level.quiz.length}</span>
+                      </div>
+                    )}
+                  </div>
+                  {!isLocked && <span className="text-slate-700 group-hover:text-purple-400 group-hover:translate-x-1 transition-all text-lg flex-shrink-0">&rarr;</span>}
+                </div>
+              </motion.button>
+            );
+          })}
+        </div>
+
+        <div className="mt-8 text-center">
+          <button onClick={handleBackToMainMap} className="text-slate-600 hover:text-slate-400 transition-colors text-sm">
+            &larr; Retour au Mode Expert
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   // ─── MAP VIEW ───
   if (phase === "map") {
@@ -321,32 +445,53 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
               {expertCategories.map((cat) => {
                 const done = expertProgress[cat.key]?.completed;
                 const catScore = expertProgress[cat.key]?.score ?? 0;
+                const storyProg = getExpertStoryProgress(cat.key);
+                const storyDone = cat.story ? cat.story.filter((l) => storyProg[l.id]?.completed).length : 0;
                 return (
-                  <motion.button
+                  <div
                     key={cat.key}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => handleSelectExpertCategory(cat)}
-                    className={`text-left p-4 rounded-2xl border transition-all duration-200 group
+                    className={`p-4 rounded-2xl border transition-all duration-200
                       ${done
-                        ? "border-purple-500/30 bg-purple-500/[0.05] hover:bg-purple-500/[0.09]"
-                        : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-purple-400/30"
+                        ? "border-purple-500/30 bg-purple-500/[0.05]"
+                        : "border-white/[0.08] bg-white/[0.02]"
                       }`}
                   >
                     <div className="text-2xl mb-2">{cat.emoji}</div>
-                    <div className={`font-semibold text-sm ${done ? "text-purple-300" : "text-white"}`}>
+                    <div className={`font-semibold text-sm mb-1 ${done ? "text-purple-300" : "text-white"}`}>
                       {cat.name}
                     </div>
-                    <div className="text-xs text-slate-600 mt-0.5">{cat.questions.length} questions</div>
                     {done && (
-                      <div className="flex items-center gap-1 mt-2">
+                      <div className="flex items-center gap-1 mb-2">
                         {Array.from({ length: 10 }).map((_, j) => (
                           <div key={j} className={`w-1.5 h-1.5 rounded-full ${j < catScore ? "bg-purple-400" : "bg-white/10"}`} />
                         ))}
                         <span className="text-purple-400/70 text-xs ml-1">{catScore}/10</span>
                       </div>
                     )}
-                  </motion.button>
+                    <div className="flex flex-col gap-1.5 mt-2">
+                      <motion.button
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() => handleSelectExpertCategory(cat)}
+                        className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/20 text-purple-300 transition-all text-left"
+                      >
+                        🎲 Quiz Random
+                      </motion.button>
+                      {cat.story && (
+                        <motion.button
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                          onClick={() => handleSelectExpertStory(cat)}
+                          className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-neon-cyan/10 hover:bg-neon-cyan/20 border border-neon-cyan/20 text-neon-cyan transition-all text-left flex items-center justify-between"
+                        >
+                          <span>📖 Mode Histoire</span>
+                          {storyDone > 0 && (
+                            <span className="text-neon-cyan/60">{storyDone}/{cat.story.length}</span>
+                          )}
+                        </motion.button>
+                      )}
+                    </div>
+                  </div>
                 );
               })}
             </div>
@@ -403,8 +548,24 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             {/* Content */}
             <div className="p-6 bg-white/[0.02]">
               <div className="flex items-center gap-2 mb-3">
-                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${selectedLevel.id === -1 ? "text-purple-300 bg-purple-500/10 border-purple-500/20" : [15, 21, 30].includes(selectedLevel.id) ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20" : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"}`}>
-                  {selectedLevel.id === -1 ? `🔓 MODE EXPERT — ${activeExpertCategory?.name}` : selectedLevel.id === 30 ? "⚡ ULTIMATE BOSS — Jour 30" : [15, 21].includes(selectedLevel.id) ? `⚡ BOSS — Jour ${selectedLevel.id}` : `Jour ${selectedLevel.id}`}
+                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${
+                  selectedLevel.id === -1
+                    ? "text-purple-300 bg-purple-500/10 border-purple-500/20"
+                    : expertStoryCategory
+                    ? "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"
+                    : [15, 21, 30].includes(selectedLevel.id)
+                    ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20"
+                    : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"
+                }`}>
+                  {selectedLevel.id === -1
+                    ? `🔓 MODE EXPERT — ${activeExpertCategory?.name}`
+                    : expertStoryCategory
+                    ? `📖 MODE HISTOIRE — ${expertStoryCategory.name} · Niveau ${selectedLevel.id}`
+                    : selectedLevel.id === 30
+                    ? "⚡ ULTIMATE BOSS — Jour 30"
+                    : [15, 21].includes(selectedLevel.id)
+                    ? `⚡ BOSS — Jour ${selectedLevel.id}`
+                    : `Jour ${selectedLevel.id}`}
                 </span>
                 <span className="text-xs text-slate-600">{selectedLevel.quiz.length} questions</span>
               </div>

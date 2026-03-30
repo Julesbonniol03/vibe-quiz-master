@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "Orthographe & Pièges Courants ✍️ — Le Bug dans le Texte",
+    "brief": "L'orthographe française, c'est un peu comme un OS legacy plein de règles héritées de plusieurs siècles de bricolage linguistique. Des emprunts au latin, au grec, au vieux français — et un tas d'exceptions qui font qu'aucune règle n'est totalement fiable. Le résultat ? Un système qui piège même les locuteurs natifs, avec des homophones vicieux qui sonnent identique mais s'écrivent différemment et changent tout au sens.\n\nLes pièges les plus classiques : a/à (verbe avoir vs préposition), ou/où (conjonction vs adverbe de lieu), ces/ses/c'est/s'est — quatre formes qui se prononcent pareil mais obéissent à des logiques grammaticales totalement différentes. La technique pour les démasquer ? La substitution : remplace a par avait, ou par ou bien, c'est par cela est. Si ça marche, bingo — tu as la bonne orthographe.\n\nCe qui rend ces pièges aussi dangereux, c'est qu'ils passent sous les radars du cerveau. Quand tu lis vite, ton cerveau complète automatiquement le sens sans vérifier l'orthographe — c'est l'autocorrect biologique qui fait des erreurs. La maîtrise de ces distinctions n'est pas juste une question de prestige : c'est une compétence de précision qui fait la différence dans toute communication écrite professionnelle.",
+    "visualDescription": "Un écran de terminal cyberpunk où des mots en français apparaissent et se transforment, les erreurs orthographiques brillant en rouge néon avant d'être corrigées en vert électrique. Des homophones se dédoublent en hologramme, montrant leurs différences de sens par des formes géométriques distinctes. L'interface ressemble à un éditeur de code ultra-futuriste où chaque mot est un objet à déboguer.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Laquelle de ces phrases est correctement orthographiée ?",
+        "options": [
+          "Il à mangé tout le gâteau.",
+          "Il a mangé tout le gâteau.",
+          "Il as mangé tout le gâteau.",
+          "Il â mangé tout le gâteau."
+        ],
+        "answer": "Il a mangé tout le gâteau."
+      },
+      {
+        "question": "Complétez : « Je ne sais plus ___ j'ai mis mes clés. »",
+        "options": [
+          "ou",
+          "où",
+          "ou bien",
+          "oû"
+        ],
+        "answer": "où"
+      },
+      {
+        "question": "Quelle est la forme correcte dans : « ___ son anniversaire aujourd'hui. » ?",
+        "options": [
+          "C'est",
+          "S'est",
+          "Ces",
+          "Ses"
+        ],
+        "answer": "C'est"
+      },
+      {
+        "question": "Dans « Elle s'est blessée en tombant », que représente « s'est » ?",
+        "options": [
+          "La conjonction de coordination 'c'est' avec un pronom",
+          "Le verbe 'être' à la forme pronominale au passé composé",
+          "Le verbe 'savoir' conjugué au présent",
+          "Un adverbe de manière"
+        ],
+        "answer": "Le verbe 'être' à la forme pronominale au passé composé"
+      },
+      {
+        "question": "Quelle astuce permet de distinguer 'a' (verbe) de 'à' (préposition) ?",
+        "options": [
+          "Remplacer par 'était' : si la phrase reste correcte, c'est le verbe 'a'",
+          "Compter les syllabes de la phrase",
+          "Vérifier si le mot suivant commence par une voyelle",
+          "Remplacer par 'avait' : si la phrase reste correcte, c'est le verbe 'a'"
+        ],
+        "answer": "Remplacer par 'avait' : si la phrase reste correcte, c'est le verbe 'a'"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Conjugaison Essentielle 🔧 — Les Temps qui Font Peur",
+    "brief": "La conjugaison française, c'est le firmware complexe de la langue — des dizaines de modes et de temps dont certains sont en quasi-extinction dans le langage oral mais restent vivants à l'écrit. Le subjonctif, par exemple, est le mode de la doute, du souhait, de la nécessité — et son utilisation correcte est l'un des marqueurs les plus sûrs d'un français maîtrisé. On dit 'il faut que tu fasses' (subjonctif) et pas 'il faut que tu fais' (indicatif).\n\nLe conditionnel, lui, ouvre le champ du possible et de l'hypothétique. Il se construit sur le radical du futur + les terminaisons de l'imparfait — une logique que peu de gens savent expliquer mais que tout le monde utilise quotidiennement : 'je voudrais', 'ce serait bien', 'il faudrait'. Et puis il y a l'accord du participe passé, le grand cauchemar : avec être, le participe s'accorde avec le sujet ; avec avoir, il s'accorde avec le COD si celui-ci est placé avant.\n\nPourquoi ces règles complexes ? Parce que le français a hérité d'un système latin très rigoureux d'accord en genre et en nombre, puis l'a simplifié partiellement — créant des zones hybrides où certaines règles s'appliquent et d'autres non. Maîtriser ces nuances, c'est avoir accès au niveau de précision d'un chirurgien du texte.",
+    "visualDescription": "Un tableau de conjugaison transformé en matrice holographique, avec les terminaisons verbales qui s'illuminent en code néon cyan et magenta. Des arbres de décision pour l'accord du participe passé flottent comme des organigrammes futuristes. L'atmosphère d'une salle de contrôle linguistique high-tech, où chaque forme verbale est un module à activer.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle est la conjugaison correcte au subjonctif présent de 'faire' à la 2e personne du singulier ?",
+        "options": [
+          "tu fais",
+          "tu fasses",
+          "tu faises",
+          "tu fassiez"
+        ],
+        "answer": "tu fasses"
+      },
+      {
+        "question": "Complétez correctement : « Les lettres qu'il ___ envoyées sont arrivées. »",
+        "options": [
+          "a",
+          "as",
+          "est",
+          "ont"
+        ],
+        "answer": "a"
+      },
+      {
+        "question": "Dans « Elle s'est lavé les mains », pourquoi 'lavé' ne s'accorde-t-il PAS avec 'elle' ?",
+        "options": [
+          "Parce que le verbe est à l'infinitif",
+          "Parce que le COD 'les mains' est placé après le verbe",
+          "Parce que les verbes pronominaux ne s'accordent jamais",
+          "Parce que 's'' est un COI, pas un COD"
+        ],
+        "answer": "Parce que le COD 'les mains' est placé après le verbe"
+      },
+      {
+        "question": "Quel est le conditionnel présent de 'venir' à la 1re personne du singulier ?",
+        "options": [
+          "je venais",
+          "je viendrai",
+          "je viendrais",
+          "je viens"
+        ],
+        "answer": "je viendrais"
+      },
+      {
+        "question": "Laquelle de ces phrases utilise correctement le subjonctif ?",
+        "options": [
+          "Je pense qu'il soit là.",
+          "Bien qu'il est fatigué, il continue.",
+          "Il faut que vous partiez maintenant.",
+          "Depuis qu'elle parte, tout a changé."
+        ],
+        "answer": "Il faut que vous partiez maintenant."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Grammaire : Accords & Syntaxe 🔍 — L'Architecture de la Phrase",
+    "brief": "Si l'orthographe est le firmware et la conjugaison le système d'exploitation, la grammaire c'est l'architecture complète du langage. L'accord sujet-verbe semble simple en surface — le verbe prend la personne et le nombre de son sujet — mais ça se complique vite dès qu'on introduit des sujets multiples, des pronoms relatifs ou des collectifs. 'La plupart des gens pensent' vs 'la plupart pense' : lequel est correct ? (Les deux peuvent l'être selon le contexte.)\n\nLes pronoms relatifs — qui, que, dont, où, lequel — sont les connecteurs qui permettent de relier des propositions et de construire des phrases complexes. 'Dont' indique une relation de possession ou de complément introduit par 'de' : 'le livre dont je t'ai parlé' = le livre de lequel je t'ai parlé. Une économie de mots et une précision maximale.\n\nLa distinction COD/COI est fondamentale car elle conditionne l'accord du participe passé et le choix des pronoms. Le COD répond à la question 'quoi ?' ou 'qui ?' sans préposition : 'Je mange une pomme' (COD : une pomme). Le COI répond à 'à qui ?', 'de quoi ?' avec une préposition : 'Je parle à Marie' (COI : à Marie). Cette distinction architecturale structure toute la grammaire française.",
+    "visualDescription": "Un diagramme syntaxique tridimensionnel flottant dans un espace cyberpunk, où les sujets, verbes, COD et COI sont représentés par des nœuds lumineux reliés par des arcs de données colorés. Des flèches d'accord grammatical traversent l'espace comme des lasers verts et rouges. L'ambiance évoque un scanner MRI grammatical qui révèle la structure profonde des phrases.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel est le sujet dans la phrase : « Pendant les vacances, mes amis et moi partons à la montagne. » ?",
+        "options": [
+          "les vacances",
+          "mes amis",
+          "mes amis et moi",
+          "la montagne"
+        ],
+        "answer": "mes amis et moi"
+      },
+      {
+        "question": "Dans « C'est le film dont je t'avais parlé », quel est le rôle de 'dont' ?",
+        "options": [
+          "Sujet de la proposition relative",
+          "Complément d'objet direct de 'parlé'",
+          "Complément du verbe 'parler' (introduit normalement par 'de')",
+          "Complément circonstanciel de lieu"
+        ],
+        "answer": "Complément du verbe 'parler' (introduit normalement par 'de')"
+      },
+      {
+        "question": "Identifiez le COD dans : « Elle lui a offert un livre magnifique. »",
+        "options": [
+          "elle",
+          "lui",
+          "un livre magnifique",
+          "offert"
+        ],
+        "answer": "un livre magnifique"
+      },
+      {
+        "question": "Laquelle de ces phrases contient une erreur d'accord sujet-verbe ?",
+        "options": [
+          "Les enfants jouent dans le jardin.",
+          "Ni lui ni elle ne savent la réponse.",
+          "C'est toi et moi qui avons raison.",
+          "Tout le monde ont compris la leçon."
+        ],
+        "answer": "Tout le monde ont compris la leçon."
+      },
+      {
+        "question": "Dans « Je pense à mes amis », quel est le complément du verbe 'penser' ?",
+        "options": [
+          "Un COD (complément d'objet direct)",
+          "Un COI (complément d'objet indirect)",
+          "Un COS (complément d'objet second)",
+          "Un complément circonstanciel"
+        ],
+        "answer": "Un COI (complément d'objet indirect)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Vocabulaire & Registres 💬 — Parler la Bonne Langue au Bon Endroit",
+    "brief": "Le vocabulaire, c'est ta palette de couleurs : plus elle est riche, plus tu peux exprimer des nuances subtiles. Mais en français, la maîtrise du vocabulaire ne suffit pas — il faut aussi maîtriser les registres de langue. Un registre, c'est comme un mode de communication : familier, courant, soutenu. Utiliser le mauvais registre dans le mauvais contexte, c'est comme envoyer un email en verlan à un recruteur ou parler comme un essai philosophique à tes amis au bar.\n\nLe registre familier est la langue du quotidien, avec ses ellipses, ses argots et ses raccourcis : 'c'est ouf', 'j'ai kiffé', 'un truc de ouf'. Le registre courant est la norme de la communication standard : correct, neutre, compris par tous. Le registre soutenu emprunte au vocabulaire littéraire et juridique, avec des constructions plus élaborées — c'est la langue des discours officiels, des textes académiques, de la correspondance formelle.\n\nLes synonymes et les nuances sont les microprocesseurs du vocabulaire. 'Peur', 'frayeur', 'terreur', 'effroi', 'crainte', 'appréhension' : tous évoquent la même émotion mais avec des intensités, des nuances et des connotations différentes. Maîtriser ces distinctions, c'est avoir la précision d'un chirurgien des mots — savoir choisir exactement le terme qui exprime ce qu'on veut dire, ni plus ni moins.",
+    "visualDescription": "Un espace linguistique cyberpunk où des mots français flottent en différentes couleurs selon leur registre : rouge néon pour le familier, blanc pur pour le courant, or pour le soutenu. Des nuages de synonymes gravitent les uns autour des autres comme des atomes dans un accélérateur de particules. Une interface de traduction de registres transforme en temps réel le même message d'un niveau de langue à un autre.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1546521343-4eb2c01aa44b?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel est l'équivalent soutenu de l'expression familière « c'est nul » ?",
+        "options": [
+          "C'est pas bien",
+          "C'est médiocre",
+          "C'est pas top",
+          "Ça le fait pas"
+        ],
+        "answer": "C'est médiocre"
+      },
+      {
+        "question": "Parmi ces synonymes de 'dire', lequel appartient au registre soutenu ?",
+        "options": [
+          "raconter",
+          "balancer",
+          "proférer",
+          "causer"
+        ],
+        "answer": "proférer"
+      },
+      {
+        "question": "Quelle nuance distingue 'célèbre' de 'notoire' ?",
+        "options": [
+          "Célèbre est plus formel que notoire",
+          "Notoire implique souvent une réputation négative, célèbre est neutre ou positif",
+          "Notoire s'utilise uniquement pour les personnes, célèbre pour les choses",
+          "Il n'y a aucune différence de nuance entre ces deux mots"
+        ],
+        "answer": "Notoire implique souvent une réputation négative, célèbre est neutre ou positif"
+      },
+      {
+        "question": "Quel registre de langue est employé dans la phrase : « Nous vous prions d'agréer l'expression de nos salutations distinguées » ?",
+        "options": [
+          "Familier",
+          "Courant",
+          "Soutenu",
+          "Populaire"
+        ],
+        "answer": "Soutenu"
+      },
+      {
+        "question": "Parmi ces mots, lequel est un synonyme de 'commencer' au registre courant ?",
+        "options": [
+          "inaugurer",
+          "initier",
+          "entamer",
+          "déclencher"
+        ],
+        "answer": "entamer"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Expression & Style ✨ — L'Art de Manier les Mots",
+    "brief": "Bienvenue au niveau master de la maîtrise du français : l'art de l'expression et du style. Les figures de style ne sont pas de simples ornements rhétoriques — ce sont des outils cognitifs qui permettent de faire comprendre, ressentir et retenir des idées avec une puissance que les formulations plates ne peuvent pas atteindre. Une métaphore bien choisie encode une idée complexe en une image mémorable. Une anaphore martèle un message jusqu'à ce qu'il devienne irréfutable.\n\nLa cohérence textuelle, c'est la discipline qui assure que ton texte avance dans une direction claire, que chaque phrase prépare la suivante, que les idées s'enchaînent de façon logique. Les connecteurs logiques — mais, donc, or, car, ainsi, pourtant — sont les routeurs de ton texte : ils indiquent au lecteur comment les idées sont reliées (cause, conséquence, opposition, illustration). Un texte sans connecteurs logiques, c'est un réseau sans protocoles — des données qui arrivent en vrac.\n\nLa rédaction efficace combine toutes ces compétences : clarté du propos, précision du vocabulaire, variété des constructions, cohérence de l'ensemble. Les meilleurs rédacteurs ne font pas de longues phrases pour paraître intelligent — ils font des phrases de longueur variable pour créer un rythme. Ils choisissent le mot exact plutôt que trois approximations. Et ils relisent. Toujours. Plusieurs fois.",
+    "visualDescription": "Un atelier d'écriture futuriste immergé dans une lumière ambre et électrique, où des phrases se construisent en hologramme et se transforment en œuvres d'art typographiques. Des figures de style apparaissent comme des modules interchangeables dans un IDE littéraire. Des flux de texte s'organisent en architectures de données élégantes, comme si écrire était une forme de programmation.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle figure de style consiste à donner des caractéristiques humaines à un objet inanimé ou à une abstraction ?",
+        "options": [
+          "La métaphore",
+          "La personnification",
+          "L'allégorie",
+          "L'antithèse"
+        ],
+        "answer": "La personnification"
+      },
+      {
+        "question": "Dans « Je vis, je meurs ; je me brûle et me noie » (Louise Labé), quelle figure de style est employée ?",
+        "options": [
+          "L'anaphore",
+          "L'oxymore",
+          "L'antithèse",
+          "La litote"
+        ],
+        "answer": "L'antithèse"
+      },
+      {
+        "question": "Quel connecteur logique exprime le mieux une CONCESSION dans : « Il pleut, ___ nous partons quand même. » ?",
+        "options": [
+          "donc",
+          "car",
+          "pourtant",
+          "ainsi"
+        ],
+        "answer": "pourtant"
+      },
+      {
+        "question": "Quelle est la différence entre une métaphore et une comparaison ?",
+        "options": [
+          "La métaphore porte sur les sentiments, la comparaison sur les objets",
+          "La comparaison utilise un outil comparatif (comme, tel que), la métaphore établit l'identification directement",
+          "La métaphore est plus longue que la comparaison",
+          "Il n'y a aucune différence, ce sont deux noms pour la même figure"
+        ],
+        "answer": "La comparaison utilise un outil comparatif (comme, tel que), la métaphore établit l'identification directement"
+      },
+      {
+        "question": "Qu'est-ce qu'une « litote » en rhétorique ?",
+        "options": [
+          "Une figure qui exagère une réalité pour la rendre plus frappante",
+          "Une figure qui dit moins pour suggérer davantage (ex : 'ce n'est pas mal')",
+          "Une répétition d'un même mot en début de phrase",
+          "Une rupture de construction syntaxique volontaire"
+        ],
+        "answer": "Une figure qui dit moins pour suggérer davantage (ex : 'ce n'est pas mal')"
+      }
+    ]
+  }
+]

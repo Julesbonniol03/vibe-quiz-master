@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "La Littérature Française Classique 🎭 — Le Siècle des Géants",
+    "brief": "On est au XVIIe siècle, et la France littéraire est en feu. Louis XIV règne sur Versailles, mais c'est Molière, Racine et La Fontaine qui règnent sur les esprits. Imagine un Netflix de l'époque : les pièces de théâtre, c'était LE divertissement de masse, et chaque première était un événement social aussi intense qu'un lancement d'iPhone.\n\nMolière, c'est le génie qui moquait les hypocrites et les bourgeois avec une précision chirurgicale — le mec aurait cartonné sur les réseaux sociaux. Racine, lui, explorait les passions dévorantes avec des tragédies qui te prennent aux tripes. Et La Fontaine ? Il avait trouvé le hack ultime : envelopper des critiques sociales acides dans des fables avec des animaux. Du contenu viral avant l'heure.\n\nCette époque, c'est aussi celle des règles strictes de la dramaturgie classique : unité de temps, de lieu, d'action. C'était le framework créatif du moment, et les meilleurs auteurs savaient l'utiliser pour créer des œuvres qui tiennent encore la route 400 ans plus tard.",
+    "visualDescription": "Une scène de théâtre baroque transformée en arène cyberpunk, avec des hologrammes de personnages de Molière projetés en néon violet et or. Des masques de comédie et tragédie flottent dans un espace numérique, entourés de textes de pièces classiques qui défilent comme du code. L'atmosphère mélange l'architecture de Versailles avec des éclairages LED futuristes.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Dans quelle pièce de Molière apparaît le personnage Tartuffe, un faux dévot hypocrite ?",
+        "options": [
+          "Le Misanthrope",
+          "Tartuffe ou l'Imposteur",
+          "L'Avare",
+          "Dom Juan"
+        ],
+        "answer": "Tartuffe ou l'Imposteur"
+      },
+      {
+        "question": "Quelle est la règle des trois unités dans le théâtre classique français ?",
+        "options": [
+          "Unité de style, de langue et de longueur",
+          "Unité de temps, de lieu et d'action",
+          "Unité de personnages, de morale et de décor",
+          "Unité d'auteur, de metteur en scène et d'acteurs"
+        ],
+        "answer": "Unité de temps, de lieu et d'action"
+      },
+      {
+        "question": "Quelle tragédie de Racine met en scène un amour interdit de Phèdre pour son beau-fils Hippolyte ?",
+        "options": [
+          "Andromaque",
+          "Bérénice",
+          "Phèdre",
+          "Iphigénie"
+        ],
+        "answer": "Phèdre"
+      },
+      {
+        "question": "Dans les Fables de La Fontaine, quelle morale tire-t-on de « La Cigale et la Fourmi » ?",
+        "options": [
+          "Il faut partager ses ressources avec les autres",
+          "La paresse et l'imprévoyance mènent à la misère",
+          "Le travail acharné rend malheureux",
+          "La générosité est toujours récompensée"
+        ],
+        "answer": "La paresse et l'imprévoyance mènent à la misère"
+      },
+      {
+        "question": "Quel dramaturge du XVIIe siècle est l'auteur du « Cid », pièce fondatrice du classicisme français ?",
+        "options": [
+          "Molière",
+          "Racine",
+          "Pierre Corneille",
+          "La Fontaine"
+        ],
+        "answer": "Pierre Corneille"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Le XIXe Siècle Littéraire 📖 — L'Explosion des Genres",
+    "brief": "Le XIXe siècle, c'est littéralement le Big Bang de la littérature française moderne. Hugo, Balzac, Flaubert, Zola — ces mecs ont réinventé le roman comme on réinvente une app : plus grand, plus fort, plus ambitieux. Victor Hugo avec Les Misérables, c'est le premier roman-monde, une fresque sociale aussi dense qu'un documentaire Netflix de 10 épisodes condensé en un seul chef-d'œuvre.\n\nBalzac, lui, avait un projet délirant : cartographier toute la société française dans La Comédie Humaine. Plus de 90 romans interconnectés avec les mêmes personnages qui réapparaissent — l'ancêtre direct de l'univers Marvel, mais pour la littérature. Flaubert est le premier à vraiment traiter le style comme une obsession quasi-scientifique : il pouvait passer une semaine sur une seule phrase.\n\nEt puis il y a Zola et le naturalisme — le journalisme d'investigation transformé en roman. Ses enquêtes dans les mines, les marchés, les alcooleries n'étaient pas de la fiction pure : il faisait de la vraie recherche terrain, comme un data journalist avant l'heure. Son pamphlet J'Accuse ! reste l'un des textes politiques les plus percutants de l'histoire.",
+    "visualDescription": "Une bibliothèque victorienne transformée en datacenter lumineux, avec des livres anciens dont les pages se transforment en flux de données holographiques. Les portraits de Hugo, Balzac et Zola apparaissent en néon rouge et cuivre sur des écrans géants. Des rues parisiennes du XIXe siècle se superposent à une ville futuriste, comme deux dimensions qui se fusionnent.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel roman de Victor Hugo, publié en 1862, suit le personnage de Jean Valjean sur plusieurs décennies ?",
+        "options": [
+          "Notre-Dame de Paris",
+          "Les Misérables",
+          "L'Homme qui rit",
+          "Quatrevingt-treize"
+        ],
+        "answer": "Les Misérables"
+      },
+      {
+        "question": "Comment Balzac a-t-il nommé l'ensemble de ses romans et nouvelles interconnectés ?",
+        "options": [
+          "La Comédie Humaine",
+          "Les Rougon-Macquart",
+          "Les Chroniques Françaises",
+          "La Fresque Sociale"
+        ],
+        "answer": "La Comédie Humaine"
+      },
+      {
+        "question": "Quel roman de Flaubert, publié en 1857, scandalisa la société pour ses mœurs libres ?",
+        "options": [
+          "L'Éducation sentimentale",
+          "Salammbô",
+          "Madame Bovary",
+          "Bouvard et Pécuchet"
+        ],
+        "answer": "Madame Bovary"
+      },
+      {
+        "question": "Quelle série de romans de Zola suit l'histoire d'une famille sur plusieurs générations, en lien avec l'hérédité et le milieu social ?",
+        "options": [
+          "La Comédie Humaine",
+          "Les Rougon-Macquart",
+          "Les Misérables",
+          "Les Diaboliques"
+        ],
+        "answer": "Les Rougon-Macquart"
+      },
+      {
+        "question": "Dans quel journal Zola a-t-il publié son célèbre article « J'Accuse ! » en 1898, défendant Dreyfus ?",
+        "options": [
+          "Le Figaro",
+          "Le Temps",
+          "L'Aurore",
+          "Le Monde"
+        ],
+        "answer": "L'Aurore"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "L'Art : du Baroque à l'Impressionnisme 🎨 — Quand les Pinceaux Révolutionnent Tout",
+    "brief": "De Rembrandt à Monet, l'histoire de la peinture occidentale c'est une longue séquence de rébellions créatives. Le Baroque arrive au XVIIe siècle comme une claque visuelle : Rembrandt et son clair-obscur, c'est le premier maître de la lumière dramatique — l'ancêtre de la photographie cinématographique, de Nolan et ses jeux d'ombre. Chaque tableau est une mise en scène calculée au millimètre.\n\nPuis vient l'Impressionnisme au XIXe, et là c'est la révolution totale. Monet, Renoir, Degas refusent de peindre la réalité telle qu'elle est — ils peignent comment l'œil la perçoit, avec la lumière qui tremble et les couleurs qui vibrent. Le terme 'impressionniste' était au départ une insulte d'un critique. Comme 'punk' ou 'nerd', les artistes ont retourné l'insulte en badge d'honneur.\n\nVan Gogh est le cas le plus fascinant : incompris de son vivant, vendu pour rien, reconnu après sa mort comme un génie absolu. Ses tourbillons dans La Nuit Étoilée ne sont pas juste poétiques — des chercheurs ont démontré qu'ils décrivent avec précision la turbulence des fluides, un phénomène que la physique n'a formalisé qu'un siècle plus tard. L'art qui anticipe la science.",
+    "visualDescription": "Un musée d'art transformé en galerie holographique cyberpunk, où des tableaux de Rembrandt, Monet et Van Gogh flottent en 3D dans un espace infini. Les coups de pinceau de Van Gogh deviennent des vagues de lumière néon tourbillonnantes en bleu et jaune. Des projecteurs lasers découvrent les couches de peinture cachées sous les chefs-d'œuvre comme des données à décrypter.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle technique picturale de Rembrandt joue sur le contraste dramatique entre ombre et lumière ?",
+        "options": [
+          "Le sfumato",
+          "Le clair-obscur",
+          "Le pointillisme",
+          "Le trompe-l'œil"
+        ],
+        "answer": "Le clair-obscur"
+      },
+      {
+        "question": "Quel tableau de Monet a donné son nom au mouvement impressionniste après une critique moqueuse ?",
+        "options": [
+          "Les Nymphéas",
+          "La Cathédrale de Rouen",
+          "Impression, soleil levant",
+          "Le Déjeuner sur l'herbe"
+        ],
+        "answer": "Impression, soleil levant"
+      },
+      {
+        "question": "Dans quelle ville Van Gogh a-t-il peint La Nuit Étoilée en 1889, depuis la fenêtre de sa chambre ?",
+        "options": [
+          "Arles",
+          "Paris",
+          "Saint-Rémy-de-Provence",
+          "Amsterdam"
+        ],
+        "answer": "Saint-Rémy-de-Provence"
+      },
+      {
+        "question": "Quel est le nom du tableau de Picasso, peint en 1937, qui dénonce les bombardements de la guerre civile espagnole ?",
+        "options": [
+          "Les Demoiselles d'Avignon",
+          "Guernica",
+          "La Vie",
+          "Le Taureau"
+        ],
+        "answer": "Guernica"
+      },
+      {
+        "question": "Le mouvement cubiste, cofondé par Picasso, cherche à représenter les objets de quelle manière ?",
+        "options": [
+          "En capturant les effets de lumière naturelle",
+          "En décomposant les formes sous plusieurs angles simultanés",
+          "En utilisant uniquement des couleurs primaires",
+          "En reproduisant la réalité avec une précision photographique"
+        ],
+        "answer": "En décomposant les formes sous plusieurs angles simultanés"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "L'Art Moderne & la Littérature du XXe 🌀 — La Remise en Question de Tout",
+    "brief": "Le XXe siècle, c'est le siècle où les artistes et les écrivains ont tout remis en question — la forme, le sens, l'existence elle-même. Sartre et Camus, c'est le duo philo-littéraire le plus iconique de l'histoire : deux potes qui ont rendu l'existentialisme cool. L'idée que l'existence précède l'essence, que tu te crées toi-même par tes choix, c'est la philosophie la plus DIY qui soit — l'ancêtre spirituel du 'be yourself' viral.\n\nDu côté des arts visuels, Dalí arrive avec le surréalisme comme un hacker du cerveau. Ses tableaux ne respectent aucune logique rationnelle — ils fonctionnent comme des rêves lucides codés en image. Les Montres Molles, c'est une exploration de la relativité du temps inspirée d'Einstein. L'art et la science qui se rejoignent dans un cerveau génial — et un peu dérangé.\n\nAndy Warhol, lui, a réalisé quelque chose que personne n'avait encore osé dire : la culture pop, la publicité, les célébrités, c'est aussi de l'art. Sa Factory à New York était l'ancêtre des studios créatifs et des agences de contenu d'aujourd'hui — un espace de production collaborative qui mélangeait peinture, film, musique et mode. Il avait tout compris à l'ère des médias de masse bien avant Instagram.",
+    "visualDescription": "Un atelier d'artiste postapocalyptique éclairé en néon rose et vert acide, avec des répliques des boîtes de soupe Campbell de Warhol transformées en cubes de données holographiques. Les montres molles de Dalí fondent sur des structures métalliques futuristes. Des textes de Sartre et Camus défilent en code sur des murs de béton grafé, comme des manifestes numériques.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle est la formule existentialiste clé de Jean-Paul Sartre qui résume sa philosophie de la liberté humaine ?",
+        "options": [
+          "L'être précède l'essence",
+          "L'existence précède l'essence",
+          "La conscience précède l'être",
+          "La liberté précède la morale"
+        ],
+        "answer": "L'existence précède l'essence"
+      },
+      {
+        "question": "Quel roman d'Albert Camus, publié en 1942, commence par « Aujourd'hui, maman est morte » ?",
+        "options": [
+          "La Peste",
+          "L'Homme révolté",
+          "L'Étranger",
+          "Le Mythe de Sisyphe"
+        ],
+        "answer": "L'Étranger"
+      },
+      {
+        "question": "Quel objet iconique Salvador Dalí représente-t-il de façon « molle » dans son tableau Le Persistance de la mémoire (1931) ?",
+        "options": [
+          "Des téléphones",
+          "Des montres",
+          "Des livres",
+          "Des chaussures"
+        ],
+        "answer": "Des montres"
+      },
+      {
+        "question": "Comment s'appelait le studio créatif new-yorkais d'Andy Warhol, lieu de rencontres artistiques dans les années 1960 ?",
+        "options": [
+          "Le Studio 54",
+          "La Factory",
+          "L'Atelier",
+          "The Pop Hub"
+        ],
+        "answer": "La Factory"
+      },
+      {
+        "question": "En quelle année Albert Camus a-t-il reçu le Prix Nobel de littérature ?",
+        "options": [
+          "1943",
+          "1952",
+          "1957",
+          "1964"
+        ],
+        "answer": "1957"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "BD, Manga & Littérature Contemporaine 💥 — L'Art qui Brise les Frontières",
+    "brief": "Qui a dit que la bande dessinée c'était pour les enfants ? Tintin et Astérix ont conquis des dizaines de millions de lecteurs dans le monde entier et sont des piliers de la culture francophone — Hergé et Goscinny/Uderzo ont créé des univers aussi cohérents et fouillés que n'importe quel roman classique. La BD franco-belge a posé les bases d'un art narratif qui influence encore aujourd'hui les comics américains et les mangas japonais.\n\nEn parlant de mangas : depuis les années 90, le manga japonais a explosé en France pour devenir le premier marché de la BD par volume de ventes. Dragon Ball, Naruto, One Piece — ces séries ont touché une génération entière et prouvé que la narration visuelle peut créer des univers d'une richesse et d'une complexité incroyables. La France est aujourd'hui le deuxième pays consommateur de manga au monde, juste derrière le Japon.\n\nLa littérature contemporaine, elle, joue à fond la carte de la diversité des voix. Les prix Nobel récents — Annie Ernaux, premier auteur français à recevoir ce prix depuis Le Clézio — viennent souvent récompenser des œuvres qui parlent de mémoire, d'identité, de classe sociale. Annie Ernaux écrit comme une autopsie de sa propre vie : précise, clinique, universelle. C'est de la littérature-miroir où chacun peut se reconnaître.",
+    "visualDescription": "Un univers de bande dessinée fusionné avec une esthétique manga cyberpunk : des bulles de dialogue géantes en néon flottent dans un espace urbain futuriste. Tintin et ses amis apparaissent en silhouettes holographiques bleu électrique, tandis que des personnages de manga tourbillonnent en particules lumineuses orange et violet. Des cases de BD forment les murs d'un couloir infini.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel auteur belge a créé le personnage de Tintin, reporter à la houppe et aventurier mondial ?",
+        "options": [
+          "Morris",
+          "Hergé",
+          "Franquin",
+          "Peyo"
+        ],
+        "answer": "Hergé"
+      },
+      {
+        "question": "Quel duo a créé la série Astérix le Gaulois, lancée en 1959 dans le magazine Pilote ?",
+        "options": [
+          "Hergé et Jacobs",
+          "Goscinny et Uderzo",
+          "Peyo et Franquin",
+          "Morris et Goscinny"
+        ],
+        "answer": "Goscinny et Uderzo"
+      },
+      {
+        "question": "Quelle autrice française a reçu le Prix Nobel de littérature en 2022, notamment pour son œuvre autobiographique Les Années ?",
+        "options": [
+          "Marguerite Duras",
+          "Marie NDiaye",
+          "Annie Ernaux",
+          "Virginie Despentes"
+        ],
+        "answer": "Annie Ernaux"
+      },
+      {
+        "question": "Quel manga de Masashi Kishimoto suit un jeune ninja portant en lui un démon renard à neuf queues ?",
+        "options": [
+          "One Piece",
+          "Dragon Ball",
+          "Naruto",
+          "Bleach"
+        ],
+        "answer": "Naruto"
+      },
+      {
+        "question": "Quel auteur francophone a reçu le Prix Nobel de littérature en 2008, avant Annie Ernaux ?",
+        "options": [
+          "Patrick Modiano",
+          "J.M.G. Le Clézio",
+          "Claude Simon",
+          "Saint-John Perse"
+        ],
+        "answer": "J.M.G. Le Clézio"
+      }
+    ]
+  }
+]
