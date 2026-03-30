@@ -75,5 +75,27 @@
     "tag": "Tendances",
     "date": "30 mars 2026",
     "details": "Les réseaux sociaux évoluent vite. Voici les grandes tendances à connaître en ce printemps 2026.\n\n**🔥 Trend du moment : L'Auto-Compliment**\nLa tendance incontournable du printemps : se lancer des fleurs en mode humoristique. Le principe ? Filmer sa routine en se complimentant exagérément sur tout. Millions de vues garantis. Cette tendance reflète un besoin d'autodérision et de positivité décomplexée.\n\n**🛍️ TikTok Shop : le social commerce explose**\nTikTok Shop s'impose comme le 2ème canal d'achat en ligne chez les 18-30 ans en France. Les créateurs deviennent vendeurs. Le taux de conversion via live shopping atteint 8% (vs 2% pour l'e-commerce classique).\n\n**🔍 Social Search : la nouvelle façon de chercher**\n35% des 18-25 ans font leurs recherches sur TikTok ou Instagram avant Google. Les marques doivent optimiser leur présence sociale comme elles optimisaient leur SEO.\n\n**⚡ Microviralité : la nouvelle stratégie**\nFini les mega-influenceurs. Les marques misent sur des contenus hyper-ciblés qui touchent une niche précise avec un fort taux d'engagement. 10 000 vues très engagées > 1M de vues passives.\n\n**📊 Chiffres clés :**\n• TikTok : 1,7 milliard d'utilisateurs actifs mondiaux\n• Instagram Reels : format dominant en France\n• Threads (Meta) : 200M utilisateurs, en croissance"
+  },
+  {
+    "id": 8,
+    "theme": "Santé",
+    "emoji": "🧬",
+    "color": "green",
+    "headline": "Longévité : les premières thérapies anti-vieillissement entrent en essai clinique",
+    "summary": "Des start-ups biotech testent des molécules sénolytiques sur l'humain. L'OMS redéfinit le vieillissement comme une maladie traitable.",
+    "tag": "Santé",
+    "date": "30 mars 2026",
+    "details": "La course contre le vieillissement entre dans une nouvelle phase. Plusieurs entreprises biotech annoncent des résultats d'essais cliniques de phase II sur des thérapies anti-âge.\n\n**Ce qui se passe concrètement :**\nLes sénolytiques sont des molécules qui détruisent les cellules sénescentes — ces cellules 'zombies' qui s'accumulent avec l'âge et favorisent l'inflammation chronique. En éliminant ces cellules, des études sur la souris ont prolongé la vie de 25-35%.\n\n**Les acteurs clés :**\n• Unity Biotechnology (USA) — essais cliniques sur maladies oculaires liées à l'âge\n• Altos Labs (financé par Jeff Bezos) — reprogrammation cellulaire\n• Turn Biotechnologies — ARN messager pour régénération tissulaire\n\n**L'OMS change de position :**\nEn 2026, l'Organisation Mondiale de la Santé intègre officiellement le 'vieillissement' dans sa classification internationale des maladies (CIM-11), ouvrant la voie à des remboursements et une recherche accélérée.\n\n**Éthique & accès :**\nLe débat éthique est intense : ces thérapies seront-elles réservées aux ultra-riches ? Quel impact démographique si l'espérance de vie dépasse 120 ans ?\n\n**Horizon :** Les premières thérapies sénolytiques approuvées sont attendues entre 2028 et 2032."
+  },
+  {
+    "id": 9,
+    "theme": "Environnement",
+    "emoji": "🌱",
+    "color": "green",
+    "headline": "Énergies renouvelables : le solaire dépasse le charbon pour la première fois en Europe",
+    "summary": "En 2025, le solaire a produit plus d'électricité que le charbon en Europe. Les prix de l'énergie solaire ont chuté de 90% en 10 ans.",
+    "tag": "Climat",
+    "date": "30 mars 2026",
+    "details": "L'Europe franchit un cap historique : pour la première fois en 2025, la production d'électricité solaire a dépassé celle du charbon sur l'année complète. Une révolution énergétique silencieuse mais décisive.\n\n**Les chiffres clés :**\n• Solaire : 12% de l'électricité européenne en 2025 (vs 2% en 2015)\n• Charbon : tombé à 10% (vs 25% en 2015)\n• Éolien : 18% (premier source d'électricité renouvelable)\n• Prix du solaire : -90% en 10 ans (de 300€/MWh à 30€/MWh)\n\n**Pourquoi ça accélère :**\nLa loi européenne Net Zero Industry Act oblige 40% de technologie verte 'made in Europe' d'ici 2030. Les subventions massives post-crise énergétique 2022 ont déclenché un boom des installations.\n\n**Les pays leaders :**\n🇩🇪 Allemagne : 60% d'électricité renouvelable en 2025\n🇪🇸 Espagne : record de 80% certains jours\n🇫🇷 France : en retard (nucléaire dominant, solaire à 6%)\n\n**Le défi stockage :**\nL'intermittence reste le problème majeur. Les batteries géantes (BESS) se déploient massivement. L'hydrogène vert comme stockage saisonnier est en développement.\n\n**Pour la France :** Le gouvernement annonce un plan 'Solaire 2030' pour tripler la capacité installée d'ici 4 ans."
   }
 ]
