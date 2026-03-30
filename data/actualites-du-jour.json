@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "theme": "Géopolitique",
+    "emoji": "🌍",
+    "color": "blue",
+    "headline": "Sommet de paix pour l'Ukraine : premières négociations directes",
+    "summary": "Des représentants ukrainiens et russes se retrouvent pour la première fois depuis 2022. Les États-Unis et l'UE facilitent les discussions sur un cessez-le-feu partiel. Aucun accord signé, mais le dialogue est renoué.",
+    "tag": "Monde",
+    "date": "30 mars 2026"
+  },
+  {
+    "id": 2,
+    "theme": "Technologie",
+    "emoji": "🤖",
+    "color": "cyan",
+    "headline": "IA générative : l'Europe impose les premières régulations concrètes",
+    "summary": "L'AI Act européen entre en phase d'application. Les grandes entreprises tech doivent désormais étiqueter tout contenu généré par IA. Amende jusqu'à 6% du CA mondial en cas de non-conformité.",
+    "tag": "Tech",
+    "date": "30 mars 2026"
+  },
+  {
+    "id": 3,
+    "theme": "Science",
+    "emoji": "🔬",
+    "color": "green",
+    "headline": "James Webb détecte des biosignatures sur une exoplanète voisine",
+    "summary": "Le télescope spatial James Webb identifie des traces de méthane et de dioxyde de carbone dans l'atmosphère de K2-18b à 120 années-lumière. Les scientifiques restent prudents mais parlent de 'signal le plus prometteur à ce jour'.",
+    "tag": "Espace",
+    "date": "29 mars 2026"
+  },
+  {
+    "id": 4,
+    "theme": "Économie",
+    "emoji": "📈",
+    "color": "yellow",
+    "headline": "Inflation en zone euro : retour sous les 2% pour la première fois depuis 2021",
+    "summary": "La BCE confirme une inflation à 1,8% en mars 2026. Le président de la BCE annonce une possible baisse des taux directeurs dès juin. Les marchés européens réagissent positivement.",
+    "tag": "Éco",
+    "date": "30 mars 2026"
+  },
+  {
+    "id": 5,
+    "theme": "Culture",
+    "emoji": "🎬",
+    "color": "purple",
+    "headline": "Cannes 2026 : la sélection officielle dévoilée",
+    "summary": "Le Festival de Cannes annonce sa 79ème édition. 19 films en compétition dont 5 réalisateurs français. L'IA dans le cinéma fait débat : deux films générés en partie par algorithme sont sélectionnés hors compétition.",
+    "tag": "Culture",
+    "date": "30 mars 2026"
+  },
+  {
+    "id": 6,
+    "theme": "Sport",
+    "emoji": "⚽",
+    "color": "orange",
+    "headline": "Qualifications Coupe du Monde 2026 : l'Europe à 3 mois du tirage",
+    "summary": "La France termine sa phase de groupes en tête. L'Angleterre et l'Espagne également qualifiées. Le Maroc surprend avec une qualification historique en dominant la CAN. Le tirage au sort est prévu pour juin.",
+    "tag": "Sport",
+    "date": "30 mars 2026"
+  }
+]

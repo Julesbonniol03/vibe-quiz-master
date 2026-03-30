@@ -4,6 +4,35 @@ import { join } from "path";
 import { categoryColors } from "@/lib/questions";
 import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount } from "./DashboardClient";
 
+interface ActualiteItem {
+  id: number;
+  theme: string;
+  emoji: string;
+  color: string;
+  headline: string;
+  summary: string;
+  tag: string;
+  date: string;
+}
+
+function loadActualites(): ActualiteItem[] {
+  try {
+    const filePath = join(process.cwd(), "data", "actualites-du-jour.json");
+    return JSON.parse(readFileSync(filePath, "utf-8"));
+  } catch {
+    return [];
+  }
+}
+
+const COLOR_MAP: Record<string, { badge: string; border: string; glow: string }> = {
+  blue:   { badge: "text-blue-300 bg-blue-500/10 border-blue-500/20",   border: "hover:border-blue-500/30",   glow: "from-blue-500/[0.04]" },
+  cyan:   { badge: "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20", border: "hover:border-neon-cyan/30",  glow: "from-neon-cyan/[0.04]" },
+  green:  { badge: "text-green-300 bg-green-500/10 border-green-500/20", border: "hover:border-green-500/30",  glow: "from-green-500/[0.04]" },
+  yellow: { badge: "text-yellow-300 bg-yellow-500/10 border-yellow-500/20", border: "hover:border-yellow-500/30", glow: "from-yellow-500/[0.04]" },
+  purple: { badge: "text-purple-300 bg-purple-500/10 border-purple-500/20", border: "hover:border-purple-500/30", glow: "from-purple-500/[0.04]" },
+  orange: { badge: "text-orange-300 bg-orange-500/10 border-orange-500/20", border: "hover:border-orange-500/30", glow: "from-orange-500/[0.04]" },
+};
+
 const FEATURED_CATEGORIES = ["Actualités 2025-2026", "Maîtrise du Français"];
 
 function loadCategories() {
@@ -27,6 +56,7 @@ function loadCategories() {
 export default function DashboardPage() {
   const categories = loadCategories();
   const totalQ = categories.reduce((sum, c) => sum + c.questions, 0);
+  const actualites = loadActualites();
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -96,6 +126,48 @@ export default function DashboardPage() {
 
       {/* Daily Odyssey */}
       <DailyOdyssey />
+
+      {/* Actualité du Jour */}
+      {actualites.length > 0 && (
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-white flex items-center gap-2">
+              <span>📰</span> Actualité du Jour
+            </h2>
+            <span className="text-xs text-slate-600">{actualites[0]?.date}</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {actualites.map((item) => {
+              const c = COLOR_MAP[item.color] ?? COLOR_MAP.blue;
+              return (
+                <div
+                  key={item.id}
+                  className={`relative group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-200 hover:bg-white/[0.04] ${c.border}`}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${c.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
+                  <div className="relative">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xl">{item.emoji}</span>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${c.badge}`}>
+                        {item.tag}
+                      </span>
+                    </div>
+                    <h3 className="text-sm font-semibold text-white leading-snug mb-2 line-clamp-2">
+                      {item.headline}
+                    </h3>
+                    <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
+                      {item.summary}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <p className="text-xs text-slate-700 text-center mt-3">
+            Contenu éditorial · mis à jour régulièrement
+          </p>
+        </div>
+      )}
 
       {/* Game Modes */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
