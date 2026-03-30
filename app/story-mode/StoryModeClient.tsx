@@ -186,7 +186,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
               <span className="gradient-text">Culture G</span>
             </h1>
             <p className="text-slate-500 max-w-lg">
-              De l&apos;Empire Romain à l&apos;Imprimerie. Chaque jour, une pépite d&apos;histoire racontée comme un débrief en terrasse.
+              De la Préhistoire à l&apos;Ère Numérique. 30 niveaux, chaque époque racontée comme un débrief en terrasse.
             </p>
           </div>
         </div>
@@ -353,13 +353,21 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
           </motion.div>
         )}
 
-        <div className="mt-8 text-center">
+        <div className="mt-8 flex flex-col items-center gap-3">
           <Link
             href="/dashboard"
             className="text-slate-600 hover:text-slate-400 transition-colors text-sm"
           >
             &larr; Retour au dashboard
           </Link>
+          {!levels.every((l) => progress[l.id]?.completed) && (
+            <button
+              onClick={handleSeedProgress}
+              className="text-xs text-slate-700 hover:text-slate-500 transition-colors underline"
+            >
+              [Dev] Simuler joueur niveau 30
+            </button>
+          )}
         </div>
       </div>
     );

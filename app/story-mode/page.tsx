@@ -38,7 +38,7 @@ function loadExpertCategories() {
 
 export const metadata = {
   title: "Story Mode — Teubé Quiz",
-  description: "L'Odyssée de la Culture G : de l'Empire Romain à l'Imprimerie, chaque jour une pépite d'histoire.",
+  description: "L'Odyssée de la Culture G : 30 niveaux de la Préhistoire à l'Ère Numérique, chaque époque racontée comme un débrief en terrasse.",
 };
 
 export default function StoryModePage() {
