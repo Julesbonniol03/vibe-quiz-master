@@ -1,171 +1,296 @@
 [
   {
     "id": 1,
-    "title": "Les Origines de l'Économie : Adam Smith & la Main Invisible",
-    "brief": "1776, la même année que la Déclaration d'Indépendance américaine, Adam Smith publie 'La Richesse des Nations' — le livre fondateur de l'économie moderne. Son concept phare : la 'main invisible'. L'idée c'est que quand chaque individu cherche son propre intérêt, il contribue sans le vouloir au bien commun — comme si une main invisible guidait l'économie vers l'efficacité. C'est le capitalisme dans sa version theory. La Révolution Industrielle qui suit va tester ce modèle à grande échelle : usines, machines à vapeur, prolétariat exploité. Un certain Karl Marx observe ça de près et publie en 1848 'Le Manifeste du Parti Communiste' avec son pote Engels, puis 'Le Capital' en 1867. Pour Marx, le capitalisme exploite les travailleurs et se détruira lui-même. Deux visions du monde opposées qui ont structuré les 250 ans qui suivent. Le patch note qui a tout changé.",
-    "visualDescription": "Un marché en néon holographique avec des flèches d'offre et de demande en cyan brillant. Adam Smith en silhouette dorée avec une main invisible en transparence guidant des engrenages économiques. Une usine de la révolution industrielle en vapeur violet. Marx et Engels en ombres sombres tenant un manifeste rouge. Ambiance capitalisme vs communisme, round 1.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "title": "Les Bases de l'Économie — Le patch qui a tout fondé",
+    "brief": "1776, la même année que la Déclaration d'Indépendance américaine, Adam Smith publie 'La Richesse des Nations' — le livre fondateur de l'économie moderne. Son concept phare : la 'main invisible'. L'idée ? Quand chaque individu cherche son propre intérêt, il contribue sans le vouloir au bien commun, comme si une main invisible guidait le marché vers l'efficacité. C'est le capitalisme en version théorique, propre et élégante. Et franchement, pour l'époque, c'était révolutionnaire.\n\nMais avant Adam Smith, il y a les bases encore plus simples : l'offre et la demande. Quand les gens veulent plus d'un truc qu'il n'en existe, le prix monte. Quand l'offre dépasse la demande, ça chute. Ce mécanisme d'une simplicité brutale régit tout — des légumes au marché jusqu'aux actions en bourse. Ricardo viendra ensuite avec les avantages comparatifs pour expliquer pourquoi les nations ont intérêt à commercer entre elles même si l'une est meilleure à tout faire.\n\nCes concepts fondateurs, c'est le firmware de toute la pensée économique moderne. Sans les comprendre, tout ce qui suit dans cet arc n'a aucun sens. Bienvenue dans le vrai jeu.",
+    "visualDescription": "Un marché en néon holographique de nuit avec des courbes d'offre et de demande en cyan et orange qui s'intersectent en une explosion lumineuse. Adam Smith en silhouette dorée trône au centre, une main transparente autour de laquelle gravitent des engrenages de monnaie. Des chiffres de prix flottent et se rééquilibrent en temps réel. Ambiance trading floor cyberpunk, reflets sur le sol mouillé.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
     "quiz": [
       {
-        "question": "Quel économiste écossais est considéré comme le père de l'économie moderne et a théorisé la 'main invisible' ?",
-        "options": ["David Ricardo", "John Maynard Keynes", "Adam Smith", "Thomas Malthus"],
+        "question": "Quel économiste écossais est considéré comme le père de l'économie moderne et a théorisé la 'main invisible' du marché dans 'La Richesse des Nations' (1776) ?",
+        "options": [
+          "David Ricardo",
+          "John Maynard Keynes",
+          "Adam Smith",
+          "Thomas Malthus"
+        ],
         "answer": "Adam Smith"
       },
       {
-        "question": "En quelle année Adam Smith publie-t-il 'La Richesse des Nations' ?",
-        "options": ["1748", "1776", "1803", "1848"],
-        "answer": "1776"
-      },
-      {
-        "question": "Quel ouvrage Karl Marx et Friedrich Engels publient-ils en 1848 ?",
-        "options": ["Le Capital", "L'Idéologie Allemande", "Le Manifeste du Parti Communiste", "Das Kapital"],
-        "answer": "Le Manifeste du Parti Communiste"
-      },
-      {
         "question": "Que désigne le concept de 'main invisible' selon Adam Smith ?",
-        "options": ["L'intervention de l'État dans l'économie", "La régulation naturelle du marché par les intérêts individuels", "Le contrôle des prix par les monopoles", "La puissance des syndicats ouvriers"],
-        "answer": "La régulation naturelle du marché par les intérêts individuels"
+        "options": [
+          "L'intervention secrète de l'État dans l'économie",
+          "La régulation naturelle du marché par la poursuite des intérêts individuels",
+          "Le contrôle des prix par les monopoles industriels",
+          "La puissance cachée des syndicats ouvriers"
+        ],
+        "answer": "La régulation naturelle du marché par la poursuite des intérêts individuels"
       },
       {
-        "question": "Quel événement économique majeur du 18e-19e siècle a transformé la production artisanale en production industrielle de masse ?",
-        "options": ["La Révolution Française", "La Révolution Industrielle", "La Révolution Commerciale", "La Révolution Agricole"],
-        "answer": "La Révolution Industrielle"
+        "question": "Quel économiste britannique a théorisé les 'avantages comparatifs', démontrant l'intérêt du libre-échange même quand un pays est moins efficace que son partenaire dans tous les secteurs ?",
+        "options": [
+          "Adam Smith",
+          "David Ricardo",
+          "John Stuart Mill",
+          "Alfred Marshall"
+        ],
+        "answer": "David Ricardo"
+      },
+      {
+        "question": "En économie, que se passe-t-il sur le prix d'un bien quand la demande augmente mais que l'offre reste stable ?",
+        "options": [
+          "Le prix baisse car les vendeurs veulent écouler leurs stocks",
+          "Le prix reste stable grâce à la régulation du marché",
+          "Le prix augmente car la rareté relative s'accroît",
+          "Le prix oscille sans tendance claire"
+        ],
+        "answer": "Le prix augmente car la rareté relative s'accroît"
+      },
+      {
+        "question": "Quel concept économique désigne la valeur à laquelle on renonce en faisant un choix — par exemple, le salaire qu'on abandonne pour créer sa startup ?",
+        "options": [
+          "Le coût variable",
+          "Le coût d'opportunité",
+          "Le coût marginal",
+          "Le coût irrécupérable"
+        ],
+        "answer": "Le coût d'opportunité"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Le Crash de 1929 : La Grande Démo du Bug Capitaliste",
-    "brief": "24 octobre 1929. 'Black Thursday'. La Bourse de New York s'effondre. Le krach est total : en quelques semaines, des fortunes entières s'évaporent, des banques ferment, des entreprises font faillite. C'est le début de la Grande Dépression, la pire crise économique du XXe siècle. Au pic, 25% des Américains sont au chômage. Les raisons ? Spéculation excessive dans les années 20 (les 'Roaring Twenties'), crédit facile, bulle boursière, agriculture déjà en crise, surproduction. Les gouvernements européens imitent les erreurs américaines. En réponse, Franklin D. Roosevelt lance en 1933 le 'New Deal' — un programme massif d'intervention de l'État : travaux publics, allocations chômage, régulation bancaire. C'est la naissance de l'État-providence moderne. Une leçon brutale sur ce qui se passe quand le marché déraille sans garde-fous.",
-    "visualDescription": "Wall Street en octobre 1929 en mode catastrophe néon. Des graphiques boursiers en chute libre rouge plasma. Des buildings de New York en ombre sombre avec des traders en silhouettes paniquées. Un ticker de cours de bourse en rouge sang. Roosevelt en hologramme doré avec le New Deal. Ambiance game over économique.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f",
+    "title": "Le Capitalisme Industriel & Marx — Le bug du système",
+    "brief": "XIXe siècle : la Révolution industrielle transforme l'Europe à une vitesse folle. Des usines sortent de terre, des villes explosent, des masses d'ouvriers travaillent 14 heures par jour dans des conditions dangereuses pour des salaires de misère. Et un journaliste-philosophe allemand exilé à Londres observe tout ça avec une lucidité glaçante : Karl Marx.\n\nMarx ne se contente pas de critiquer — il construit un système explicatif complet. Son concept clé : la plus-value. L'ouvrier produit une valeur supérieure à son salaire ; la différence est captée par le capitaliste. C'est l'exploitation, et elle est structurelle, pas accidentelle. Avec Engels, il co-rédige le 'Manifeste du Parti Communiste' en 1848 — l'un des textes les plus influents de l'histoire. Son 'Capital', publié en 1867, est une analyse chirurgicale du mode de production capitaliste.\n\nMarx avait tort sur certaines prédictions — notamment la révolution prolétarienne en Occident industrialisé. Mais son diagnostic sur la concentration des richesses, les cycles de crise du capitalisme, l'aliénation au travail ? Relire Marx en 2024, c'est souvent déstabilisant tant certaines analyses résonnent encore.",
+    "visualDescription": "Usine victorienne reconvertie en data center dystopique. Des tuyaux de vapeur et des câbles à fibre optique s'entremêlent. Des ouvriers en silhouettes noires face à des machines géantes illuminées en rouge. Un écran géant affiche des courbes de plus-value en orange néon. Marx et Engels en ombres sombres tenant un manifeste dont les pages s'enflamment. Ambiance sépia + néon acide.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
     "quiz": [
       {
-        "question": "Comment appelle-t-on le jeudi du krach boursier de Wall Street en octobre 1929 ?",
-        "options": ["Black Monday", "Black Friday", "Black Thursday", "Black Wednesday"],
-        "answer": "Black Thursday"
+        "question": "Quel concept économique marxiste désigne la valeur créée par le travail de l'ouvrier mais non rémunérée, captée par le capitaliste comme profit ?",
+        "options": [
+          "Le capital fixe",
+          "La plus-value",
+          "La rente différentielle",
+          "Le salaire de subsistance"
+        ],
+        "answer": "La plus-value"
       },
       {
-        "question": "Quel était approximativement le taux de chômage aux États-Unis au pic de la Grande Dépression ?",
-        "options": ["10 %", "15 %", "25 %", "40 %"],
-        "answer": "25 %"
+        "question": "Avec qui Karl Marx a-t-il co-écrit le 'Manifeste du Parti Communiste' publié en 1848 ?",
+        "options": [
+          "Lénine",
+          "Friedrich Engels",
+          "Proudhon",
+          "Bakounine"
+        ],
+        "answer": "Friedrich Engels"
       },
       {
-        "question": "Quel président américain a lancé le New Deal pour répondre à la Grande Dépression ?",
-        "options": ["Herbert Hoover", "Woodrow Wilson", "Harry Truman", "Franklin D. Roosevelt"],
-        "answer": "Franklin D. Roosevelt"
+        "question": "Comment Marx nomme-t-il le sentiment de dépossession du travailleur qui n'a aucun contrôle sur le produit de son travail dans la société industrielle ?",
+        "options": [
+          "L'exploitation directe",
+          "L'aliénation",
+          "La paupérisation",
+          "La lutte des classes"
+        ],
+        "answer": "L'aliénation"
       },
       {
-        "question": "En quelle année Roosevelt lance-t-il le New Deal ?",
-        "options": ["1929", "1931", "1933", "1936"],
-        "answer": "1933"
+        "question": "Quelle invention, symbolisant la Révolution industrielle britannique du XVIIIe siècle, a transformé la production en permettant la mécanisation à grande échelle ?",
+        "options": [
+          "L'électricité d'Edison",
+          "La machine à vapeur de James Watt",
+          "Le moteur à explosion de Benz",
+          "Le métier à tisser de Jacquard"
+        ],
+        "answer": "La machine à vapeur de James Watt"
       },
       {
-        "question": "Quel mécanisme spéculatif des années 1920 a contribué à gonfler la bulle boursière avant le krach de 1929 ?",
-        "options": ["Les nationalisations massives", "L'achat d'actions à crédit (sur marge)", "La dévaluation du dollar", "Le protectionnisme agricole"],
-        "answer": "L'achat d'actions à crédit (sur marge)"
+        "question": "Quel terme marxiste désigne la classe sociale qui possède les moyens de production (usines, capital, terres) et emploie le prolétariat ?",
+        "options": [
+          "L'aristocratie terrienne",
+          "La bourgeoisie",
+          "La technocratie",
+          "La ploutocratie"
+        ],
+        "answer": "La bourgeoisie"
       }
     ]
   },
   {
     "id": 3,
-    "title": "Les Théories Économiques Modernes : Keynes vs Friedman",
-    "brief": "Le 20e siècle est l'arène d'un combat de titans entre deux visions de l'économie. Dans le coin gauche : John Maynard Keynes, économiste britannique. Sa théorie post-Dépression : quand l'économie est en crise et les marchés ne se régulent plus, l'État doit dépenser massivement pour relancer la demande. Déficit budgétaire assumé, travaux publics, allocations — c'est le keynésianisme, base de l'État-providence. Dans le coin droit : Milton Friedman, américain, chef de file de l'École de Chicago. Sa théorie : l'État intervient trop, ça crée de l'inflation et de l'inefficacité. Solution ? Libéralisme maximum, privatisations, contrôle de la masse monétaire. C'est le monétarisme. Ces deux écoles ont littéralement façonné les politiques de tous les gouvernements depuis 80 ans. Thatcher et Reagan étaient friedmaniens. L'Europe post-2008 a re-découvert Keynes. Le débat continue en 2024.",
-    "visualDescription": "Un ring de boxe économique en néon. À gauche, Keynes en bleu avec des graphiques de dépenses publiques ascendantes. À droite, Friedman en rouge avec des courbes de libéralisation. Au centre, le PIB mondial en oscillation entre les deux. Des formules économiques en hologrammes verts. Ambiance clash idéologique économique en direct.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+    "title": "Les Grandes Crises — Quand le système plante",
+    "brief": "Le capitalisme a une caractéristique que ses défenseurs n'aiment pas trop rappeler : il crée des crises cycliques. Pas des petites corrections — des collisions frontales qui détruisent des millions de vies. La crise de 1929, c'est le crash fondateur. Après une décennie de spéculation folle dans les années 20, la bourse de New York s'effondre en octobre 1929. 25% de chômage aux États-Unis au pic. La Grande Dépression dure des années. Roosevelt répond avec le New Deal — intervention massive de l'État, travaux publics, régulation bancaire. Keynes théorise ce que Roosevelt fait empiriquement.\n\nLa crise de 2008 est la grande récidive. Des banques américaines ont vendu des milliers de milliards de dollars de crédits immobiliers à des gens qui ne pouvaient pas les rembourser — les fameux 'subprimes' — puis les ont packagés en produits financiers complexes vendus à des institutions du monde entier. Quand les défauts de paiement explosent, tout le château de cartes s'effondre. Lehman Brothers disparaît le 15 septembre 2008. La crise mondiale qui suit coûte des milliers de milliards en plans de sauvetage.\n\nCes crises ont en commun : la spéculation excessive, le manque de régulation, et l'effet domino de la finance mondialisée. Et à chaque fois, ce sont les contribuables qui paient l'addition.",
+    "visualDescription": "Salle de trading en état de catastrophe — écrans rouges partout, graphiques en chute libre, traders en silhouettes qui courent dans tous les sens. Des billets de banque brûlent en néon orange. Le logo Lehman Brothers en pixels qui se désintègrent. En arrière-plan, des files de chômeurs en noir et blanc d'époque (1929) contrastent avec les écrans plasma ultra-modernes de 2008. Ambiance apocalypse financière.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=80",
     "quiz": [
       {
-        "question": "Quelle est la thèse centrale du keynésianisme en période de crise économique ?",
-        "options": ["Réduire les dépenses publiques pour équilibrer le budget", "Augmenter les impôts pour financer la dette", "L'État doit dépenser massivement pour relancer la demande", "Laisser le marché se réguler seul sans intervention"],
-        "answer": "L'État doit dépenser massivement pour relancer la demande"
+        "question": "Comment appelle-t-on le jeudi du krach boursier de Wall Street en octobre 1929 qui marque le début de la Grande Dépression ?",
+        "options": [
+          "Black Monday",
+          "Black Friday",
+          "Black Thursday",
+          "Black Wednesday"
+        ],
+        "answer": "Black Thursday"
       },
       {
-        "question": "De quelle école économique Milton Friedman était-il le chef de file ?",
-        "options": ["L'École de Harvard", "L'École Keynésienne", "L'École de Cambridge", "L'École de Chicago"],
-        "answer": "L'École de Chicago"
+        "question": "Quel président américain a lancé le New Deal à partir de 1933 pour répondre à la Grande Dépression ?",
+        "options": [
+          "Herbert Hoover",
+          "Woodrow Wilson",
+          "Harry Truman",
+          "Franklin D. Roosevelt"
+        ],
+        "answer": "Franklin D. Roosevelt"
       },
       {
-        "question": "Quelle politique économique, inspirée de Friedman, Margaret Thatcher et Ronald Reagan ont-ils appliquée dans les années 1980 ?",
-        "options": ["Le keynésianisme de relance", "Le libéralisme économique et les privatisations", "L'économie planifiée", "Le protectionnisme industriel"],
-        "answer": "Le libéralisme économique et les privatisations"
+        "question": "Que désigne le terme 'subprimes' au cœur de la crise financière de 2008 ?",
+        "options": [
+          "Des obligations d'État à très haut rendement",
+          "Des prêts immobiliers accordés à des emprunteurs à risque élevé de défaut",
+          "Des produits dérivés sur matières premières agricoles",
+          "Des actions de banques notées en dessous de leur valeur réelle"
+        ],
+        "answer": "Des prêts immobiliers accordés à des emprunteurs à risque élevé de défaut"
       },
       {
-        "question": "Quel concept de Keynes désigne l'idée que les dépenses de l'État génèrent un effet d'entraînement supérieur à la mise initiale ?",
-        "options": ["L'effet de levier", "Le multiplicateur keynésien", "L'accélérateur économique", "La demande globale"],
-        "answer": "Le multiplicateur keynésien"
+        "question": "Quelle grande banque d'investissement américaine a fait faillite le 15 septembre 2008, déclenchant la phase la plus aiguë de la crise financière mondiale ?",
+        "options": [
+          "Bear Stearns",
+          "Merrill Lynch",
+          "Citigroup",
+          "Lehman Brothers"
+        ],
+        "answer": "Lehman Brothers"
       },
       {
-        "question": "Sur quel élément Milton Friedman préconisait-il que les banques centrales devaient concentrer leur action pour stabiliser l'économie ?",
-        "options": ["Le taux de chômage", "Le niveau des dépenses publiques", "La masse monétaire", "Le cours des changes"],
-        "answer": "La masse monétaire"
+        "question": "Qu'est-ce qu'une bulle spéculative en économie ?",
+        "options": [
+          "Une hausse durable et justifiée par les fondamentaux d'un marché",
+          "Une augmentation rapide et excessive des prix d'actifs déconnectée de leur valeur réelle, suivie d'un krach",
+          "Une période de forte croissance économique soutenue par l'innovation",
+          "Un mécanisme de protection des marchés contre les fluctuations excessives"
+        ],
+        "answer": "Une augmentation rapide et excessive des prix d'actifs déconnectée de leur valeur réelle, suivie d'un krach"
       }
     ]
   },
   {
     "id": 4,
-    "title": "La Mondialisation & le Commerce : Le Monde Devient un Seul Marché",
-    "brief": "Après la Seconde Guerre mondiale, les nations décident de ne plus jouer solo. En 1947, naissance du GATT (devenu OMC en 1995) pour fluidifier le commerce international. L'idée du libre-échange : supprimer les barrières douanières, laisser chaque pays se spécialiser dans ce qu'il fait le mieux — la théorie des avantages comparatifs de Ricardo. Résultat : des chaînes d'approvisionnement mondiales ultra-complexes. Un iPhone est conçu en Californie, ses composants viennent d'une dizaine de pays, assemblé à Shenzhen, vendu partout. Les multinationales comme Toyota, Nestlé, Samsung jouent sur plusieurs continents, arbitrent les fiscalités, emploient des millions de personnes. La mondialisation a sorti des centaines de millions de personnes de la pauvreté — notamment en Chine et en Asie du Sud-Est. Mais elle a aussi créé des inégalités et désindustrialisé des régions entières en Occident. Le patch qui a changé les règles du jeu global.",
-    "visualDescription": "Un globe terrestre en hologramme avec des flux de commerce lumineux en cyan reliant les continents. Un porte-containers géant en néon bleu traversant un océan pixélisé. Des logos de multinationales flottant comme des satellites autour de la Terre. L'OMC en building de verre futuriste à Genève. Des chaînes d'approvisionnement comme des circuits électroniques entourant la planète.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1578575437130-527eed3abbec",
+    "title": "Les Entreprises qui ont Changé le Monde — Les boss finaux du capitalisme",
+    "brief": "Ford, Apple, Amazon, Google — quatre noms, quatre révolutions. Henry Ford ne s'est pas contenté de fabriquer des voitures : il a inventé la production en série et la chaîne d'assemblage, rendant l'automobile accessible à la classe moyenne américaine. Son modèle T et son usine de Highland Park ont redéfini ce que signifie 'travailler' dans une usine industrielle. Le fordisme comme modèle de production dominera le XXe siècle entier.\n\nApple, c'est l'histoire de Steve Jobs qui revient d'une traversée du désert pour sauver une entreprise au bord de la faillite et la transformer en la plus valorisée du monde. L'iMac en 1998, l'iPod en 2001, l'iPhone en 2007 — trois produits qui ont chacun redéfini un marché entier. Amazon commence comme librairie en ligne, devient la place de marché du monde, invente le cloud computing avec AWS et les livraisons en 24h avec Prime. Google indexe tout le savoir humain et monétise l'attention humaine à une échelle sans précédent.\n\nCes entreprises ont en commun une vision disruptive totale, des fondateurs obsessionnels, et une capacité à créer des marchés qui n'existaient pas. Leur capitalisation boursière combinée dépasse le PIB de la plupart des pays. Le capitalisme a trouvé ses champions.",
+    "visualDescription": "Un panthéon de l'innovation en néon : une Model T Ford chromée flottant dans l'air, la pomme Apple en lumière blanche brillante, le sourire Amazon en jaune néon, le G de Google multicolore holographique. Des serveurs AWS en arrière-plan comme une forteresse numérique. Des graphiques de capitalisation boursière qui montent jusqu'aux étoiles dans un ciel de données.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
     "quiz": [
       {
-        "question": "En quelle année l'Organisation Mondiale du Commerce (OMC) a-t-elle officiellement remplacé le GATT ?",
-        "options": ["1947", "1989", "1995", "2001"],
-        "answer": "1995"
+        "question": "Quelle révolution organisationnelle Henry Ford a-t-il introduite à l'usine de Highland Park en 1913, rendant la production de masse possible ?",
+        "options": [
+          "La robotisation complète des usines",
+          "La chaîne d'assemblage mobile (travail à la chaîne)",
+          "La journée de travail de 8 heures sans contrepartie",
+          "Le système de franchise industrielle"
+        ],
+        "answer": "La chaîne d'assemblage mobile (travail à la chaîne)"
       },
       {
-        "question": "Quel économiste a théorisé le principe des 'avantages comparatifs', fondement théorique du libre-échange international ?",
-        "options": ["Adam Smith", "David Ricardo", "John Maynard Keynes", "Paul Samuelson"],
-        "answer": "David Ricardo"
+        "question": "En quelle année Steve Jobs présente-t-il le premier iPhone, révolutionnant l'industrie du mobile et créant le marché des smartphones modernes ?",
+        "options": [
+          "2005",
+          "2007",
+          "2009",
+          "2010"
+        ],
+        "answer": "2007"
       },
       {
-        "question": "Dans quel pays les iPhones d'Apple sont-ils principalement assemblés ?",
-        "options": ["Corée du Sud", "Japon", "Inde", "Chine"],
-        "answer": "Chine"
+        "question": "Qu'est-ce qu'Amazon Web Services (AWS), lancé en 2006, a fondamentalement apporté à l'économie numérique mondiale ?",
+        "options": [
+          "Un service de livraison express révolutionnaire",
+          "La démocratisation du cloud computing pour entreprises et startups",
+          "Le premier moteur de recherche concurrent de Google",
+          "La première plateforme de streaming vidéo en ligne"
+        ],
+        "answer": "La démocratisation du cloud computing pour entreprises et startups"
       },
       {
-        "question": "Quel terme désigne l'ensemble des étapes de production d'un bien, de la matière première au consommateur final, réparties à l'échelle mondiale ?",
-        "options": ["La division du travail", "La chaîne d'approvisionnement mondiale", "Le commerce triangulaire", "La délocalisation"],
-        "answer": "La chaîne d'approvisionnement mondiale"
+        "question": "Quel modèle économique a permis à Google de devenir l'une des entreprises les plus rentables de l'histoire, en monétisant son moteur de recherche gratuit ?",
+        "options": [
+          "L'abonnement mensuel premium pour les recherches avancées",
+          "La publicité ciblée basée sur les requêtes de recherche (AdWords)",
+          "La vente de données brutes de navigation aux entreprises",
+          "Les licences payantes du moteur de recherche aux fournisseurs d'accès"
+        ],
+        "answer": "La publicité ciblée basée sur les requêtes de recherche (AdWords)"
       },
       {
-        "question": "Quel accord commercial nord-américain, signé en 1994, a créé une zone de libre-échange entre les États-Unis, le Canada et le Mexique ?",
-        "options": ["Le TTIP", "L'ALENA (NAFTA)", "Le TPP", "Le MERCOSUR"],
-        "answer": "L'ALENA (NAFTA)"
+        "question": "Quel concept économique, popularisé par le modèle Ford, désigne un salaire suffisamment élevé pour que les ouvriers puissent eux-mêmes acheter les produits qu'ils fabriquent ?",
+        "options": [
+          "Le salaire minimum légal",
+          "Le salaire à la performance",
+          "Le salaire fordiste (Five Dollar Day)",
+          "Le revenu universel de base"
+        ],
+        "answer": "Le salaire fordiste (Five Dollar Day)"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Les Entreprises qui ont Changé le Monde : Tech Titans & Disruption",
-    "brief": "Apple, Amazon, Google, Tesla — ces quatre noms résument à eux seuls une des plus grandes révolutions économiques de l'histoire. Steve Jobs sort l'iPhone en 2007 et réinvente ce qu'est un téléphone, une caméra, un GPS, un lecteur MP3 et une banque. Amazon commence comme librairie en ligne en 1994, devient la place de marché du monde, puis invente le cloud computing avec AWS — maintenant le moteur invisible d'internet. Google indexe tout le savoir humain, monétise l'attention avec AdWords, et devient la première porte d'entrée du web. Tesla prouve que la voiture électrique peut être sexy et performante, et Elon Musk redevient le milliardaire le plus riche du monde. Ces entreprises ont en commun : partir d'un garage ou d'un dortoir, des fondateurs obsessionnels, une vision de disruption totale du statu quo. Et aujourd'hui, leur capitalisation boursière dépasse le PIB de la plupart des pays. Le final boss du capitalisme.",
-    "visualDescription": "Un panthéon tech en néon : le logo Apple en pomme lumineuse blanche, le sourire Amazon en jaune néon, le G de Google multicolore holographique, le T de Tesla en rouge plasma. Des serveurs AWS en arrière-plan comme une forteresse numérique. Steve Jobs en silhouette tenant un iPhone brillant. Des graphiques de capitalisation boursière montant jusqu'aux étoiles.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+    "title": "La Finance Moderne — Le dernier niveau du jeu",
+    "brief": "La bourse, la crypto, la mondialisation, les inégalités — bienvenue dans le niveau final, celui où tout se connecte et où les enjeux sont planétaires. Les marchés financiers modernes sont d'une complexité vertigineuse : actions, obligations, produits dérivés, ETF, hedge funds — une architecture de plus en plus abstraite où des algorithmes exécutent des millions de transactions par seconde. Le trading haute fréquence, c'est des robots qui achètent et revendent des titres en microsecondes pour grappiller des fractions de centimes de profit, des millions de fois par jour.\n\nLe Bitcoin arrive en 2009, dans le sillage de la crise de 2008, comme une réponse cryptographique à la finance traditionnelle. Satoshi Nakamoto — identité toujours inconnue — publie le white paper fondateur : une monnaie décentralisée, sans banque centrale, basée sur la blockchain. Aujourd'hui, le marché crypto pèse des milliers de milliards, attire des institutionnels, et divise les économistes entre 'révolution monétaire' et 'bulle spéculative monumentale'.\n\nPendant ce temps, les inégalités mondiales atteignent des niveaux records. L'économiste français Thomas Piketty a démontré dans 'Le Capital au XXIe siècle' (2013) que quand le retour sur le capital (r) dépasse la croissance (g), les inégalités s'accumulent mécaniquement. Le débat sur la redistribution, la fiscalité des ultra-riches et l'avenir du capitalisme est plus intense que jamais.",
+    "visualDescription": "Salle de trading du futur entièrement numérique : des murs d'écrans affichent des flux de données boursières en vert et rouge, des courbes de cryptomonnaies en hologramme doré flottent dans l'air, un Bitcoin géant tourne lentement au centre. Des algorithmes de trading haute fréquence visualisés comme des éclairs bleus. En arrière-plan, une courbe des inégalités mondiales en néon rouge qui monte implacablement.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
     "quiz": [
       {
-        "question": "En quelle année Steve Jobs présente-t-il le premier iPhone, révolutionnant l'industrie du mobile ?",
-        "options": ["2005", "2007", "2009", "2010"],
-        "answer": "2007"
+        "question": "En quelle année le Bitcoin a-t-il été créé et qui est l'auteur (sous pseudonyme) du white paper fondateur de cette cryptomonnaie ?",
+        "options": [
+          "2007, par un collectif de hackers anonymes",
+          "2009, par Satoshi Nakamoto (pseudonyme)",
+          "2011, par Vitalik Buterin",
+          "2013, par un groupe de chercheurs du MIT"
+        ],
+        "answer": "2009, par Satoshi Nakamoto (pseudonyme)"
       },
       {
-        "question": "Qu'est-ce qu'Amazon a lancé en 2006 pour révolutionner l'infrastructure d'internet ?",
-        "options": ["Amazon Prime Video", "Amazon Alexa", "Amazon Web Services (AWS)", "Amazon Marketplace"],
-        "answer": "Amazon Web Services (AWS)"
+        "question": "Quel économiste français a publié 'Le Capital au XXIe siècle' (2013), démontrant que les inégalités s'accumulent quand le rendement du capital dépasse la croissance économique ?",
+        "options": [
+          "Jacques Attali",
+          "Daniel Cohen",
+          "Thomas Piketty",
+          "Frédéric Lordon"
+        ],
+        "answer": "Thomas Piketty"
       },
       {
-        "question": "En quelle année Jeff Bezos fonde-t-il Amazon, initialement comme librairie en ligne ?",
-        "options": ["1990", "1994", "1998", "2000"],
-        "answer": "1994"
+        "question": "Qu'est-ce que la blockchain, technologie sous-jacente du Bitcoin et de la plupart des cryptomonnaies ?",
+        "options": [
+          "Un serveur centralisé ultra-sécurisé géré par des banques",
+          "Un registre de transactions décentralisé, immuable et partagé entre tous les participants du réseau",
+          "Un algorithme de chiffrement propriétaire développé par la NSA",
+          "Un protocole d'échange interbancaire sécurisé de la BRI"
+        ],
+        "answer": "Un registre de transactions décentralisé, immuable et partagé entre tous les participants du réseau"
       },
       {
-        "question": "Quel modèle économique Google a-t-il révolutionné pour devenir l'une des entreprises les plus rentables au monde ?",
-        "options": ["L'abonnement mensuel payant", "La publicité ciblée en ligne (AdWords)", "La vente de matériel informatique", "Les licences de moteur de recherche"],
-        "answer": "La publicité ciblée en ligne (AdWords)"
+        "question": "Qu'est-ce qu'un ETF (Exchange-Traded Fund) dans le monde de la finance moderne ?",
+        "options": [
+          "Un fonds d'investissement non coté géré activement par des gérants stars",
+          "Un fonds indiciel coté en bourse qui réplique la performance d'un indice ou d'un panier d'actifs",
+          "Un produit dérivé permettant de parier sur la baisse d'un marché",
+          "Une obligation émise par les États pour financer leur dette publique"
+        ],
+        "answer": "Un fonds indiciel coté en bourse qui réplique la performance d'un indice ou d'un panier d'actifs"
       },
       {
-        "question": "Quel était le modèle du premier véhicule Tesla commercialisé en grande série, sorti en 2012, qui a imposé la voiture électrique comme alternative crédible ?",
-        "options": ["Tesla Roadster", "Tesla Model S", "Tesla Model 3", "Tesla Model X"],
-        "answer": "Tesla Model S"
+        "question": "Quel indice boursier américain regroupe les 500 plus grandes entreprises cotées aux États-Unis et est considéré comme le baromètre de référence de l'économie mondiale ?",
+        "options": [
+          "Le Dow Jones Industrial Average",
+          "Le Nasdaq Composite",
+          "Le S&P 500",
+          "Le Russell 2000"
+        ],
+        "answer": "Le S&P 500"
       }
     ]
   }
