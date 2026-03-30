@@ -1,171 +1,171 @@
 [
   {
     "id": 1,
-    "title": "Les Premières Civilisations : Quand l'Humanité a Tout Inventé",
-    "brief": "Il y a environ 10 000 ans, quelques humains décident d'arrêter de courir après les mammouths et de planter des trucs dans la terre. C'est la révolution néolithique — l'upgrade qui a tout changé. Mésopotamie, Égypte, Indus, Chine : quatre civilisations surgissent indépendamment les unes des autres, inventant les mêmes choses sans se concerter. Les Sumériens inventent l'écriture cunéiforme vers -3500 pour tenir des comptes (le premier texte écrit de l'humanité parle de bière et de rations). Les Égyptiens construisent les pyramides vers -2560 avec une précision que nos ingénieurs d'aujourd'hui admettent. La civilisation de l'Indus a des égouts et de l'urbanisme planifié avant même que Rome n'existe. Ces civilisations posent les bases de tout : l'agriculture, la roue, la métallurgie, le calendrier, les mathématiques, le droit. Le first drop de l'histoire humaine.",
-    "visualDescription": "Un panorama en néon de quatre civilisations anciennes en simultané : pyramides égyptiennes holographiques en or, ziggurats sumériennes en cyan, villes de l'Indus en violet, cité chinoise en jade lumineux. Fond noir cosmique avec des lignes de connexion entre les civilisations.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1568322445389-f64ac2515020",
+    "title": "Les Premières Civilisations : Les Fondateurs du Jeu",
+    "brief": "Il y a environ 10 000 ans, quelque chose de radical se passe : l'humanité arrête de bouger et commence à s'installer. C'est la révolution néolithique — agriculture, élevage, sédentarisation. Et de cette sédentarisation naissent les premières grandes civilisations. En Mésopotamie (l'actuel Irak), entre le Tigre et l'Euphrate, les Sumériens inventent l'écriture cunéiforme vers 3300 av. J.-C. — le premier système d'écriture de l'humanité. En Égypte, sur les rives du Nil, les pharaons bâtissent les pyramides et développent les hiéroglyphes. Dans la vallée de l'Indus (Pakistan et nord-ouest de l'Inde), des cités planifiées comme Mohenjo-Daro ont des systèmes d'égouts sophistiqués. En Chine, sur les bords du fleuve Jaune, la civilisation Shang invente l'écriture chinoise. Quatre foyers de civilisation, quatre inventions majeures, un seul constat : l'humanité, quand elle pose ses bagages, invente tout.",
+    "visualDescription": "Une carte du monde antique en néon avec quatre foyers de civilisation qui brillent comme des étoiles : Mésopotamie en or, Égypte en turquoise, Indus en vert, Chine en rouge. Des tablettes cunéiformes et des hiéroglyphes qui flottent comme des hologrammes. Des pyramides cyberpunk qui se dressent sous un ciel étoilé de données. Ambiance aube de l'humanité futuriste.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1539650116574-8efeb43e2750",
     "quiz": [
       {
-        "question": "Quelle révolution a permis la naissance des premières civilisations en remplaçant le nomadisme ?",
-        "options": ["La révolution industrielle", "La révolution néolithique (agriculture)", "La révolution du feu", "La révolution métallurgique"],
-        "answer": "La révolution néolithique (agriculture)"
+        "question": "Quel peuple de Mésopotamie est généralement crédité de l'invention de l'écriture cunéiforme vers 3300 av. J.-C. ?",
+        "options": ["Les Babyloniens", "Les Assyriens", "Les Sumériens", "Les Akkadiens"],
+        "answer": "Les Sumériens"
       },
       {
-        "question": "Quelle civilisation a inventé l'écriture cunéiforme vers 3500 av. J.-C. ?",
-        "options": ["Les Égyptiens", "Les Chinois", "Les Sumériens (Mésopotamie)", "Les Indiens de l'Indus"],
-        "answer": "Les Sumériens (Mésopotamie)"
+        "question": "Dans quelle région géographique la civilisation de la vallée de l'Indus, avec ses cités planifiées comme Mohenjo-Daro, s'est-elle développée ?",
+        "options": ["L'actuelle Égypte et Soudan", "L'actuel Pakistan et nord-ouest de l'Inde", "L'actuelle Chine centrale", "L'actuelle Mésopotamie (Irak)"],
+        "answer": "L'actuel Pakistan et nord-ouest de l'Inde"
       },
       {
-        "question": "Quel était le sujet du premier texte écrit connu de l'humanité ?",
-        "options": ["La guerre et les batailles", "Des poèmes religieux", "Des rations alimentaires et de la bière", "Les lois du roi"],
-        "answer": "Des rations alimentaires et de la bière"
+        "question": "Quelle grande innovation agricole, apparue vers 10 000 av. J.-C., a permis la naissance des premières civilisations sédentaires ?",
+        "options": ["La métallurgie du fer", "La révolution néolithique (agriculture et élevage)", "L'invention de la roue", "La domestication du cheval"],
+        "answer": "La révolution néolithique (agriculture et élevage)"
       },
       {
-        "question": "Quelle grande pyramide égyptienne a été construite vers 2560 av. J.-C. ?",
-        "options": ["La pyramide de Khéphren", "La Grande Pyramide de Gizeh (Khéops)", "La pyramide de Mykérinos", "La pyramide de Saqqarah"],
-        "answer": "La Grande Pyramide de Gizeh (Khéops)"
+        "question": "Quel fleuve a joué un rôle central dans le développement de la civilisation égyptienne antique, assurant irrigation et fertilité des terres ?",
+        "options": ["Le Tigre", "L'Euphrate", "Le Jourdain", "Le Nil"],
+        "answer": "Le Nil"
       },
       {
-        "question": "Quelle civilisation antique était connue pour ses villes planifiées avec des systèmes d'égouts avancés ?",
-        "options": ["La Mésopotamie", "L'Égypte ancienne", "La civilisation de l'Indus (Harappa)", "La Chine des Shang"],
-        "answer": "La civilisation de l'Indus (Harappa)"
+        "question": "Sur les rives de quel fleuve la première civilisation chinoise, la culture Shang, s'est-elle principalement développée ?",
+        "options": ["Le Yangtsé", "Le fleuve Jaune (Huang He)", "Le Mékong", "Le fleuve Bleu"],
+        "answer": "Le fleuve Jaune (Huang He)"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Les Empires Antiques : Alexandre, Rome & la Chine Han",
-    "brief": "Un empire, c'est une civilisation qui décide que ses voisins appartiennent aussi à elle. Cyrus le Grand, roi des Perses, crée le premier empire multi-ethnique vers -550 : il respecte les religions locales, laisse les peuples conquis s'administrer. Alexandre le Grand, à 20 ans, hérite du trône de Macédoine et décide de conquérir le monde connu. En 10 ans il contrôle de la Grèce à l'Inde. Il meurt à 32 ans. L'Empire Romain dure 500 ans à l'Ouest et 1500 ans à l'Est (Byzance). Il invente les routes, le droit, le béton, les aqueducs. En Chine, la dynastie Han contemporaine de Rome gère 60 millions de personnes avec une bureaucratie méritocratique. Ces empires sont des laboratoires d'organisation humaine à grande échelle.",
-    "visualDescription": "Une carte du monde antique en néon, avec des flèches de conquête en cyan pour Alexandre, en rouge pour Rome, en violet pour la Perse, en jade pour la Chine Han. Des légionnaires romains en hologrammes dorés. Des routes qui s'illuminent en réseau.",
+    "title": "Les Empires Antiques : Quand des Hommes ont Voulu Tout Runner",
+    "brief": "L'Antiquité, c'est l'ère des speed-runners géopolitiques — des hommes qui ont voulu conquérir le monde connu le plus vite possible. L'Empire achéménide perse, fondé par Cyrus le Grand au VIe siècle av. J.-C., devient le premier grand empire mondial avec près de 50 millions de sujets — du Pakistan actuel à la Turquie. Alexandre le Grand, roi de Macédoine, bat les Perses et étend son empire de la Grèce jusqu'à l'Inde entre 336 et 323 av. J.-C. Rome, elle, joue long game : la République romaine devient Empire sous Auguste en 27 av. J.-C. et domine le monde méditerranéen pendant des siècles — droit, aqueducs, routes, légions. En Chine, la dynastie Han (206 av. J.-C. - 220 ap. J.-C.) gouverne un empire aussi vaste que Rome, invente le papier et la sériciculture. Deux empires, deux extrémités du monde, connectés par la Route de la Soie.",
+    "visualDescription": "Une carte du monde antique en néon avec les empires Perse, Macédonien, Romain et Han délimités en couleurs vives et brillantes. Alexandre le Grand en silhouette holographique sur son cheval Bucéphale. Des légionnaires romains en armure cyberpunk. La Route de la Soie comme un fil lumineux reliant Rome à Chang'an. Ambiance conquête épique futuriste.",
     "imagePlaceholder": "https://images.unsplash.com/photo-1552832230-c0197dd311b5",
     "quiz": [
       {
-        "question": "Quel roi perse a créé le premier grand empire multi-ethnique vers 550 av. J.-C. ?",
-        "options": ["Darius Ier", "Xerxès", "Cyrus le Grand", "Artaxerxès"],
+        "question": "Quel roi perse a fondé l'Empire achéménide au VIe siècle av. J.-C., créant le premier grand empire de l'histoire mondiale ?",
+        "options": ["Darius Ier", "Xerxès", "Cyrus le Grand", "Cambyse"],
         "answer": "Cyrus le Grand"
       },
       {
-        "question": "À quel âge Alexandre le Grand est-il mort après avoir conquis un empire de la Grèce à l'Inde ?",
-        "options": ["28 ans", "32 ans", "45 ans", "37 ans"],
-        "answer": "32 ans"
+        "question": "Jusqu'à quelle frontière géographique les conquêtes d'Alexandre le Grand ont-elles atteint leur point le plus oriental ?",
+        "options": ["La Perse (actuel Iran)", "La Mésopotamie (actuel Irak)", "L'Inde (actuel Pakistan/nord de l'Inde)", "L'Égypte"],
+        "answer": "L'Inde (actuel Pakistan/nord de l'Inde)"
       },
       {
-        "question": "Quelle grande infrastructure romaine symbolise leur capacité à unifier et administrer leur empire ?",
-        "options": ["Les amphithéâtres", "Les thermes", "Le réseau de routes (Via Romana)", "Les temples"],
-        "answer": "Le réseau de routes (Via Romana)"
+        "question": "Quelle année marque officiellement le début de l'Empire romain, avec Auguste comme premier empereur ?",
+        "options": ["509 av. J.-C.", "264 av. J.-C.", "27 av. J.-C.", "14 ap. J.-C."],
+        "answer": "27 av. J.-C."
       },
       {
-        "question": "Quelle dynastie chinoise, contemporaine de Rome, gérait une bureaucratie méritocratique ?",
-        "options": ["La dynastie Qin", "La dynastie Tang", "La dynastie Han", "La dynastie Ming"],
-        "answer": "La dynastie Han"
+        "question": "Quelle invention majeure est attribuée à la Chine sous la dynastie Han, révolutionnant la transmission du savoir ?",
+        "options": ["L'imprimerie à caractères mobiles", "L'invention du papier", "La poudre à canon", "La boussole magnétique"],
+        "answer": "L'invention du papier"
       },
       {
-        "question": "Combien de temps l'Empire Romain d'Orient (Byzance) a-t-il survécu après la chute de Rome en 476 ?",
-        "options": ["Environ 100 ans de plus", "Environ 500 ans de plus", "Environ 1000 ans de plus (jusqu'en 1453)", "Environ 200 ans de plus"],
-        "answer": "Environ 1000 ans de plus (jusqu'en 1453)"
+        "question": "Comment s'appelait la route commerciale reliant l'Empire romain à la Chine Han, permettant l'échange de soie, d'épices et d'idées ?",
+        "options": ["La Route des Épices", "La Route de la Soie", "La Route de l'Ambre", "La Route des Indes"],
+        "answer": "La Route de la Soie"
       }
     ]
   },
   {
     "id": 3,
-    "title": "Le Moyen Âge Mondial : Islam, Mongols & Empires Oubliés",
-    "brief": "Le Moyen Âge occidental — chevaliers, châteaux, peste noire — c'est qu'une fraction du tableau. L'empire islamique des Abbassides crée Bagdad, capitale intellectuelle du monde : mathématiques, astronomie, médecine, philosophie. Quand l'Europe oublie les textes grecs, Bagdad les traduit et les conserve. Gengis Khan crée le plus grand empire terrestre de l'histoire — de la Chine à la Pologne — en 25 ans. 40 millions de morts. L'empire Mali, au 14ème siècle, est dirigé par Mansa Musa — l'homme le plus riche de l'histoire. Il part en pèlerinage avec 60 000 personnes et distribue tellement d'or qu'il provoque une inflation en Méditerranée. L'histoire mondiale, ce n'est pas que l'Europe.",
-    "visualDescription": "Un planisphère médiéval néon montrant l'empire islamique en or, l'empire mongol en violet étendu, l'empire Mali en jaune soleil. Gengis Khan en silhouette sur cheval flamboyant. La Grande Mosquée de Bagdad holographique.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1590736969596-cf3cba58b4f8",
+    "title": "Le Moyen Âge Mondial : Un World Server avec Plusieurs Empires",
+    "brief": "Le Moyen Âge, c'est pas juste les châteaux et les chevaliers en Europe — c'est un monde entier en pleine ébullition. L'Empire byzantin, héritier de Rome à Constantinople, survit 1000 ans après la chute de Rome occidentale et préserve la culture grecque et romaine. L'Islam médiéval, c'est l'âge d'or scientifique : entre le VIIIe et le XIIIe siècle, les savants arabes et persans traduisent, compilent et inventent en mathématiques, astronomie, médecine et philosophie — Avicenne, Al-Khawarizmi (père de l'algèbre), Al-Biruni. L'Empire mongol de Gengis Khan (XIIIe siècle) devient le plus grand empire terrestre contigu de l'histoire — 24 millions de km². En Afrique, les empires du Mali et du Ghana contrôlent les routes de l'or et du sel. Pendant que l'Europe médiévale est en guerre, le monde swappe ses ressources, ses idées et ses épidémies.",
+    "visualDescription": "Un planisphère médiéval en hologramme néon avec l'Empire byzantin en or, le monde islamique en vert émeraude, l'Empire mongol en rouge sang et les empires africains en or cuivré. Gengis Khan en silhouette cyberpunk à cheval. La bibliothèque de Bagdad en mode serveur de données lumineux. Des caravanes de chameaux holographiques sur fond de désert numérique. Ambiance Moyen Âge global futuriste.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1579762715459-67e7f48a1e63",
     "quiz": [
       {
-        "question": "Quelle ville est devenue le centre intellectuel mondial sous les Abbassides au Moyen Âge ?",
-        "options": ["Le Caire", "Cordoue", "Bagdad", "Damas"],
-        "answer": "Bagdad"
+        "question": "Quelle ville était la capitale de l'Empire byzantin, héritier de l'Empire romain d'Orient ?",
+        "options": ["Rome", "Athènes", "Constantinople (Istanbul)", "Alexandrie"],
+        "answer": "Constantinople (Istanbul)"
       },
       {
-        "question": "Quel conquérant a créé le plus grand empire terrestre continu de l'histoire ?",
-        "options": ["Tamerlan", "Gengis Khan", "Attila", "Napoléon"],
-        "answer": "Gengis Khan"
+        "question": "Quel mathématicien de l'âge d'or islamique est considéré comme le père de l'algèbre ?",
+        "options": ["Avicenne (Ibn Sina)", "Al-Biruni", "Al-Khawarizmi", "Al-Farabi"],
+        "answer": "Al-Khawarizmi"
       },
       {
-        "question": "Qui était Mansa Musa, considéré comme l'un des hommes les plus riches de l'histoire ?",
-        "options": ["Un pharaon égyptien", "L'empereur de Chine", "Le sultan de l'empire Ottoman", "L'empereur de l'empire Mali"],
-        "answer": "L'empereur de l'empire Mali"
+        "question": "L'Empire mongol fondé par Gengis Khan est-il considéré comme quoi dans l'histoire ?",
+        "options": ["Le premier empire maritime de l'histoire", "Le plus grand empire terrestre contigu jamais constitué", "Le premier empire à utiliser la poudre à canon", "Le seul empire à avoir conquis la Chine et l'Europe simultanément"],
+        "answer": "Le plus grand empire terrestre contigu jamais constitué"
       },
       {
-        "question": "Quel était le rôle principal de l'empire islamique médiéval pour la civilisation occidentale ?",
-        "options": ["Il a conquis l'Europe entière", "Il a préservé et transmis les savoirs grecs et antiques", "Il a introduit l'imprimerie en Europe", "Il a diffusé la démocratie"],
-        "answer": "Il a préservé et transmis les savoirs grecs et antiques"
+        "question": "Quelle ressource précieuse les empires africains du Mali et du Ghana contrôlaient-ils principalement au Moyen Âge, faisant leur richesse ?",
+        "options": ["Le cuivre et le fer", "L'ivoire et les esclaves", "L'or et le sel", "Les épices et le coton"],
+        "answer": "L'or et le sel"
       },
       {
-        "question": "Quel effet économique Mansa Musa a-t-il causé en distribuant de l'or lors de son pèlerinage ?",
-        "options": ["Il a enrichi toute la Méditerranée durablement", "Il a provoqué une inflation durable dans toute la Méditerranée", "Il a financé la cathédrale Notre-Dame", "Il a créé le premier marché financier mondial"],
-        "answer": "Il a provoqué une inflation durable dans toute la Méditerranée"
+        "question": "Quelle grande catastrophe du XIVe siècle, propagée le long des routes commerciales, a décimé entre un tiers et la moitié de la population européenne ?",
+        "options": ["La Grande Famine de 1315-1322", "La Guerre de Cent Ans", "La Peste Noire (1347-1353)", "Les invasions mongoles de l'Europe"],
+        "answer": "La Peste Noire (1347-1353)"
       }
     ]
   },
   {
     "id": 4,
-    "title": "L'Ère des Découvertes : L'Europe Redessine le Monde",
-    "brief": "15ème-16ème siècle. L'Europe cherche une route vers les épices asiatiques — le poivre valait littéralement de l'or. Vasco de Gama contourne l'Afrique et arrive en Inde en 1498. Colomb, cherchant l'Inde par l'Ouest, découvre l'Amérique en 1492. Magellan commence le premier tour du monde en 1519 — il meurt aux Philippines, mais son équipage finit le voyage. Ces découvertes ont un double visage : d'un côté, la connexion des continents, l'échange colombien (tomates, pommes de terre, maïs arrivent en Europe). De l'autre : la traite négrière, le génocide des populations amérindiennes (90% meurent de maladies européennes), la colonisation. L'histoire ne se résume pas à des héros.",
-    "visualDescription": "Des caravelles en néon cyan naviguant sur un océan holographique. Une mappemonde 1500 qui se remplit progressivement de nouveaux continents lumineux. Des lignes de route commerciale en or.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f",
+    "title": "L'Ère des Découvertes : Quand l'Europe a Découvert le Reste du Monde",
+    "brief": "XVe-XVIe siècle. L'Europe cherche de nouvelles routes commerciales vers les Indes pour contourner le monopole ottoman sur les épices. Ce que les Européens 'découvrent', c'est un monde déjà habité par des centaines de millions de personnes — et ça va finir très mal pour elles. Vasco de Gama double le cap de Bonne-Espérance en 1498 et atteint l'Inde en naviguant autour de l'Afrique. Christophe Colomb, financé par l'Espagne, touche les Caraïbes en 1492, croyant être aux Indes. Fernand Magellan entame la première circumnavigation du globe en 1519 — son équipage finit le tour en 1522, sans lui (il meurt aux Philippines). Ces explorations ouvrent les échanges entre continents mais aussi la colonisation, l'esclavage et la destruction des civilisations aztèque, inca et maya. Le 'Choc colombien' tue 90% des populations amérindiennes par les épidémies. Le plus grand crash démographique de l'histoire.",
+    "visualDescription": "Une carte du monde du XVIe siècle en style cyberpunk avec les routes des explorateurs tracées en néon — rouge pour Colomb, bleu pour Vasco de Gama, vert pour Magellan. Des caravelles holographiques qui naviguent sur un océan de données. Les continents américain et africain illuminés comme des territoires nouvellement scannés. Ambiance exploration coloniale dystopique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1524661135-423995f22d0b",
     "quiz": [
       {
-        "question": "Quel navigateur portugais a trouvé la route maritime vers l'Inde en contournant l'Afrique en 1498 ?",
-        "options": ["Christophe Colomb", "Ferdinand Magellan", "Vasco de Gama", "Bartolomeu Dias"],
+        "question": "Quel navigateur portugais a été le premier Européen à atteindre l'Inde par voie maritime en contournant l'Afrique, en 1498 ?",
+        "options": ["Bartolomeu Dias", "Fernand Magellan", "Vasco de Gama", "Pedro Álvares Cabral"],
         "answer": "Vasco de Gama"
       },
       {
-        "question": "En quelle année Christophe Colomb a-t-il débarqué en Amérique ?",
-        "options": ["1488", "1492", "1498", "1500"],
+        "question": "En quelle année Christophe Colomb a-t-il atteint les Caraïbes, ouvrant la voie à la colonisation européenne des Amériques ?",
+        "options": ["1488", "1492", "1498", "1504"],
         "answer": "1492"
       },
       {
-        "question": "Quel navigateur a commencé le premier tour du monde en 1519, bien qu'il soit mort en chemin ?",
-        "options": ["Vasco de Gama", "Amerigo Vespucci", "Ferdinand Magellan", "Juan Sebastián Elcano"],
-        "answer": "Ferdinand Magellan"
+        "question": "Qui a entrepris la première circumnavigation du globe en 1519, même s'il n'en a pas vu la fin (mort aux Philippines) ?",
+        "options": ["Francis Drake", "Juan Sebastián Elcano", "Fernand Magellan", "Amerigo Vespucci"],
+        "answer": "Fernand Magellan"
       },
       {
-        "question": "Qu'est-ce que l'échange colombien a principalement apporté à l'Europe depuis les Amériques ?",
-        "options": ["L'imprimerie et la poudre à canon", "La tomate, la pomme de terre et le maïs", "La soie et les épices asiatiques", "L'or et l'argent uniquement"],
-        "answer": "La tomate, la pomme de terre et le maïs"
+        "question": "Quelle civilisation amérindienne, dirigée par Moctezuma II, a été conquise par Hernán Cortés entre 1519 et 1521 ?",
+        "options": ["L'Empire inca", "L'Empire maya", "L'Empire aztèque (mexica)", "L'Empire muisca"],
+        "answer": "L'Empire aztèque (mexica)"
       },
       {
-        "question": "Quel pourcentage approximatif des populations amérindiennes a péri suite aux contacts avec les Européens ?",
-        "options": ["Environ 20%", "Environ 50%", "Environ 90%", "Environ 30%"],
-        "answer": "Environ 90%"
+        "question": "Quelle est la principale cause de la mort massive des populations amérindiennes après l'arrivée des Européens — le 'Choc colombien' ?",
+        "options": ["Les guerres de conquête directes", "Les épidémies (variole, rougeole) contre lesquelles les Amérindiens n'avaient aucune immunité", "Les famines causées par la destruction des cultures", "Le travail forcé dans les mines d'argent"],
+        "answer": "Les épidémies (variole, rougeole) contre lesquelles les Amérindiens n'avaient aucune immunité"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Les Révolutions Modernes : Liberté, Égalité, Industrialisation",
-    "brief": "18ème-19ème siècle. Trois révolutions simultanées transforment le monde. La Révolution américaine (1776) : treize colonies britanniques déclarent leur indépendance et inventent l'État démocratique moderne. La Révolution française (1789) : liberté, égalité, fraternité — et aussi la guillotine, la Terreur, et Napoléon. Elle répand les idées démocratiques dans toute l'Europe. La Révolution industrielle (1760-1840, Angleterre) : la machine à vapeur remplace la force animale. Les gens quittent les campagnes pour les villes. En un siècle, l'humanité produit plus de richesses que dans tous les millénaires précédents combinés. Ces trois révolutions forment le socle de la politique, de l'économie et de la société modernes.",
-    "visualDescription": "Un triptyque néon : la Liberty Bell américaine en bleu électrique, la Bastille en flammes rouge-orange, une machine à vapeur victorienne en acier et vapeur cyan. Des foules révolutionnaires en silhouettes lumineuses.",
-    "imagePlaceholder": "https://images.unsplash.com/photo-1562155618-e1a8bc2eb04f",
+    "title": "Les Révolutions Modernes : Le Triptyque qui a Rebooté le Monde",
+    "brief": "Fin XVIIIe siècle, trois révolutions simultanées changent les règles du jeu mondial pour toujours. La Révolution américaine (1775-1783) : treize colonies britanniques déclarent leur indépendance le 4 juillet 1776. Thomas Jefferson écrit que 'tous les hommes sont créés égaux' — même si l'esclavage continue. Premier état démocratique moderne fondé sur une constitution écrite. La Révolution française (1789-1799) : Louis XVI convoque les États Généraux, le Tiers État crée l'Assemblée nationale, la Bastille tombe le 14 juillet 1789. Liberté, Égalité, Fraternité. La Déclaration des Droits de l'Homme. Puis la Terreur, puis Napoléon. La Révolution industrielle (Angleterre, fin XVIIIe) : James Watt améliore la machine à vapeur en 1769, les usines remplacent les ateliers artisanaux, les villes explosent, le capitalisme industriel naît. Trois révolutions, trois ruptures absolues avec l'Ancien Monde. Le patch qui a tout changé.",
+    "visualDescription": "Un triptyque holographique néon : à gauche la Liberty Bell américaine en bleu électrique, au centre la prise de la Bastille en rouge et noir, à droite une machine à vapeur victorienne crachant de la vapeur dorée. Les déclarations fondatrices flottent comme des lignes de code sur fond noir. Des engrenages industriels et des drapeaux révolutionnaires s'entremêlent. Ambiance révolutions fondatrices cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d",
     "quiz": [
       {
-        "question": "En quelle année les États-Unis ont-ils déclaré leur indépendance ?",
-        "options": ["1765", "1776", "1789", "1783"],
-        "answer": "1776"
+        "question": "Quelle date est célébrée comme fête nationale américaine, commémorant la Déclaration d'Indépendance des États-Unis ?",
+        "options": ["4 mars 1776", "4 juillet 1776", "17 septembre 1787", "30 avril 1789"],
+        "answer": "4 juillet 1776"
       },
       {
-        "question": "Quel événement symbolique marque le début de la Révolution française le 14 juillet 1789 ?",
-        "options": ["L'exécution du roi Louis XVI", "La fuite à Varennes", "La prise de la Bastille", "La Déclaration des droits de l'Homme"],
-        "answer": "La prise de la Bastille"
+        "question": "Quelle date symbolise le début de la Révolution française avec la prise de la Bastille ?",
+        "options": ["5 mai 1789", "20 juin 1789", "14 juillet 1789", "26 août 1789"],
+        "answer": "14 juillet 1789"
       },
       {
-        "question": "Quelle invention est au cœur de la Révolution industrielle britannique ?",
-        "options": ["L'électricité", "La machine à vapeur", "L'imprimerie", "La locomotive à pétrole"],
-        "answer": "La machine à vapeur"
+        "question": "Quel inventeur écossais est associé à l'amélioration décisive de la machine à vapeur en 1769, moteur de la Révolution industrielle ?",
+        "options": ["George Stephenson", "Richard Arkwright", "James Watt", "Thomas Newcomen"],
+        "answer": "James Watt"
       },
       {
-        "question": "Quel pays a été le berceau de la Révolution industrielle au 18ème siècle ?",
+        "question": "Quel document fondateur de la Révolution française (1789) proclame les droits naturels et imprescriptibles de l'homme ?",
+        "options": ["Le Contrat Social de Rousseau", "La Constitution de 1791", "La Déclaration des Droits de l'Homme et du Citoyen", "Le Cahier des Doléances"],
+        "answer": "La Déclaration des Droits de l'Homme et du Citoyen"
+      },
+      {
+        "question": "Dans quel pays la Révolution industrielle a-t-elle démarré au XVIIIe siècle avant de se propager au reste du monde ?",
         "options": ["La France", "Les États-Unis", "L'Allemagne", "L'Angleterre (Grande-Bretagne)"],
         "answer": "L'Angleterre (Grande-Bretagne)"
-      },
-      {
-        "question": "Quel général français, né de la Révolution, a répandu les idéaux révolutionnaires à travers l'Europe ?",
-        "options": ["Robespierre", "Lafayette", "Napoléon Bonaparte", "Danton"],
-        "answer": "Napoléon Bonaparte"
       }
     ]
   }
