@@ -13,6 +13,7 @@ interface ActualiteItem {
   summary: string;
   tag: string;
   date: string;
+  url?: string;
 }
 
 function loadActualites(): ActualiteItem[] {
@@ -139,10 +140,13 @@ export default function DashboardPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {actualites.map((item) => {
               const c = COLOR_MAP[item.color] ?? COLOR_MAP.blue;
+              const Tag = item.url ? "a" : "div";
+              const linkProps = item.url ? { href: item.url, target: "_blank", rel: "noopener noreferrer" } : {};
               return (
-                <div
+                <Tag
                   key={item.id}
-                  className={`relative group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-200 hover:bg-white/[0.04] ${c.border}`}
+                  {...linkProps}
+                  className={`relative group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-200 hover:bg-white/[0.04] hover:scale-[1.01] active:scale-[0.99] ${c.border} ${item.url ? "cursor-pointer" : ""}`}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${c.glow} to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
                   <div className="relative">
@@ -151,15 +155,18 @@ export default function DashboardPage() {
                       <span className={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${c.badge}`}>
                         {item.tag}
                       </span>
+                      {item.url && (
+                        <span className="ml-auto text-slate-700 group-hover:text-slate-400 transition-colors text-xs">↗</span>
+                      )}
                     </div>
-                    <h3 className="text-sm font-semibold text-white leading-snug mb-2 line-clamp-2">
+                    <h3 className="text-sm font-semibold text-white leading-snug mb-2 line-clamp-2 group-hover:text-white/90">
                       {item.headline}
                     </h3>
                     <p className="text-xs text-slate-500 leading-relaxed line-clamp-3">
                       {item.summary}
                     </p>
                   </div>
-                </div>
+                </Tag>
               );
             })}
           </div>
