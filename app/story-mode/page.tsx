@@ -2,10 +2,37 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import StoryModeClient from "./StoryModeClient";
 
+const EXPERT_CATEGORIES = [
+  { key: "cinema", name: "Cinéma", emoji: "🎬" },
+  { key: "histoire", name: "Histoire", emoji: "🏛️" },
+  { key: "sciences", name: "Sciences", emoji: "🔬" },
+  { key: "geographie", name: "Géographie", emoji: "🌍" },
+  { key: "musique", name: "Musique", emoji: "🎵" },
+  { key: "sport", name: "Sport", emoji: "⚽" },
+  { key: "pop-culture", name: "Pop Culture", emoji: "🎮" },
+  { key: "technologie", name: "Technologie", emoji: "💻" },
+  { key: "gastronomie", name: "Gastronomie", emoji: "🍕" },
+  { key: "nature-animaux", name: "Nature & Animaux", emoji: "🦁" },
+  { key: "espace-astronomie", name: "Espace", emoji: "🚀" },
+  { key: "philosophie", name: "Philosophie", emoji: "🧠" },
+  { key: "mythologie-religions", name: "Mythologie", emoji: "⚡" },
+  { key: "economie-business", name: "Économie", emoji: "💰" },
+  { key: "arts-litterature", name: "Arts & Littérature", emoji: "🎨" },
+  { key: "actualites", name: "Actualités", emoji: "📰" },
+  { key: "maitrise-francais", name: "Français", emoji: "📚" },
+];
+
 function loadStoryLevels() {
   const filePath = join(process.cwd(), "data", "story-mode.json");
-  const raw = readFileSync(filePath, "utf-8");
-  return JSON.parse(raw);
+  return JSON.parse(readFileSync(filePath, "utf-8"));
+}
+
+function loadExpertCategories() {
+  return EXPERT_CATEGORIES.map((cat) => {
+    const filePath = join(process.cwd(), "data", "questions", `${cat.key}.json`);
+    const questions = JSON.parse(readFileSync(filePath, "utf-8"));
+    return { ...cat, questions };
+  });
 }
 
 export const metadata = {
@@ -15,5 +42,6 @@ export const metadata = {
 
 export default function StoryModePage() {
   const levels = loadStoryLevels();
-  return <StoryModeClient levels={levels} />;
+  const expertCategories = loadExpertCategories();
+  return <StoryModeClient levels={levels} expertCategories={expertCategories} />;
 }

@@ -20,7 +20,24 @@ interface StoryLevel {
   quiz: QuizQuestion[];
 }
 
+interface CategoryQuestion {
+  category: string;
+  difficulty: string;
+  question: string;
+  options: string[];
+  correct_index: number;
+  explanation?: string;
+}
+
+interface ExpertCategory {
+  key: string;
+  name: string;
+  emoji: string;
+  questions: CategoryQuestion[];
+}
+
 const STORAGE_KEY = "vqm_story_progress";
+const EXPERT_KEY = "vqm_expert_progress";
 
 function getProgress(): Record<number, { completed: boolean; score: number }> {
   if (typeof window === "undefined") return {};
@@ -37,7 +54,31 @@ function saveProgress(levelId: number, score: number) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
 }
 
-export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
+function getExpertProgress(): Record<string, { completed: boolean; score: number }> {
+  if (typeof window === "undefined") return {};
+  try {
+    return JSON.parse(localStorage.getItem(EXPERT_KEY) || "{}");
+  } catch {
+    return {};
+  }
+}
+
+function saveExpertProgress(categoryKey: string, score: number) {
+  const progress = getExpertProgress();
+  progress[categoryKey] = { completed: true, score };
+  localStorage.setItem(EXPERT_KEY, JSON.stringify(progress));
+}
+
+function sampleExpertQuestions(questions: CategoryQuestion[], count: number): QuizQuestion[] {
+  const shuffled = [...questions].sort(() => Math.random() - 0.5);
+  return shuffled.slice(0, count).map((q) => ({
+    question: q.question,
+    options: q.options,
+    answer: q.options[q.correct_index],
+  }));
+}
+
+export default function StoryModeClient({ levels, expertCategories }: { levels: StoryLevel[]; expertCategories: ExpertCategory[] }) {
   const searchParams = useSearchParams();
   const isPreview = searchParams.get("preview") === "true";
 
@@ -48,9 +89,12 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
   const [selected, setSelected] = useState<number | null>(null);
   const [answered, setAnswered] = useState(false);
   const [progress, setProgress] = useState<Record<number, { completed: boolean; score: number }>>({});
+  const [expertProgress, setExpertProgress] = useState<Record<string, { completed: boolean; score: number }>>({});
+  const [activeExpertCategory, setActiveExpertCategory] = useState<ExpertCategory | null>(null);
 
   useEffect(() => {
     setProgress(getProgress());
+    setExpertProgress(getExpertProgress());
   }, []);
 
   const handleSelectLevel = (level: StoryLevel) => {
@@ -60,6 +104,20 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
     setScore(0);
     setSelected(null);
     setAnswered(false);
+  };
+
+  const handleSelectExpertCategory = (cat: ExpertCategory) => {
+    const questions = sampleExpertQuestions(cat.questions, 10);
+    const syntheticLevel: StoryLevel = {
+      id: -1,
+      title: `${cat.emoji} ${cat.name} — Mode Expert`,
+      brief: `Mode Expert débloqué. 10 questions aléatoires sur ${cat.name}, tirées depuis une banque de ${cat.questions.length} questions. Chaque partie est différente. Prouve que t'as le niveau.`,
+      visualDescription: `Challenge ${cat.name} en mode full random. Tes connaissances mises à l'épreuve sans filet.`,
+      imagePlaceholder: "",
+      quiz: questions,
+    };
+    setActiveExpertCategory(cat);
+    handleSelectLevel(syntheticLevel);
   };
 
   const handleStartQuiz = () => {
@@ -82,8 +140,13 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
       setAnswered(false);
     } else {
       const finalScore = score;
-      saveProgress(selectedLevel.id, finalScore);
-      setProgress(getProgress());
+      if (activeExpertCategory) {
+        saveExpertProgress(activeExpertCategory.key, finalScore);
+        setExpertProgress(getExpertProgress());
+      } else {
+        saveProgress(selectedLevel.id, finalScore);
+        setProgress(getProgress());
+      }
       setPhase("results");
     }
   };
@@ -91,6 +154,7 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
   const handleBackToMap = () => {
     setPhase("map");
     setSelectedLevel(null);
+    setActiveExpertCategory(null);
   };
 
   // ─── MAP VIEW ───
@@ -212,6 +276,67 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
           })}
         </div>
 
+        {/* Expert Mode — unlocked after completing all 30 levels */}
+        {(isPreview || levels.every((l) => progress[l.id]?.completed)) && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-10"
+          >
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-900/30 to-yellow-900/20 border border-yellow-500/20 p-6 mb-6">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-20 -right-20 w-60 h-60 bg-yellow-500/[0.06] rounded-full blur-[80px]" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-3xl">🔓</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-yellow-300 bg-yellow-500/10 border border-yellow-500/20 px-2 py-1 rounded-full">
+                    Mode Expert Débloqué
+                  </span>
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-1">Choisis ta catégorie</h2>
+                <p className="text-slate-500 text-sm">
+                  10 questions aléatoires par catégorie. Chaque partie est différente.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {expertCategories.map((cat) => {
+                const done = expertProgress[cat.key]?.completed;
+                const catScore = expertProgress[cat.key]?.score ?? 0;
+                return (
+                  <motion.button
+                    key={cat.key}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => handleSelectExpertCategory(cat)}
+                    className={`text-left p-4 rounded-2xl border transition-all duration-200 group
+                      ${done
+                        ? "border-purple-500/30 bg-purple-500/[0.05] hover:bg-purple-500/[0.09]"
+                        : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-purple-400/30"
+                      }`}
+                  >
+                    <div className="text-2xl mb-2">{cat.emoji}</div>
+                    <div className={`font-semibold text-sm ${done ? "text-purple-300" : "text-white"}`}>
+                      {cat.name}
+                    </div>
+                    <div className="text-xs text-slate-600 mt-0.5">{cat.questions.length} questions</div>
+                    {done && (
+                      <div className="flex items-center gap-1 mt-2">
+                        {Array.from({ length: 10 }).map((_, j) => (
+                          <div key={j} className={`w-1.5 h-1.5 rounded-full ${j < catScore ? "bg-purple-400" : "bg-white/10"}`} />
+                        ))}
+                        <span className="text-purple-400/70 text-xs ml-1">{catScore}/10</span>
+                      </div>
+                    )}
+                  </motion.button>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
+
         <div className="mt-8 text-center">
           <Link
             href="/dashboard"
@@ -247,15 +372,15 @@ export default function StoryModeClient({ levels }: { levels: StoryLevel[] }) {
             <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 to-transparent" />
               <span className="relative text-6xl">
-                {selectedLevel.id === 1 ? "🦴" : selectedLevel.id === 2 ? "🏺" : selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : selectedLevel.id === 22 ? "🪖" : selectedLevel.id === 23 ? "📈" : selectedLevel.id === 24 ? "💣" : selectedLevel.id === 25 ? "☢️" : selectedLevel.id === 26 ? "🌍" : selectedLevel.id === 27 ? "🚀" : selectedLevel.id === 28 ? "🌐" : selectedLevel.id === 29 ? "📱" : selectedLevel.id === 30 ? "⚡" : "🏛️"}
+                {selectedLevel.id === -1 ? (activeExpertCategory?.emoji ?? "🎯") : selectedLevel.id === 1 ? "🦴" : selectedLevel.id === 2 ? "🏺" : selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : selectedLevel.id === 22 ? "🪖" : selectedLevel.id === 23 ? "📈" : selectedLevel.id === 24 ? "💣" : selectedLevel.id === 25 ? "☢️" : selectedLevel.id === 26 ? "🌍" : selectedLevel.id === 27 ? "🚀" : selectedLevel.id === 28 ? "🌐" : selectedLevel.id === 29 ? "📱" : selectedLevel.id === 30 ? "⚡" : "🏛️"}
               </span>
             </div>
 
             {/* Content */}
             <div className="p-6 bg-white/[0.02]">
               <div className="flex items-center gap-2 mb-3">
-                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${[15, 21, 30].includes(selectedLevel.id) ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20" : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"}`}>
-                  {selectedLevel.id === 30 ? "⚡ ULTIMATE BOSS — Jour 30" : [15, 21].includes(selectedLevel.id) ? `⚡ BOSS — Jour ${selectedLevel.id}` : `Jour ${selectedLevel.id}`}
+                <span className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full border ${selectedLevel.id === -1 ? "text-purple-300 bg-purple-500/10 border-purple-500/20" : [15, 21, 30].includes(selectedLevel.id) ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20" : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"}`}>
+                  {selectedLevel.id === -1 ? `🔓 MODE EXPERT — ${activeExpertCategory?.name}` : selectedLevel.id === 30 ? "⚡ ULTIMATE BOSS — Jour 30" : [15, 21].includes(selectedLevel.id) ? `⚡ BOSS — Jour ${selectedLevel.id}` : `Jour ${selectedLevel.id}`}
                 </span>
                 <span className="text-xs text-slate-600">{selectedLevel.quiz.length} questions</span>
               </div>
