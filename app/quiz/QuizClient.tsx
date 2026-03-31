@@ -1156,13 +1156,10 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               </span>
             </div>
             <div className="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
-              <motion.div
-                className="h-2 rounded-full"
-                animate={{
-                  width: phase === "answered" ? "0%" : `${timerPercent}%`,
-                }}
-                transition={{ duration: 1, ease: "linear" }}
+              <div
+                className="h-2 rounded-full transition-all duration-1000 ease-linear"
                 style={{
+                  width: phase === "answered" ? "0%" : `${timerPercent}%`,
                   background: timerUrgent
                     ? "linear-gradient(90deg, #ff2d7b, #ff6b9d)"
                     : timerWarn
