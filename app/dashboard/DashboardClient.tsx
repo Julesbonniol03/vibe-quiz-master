@@ -3,11 +3,26 @@
 import { useState, useEffect } from "react";
 import { useProgress } from "@/hooks/useProgress";
 import { useHearts } from "@/hooks/useHearts";
+import { useNotifications } from "@/hooks/useNotifications";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export function StatsGrid() {
   const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed, dailyStreak } = useProgress();
+  const hearts = useHearts();
+  const notifs = useNotifications();
+
+  // Schedule streak reminder + hearts regen notification on dashboard load
+  useEffect(() => {
+    if (!hydrated) return;
+    if (dailyStreak > 0) notifs.scheduleStreakAlert(dailyStreak);
+    if (hearts.hydrated && hearts.hearts < hearts.maxHearts && hearts.nextRegenIn > 0) {
+      const missingHearts = hearts.maxHearts - hearts.hearts;
+      const totalRegenMs = missingHearts * 30 * 60 * 1000;
+      notifs.scheduleHeartsAlert(totalRegenMs);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hydrated, hearts.hydrated]);
 
   if (!hydrated) {
     return (

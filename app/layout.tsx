@@ -6,6 +6,7 @@ import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import SplashScreen from "@/components/SplashScreen";
 import OnboardingModal from "@/components/OnboardingModal";
 import { AuthProvider } from "@/contexts/AuthContext";
+import NotificationPrompt from "@/components/NotificationPrompt";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -71,6 +72,7 @@ export default function RootLayout({
           <Navbar />
           <main className="safe-main pb-20 md:pb-0">{children}</main>
           <BottomNav />
+          <NotificationPrompt />
           <ServiceWorkerRegister />
         </AuthProvider>
       </body>
