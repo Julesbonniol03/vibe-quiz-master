@@ -52,12 +52,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   const fetchProfile = useCallback(async (userId: string) => {
-    const { data } = await supabase
+    console.log("[Auth] Fetching profile for user:", userId);
+    const { data, error } = await supabase
       .from("profiles")
       .select("*")
       .eq("id", userId)
       .single();
-    if (data) setProfile(data as SupabaseProfile);
+    if (error) {
+      console.warn("[Auth] Profile fetch error:", error.message, error.code);
+    }
+    if (data) {
+      console.log("[Auth] Profile loaded:", data.pseudo, "XP:", data.xp);
+      setProfile(data as SupabaseProfile);
+    }
   }, []);
 
   const refreshProfile = useCallback(async () => {
@@ -84,11 +91,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, [fetchProfile]);
 
   const signUp = useCallback(async (email: string, password: string, pseudo: string, avatarId: string) => {
-    const { data, error } = await supabase.auth.signUp({ email, password });
-    if (error) return { error: translateAuthError(error.message) };
-    if (!data.user) return { error: "Erreur inconnue" };
+    console.log("[Auth] Starting signUp for:", email);
 
-    // Migrate localStorage XP if any
+    // 1. Sign up with Supabase Auth — pass pseudo/avatar as metadata for the DB trigger
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { pseudo, avatar_id: avatarId },
+      },
+    });
+
+    if (error) {
+      console.error("[Auth] SignUp error:", error.message, error.status);
+      return { error: translateAuthError(error.message) };
+    }
+    if (!data.user) {
+      console.error("[Auth] SignUp: no user returned");
+      return { error: "Erreur inconnue" };
+    }
+
+    console.log("[Auth] User created:", data.user.id, "Session:", !!data.session);
+
+    // 2. Migrate localStorage XP
     let localXp = 0;
     let localGames = 0;
     let localPlayed = 0;
@@ -111,10 +136,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       localDailyCompleted = localStorage.getItem("vqm_daily_completed") || "";
       localCategoryStats = JSON.parse(localStorage.getItem("vqm_category_stats") || "{}");
       localSpeedRecord = JSON.parse(localStorage.getItem("vqm_speed_records") || '{"totalTime":0,"totalAnswered":0,"bestAvg":0}');
-    } catch { /* ignore parse errors */ }
+    } catch { /* ignore */ }
 
-    // Create profile row
-    const { error: profileError } = await supabase.from("profiles").insert({
+    console.log("[Auth] Local XP to migrate:", localXp);
+
+    // 3. Create profile row — try insert, if trigger already created it, update instead
+    const profileData = {
       id: data.user.id,
       pseudo,
       avatar_id: avatarId,
@@ -128,17 +155,31 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       daily_completed: localDailyCompleted,
       category_stats: localCategoryStats,
       speed_record: localSpeedRecord,
-    });
+    };
 
-    if (profileError) return { error: "Profil non créé : " + profileError.message };
+    const { error: insertError } = await supabase.from("profiles").upsert(profileData, { onConflict: "id" });
 
+    if (insertError) {
+      console.error("[Auth] Profile upsert error:", insertError.message, insertError.code, insertError.details);
+      // Non-blocking: the DB trigger may handle it, or user can retry
+      // Still return success if auth worked
+    } else {
+      console.log("[Auth] Profile upserted successfully");
+    }
+
+    // 4. Try to fetch profile (may have been created by DB trigger)
     await fetchProfile(data.user.id);
     return { error: null };
   }, [fetchProfile]);
 
   const signIn = useCallback(async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) return { error: translateAuthError(error.message) };
+    console.log("[Auth] Starting signIn for:", email);
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) {
+      console.error("[Auth] SignIn error:", error.message, error.status);
+      return { error: translateAuthError(error.message) };
+    }
+    console.log("[Auth] SignIn success, user:", data.user?.id);
     return { error: null };
   }, []);
 
@@ -149,7 +190,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const updateProfileField = useCallback(async (fields: Partial<SupabaseProfile>) => {
     if (!user) return;
-    await supabase.from("profiles").update(fields).eq("id", user.id);
+    const { error } = await supabase.from("profiles").update(fields).eq("id", user.id);
+    if (error) {
+      console.error("[Auth] Profile update error:", error.message);
+    }
     setProfile((prev) => prev ? { ...prev, ...fields } : prev);
   }, [user]);
 
