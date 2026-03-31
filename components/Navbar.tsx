@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
 import { useOptionalAuth } from "@/contexts/AuthContext";
+import { useHearts } from "@/hooks/useHearts";
+import { useProgress } from "@/hooks/useProgress";
 import { LogIn, LogOut } from "lucide-react";
 
 const navItems = [
@@ -20,6 +22,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const { profile, hydrated } = useProfile();
   const auth = useOptionalAuth();
+  const heartsSystem = useHearts();
+  const { dailyStreak, hydrated: progressHydrated } = useProgress();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
@@ -33,6 +37,30 @@ export default function Navbar() {
             Teubé
           </span>
         </Link>
+
+        {/* Hearts + Flame (visible on all screens) */}
+        <div className="flex items-center gap-2">
+          {/* Daily streak flame */}
+          {progressHydrated && dailyStreak > 0 && (
+            <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/20 rounded-lg px-2 py-1">
+              <span className="text-sm">🔥</span>
+              <span className="text-orange-400 text-xs font-bold">{dailyStreak}</span>
+            </div>
+          )}
+          {/* Hearts */}
+          {heartsSystem.hydrated && (
+            <div className="flex items-center gap-0.5">
+              {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
+                <span key={i} className="text-xs">
+                  {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
+                </span>
+              ))}
+              {heartsSystem.premium && (
+                <span className="text-[9px] text-amber-400 ml-0.5 font-bold">∞</span>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
