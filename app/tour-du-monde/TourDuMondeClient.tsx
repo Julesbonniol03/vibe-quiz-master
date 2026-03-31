@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useMemo, memo } from "react";
+import { useState, useCallback, useMemo, useRef, memo } from "react";
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from "react-simple-maps";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -20,44 +20,55 @@ interface GeoEntry {
 type QuestionType = "capital" | "country";
 type Phase = "menu" | "playing" | "answered" | "finished";
 
+interface HighlightState {
+  clickedCode: string | null;
+  correctCode: string | null;
+  wasCorrect: boolean;
+}
+
 interface Props {
   geoData: GeoEntry[];
 }
 
-// Memoize the map to avoid re-renders on state changes
 const WorldMap = memo(function WorldMap({
-  highlightCode,
-  highlightColor,
+  highlight,
   onCountryClick,
   disabled,
 }: {
-  highlightCode: string | null;
-  highlightColor: string | null;
+  highlight: HighlightState;
   onCountryClick: (code: string) => void;
   disabled: boolean;
 }) {
   return (
     <ComposableMap
-      projectionConfig={{ scale: 140, center: [10, 20] }}
+      projectionConfig={{ scale: 147, center: [10, 10] }}
       className="w-full h-full"
       style={{ backgroundColor: "transparent" }}
+      width={800}
+      height={450}
     >
-      <ZoomableGroup>
+      <ZoomableGroup minZoom={1} maxZoom={8}>
         <Geographies geography={GEO_URL}>
           {({ geographies }) =>
             geographies.map((geo) => {
               const code = geo.properties?.["ISO_A3"] || geo.id;
-              const isHighlighted = highlightCode === code;
+              const isCorrectCountry = highlight.correctCode === code;
+              const isClickedCountry = highlight.clickedCode === code;
 
-              let fill = "#1a1a2e";
-              let stroke = "#2a2a4a";
+              let fill = "#12122a";
+              let stroke = "#1e1e40";
+              let strokeWidth = 0.4;
 
-              if (isHighlighted && highlightColor === "correct") {
+              if (disabled && isCorrectCountry) {
+                // Always show correct country in green
                 fill = "#00f0ff";
                 stroke = "#00f0ff";
-              } else if (isHighlighted && highlightColor === "wrong") {
+                strokeWidth = 2;
+              } else if (disabled && isClickedCountry && !highlight.wasCorrect) {
+                // Clicked wrong country in rose
                 fill = "#ff2d7b";
                 stroke = "#ff2d7b";
+                strokeWidth = 1.5;
               }
 
               return (
@@ -69,21 +80,22 @@ const WorldMap = memo(function WorldMap({
                     default: {
                       fill,
                       stroke,
-                      strokeWidth: 0.5,
+                      strokeWidth,
                       outline: "none",
                       cursor: disabled ? "default" : "pointer",
-                      transition: "fill 0.3s, stroke 0.3s",
+                      transition: "fill 0.35s ease, stroke 0.35s ease",
                     },
                     hover: {
-                      fill: disabled ? fill : isHighlighted ? fill : "#2d2d5a",
+                      fill: disabled ? fill : "#1f1f4a",
                       stroke: disabled ? stroke : "#00f0ff",
-                      strokeWidth: disabled ? 0.5 : 1.5,
+                      strokeWidth: disabled ? strokeWidth : 1.2,
                       outline: "none",
                       cursor: disabled ? "default" : "pointer",
                     },
                     pressed: {
                       fill: "#00f0ff",
                       stroke: "#00f0ff",
+                      strokeWidth: 1.5,
                       outline: "none",
                     },
                   }}
@@ -103,11 +115,12 @@ export default function TourDuMondeClient({ geoData }: Props) {
   const [questions, setQuestions] = useState<GeoEntry[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [highlightCode, setHighlightCode] = useState<string | null>(null);
-  const [highlightColor, setHighlightColor] = useState<string | null>(null);
+  const [highlight, setHighlight] = useState<HighlightState>({ clickedCode: null, correctCode: null, wasCorrect: false });
   const [lastAnswer, setLastAnswer] = useState<{ correct: boolean; correctCountry: string } | null>(null);
   const [streak, setStreak] = useState(0);
   const [bestStreak, setBestStreak] = useState(0);
+  const [isAnswering, setIsAnswering] = useState(false);
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const progress = useProgress();
   const heartsSystem = useHearts();
@@ -117,7 +130,6 @@ export default function TourDuMondeClient({ geoData }: Props) {
 
   const startGame = useCallback((type: QuestionType, continent?: string) => {
     const pool = continent ? geoData.filter((g) => g.continent === continent) : [...geoData];
-    // Shuffle
     for (let i = pool.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [pool[i], pool[j]] = [pool[j], pool[i]];
@@ -128,9 +140,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
     setScore(0);
     setStreak(0);
     setBestStreak(0);
-    setHighlightCode(null);
-    setHighlightColor(null);
+    setHighlight({ clickedCode: null, correctCode: null, wasCorrect: false });
     setLastAnswer(null);
+    setIsAnswering(false);
     setPhase("playing");
   }, [geoData]);
 
@@ -138,19 +150,44 @@ export default function TourDuMondeClient({ geoData }: Props) {
 
   const questionText = useMemo(() => {
     if (!currentQ) return "";
-    if (questionType === "capital") {
-      return `Où se trouve le pays dont la capitale est ${currentQ.capital} ?`;
-    }
-    return `Clique sur : ${currentQ.country}`;
+    return questionType === "capital"
+      ? `Où se trouve le pays dont la capitale est ${currentQ.capital} ?`
+      : `Clique sur : ${currentQ.country}`;
   }, [currentQ, questionType]);
 
+  const handleNext = useCallback(() => {
+    if (autoAdvanceRef.current) {
+      clearTimeout(autoAdvanceRef.current);
+      autoAdvanceRef.current = null;
+    }
+    setIsAnswering(false);
+    if (!heartsSystem.canPlay) {
+      setPhase("finished");
+      return;
+    }
+    const next = currentIndex + 1;
+    if (next >= questions.length) {
+      setPhase("finished");
+      return;
+    }
+    setCurrentIndex(next);
+    setHighlight({ clickedCode: null, correctCode: null, wasCorrect: false });
+    setLastAnswer(null);
+    setPhase("playing");
+  }, [currentIndex, questions.length, heartsSystem.canPlay]);
+
   const handleCountryClick = useCallback((clickedCode: string) => {
-    if (phase !== "playing" || !currentQ) return;
+    if (phase !== "playing" || !currentQ || isAnswering) return;
+    setIsAnswering(true);
 
     const isCorrect = clickedCode === currentQ.code;
 
-    setHighlightCode(clickedCode);
-    setHighlightColor(isCorrect ? "correct" : "wrong");
+    // Highlight both the clicked country AND the correct country
+    setHighlight({
+      clickedCode,
+      correctCode: currentQ.code,
+      wasCorrect: isCorrect,
+    });
     setLastAnswer({ correct: isCorrect, correctCountry: currentQ.country });
 
     if (isCorrect) {
@@ -168,24 +205,14 @@ export default function TourDuMondeClient({ geoData }: Props) {
     }
 
     setPhase("answered");
-  }, [phase, currentQ, correctFeedback, wrongFeedback, heartsSystem]);
 
-  const handleNext = useCallback(() => {
-    if (!heartsSystem.canPlay) {
-      setPhase("finished");
-      return;
+    // Auto-advance only if correct
+    if (isCorrect) {
+      autoAdvanceRef.current = setTimeout(() => {
+        handleNext();
+      }, 1800);
     }
-    const next = currentIndex + 1;
-    if (next >= questions.length) {
-      setPhase("finished");
-      return;
-    }
-    setCurrentIndex(next);
-    setHighlightCode(null);
-    setHighlightColor(null);
-    setLastAnswer(null);
-    setPhase("playing");
-  }, [currentIndex, questions.length, heartsSystem.canPlay]);
+  }, [phase, currentQ, isAnswering, correctFeedback, wrongFeedback, heartsSystem, handleNext]);
 
   // Record XP on finish
   const xpEarned = useMemo(() => {
@@ -227,7 +254,6 @@ export default function TourDuMondeClient({ geoData }: Props) {
           <p className="text-slate-500">Clique sur le bon pays sur la carte</p>
         </div>
 
-        {/* Mode selection */}
         <div className="grid grid-cols-2 gap-4 mb-8">
           <motion.button
             initial={{ opacity: 0, x: -20 }}
@@ -255,7 +281,6 @@ export default function TourDuMondeClient({ geoData }: Props) {
           </motion.button>
         </div>
 
-        {/* Continent filters */}
         <div className="mb-6">
           <p className="text-slate-600 text-xs font-medium uppercase tracking-wider mb-3">Par continent</p>
           <div className="flex flex-wrap gap-2">
@@ -298,9 +323,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
         <h2 className="text-3xl font-bold text-white mb-2">
           {accuracy >= 80 ? "Géographe Expert !" : accuracy >= 50 ? "Pas mal !" : "Continue d'explorer !"}
         </h2>
-        <p className="text-slate-500 mb-6">
-          {score} / {total} pays trouvés
-        </p>
+        <p className="text-slate-500 mb-6">{score} / {total} pays trouvés</p>
 
         <div className="grid grid-cols-3 gap-3 mb-8">
           <div className="glass-card !rounded-2xl p-4">
@@ -337,34 +360,33 @@ export default function TourDuMondeClient({ geoData }: Props) {
 
   // ─── PLAYING / ANSWERED ───
   return (
-    <div className="max-w-4xl mx-auto px-4 py-6">
+    <div className="max-w-4xl mx-auto px-2 sm:px-4 py-4">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="glass-card !rounded-xl px-3 py-1.5 flex items-center gap-2">
-            <span className="text-slate-500 text-sm">Score</span>
-            <span className="text-neon-cyan font-bold">{score}</span>
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <div className="glass-card !rounded-lg px-2.5 py-1 flex items-center gap-1.5">
+            <span className="text-slate-500 text-xs">Score</span>
+            <span className="text-neon-cyan font-bold text-sm">{score}</span>
           </div>
-          {/* Hearts */}
           <div className="flex items-center gap-0.5">
             {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
-              <span key={i} className="text-sm">
+              <span key={i} className="text-xs">
                 {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
               </span>
             ))}
           </div>
           {streak > 0 && (
-            <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl px-3 py-1.5 flex items-center gap-1">
-              <span className="text-orange-400 text-sm font-bold">{streak}x</span>
-              <span>🔥</span>
+            <div className="bg-orange-500/10 border border-orange-500/20 rounded-lg px-2 py-1 flex items-center gap-1">
+              <span className="text-orange-400 text-xs font-bold">{streak}x</span>
+              <span className="text-xs">🔥</span>
             </div>
           )}
         </div>
-        <div className="flex items-center gap-3">
-          <span className="text-slate-600 text-sm tabular-nums">{currentIndex + 1} / {questions.length}</span>
+        <div className="flex items-center gap-2">
+          <span className="text-slate-600 text-xs tabular-nums">{currentIndex + 1}/{questions.length}</span>
           <button
             onClick={() => setPhase("menu")}
-            className="text-slate-600 hover:text-slate-300 text-sm px-3 py-1.5 rounded-lg hover:bg-white/5 transition-all"
+            className="text-slate-600 hover:text-slate-300 text-xs px-2 py-1 rounded-lg hover:bg-white/5 transition-all"
           >
             Quitter
           </button>
@@ -372,9 +394,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
       </div>
 
       {/* Progress bar */}
-      <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-4 overflow-hidden">
+      <div className="w-full bg-white/[0.06] rounded-full h-1 mb-3 overflow-hidden">
         <motion.div
-          className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+          className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
           animate={{ width: `${((currentIndex + (phase === "answered" ? 1 : 0)) / questions.length) * 100}%` }}
           transition={{ duration: 0.4 }}
           style={{ boxShadow: "0 0 10px rgba(0, 240, 255, 0.4)" }}
@@ -384,18 +406,30 @@ export default function TourDuMondeClient({ geoData }: Props) {
       {/* Question */}
       <motion.div
         key={currentIndex}
-        initial={{ opacity: 0, y: -10 }}
+        initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
-        className="glass-card-strong !rounded-2xl p-4 mb-4 text-center"
+        className="glass-card-strong !rounded-2xl px-4 py-3 mb-3 text-center"
       >
-        <p className="text-white font-semibold text-lg">{questionText}</p>
+        <p className="text-white font-semibold text-base sm:text-lg">{questionText}</p>
       </motion.div>
 
-      {/* Map */}
-      <div className="relative rounded-2xl overflow-hidden border border-white/[0.08] bg-[#0a0a1a] mb-4" style={{ height: "clamp(300px, 50vh, 500px)" }}>
+      {/* Map — takes maximum space */}
+      <div
+        className="relative rounded-2xl overflow-hidden border border-white/[0.08] bg-[#08081a] mb-3"
+        style={{ height: "clamp(250px, 55vh, 550px)" }}
+      >
+        {/* Glow effects when answered */}
+        {phase === "answered" && (
+          <div className="absolute inset-0 pointer-events-none z-10">
+            {highlight.wasCorrect ? (
+              <div className="absolute inset-0 border-2 border-green-400/30 rounded-2xl" style={{ boxShadow: "inset 0 0 40px rgba(0, 240, 255, 0.08)" }} />
+            ) : (
+              <div className="absolute inset-0 border-2 border-neon-rose/20 rounded-2xl" style={{ boxShadow: "inset 0 0 40px rgba(255, 45, 123, 0.06)" }} />
+            )}
+          </div>
+        )}
         <WorldMap
-          highlightCode={highlightCode}
-          highlightColor={highlightColor}
+          highlight={highlight}
           onCountryClick={handleCountryClick}
           disabled={phase === "answered"}
         />
@@ -410,42 +444,43 @@ export default function TourDuMondeClient({ geoData }: Props) {
             exit={{ opacity: 0 }}
           >
             {lastAnswer.correct ? (
-              <div className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-3 text-center">
-                <p className="text-green-400 font-semibold text-lg">
-                  ✓ Bravo ! C&apos;est bien {lastAnswer.correctCountry}
-                  {streak > 1 && ` 🔥 Série x${streak}`}
-                </p>
-              </div>
+              <>
+                <div className="bg-green-500/5 border border-green-500/20 rounded-2xl p-3 mb-2 text-center">
+                  <p className="text-green-400 font-semibold">
+                    ✓ Bravo ! C&apos;est bien {lastAnswer.correctCountry}
+                    {streak > 1 && ` 🔥 x${streak}`}
+                  </p>
+                </div>
+                <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
+                  <motion.div
+                    initial={{ width: "100%" }}
+                    animate={{ width: "0%" }}
+                    transition={{ duration: 1.8, ease: "linear" }}
+                    className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                  />
+                </div>
+              </>
             ) : (
-              <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
-                <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
-                <p className="text-slate-500 text-sm mt-1">
-                  La bonne réponse : <span className="text-green-400 font-semibold">{lastAnswer.correctCountry}</span>
-                </p>
-              </div>
-            )}
-
-            {lastAnswer.correct ? (
-              <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
-                <motion.div
-                  initial={{ width: "100%" }}
-                  animate={{ width: "0%" }}
-                  transition={{ duration: 1.5, ease: "linear" }}
-                  onAnimationComplete={handleNext}
-                  className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                />
-              </div>
-            ) : (
-              <motion.button
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                onClick={handleNext}
-                className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
-                style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2)" }}
-              >
-                Continuer →
-              </motion.button>
+              <>
+                <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-3 mb-2 text-center">
+                  <p className="text-neon-rose font-semibold">✗ Raté !</p>
+                  <p className="text-slate-500 text-sm mt-1">
+                    La bonne réponse : <span className="text-neon-cyan font-semibold">{lastAnswer.correctCountry}</span>
+                    <span className="text-slate-600 text-xs ml-1">(en bleu sur la carte)</span>
+                  </p>
+                </div>
+                <motion.button
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  onClick={() => { handleNext(); setIsAnswering(false); }}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2)" }}
+                >
+                  Continuer →
+                </motion.button>
+              </>
             )}
           </motion.div>
         )}
