@@ -438,9 +438,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
         </AnimatePresence>
       )}
 
-      {/* Options */}
+      {/* Options — grid 2x2 pour les boutons */}
       {currentQ && (
-        <div className="grid grid-cols-1 gap-3 mb-4">
+        <div className="grid grid-cols-2 gap-3 mb-4">
           {currentQ.options.map((option, i) => {
             const isSelected = selectedOption === i;
             const isCorrect = i === currentQ.correctIndex;
@@ -506,20 +506,27 @@ export default function TourDuMondeClient({ geoData }: Props) {
         {phase === "answered" && currentQ && (
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
             {selectedOption === -1 ? (
-              /* Timeout */
+              /* Timeout — Teubé style */
               <>
-                <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-amber-400 font-semibold">⏰ Temps écoulé !</p>
-                  <p className="text-slate-500 text-sm mt-1">
-                    La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
+                <motion.div
+                  initial={{ scale: 1.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: "spring", bounce: 0.5, duration: 0.4 }}
+                  className="bg-amber-500/10 border-2 border-amber-500/30 rounded-2xl p-5 mb-3 text-center"
+                  style={{ boxShadow: "0 0 30px rgba(245, 158, 11, 0.15)" }}
+                >
+                  <p className="text-amber-400 font-black text-xl mb-1">⏰ TROP LENT !</p>
+                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Teubé !</p>
+                  <p className="text-slate-500 text-sm">
+                    La bonne réponse : <span className="text-green-400 font-bold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
-                </div>
-                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden">
+                </motion.div>
+                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} transition={{ delay: 0.2 }} className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden">
                   <p className="text-slate-400 text-sm leading-relaxed">
                     <span className="text-neon-cyan font-medium">💡 </span>{currentQ.explanation}
                   </p>
                 </motion.div>
-                <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
+                <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
                   onClick={handleNext}
                   className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold hover:brightness-110 transition-all"
                   style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2)" }}>

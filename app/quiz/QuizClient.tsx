@@ -1263,12 +1263,19 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             {selectedOption === -1 ? (
               /* ── Timeout ── */
               <>
-                <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-amber-400 font-semibold">⏰ Temps écoulé !</p>
-                  <p className="text-slate-500 text-sm mt-1">
-                    La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
+                <motion.div
+                  initial={{ scale: 1.5, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ type: "spring", bounce: 0.5, duration: 0.4 }}
+                  className="bg-amber-500/10 border-2 border-amber-500/30 rounded-2xl p-5 mb-3 text-center"
+                  style={{ boxShadow: "0 0 30px rgba(245, 158, 11, 0.15)" }}
+                >
+                  <p className="text-amber-400 font-black text-xl mb-1">⏰ TROP LENT !</p>
+                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Teubé !</p>
+                  <p className="text-slate-500 text-sm">
+                    La bonne réponse : <span className="text-green-400 font-bold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
-                </div>
+                </motion.div>
                 <motion.div
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: "auto" }}
