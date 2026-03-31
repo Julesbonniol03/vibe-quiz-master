@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "theme": "Géopolitique",
+    "emoji": "🌍",
+    "color": "blue",
+    "headline": "Ukraine : premières négociations directes depuis 2022",
+    "summary": "Des représentants ukrainiens et russes se retrouvent pour la première fois depuis 2022.",
+    "tag": "Monde",
+    "date": "30 mars 2026",
+    "details": "Des délégations ukrainiennes et russes se sont retrouvées à Istanbul pour des discussions préliminaires, sous médiation américaine et européenne. C'est la première rencontre directe depuis les pourparlers avortés de mars 2022.\n\n**Points clés :**\n• Les discussions portent sur un cessez-le-feu partiel dans 3 régions de l'est\n• L'Ukraine exige un retrait des forces russes comme préalable à tout accord\n• La Russie conditionne tout accord à des garanties de neutralité de l'Ukraine\n• L'UE promet 50 milliards € de reconstruction en cas d'accord\n\n**Contexte :** Le conflit dure depuis février 2022. Plus de 10 millions d'Ukrainiens ont été déplacés. L'économie ukrainienne a chuté de 30% depuis le début de la guerre.\n\n**À suivre :** Un second round de discussions est prévu mi-avril à Genève."
+  },
+  {
+    "id": 2,
+    "theme": "Technologie",
+    "emoji": "🤖",
+    "color": "cyan",
+    "headline": "IA générative : l'Europe impose ses premières régulations",
+    "summary": "L'AI Act européen entre en phase d'application — étiquetage obligatoire de tout contenu IA.",
+    "tag": "Tech",
+    "date": "30 mars 2026",
+    "details": "L'AI Act européen, adopté en 2024, entre dans sa phase d'application concrète. Les entreprises déployant des systèmes d'IA à 'haut risque' doivent désormais se conformer à un cadre strict de transparence et de responsabilité.\n\n**Ce qui change concrètement :**\n• Tout contenu généré par IA (images, textes, vidéos) doit être clairement étiqueté\n• Les modèles d'IA générale (GPT, Gemini, Claude) soumis à des audits réguliers\n• Amende jusqu'à 6% du chiffre d'affaires mondial en cas de non-conformité\n• Interdiction des systèmes de notation sociale et manipulation comportementale\n\n**Réactions :**\nMeta et Google ont annoncé des investissements massifs pour se conformer. Plusieurs startups européennes voient dans cette régulation un avantage concurrentiel face aux géants américains.\n\n**Chiffre clé :** 35% des entreprises européennes utilisent déjà l'IA dans leurs processus en 2026."
+  },
+  {
+    "id": 3,
+    "theme": "Science",
+    "emoji": "🔬",
+    "color": "green",
+    "headline": "James Webb : biosignatures détectées sur K2-18b",
+    "summary": "Des traces de méthane et CO₂ dans l'atmosphère d'une exoplanète à 120 années-lumière.",
+    "tag": "Espace",
+    "date": "29 mars 2026",
+    "details": "Le télescope spatial James Webb (JWST) a identifié des traces simultanées de méthane (CH₄) et de dioxyde de carbone (CO₂) dans l'atmosphère de K2-18b, une exoplanète de la taille de Neptune orbitant dans la zone habitable de son étoile.\n\n**Pourquoi c'est important :**\nLa présence conjointe de méthane et CO₂ dans une atmosphère, sans monoxyde de carbone, est un signal qui, sur Terre, est associé à la vie biologique. Ce n'est pas une preuve de vie — mais c'est le signal atmosphérique le plus cohérent avec une activité biologique jamais détecté hors du système solaire.\n\n**Caractéristiques de K2-18b :**\n• Distance : 120 années-lumière (constellation du Lion)\n• Taille : 2,6 fois le rayon terrestre\n• Type : 'Hycean' (potentiellement couvert d'océans sous atmosphère riche en hydrogène)\n• Température de surface estimée : entre 0°C et 40°C\n\n**Prudence scientifique :** Les chercheurs soulignent que des processus géochimiques non-biologiques pourraient aussi expliquer ces signatures. Des observations supplémentaires sont prévues en 2027."
+  },
+  {
+    "id": 4,
+    "theme": "Économie",
+    "emoji": "📈",
+    "color": "yellow",
+    "headline": "Zone euro : inflation sous 2% pour la première fois depuis 2021",
+    "summary": "La BCE confirme une inflation à 1,8% en mars 2026 et envisage une baisse des taux en juin.",
+    "tag": "Éco",
+    "date": "30 mars 2026",
+    "details": "L'inflation en zone euro est retombée à 1,8% en mars 2026, passant sous l'objectif de 2% de la Banque Centrale Européenne pour la première fois depuis août 2021. Cette baisse marque la fin d'un cycle inflationniste historique déclenché par la pandémie et la guerre en Ukraine.\n\n**Évolution de l'inflation en zone euro :**\n• 2021 : montée progressive de 1% à 5%\n• 2022 : pic à 10,6% en octobre (crise énergétique)\n• 2023-2024 : descente progressive\n• Mars 2026 : 1,8% ✅\n\n**Ce que ça signifie pour vous :**\n• Les taux d'intérêt des crédits immobiliers devraient baisser courant 2026\n• La BCE envisage de ramener son taux directeur de 2,5% à 2% d'ici fin 2026\n• Le pouvoir d'achat se stabilise après 4 ans de pression\n\n**Nuances :** L'inflation des services reste à 3,2%. Le logement et l'alimentation restent 25-30% plus chers qu'en 2020. La désinflation ne signifie pas retour aux anciens prix."
+  },
+  {
+    "id": 5,
+    "theme": "Culture",
+    "emoji": "🎬",
+    "color": "purple",
+    "headline": "Cannes 2026 : 19 films en compétition, l'IA fait débat",
+    "summary": "La sélection officielle du Festival de Cannes 2026 dévoilée — deux films IA en hors-compétition.",
+    "tag": "Culture",
+    "date": "30 mars 2026",
+    "details": "Le Festival de Cannes annonce sa 79ème édition (13-24 mai 2026) avec une sélection officielle de 19 films en compétition pour la Palme d'Or. Cette année, le débat sur l'intelligence artificielle dans le cinéma s'invite sur la Croisette.\n\n**La sélection en chiffres :**\n• 19 films en compétition officielle\n• 5 réalisateurs français (record depuis 2003)\n• Représentation de 23 pays\n• 6 réalisatrices (en progression)\n\n**Le débat IA :**\nDeux films générés partiellement par IA sont sélectionnés hors compétition dans une nouvelle section 'Cinéma & IA'. Le jury délibérera sur une charte éthique concernant la mention obligatoire de l'utilisation de l'IA au générique.\n\n**Films français attendus :**\nJacques Audiard revient avec un drame contemporain. Céline Sciamma présente un film d'animation inédit. Trois premiers films français figurent dans la sélection Un Certain Regard.\n\n**À noter :** Netflix et Amazon participent pour la 3ème année consécutive en compétition officielle."
+  },
+  {
+    "id": 6,
+    "theme": "Sport",
+    "emoji": "⚽",
+    "color": "orange",
+    "headline": "Coupe du Monde 2026 : qualifications européennes, France en tête",
+    "summary": "La France termine première de son groupe. Le Maroc crée la surprise en dominant la CAN.",
+    "tag": "Sport",
+    "date": "30 mars 2026",
+    "details": "À 3 mois du début de la Coupe du Monde 2026 (co-organisée par USA, Canada, Mexique), les qualifications européennes touchent à leur fin. 16 équipes européennes sont qualifiées.\n\n**Équipes européennes qualifiées :**\n🇫🇷 France (1ère du groupe A) — 8 victoires en 8 matchs\n🏴󠁧󠁢󠁥󠁮󠁧󠁿 Angleterre ✅ | 🇪🇸 Espagne ✅ | 🇩🇪 Allemagne ✅\n🇵🇹 Portugal ✅ | 🇧🇪 Belgique ✅ | 🇳🇱 Pays-Bas ✅\n\n**La surprise Maroc :**\nLe Maroc a dominé la Coupe d'Afrique des Nations (CAN) 2026 et arrive avec un statut de co-favori. Après leur épopée en 2022 (demi-finale), les Lions de l'Atlas visent le titre.\n\n**Format inédit :**\nLa CdM 2026 sera la première avec 48 équipes (contre 32 en 2022). 3 équipes par groupe, top 2 + 8 meilleurs 3èmes se qualifient.\n\n**Calendrier :**\n• Tirage au sort : 15 juin 2026\n• Premier match : 11 juillet 2026\n• Finale : 19 août 2026 (MetLife Stadium, New York)"
+  },
+  {
+    "id": 7,
+    "theme": "Réseaux Sociaux",
+    "emoji": "📱",
+    "color": "purple",
+    "headline": "Tendances réseaux sociaux mars 2026 : l'auto-compliment, TikTok Shop & la microviralité",
+    "summary": "L'auto-compliment cartonne sur TikTok. Le social commerce explose. La recherche se fait désormais sur les réseaux avant Google.",
+    "tag": "Tendances",
+    "date": "30 mars 2026",
+    "details": "Les réseaux sociaux évoluent vite. Voici les grandes tendances à connaître en ce printemps 2026.\n\n**🔥 Trend du moment : L'Auto-Compliment**\nLa tendance incontournable du printemps : se lancer des fleurs en mode humoristique. Le principe ? Filmer sa routine en se complimentant exagérément sur tout. Millions de vues garantis. Cette tendance reflète un besoin d'autodérision et de positivité décomplexée.\n\n**🛍️ TikTok Shop : le social commerce explose**\nTikTok Shop s'impose comme le 2ème canal d'achat en ligne chez les 18-30 ans en France. Les créateurs deviennent vendeurs. Le taux de conversion via live shopping atteint 8% (vs 2% pour l'e-commerce classique).\n\n**🔍 Social Search : la nouvelle façon de chercher**\n35% des 18-25 ans font leurs recherches sur TikTok ou Instagram avant Google. Les marques doivent optimiser leur présence sociale comme elles optimisaient leur SEO.\n\n**⚡ Microviralité : la nouvelle stratégie**\nFini les mega-influenceurs. Les marques misent sur des contenus hyper-ciblés qui touchent une niche précise avec un fort taux d'engagement. 10 000 vues très engagées > 1M de vues passives.\n\n**📊 Chiffres clés :**\n• TikTok : 1,7 milliard d'utilisateurs actifs mondiaux\n• Instagram Reels : format dominant en France\n• Threads (Meta) : 200M utilisateurs, en croissance"
+  },
+  {
+    "id": 8,
+    "theme": "Pop Culture",
+    "emoji": "🎬",
+    "color": "orange",
+    "headline": "Pop culture 2026 : Marvel fatigue, renaissance des jeux vidéo narratifs et K-Drama mondial",
+    "summary": "Le MCU cherche un second souffle, les jeux narratifs explosent, et le K-Drama confirme sa domination mondiale sur les plateformes.",
+    "tag": "Pop Culture",
+    "date": "30 mars 2026",
+    "details": "La pop culture en 2026, c'est un paysage en pleine recomposition. Quelques grandes tendances dominent.\n\n**🦸 Marvel : la fatigue s'installe, le reboot s'impose**\nAprès l'ère Avengers, le MCU peine à retrouver son souffle. Les films Phase 6 peinent au box-office. Marvel mise tout sur une refonte avec un reboot partiel des Avengers prévu pour 2027, avec un casting entièrement renouvelé.\n\n**🎮 Les jeux narratifs : la nouvelle pop culture**\nThe Last of Us, Cyberpunk 2077, Baldur's Gate 3 : les jeux vidéo à scénario profond sont devenus le médium pop culture dominant chez les 20-35 ans. Les adaptations séries explosent : Amazon, Netflix et HBO ont chacun 5+ projets en développement basés sur des jeux.\n\n**🇰🇷 K-Drama : domination mondiale confirmée**\nDepuis Squid Game (2021), le contenu coréen ne s'est jamais arrêté. En 2026, 3 des 10 séries les plus regardées sur Netflix sont coréennes. Le 'Hallyu' (vague coréenne) touche désormais l'Afrique, l'Amérique Latine et le Moyen-Orient.\n\n**📊 Chiffres :**\n• Netflix : 320M abonnés mondiaux\n• Le marché du jeu vidéo dépasse celui du cinéma et de la musique réunis\n• 45% des 15-30 ans regardent du contenu non-anglophone"
+  },
+  {
+    "id": 9,
+    "theme": "Musique",
+    "emoji": "🎵",
+    "color": "cyan",
+    "headline": "Musique 2026 : le retour du vinyle, l'IA dans les studios et les concerts hybrides",
+    "summary": "Les ventes de vinyles dépassent les CDs pour la 3ème année consécutive. Les IA compositrices entrent dans les charts. Les concerts mi-réels mi-virtuels s'imposent.",
+    "tag": "Musique",
+    "date": "30 mars 2026",
+    "details": "L'industrie musicale vit une période de transformation profonde entre nostalgie analogique et révolution numérique.\n\n**📀 Le grand retour du vinyle**\nPour la 3ème année consécutive, les ventes de vinyles dépassent celles des CDs en France et aux USA. Le vinyle représente désormais 67% des revenus physiques de la musique. Les jeunes de 18-25 ans sont les premiers acheteurs. C'est pas de la nostalgie — c'est un objet collector et une expérience d'écoute consciente.\n\n**🤖 L'IA dans les charts : ça divise**\nPlusieurs titres générés ou co-créés avec l'IA ont intégré le Top 50 mondial en 2025-2026. La SACEM et les syndicats de musiciens réclament un cadre légal. Spotify teste un label dédié 'AI-assisted'. Le débat : plagiat systémique ou outil créatif ?\n\n**🌐 Concerts hybrides : le nouveau standard**\nDepuis Travis Scott dans Fortnite (2020), les concerts virtuels ont évolué. En 2026, des artistes comme Billie Eilish, Rosé (BLACKPINK) et PNL proposent des expériences hybrides : concert physique + avatar en temps réel dans un métavers musical. Jusqu'à 2M de spectateurs simultanés.\n\n**📊 Chiffres :**\n• Spotify : 700M d'utilisateurs, 240M payants\n• Revenus du streaming musical : +12% en 2025\n• Coût moyen d'une place de concert : +45% depuis 2020"
+  }
+]

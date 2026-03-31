@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Les Classiques : Le Firmware Original de la Musique",
+    "brief": "Avant les playlists Spotify, avant les CD, avant même les disques vinyle, il y avait eux : Bach, Handel, Vivaldi, Mozart, Beethoven. Ces compositeurs n'avaient ni studio d'enregistrement, ni autotune, ni contrat avec une major — juste de l'encre, du papier et un cerveau capable d'entendre la musique complète avant même de la jouer. Johann Sebastian Bach composait des fugues à plusieurs voix comme un algorithme de génération procédurale — une complexité mathématique impossible à croire faite à la main. Wolfgang Amadeus Mozart, lui, était le premier child prodigy viral de l'histoire : en tournée à 6 ans, compositeur à 8 ans, mort à 35 ans en laissant plus de 600 œuvres. Et Beethoven a composé certaines de ses plus grandes symphonies en étant complètement sourd — le niveau de difficulté ultime, joué en mode Dieu.",
+    "visualDescription": "Une salle de concert baroque plongée dans l'obscurité, illuminée uniquement par des chandelles néon or et blanc. Des partitions musicales holographiques qui flottent dans l'air. Bach en silhouette devant un orgue monumental strié de lumières violettes. Une portée musicale en néon cyan qui serpente à travers la pièce. Ambiance classique cyberpunk intemporel.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1507838153414-b4b713384a76",
+    "quiz": [
+      {
+        "question": "Quelle célèbre symphonie Beethoven a-t-il composée alors qu'il était presque totalement sourd ?",
+        "options": ["La 5ème Symphonie", "La 6ème Symphonie 'Pastorale'", "La 9ème Symphonie 'Ode à la Joie'", "La 3ème Symphonie 'Héroïque'"],
+        "answer": "La 9ème Symphonie 'Ode à la Joie'"
+      },
+      {
+        "question": "À quel âge Wolfgang Amadeus Mozart a-t-il commencé à composer ses premières pièces musicales ?",
+        "options": ["3 ans", "5 ans", "8 ans", "12 ans"],
+        "answer": "5 ans"
+      },
+      {
+        "question": "Quel compositeur baroque allemand est surtout connu pour ses fugues et sa musique d'orgue, ainsi que pour ses 'Variations Goldberg' ?",
+        "options": ["Georg Friedrich Haendel", "Antonio Vivaldi", "Johann Sebastian Bach", "Henry Purcell"],
+        "answer": "Johann Sebastian Bach"
+      },
+      {
+        "question": "Quel compositeur baroque italien est célèbre pour ses 'Quatre Saisons', un ensemble de quatre concertos pour violon ?",
+        "options": ["Claudio Monteverdi", "Arcangelo Corelli", "Antonio Vivaldi", "Domenico Scarlatti"],
+        "answer": "Antonio Vivaldi"
+      },
+      {
+        "question": "À quel âge Mozart est-il décédé, laissant son célèbre Requiem inachevé ?",
+        "options": ["32 ans", "35 ans", "39 ans", "41 ans"],
+        "answer": "35 ans"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Le Jazz & le Blues : L'OS Libre de la Musique Américaine",
+    "brief": "Fin XIXe siècle, dans les quartiers noirs de la Nouvelle-Orléans et du Delta du Mississippi, naît quelque chose de nouveau : le blues et le jazz. C'est la musique de la douleur transformée en art — les descendants d'esclaves qui créent un langage sonore entièrement nouveau, avec des harmonies qu'on n'avait jamais entendues en Europe. Louis Armstrong est le premier grand architecte du jazz : sa trompette, son chant, son swing — c'est lui qui exporte le genre dans le monde entier dans les années 20 et 30. Miles Davis, lui, c'est le Linus Torvalds du jazz : il réinvente le truc à chaque décennie, du bebop au cool jazz en passant par le jazz fusion. John Coltrane pousse la technique du saxophone à des limites qui frisent la transe mystique. Le jazz et le blues, c'est le code source ouvert dont descend pratiquement toute la musique populaire du XXe siècle.",
+    "visualDescription": "Un club de jazz des années 50 plongé dans une lumière de scène néon orangée et rouge. Louis Armstrong en silhouette lumineuse avec sa trompette qui envoie des notes en particules dorées. Miles Davis en ombre bleue penchée sur son micro. Des portées de jazz avec des notes qui s'envolent en fumée cyan. Ambiance Harlem Renaissance cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f",
+    "quiz": [
+      {
+        "question": "Dans quelle ville américaine le jazz est-il principalement né à la fin du XIXe siècle ?",
+        "options": ["New York", "Chicago", "La Nouvelle-Orléans", "Memphis"],
+        "answer": "La Nouvelle-Orléans"
+      },
+      {
+        "question": "Quel instrument Louis Armstrong jouait-il pour devenir l'une des premières icônes mondiales du jazz ?",
+        "options": ["Le saxophone", "La clarinette", "La trompette", "Le trombone"],
+        "answer": "La trompette"
+      },
+      {
+        "question": "Quel album de Miles Davis (1959) est souvent classé comme le meilleur album de jazz de l'histoire ?",
+        "options": ["Bitches Brew", "Birth of the Cool", "Kind of Blue", "Sketches of Spain"],
+        "answer": "Kind of Blue"
+      },
+      {
+        "question": "Quel saxophoniste, connu pour son album 'A Love Supreme', a repoussé les limites du jazz vers une dimension quasi spirituelle ?",
+        "options": ["Charlie Parker", "Sonny Rollins", "Ornette Coleman", "John Coltrane"],
+        "answer": "John Coltrane"
+      },
+      {
+        "question": "Quel style de jazz, né dans les années 40, est caractérisé par des tempos rapides et des improvisations complexes ?",
+        "options": ["Le cool jazz", "Le bebop", "Le swing", "Le jazz fusion"],
+        "answer": "Le bebop"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Le Rock & la Pop : Le Big Bang du Divertissement de Masse",
+    "brief": "1954. Elvis Presley entre dans un studio de Memphis et enregistre 'That's All Right' — un mélange de blues noir et de country blanche qui fait exploser la frontière raciale dans la musique américaine. C'est la première mise à jour majeure qui fait planter l'ancien système. Huit ans plus tard, Liverpool, Angleterre : quatre gars forment les Beatles. Entre 1963 et 1970, ils produisent l'équivalent d'une vingtaine d'albums et réinventent la pop, le rock, la psychédélie et le studio d'enregistrement comme outil créatif — Abbey Road reste l'un des albums les plus étudiés de l'histoire. Les Rolling Stones apportent le côté sombre, brut et rebelle. Jimi Hendrix redéfinit la guitare électrique comme si le firmware avait reçu un DLC impossible. Le rock devient la bande-son d'une génération qui conteste tout — Vietnam, droits civiques, libération sexuelle. Le genre qui a changé la société autant que la musique.",
+    "visualDescription": "Une scène de stade remplie de projecteurs néon rouge et blanc sous une nuit étoilée. Elvis en combinaison pailletée néon qui joue sous un spot doré. Les quatre silhouettes des Beatles avec leurs instruments en néon bleu. Jimi Hendrix en contre-jour orange avec sa guitare qui brûle en flammes électriques. Ambiance rock'n'roll cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+    "quiz": [
+      {
+        "question": "Quel titre Elvis Presley a-t-il enregistré en 1954 pour le label Sun Records, souvent considéré comme l'acte de naissance du rock'n'roll ?",
+        "options": ["Hound Dog", "Jailhouse Rock", "That's All Right", "Blue Suede Shoes"],
+        "answer": "That's All Right"
+      },
+      {
+        "question": "Dans quelle ville anglaise les Beatles ont-ils été formés ?",
+        "options": ["Londres", "Manchester", "Birmingham", "Liverpool"],
+        "answer": "Liverpool"
+      },
+      {
+        "question": "Quel album des Beatles sorti en 1969 contient la célèbre photo du passage piéton sur la pochette ?",
+        "options": ["Sgt. Pepper's Lonely Hearts Club Band", "Revolver", "Abbey Road", "Let It Be"],
+        "answer": "Abbey Road"
+      },
+      {
+        "question": "Quel guitariste américain, connu pour son jeu virtuose et son set d'Hendrix en feu à Monterey en 1967, a révolutionné la guitare électrique ?",
+        "options": ["Eric Clapton", "Jimi Hendrix", "Keith Richards", "Jimmy Page"],
+        "answer": "Jimi Hendrix"
+      },
+      {
+        "question": "Quel titre des Rolling Stones (1965), avec son riff de guitare iconique, est considéré comme l'un des plus grands singles rock de l'histoire ?",
+        "options": ["Paint It Black", "(I Can't Get No) Satisfaction", "Sympathy for the Devil", "Jumpin' Jack Flash"],
+        "answer": "(I Can't Get No) Satisfaction"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Disco, Funk & Hip-Hop : Quand le Rythme a Pris le Pouvoir",
+    "brief": "Années 70, New York et Detroit : le funk de James Brown et de Prince électrifie les dancefloors. La disco explose — Studio 54 devient le serveur central d'une époque où la fête est une philosophie de vie. Et puis en 1979, dans le Bronx, un DJ branché sur deux platines invente quelque chose de nouveau : le hip-hop. Michael Jackson, lui, est la convergence de tout ça — la pop, le funk, la soul, la danse — dans un seul artiste qui vend 66 millions d'exemplaires de 'Thriller', l'album le plus vendu de l'histoire. Tupac Shakur et The Notorious B.I.G. élèvent le rap au rang de littérature de rue dans les années 90. Daft Punk, les robots français, branchent la house music sur des synthés vocoder et créent un son qui influence encore aujourd'hui chaque producteur de pop mondiale. Le rythme comme langage universel, la répétition comme transe.",
+    "visualDescription": "Un dancefloor de discothèque des années 70 en mode néon total — miroir boule qui projette des éclats de lumière multicolores sur des danseurs en silhouettes. Michael Jackson en position de moonwalk sous un spot blanc intense. Les casques robots de Daft Punk en chrome brillant. Des platines de DJ Bronx-style avec des samples en vagues cyan holographiques. Ambiance funk cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7",
+    "quiz": [
+      {
+        "question": "Quel est l'album de Michael Jackson sorti en 1982 et qui est le plus vendu de l'histoire avec environ 66 millions d'exemplaires ?",
+        "options": ["Bad", "Off the Wall", "Thriller", "Dangerous"],
+        "answer": "Thriller"
+      },
+      {
+        "question": "Dans quel quartier de New York le hip-hop est-il né à la fin des années 70 ?",
+        "options": ["Harlem", "Brooklyn", "Queens", "Le Bronx"],
+        "answer": "Le Bronx"
+      },
+      {
+        "question": "Quel duo français de musique électronique, connu pour ses casques de robots, a sorti l'album 'Random Access Memories' en 2013 ?",
+        "options": ["Justice", "Cassius", "Daft Punk", "Bob Sinclar"],
+        "answer": "Daft Punk"
+      },
+      {
+        "question": "Quel artiste funk américain, surnommé 'The Godfather of Soul', a influencé le hip-hop, la dance et la pop pendant des décennies ?",
+        "options": ["Sly Stone", "George Clinton", "Prince", "James Brown"],
+        "answer": "James Brown"
+      },
+      {
+        "question": "Quel rappeur américain a sorti l'album 'All Eyez on Me' en 1996, peu avant son assassinat ?",
+        "options": ["The Notorious B.I.G.", "Tupac Shakur", "Jay-Z", "Nas"],
+        "answer": "Tupac Shakur"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La Musique Électronique & Contemporaine : L'Ère du Stream Infini",
+    "brief": "Années 2000-2020. Napster casse l'industrie du disque comme un DDoS sur le système des majors. Le téléchargement illégal cède la place au streaming — Spotify en 2008, puis Apple Music, Tidal, YouTube Music. L'industrie se réinvente entièrement : on passe d'un modèle de vente d'albums à un modèle d'abonnement et de streams comptabilisés à l'écoute. La musique électronique explose : Avicii, Calvin Harris, David Guetta font entrer l'EDM dans les stades. En parallèle, des artistes comme Beyoncé, Drake, Billie Eilish ou The Weeknd redéfinissent ce que 'être une star de pop' signifie à l'ère des réseaux sociaux — leur Instagram et leur TikTok sont aussi importants que leur musique. La production musicale se démocratise totalement : avec un laptop et Logic Pro, n'importe qui peut faire un hit depuis sa chambre. Le studio est devenu une app.",
+    "visualDescription": "Un studio home setup futuriste avec un écran de DAW holographique et des synthés néon. Des ondes sonores en cyan et violet qui se propagent comme des WiFi circles. Des avatars holographiques d'artistes contemporains sur des podiums lumineux. Des chiffres de streams qui défilent comme un tableau de bord en or. Ambiance musique de l'ère numérique cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04",
+    "quiz": [
+      {
+        "question": "Quelle plateforme de streaming musical, lancée en 2008, a été pionnière du modèle d'écoute à la demande par abonnement ?",
+        "options": ["Apple Music", "Deezer", "Spotify", "SoundCloud"],
+        "answer": "Spotify"
+      },
+      {
+        "question": "Quel DJ suédois, décédé en 2018, est l'un des artistes emblématiques de l'EDM des années 2010 avec des titres comme 'Wake Me Up' ?",
+        "options": ["David Guetta", "Calvin Harris", "Avicii", "Martin Garrix"],
+        "answer": "Avicii"
+      },
+      {
+        "question": "Quelle application de vidéos courtes est devenue, dans les années 2020, l'un des principaux vecteurs de découverte et de viralité musicale ?",
+        "options": ["Instagram Reels", "YouTube Shorts", "TikTok", "Snapchat"],
+        "answer": "TikTok"
+      },
+      {
+        "question": "Quel logiciel de production musicale (DAW) très populaire est développé par Apple et souvent utilisé par les producteurs amateurs et professionnels sur Mac ?",
+        "options": ["FL Studio", "Ableton Live", "Logic Pro", "Pro Tools"],
+        "answer": "Logic Pro"
+      },
+      {
+        "question": "Quelle artiste américaine a sorti l'album 'When We All Fall Asleep, Where Do We Go?' en 2019, en le produisant entièrement avec son frère Finneas dans une chambre de banlieue ?",
+        "options": ["Olivia Rodrigo", "Billie Eilish", "Lorde", "Halsey"],
+        "answer": "Billie Eilish"
+      }
+    ]
+  }
+]

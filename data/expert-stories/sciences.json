@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "Les Grecs & la Naissance de la Science : Le Premier Debug de l'Univers",
+    "brief": "Avant les Grecs, l'explication du monde c'était simple : les dieux. La foudre ? Zeus. La mer en colère ? Poséidon. Et puis arrive Thalès de Milet, vers 600 av. J.-C., et il dit un truc dingue : 'Et si on cherchait des explications naturelles ?' C'est lui, le premier mec à avoir rejeté le 'parce que les dieux l'ont décidé' pour chercher des causes physiques — le premier scientifique de l'histoire, littéralement. Dans sa team il y a Pythagore, l'obsédé des triangles qui a donné son nom à un théorème qu'on récite encore aujourd'hui, et Archimède, le génie de Syracuse qui a crié 'Eurêka !' dans son bain en découvrant la poussée hydrostatique. Ces types ont posé les fondations des maths, de la physique et de la logique — le repo GitHub original de la science occidentale, commité 2500 ans avant l'invention des ordinateurs.",
+    "visualDescription": "Une agora grecque antique plongée dans une nuit étoilée, colonnes de marbre blanc striées de néons cyan et violet. Thalès traçant des cercles lumineux sur le sol. Un triangle de Pythagore holographique qui pulse en or. Archimède dans une baignoire en marbre avec des ondes hydrodynamiques en néon bleu. Ambiance antique cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1564769662533-4f00a87b4056",
+    "quiz": [
+      {
+        "question": "Quel philosophe grec est souvent considéré comme le premier scientifique de l'histoire pour avoir cherché des explications naturelles au monde ?",
+        "options": ["Pythagore", "Aristote", "Thalès de Milet", "Socrate"],
+        "answer": "Thalès de Milet"
+      },
+      {
+        "question": "À quoi fait référence le célèbre 'Eurêka !' attribué à Archimède ?",
+        "options": ["La découverte du théorème de Pythagore", "La découverte du principe de poussée hydrostatique dans son bain", "L'invention du levier", "La mesure de la circonférence de la Terre"],
+        "answer": "La découverte du principe de poussée hydrostatique dans son bain"
+      },
+      {
+        "question": "Quel est l'énoncé du théorème de Pythagore ?",
+        "options": ["La somme des angles d'un triangle est 180°", "Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés", "Deux droites parallèles ne se coupent jamais", "L'aire d'un cercle est πr²"],
+        "answer": "Dans un triangle rectangle, le carré de l'hypoténuse est égal à la somme des carrés des deux autres côtés"
+      },
+      {
+        "question": "Quel philosophe grec a compilé des encyclopédies du savoir couvrant la logique, la biologie, la physique et la politique ?",
+        "options": ["Platon", "Socrate", "Archimède", "Aristote"],
+        "answer": "Aristote"
+      },
+      {
+        "question": "Quel savant grec de l'Antiquité a calculé la circumférence de la Terre avec une précision remarquable à l'aide de bâtons et d'ombres ?",
+        "options": ["Thalès", "Ératosthène", "Ptolémée", "Hippocrate"],
+        "answer": "Ératosthène"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "La Révolution Scientifique : Le Grand Patch de l'Humanité",
+    "brief": "XVIe-XVIIe siècle. L'Église dit que la Terre est au centre de l'univers, et tout le monde hoche la tête. Et puis débarque Copernic avec son système héliocentrique — la Terre tourne autour du Soleil, pas l'inverse. C'est le lore flip total. Galilée confirme l'affaire avec sa lunette astronomique, observe les lunes de Jupiter, et se retrouve en résidence surveillée pour ça — le prix à payer pour avoir raison trop tôt. Kepler formalise les orbites elliptiques des planètes avec ses trois lois, Johannes Newton pose les lois universelles de la gravitation en 1687 dans ses 'Principia Mathematica' — la mise à jour firmware de l'univers entier. Ces hommes n'ont pas juste découvert des faits : ils ont inventé la méthode scientifique elle-même, l'idée qu'une hypothèse doit être testée, vérifiée, reproductible. Le commit qui a branché l'humanité sur la réalité.",
+    "visualDescription": "Un observatoire baroque baigné de lumières néon rouge et or sous un ciel étoilé. Une lunette de Galilée pointée vers Jupiter entourée de ses lunes holographiques. La pomme de Newton tombant en slow motion avec des vecteurs de force en cyan. Les ellipses de Kepler tracées en violet sur fond d'espace infini. Ambiance révolution scientifique cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1454789548928-9efd52dc4031",
+    "quiz": [
+      {
+        "question": "Qui a proposé le modèle héliocentrique, affirmant que la Terre tourne autour du Soleil ?",
+        "options": ["Galilée", "Nicolas Copernic", "Tycho Brahé", "Isaac Newton"],
+        "answer": "Nicolas Copernic"
+      },
+      {
+        "question": "Quelle découverte de Galilée avec sa lunette astronomique a confirmé que tous les astres ne tournaient pas autour de la Terre ?",
+        "options": ["Les anneaux de Saturne", "Les taches solaires", "Les quatre grandes lunes de Jupiter", "La surface de la Lune"],
+        "answer": "Les quatre grandes lunes de Jupiter"
+      },
+      {
+        "question": "Quelle est la première loi de Kepler sur le mouvement des planètes ?",
+        "options": ["Les planètes tournent en cercles parfaits", "Les planètes décrivent des orbites elliptiques dont le Soleil occupe un foyer", "La vitesse d'une planète est constante", "Toutes les planètes ont la même période de révolution"],
+        "answer": "Les planètes décrivent des orbites elliptiques dont le Soleil occupe un foyer"
+      },
+      {
+        "question": "En quelle année Isaac Newton a-t-il publié ses 'Principia Mathematica', qui énoncent les lois de la gravitation universelle ?",
+        "options": ["1543", "1610", "1687", "1727"],
+        "answer": "1687"
+      },
+      {
+        "question": "Pour quelle raison Galilée a-t-il été condamné par l'Inquisition en 1633 ?",
+        "options": ["Pour avoir pratiqué la sorcellerie", "Pour avoir défendu le modèle héliocentrique de Copernic", "Pour avoir volé les travaux d'un autre savant", "Pour avoir refusé de payer ses impôts à l'Église"],
+        "answer": "Pour avoir défendu le modèle héliocentrique de Copernic"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Darwin & la Biologie : L'Algorithme du Vivant",
+    "brief": "1859. Charles Darwin publie 'L'Origine des Espèces' et envoie une bombe nucléaire philosophique dans la face du XIXe siècle : les espèces ne sont pas fixes, créées une bonne fois pour toutes — elles évoluent par sélection naturelle. C'est l'algorithme du vivant, le code source de toute la biodiversité sur Terre. Dans le même siècle, Louis Pasteur prouve que les maladies sont causées par des microbes et invente la pasteurisation — l'antivirus de l'humanité. Gregor Mendel, un moine autrichien, croise des pois dans son jardin et découvre les lois de l'hérédité, posant les bases de la génétique sans même savoir ce qu'est l'ADN. Ce n'est qu'en 1953 que Watson et Crick, avec les données de Rosalind Franklin, résolvent la structure en double hélice de l'ADN — le blueprint code de la vie enfin déchiffré.",
+    "visualDescription": "Une jungle tropicale luxuriante traversée de lianes néon vert et cyan. Un arbre de l'évolution holographique dont les branches s'allument une à une. Une double hélice d'ADN en bleu électrique qui se déroule dans l'air. Des fioles de Pasteur brillant en rouge. Un microscope vintage avec des microbes néon autour. Ambiance biologie cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe",
+    "quiz": [
+      {
+        "question": "Quel ouvrage majeur Charles Darwin a-t-il publié en 1859 pour exposer sa théorie de l'évolution ?",
+        "options": ["La Descendance de l'Homme", "Le Voyage du Beagle", "L'Origine des Espèces", "La Variation des Animaux et des Plantes"],
+        "answer": "L'Origine des Espèces"
+      },
+      {
+        "question": "Quel principe fondamental Darwin a-t-il proposé pour expliquer comment les espèces évoluent ?",
+        "options": ["La génération spontanée", "La sélection naturelle", "L'hérédité des caractères acquis", "La mutation aléatoire contrôlée"],
+        "answer": "La sélection naturelle"
+      },
+      {
+        "question": "Qui a découvert la structure en double hélice de l'ADN en 1953 ?",
+        "options": ["Gregor Mendel et Louis Pasteur", "Watson et Crick (avec les données de Rosalind Franklin)", "Darwin et Huxley", "Pauling et Wilkins uniquement"],
+        "answer": "Watson et Crick (avec les données de Rosalind Franklin)"
+      },
+      {
+        "question": "Quelle technique Louis Pasteur a-t-il inventée pour éliminer les micro-organismes dans les aliments liquides ?",
+        "options": ["La stérilisation", "La fermentation", "La pasteurisation", "La chloration"],
+        "answer": "La pasteurisation"
+      },
+      {
+        "question": "Quel moine autrichien a découvert les lois de l'hérédité au XIXe siècle en croisant des plants de pois ?",
+        "options": ["Louis Pasteur", "Charles Darwin", "Gregor Mendel", "Robert Koch"],
+        "answer": "Gregor Mendel"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Einstein & la Physique Moderne : Le Reboot Total de la Réalité",
+    "brief": "1905. Albert Einstein, employé à l'Office des brevets de Berne, publie en une seule année quatre articles qui vont révolutionner la physique. Le plus célèbre : la relativité restreinte, qui débouche sur E=mc², l'équation la plus iconique de l'histoire — l'énergie c'est de la masse multipliée par la vitesse de la lumière au carré. Autant dire qu'un tout petit bout de matière cache une énergie monstrueuse. En 1915, il pousse le bouchon encore plus loin avec la relativité générale : la gravité n'est pas une force, c'est une courbure de l'espace-temps. Pendant ce temps, Niels Bohr et Werner Heisenberg développent la mécanique quantique — un monde où les particules peuvent être à deux endroits à la fois et où l'acte d'observer change ce qu'on observe. La réalité a un patch note, et il est complètement pété.",
+    "visualDescription": "Un espace-temps courbé comme une grille néon violette déformée par une sphère lumineuse. Einstein en silhouette devant un tableau noir couvert de formules en néon blanc. Des particules quantiques qui scintillent en superposition cyan et rouge. L'équation E=mc² gravée en or holographique dans le vide. Ambiance physique théorique cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa",
+    "quiz": [
+      {
+        "question": "Quelle est la formule issue de la théorie de la relativité restreinte d'Einstein reliant énergie et masse ?",
+        "options": ["F = ma", "E = mc²", "E = hν", "V = IR"],
+        "answer": "E = mc²"
+      },
+      {
+        "question": "Selon la relativité générale d'Einstein, qu'est-ce que la gravité en réalité ?",
+        "options": ["Une force d'attraction entre deux masses", "Une courbure de l'espace-temps causée par la masse", "Un champ magnétique universel", "Une onde électromagnétique"],
+        "answer": "Une courbure de l'espace-temps causée par la masse"
+      },
+      {
+        "question": "Quel prix Nobel Albert Einstein a-t-il reçu, et pour quelle découverte spécifique (pas la relativité) ?",
+        "options": ["Le prix Nobel de Chimie pour E=mc²", "Le prix Nobel de Physique pour la découverte de l'effet photoélectrique", "Le prix Nobel de Paix pour son pacifisme", "Il n'a jamais reçu le prix Nobel"],
+        "answer": "Le prix Nobel de Physique pour la découverte de l'effet photoélectrique"
+      },
+      {
+        "question": "Quel physicien danois a proposé le modèle de l'atome avec des électrons sur des orbites quantifiées ?",
+        "options": ["Werner Heisenberg", "Erwin Schrödinger", "Niels Bohr", "Max Planck"],
+        "answer": "Niels Bohr"
+      },
+      {
+        "question": "Quel principe de la mécanique quantique, formulé par Werner Heisenberg, stipule qu'on ne peut pas connaître simultanément avec précision la position et la vitesse d'une particule ?",
+        "options": ["Le principe de superposition", "Le principe d'exclusion de Pauli", "Le principe d'incertitude d'Heisenberg", "Le principe de complémentarité de Bohr"],
+        "answer": "Le principe d'incertitude d'Heisenberg"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La Science Contemporaine : L'Ère des Mega-Découvertes",
+    "brief": "2000. On séquence le génome humain — les 3 milliards de paires de bases du code source de l'espèce humaine. C'est comme avoir enfin accès au fichier source d'un logiciel qu'on utilisait depuis 300 000 ans sans jamais lire la doc. En 2012, le CERN découvre le boson de Higgs, la particule qui donne sa masse à la matière — la pièce manquante du puzzle du Modèle Standard de la physique. En 2015, LIGO détecte les ondes gravitationnelles prédites par Einstein un siècle plus tôt. Et depuis les années 2010, l'intelligence artificielle s'emballe : les réseaux de neurones profonds battent les champions du monde aux échecs, au Go, et commencent à révolutionner la médecine, la physique, la biologie. On est peut-être en train de vivre la plus grande accélération scientifique de l'histoire humaine, en temps réel.",
+    "visualDescription": "Un laboratoire futuriste baigné de lumières néon bleues et vertes. Une double hélice d'ADN géante qui tourne au centre comme un hologramme. Le Grand Collisionneur du CERN en anneau de lumière violet. Des ondes gravitationnelles qui se propagent dans l'espace-temps comme des vagues néon. Un réseau de neurones IA lumineux en arrière-plan. Ambiance science du futur.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1507413245164-6160d8298b31",
+    "quiz": [
+      {
+        "question": "En quelle année le projet Génome Humain a-t-il annoncé le séquençage complet du génome humain ?",
+        "options": ["1990", "1997", "2003", "2010"],
+        "answer": "2003"
+      },
+      {
+        "question": "Quel est le surnom du boson de Higgs, découvert au CERN en 2012 ?",
+        "options": ["La particule de lumière", "La particule de Dieu", "La particule fantôme", "La particule zéro"],
+        "answer": "La particule de Dieu"
+      },
+      {
+        "question": "Quelle collaboration scientifique a détecté pour la première fois les ondes gravitationnelles en 2015 ?",
+        "options": ["Le CERN", "La NASA", "LIGO", "L'Agence Spatiale Européenne (ESA)"],
+        "answer": "LIGO"
+      },
+      {
+        "question": "Quelle technique révolutionnaire d'édition du génome, souvent comparée à un couper-coller de l'ADN, a été développée dans les années 2010 ?",
+        "options": ["La PCR", "CRISPR-Cas9", "La transgenèse classique", "La clonage par transfert nucléaire"],
+        "answer": "CRISPR-Cas9"
+      },
+      {
+        "question": "Quel programme d'intelligence artificielle de DeepMind a battu le champion du monde du jeu de Go en 2016, marquant une étape majeure de l'IA ?",
+        "options": ["Deep Blue", "Watson", "AlphaGo", "ChatGPT"],
+        "answer": "AlphaGo"
+      }
+    ]
+  }
+]

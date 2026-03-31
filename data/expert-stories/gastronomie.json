@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "Les Bases de la Cuisine Française — La Bible du Cuistot",
+    "brief": "T'as déjà entendu parler d'Escoffier ? Non ? Attends, je vais te faire un résumé speed. Auguste Escoffier, c'est le mec qui a littéralement réinventé la cuisine française à la fin du XIXe siècle. Avant lui, les banquets c'était le chaos total — tout arrivait en même temps, personne savait trop ce qu'il mangeait. Lui a tout codifié : les brigades de cuisine, les sauces mères, l'organisation en partis. Le vrai boss de la gastronomie moderne.\n\nLes sauces mères, c'est LE concept clé de la cuisine française classique. Il en existe cinq grandes familles : la béchamel, la velouté, l'espagnole, la sauce tomate et la hollandaise. Tout le reste — et je dis bien tout — découle de ces cinq bases. C'est comme les accords en musique : une fois que t'as les fondamentaux, tu peux tout improviser.\n\nEt les techniques de base, c'est pas là pour faire joli dans les bouquins. Sauter, pocher, braiser, rôtir... Chaque méthode a sa logique, ses textures, ses saveurs. Maîtriser ça, c'est avoir le langage universel de la cuisine. Sans ces bases, même le meilleur ingrédient du monde va finir en catastrophe dans l'assiette. Allez, on teste tout ça !",
+    "visualDescription": "Une cuisine professionnelle baignée de néons bleus et violets. Les casseroles en cuivre brillent comme des artefacts anciens sous des lumières LED froides. Des colonnes de vapeur s'élèvent en spirales holographiques. Sur un écran mural, les schémas des cinq sauces mères s'affichent comme des diagrammes d'une IA culinaire. L'ambiance : Blade Runner rencontre le Cordon Bleu.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Combien de sauces mères reconnaît la cuisine française classique codifiée par Escoffier ?",
+        "options": [
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "answer": "5"
+      },
+      {
+        "question": "Quelle sauce mère est réalisée à base d'un roux blanc et de lait ?",
+        "options": [
+          "La velouté",
+          "La béchamel",
+          "La hollandaise",
+          "L'espagnole"
+        ],
+        "answer": "La béchamel"
+      },
+      {
+        "question": "Quel ouvrage majeur Auguste Escoffier a-t-il publié en 1903, devenu la référence de la cuisine professionnelle ?",
+        "options": [
+          "La Physiologie du Goût",
+          "Le Guide Culinaire",
+          "L'Art Culinaire Moderne",
+          "Le Répertoire de la Cuisine"
+        ],
+        "answer": "Le Guide Culinaire"
+      },
+      {
+        "question": "La technique de cuisson «braiser» consiste à cuire les aliments comment ?",
+        "options": [
+          "À grande ébullition dans beaucoup d'eau",
+          "À sec dans un four très chaud",
+          "Lentement dans un liquide couvert à feu doux",
+          "En les plongeant dans une friture bouillante"
+        ],
+        "answer": "Lentement dans un liquide couvert à feu doux"
+      },
+      {
+        "question": "Dans l'organisation d'une brigade de cuisine classique, quel est le titre du responsable en chef ?",
+        "options": [
+          "Sous-chef",
+          "Chef de partie",
+          "Chef de cuisine",
+          "Commis"
+        ],
+        "answer": "Chef de cuisine"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "La Gastronomie Mondiale — Le Tour du Monde en 80 Bouchées",
+    "brief": "Ferme les yeux et imagine : en une seule journée, tu pourrais petit-déjeuner à Tokyo avec un bol de ramen fumant, déjeuner à Rome avec des pâtes cacio e pepe parfaites, et dîner à Mexico City avec des tacos al pastor qui déchirent. La gastronomie mondiale, c'est littéralement l'une des meilleures choses que l'humanité ait jamais inventées. Chaque culture a ses codes, ses ingrédients stars, ses techniques secrètes.\n\nLa cuisine japonaise, c'est tout un art de la précision et du respect du produit. L'umami — cette cinquième saveur qu'on a du mal à définir mais qu'on reconnaît immédiatement — c'est une découverte japonaise. Le dashi, le miso, la sauce soja... des ingrédients simples qui créent une profondeur de goût incroyable. Et n'oublions pas que les sushis, dans leur forme actuelle, ne sont vieux que de quelques siècles.\n\nLa cuisine mexicaine, inscrite au patrimoine de l'UNESCO depuis 2010, c'est un métissage explosif entre les traditions aztèques et l'influence espagnole. Le cacao, la vanille, le maïs, les piments — ces ingrédients sont des cadeaux du Mexique au reste du monde. Et la cuisine italienne ? Simple en apparence, mais derrière chaque recette de carbonara ou de risotto se cache une philosophie entière : la qualité des produits avant tout, le terroir, la tradition familiale. C'est le voyage qui commence ici.",
+    "visualDescription": "Une carte du monde projetée en hologramme néon sur le sol d'une cuisine futuriste. Chaque pays brille d'une couleur différente selon sa tradition culinaire : rouge carmin pour le Mexique, bleu indigo pour le Japon, vert olive pour l'Italie. Des bols, des woks et des molinillos flottent dans les airs comme des objets en apesanteur. Une ligne lumineuse trace le chemin entre les saveurs.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle est la cinquième saveur fondamentale, identifiée par le scientifique japonais Kikunae Ikeda en 1908 ?",
+        "options": [
+          "L'amer",
+          "L'umami",
+          "L'astringent",
+          "Le piquant"
+        ],
+        "answer": "L'umami"
+      },
+      {
+        "question": "En quelle année la cuisine mexicaine a-t-elle été inscrite au patrimoine culturel immatériel de l'UNESCO ?",
+        "options": [
+          "2003",
+          "2007",
+          "2010",
+          "2013"
+        ],
+        "answer": "2010"
+      },
+      {
+        "question": "Quel ingrédient est absolument absent d'une vraie carbonara romaine traditionnelle ?",
+        "options": [
+          "Le guanciale",
+          "La crème fraîche",
+          "Les œufs",
+          "Le pecorino romano"
+        ],
+        "answer": "La crème fraîche"
+      },
+      {
+        "question": "Le «dashi» est un bouillon de base de la cuisine japonaise. Il est principalement préparé à partir de quoi ?",
+        "options": [
+          "Porc et gingembre",
+          "Kombu et bonite séchée",
+          "Poulet et champignons shiitake",
+          "Crevettes et algues wakame"
+        ],
+        "answer": "Kombu et bonite séchée"
+      },
+      {
+        "question": "Quelle épice, originaire du Mexique, fut rapportée en Europe par les conquistadors espagnols et révolutionna la pâtisserie mondiale ?",
+        "options": [
+          "Le piment chipotle",
+          "La vanille",
+          "Le cacao amer",
+          "L'achiote"
+        ],
+        "answer": "La vanille"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Grands Chefs — Les Rockstars aux Toques",
+    "brief": "Les grands chefs, c'est un peu les rockstars de notre époque. Ils ont transformé la façon dont on pense à la nourriture, fait des restaurants des destinations de pèlerinage et prouvé que la cuisine pouvait être un art à part entière. Paul Bocuse, le «pape de la gastronomie française», a régné sur Lyon pendant des décennies avec sa légendaire soupe VGE — une soupe aux truffes servie sous une croûte en feuilleté, créée pour le président Valéry Giscard d'Estaing en 1975. Une anecdote incroyable pour une recette qui définit une époque.\n\nJoël Robuchon, lui, c'est le chef qui a décroché le plus d'étoiles Michelin de toute l'histoire : 32 à son apogée. Sa purée de pommes de terre — autant de beurre que de pommes de terre — est devenue légendaire. Il a aussi révolutionné le concept avec ses «Atelier», des restaurants en comptoir où le chef cuisine devant les clients. Une rupture totale avec le protocole guindé de la grande cuisine.\n\nEt puis il y a Ferran Adrià, l'Espagnol qui a fait exploser toutes les conventions avec elBulli. La cuisine moléculaire, les sphérifications, les mousses impossibles... Son restaurant près de Barcelone a été élu meilleur restaurant du monde cinq fois. Il a fermé elBulli en 2011 pour en faire un centre de créativité culinaire. Alain Ducasse, lui, jongle avec des restaurants sur trois continents et continue d'incarner l'excellence française à l'international. Des géants, tous.",
+    "visualDescription": "Un panthéon culinaire futuriste : des portraits holographiques de chefs légendaires flottent dans un espace sombre, auréolés de lumières dorées et cramoisies. Des étoiles Michelin tombent comme une pluie de pixels argentés. Au centre, une grande table illuminée par des projecteurs néon blanc. Autour, des toques qui lévitent, des casseroles en orbite. L'atmosphère d'un musée sci-fi dédié aux dieux de la gastronomie.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Pour quel président de la République française Paul Bocuse a-t-il créé sa célèbre soupe aux truffes en croûte en 1975 ?",
+        "options": [
+          "Georges Pompidou",
+          "François Mitterrand",
+          "Valéry Giscard d'Estaing",
+          "Jacques Chirac"
+        ],
+        "answer": "Valéry Giscard d'Estaing"
+      },
+      {
+        "question": "Combien d'étoiles Michelin Joël Robuchon détenait-il à son apogée, record mondial absolu ?",
+        "options": [
+          "24",
+          "28",
+          "32",
+          "36"
+        ],
+        "answer": "32"
+      },
+      {
+        "question": "Quel chef catalan a fondé elBulli, élu plusieurs fois meilleur restaurant du monde, et est considéré comme le père de la cuisine moléculaire moderne ?",
+        "options": [
+          "Juan Mari Arzak",
+          "Ferran Adrià",
+          "Albert Adrià",
+          "Carme Ruscalleda"
+        ],
+        "answer": "Ferran Adrià"
+      },
+      {
+        "question": "Alain Ducasse est le premier chef à avoir détenu simultanément trois étoiles Michelin dans des restaurants de combien de villes différentes ?",
+        "options": [
+          "Deux",
+          "Trois",
+          "Quatre",
+          "Cinq"
+        ],
+        "answer": "Trois"
+      },
+      {
+        "question": "Dans quelle ville française se trouve le restaurant de Paul Bocuse, L'Auberge du Pont de Collonges, triplement étoilé depuis 1965 ?",
+        "options": [
+          "Paris",
+          "Lyon",
+          "Bordeaux",
+          "Marseille"
+        ],
+        "answer": "Lyon"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Vins, Fromages & Terroir — La Sainte Trinité Française",
+    "brief": "Il y a une phrase qu'on prête à de Gaulle : «Comment voulez-vous gouverner un pays qui a deux cent quarante-six variétés de fromages ?» Le chiffre est peut-être exagéré, mais l'idée est là. La France, c'est une nation qui a élevé le fromage au rang d'identité nationale. Et avec plus de 1 200 fromages recensés selon certaines estimations, la diversité est vertigineuse : du comté affiné en Franche-Comté, au roquefort vieilli dans les caves de l'Aveyron, en passant par le camembert normand et le brie de Meaux.\n\nLe vin, c'est pareil. La France produit certains des vins les plus recherchés et les plus chers du monde. Bordeaux avec ses grands crus classés, Bourgogne avec ses appellations ultra-précises liées aux «terroirs» — ces microparcelles dont la géologie, l'exposition et le microclimat créent des vins uniques. Le concept de terroir, c'est une invention française qui a influencé les vignerons du monde entier, de la Californie à la Nouvelle-Zélande.\n\nEt puis il y a les AOC — les Appellations d'Origine Contrôlée. Un système réglementaire qui protège les produits liés à un territoire précis. Champagne, Roquefort, Époisses, Poulet de Bresse... Ce sont des noms qui ne peuvent être utilisés que pour des produits fabriqués dans des zones géographiques définies, selon des méthodes traditionnelles. La France a inventé la traçabilité gastronomique bien avant que ce mot existe.",
+    "visualDescription": "Une cave à vin transformée en galerie d'art cyberpunk. Des bouteilles de bordeaux et de bourgogne sont exposées sous des vitrines lumineuses, éclairées par des néons bleus et bordeaux. Des meules de comté et des portions de roquefort flottent dans l'air comme des sculptures holographiques. Sur les murs de pierre, des cartes de vignobles s'illuminent en temps réel. L'odeur imaginaire : bois, raisin fermenté, lait caillé et sous-bois automnal.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Dans quelle région française est produit le Roquefort, fromage bénéficiant de la première AOC de France accordée en 1925 ?",
+        "options": [
+          "Auvergne",
+          "Normandie",
+          "Aveyron",
+          "Alsace"
+        ],
+        "answer": "Aveyron"
+      },
+      {
+        "question": "Quel cépage rouge est principalement utilisé dans les grands vins de Bourgogne, comme le Gevrey-Chambertin ou le Nuits-Saint-Georges ?",
+        "options": [
+          "Cabernet Sauvignon",
+          "Merlot",
+          "Pinot Noir",
+          "Syrah"
+        ],
+        "answer": "Pinot Noir"
+      },
+      {
+        "question": "Qu'est-ce que le «terroir» en viticulture française désigne essentiellement ?",
+        "options": [
+          "Le nom de la cave de vinification",
+          "L'ensemble des caractéristiques naturelles d'un lieu influençant le vin",
+          "Le millésime d'une grande année",
+          "La technique d'élevage du vin en barrique"
+        ],
+        "answer": "L'ensemble des caractéristiques naturelles d'un lieu influençant le vin"
+      },
+      {
+        "question": "Le Champagne est produit exclusivement dans quelle région administrative française ?",
+        "options": [
+          "Île-de-France",
+          "Grand Est",
+          "Hauts-de-France",
+          "Bourgogne-Franche-Comté"
+        ],
+        "answer": "Grand Est"
+      },
+      {
+        "question": "Quel fromage français à pâte molle et croûte fleurie, originaire de Normandie, est associé à Marie Harel qui aurait contribué à affiner sa recette au XVIIIe siècle ?",
+        "options": [
+          "Le Brie de Meaux",
+          "Le Camembert",
+          "Le Coulommiers",
+          "Le Chaource"
+        ],
+        "answer": "Le Camembert"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La Cuisine Moderne — Quand la Science Rencontre l'Assiette",
+    "brief": "Imagine une olive qui n'est pas une olive — c'est une sphère de jus d'olive qui explose en bouche. Ou un cocktail transformé en nuage de sucre filé qui disparaît sur la langue. Bienvenue dans la cuisine moléculaire, ce courant gastronomique né dans les années 1980-1990 qui a redéfini les frontières du possible en cuisine. Hervé This, physicien et chimiste français, et le chef Ferran Adrià en sont les figures emblématiques. Leur credo : utiliser la science pour comprendre et transformer les textures, les températures, les formes.\n\nLa cuisine fusion, c'est une autre révolution. Mélanger les traditions culinaires, jouer avec les codes culturels, créer des ponts inattendus entre les saveurs. Un chef new-yorkais qui marie les techniques japonaises avec les ingrédients péruviens, ou un restaurant parisien qui réinterprète les classiques français avec des épices d'Asie du Sud-Est... La mondialisation a produit une créativité gastronomique sans précédent.\n\nEt aujourd'hui, les food trends reflètent aussi les angoisses et les désirs de notre époque : le «plant-based» qui explose, les insectes comestibles comme protéine du futur, la fermentation qui revient en force avec le kimchi et le kombucha, le «zero waste» qui transforme les épluchures en délices... La cuisine du XXIe siècle, c'est un miroir de notre société. Et ça ne fait que commencer.",
+    "visualDescription": "Un laboratoire culinaire futuriste aux surfaces en inox bleu électrique et verre. Des fioles de gel d'agar-agar, des bains d'azote liquide fumants et des centrifugeuses translucides trônent sur des paillasses illuminées de néon vert. Des hologrammes de molécules aromatiques tournent lentement dans l'air. Un bras robotique dépose avec précision une sphérification sur une assiette noire mate. La frontière entre cuisine et laboratoire a disparu.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle technique de cuisine moléculaire consiste à enrober un liquide dans une membrane de gel pour créer des billes qui éclatent en bouche ?",
+        "options": [
+          "L'émulsification",
+          "La sphérification",
+          "La gélification",
+          "La lyophilisation"
+        ],
+        "answer": "La sphérification"
+      },
+      {
+        "question": "Hervé This, co-fondateur de la gastronomie moléculaire avec Nicholas Kurti, est de quelle nationalité ?",
+        "options": [
+          "Belge",
+          "Suisse",
+          "Française",
+          "Espagnole"
+        ],
+        "answer": "Française"
+      },
+      {
+        "question": "Le kombucha, boisson fermentée très tendance, est obtenu par la fermentation de quoi ?",
+        "options": [
+          "Lait de coco et levures",
+          "Thé sucré et une culture symbiotique de bactéries et levures",
+          "Jus de pomme et vinaigre de cidre",
+          "Eau minérale et probiotiques synthétiques"
+        ],
+        "answer": "Thé sucré et une culture symbiotique de bactéries et levures"
+      },
+      {
+        "question": "Le mouvement «nose-to-tail» en cuisine prône quoi ?",
+        "options": [
+          "La consommation exclusive de légumes et graines",
+          "L'utilisation de toutes les parties d'un animal pour éviter le gaspillage",
+          "La cuisson basse température de tous les aliments",
+          "Le retour aux recettes médiévales européennes"
+        ],
+        "answer": "L'utilisation de toutes les parties d'un animal pour éviter le gaspillage"
+      },
+      {
+        "question": "Le «Impossible Burger», emblème des substituts carnés plant-based, doit son goût et sa couleur «saignante» à quel composé végétal ?",
+        "options": [
+          "Le gluten de blé",
+          "L'hème de légumineuse (leghémoglobine de soja)",
+          "La betterave rouge en poudre",
+          "L'extrait de tomate concentrée"
+        ],
+        "answer": "L'hème de légumineuse (leghémoglobine de soja)"
+      }
+    ]
+  }
+]

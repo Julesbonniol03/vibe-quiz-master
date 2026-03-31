@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+      "title": "Les Inventions du XIXe Siècle",
+      "subtitle": "Quand l'humanité a appris à dompter la foudre",
+      "brief": "C'est le mec qui tient un cerf-volant sous un orage pour prouver que la foudre c'est de l'électricité — Benjamin Franklin, 1752, expérience la plus dangereuse et la plus badass de l'histoire des sciences. L'électricité était là depuis toujours, mais personne ne savait quoi en faire. Et puis le XIXe siècle arrive, et en quelques décennies, des génies vont transformer cette force mystérieuse en technologie qui va changer le monde pour toujours.\n\nThomas Edison et Nikola Tesla, c'est THE beef du XIXe siècle. D'un côté Edison, l'inventeur pragmatique, businessman, qui brevète tout ce qui bouge et développe le courant continu (DC). De l'autre Tesla, le génie visionnaire un peu fou, qui défend le courant alternatif (AC) et que l'histoire a longtemps sous-estimé. Leur guerre des courants dans les années 1880 est un épisode fascinant — avec même des éléphants électrocutés pour démontrer les dangers du courant alternatif. Tesla avait raison sur le fond, et c'est son système AC qui alimente aujourd'hui nos maisons.\n\nAlexander Graham Bell brevète le téléphone en 1876 — même si un certain Antonio Meucci avait déposé une notice de brevet cinq ans avant lui — et l'humanité dispose soudain d'un moyen de communiquer instantanément à distance. En une génération, le monde est passé du cheval et de la bougie à l'électricité, au téléphone et à la lumière artificielle. Aucune autre période de l'histoire n'a connu une transformation aussi radicale aussi vite.",
+      "visualDescription": "Laboratoire victorien rétrofuturiste avec des bobines de Tesla géantes crachant des éclairs bleus néon, des ampoules Edison suspendues en grappes lumineuses orange, des câbles électriques lumineux courant sur les murs de brique, alambics et instruments scientifiques en cuivre illuminés, ambiance steampunk cyberpunk",
+      "imagePlaceholder": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+      "quiz": [
+        {
+          "question": "En quelle année Thomas Edison a-t-il inventé une ampoule électrique à incandescence pratique et commercialisable ?",
+          "options": ["1872", "1876", "1879", "1882"],
+          "answer": "1879"
+        },
+        {
+          "question": "Qui a breveté le téléphone en 1876, bien qu'Antonio Meucci en ait revendiqué l'invention antérieure ?",
+          "options": ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Elisha Gray"],
+          "answer": "Alexander Graham Bell"
+        },
+        {
+          "question": "Dans la « guerre des courants » du XIXe siècle, quel type de courant électrique Nikola Tesla défendait-il contre Edison ?",
+          "options": ["Courant continu (DC)", "Courant alternatif (AC)", "Courant triphasé", "Courant pulsé"],
+          "answer": "Courant alternatif (AC)"
+        },
+        {
+          "question": "En quelle année Nikola Tesla a-t-il démontré la première transmission d'énergie sans fil lors de l'Exposition Universelle de Chicago ?",
+          "options": ["1890", "1893", "1896", "1899"],
+          "answer": "1893"
+        },
+        {
+          "question": "Quel scientifique écossais a publié en 1865 les équations mathématiques décrivant l'électromagnétisme, fondant les bases théoriques des communications sans fil ?",
+          "options": ["Michael Faraday", "James Clerk Maxwell", "Lord Kelvin", "Heinrich Hertz"],
+          "answer": "James Clerk Maxwell"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "L'Âge Industriel",
+      "subtitle": "Moteurs, machines et premières envolées",
+      "brief": "C'est le mec qui regarde une machine à vapeur souffler et cogner dans une usine de 1800 et qui comprend que le monde vient de changer d'ère — plus jamais le dos humain ou la force animale ne sera le seul moteur de l'économie. La révolution industrielle, c'est la première fois que l'humanité a appris à amplifier sa force physique à l'aide de machines. Des usines, des chemins de fer, des bateaux à vapeur — en 50 ans, le monde est méconnaissable.\n\nMais l'invention qui a vraiment tout changé au tournant du XXe siècle, c'est le moteur à combustion interne. Carl Benz construit la première automobile à moteur à essence en 1885, la Benz Patent-Motorwagen, et en quelques décennies les chevaux disparaissent des rues des villes. Henry Ford va encore plus loin en 1908 avec la Ford Model T et surtout avec la chaîne de montage — la voiture pour tout le monde, produite en masse, accessible au plus grand nombre.\n\nEt puis le 17 décembre 1903, à Kitty Hawk en Caroline du Nord, les frères Wright font quelque chose que l'humanité rêvait depuis des siècles : voler. Le premier vol du Flyer I dure 12 secondes et couvre 37 mètres. En 1969, seulement 66 ans plus tard, Neil Armstrong marche sur la Lune. Voilà ce que peut faire l'ingéniosité humaine quand elle s'emballe.",
+      "visualDescription": "Usine industrielle rétrofuturiste avec des engrenages géants en métal brillant éclairés par des néons orange et rouge, des trains à vapeur stylisés filant sur des rails lumineux, un biplan des frères Wright suspendu dans les airs entouré d'hologrammes de données aérodynamiques, ambiance steampunk futuriste",
+      "imagePlaceholder": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&q=80",
+      "quiz": [
+        {
+          "question": "En quelle année Carl Benz a-t-il construit la Benz Patent-Motorwagen, considérée comme la première véritable automobile à moteur à essence ?",
+          "options": ["1879", "1882", "1885", "1889"],
+          "answer": "1885"
+        },
+        {
+          "question": "En quelle année les frères Wright ont-ils réalisé le premier vol motorisé contrôlé de l'histoire à Kitty Hawk ?",
+          "options": ["1900", "1901", "1903", "1905"],
+          "answer": "1903"
+        },
+        {
+          "question": "Quel industriel américain a révolutionné la production automobile en introduisant la chaîne de montage et la Ford Model T en 1908 ?",
+          "options": ["John D. Rockefeller", "Andrew Carnegie", "Henry Ford", "Walter Chrysler"],
+          "answer": "Henry Ford"
+        },
+        {
+          "question": "Qui a inventé le moteur à vapeur pratique et amélioré qui a propulsé la révolution industrielle britannique à partir de 1769 ?",
+          "options": ["Robert Fulton", "George Stephenson", "James Watt", "Richard Arkwright"],
+          "answer": "James Watt"
+        },
+        {
+          "question": "En quelle année Charles Lindbergh a-t-il effectué la première traversée de l'Atlantique Nord en solitaire et sans escale en avion ?",
+          "options": ["1923", "1925", "1927", "1929"],
+          "answer": "1927"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "L'Ordinateur",
+      "subtitle": "Du calcul mécanique à la révolution personnelle",
+      "brief": "C'est le mec qui conçoit une machine purement théorique sur le papier en 1936 — une machine capable de calculer n'importe quelle fonction mathématique — et qui sans le savoir pose les bases de toute l'informatique moderne. Ce mec, c'est Alan Turing, mathématicien britannique de génie, et sa Machine de Turing est le concept fondateur sur lequel tous nos ordinateurs actuels sont basés. Il sauvera aussi des millions de vies en cassant le code Enigma des Nazis pendant la Seconde Guerre Mondiale.\n\nLes premiers ordinateurs des années 1940-50 sont des mastodontes : l'ENIAC en 1945 pèse 30 tonnes, occupe une salle entière et consomme autant d'électricité qu'une petite ville. IBM domine l'ère des mainframes dans les années 60-70, les ordinateurs sont réservés aux grandes entreprises et aux gouvernements. Et puis Apple arrive en 1976 — Steve Jobs, Steve Wozniak, un garage en Californie — avec la vision radicale d'un ordinateur pour tout le monde, dans chaque foyer.\n\nMicrosoft de Bill Gates fournit le système d'exploitation MS-DOS à IBM en 1981, puis Windows révolutionne l'interface graphique dans les années 80-90. La guerre Apple-Microsoft qui s'ensuit est la bataille commerciale la plus suivie de l'histoire de la tech. Aujourd'hui ces deux entreprises valent ensemble plus de 6 000 milliards de dollars — pas mal pour des gamins qui bidouillaient dans des garages.",
+      "visualDescription": "Salle d'ordinateurs vintage reconstituée en mode cyberpunk avec des rangées de terminaux à écran vert néon, des circuits imprimés géants lumineux sur les murs, des hologrammes de code binaire qui tombent comme Matrix, une pomme lumineuse et un logo IBM en néon bleu se faisant face, ambiance vert et bleu électrique",
+      "imagePlaceholder": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80",
+      "quiz": [
+        {
+          "question": "Quel mathématicien britannique est considéré comme le père théorique de l'informatique moderne, notamment grâce à son concept de « machine universelle » en 1936 ?",
+          "options": ["John von Neumann", "Alan Turing", "Claude Shannon", "Norbert Wiener"],
+          "answer": "Alan Turing"
+        },
+        {
+          "question": "En quelle année Steve Jobs et Steve Wozniak ont-ils fondé Apple Computer dans un garage de Californie ?",
+          "options": ["1974", "1976", "1978", "1980"],
+          "answer": "1976"
+        },
+        {
+          "question": "Quel était le nom du premier ordinateur personnel grand public lancé par IBM en 1981, qui a popularisé le terme « PC » ?",
+          "options": ["IBM System/360", "IBM Personal Computer (IBM PC)", "IBM AS/400", "IBM XT"],
+          "answer": "IBM Personal Computer (IBM PC)"
+        },
+        {
+          "question": "En quelle année Microsoft a-t-il lancé Windows 1.0, son premier système d'exploitation à interface graphique ?",
+          "options": ["1981", "1983", "1985", "1987"],
+          "answer": "1985"
+        },
+        {
+          "question": "Quel était le nom de l'ordinateur géant construit en 1945 à l'université de Pennsylvanie, considéré comme l'un des premiers ordinateurs électroniques à grande échelle ?",
+          "options": ["COLOSSUS", "ENIAC", "UNIVAC", "EDVAC"],
+          "answer": "ENIAC"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Internet & Mobile",
+      "subtitle": "Quand le monde est devenu un village hyper-connecté",
+      "brief": "C'est le mec qui tape la première requête sur un moteur de recherche en 1998 — Google vient d'être lancé depuis un garage de Menlo Park par deux doctorants de Stanford, Larry Page et Sergey Brin — et qui commence à naviguer dans un espace d'information infini. Internet existait depuis des années, mais Google l'a rendu accessible à tous, organisé, utilisable. Avant Google, trouver une information sur internet c'était une expédition archéologique.\n\nInternet lui-même est né militaire : ARPANET, lancé par le Département de la Défense américain en 1969, connecte d'abord quatre universités américaines. Tim Berners-Lee invente le World Wide Web en 1989 au CERN — pas internet lui-même, mais le protocole HTML et les pages web qui le rendent accessible au grand public. Le web explose dans les années 90 avec la bulle dot-com, les premiers sites, les premiers e-mails grand public.\n\nEt puis en 2007, Steve Jobs monte sur scène et présente l'iPhone. « Un iPod, un téléphone, et un accès à internet » — trois appareils en un. La salle applaudit sans se douter que cette présentation va changer la civilisation. En moins de 10 ans, 3 milliards de personnes ont un smartphone. Internet est passé du bureau à la poche. On est connecté en permanence, partout, à tout. Le monde n'est plus jamais pareil.",
+      "visualDescription": "Carte du monde en néon avec des lignes de connexion internet lumineuses reliant les continents, serveurs de données flottant comme des tours de verre dans un espace numérique, hologramme d'un smartphone avec des applications s'envolant de l'écran, flux de données en bleu et vert infini",
+      "imagePlaceholder": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+      "quiz": [
+        {
+          "question": "En quelle année ARPANET, le précurseur d'internet, a-t-il été lancé par le Département de la Défense américain ?",
+          "options": ["1965", "1967", "1969", "1971"],
+          "answer": "1969"
+        },
+        {
+          "question": "Qui a inventé le World Wide Web (WWW) en 1989, en travaillant au CERN en Suisse ?",
+          "options": ["Vint Cerf", "Tim Berners-Lee", "Marc Andreessen", "Robert Cailliau"],
+          "answer": "Tim Berners-Lee"
+        },
+        {
+          "question": "En quelle année Google a-t-il été officiellement fondé par Larry Page et Sergey Brin ?",
+          "options": ["1996", "1997", "1998", "2000"],
+          "answer": "1998"
+        },
+        {
+          "question": "En quelle année Steve Jobs a-t-il présenté le premier iPhone lors d'une keynote Apple restée célèbre ?",
+          "options": ["2005", "2006", "2007", "2008"],
+          "answer": "2007"
+        },
+        {
+          "question": "Quel protocole fondamental, inventé par Vint Cerf et Bob Kahn en 1974, régit la transmission des données sur internet ?",
+          "options": ["HTTP", "FTP", "TCP/IP", "DNS"],
+          "answer": "TCP/IP"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "L'Intelligence Artificielle",
+      "subtitle": "Quand les machines ont commencé à penser",
+      "brief": "C'est le mec qui demande à une IA de lui écrire un poème à 2h du matin et qui reçoit quelque chose de beau, de structuré, de touchant — et qui reste là, un peu déstabilisé, à se demander ce que ça signifie pour l'humanité. L'intelligence artificielle n'est plus de la science-fiction depuis longtemps, mais 2022-2023 a marqué un tournant brutal : ChatGPT d'OpenAI a atteint 100 millions d'utilisateurs en seulement 2 mois, le produit technologique le plus rapidement adopté de l'histoire.\n\nMais l'IA ne date pas d'hier. Alan Turing pose la question « Les machines peuvent-elles penser ? » en 1950 et propose le test de Turing comme critère d'intelligence artificielle. Le terme « Intelligence Artificielle » est officiellement inventé par John McCarthy en 1956 lors de la conférence de Dartmouth. Les décennies suivantes alternent entre espoirs fous et « hivers de l'IA » — des périodes de désillusion où les financements s'effondrent.\n\nLe vrai tournant arrive avec le deep learning et les réseaux de neurones dans les années 2010. AlphaGo de DeepMind bat le champion du monde de Go en 2016 — un jeu 100 fois plus complexe que les échecs. Les LLM (Large Language Models) comme GPT révolutionnent le traitement du langage naturel. Aujourd'hui l'IA génère des images, compose de la musique, écrit du code, diagnostique des maladies. On est au début de quelque chose d'immense.",
+      "visualDescription": "Cerveau numérique en hologramme flottant dans un espace noir infini, des neurones artificiels connectés par des fils de lumière cyan et violet, des lignes de code et des graphiques de réseaux de neurones projetés en 3D, silhouette humaine face à une silhouette robotique se faisant miroir dans une lumière dorée",
+      "imagePlaceholder": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
+      "quiz": [
+        {
+          "question": "Qui a inventé le terme « Intelligence Artificielle » lors de la conférence de Dartmouth en 1956 ?",
+          "options": ["Alan Turing", "Marvin Minsky", "John McCarthy", "Claude Shannon"],
+          "answer": "John McCarthy"
+        },
+        {
+          "question": "En quelle année le programme AlphaGo de DeepMind (Google) a-t-il battu pour la première fois le champion du monde de Go, Lee Sedol ?",
+          "options": ["2014", "2015", "2016", "2017"],
+          "answer": "2016"
+        },
+        {
+          "question": "Quelle entreprise a développé ChatGPT, le chatbot conversationnel lancé en novembre 2022 qui a atteint 100 millions d'utilisateurs en 2 mois ?",
+          "options": ["Google DeepMind", "Meta AI", "OpenAI", "Anthropic"],
+          "answer": "OpenAI"
+        },
+        {
+          "question": "Comment s'appelle le test proposé par Alan Turing en 1950 pour évaluer si une machine peut exhiber une intelligence comparable à celle d'un être humain ?",
+          "options": ["Test de Lovelace", "Test de Turing", "Test de Shannon", "Test d'Asimov"],
+          "answer": "Test de Turing"
+        },
+        {
+          "question": "Quel type d'architecture de réseau de neurones, introduit dans l'article « Attention Is All You Need » (2017), est à la base des grands modèles de langage comme GPT ?",
+          "options": ["Réseau convolutif (CNN)", "Réseau récurrent (RNN)", "Transformer", "Réseau antagoniste génératif (GAN)"],
+          "answer": "Transformer"
+        }
+      ]
+    }
+]

@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "Les Grecs — Le patch qui a tout fondé",
+    "brief": "Avant les réseaux sociaux, avant les podcasts philo du dimanche matin, y'avait les Grecs. Et franchement, ils assuraient. C'est dans les rues d'Athènes que Socrate faisait bugger les gens avec ses questions impossibles — une technique tellement fine qu'on lui a donné un nom : la maïeutique. L'idée ? T'aider à accoucher de la vérité que t'as déjà en toi. Spoiler : les Athéniens ont pas trop apprécié le service.\n\nSon pote Platon, lui, il voyait grand. Il nous a laissé l'allégorie de la caverne — cette image folle où des prisonniers enchaînés prennent des ombres pour la réalité. Une métaphore qui sonne encore ultra-moderne à l'ère des filtres Instagram et des deepfakes. Et puis Aristote, l'élève modèle, a posé les bases de la logique formelle et classifié tout ce qu'il pouvait toucher.\n\nCes trois là, c'est le trio fondateur. Presque toute la philo occidentale tourne autour d'eux, comme un système solaire intellectuel. T'es prêt à entrer dans la matrice ?",
+    "visualDescription": "Une agora athénienne réimagninée en cyberpunk : des colonnes de marbre blanc striées de circuits néon bleu électrique, des rouleaux de papyrus holographiques flottant dans l'air. Socrate en silhouette sombre face à un écran plasma diffusant des questions en grec ancien. Ambiance nuit violette, reflets sur l'eau d'une fontaine centrale.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Comment s'appelle la méthode pédagogique de Socrate qui consiste à faire accoucher l'élève de ses propres connaissances par le questionnement ?",
+        "options": [
+          "La dialectique",
+          "La maïeutique",
+          "La rhétorique",
+          "L'herméneutique"
+        ],
+        "answer": "La maïeutique"
+      },
+      {
+        "question": "Dans l'allégorie de la caverne de Platon, que représentent les ombres projetées sur le mur ?",
+        "options": [
+          "Les idées pures et parfaites",
+          "Les illusions et les apparences du monde sensible",
+          "Les rêves des prisonniers",
+          "Les dieux de l'Olympe"
+        ],
+        "answer": "Les illusions et les apparences du monde sensible"
+      },
+      {
+        "question": "Quel philosophe grec est le fondateur de la logique formelle et a écrit la 'Politique' et 'l'Éthique à Nicomaque' ?",
+        "options": [
+          "Platon",
+          "Socrate",
+          "Aristote",
+          "Épicure"
+        ],
+        "answer": "Aristote"
+      },
+      {
+        "question": "De quelle accusation Socrate a-t-il été condamné à mort par les Athéniens en 399 av. J.-C. ?",
+        "options": [
+          "Trahison envers Athènes",
+          "Corruption de la jeunesse et impiété",
+          "Refus de servir à la guerre",
+          "Vol dans les temples"
+        ],
+        "answer": "Corruption de la jeunesse et impiété"
+      },
+      {
+        "question": "Quel concept platonicien désigne le monde des réalités parfaites et éternelles, dont notre monde ne serait qu'une copie imparfaite ?",
+        "options": [
+          "Le monde des Idées (ou des Formes)",
+          "Le Logos universel",
+          "L'Éther primordial",
+          "Le Noûs cosmique"
+        ],
+        "answer": "Le monde des Idées (ou des Formes)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Les Lumières — Le firmware de la modernité",
+    "brief": "XVIIe–XVIIIe siècle : l'Europe reboot son OS. Fini de laisser le clergé et les rois décider à ta place — c'est l'heure de la Raison. Descartes balance son célèbre 'Je pense, donc je suis' et fonde une nouvelle façon de faire de la philo, basée sur le doute méthodique. C'est radicalement propre, presque mathématique. Le mec repart de zéro pour reconstruire la connaissance sur des bases béton.\n\nKant, lui, il fait la synthèse du siècle avec sa 'Critique de la raison pure'. Il pose une question qui déchire : qu'est-ce qu'on peut vraiment connaître ? Et Rousseau, ce rebelle romantique, il lâche l'idée que l'homme naît bon mais que la société le corrompt. Un argument qui circule encore dans toutes les discussions de table familiale.\n\nLes Lumières, c'est le moment où l'humanité décide que la liberté, la raison et le droit naturel doivent primer sur la tradition aveugle. Ce mouvement-là a alimenté la Révolution française, la Déclaration des droits de l'homme et une bonne partie du monde contemporain. C'est pas rien.",
+    "visualDescription": "Bibliothèque baroque plongée dans une lumière dorée-néon. Des encyclopédies holographiques ouvrent leurs pages dans les airs, les lettres imprimées se transforment en flux de données lumineux. Un télescope pointe vers un ciel artificiel saturé d'équations. Portraits de philosophes en cadres dorés avec des yeux qui brillent d'une lueur blanche.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle est la formule fondatrice du cogito cartésien, point de départ de la philosophie de Descartes ?",
+        "options": [
+          "Je doute, donc je suis",
+          "Je pense, donc je suis",
+          "Je veux, donc je crée",
+          "Je ressens, donc j'existe"
+        ],
+        "answer": "Je pense, donc je suis"
+      },
+      {
+        "question": "Quel ouvrage majeur Kant a-t-il publié en 1781, posant les limites et les conditions de la connaissance humaine ?",
+        "options": [
+          "La Critique de la raison pratique",
+          "La Critique de la raison pure",
+          "La Critique de la faculté de juger",
+          "Les Fondements de la métaphysique des mœurs"
+        ],
+        "answer": "La Critique de la raison pure"
+      },
+      {
+        "question": "Selon Rousseau, quelle est la cause principale de la corruption de l'homme, naturellement bon à l'état originel ?",
+        "options": [
+          "La religion organisée",
+          "La société et la civilisation",
+          "Les passions individuelles",
+          "L'ignorance et l'obscurantisme"
+        ],
+        "answer": "La société et la civilisation"
+      },
+      {
+        "question": "Quel concept kantien désigne un principe moral universel que la raison impose à elle-même, inconditionnellement ?",
+        "options": [
+          "L'impératif hypothétique",
+          "Le contrat social",
+          "L'impératif catégorique",
+          "La volonté générale"
+        ],
+        "answer": "L'impératif catégorique"
+      },
+      {
+        "question": "Quel philosophe des Lumières a écrit 'Du contrat social' (1762) et théorisé la souveraineté populaire ?",
+        "options": [
+          "Voltaire",
+          "Montesquieu",
+          "Diderot",
+          "Rousseau"
+        ],
+        "answer": "Rousseau"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Nietzsche, Marx & la Modernité — Le crash du système",
+    "brief": "XIXe siècle : la modernité arrive à pleine vitesse et deux penseurs vont tout faire exploser. Marx regarde la révolution industrielle et voit une chose que personne d'autre ne formule aussi clairement : les ouvriers produisent toute la richesse, mais les patrons s'approprient la plus-value. Il invente le matérialisme dialectique et prédit que le capitalisme portera en lui les germes de sa propre destruction. Son 'Manifeste du Parti Communiste' de 1848, c'est l'un des textes les plus influents de l'histoire humaine.\n\nNietzsche, lui, joue dans une autre catégorie. Il balance 'Dieu est mort' — pas une provoc gratuite, mais un diagnostic : la modernité a détruit les anciennes valeurs sans en créer de nouvelles. Face à ce vide, il propose le Surhomme (Übermensch), cet être capable de créer ses propres valeurs. Et la volonté de puissance n'est pas une glorification de la violence, mais l'élan vital qui pousse chaque être vers son dépassement.\n\nCes deux-là ont chamboulé la politique, la sociologie, la culture, la psychologie. Ils sont partout — souvent mal compris, souvent récupérés, mais impossibles à ignorer.",
+    "visualDescription": "Usine industrielle victorienne reconvertie en data center dystopique. Tuyaux de vapeur et câbles à fibre optique entremêlés. Un écran géant en fond affiche 'GOTT IST TOT' en lettres de feu rouge. Des silhouettes d'ouvriers-robots assemblent des fragments de texte. Ambiance sépia et néon acide, fumée et lumière stroboscopique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Dans quel ouvrage de Nietzsche le personnage de Zarathoustra annonce-t-il 'Dieu est mort' pour la première fois de façon développée ?",
+        "options": [
+          "Par-delà bien et mal",
+          "La Volonté de puissance",
+          "Ainsi parlait Zarathoustra",
+          "Le Gai Savoir"
+        ],
+        "answer": "Ainsi parlait Zarathoustra"
+      },
+      {
+        "question": "Quel concept économique marxiste désigne la valeur créée par le travail de l'ouvrier mais non rémunérée, captée par le capitaliste ?",
+        "options": [
+          "Le capital fixe",
+          "La plus-value",
+          "La rente foncière",
+          "Le salaire différentiel"
+        ],
+        "answer": "La plus-value"
+      },
+      {
+        "question": "Avec qui Karl Marx a-t-il co-écrit le 'Manifeste du Parti Communiste' publié en 1848 ?",
+        "options": [
+          "Lénine",
+          "Friedrich Engels",
+          "Proudhon",
+          "Bakounine"
+        ],
+        "answer": "Friedrich Engels"
+      },
+      {
+        "question": "Que désigne le concept de 'volonté de puissance' chez Nietzsche ?",
+        "options": [
+          "Le désir de dominer politiquement les autres",
+          "L'élan vital de dépassement et de création de soi",
+          "La force militaire d'une nation",
+          "L'instinct de survie darwinien"
+        ],
+        "answer": "L'élan vital de dépassement et de création de soi"
+      },
+      {
+        "question": "Comment s'appelle la méthode philosophique héritée de Hegel, que Marx applique à l'histoire économique et sociale ?",
+        "options": [
+          "Le positivisme logique",
+          "Le matérialisme dialectique",
+          "Le structuralisme historique",
+          "L'empirisme critique"
+        ],
+        "answer": "Le matérialisme dialectique"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "L'Existentialisme — Tu es ce que tu fais",
+    "brief": "Paris, Saint-Germain-des-Prés, années 40–50. Les caves de jazz, la Seconde Guerre mondiale fraîchement terminée, et une bande de philosophes qui réinventent la question du sens. Sartre lâche sa formule choc : 'l'existence précède l'essence'. Traduction : t'arrives dans ce monde sans mode d'emploi, sans nature prédéfinie. C'est toi qui te construis par tes choix. Radicalement libre. Et terriblement responsable.\n\nCamus, lui, part du constat que la vie n'a pas de sens inhérent — c'est l'absurde. Mais au lieu de désespérer, il choisit la révolte. 'Il faut imaginer Sisyphe heureux', dit-il. Son ami Mersault dans 'L'Étranger', ses pièces, ses essais — tout pointe vers cette même lucidité courageuse face à l'existence.\n\nSimone de Beauvoir, souvent oubliée dans les manuels scolaires, est pourtant indispensable. Elle applique l'existentialisme à la condition féminine dans 'Le Deuxième Sexe' (1949) et formule l'une des idées les plus puissantes du siècle : 'On ne naît pas femme, on le devient.' L'engagement, la liberté, l'altérité — ce trio existe encore dans toutes les discussions qui comptent.",
+    "visualDescription": "Café parisien sous-terrain baigné dans une lumière ambre et pourpre. Des tables en métal chromé reflètent des néons. Sur les murs, des citations en lettres fluorescentes. Une scène de jazz holographique au fond. Des livres flottent ouverts, leurs pages se transforment en oiseaux de papier lumineux. Fenêtres donnant sur une rue cyberpunk nocturne.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle est la thèse centrale de Sartre résumée par la formule 'l'existence précède l'essence' ?",
+        "options": [
+          "L'homme est prédéterminé par sa nature biologique",
+          "L'homme se définit par ses actes et ses choix, non par une nature préalable",
+          "L'existence humaine est illusion",
+          "La conscience précède toujours la matière"
+        ],
+        "answer": "L'homme se définit par ses actes et ses choix, non par une nature préalable"
+      },
+      {
+        "question": "Dans quel essai philosophique Camus développe-t-il le concept d'absurde et conclut qu'il faut imaginer Sisyphe heureux ?",
+        "options": [
+          "L'Homme révolté",
+          "Le Mythe de Sisyphe",
+          "La Chute",
+          "Noces"
+        ],
+        "answer": "Le Mythe de Sisyphe"
+      },
+      {
+        "question": "Quelle formule célèbre de Simone de Beauvoir, tirée du 'Deuxième Sexe' (1949), est devenue un pilier du féminisme contemporain ?",
+        "options": [
+          "La femme est l'avenir de l'homme",
+          "On ne naît pas femme, on le devient",
+          "Le propre de la femme, c'est d'être libre",
+          "L'enfer, c'est les hommes"
+        ],
+        "answer": "On ne naît pas femme, on le devient"
+      },
+      {
+        "question": "Quelle pièce de Sartre contient la réplique célèbre 'L'enfer, c'est les autres' ?",
+        "options": [
+          "Les Mouches",
+          "La Nausée",
+          "Huis Clos",
+          "Les Mains sales"
+        ],
+        "answer": "Huis Clos"
+      },
+      {
+        "question": "Quel roman de Camus (1942) met en scène Meursault, un homme indifférent qui tue sans raison apparente sous le soleil d'Alger ?",
+        "options": [
+          "La Peste",
+          "L'Étranger",
+          "La Chute",
+          "Caligula"
+        ],
+        "answer": "L'Étranger"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La Philo Contemporaine — Le level final de l'humanité",
+    "brief": "XXe–XXIe siècle : la philo s'élargit, se fragmente et affronte des défis qu'aucun Grec n'aurait pu imaginer. John Rawls redéfinit la justice en imaginant un 'voile d'ignorance' — et si tu ne savais pas à quelle position sociale tu naîtrais, quelle société choisirais-tu ? Une expérience de pensée qui révolutionne la théorie politique libérale. Sa 'Théorie de la Justice' (1971) reste un monument incontournable.\n\nFoucault, lui, retourne les institutions comme des gants. Prisons, hôpitaux psychiatriques, sexualité — il montre comment le pouvoir ne s'exerce pas seulement par la force, mais par la normalisation, la surveillance, le discours. Son 'Surveiller et Punir' ressemble aujourd'hui à une prophétie sur l'ère de la surveillance numérique.\n\nEt maintenant, l'IA. La philosophie contemporaine est convoquée en urgence : qu'est-ce que la conscience si une machine peut simuler le raisonnement ? Peut-on être responsable d'un algorithme ? Le transhumanisme, l'éthique des données, le droit à la vie privée — ce sont les grands combats philosophiques du moment. Le jeu ne fait que commencer.",
+    "visualDescription": "Salle de tribunal futuriste aux murs translucides, traversée par des rayons laser bleu-blanc. Un juge holographique en robe siège face à une IA projetée sous forme de visage géométrique lumineux. Des écrans affichent des flux de données, des diagrammes de surveillance, des courbes d'inégalités mondiales. Architecture brutaliste + néon vert acide.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle expérience de pensée John Rawls utilise-t-il dans 'Théorie de la Justice' pour définir des principes de justice équitables ?",
+        "options": [
+          "Le dilemme du prisonnier",
+          "Le voile d'ignorance",
+          "La position originelle seule",
+          "L'expérience de Nozick"
+        ],
+        "answer": "Le voile d'ignorance"
+      },
+      {
+        "question": "Dans 'Surveiller et Punir' (1975), quel modèle architectural Foucault utilise-t-il comme métaphore du pouvoir de surveillance moderne ?",
+        "options": [
+          "La cathédrale gothique",
+          "Le Panoptique de Bentham",
+          "La caserne militaire",
+          "L'usine fordiste"
+        ],
+        "answer": "Le Panoptique de Bentham"
+      },
+      {
+        "question": "Quel philosophe contemporain a développé la théorie du 'libertarianisme' en réponse à Rawls, défendant un État minimal dans 'Anarchie, État et Utopie' ?",
+        "options": [
+          "Jürgen Habermas",
+          "Peter Singer",
+          "Robert Nozick",
+          "Michael Sandel"
+        ],
+        "answer": "Robert Nozick"
+      },
+      {
+        "question": "Quel test, proposé par Alan Turing en 1950, vise à évaluer si une machine peut exhiber un comportement intelligent indiscernable de celui d'un humain ?",
+        "options": [
+          "Le test de Turing",
+          "Le test de Chinese Room",
+          "Le test de Searle",
+          "Le test de Nagel"
+        ],
+        "answer": "Le test de Turing"
+      },
+      {
+        "question": "Quel concept foucaldien désigne l'ensemble des mécanismes par lesquels une société produit et gère les comportements normaux et anormaux de ses membres ?",
+        "options": [
+          "La biopolitique",
+          "L'idéologie dominante",
+          "L'hégémonie culturelle",
+          "La normativité juridique"
+        ],
+        "answer": "La biopolitique"
+      }
+    ]
+  }
+]

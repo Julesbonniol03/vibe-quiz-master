@@ -1,0 +1,172 @@
+[
+  {
+    "id": 1,
+    "title": "La Naissance du Cinéma : Le Premier Spawn Visuel",
+    "brief": "28 décembre 1895. Sous-sol du Grand Café, Boulevard des Capucines, Paris. Auguste et Louis Lumière projettent les premières images animées devant 33 spectateurs payants. Le film ? 'La Sortie de l'Usine Lumière à Lyon' — 46 secondes d'ouvriers qui sortent d'une usine. Spoiler : les gens ont quand même été choqués de voir des images bouger. Thomas Edison avait inventé le Kinetoscope un an avant, mais c'était un visionnage individuel dans une boîte. Les Lumière, eux, ont eu l'idée du genius : projeter sur grand écran, faire du collectif. Le cinéma venait de naître comme expérience partagée. George Méliès, magicien de profession, est dans la salle ce soir-là. Ébloui, il va acheter un projecteur et inventer les effets spéciaux 2 ans plus tard. Le first drop de l'histoire du divertissement.",
+    "visualDescription": "Le sous-sol du Grand Café en 1895 en mode dark néon. Un projecteur à manivelle qui projette un faisceau de lumière blanc sur un écran. 33 spectateurs en silhouettes choquées. Des images animées d'ouvriers en sépia holographique. Ambiance invention du siècle.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba",
+    "quiz": [
+      {
+        "question": "Quelle date est considérée comme la naissance officielle du cinéma ?",
+        "options": ["28 décembre 1895", "14 juillet 1893", "1er janvier 1900", "10 octobre 1888"],
+        "answer": "28 décembre 1895"
+      },
+      {
+        "question": "Quel film des frères Lumière est projeté lors de la première séance publique payante ?",
+        "options": ["L'Arroseur Arrosé", "La Sortie de l'Usine Lumière à Lyon", "Le Voyage dans la Lune", "L'Arrivée d'un Train en Gare"],
+        "answer": "La Sortie de l'Usine Lumière à Lyon"
+      },
+      {
+        "question": "Qui a inventé le Kinetoscope, précurseur individuel du cinéma ?",
+        "options": ["Louis Lumière", "George Méliès", "Thomas Edison", "Auguste Lumière"],
+        "answer": "Thomas Edison"
+      },
+      {
+        "question": "Qui était dans la salle lors de la première séance et allait devenir le pionnier des effets spéciaux ?",
+        "options": ["Charlie Chaplin", "D.W. Griffith", "George Méliès", "Buster Keaton"],
+        "answer": "George Méliès"
+      },
+      {
+        "question": "En quelle ville a eu lieu la première séance publique payante des frères Lumière ?",
+        "options": ["Lyon", "Paris", "Marseille", "Bordeaux"],
+        "answer": "Paris"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "L'Ère du Muet : Chaplin, Keaton & le Premier Hollywood",
+    "brief": "1895-1927. Pas de son, pas de paroles — juste des images et de la musique en live. Et pourtant, l'ère du muet a produit certains des plus grands génies de l'histoire du cinéma. George Méliès invente les effets spéciaux avec 'Le Voyage dans la Lune' (1902) — le premier film de science-fiction de l'histoire. D.W. Griffith révolutionne le montage et la grammaire cinématographique. Charlie Chaplin crée Charlot : chapeau, canne, moustache, démarche de canard. 'Les Temps Modernes', 'Le Kid', 'La Ruée vers l'Or'. Buster Keaton fait des cascades impossibles sans doublure. Hollywood s'impose comme capitale mondiale du cinéma. L'horreur muette avec 'Nosferatu' de Murnau (1922). En 27 ans, le cinéma passe de 46 secondes d'ouvriers qui marchent à des longs-métrages sophistiqués. Le all-time foundation.",
+    "visualDescription": "Un plateau de tournage des années 20 en noir et blanc stylisé avec des touches néon. Charlie Chaplin en Charlot qui marche avec sa canne en néon blanc. La Lune en forme d'œil géant de Méliès holographique. Un clap de cinéma vintage. Ambiance cinéma muet cyberpunk.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1542204165-65bf26472b9b",
+    "quiz": [
+      {
+        "question": "Quel film de George Méliès (1902) est considéré comme le premier film de science-fiction ?",
+        "options": ["L'Arroseur Arrosé", "Nosferatu", "Le Voyage dans la Lune", "La Naissance d'une Nation"],
+        "answer": "Le Voyage dans la Lune"
+      },
+      {
+        "question": "Quel personnage iconique Charlie Chaplin a-t-il créé à l'ère du muet ?",
+        "options": ["Le Vagabond (Charlot)", "Le Comte Dracula", "L'Homme Invisible", "Le Kid"],
+        "answer": "Le Vagabond (Charlot)"
+      },
+      {
+        "question": "Quel réalisateur est connu pour ses cascades spectaculaires sans doublure à l'ère du muet ?",
+        "options": ["Charlie Chaplin", "Buster Keaton", "Harold Lloyd", "D.W. Griffith"],
+        "answer": "Buster Keaton"
+      },
+      {
+        "question": "Quel film d'horreur muet de 1922 met en scène le comte Orlok ?",
+        "options": ["Dracula", "Nosferatu", "Le Cabinet du Docteur Caligari", "Frankenstein"],
+        "answer": "Nosferatu"
+      },
+      {
+        "question": "Quelle ville est devenue la capitale mondiale du cinéma dès l'ère du muet ?",
+        "options": ["New York", "Paris", "Londres", "Hollywood (Los Angeles)"],
+        "answer": "Hollywood (Los Angeles)"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "L'Avènement du Son : Le Cinéma Parlant (1927-1940)",
+    "brief": "6 octobre 1927. Al Jolson chante dans 'The Jazz Singer' et prononce les premières paroles synchronisées de l'histoire : 'You ain't heard nothing yet !' Le cinéma parlant est né. La révolution est totale et brutale : des stars du muet dont les voix ne correspondent pas à leur image perdent leur carrière du jour au lendemain. Les studios doivent tout reconstruire — studios insonorisés, micros cachés dans les décors, nouvelles techniques. Les acteurs de théâtre envahissent Hollywood. Mais les possibilités explosent : comédies musicales, dialogues percutants, effets sonores. En 1939, c'est l'Âge d'Or ultime : 'Le Magicien d'Oz' et 'Autant en Emporte le Vent' sortent la même année. Le passage du muet au parlant est l'une des plus grandes transformations technologiques de l'histoire culturelle.",
+    "visualDescription": "Un microphone vintage suspendu au-dessus d'un plateau de studio des années 30, brillant en néon doré. Al Jolson en silhouette avec son chapeau haut-de-forme. Des ondes sonores en cyan qui se propagent depuis l'écran. Des étoiles du muet qui s'éteignent comme des LED qui claquent. Ambiance disruption technologique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1478737270239-2f02b77fc618",
+    "quiz": [
+      {
+        "question": "Quel film de 1927 est considéré comme le premier film parlant synchronisé ?",
+        "options": ["Chantons sous la Pluie", "Le Chanteur de Jazz (The Jazz Singer)", "Broadway Melody", "The Lights of New York"],
+        "answer": "Le Chanteur de Jazz (The Jazz Singer)"
+      },
+      {
+        "question": "Quelle conséquence le cinéma parlant a-t-il eu sur les stars du muet ?",
+        "options": ["Elles ont toutes vu leur carrière décoller", "Certaines ont perdu leur carrière si leur voix ne correspondait pas", "Elles ont été embauchées comme réalisatrices", "Rien n'a changé pour elles"],
+        "answer": "Certaines ont perdu leur carrière si leur voix ne correspondait pas"
+      },
+      {
+        "question": "Quelle nouvelle catégorie de films a explosé avec l'arrivée du son ?",
+        "options": ["Les westerns", "Les films d'horreur", "Les comédies musicales", "Les films de science-fiction"],
+        "answer": "Les comédies musicales"
+      },
+      {
+        "question": "Quel film musical sorti en 1939 est emblématique de l'âge d'or du cinéma parlant en couleur ?",
+        "options": ["Casablanca", "Le Magicien d'Oz", "Citizen Kane", "Rebecca"],
+        "answer": "Le Magicien d'Oz"
+      },
+      {
+        "question": "En quelle année 'Autant en Emporte le Vent', l'un des plus grands succès de l'histoire du cinéma, est-il sorti ?",
+        "options": ["1927", "1933", "1939", "1945"],
+        "answer": "1939"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "L'Âge d'Or d'Hollywood : Hitchcock, Welles & les Classiques",
+    "brief": "1940-1960. Hollywood règne en maître absolu. Les studios (MGM, Warner Bros, Paramount) fonctionnent comme des usines à rêves — des centaines de films par an, des acteurs sous contrat, un système de production industrielle du glamour. Dans cet écosystème contrôlé, deux génies émergent. Orson Welles a 26 ans quand il réalise 'Citizen Kane' (1941) — considéré comme le meilleur film de l'histoire par de nombreux critiques. Il invente des techniques de mise en scène copiées pendant des décennies. Alfred Hitchcock, 'Le Maître du Suspense', terrorise les spectateurs avec 'Psychose' (1960), 'Fenêtre sur Cour' (1954), 'Vertigo' (1958). Humphrey Bogart joue dans 'Casablanca' (1942), le film le plus cité de l'histoire. C'est l'époque des stars absolues : Marilyn Monroe, Cary Grant, Grace Kelly. Un Hollywood en technicolor.",
+    "visualDescription": "Un plateau de tournage hollywoodien des années 50 en technicolor néon. Orson Welles derrière une caméra massive. Une affiche de Casablanca en néon rouge et blanc. Alfred Hitchcock en silhouette sur fond de douche. Des étoiles de cinéma comme des étoiles dans le ciel de LA. Ambiance Golden Age glamour.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1536440136628-849c177e76a1",
+    "quiz": [
+      {
+        "question": "Quel film d'Orson Welles (1941) est souvent classé comme le meilleur film de l'histoire ?",
+        "options": ["La Splendeur des Ambersons", "Citizen Kane", "La Soif du Mal", "Le Troisième Homme"],
+        "answer": "Citizen Kane"
+      },
+      {
+        "question": "Quel surnom Alfred Hitchcock a-t-il reçu ?",
+        "options": ["Le Roi du Suspense", "Le Maître du Suspense", "Le Génie de l'Horreur", "Le Père du Thriller"],
+        "answer": "Le Maître du Suspense"
+      },
+      {
+        "question": "Dans quel film de 1942 Humphrey Bogart prononce-t-il 'Here's looking at you, kid' ?",
+        "options": ["Le Faucon Maltais", "L'Africaine", "Casablanca", "Key Largo"],
+        "answer": "Casablanca"
+      },
+      {
+        "question": "Quel film d'Hitchcock de 1960 contient la célèbre scène de la douche ?",
+        "options": ["Les Oiseaux", "Vertigo", "Fenêtre sur Cour", "Psychose"],
+        "answer": "Psychose"
+      },
+      {
+        "question": "Comment s'appelait le système où les acteurs étaient sous contrat exclusif avec un studio ?",
+        "options": ["Le Système des Oscars", "Le Système des Studios (Studio System)", "Le Contrat de Star", "Le Pacte Hollywood"],
+        "answer": "Le Système des Studios (Studio System)"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "La Nouvelle Vague : Quand la France a Réinventé le Cinéma",
+    "brief": "Fin des années 50, Paris. Une bande de jeunes critiques des Cahiers du Cinéma décident de faire des films. Godard, Truffaut, Chabrol, Rohmer, Rivette. Résultat : la Nouvelle Vague, le mouvement cinématographique le plus influent du XXe siècle. 'Les 400 Coups' de Truffaut (1959) — l'enfance à travers le regard d'un gamin rebelle. 'À Bout de Souffle' de Godard (1960) — Jean-Paul Belmondo dans Paris, caméra portée à l'épaule, montage cut brutal, les règles académiques balancées aux oubliettes. Ces films coûtent peu, se tournent dans les rues, avec des acteurs naturels. C'est la liberté totale. L'influence ? Immense : Scorsese, Tarantino, Soderbergh citent tous la Nouvelle Vague comme inspiration fondatrice. Le patch qui a tout changé pour le cinéma d'auteur mondial.",
+    "visualDescription": "Les rues de Paris en noir et blanc avec des touches néon cyan. Jean-Luc Godard derrière une caméra légère à l'épaule. Belmondo et Seberg sur les Champs-Élysées en silhouettes lumineuses. Les Cahiers du Cinéma comme une tablette holographique. Ambiance cinéma d'auteur free style.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34",
+    "quiz": [
+      {
+        "question": "Quel film de François Truffaut (1959) est l'acte de naissance de la Nouvelle Vague ?",
+        "options": ["Jules et Jim", "La Nuit Américaine", "Les 400 Coups", "Baisers Volés"],
+        "answer": "Les 400 Coups"
+      },
+      {
+        "question": "Quel film de Jean-Luc Godard (1960) est emblématique de la Nouvelle Vague ?",
+        "options": ["Pierrot le Fou", "Alphaville", "À Bout de Souffle", "Le Mépris"],
+        "answer": "À Bout de Souffle"
+      },
+      {
+        "question": "De quelle revue les réalisateurs de la Nouvelle Vague étaient-ils issus ?",
+        "options": ["Le Film Français", "Positif", "Les Cahiers du Cinéma", "Cinémathèque"],
+        "answer": "Les Cahiers du Cinéma"
+      },
+      {
+        "question": "Quelle innovation technique caractérise le style visuel de la Nouvelle Vague ?",
+        "options": ["L'usage du technicolor flamboyant", "La caméra portée à l'épaule et les décors naturels", "Les effets spéciaux de studio", "Le format CinemaScope"],
+        "answer": "La caméra portée à l'épaule et les décors naturels"
+      },
+      {
+        "question": "Quel acteur français est devenu l'icône masculine de la Nouvelle Vague ?",
+        "options": ["Alain Delon", "Lino Ventura", "Jean-Paul Belmondo", "Louis de Funès"],
+        "answer": "Jean-Paul Belmondo"
+      }
+    ]
+  }
+]
