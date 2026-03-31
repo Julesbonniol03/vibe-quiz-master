@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import BottomNav from "@/components/BottomNav";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import SplashScreen from "@/components/SplashScreen";
 import OnboardingModal from "@/components/OnboardingModal";
@@ -68,7 +69,8 @@ export default function RootLayout({
           <SplashScreen />
           <OnboardingModal />
           <Navbar />
-          <main className="safe-main">{children}</main>
+          <main className="safe-main pb-20 md:pb-0">{children}</main>
+          <BottomNav />
           <ServiceWorkerRegister />
         </AuthProvider>
       </body>

@@ -144,7 +144,7 @@ export default function OnboardingModal() {
                           className="absolute -top-1 -right-1 w-5 h-5 rounded-full flex items-center justify-center text-[10px]"
                           style={{ backgroundColor: av.color }}
                         >
-                          <span className="text-black font-bold">&#10003;</span>
+                          <span className="text-black font-bold">✓</span>
                         </motion.div>
                       )}
                     </motion.button>

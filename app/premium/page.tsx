@@ -28,11 +28,11 @@ const ADVANTAGES = [
     glow: "from-rose-500/20 to-red-500/20",
   },
   {
-    icon: "🚫",
+    icon: "🔮",
     gold: "✦",
-    title: "Zéro Pub",
-    desc: "Une expérience immersive, sans aucune interruption ni distraction.",
-    glow: "from-amber-500/20 to-yellow-500/20",
+    title: "L'Oracle",
+    desc: "Explications détaillées générées par IA après chaque réponse. Comprends le pourquoi, pas juste la bonne réponse.",
+    glow: "from-purple-500/20 to-violet-500/20",
   },
   {
     icon: "📰",
@@ -42,18 +42,18 @@ const ADVANTAGES = [
     glow: "from-blue-500/20 to-indigo-500/20",
   },
   {
-    icon: "🔥",
+    icon: "👑",
     gold: "✦",
-    title: "Difficulté Expert Illimitée",
-    desc: "Accès permanent au mode Expert dans toutes les catégories, sans limite de questions.",
-    glow: "from-orange-500/20 to-red-500/20",
+    title: "Badge Légende",
+    desc: "Un badge doré exclusif sur votre profil et dans le classement. Montrez que vous êtes au sommet.",
+    glow: "from-amber-500/20 to-yellow-500/20",
   },
   {
-    icon: "🤖",
+    icon: "🚫",
     gold: "✦",
-    title: "Explications IA",
-    desc: "Chaque réponse est accompagnée d'une explication enrichie par intelligence artificielle.",
-    glow: "from-purple-500/20 to-blue-500/20",
+    title: "Zéro Pub",
+    desc: "Une expérience immersive, sans aucune interruption ni distraction.",
+    glow: "from-slate-500/20 to-gray-500/20",
   },
   {
     icon: "⚡",
@@ -272,7 +272,7 @@ export default function PremiumPage() {
                   <span className="text-amber-400 font-semibold text-sm">{a.title}</span>
                   <span className="text-slate-500 text-xs ml-2">Débloqué</span>
                 </div>
-                <span className="ml-auto text-green-400">&#10003;</span>
+                <span className="ml-auto text-green-400">✓</span>
               </motion.div>
             ))}
           </motion.div>
@@ -422,7 +422,7 @@ export default function PremiumPage() {
                       ? "bg-amber-400/10 border border-amber-400/30 text-amber-400"
                       : "bg-white/[0.03] border border-white/[0.06] text-slate-600"
                   }`}>
-                    {isSelected ? "&#10003; Sélectionné" : "Choisir"}
+                    {isSelected ? "✓ Sélectionné" : "Choisir"}
                   </div>
                 </motion.div>
               );
@@ -452,7 +452,7 @@ export default function PremiumPage() {
             />
           </motion.button>
           <p className="text-slate-600 text-sm mt-4">
-            &#10003; 7 jours gratuits &middot; &#10003; Sans carte bancaire &middot; &#10003; Annulation instantanée
+            ✓ 7 jours gratuits &middot; ✓ Sans carte bancaire &middot; ✓ Annulation instantanée
           </p>
         </motion.div>
 
@@ -465,7 +465,7 @@ export default function PremiumPage() {
         >
           <div className="flex items-center justify-center gap-1 mb-3">
             {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className="text-amber-400 text-xl">&#9733;</span>
+              <span key={i} className="text-amber-400 text-xl">★</span>
             ))}
           </div>
           <p className="text-slate-500 text-sm">
@@ -492,10 +492,10 @@ export default function PremiumPage() {
             </div>
             {[
               { feature: "Vies", free: "5 (régén. 30min)", legend: "Illimitées ❤️" },
-              { feature: "Actualités 2026", free: "—", legend: "✓" },
-              { feature: "Mode Expert", free: "10/jour", legend: "Illimité" },
-              { feature: "Explications IA", free: "—", legend: "✓" },
-              { feature: "Badge doré", free: "—", legend: "👑" },
+              { feature: "L'Oracle (IA)", free: "—", legend: "🔮" },
+              { feature: "Actualités 2026", free: "🔒", legend: "✓" },
+              { feature: "Badge Légende", free: "—", legend: "👑" },
+              { feature: "Publicités", free: "Oui", legend: "Aucune" },
               { feature: "Multiplicateur XP", free: "x1", legend: "x3" },
             ].map((row, i) => (
               <div
@@ -545,6 +545,34 @@ export default function PremiumPage() {
               Essayer Gratuitement →
             </motion.button>
           </div>
+        </motion.div>
+
+        {/* Restore purchases + legal */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.7 }}
+          className="text-center mt-10 mb-8 space-y-3"
+        >
+          <button
+            onClick={activatePremium}
+            className="text-slate-500 text-sm underline underline-offset-4 hover:text-amber-400 transition-colors"
+          >
+            Restaurer mes achats
+          </button>
+          <div className="flex items-center justify-center gap-4 text-slate-700 text-xs">
+            <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">
+              Conditions d&apos;utilisation
+            </Link>
+            <span>·</span>
+            <Link href="/confidentialite" className="hover:text-slate-400 transition-colors">
+              Politique de confidentialité
+            </Link>
+          </div>
+          <p className="text-slate-800 text-[10px] max-w-md mx-auto leading-relaxed">
+            L&apos;abonnement se renouvelle automatiquement sauf annulation au moins 24h avant la fin de la période en cours.
+            La gestion des abonnements se fait depuis les réglages de votre compte.
+          </p>
         </motion.div>
       </div>
     </div>

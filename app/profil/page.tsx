@@ -8,6 +8,7 @@ import { useAchievements, ACHIEVEMENTS } from "@/hooks/useAchievements";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
 import { categoryColors } from "@/lib/questions";
+import { useHearts } from "@/hooks/useHearts";
 
 // ─── RANK SYSTEM ───
 const RANKS = [
@@ -175,6 +176,7 @@ export default function ProfilPage() {
   const progress = useProgress();
   const { profile, hydrated: profileHydrated } = useProfile();
   const { unlocked, isUnlocked } = useAchievements();
+  const heartsSystem = useHearts();
 
   if (!progress.hydrated || !profileHydrated) {
     return (
@@ -189,6 +191,7 @@ export default function ProfilPage() {
   const levelInfo = getLevel(progress.xp);
   const totalTimeStr = formatTime(progress.speedRecord.totalTime);
   const avatar = profile ? getAvatarById(profile.avatarId) : null;
+  const isPremium = heartsSystem.premium;
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
@@ -259,8 +262,13 @@ export default function ProfilPage() {
           </div>
 
           <div className="text-center sm:text-left flex-1">
-            <h1 className="text-2xl font-bold text-white mb-0.5">
+            <h1 className="text-2xl font-bold text-white mb-0.5 flex items-center gap-2 justify-center sm:justify-start">
               {profile?.pseudo || "Joueur"}
+              {isPremium && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-500/20 to-yellow-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold shadow-lg shadow-amber-500/10">
+                  👑 Légende
+                </span>
+              )}
             </h1>
             <p className={`text-sm font-semibold ${levelInfo.titleColor} mb-1`}>
               {levelInfo.title}
@@ -377,7 +385,7 @@ export default function ProfilPage() {
                     className="absolute -top-1 -right-1 w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold text-black"
                     style={{ backgroundColor: badge.glowColor.replace("0.5", "1").replace("rgba", "rgb").replace(",0.5)", ")").replace("rgba(", "rgb(") }}
                   >
-                    &#10003;
+                    ✓
                   </div>
                 )}
               </motion.div>
@@ -602,7 +610,7 @@ function ResetSection({ onReset }: { onReset: () => void }) {
         animate={{ opacity: 1 }}
         className="text-center py-6"
       >
-        <p className="text-green-400 font-semibold">&#10003; Progression r&eacute;initialis&eacute;e. Rechargement...</p>
+        <p className="text-green-400 font-semibold">✓ Progression réinitialisée. Rechargement...</p>
       </motion.div>
     );
   }

@@ -178,7 +178,7 @@ export default function HistoireRevisionPage() {
                     animate={{ scale: 1 }}
                     className={`w-6 h-6 rounded-full ${period.bg} border ${period.border} flex items-center justify-center`}
                   >
-                    <span className={`text-xs ${period.color}`}>&#10003;</span>
+                    <span className={`text-xs ${period.color}`}>✓</span>
                   </motion.div>
                 )}
               </motion.button>
@@ -361,7 +361,7 @@ export default function HistoireRevisionPage() {
                           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                           className="text-slate-600 text-sm flex items-center gap-2"
                         >
-                          <span>&#x21BB;</span> Cliquer pour voir la réponse
+                          <span>↻</span> Cliquer pour voir la réponse
                         </motion.div>
                       </div>
                     </>
@@ -386,7 +386,7 @@ export default function HistoireRevisionPage() {
                         </p>
                         <div className="w-12 h-px bg-white/10" />
                         <p className="text-slate-400 text-sm text-center leading-relaxed max-w-md">
-                          <span className="text-neon-cyan font-medium">&#128161; </span>
+                          <span className="text-neon-cyan font-medium">💡 </span>
                           {currentCard.explanation}
                         </p>
                       </div>
@@ -422,7 +422,7 @@ export default function HistoireRevisionPage() {
           disabled={currentIndex === 0}
           className="p-3 glass-card !rounded-xl text-slate-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
-          &#8592; Précédent
+          ← Précédent
         </motion.button>
 
         <motion.button
@@ -431,13 +431,13 @@ export default function HistoireRevisionPage() {
           onClick={handleNext}
           className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/15"
         >
-          {currentIndex + 1 >= questions.length ? "Terminer" : "Suivant &#8594;"}
+          {currentIndex + 1 >= questions.length ? "Terminer" : "Suivant →"}
         </motion.button>
       </div>
 
       {/* Keyboard hint */}
       <p className="text-slate-700 text-xs text-center mt-4">
-        Espace pour retourner &middot; &#8592; &#8594; pour naviguer
+        Espace pour retourner &middot; ← → pour naviguer
       </p>
     </div>
   );

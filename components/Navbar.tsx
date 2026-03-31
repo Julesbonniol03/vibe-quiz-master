@@ -26,7 +26,7 @@ export default function Navbar() {
   const { dailyStreak, hydrated: progressHydrated } = useProgress();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
+    <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" style={{ paddingLeft: "max(1rem, env(safe-area-inset-left, 0px))", paddingRight: "max(1rem, env(safe-area-inset-right, 0px))" }}>
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
