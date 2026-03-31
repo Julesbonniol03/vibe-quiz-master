@@ -163,16 +163,24 @@ export default function LeaderboardPage() {
             </span>
 
             <div className="flex items-center gap-3 min-w-0">
-              <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-lg flex-shrink-0">
+              <div className={`w-9 h-9 rounded-xl flex items-center justify-center text-lg flex-shrink-0 ${
+                entry.isPremium
+                  ? "bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-amber-500/30 shadow-lg shadow-amber-500/10"
+                  : "bg-white/10"
+              }`}>
                 {entry.avatar}
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className={`font-medium text-sm truncate ${entry.isYou ? "text-indigo-300" : "text-white"}`}>
+                  <span className={`font-medium text-sm truncate ${
+                    entry.isYou ? "text-indigo-300" :
+                    entry.isPremium ? "bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-bold" :
+                    "text-white"
+                  }`}>
                     {entry.name}
                   </span>
                   {entry.isPremium && (
-                    <span className="text-yellow-400 text-xs">⭐</span>
+                    <span className="text-amber-400 text-[10px] font-bold bg-amber-500/10 border border-amber-500/20 px-1.5 py-0.5 rounded-full">👑</span>
                   )}
                   {entry.isYou && (
                     <span className="bg-indigo-500/30 text-indigo-400 text-xs px-2 py-0.5 rounded-full border border-indigo-500/30">

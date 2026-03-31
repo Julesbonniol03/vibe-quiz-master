@@ -311,6 +311,11 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       progress.completeDaily();
     }
 
+    // Bonus heart on perfect score (10/10)
+    if (score === total && total >= 5) {
+      heartsSystem.earnBonusHeart();
+    }
+
     // Record speed
     const gameTimeSeconds = (Date.now() - gameStartTimeRef.current) / 1000;
     setGameTime(Math.round(gameTimeSeconds));
@@ -689,10 +694,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             className="text-center"
           >
             <div className="glass-card-strong p-8 !rounded-2xl mb-4">
-              <div className="text-6xl mb-4">💔</div>
-              <h2 className="text-2xl font-bold text-white mb-2">Plus de vies !</h2>
-              <p className="text-slate-500 text-sm mb-1">Tes cœurs se régénèrent avec le temps</p>
-              <p className="text-slate-600 text-xs mb-6">ou passe en <span className="text-amber-400 font-semibold">Mode Légende</span> pour des vies illimitées</p>
+              <div className="text-6xl mb-4">🧠💨</div>
+              <h2 className="text-2xl font-bold text-white mb-2">Cerveau en surchauffe !</h2>
+              <p className="text-slate-400 text-sm mb-1 italic">Ton cerveau est en surchauffe, Teubé.</p>
+              <p className="text-slate-500 text-sm mb-1">Repose-toi ou passe en <span className="text-amber-400 font-bold">Mode Légende</span> pour devenir immortel !</p>
+              {heartsSystem.nextRegenIn > 0 && (
+                <p className="text-slate-600 text-xs mt-2 mb-4">Prochain cœur dans <span className="text-neon-cyan font-bold">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span></p>
+              )}
               <div className="flex flex-col gap-3">
                 <Link
                   href="/premium"
@@ -1322,7 +1330,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 </div>
               </>
             ) : (
-              /* ── Wrong: explanation + manual "Continuer" button ── */
+              /* ── Wrong: explanation + Oracle nudge + Continuer ── */
               <>
                 <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
                   <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
@@ -1340,6 +1348,20 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     {currentQ.explanation}
                   </p>
                 </motion.div>
+                {/* Oracle nudge (premium) */}
+                {!heartsSystem.premium && (
+                  <Link
+                    href="/premium"
+                    className="flex items-center gap-3 p-3 mb-3 rounded-2xl border border-purple-500/20 bg-purple-500/[0.04] hover:border-purple-500/40 transition-all group"
+                  >
+                    <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">🔮</span>
+                    <div className="flex-1">
+                      <p className="text-purple-400/60 text-sm font-semibold">Demander à l&apos;Oracle</p>
+                      <p className="text-slate-600 text-[11px]">Explications détaillées par IA — Mode Légende</p>
+                    </div>
+                    <span className="text-amber-400/40 text-xs font-bold">👑 PRO</span>
+                  </Link>
+                )}
                 <motion.button
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
