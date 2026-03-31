@@ -366,13 +366,29 @@ export function useProgress() {
   }, [dailyCompleted, dailyLastDate, dailyStreak, syncToSupabase]);
 
   // Check if streak is still valid (hasn't been broken)
+  // Premium: "Gel de Série" — auto-freeze once per week if missed a day
   const computedDailyStreak = (() => {
     if (!hydrated) return 0;
     const today = getTodayStr();
     const yesterday = getYesterdayStr();
     if (dailyLastDate === today || dailyLastDate === yesterday) return dailyStreak;
+
+    // Flame freeze for premium: check if within 2 days (allows 1 missed day per week)
+    const isPremiumUser = auth?.profile?.premium_status ||
+      (typeof window !== "undefined" && (() => { try { return JSON.parse(localStorage.getItem("vqm_premium") || "false"); } catch { return false; } })());
+    if (isPremiumUser && dailyStreak > 0) {
+      const twoDaysAgo = (() => {
+        const d = new Date();
+        d.setDate(d.getDate() - 2);
+        return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      })();
+      if (dailyLastDate >= twoDaysAgo) return dailyStreak; // Flame freeze!
+    }
+
     return 0; // streak broken
   })();
+
+  const isFlameFreeze = computedDailyStreak > 0 && dailyLastDate !== getTodayStr() && dailyLastDate !== getYesterdayStr();
 
   const isDailyCompleted = dailyCompleted === getTodayStr();
 
@@ -428,6 +444,7 @@ export function useProgress() {
     wrongQuestions,
     dailyStreak: computedDailyStreak,
     isDailyCompleted,
+    isFlameFreeze,
     markWrong,
     markRight,
     saveWrongQuestion,

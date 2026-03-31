@@ -35,6 +35,20 @@ const ADVANTAGES = [
     glow: "from-purple-500/20 to-violet-500/20",
   },
   {
+    icon: "🔥",
+    gold: "✦",
+    title: "Gel de Série",
+    desc: "Protection automatique de ta flamme une fois par semaine. Rate un jour sans perdre ta série.",
+    glow: "from-orange-500/20 to-amber-500/20",
+  },
+  {
+    icon: "👑",
+    gold: "✦",
+    title: "Prestige Doré",
+    desc: "Badge Légende doré sur ton profil + nom brillant dans le classement mondial. Flex ultime.",
+    glow: "from-amber-500/20 to-yellow-500/20",
+  },
+  {
     icon: "📰",
     gold: "✦",
     title: "Actualités 2026",
@@ -42,11 +56,18 @@ const ADVANTAGES = [
     glow: "from-blue-500/20 to-indigo-500/20",
   },
   {
-    icon: "👑",
+    icon: "👻",
     gold: "✦",
-    title: "Badge Légende",
-    desc: "Un badge doré exclusif sur votre profil et dans le classement. Montrez que vous êtes au sommet.",
-    glow: "from-amber-500/20 to-yellow-500/20",
+    title: "Mode Fantôme",
+    desc: "Rejoue n'importe quel quiz du classement pour battre le score du leader. Discret mais redoutable.",
+    glow: "from-slate-500/20 to-cyan-500/20",
+  },
+  {
+    icon: "⚡",
+    gold: "✦",
+    title: "Multiplicateur x3",
+    desc: "Tes streaks rapportent jusqu'à 3x plus de XP. Grimpe au sommet du classement.",
+    glow: "from-rose-500/20 to-pink-500/20",
   },
   {
     icon: "🚫",
@@ -54,13 +75,6 @@ const ADVANTAGES = [
     title: "Zéro Pub",
     desc: "Une expérience immersive, sans aucune interruption ni distraction.",
     glow: "from-slate-500/20 to-gray-500/20",
-  },
-  {
-    icon: "⚡",
-    gold: "✦",
-    title: "Multiplicateur x3",
-    desc: "Vos streaks rapportent jusqu'à 3x plus de XP pour grimper au classement.",
-    glow: "from-rose-500/20 to-pink-500/20",
   },
 ];
 
@@ -493,10 +507,12 @@ export default function PremiumPage() {
             {[
               { feature: "Vies", free: "5 (régén. 30min)", legend: "Illimitées ❤️" },
               { feature: "L'Oracle (IA)", free: "—", legend: "🔮" },
+              { feature: "Gel de Série", free: "—", legend: "🔥 1x/sem" },
+              { feature: "Prestige Doré", free: "—", legend: "👑 ✨" },
               { feature: "Actualités 2026", free: "🔒", legend: "✓" },
-              { feature: "Badge Légende", free: "—", legend: "👑" },
-              { feature: "Publicités", free: "Oui", legend: "Aucune" },
+              { feature: "Mode Fantôme", free: "—", legend: "👻" },
               { feature: "Multiplicateur XP", free: "x1", legend: "x3" },
+              { feature: "Publicités", free: "Oui", legend: "Aucune" },
             ].map((row, i) => (
               <div
                 key={row.feature}

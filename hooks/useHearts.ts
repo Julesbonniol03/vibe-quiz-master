@@ -123,6 +123,15 @@ export function useHearts() {
     setLastLostAt(0);
   }, []);
 
+  const earnBonusHeart = useCallback(() => {
+    if (premium) return;
+    setHearts((prev) => {
+      const next = Math.min(MAX_HEARTS + 1, prev + 1); // Can go to 6 with bonus
+      localStorage.setItem(KEY_HEARTS, JSON.stringify(next));
+      return next;
+    });
+  }, [premium]);
+
   const canPlay = premium || hearts > 0;
 
   const formatRegenTime = (seconds: number): string => {
@@ -141,5 +150,6 @@ export function useHearts() {
     formatRegenTime,
     loseHeart,
     refillHearts,
+    earnBonusHeart,
   };
 }
