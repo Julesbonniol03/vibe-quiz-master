@@ -31,11 +31,15 @@ interface Props {
 }
 
 const WorldMap = memo(function WorldMap({
-  highlight,
+  clickedCode,
+  correctCode,
+  wasCorrect,
   onCountryClick,
   disabled,
 }: {
-  highlight: HighlightState;
+  clickedCode: string | null;
+  correctCode: string | null;
+  wasCorrect: boolean;
   onCountryClick: (code: string) => void;
   disabled: boolean;
 }) {
@@ -52,23 +56,24 @@ const WorldMap = memo(function WorldMap({
           {({ geographies }) =>
             geographies.map((geo) => {
               const code = geo.properties?.["ISO_A3"] || geo.id;
-              const isCorrectCountry = highlight.correctCode === code;
-              const isClickedCountry = highlight.clickedCode === code;
+              const isCorrectCountry = correctCode === code;
+              const isClickedCountry = clickedCode === code;
 
               let fill = "#12122a";
               let stroke = "#1e1e40";
               let strokeWidth = 0.4;
 
               if (disabled && isCorrectCountry) {
-                // Always show correct country in green
-                fill = "#00f0ff";
-                stroke = "#00f0ff";
-                strokeWidth = 2;
-              } else if (disabled && isClickedCountry && !highlight.wasCorrect) {
-                // Clicked wrong country in rose
+                // ALWAYS show correct country in bright green
+                fill = "#22c55e";
+                stroke = "#4ade80";
+                strokeWidth = 2.5;
+              }
+              if (disabled && isClickedCountry && !wasCorrect) {
+                // Wrong click in rose (correct is already green above)
                 fill = "#ff2d7b";
                 stroke = "#ff2d7b";
-                strokeWidth = 1.5;
+                strokeWidth = 2;
               }
 
               return (
@@ -83,7 +88,7 @@ const WorldMap = memo(function WorldMap({
                       strokeWidth,
                       outline: "none",
                       cursor: disabled ? "default" : "pointer",
-                      transition: "fill 0.35s ease, stroke 0.35s ease",
+                      transition: "fill 0.3s, stroke 0.3s",
                     },
                     hover: {
                       fill: disabled ? fill : "#1f1f4a",
@@ -429,7 +434,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
           </div>
         )}
         <WorldMap
-          highlight={highlight}
+          clickedCode={highlight.clickedCode}
+          correctCode={highlight.correctCode}
+          wasCorrect={highlight.wasCorrect}
           onCountryClick={handleCountryClick}
           disabled={phase === "answered"}
         />
@@ -466,8 +473,8 @@ export default function TourDuMondeClient({ geoData }: Props) {
                 <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-3 mb-2 text-center">
                   <p className="text-neon-rose font-semibold">✗ Raté !</p>
                   <p className="text-slate-500 text-sm mt-1">
-                    La bonne réponse : <span className="text-neon-cyan font-semibold">{lastAnswer.correctCountry}</span>
-                    <span className="text-slate-600 text-xs ml-1">(en bleu sur la carte)</span>
+                    La bonne réponse : <span className="text-green-400 font-semibold">{lastAnswer.correctCountry}</span>
+                    <span className="text-slate-600 text-xs ml-1">(en vert sur la carte)</span>
                   </p>
                 </div>
                 <motion.button
