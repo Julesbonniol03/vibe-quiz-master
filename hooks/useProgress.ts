@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import { useOptionalAuth } from "@/contexts/AuthContext";
 
 const KEY_WRONG = "vqm_wrong";
 const KEY_RIGHT = "vqm_right";
@@ -110,6 +111,10 @@ export function calculateGameXp(score: number, bestStreak: number, totalQuestion
 }
 
 export function useProgress() {
+  const auth = useOptionalAuth();
+  const syncTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pendingSyncRef = useRef<Record<string, unknown>>({});
+
   const [wrongIds, setWrongIds] = useState<number[]>([]);
   const [rightIds, setRightIds] = useState<number[]>([]);
   const [totalPlayed, setTotalPlayed] = useState(0);
@@ -127,24 +132,62 @@ export function useProgress() {
   const [gameHistory, setGameHistory] = useState<GameHistoryEntry[]>([]);
   const [hydrated, setHydrated] = useState(false);
 
+  // Debounced Supabase sync — batches updates within 500ms
+  const syncToSupabase = useCallback((fields: Record<string, unknown>) => {
+    if (!auth?.user || !auth?.updateProfileField) return;
+    Object.assign(pendingSyncRef.current, fields);
+    if (syncTimeoutRef.current) clearTimeout(syncTimeoutRef.current);
+    syncTimeoutRef.current = setTimeout(() => {
+      const batch = { ...pendingSyncRef.current };
+      pendingSyncRef.current = {};
+      auth.updateProfileField(batch as Parameters<typeof auth.updateProfileField>[0]);
+    }, 500);
+  }, [auth]);
+
+  // Hydrate: prefer Supabase profile if logged in, else localStorage
   useEffect(() => {
-    setWrongIds(load<number[]>(KEY_WRONG, []));
-    setRightIds(load<number[]>(KEY_RIGHT, []));
-    setTotalPlayed(load<number>(KEY_PLAYED, 0));
-    setTotalCorrect(load<number>(KEY_CORRECT, 0));
-    setXp(load<number>(KEY_XP, 0));
-    setGamesPlayed(load<number>(KEY_GAMES, 0));
-    setGlobalBestStreak(load<number>(KEY_BEST_STREAK, 0));
-    setWrongQuestions(load<WrongQuestion[]>(KEY_WRONG_QUESTIONS, []));
-    setDailyStreak(load<number>(KEY_DAILY_STREAK, 0));
-    setDailyLastDate(load<string>(KEY_DAILY_LAST_DATE, ""));
-    setDailyCompleted(load<string>(KEY_DAILY_COMPLETED, ""));
-    setCategoryStats(load<CategoryStats>(KEY_CATEGORY_STATS, {}));
-    setSpeedRecord(load<SpeedRecord>(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 }));
-    setLeitner(load<LeitnerMap>(KEY_LEITNER, {}));
-    setGameHistory(load<GameHistoryEntry[]>(KEY_GAME_HISTORY, []));
+    if (auth?.loading) return; // wait for auth to resolve
+
+    if (auth?.profile) {
+      // Logged in — hydrate from Supabase profile
+      const p = auth.profile;
+      setXp(p.xp);
+      setGamesPlayed(p.games_played);
+      setTotalPlayed(p.total_played);
+      setTotalCorrect(p.total_correct);
+      setGlobalBestStreak(p.best_streak);
+      setDailyStreak(p.daily_streak);
+      setDailyLastDate(p.daily_last_date || "");
+      setDailyCompleted(p.daily_completed || "");
+      setCategoryStats(p.category_stats || {});
+      setSpeedRecord(p.speed_record || { totalTime: 0, totalAnswered: 0, bestAvg: 0 });
+      // These stay in localStorage only (too granular for DB)
+      setWrongIds(load<number[]>(KEY_WRONG, []));
+      setRightIds(load<number[]>(KEY_RIGHT, []));
+      setWrongQuestions(load<WrongQuestion[]>(KEY_WRONG_QUESTIONS, []));
+      setLeitner(load<LeitnerMap>(KEY_LEITNER, {}));
+      setGameHistory(load<GameHistoryEntry[]>(KEY_GAME_HISTORY, []));
+    } else {
+      // Not logged in — localStorage fallback
+      setWrongIds(load<number[]>(KEY_WRONG, []));
+      setRightIds(load<number[]>(KEY_RIGHT, []));
+      setTotalPlayed(load<number>(KEY_PLAYED, 0));
+      setTotalCorrect(load<number>(KEY_CORRECT, 0));
+      setXp(load<number>(KEY_XP, 0));
+      setGamesPlayed(load<number>(KEY_GAMES, 0));
+      setGlobalBestStreak(load<number>(KEY_BEST_STREAK, 0));
+      setWrongQuestions(load<WrongQuestion[]>(KEY_WRONG_QUESTIONS, []));
+      setDailyStreak(load<number>(KEY_DAILY_STREAK, 0));
+      setDailyLastDate(load<string>(KEY_DAILY_LAST_DATE, ""));
+      setDailyCompleted(load<string>(KEY_DAILY_COMPLETED, ""));
+      setCategoryStats(load<CategoryStats>(KEY_CATEGORY_STATS, {}));
+      setSpeedRecord(load<SpeedRecord>(KEY_SPEED_RECORDS, { totalTime: 0, totalAnswered: 0, bestAvg: 0 }));
+      setLeitner(load<LeitnerMap>(KEY_LEITNER, {}));
+      setGameHistory(load<GameHistoryEntry[]>(KEY_GAME_HISTORY, []));
+    }
     setHydrated(true);
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [auth?.loading, auth?.profile?.id]);
 
   const markWrong = useCallback((id: number) => {
     setWrongIds((prev) => {
@@ -157,8 +200,13 @@ export function useProgress() {
       save(KEY_RIGHT, next);
       return next;
     });
-    setTotalPlayed((prev) => { save(KEY_PLAYED, prev + 1); return prev + 1; });
-  }, []);
+    setTotalPlayed((prev) => {
+      const next = prev + 1;
+      save(KEY_PLAYED, next);
+      syncToSupabase({ total_played: next });
+      return next;
+    });
+  }, [syncToSupabase]);
 
   const markRight = useCallback((id: number) => {
     setRightIds((prev) => {
@@ -166,9 +214,19 @@ export function useProgress() {
       save(KEY_RIGHT, next);
       return next;
     });
-    setTotalPlayed((prev) => { save(KEY_PLAYED, prev + 1); return prev + 1; });
-    setTotalCorrect((prev) => { save(KEY_CORRECT, prev + 1); return prev + 1; });
-  }, []);
+    setTotalPlayed((prev) => {
+      const next = prev + 1;
+      save(KEY_PLAYED, next);
+      syncToSupabase({ total_played: next });
+      return next;
+    });
+    setTotalCorrect((prev) => {
+      const next = prev + 1;
+      save(KEY_CORRECT, next);
+      syncToSupabase({ total_correct: next });
+      return next;
+    });
+  }, [syncToSupabase]);
 
   const saveWrongQuestion = useCallback((q: Omit<WrongQuestion, "answeredAt">) => {
     setWrongQuestions((prev) => {
@@ -233,22 +291,25 @@ export function useProgress() {
     setXp((prev) => {
       const next = prev + amount;
       save(KEY_XP, next);
+      syncToSupabase({ xp: next });
       return next;
     });
-  }, []);
+  }, [syncToSupabase]);
 
   const recordGame = useCallback((bestStreak: number) => {
     setGamesPlayed((prev) => {
       const next = prev + 1;
       save(KEY_GAMES, next);
+      syncToSupabase({ games_played: next });
       return next;
     });
     setGlobalBestStreak((prev) => {
       const next = Math.max(prev, bestStreak);
       save(KEY_BEST_STREAK, next);
+      syncToSupabase({ best_streak: next });
       return next;
     });
-  }, []);
+  }, [syncToSupabase]);
 
   const recordCategoryAnswer = useCallback((category: string, isCorrect: boolean) => {
     setCategoryStats((prev) => {
@@ -261,9 +322,10 @@ export function useProgress() {
         },
       };
       save(KEY_CATEGORY_STATS, next);
+      syncToSupabase({ category_stats: next });
       return next;
     });
-  }, []);
+  }, [syncToSupabase]);
 
   const recordSpeed = useCallback((timeSpentSeconds: number, questionsAnswered: number) => {
     if (questionsAnswered === 0) return;
@@ -274,9 +336,10 @@ export function useProgress() {
       const newBestAvg = prev.bestAvg === 0 ? gameAvg : Math.min(prev.bestAvg, gameAvg);
       const next = { totalTime: newTotalTime, totalAnswered: newTotalAnswered, bestAvg: newBestAvg };
       save(KEY_SPEED_RECORDS, next);
+      syncToSupabase({ speed_record: next });
       return next;
     });
-  }, []);
+  }, [syncToSupabase]);
 
   const recordGameHistory = useCallback((entry: Omit<GameHistoryEntry, "date">) => {
     setGameHistory((prev) => {
@@ -288,20 +351,19 @@ export function useProgress() {
 
   const completeDaily = useCallback(() => {
     const today = getTodayStr();
-    // Already completed today
     if (dailyCompleted === today) return;
 
     setDailyCompleted(today);
     save(KEY_DAILY_COMPLETED, today);
 
-    // Update streak: if yesterday was the last play date, increment; else reset to 1
     const yesterday = getYesterdayStr();
     const newStreak = dailyLastDate === yesterday || dailyLastDate === today ? dailyStreak + 1 : 1;
     setDailyStreak(newStreak);
     save(KEY_DAILY_STREAK, newStreak);
     setDailyLastDate(today);
     save(KEY_DAILY_LAST_DATE, today);
-  }, [dailyCompleted, dailyLastDate, dailyStreak]);
+    syncToSupabase({ daily_streak: newStreak, daily_last_date: today, daily_completed: today });
+  }, [dailyCompleted, dailyLastDate, dailyStreak, syncToSupabase]);
 
   // Check if streak is still valid (hasn't been broken)
   const computedDailyStreak = (() => {

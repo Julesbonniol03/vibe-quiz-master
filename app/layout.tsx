@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { ServiceWorkerRegister } from "@/components/ServiceWorkerRegister";
 import SplashScreen from "@/components/SplashScreen";
 import OnboardingModal from "@/components/OnboardingModal";
+import { AuthProvider } from "@/contexts/AuthContext";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -63,11 +64,13 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className="antialiased bg-cyber-950 text-slate-100 min-h-screen">
-        <SplashScreen />
-        <OnboardingModal />
-        <Navbar />
-        <main className="safe-main">{children}</main>
-        <ServiceWorkerRegister />
+        <AuthProvider>
+          <SplashScreen />
+          <OnboardingModal />
+          <Navbar />
+          <main className="safe-main">{children}</main>
+          <ServiceWorkerRegister />
+        </AuthProvider>
       </body>
     </html>
   );

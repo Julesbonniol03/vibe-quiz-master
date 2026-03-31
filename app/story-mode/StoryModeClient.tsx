@@ -302,7 +302,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             <div className="flex items-center gap-3 mb-3">
               <span className="text-3xl">📖</span>
               <span className="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded-full">
-                Story Mode
+                Mode Épopée
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">

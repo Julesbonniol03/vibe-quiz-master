@@ -4,9 +4,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
+import { useOptionalAuth } from "@/contexts/AuthContext";
+import { LogIn, LogOut } from "lucide-react";
 
 const navItems = [
-  { href: "/dashboard", label: "Dashboard", icon: "🏠" },
+  { href: "/dashboard", label: "Accueil", icon: "🏠" },
   { href: "/quiz", label: "Quiz", icon: "🧠" },
   { href: "/profil", label: "Profil", icon: "👤", isProfile: true },
   { href: "/reviser", label: "Réviser", icon: "📖" },
@@ -17,6 +19,7 @@ const navItems = [
 export default function Navbar() {
   const pathname = usePathname();
   const { profile, hydrated } = useProfile();
+  const auth = useOptionalAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
@@ -80,6 +83,25 @@ export default function Navbar() {
           >
             Jouer →
           </Link>
+          {auth && !auth.loading && (
+            auth.user ? (
+              <button
+                onClick={() => auth.signOut()}
+                className="ml-1 p-2 rounded-lg text-slate-500 hover:text-neon-rose hover:bg-neon-rose/5 transition-all"
+                title="Déconnexion"
+              >
+                <LogOut size={16} />
+              </button>
+            ) : (
+              <Link
+                href="/connexion"
+                className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-neon-cyan hover:bg-neon-cyan/5 border border-transparent hover:border-neon-cyan/20 transition-all"
+              >
+                <LogIn size={14} />
+                Connexion
+              </Link>
+            )
+          )}
         </div>
 
         {/* Mobile Nav */}
