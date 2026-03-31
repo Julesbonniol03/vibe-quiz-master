@@ -2,7 +2,7 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount, ActualitesGrid } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount, ActualitesGrid, PaywallMini } from "./DashboardClient";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function loadActualites(): any[] {
@@ -146,6 +146,9 @@ export default function DashboardPage() {
           </p>
         </div>
       )}
+
+      {/* Premium lock for Actualités 2026 */}
+      <PaywallMini />
 
       {/* Game Modes */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

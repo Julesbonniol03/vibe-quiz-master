@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useProgress } from "@/hooks/useProgress";
+import { useHearts } from "@/hooks/useHearts";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -429,6 +430,88 @@ export function ActualitesGrid({ items }: { items: ActualiteItem[] }) {
 
       <AnimatePresence>
         {selected && <ActualitesModal item={selected} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
+    </>
+  );
+}
+
+// ─── PAYWALL MINI (shown when tapping locked content like Actualités 2026) ───
+export function PaywallMini() {
+  const heartsSystem = useHearts();
+  const [show, setShow] = useState(false);
+
+  if (heartsSystem.premium) return null;
+
+  return (
+    <>
+      <button
+        onClick={() => setShow(true)}
+        className="w-full mt-4 py-3 rounded-2xl border-2 border-amber-500/20 bg-gradient-to-r from-amber-500/[0.05] to-yellow-500/[0.05] hover:border-amber-500/40 transition-all flex items-center justify-center gap-2"
+      >
+        <span>🔒</span>
+        <span className="text-amber-400 font-semibold text-sm">Actualités 2026 — Mode Légende</span>
+      </button>
+
+      <AnimatePresence>
+        {show && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+            onClick={() => setShow(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-sm w-full rounded-3xl border border-amber-500/20 bg-cyber-950 p-8 text-center relative overflow-hidden"
+            >
+              {/* Glow */}
+              <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-60 h-60 bg-amber-500/[0.08] rounded-full blur-[80px] pointer-events-none" />
+
+              <div className="relative z-10">
+                <div className="text-6xl mb-4">👑</div>
+                <h2 className="text-2xl font-black mb-2">
+                  <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 bg-clip-text text-transparent">
+                    Mode Légende
+                  </span>
+                </h2>
+                <p className="text-slate-500 text-sm mb-6">
+                  Débloque les Actualités 2026, l&apos;Oracle IA, les vies illimitées et le badge doré.
+                </p>
+
+                <div className="space-y-2 mb-6 text-left">
+                  {[
+                    { icon: "❤️", text: "Vies illimitées" },
+                    { icon: "🔮", text: "L'Oracle — Explications IA" },
+                    { icon: "📰", text: "Actualités 2026 exclusives" },
+                    { icon: "👑", text: "Badge Légende sur ton profil" },
+                  ].map((item) => (
+                    <div key={item.text} className="flex items-center gap-3 p-2 rounded-xl bg-amber-500/5 border border-amber-500/10">
+                      <span>{item.icon}</span>
+                      <span className="text-white text-sm font-medium">{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="/premium"
+                  className="block w-full py-3.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black font-bold text-base rounded-2xl hover:brightness-110 transition-all shadow-xl shadow-amber-500/20"
+                >
+                  Devenir Légende →
+                </Link>
+                <button
+                  onClick={() => setShow(false)}
+                  className="mt-3 text-slate-600 text-sm hover:text-slate-400 transition-colors"
+                >
+                  Peut-être plus tard
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </>
   );

@@ -28,11 +28,11 @@ const ADVANTAGES = [
     glow: "from-rose-500/20 to-red-500/20",
   },
   {
-    icon: "🚫",
+    icon: "🔮",
     gold: "✦",
-    title: "Zéro Pub",
-    desc: "Une expérience immersive, sans aucune interruption ni distraction.",
-    glow: "from-amber-500/20 to-yellow-500/20",
+    title: "L'Oracle",
+    desc: "Explications détaillées générées par IA après chaque réponse. Comprends le pourquoi, pas juste la bonne réponse.",
+    glow: "from-purple-500/20 to-violet-500/20",
   },
   {
     icon: "📰",
@@ -42,18 +42,18 @@ const ADVANTAGES = [
     glow: "from-blue-500/20 to-indigo-500/20",
   },
   {
-    icon: "🔥",
+    icon: "👑",
     gold: "✦",
-    title: "Difficulté Expert Illimitée",
-    desc: "Accès permanent au mode Expert dans toutes les catégories, sans limite de questions.",
-    glow: "from-orange-500/20 to-red-500/20",
+    title: "Badge Légende",
+    desc: "Un badge doré exclusif sur votre profil et dans le classement. Montrez que vous êtes au sommet.",
+    glow: "from-amber-500/20 to-yellow-500/20",
   },
   {
-    icon: "🤖",
+    icon: "🚫",
     gold: "✦",
-    title: "Explications IA",
-    desc: "Chaque réponse est accompagnée d'une explication enrichie par intelligence artificielle.",
-    glow: "from-purple-500/20 to-blue-500/20",
+    title: "Zéro Pub",
+    desc: "Une expérience immersive, sans aucune interruption ni distraction.",
+    glow: "from-slate-500/20 to-gray-500/20",
   },
   {
     icon: "⚡",
@@ -492,10 +492,10 @@ export default function PremiumPage() {
             </div>
             {[
               { feature: "Vies", free: "5 (régén. 30min)", legend: "Illimitées ❤️" },
-              { feature: "Actualités 2026", free: "—", legend: "✓" },
-              { feature: "Mode Expert", free: "10/jour", legend: "Illimité" },
-              { feature: "Explications IA", free: "—", legend: "✓" },
-              { feature: "Badge doré", free: "—", legend: "👑" },
+              { feature: "L'Oracle (IA)", free: "—", legend: "🔮" },
+              { feature: "Actualités 2026", free: "🔒", legend: "✓" },
+              { feature: "Badge Légende", free: "—", legend: "👑" },
+              { feature: "Publicités", free: "Oui", legend: "Aucune" },
               { feature: "Multiplicateur XP", free: "x1", legend: "x3" },
             ].map((row, i) => (
               <div
@@ -545,6 +545,34 @@ export default function PremiumPage() {
               Essayer Gratuitement →
             </motion.button>
           </div>
+        </motion.div>
+
+        {/* Restore purchases + legal */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.7 }}
+          className="text-center mt-10 mb-8 space-y-3"
+        >
+          <button
+            onClick={activatePremium}
+            className="text-slate-500 text-sm underline underline-offset-4 hover:text-amber-400 transition-colors"
+          >
+            Restaurer mes achats
+          </button>
+          <div className="flex items-center justify-center gap-4 text-slate-700 text-xs">
+            <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">
+              Conditions d&apos;utilisation
+            </Link>
+            <span>·</span>
+            <Link href="/confidentialite" className="hover:text-slate-400 transition-colors">
+              Politique de confidentialité
+            </Link>
+          </div>
+          <p className="text-slate-800 text-[10px] max-w-md mx-auto leading-relaxed">
+            L&apos;abonnement se renouvelle automatiquement sauf annulation au moins 24h avant la fin de la période en cours.
+            La gestion des abonnements se fait depuis les réglages de votre compte.
+          </p>
         </motion.div>
       </div>
     </div>
