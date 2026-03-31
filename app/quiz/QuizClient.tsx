@@ -100,6 +100,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const achievements = useAchievements();
   const heartsSystem = useHearts();
   const [heartLostAnim, setHeartLostAnim] = useState(false);
+  const [isAnswering, setIsAnswering] = useState(false);
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -153,7 +155,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     } else {
       setPhase("answered");
     }
-  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback]);
+  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback, heartsSystem]);
 
   // Per-question timer (classic & sudden death use 15s, blitz uses 10s)
   useEffect(() => {
@@ -210,9 +212,34 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     }
   }, [selectedCategory, selectedDifficulty, questionsLimit, gameMode]);
 
+  const handleNext = useCallback(() => {
+    // Clear any pending auto-advance
+    if (autoAdvanceRef.current) {
+      clearTimeout(autoAdvanceRef.current);
+      autoAdvanceRef.current = null;
+    }
+    setIsAnswering(false);
+
+    // If no hearts left, end game early
+    if (!heartsSystem.canPlay) {
+      setPhase("finished");
+      return;
+    }
+    const nextIndex = currentIndex + 1;
+    if (nextIndex >= gameQuestions.length) {
+      setPhase("finished");
+      return;
+    }
+    setCurrentIndex(nextIndex);
+    setSelectedOption(null);
+    setShakeWrong(false);
+    setPhase("playing");
+  }, [currentIndex, gameQuestions.length, heartsSystem.canPlay]);
+
   const handleAnswer = useCallback(
     (optionIndex: number) => {
-      if (phase !== "playing") return;
+      if (phase !== "playing" || isAnswering) return;
+      setIsAnswering(true);
       stopTimer();
       const currentQ = gameQuestions[currentIndex];
       const isCorrect = optionIndex === currentQ.correctIndex;
@@ -239,29 +266,22 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       // Mort subite: wrong answer = game over immediately
       if (gameMode === "mort-subite" && !isCorrect) {
         setPhase("finished");
+        setIsAnswering(false);
       } else {
         setPhase("answered");
+
+        // Auto-advance ONLY if correct (1.5s), no auto-advance if wrong
+        if (isCorrect) {
+          autoAdvanceRef.current = setTimeout(() => {
+            handleNext();
+            setIsAnswering(false);
+          }, 1500);
+        }
+        // If wrong: isAnswering stays true until user clicks "Continuer"
       }
     },
-    [phase, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback, heartsSystem]
+    [phase, isAnswering, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback, heartsSystem, handleNext]
   );
-
-  const handleNext = useCallback(() => {
-    // If no hearts left, end game early
-    if (!heartsSystem.canPlay) {
-      setPhase("finished");
-      return;
-    }
-    const nextIndex = currentIndex + 1;
-    if (nextIndex >= gameQuestions.length) {
-      setPhase("finished");
-      return;
-    }
-    setCurrentIndex(nextIndex);
-    setSelectedOption(null);
-    setShakeWrong(false);
-    setPhase("playing");
-  }, [currentIndex, gameQuestions.length, heartsSystem.canPlay]);
 
   // Manual advance: user clicks "Suivant" button to proceed
 
@@ -1205,9 +1225,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               whileHover={phase !== "answered" ? { scale: 1.01, x: 4 } : undefined}
               whileTap={phase !== "answered" ? { scale: 0.98 } : undefined}
               onClick={() => handleAnswer(i)}
-              disabled={phase === "answered"}
+              disabled={phase === "answered" || isAnswering}
               className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-colors flex items-center gap-3 ${bgClass} ${borderClass} ${textClass} ${
-                phase !== "answered" ? "cursor-pointer hover:border-neon-cyan/30 hover:bg-neon-cyan/5" : ""
+                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-cyan/30 hover:bg-neon-cyan/5" : ""
               }`}
               style={glowStyle}
             >
@@ -1244,7 +1264,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             exit={{ opacity: 0, y: -10 }}
           >
             {selectedOption === -1 ? (
-              /* Timeout */
+              /* ── Timeout ── */
               <>
                 <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-3 text-center">
                   <p className="text-amber-400 font-semibold">⏰ Temps écoulé !</p>
@@ -1252,21 +1272,53 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
                 </div>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
+                >
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    <span className="text-neon-cyan font-medium">💡 </span>
+                    {currentQ.explanation}
+                  </p>
+                </motion.div>
+                <motion.button
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  onClick={() => { handleNext(); setIsAnswering(false); }}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2), 0 0 40px rgba(255, 45, 123, 0.1)" }}
+                >
+                  Continuer →
+                </motion.button>
               </>
             ) : selectedOption === currentQ.correctIndex ? (
-              /* Correct */
-              <motion.div
-                initial={{ scale: 0.95 }}
-                animate={{ scale: 1 }}
-                className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-3 text-center"
-                style={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.08)" }}
-              >
-                <p className="text-green-400 font-semibold text-lg">
-                  ✓ Bravo !{streak > 1 && ` 🔥 Série x${streak}`}
-                </p>
-              </motion.div>
+              /* ── Correct: brief congrats + auto-advance 1.5s ── */
+              <>
+                <motion.div
+                  initial={{ scale: 0.95 }}
+                  animate={{ scale: 1 }}
+                  className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-3 text-center"
+                  style={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.08)" }}
+                >
+                  <p className="text-green-400 font-semibold text-lg">
+                    ✓ Bravo !{streak > 1 && ` 🔥 Série x${streak}`}
+                  </p>
+                </motion.div>
+                {/* Auto-advance progress bar */}
+                <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
+                  <motion.div
+                    initial={{ width: "100%" }}
+                    animate={{ width: "0%" }}
+                    transition={{ duration: 1.5, ease: "linear" }}
+                    className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                  />
+                </div>
+              </>
             ) : (
-              /* Wrong */
+              /* ── Wrong: explanation + manual "Continuer" button ── */
               <>
                 <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
                   <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
@@ -1274,39 +1326,28 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
                 </div>
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
+                >
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    <span className="text-neon-cyan font-medium">💡 </span>
+                    {currentQ.explanation}
+                  </p>
+                </motion.div>
+                <motion.button
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  onClick={() => { handleNext(); setIsAnswering(false); }}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2), 0 0 40px rgba(255, 45, 123, 0.1)" }}
+                >
+                  Continuer →
+                </motion.button>
               </>
             )}
-
-            {/* Explanation with fade-in animation */}
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              transition={{ delay: 0.2, duration: 0.4 }}
-              className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
-            >
-              <p className="text-slate-400 text-sm leading-relaxed">
-                <span className="text-neon-cyan font-medium">&#128161; </span>
-                {currentQ.explanation}
-              </p>
-              <div className="mt-3 pt-3 border-t border-white/[0.06]">
-                <p className="text-purple-400 text-xs font-semibold uppercase tracking-wider mb-1">&#10024; Le savais-tu ?</p>
-                <p className="text-slate-500 text-xs leading-relaxed italic">
-                  {currentQ.explanation}
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Manual "Suivant" button */}
-            <motion.button
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              onClick={handleNext}
-              className="w-full py-3 rounded-2xl font-semibold text-white bg-gradient-to-r from-neon-cyan to-neon-rose hover:opacity-90 transition-opacity"
-              style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.15)" }}
-            >
-              Suivant &rarr;
-            </motion.button>
           </motion.div>
         )}
       </AnimatePresence>

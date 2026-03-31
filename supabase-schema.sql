@@ -58,4 +58,21 @@ create trigger on_profiles_updated
   for each row execute function public.handle_updated_at();
 
 -- 5. Trigger pour créer un profil automatiquement à l'inscription
--- (Le profil sera créé côté client avec le pseudo choisi)
+-- Récupère pseudo et avatar_id depuis raw_user_meta_data (envoyés par signUp)
+create or replace function public.handle_new_user()
+returns trigger as $$
+begin
+  insert into public.profiles (id, pseudo, avatar_id)
+  values (
+    new.id,
+    coalesce(new.raw_user_meta_data->>'pseudo', 'Teubé'),
+    coalesce(new.raw_user_meta_data->>'avatar_id', 'hacker')
+  )
+  on conflict (id) do nothing;
+  return new;
+end;
+$$ language plpgsql security definer;
+
+create trigger on_auth_user_created
+  after insert on auth.users
+  for each row execute function public.handle_new_user();
