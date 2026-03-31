@@ -10,6 +10,7 @@ import { useProgress, calculateGameXp, getLevel } from "@/hooks/useProgress";
 import { useFeedback } from "@/hooks/useFeedback";
 import confetti from "canvas-confetti";
 import { useAchievements, evaluateAchievements } from "@/hooks/useAchievements";
+import { useHearts } from "@/hooks/useHearts";
 import AchievementToast from "@/components/AchievementToast";
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
@@ -97,6 +98,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const router = useRouter();
   const { correctFeedback, wrongFeedback } = useFeedback();
   const achievements = useAchievements();
+  const heartsSystem = useHearts();
+  const [heartLostAnim, setHeartLostAnim] = useState(false);
 
   const stopTimer = useCallback(() => {
     if (timerRef.current) {
@@ -140,6 +143,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setStreak(0);
     setSelectedOption(-1);
     setShakeWrong(true);
+    heartsSystem.loseHeart();
+    setHeartLostAnim(true);
+    setTimeout(() => setHeartLostAnim(false), 600);
 
     // Mort subite: timeout = error = game over
     if (gameMode === "mort-subite") {
@@ -225,6 +231,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         wrongFeedback();
         setStreak(0);
         setShakeWrong(true);
+        heartsSystem.loseHeart();
+        setHeartLostAnim(true);
+        setTimeout(() => setHeartLostAnim(false), 600);
       }
 
       // Mort subite: wrong answer = game over immediately
@@ -234,10 +243,15 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         setPhase("answered");
       }
     },
-    [phase, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback]
+    [phase, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback, heartsSystem]
   );
 
   const handleNext = useCallback(() => {
+    // If no hearts left, end game early
+    if (!heartsSystem.canPlay) {
+      setPhase("finished");
+      return;
+    }
     const nextIndex = currentIndex + 1;
     if (nextIndex >= gameQuestions.length) {
       setPhase("finished");
@@ -247,7 +261,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setSelectedOption(null);
     setShakeWrong(false);
     setPhase("playing");
-  }, [currentIndex, gameQuestions.length]);
+  }, [currentIndex, gameQuestions.length, heartsSystem.canPlay]);
 
   // Manual advance: user clicks "Suivant" button to proceed
 
@@ -632,6 +646,50 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </motion.div>
         )}
 
+        {/* Hearts indicator */}
+        <div className="flex items-center justify-center gap-1.5 mb-6">
+          {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
+            <span key={i} className="text-lg">
+              {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
+            </span>
+          ))}
+          {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
+            <span className="text-xs text-slate-500 ml-2 tabular-nums">+1 dans {heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
+          )}
+          {heartsSystem.premium && (
+            <span className="text-xs text-amber-400 ml-2 font-bold">Vies illimitées ✦</span>
+          )}
+        </div>
+
+        {/* No hearts paywall */}
+        {!heartsSystem.canPlay ? (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center"
+          >
+            <div className="glass-card-strong p-8 !rounded-2xl mb-4">
+              <div className="text-6xl mb-4">💔</div>
+              <h2 className="text-2xl font-bold text-white mb-2">Plus de vies !</h2>
+              <p className="text-slate-500 text-sm mb-1">Tes cœurs se régénèrent avec le temps</p>
+              <p className="text-slate-600 text-xs mb-6">ou passe en <span className="text-amber-400 font-semibold">Mode Légende</span> pour des vies illimitées</p>
+              <div className="flex flex-col gap-3">
+                <Link
+                  href="/premium"
+                  className="w-full py-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-black font-bold text-lg rounded-2xl hover:brightness-110 transition-all shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2"
+                >
+                  👑 Passer en Mode Légende
+                </Link>
+                <button
+                  onClick={() => setPhase("select")}
+                  className="w-full py-3 bg-white/5 border border-white/10 text-slate-400 font-medium rounded-2xl hover:bg-white/8 transition-colors"
+                >
+                  ← Retour
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        ) : (
         <div className="flex gap-3">
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -650,6 +708,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             {gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
           </motion.button>
         </div>
+        )}
       </motion.div>
     );
   }
@@ -916,6 +975,29 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2">
             <span className="text-slate-500 text-sm">Score</span>
             <span className="text-neon-cyan font-bold">{score}</span>
+          </div>
+          {/* Hearts */}
+          <div className={`glass-card !rounded-xl px-3 py-2 flex items-center gap-1 transition-all ${heartLostAnim ? "border-neon-rose/50 bg-neon-rose/10" : ""}`}>
+            {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
+              <motion.span
+                key={i}
+                animate={heartLostAnim && i === heartsSystem.hearts ? { scale: [1, 1.5, 0], opacity: [1, 1, 0] } : {}}
+                transition={{ duration: 0.4 }}
+                className="text-sm"
+              >
+                {i < heartsSystem.hearts ? (
+                  heartsSystem.premium ? "💛" : "❤️"
+                ) : (
+                  <span className="opacity-20">🖤</span>
+                )}
+              </motion.span>
+            ))}
+            {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
+              <span className="text-[10px] text-slate-500 ml-1 tabular-nums">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
+            )}
+            {heartsSystem.premium && (
+              <span className="text-[10px] text-amber-400 ml-1 font-bold">∞</span>
+            )}
           </div>
           <AnimatePresence>
             {streak > 0 && (

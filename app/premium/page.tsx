@@ -3,6 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useHearts } from "@/hooks/useHearts";
+import { useOptionalAuth } from "@/contexts/AuthContext";
 
 const KEY_PREMIUM = "vqm_premium";
 
@@ -19,11 +21,25 @@ function loadPremium(): boolean {
 
 const ADVANTAGES = [
   {
+    icon: "❤️",
+    gold: "✦",
+    title: "Vies Illimitées",
+    desc: "Plus besoin d'attendre la régénération. Jouez autant que vous voulez, sans interruption.",
+    glow: "from-rose-500/20 to-red-500/20",
+  },
+  {
     icon: "🚫",
     gold: "✦",
     title: "Zéro Pub",
     desc: "Une expérience immersive, sans aucune interruption ni distraction.",
     glow: "from-amber-500/20 to-yellow-500/20",
+  },
+  {
+    icon: "📰",
+    gold: "✦",
+    title: "Actualités 2026",
+    desc: "Accès exclusif aux questions sur l'actualité la plus récente, mises à jour chaque semaine.",
+    glow: "from-blue-500/20 to-indigo-500/20",
   },
   {
     icon: "🔥",
@@ -38,20 +54,6 @@ const ADVANTAGES = [
     title: "Explications IA",
     desc: "Chaque réponse est accompagnée d'une explication enrichie par intelligence artificielle.",
     glow: "from-purple-500/20 to-blue-500/20",
-  },
-  {
-    icon: "📊",
-    gold: "✦",
-    title: "Statistiques Avancées",
-    desc: "Graphiques détaillés, tendances de progression et identification des points faibles.",
-    glow: "from-cyan-500/20 to-teal-500/20",
-  },
-  {
-    icon: "🏆",
-    gold: "✦",
-    title: "Tournois Exclusifs",
-    desc: "Participez aux compétitions hebdomadaires réservées aux membres Légende.",
-    glow: "from-yellow-500/20 to-amber-500/20",
   },
   {
     icon: "⚡",
@@ -160,11 +162,19 @@ export default function PremiumPage() {
     setHydrated(true);
   }, []);
 
+  const heartsSystem = useHearts();
+  const auth = useOptionalAuth();
+
   const activatePremium = useCallback(() => {
     localStorage.setItem(KEY_PREMIUM, "true");
     setIsPremium(true);
     setShowActivated(true);
-  }, []);
+    heartsSystem.refillHearts();
+    // Sync premium status to Supabase if logged in
+    if (auth?.updateProfileField) {
+      auth.updateProfileField({ premium_status: true });
+    }
+  }, [heartsSystem, auth]);
 
   if (!hydrated) return null;
 
@@ -481,12 +491,12 @@ export default function PremiumPage() {
               </div>
             </div>
             {[
-              { feature: "Questions par catégorie", free: "20", legend: "Illimité" },
+              { feature: "Vies", free: "5 (régén. 30min)", legend: "Illimitées ❤️" },
+              { feature: "Actualités 2026", free: "—", legend: "✓" },
               { feature: "Mode Expert", free: "10/jour", legend: "Illimité" },
-              { feature: "Explications IA", free: "—", legend: "&#10003;" },
-              { feature: "Publicités", free: "Oui", legend: "Aucune" },
+              { feature: "Explications IA", free: "—", legend: "✓" },
+              { feature: "Badge doré", free: "—", legend: "👑" },
               { feature: "Multiplicateur XP", free: "x1", legend: "x3" },
-              { feature: "Tournois exclusifs", free: "—", legend: "&#10003;" },
             ].map((row, i) => (
               <div
                 key={row.feature}
