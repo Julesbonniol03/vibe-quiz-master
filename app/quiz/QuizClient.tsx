@@ -249,15 +249,16 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setPhase("playing");
   }, [currentIndex, gameQuestions.length]);
 
-  // Auto-advance: 1.2s if correct, 3s if wrong (time to read explanation)
+  // Auto-advance: 1.5s if correct only. Wrong = manual "Continuer" button.
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
     if (phase !== "answered") return;
     const isCorrect = selectedOption !== null && selectedOption >= 0 && gameQuestions[currentIndex] && selectedOption === gameQuestions[currentIndex].correctIndex;
-    const delay = isCorrect ? 1200 : 3000;
-    autoAdvanceRef.current = setTimeout(() => {
-      handleNext();
-    }, delay);
+    if (isCorrect) {
+      autoAdvanceRef.current = setTimeout(() => {
+        handleNext();
+      }, 1500);
+    }
     return () => {
       if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
     };
@@ -1177,7 +1178,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               /* Timeout */
               <>
                 <div className="bg-amber-500/5 border border-amber-500/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-amber-400 font-semibold">&#x23F0; Temps écoulé !</p>
+                  <p className="text-amber-400 font-semibold">⏰ Temps écoulé !</p>
                   <p className="text-slate-500 text-sm mt-1">
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
@@ -1188,7 +1189,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
                 >
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">&#128161; </span>
+                    <span className="text-neon-cyan font-medium">💡 </span>
                     {currentQ.explanation}
                   </p>
                 </motion.div>
@@ -1202,14 +1203,14 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 style={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.08)" }}
               >
                 <p className="text-green-400 font-semibold text-lg">
-                  &#10003; Bravo !{streak > 1 && ` &#128293; Série x${streak}`}
+                  ✓ Bravo !{streak > 1 && ` 🔥 Série x${streak}`}
                 </p>
               </motion.div>
             ) : (
               /* Wrong — show correct answer + explanation */
               <>
                 <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-neon-rose font-semibold text-lg">&#10007; Raté !</p>
+                  <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
                   <p className="text-slate-500 text-sm mt-1">
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
@@ -1220,27 +1221,40 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
                 >
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">&#128161; </span>
+                    <span className="text-neon-cyan font-medium">💡 </span>
                     {currentQ.explanation}
                   </p>
                 </motion.div>
               </>
             )}
 
-            {/* Auto-advance progress bar (duration matches delay) */}
+            {/* Auto-advance bar (correct only) or Continuer button (wrong/timeout) */}
             {(() => {
               const isCorrectAnswer = selectedOption !== null && selectedOption >= 0 && selectedOption === currentQ.correctIndex;
-              const barDuration = isCorrectAnswer ? 1.2 : 3;
+              if (isCorrectAnswer) {
+                return (
+                  <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
+                    <motion.div
+                      initial={{ width: "100%" }}
+                      animate={{ width: "0%" }}
+                      transition={{ duration: 1.5, ease: "linear" }}
+                      className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+                      style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                    />
+                  </div>
+                );
+              }
               return (
-            <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
-              <motion.div
-                initial={{ width: "100%" }}
-                animate={{ width: "0%" }}
-                transition={{ duration: barDuration, ease: "linear" }}
-                className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
-              />
-            </div>
+                <motion.button
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  onClick={handleNext}
+                  className="w-full mt-2 py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base tracking-wide hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2), 0 0 40px rgba(255, 45, 123, 0.1)" }}
+                >
+                  Continuer →
+                </motion.button>
               );
             })()}
           </motion.div>
@@ -1459,7 +1473,7 @@ function ShareScoreCard({
 
     // Try native share with image (mobile)
     if (blob && typeof navigator !== "undefined" && navigator.share && navigator.canShare) {
-      const file = new File([blob], "vibe-quiz-score.png", { type: "image/png" });
+      const file = new File([blob], "teube-score.png", { type: "image/png" });
       const shareData = { files: [file], text: "vibequizmaster.vercel.app" };
       if (navigator.canShare(shareData)) {
         try {
@@ -1485,7 +1499,7 @@ function ShareScoreCard({
     const canvas = canvasRef.current;
     if (!canvas) return;
     const link = document.createElement("a");
-    link.download = "vibe-quiz-score.png";
+    link.download = "teube-score.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
   };
