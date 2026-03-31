@@ -44,26 +44,40 @@ export default function SplashScreen() {
             />
           </div>
 
-          {/* Logo */}
+          {/* Logo with neon pulse */}
           <motion.div
-            initial={{ scale: 0, rotate: -15 }}
+            initial={{ scale: 0, rotate: -20 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: "spring", bounce: 0.5, duration: 0.8 }}
             className="relative mb-8"
           >
-            {/* Pulsing glow behind logo */}
+            {/* Outer neon glow ring */}
+            <motion.div
+              animate={{
+                opacity: [0.3, 0.7, 0.3],
+                scale: [1, 1.15, 1],
+              }}
+              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute inset-0 rounded-3xl"
+              style={{
+                background: "linear-gradient(135deg, #00f0ff, #ff2d7b)",
+                filter: "blur(20px)",
+                margin: "-12px",
+              }}
+            />
+            {/* Logo card */}
             <motion.div
               animate={{
                 boxShadow: [
-                  "0 0 30px rgba(0,240,255,0.2), 0 0 60px rgba(0,240,255,0.1)",
-                  "0 0 50px rgba(0,240,255,0.4), 0 0 100px rgba(0,240,255,0.2), 0 0 150px rgba(255,45,123,0.1)",
-                  "0 0 30px rgba(0,240,255,0.2), 0 0 60px rgba(0,240,255,0.1)",
+                  "0 0 20px rgba(0,240,255,0.3), 0 0 40px rgba(0,240,255,0.1)",
+                  "0 0 40px rgba(0,240,255,0.5), 0 0 80px rgba(0,240,255,0.2), 0 0 120px rgba(255,45,123,0.15)",
+                  "0 0 20px rgba(0,240,255,0.3), 0 0 40px rgba(0,240,255,0.1)",
                 ],
               }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-24 h-24 rounded-3xl bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center"
+              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+              className="relative w-28 h-28 rounded-3xl bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center"
             >
-              <span className="text-white font-black text-5xl select-none">T</span>
+              <span className="text-white font-black text-6xl select-none drop-shadow-lg">T</span>
             </motion.div>
           </motion.div>
 
@@ -72,9 +86,9 @@ export default function SplashScreen() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-2xl font-bold mb-2"
+            className="text-4xl font-black mb-2 tracking-tight"
           >
-            <span className="bg-gradient-to-r from-neon-cyan to-neon-rose bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neon-cyan via-white to-neon-rose bg-clip-text text-transparent">
               Teubé
             </span>
           </motion.h1>
@@ -84,9 +98,9 @@ export default function SplashScreen() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.5 }}
-            className="text-slate-500 text-sm"
+            className="text-slate-500 text-sm tracking-wide"
           >
-            Le quiz des Teub&eacute;s &middot; 1000+ Questions
+            Le quiz des Teubés · 1000+ Questions
           </motion.p>
 
           {/* Loading bar */}
