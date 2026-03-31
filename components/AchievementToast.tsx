@@ -82,7 +82,7 @@ export default function AchievementToast({ achievement, onDismiss }: Props) {
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="text-amber-400 text-xs"
                 >
-                  &#10022;
+                  ✦
                 </motion.span>
               </motion.div>
               <p className={`font-bold text-sm ${achievement.color}`}>
@@ -98,7 +98,7 @@ export default function AchievementToast({ achievement, onDismiss }: Props) {
               onClick={onDismiss}
               className="relative text-slate-600 hover:text-slate-300 transition-colors p-1 flex-shrink-0"
             >
-              &#10005;
+              ✕
             </button>
           </div>
         </motion.div>

@@ -73,6 +73,25 @@ function playBuzz() {
   osc2.stop(ctx.currentTime + 0.22);
 }
 
+/** Short tech "click" sound on any answer tap */
+function playClick() {
+  const ctx = getCtx();
+  if (!ctx) return;
+  if (ctx.state === "suspended") ctx.resume();
+
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+  osc.type = "sine";
+  osc.frequency.setValueAtTime(1800, ctx.currentTime);
+  osc.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.04);
+  gain.gain.setValueAtTime(0.1, ctx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.05);
+  osc.start(ctx.currentTime);
+  osc.stop(ctx.currentTime + 0.05);
+}
+
 function vibrate(pattern: number | number[]) {
   if (typeof navigator !== "undefined" && navigator.vibrate) {
     navigator.vibrate(pattern);
@@ -83,21 +102,28 @@ export function useFeedback() {
   // Guard against rapid re-fires
   const lastRef = useRef(0);
 
+  const clickFeedback = useCallback(() => {
+    playClick();
+    vibrate(15); // micro tap
+  }, []);
+
   const correctFeedback = useCallback(() => {
     const now = Date.now();
     if (now - lastRef.current < 150) return;
     lastRef.current = now;
-    playDing();
-    vibrate(40); // short single pulse
+    playClick();
+    setTimeout(playDing, 60); // click then ding
+    vibrate(40);
   }, []);
 
   const wrongFeedback = useCallback(() => {
     const now = Date.now();
     if (now - lastRef.current < 150) return;
     lastRef.current = now;
-    playBuzz();
-    vibrate([30, 50, 30]); // double pulse pattern
+    playClick();
+    setTimeout(playBuzz, 60); // click then buzz
+    vibrate([30, 50, 30]);
   }, []);
 
-  return { correctFeedback, wrongFeedback };
+  return { clickFeedback, correctFeedback, wrongFeedback };
 }

@@ -275,7 +275,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           autoAdvanceRef.current = setTimeout(() => {
             handleNext();
             setIsAnswering(false);
-          }, 1500);
+          }, 1200);
         }
         // If wrong: isAnswering stays true until user clicks "Continuer"
       }
@@ -1294,7 +1294,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 </motion.button>
               </>
             ) : selectedOption === currentQ.correctIndex ? (
-              /* ── Correct: brief congrats + auto-advance 1.5s ── */
+              /* ── Correct: brief congrats + auto-advance 1.2s ── */
               <>
                 <motion.div
                   initial={{ scale: 0.95 }}
@@ -1311,7 +1311,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   <motion.div
                     initial={{ width: "100%" }}
                     animate={{ width: "0%" }}
-                    transition={{ duration: 1.5, ease: "linear" }}
+                    transition={{ duration: 1.2, ease: "linear" }}
                     className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
                     style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
                   />

@@ -377,7 +377,7 @@ export default function ProfilPage() {
                     className="absolute -top-1 -right-1 w-4 h-4 rounded-full flex items-center justify-center text-[8px] font-bold text-black"
                     style={{ backgroundColor: badge.glowColor.replace("0.5", "1").replace("rgba", "rgb").replace(",0.5)", ")").replace("rgba(", "rgb(") }}
                   >
-                    &#10003;
+                    ✓
                   </div>
                 )}
               </motion.div>
@@ -602,7 +602,7 @@ function ResetSection({ onReset }: { onReset: () => void }) {
         animate={{ opacity: 1 }}
         className="text-center py-6"
       >
-        <p className="text-green-400 font-semibold">&#10003; Progression r&eacute;initialis&eacute;e. Rechargement...</p>
+        <p className="text-green-400 font-semibold">✓ Progression réinitialisée. Rechargement...</p>
       </motion.div>
     );
   }

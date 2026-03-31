@@ -272,7 +272,7 @@ export default function PremiumPage() {
                   <span className="text-amber-400 font-semibold text-sm">{a.title}</span>
                   <span className="text-slate-500 text-xs ml-2">Débloqué</span>
                 </div>
-                <span className="ml-auto text-green-400">&#10003;</span>
+                <span className="ml-auto text-green-400">✓</span>
               </motion.div>
             ))}
           </motion.div>
@@ -422,7 +422,7 @@ export default function PremiumPage() {
                       ? "bg-amber-400/10 border border-amber-400/30 text-amber-400"
                       : "bg-white/[0.03] border border-white/[0.06] text-slate-600"
                   }`}>
-                    {isSelected ? "&#10003; Sélectionné" : "Choisir"}
+                    {isSelected ? "✓ Sélectionné" : "Choisir"}
                   </div>
                 </motion.div>
               );
@@ -452,7 +452,7 @@ export default function PremiumPage() {
             />
           </motion.button>
           <p className="text-slate-600 text-sm mt-4">
-            &#10003; 7 jours gratuits &middot; &#10003; Sans carte bancaire &middot; &#10003; Annulation instantanée
+            ✓ 7 jours gratuits &middot; ✓ Sans carte bancaire &middot; ✓ Annulation instantanée
           </p>
         </motion.div>
 
@@ -465,7 +465,7 @@ export default function PremiumPage() {
         >
           <div className="flex items-center justify-center gap-1 mb-3">
             {Array.from({ length: 5 }).map((_, i) => (
-              <span key={i} className="text-amber-400 text-xl">&#9733;</span>
+              <span key={i} className="text-amber-400 text-xl">★</span>
             ))}
           </div>
           <p className="text-slate-500 text-sm">
