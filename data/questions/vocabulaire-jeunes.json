@@ -1,0 +1,242 @@
+[
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Que signifie 'c'est ouf' en argot verlan ?",
+    "options": ["C'est nul", "C'est fou (incroyable)", "C'est fini", "C'est lourd"],
+    "correct_index": 1,
+    "explanation": "'Ouf' est le verlan de 'fou'. 'C'est ouf' signifie 'c'est fou', c'est-à-dire incroyable ou impressionnant."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que ça veut dire quand quelqu'un dit qu'il est 'à la masse' ?",
+    "options": ["Il est très fort", "Il est fatigué", "Il est distrait, déconnecté", "Il est en forme"],
+    "correct_index": 2,
+    "explanation": "'Être à la masse' signifie être dans les nuages, distrait, ne pas suivre ce qui se passe."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Que signifie 'no cap' dans le langage des jeunes ?",
+    "options": ["Pas de chapeau", "Je mens pas / c'est vrai", "C'est fini", "Sans limite"],
+    "correct_index": 1,
+    "explanation": "'No cap' vient du slang américain et signifie 'je ne mens pas', 'sérieusement'. Son contraire est 'cap' (mensonge)."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Que veut dire 'check' entre amis ?",
+    "options": ["Vérifier un document", "Salutation gestuelle / poignée de main stylée", "Regarder son téléphone", "Payer l'addition"],
+    "correct_index": 1,
+    "explanation": "Un 'check' est une salutation entre amis qui combine une poignée de main, un tapé de poing ou un geste codé."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce que 'kiffer' quelque chose ?",
+    "options": ["Le détester", "En avoir peur", "L'adorer, l'apprécier", "L'ignorer"],
+    "correct_index": 2,
+    "explanation": "'Kiffer' vient de l'arabe 'kif' (plaisir) et signifie aimer, apprécier beaucoup quelque chose ou quelqu'un."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Que signifie 'c'est relou' ?",
+    "options": ["C'est cool", "C'est lourd / chiant (verlan de 'lourd')", "C'est rapide", "C'est bizarre"],
+    "correct_index": 1,
+    "explanation": "'Relou' est le verlan de 'lourd'. Quelque chose de relou est ennuyeux, pénible ou agaçant."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Que veut dire 'être en galère' ?",
+    "options": ["Naviguer en mer", "Être dans une situation difficile", "S'ennuyer", "Être pressé"],
+    "correct_index": 1,
+    "explanation": "'Être en galère' signifie se trouver dans une situation compliquée, avoir des difficultés. Vient du mot 'galère' (bateau de forçats)."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "easy",
+    "question": "Qu'est-ce qu'un 'beauf' en argot français ?",
+    "options": ["Un beau garçon", "Une personne vulgaire et sans sophistication", "Un beau-frère riche", "Un ami proche"],
+    "correct_index": 1,
+    "explanation": "'Beauf' est le verlan de 'beau-frère' mais désigne péjorativement une personne vulgaire, aux goûts populaires stéréotypés."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que signifie 'ghosting' dans le contexte des relations ?",
+    "options": ["Envoyer des messages anonymes", "Disparaître sans donner de nouvelles", "Partager des photos de nuit", "Faire peur à quelqu'un"],
+    "correct_index": 1,
+    "explanation": "Le 'ghosting' consiste à couper tout contact avec quelqu'un sans explication, comme si on devenait un fantôme ('ghost')."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Qu'est-ce que 'flex' ou 'flexer' sur les réseaux sociaux ?",
+    "options": ["Faire du sport en live", "Étirer ses muscles", "Étaler sa richesse ou ses avantages", "Modifier une photo"],
+    "correct_index": 2,
+    "explanation": "'Flexer' signifie montrer ostensiblement ce qu'on possède (argent, vêtements, voyages) pour impressionner les autres."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que veut dire 'il est trop cringe' ?",
+    "options": ["Il est très courageux", "Il est gênant / embarrassant à regarder", "Il est très fort", "Il est énervant"],
+    "correct_index": 1,
+    "explanation": "'Cringe' (de l'anglais 'to cringe', se recroqueviller de honte) décrit quelque chose de tellement embarrassant que ça donne envie de se cacher."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que signifie 'c'est du lourd' dans l'argot jeune ?",
+    "options": ["C'est pesant à porter", "C'est impressionnant, de grande qualité", "C'est ennuyeux", "C'est trop compliqué"],
+    "correct_index": 1,
+    "explanation": "'C'est du lourd' signifie que quelque chose est impressionnant, de très haute qualité ou très intense. Sens positif."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un 'sniper' dans le contexte des soldes ou drops de sneakers ?",
+    "options": ["Un vendeur agressif", "Quelqu'un qui achète à la dernière seconde pour avoir le meilleur prix", "Un faussaire de vêtements", "Un influenceur mode"],
+    "correct_index": 1,
+    "explanation": "Un 'sniper' arrive au dernier moment pour rafler l'article convoité, comme un tireur d'élite qui attend le bon moment."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que signifie 'pécho' en verlan ?",
+    "options": ["Partir vite", "Chopper / attraper (verlan de 'choper')", "Perdre quelque chose", "Être fatigué"],
+    "correct_index": 1,
+    "explanation": "'Pécho' est le verlan de 'choper', qui signifie attraper, obtenir, ou draguer quelqu'un avec succès."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que veut dire 'avoir la dalle' ?",
+    "options": ["Avoir froid", "Avoir très faim", "Être ambitieux / vouloir réussir", "Les deux : avoir faim ET être ambitieux"],
+    "correct_index": 3,
+    "explanation": "'Avoir la dalle' signifie d'abord avoir très faim (sens littéral), mais aussi avoir faim de succès, être très motivé (sens figuré)."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Qu'est-ce qu'un 'hater' dans le vocabulaire des réseaux sociaux ?",
+    "options": ["Un fan très passionné", "Une personne qui critique systématiquement par jalousie", "Un modérateur de contenu", "Un créateur de contenu négatif"],
+    "correct_index": 1,
+    "explanation": "Un 'hater' est quelqu'un qui critique, dénigre ou attaque systématiquement, souvent par jalousie, sans argument constructif."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que signifie 'wesh' dans l'argot des cités ?",
+    "options": ["Partir rapidement", "Interjection de salutation / quoi de neuf ?", "Se battre", "Mentir"],
+    "correct_index": 1,
+    "explanation": "'Wesh' (ou 'ouesh') est une interjection de salutation d'origine arabe ('wach', 'quoi'). Utilisé comme 'hey', 'quoi de neuf' ou simple marqueur d'attention."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "medium",
+    "question": "Que veut dire 'c'est validé' dans le langage des jeunes ?",
+    "options": ["C'est vérifié administrativement", "C'est approuvé, ça a le mérite, c'est cool", "C'est fini", "C'est obligatoire"],
+    "correct_index": 1,
+    "explanation": "'C'est validé' signifie que quelque chose est approuvé, reconnu comme bien ou cool par le groupe. Vient du vocabulaire administratif détourné."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "D'où vient l'expression 'faire un carton' dans le sens de réussir brillamment ?",
+    "options": ["Du carton d'invitation VIP", "Du tir à la carabine (faire mouche sur une cible en carton)", "Des cartons de déménagement (s'installer dans le succès)", "Du football (marquer dans les cartons)"],
+    "correct_index": 1,
+    "explanation": "'Faire un carton' vient des stands de tir forains où l'on visait des cibles en carton. Réussir tous ses tirs = carton plein = grand succès."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que désigne le terme 'FOMO' souvent utilisé par les jeunes ?",
+    "options": ["Fear Of Missing Out (peur de rater quelque chose)", "Fun Of Making Others (plaisir de faire rire)", "Focus On My Objectives", "Form Of Modern Opinion"],
+    "correct_index": 0,
+    "explanation": "FOMO (Fear Of Missing Out) désigne l'anxiété de rater un événement, une expérience ou une tendance que les autres vivent. Lié à l'usage des réseaux sociaux."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le 'verlan' et d'où vient ce mot ?",
+    "options": ["Un dialecte du sud de la France", "L'inversion syllabique de 'l'envers', né dans les banlieues des années 80", "Un mot d'origine arabe signifiant 'parler vite'", "Un acronyme de 'Vocabulaire En Retournant Les mots A Nouveau'"],
+    "correct_index": 1,
+    "explanation": "Le verlan est un argot par inversion des syllabes. Le mot 'verlan' lui-même est le verlan de 'l'envers'. Il s'est développé dans les banlieues françaises dans les années 1970-80."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que signifie 'avoir le seum' ?",
+    "options": ["Être très content", "Éprouver de la frustration, de la rage ou de la rancœur", "Être malade", "Avoir de la chance"],
+    "correct_index": 1,
+    "explanation": "'Le seum' vient de l'arabe 'ssem' (venin, poison). 'Avoir le seum' signifie éprouver une frustration intense, de la rage ou de l'amertume."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Dans le langage internet, que veut dire 'ratio' quand on l'utilise en réponse à un tweet ?",
+    "options": ["Calculer le rapport statistique d'une publication", "Répondre à un tweet en obtenant plus de likes que le tweet original (humiliation publique)", "Partager une publication avec un ratio commentaires/likes élevé", "Citer un tweet pour approuver son contenu"],
+    "correct_index": 1,
+    "explanation": "Sur Twitter/X, se faire 'ratio' signifie que votre réponse reçoit plus de likes que votre tweet original, signalant publiquement que la réponse avait raison contre vous."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que signifie 'c'est cheum' dans le verlan ?",
+    "options": ["C'est bien (verlan de 'bien')", "C'est moche (verlan de 'moche')", "C'est cher (verlan de 'cher')", "C'est chaud (verlan de 'chaud')"],
+    "correct_index": 1,
+    "explanation": "'Cheum' est le verlan de 'moche'. 'C'est cheum' signifie donc 'c'est moche', laid ou de mauvaise qualité."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que le 'nepo baby' dans la culture pop actuelle ?",
+    "options": ["Un bébé très populaire sur les réseaux sociaux", "Une personne qui doit sa carrière aux connexions familiales (enfant de célébrité)", "Un nouveau style musical né de la génération Z", "Un terme médical pour bébé prématuré"],
+    "correct_index": 1,
+    "explanation": "'Nepo baby' (nepotism baby) désigne une célébrité qui doit sa carrière non à son talent mais aux connexions familiales. Le terme est devenu viral en 2022-2023 pour critiquer le favoritisme dans le showbiz."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que veut dire 'être en mode furtif' dans le langage des jeunes ?",
+    "options": ["Jouer à un jeu vidéo stealth", "Agir discrètement, sans se faire remarquer, souvent pour des sorties secrètes", "Mettre son téléphone en mode avion", "Parler très bas"],
+    "correct_index": 1,
+    "explanation": "'Mode furtif' est emprunté aux jeux vidéo (stealth games). Il désigne le fait d'agir en toute discrétion, sortir sans que les parents le sachent, ou mener une relation secrète."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que signifie 'c'est un vibe' ou 'good vibes only' ?",
+    "options": ["C'est une vibration musicale de qualité", "C'est une ambiance/énergie positive et agréable", "C'est une tendance passagère", "C'est une marque de vêtements streetwear"],
+    "correct_index": 1,
+    "explanation": "'Vibe' désigne une atmosphère, une énergie ou une ambiance. 'Good vibes only' signifie qu'on ne veut que de l'énergie positive autour de soi. Le mot s'utilise aussi comme verbe : 'on vibe bien ensemble'."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Qu'est-ce que 'doomscrolling' ?",
+    "options": ["Un jeu vidéo d'horreur sur mobile", "Faire défiler compulsivement des mauvaises nouvelles sur son téléphone malgré l'anxiété que ça génère", "Supprimer massivement ses vieilles publications", "Regarder des vidéos d'horreur en boucle"],
+    "correct_index": 1,
+    "explanation": "'Doomscrolling' (doom = catastrophe + scrolling = faire défiler) est le comportement compulsif de consommer en continu des contenus négatifs ou anxiogènes sur les réseaux, même si ça aggrave l'anxiété."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Dans le slang français actuel, que signifie 'il est trop boloss' ?",
+    "options": ["Il est très courageux", "Il est naïf, facilement manipulable ou peu respecté par le groupe", "Il est très fort en sport", "Il est généreux"],
+    "correct_index": 1,
+    "explanation": "'Boloss' (parfois 'baloss') est un terme péjoratif désignant quelqu'un de naïf, de peu respecté, souvent victime de moqueries. Quelqu'un qui se fait mener en bateau facilement."
+  },
+  {
+    "category": "Vocabulaire des Jeunes",
+    "difficulty": "hard",
+    "question": "Que désigne le terme 'situationship' dans le vocabulaire des relations ?",
+    "options": ["Une relation officielle et exclusive", "Une relation ambiguë entre amis et couple, sans étiquette claire", "Un couple qui se voit uniquement en situation de crise", "Une relation à distance"],
+    "correct_index": 1,
+    "explanation": "Une 'situationship' est une relation romantique ou émotionnelle sans définition claire : plus qu'amis, mais pas un couple officiel. Le flou est intentionnel, souvent source d'anxiété."
+  }
+]

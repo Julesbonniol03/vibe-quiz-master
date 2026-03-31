@@ -2,7 +2,17 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount, ActualitesGrid } from "./DashboardClient";
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function loadActualites(): any[] {
+  try {
+    const filePath = join(process.cwd(), "data", "actualites-du-jour.json");
+    return JSON.parse(readFileSync(filePath, "utf-8"));
+  } catch {
+    return [];
+  }
+}
 
 const FEATURED_CATEGORIES = ["Actualités 2025-2026", "Maîtrise du Français"];
 
@@ -27,6 +37,7 @@ function loadCategories() {
 export default function DashboardPage() {
   const categories = loadCategories();
   const totalQ = categories.reduce((sum, c) => sum + c.questions, 0);
+  const actualites = loadActualites();
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -96,6 +107,22 @@ export default function DashboardPage() {
 
       {/* Daily Odyssey */}
       <DailyOdyssey />
+
+      {/* Actualité du Jour */}
+      {actualites.length > 0 && (
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-white flex items-center gap-2">
+              <span>📰</span> Actualité du Jour
+            </h2>
+            <span className="text-xs text-slate-600">{actualites[0]?.date}</span>
+          </div>
+          <ActualitesGrid items={actualites} />
+          <p className="text-xs text-slate-700 text-center mt-3">
+            Appuie sur une carte pour en savoir plus · Contenu éditorial
+          </p>
+        </div>
+      )}
 
       {/* Game Modes */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">

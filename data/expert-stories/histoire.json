@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "L'Antiquité Orientale & Grecque 🏛️ — Les Premiers Codes du Monde",
+    "brief": "Avant internet, avant l'imprimerie, avant même l'alphabet tel qu'on le connaît, des civilisations entières ont posé les bases de tout ce qu'on est aujourd'hui. La Mésopotamie — le pays entre le Tigre et l'Euphrate, grosso modo l'Irak actuel — a inventé l'écriture cunéiforme vers 3300 avant J.-C. C'était le premier système de stockage d'information de l'histoire : des tablettes d'argile qui fonctionnaient comme le premier cloud de l'humanité. Le Code d'Hammurabi, vers 1750 avant J.-C., c'est le premier code pénal connu — l'ancêtre de nos systèmes juridiques modernes, avec ses 282 lois gravées dans la pierre.\n\nL'Égypte ancienne, elle, a construit une civilisation d'une stabilité incroyable — plus de 3 000 ans de continuité, ce qui en ferait la nation la plus durable de l'histoire humaine. Les pyramides ne sont pas juste des tombeaux impressionnants : ce sont des projets de management pharaoniques qui mobilisaient des dizaines de milliers de travailleurs avec une logistique d'une précision remarquable. Les hiéroglyphes, le papyrus, la momification — autant de technologies de leur époque.\n\nLa Grèce classique, entre le Ve et le IVe siècle avant J.-C., a inventé quelque chose de révolutionnaire : la démocratie (à Athènes), la philosophie systématique (Socrate, Platon, Aristote), le théâtre, l'histoire en tant que discipline. Sparte et Athènes représentent deux modèles de société radicalement opposés — l'un militariste et communautaire, l'autre culturel et démocratique. Ce dualisme traverse encore nos débats politiques aujourd'hui.",
+    "visualDescription": "Un paysage de ruines grecques et égyptiennes reconstruit en architecture holographique cyberpunk, où le Parthénon et les pyramides coexistent dans une dimension lumineuse. Des hiéroglyphes et des caractères cunéiformes défilent comme du code sur des colonnes de marbre illuminées en or et cyan. L'Agora d'Athènes vibre d'activité holographique, avec des philosophes représentés comme des avatars numériques en discussion.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle civilisation antique a développé l'écriture cunéiforme, considérée comme l'une des premières écritures de l'histoire ?",
+        "options": [
+          "Les Égyptiens",
+          "Les Sumériens de Mésopotamie",
+          "Les Grecs",
+          "Les Phéniciens"
+        ],
+        "answer": "Les Sumériens de Mésopotamie"
+      },
+      {
+        "question": "Comment s'appelait la cité-état grecque connue pour son régime militariste et sa discipline guerrière extrême ?",
+        "options": [
+          "Corinthe",
+          "Athènes",
+          "Sparte",
+          "Thèbes"
+        ],
+        "answer": "Sparte"
+      },
+      {
+        "question": "Quel pharaon égyptien est généralement associé à la construction de la plus grande pyramide de Gizeh ?",
+        "options": [
+          "Ramsès II",
+          "Toutankhamon",
+          "Khéops",
+          "Akhenaton"
+        ],
+        "answer": "Khéops"
+      },
+      {
+        "question": "Quel philosophe grec, maître de Platon, fut condamné à mort par la cité d'Athènes en 399 avant J.-C. ?",
+        "options": [
+          "Aristote",
+          "Socrate",
+          "Épicure",
+          "Héraclite"
+        ],
+        "answer": "Socrate"
+      },
+      {
+        "question": "Quel roi babylonien est célèbre pour avoir fait graver l'un des premiers codes de lois connus de l'histoire, vers 1750 avant J.-C. ?",
+        "options": [
+          "Nabuchodonosor",
+          "Hammurabi",
+          "Sargon d'Akkad",
+          "Assurbanipal"
+        ],
+        "answer": "Hammurabi"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Rome : de la République à l'Empire ⚔️ — Le Plus Grand Startup de l'Antiquité",
+    "brief": "Rome, c'est l'histoire d'une startup de village qui est devenue une multinationale contrôlant la moitié du monde connu. En 753 avant J.-C. (selon la tradition), un village du Latium. En 117 après J.-C., sous Trajan, un empire de 5 millions de km². La croissance la plus spectaculaire de l'Antiquité. Le SPQR — Senatus Populusque Romanus, le Sénat et le Peuple Romain — c'était le slogan sur tous les standards militaires, un peu comme le logo d'une marque qui conquiert des marchés.\n\nLa République romaine a inventé des institutions remarquablement modernes : les deux consuls élus annuellement (pour éviter la concentration du pouvoir), le Sénat comme chambre délibérative, les tribuns de la plèbe comme contre-pouvoir populaire. Jules César a fait craquer ce système en traversant le Rubicon en 49 avant J.-C. avec son armée — un acte de trahison légale qui transformait un général en dictateur. Son assassinat aux Ides de Mars en 44 avant J.-C. par Brutus et Cassius n'a pas sauvé la République — il a déclenché les guerres civiles qui y ont mis fin.\n\nOctave Auguste, le neveu adopté de César, a réussi là où César avait échoué : transformer Rome en empire tout en gardant les apparences républicaines. La Pax Romana qu'il inaugure — deux siècles de paix relative dans tout le bassin méditerranéen — est l'une des périodes de stabilité les plus longues de l'histoire occidentale. Les routes romaines, les aqueducs, le droit romain, le latin : autant d'héritages qui structurent encore notre monde.",
+    "visualDescription": "Le Forum Romain reconstruit en méga-cité cyberpunk, avec le Colisée illuminé en rouge sang et or impérial. Des légions romaines représentées comme des armées de robots holographiques défilent sous des arcs de triomphe néon. Les chiffres SPQR apparaissent en lettres monumentales lumineuses sur fond de ciel étoilé. Jules César et Auguste se font face en portraits holographiques géants.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Que signifie l'acronyme SPQR que l'on trouve sur les standards militaires romains ?",
+        "options": [
+          "Supremus Populus Quintus Romanus",
+          "Senatus Populusque Romanus",
+          "Sub Protectione Quiritium Romanorum",
+          "Senatus Primus Quintus Rex"
+        ],
+        "answer": "Senatus Populusque Romanus"
+      },
+      {
+        "question": "Quel fleuve Jules César traversa-t-il avec son armée en 49 avant J.-C., déclenchant la guerre civile contre Pompée ?",
+        "options": [
+          "Le Tibre",
+          "Le Rubicon",
+          "Le Pô",
+          "Le Rhône"
+        ],
+        "answer": "Le Rubicon"
+      },
+      {
+        "question": "Jules César fut assassiné aux Ides de Mars : quelle date correspond aux Ides de Mars dans le calendrier romain ?",
+        "options": [
+          "1er mars",
+          "7 mars",
+          "15 mars",
+          "21 mars"
+        ],
+        "answer": "15 mars"
+      },
+      {
+        "question": "Comment s'appelait le premier véritable empereur romain, neveu adoptif de Jules César ?",
+        "options": [
+          "Marc Antoine",
+          "Lépide",
+          "Octave Auguste",
+          "Tibère"
+        ],
+        "answer": "Octave Auguste"
+      },
+      {
+        "question": "Quelle période de paix et de prospérité relative dans l'Empire romain, qui dure environ deux siècles, est connue sous le nom de Pax Romana ?",
+        "options": [
+          "Du Ier siècle avant J.-C. au IIIe siècle après J.-C.",
+          "Du IIe siècle avant J.-C. au IIe siècle après J.-C.",
+          "Du Ier au IIe siècle après J.-C.",
+          "Du IIIe au Ve siècle après J.-C."
+        ],
+        "answer": "Du Ier au IIe siècle après J.-C."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Le Moyen-Âge Européen 🏰 — L'Ère du Boss Mode Féodal",
+    "brief": "Le Moyen-Âge a longtemps été présenté comme une parenthèse sombre entre l'Antiquité brillante et la Renaissance lumineuse — c'est une caricature historique. C'est en réalité une période de construction intense, où les structures politiques, religieuses et culturelles de l'Europe moderne se forgent. Le féodalisme, c'est le système d'exploitation de l'époque : un réseau hiérarchique de liens de vassalité, où chaque niveau tient un rôle précis comme un nœud dans un réseau distribué.\n\nCharlemagne, couronné Empereur des Romains le 25 décembre 800 par le pape Léon III, réalise quelque chose d'extraordinaire : il unifie une grande partie de l'Europe de l'Ouest sous une autorité commune et lance une renaissance culturelle — la 'renaissance carolingienne' — qui préserve et copie des textes antiques dans les monastères. Sans ces scriptoria médiévaux, une bonne partie de la littérature gréco-latine aurait disparu. Les moines du Moyen-Âge, c'était les archivistes et les serveurs de backup de la culture antique.\n\nLes croisades (1096-1291) sont souvent réduites à des guerres de religion, mais c'est bien plus complexe : elles sont aussi des flux commerciaux, des transferts de technologie, des échanges culturels entre le monde chrétien et le monde islamique. Les cathédrales gothiques, elles, sont les gratte-ciels de leur époque : des projets d'ingénierie colossaux qui ont mobilisé des générations entières et incarnent la maîtrise technique de l'Europe médiévale.",
+    "visualDescription": "Un château médiéval transformé en forteresse cyberpunk, avec des remparts de pierre illuminés de lumières néon violet et argent. Une cathédrale gothique dont les vitraux projettent des hologrammes colorés dans un espace numérique. La hiérarchie féodale représentée comme un organigramme 3D flottant, avec Charlemagne en avatar impérial au sommet d'un réseau de vassaux lumineux.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1548625149-720754977a95?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année Charlemagne fut-il couronné Empereur des Romains par le pape Léon III ?",
+        "options": [
+          "771",
+          "800",
+          "843",
+          "912"
+        ],
+        "answer": "800"
+      },
+      {
+        "question": "Quelle est la date traditionnellement retenue pour le début de la Première Croisade ?",
+        "options": [
+          "1054",
+          "1066",
+          "1095",
+          "1099"
+        ],
+        "answer": "1095"
+      },
+      {
+        "question": "Comment appelle-t-on le lien de dépendance entre un seigneur et son vassal dans le système féodal ?",
+        "options": [
+          "La servitude",
+          "La suzeraineté",
+          "La vassalité",
+          "La servilité"
+        ],
+        "answer": "La vassalité"
+      },
+      {
+        "question": "Quelle grande cathédrale parisienne, emblème de l'architecture gothique, a commencé sa construction en 1163 ?",
+        "options": [
+          "La cathédrale de Chartres",
+          "La cathédrale de Reims",
+          "Notre-Dame de Paris",
+          "La Sainte-Chapelle"
+        ],
+        "answer": "Notre-Dame de Paris"
+      },
+      {
+        "question": "Quel traité de 843 a partagé l'empire de Charlemagne entre ses trois petits-fils, posant les bases des futures France et Allemagne ?",
+        "options": [
+          "Le Traité de Verdun",
+          "Le Traité de Mersen",
+          "Le Traité d'Aix-la-Chapelle",
+          "Le Traité de Prüm"
+        ],
+        "answer": "Le Traité de Verdun"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Renaissance & Découvertes 🌍 — Le Reboot de l'Europe",
+    "brief": "La Renaissance, c'est le plus grand reboot culturel de l'histoire occidentale. À partir du XIVe siècle en Italie, puis dans toute l'Europe, une nouvelle façon de penser s'impose : l'humanisme. L'idée que l'être humain est au centre, que la raison et l'observation comptent autant que la foi, que la beauté mérite d'être cultivée pour elle-même. Léonard de Vinci incarne parfaitement cet idéal : peintre, sculpteur, architecte, ingénieur, anatomiste, musicien — le premier vrai 'homme renaissance' au sens littéral, un génie multi-disciplinaire avant que le mot n'existe.\n\nGutenberg invente l'imprimerie à caractères mobiles vers 1450, et c'est le plus grand choc médiatique de l'histoire avant internet. La reproduction des textes passe de quelques centaines de copies par an à des millions. Les idées voyagent à une vitesse inédite. Sans l'imprimerie, la Réforme protestante de Luther (1517) n'aurait jamais pris une telle ampleur : les 95 Thèses d'un moine obscur de Wittenberg deviennent virales dans toute l'Europe en quelques semaines — le premier exemple de contenu qui 'buzz' à l'échelle continentale.\n\nChristophe Colomb part en 1492 avec trois caravelles et une carte approximative, persuadé de trouver une route occidentale vers les Indes. Il trouve les Amériques. La conséquence ? L'échange colombien — une révolution agraire mondiale où les tomates, pommes de terre, maïs, cacao traversent l'Atlantique et transforment les cuisines et les économies de l'Ancien Monde. Notre pizza tomate-mozzarella n'existerait pas sans Colomb.",
+    "visualDescription": "La Florence de la Renaissance reconstruite en cité holographique flottante, avec les fresques de Léonard de Vinci animées en 3D sur les murs d'un palais cyberpunk. Une presse de Gutenberg transformée en serveur d'impression numérique propulse des feuillets lumineux dans tous les sens. Les caravelles de Colomb naviguent sur un océan de données, avec des flux d'échanges commerciaux visibles comme des lignes de lumière.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80",
+    "quiz": [
+      {
+        "question": "En quelle année Christophe Colomb a-t-il débarqué pour la première fois aux Amériques ?",
+        "options": [
+          "1487",
+          "1492",
+          "1498",
+          "1502"
+        ],
+        "answer": "1492"
+      },
+      {
+        "question": "Quelle invention de Gutenberg, vers 1450, a révolutionné la diffusion du savoir en Europe ?",
+        "options": [
+          "Le télégraphe optique",
+          "L'imprimerie à caractères mobiles",
+          "Le papier",
+          "La lunette astronomique"
+        ],
+        "answer": "L'imprimerie à caractères mobiles"
+      },
+      {
+        "question": "Quelle œuvre de Léonard de Vinci, peinte entre 1503 et 1519, est aujourd'hui conservée au Louvre ?",
+        "options": [
+          "La Cène",
+          "La Vierge aux Rochers",
+          "La Joconde",
+          "Le Baptême du Christ"
+        ],
+        "answer": "La Joconde"
+      },
+      {
+        "question": "En quelle année Martin Luther a-t-il affiché ses 95 Thèses à Wittenberg, acte fondateur de la Réforme protestante ?",
+        "options": [
+          "1483",
+          "1507",
+          "1517",
+          "1525"
+        ],
+        "answer": "1517"
+      },
+      {
+        "question": "Quel navigateur portugais a été le premier à relier l'Europe à l'Asie par voie maritime en contournant l'Afrique, en 1498 ?",
+        "options": [
+          "Fernand de Magellan",
+          "Bartolomeu Dias",
+          "Vasco de Gama",
+          "Pedro Álvares Cabral"
+        ],
+        "answer": "Vasco de Gama"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Révolutions Modernes ⚡ — Quand le Monde Change de Système",
+    "brief": "Le XVIIIe et le XIXe siècle sont l'ère des révolutions — pas seulement politiques, mais industrielles, sociales, technologiques. La Révolution Française de 1789 est le big bang politique de l'ère moderne : elle envoie au tapis l'Ancien Régime, décrète les droits de l'Homme et du Citoyen, invente la citoyenneté républicaine et diffuse dans le monde entier les idées de Liberté, Égalité, Fraternité. Elle est aussi terriblement violente — la Terreur de Robespierre montre comment les idéaux les plus purs peuvent se transformer en machine répressive.\n\nNapoléon Bonaparte surgit de cette révolution comme un power-up inattendu. Général prodige, réformateur administratif, législateur (le Code Civil Napoléonien structure encore le droit français), conquérant — il réorganise l'Europe entière en une décennie. La Grande Armée, Austerlitz, Waterloo — une épopée militaire sans équivalent. Et le Code Civil, son héritage le plus durable, a été adopté ou a inspiré les législations de dizaines de pays dans le monde.\n\nLa Révolution Industrielle qui démarre en Angleterre dans les années 1760-1780 est l'autre grande rupture : vapeur, charbon, fer, machines textiles — en cinquante ans, le mode de production humain qui n'avait presque pas changé depuis des millénaires est bouleversé. L'urbanisation explose, la classe ouvrière se forme, le capitalisme industriel prend son visage moderne. Les révolutions de 1848 — le Printemps des Peuples — en sont la conséquence directe : des soulèvements simultanés dans toute l'Europe qui réclament liberté politique et justice sociale.",
+    "visualDescription": "Une scène révolutionnaire transformée en dystopie cyberpunk : la prise de la Bastille représentée comme l'assaut d'un datacenter néo-gothique fortifié. Les idéaux des Lumières codés en lumières bleu-blanc-rouge défilent sur des murs de brique industrielle. Napoléon en avatar holographique survole une carte d'Europe en train de se remodeler. Des usines à vapeur du XIXe siècle se fondent avec des complexes industriels futuristes.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1565711561500-49678a10a63f?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelle date marque le début symbolique de la Révolution Française avec la prise de la Bastille ?",
+        "options": [
+          "5 mai 1789",
+          "14 juillet 1789",
+          "26 août 1789",
+          "21 septembre 1792"
+        ],
+        "answer": "14 juillet 1789"
+      },
+      {
+        "question": "Quel grand code juridique, rédigé sous Napoléon Bonaparte, est encore en vigueur en France avec des modifications ?",
+        "options": [
+          "Le Code Pénal",
+          "Le Code Civil",
+          "Le Code Commercial",
+          "Le Code Constitutionnel"
+        ],
+        "answer": "Le Code Civil"
+      },
+      {
+        "question": "Dans quel pays la Révolution Industrielle a-t-elle démarré, dans la seconde moitié du XVIIIe siècle ?",
+        "options": [
+          "La France",
+          "La Belgique",
+          "L'Allemagne",
+          "L'Angleterre"
+        ],
+        "answer": "L'Angleterre"
+      },
+      {
+        "question": "Comment appelle-t-on la période de la Révolution Française (1793-1794) marquée par la répression politique massive sous Robespierre ?",
+        "options": [
+          "La Terreur",
+          "La Thermidor",
+          "La Vendémiaire",
+          "La Frimaire"
+        ],
+        "answer": "La Terreur"
+      },
+      {
+        "question": "Lors de quelle bataille de 1815 Napoléon a-t-il subi sa défaite définitive face aux armées de la coalition européenne ?",
+        "options": [
+          "La bataille d'Austerlitz",
+          "La bataille de Leipzig",
+          "La bataille de Waterloo",
+          "La bataille de Borodino"
+        ],
+        "answer": "La bataille de Waterloo"
+      }
+    ]
+  }
+]

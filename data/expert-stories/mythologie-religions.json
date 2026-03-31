@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "La Mythologie Grecque — Le lore original",
+    "brief": "Avant Marvel, avant les séries Netflix, il y avait les Grecs. Et leur univers étendu à eux, c'était l'Olympe. Douze dieux au sommet, des centaines de créatures monstrueuses, des héros aux destins tragiques — un storytelling universe tellement riche que l'humanité n'a jamais arrêté de le recycler. Zeus, maître du tonnerre et serial infidèle cosmique, règne sur un panthéon où chaque divinité incarne une force humaine amplifiée à l'extrême.\n\nLes héros, c'est une autre dimension du lore grec. Ulysse, le plus malin, met dix ans à rentrer chez lui après Troie — dix ans de monstres, de dieux jaloux et de sirènes. Hercule, le plus fort, doit accomplir douze travaux impossibles pour expier un crime dont il n'est même pas vraiment responsable. Chaque mythe est une leçon déguisée en aventure épique.\n\nCe qui rend la mythologie grecque fascinante, c'est que leurs dieux ne sont pas parfaits. Ils sont jaloux, vengeurs, amoureux, mesquins. Ils ressemblent aux humains — en version HD. Et c'est exactement pour ça que ces récits parlent encore aujourd'hui.",
+    "visualDescription": "Le mont Olympe réincarné en métropole flottante au-dessus des nuages, illuminé par des éclairs néon dorés. Colonnes de marbre blanc avec des veines de lumière bleue. Zeus en armure holographique trône sur un nuage d'énergie électrique. Des pégases de cristal survolent des villes miniatures. Ciel nocturne étoilé avec constellations interactives.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1552751753-0fc84ae5b6c8?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel est le douzième et dernier travail d'Hercule (Héraclès), considéré comme le plus difficile ?",
+        "options": [
+          "Tuer l'hydre de Lerne",
+          "Voler les pommes des Hespérides",
+          "Capturer Cerbère, le gardien des Enfers",
+          "Nettoyer les écuries d'Augias"
+        ],
+        "answer": "Capturer Cerbère, le gardien des Enfers"
+      },
+      {
+        "question": "Quelle déesse de la discorde a lancé la pomme d'or 'pour la plus belle', déclenchant indirectement la guerre de Troie ?",
+        "options": [
+          "Hécate",
+          "Éris",
+          "Némésis",
+          "Até"
+        ],
+        "answer": "Éris"
+      },
+      {
+        "question": "Qui est Prométhée dans la mythologie grecque, et quelle est sa punition éternelle ?",
+        "options": [
+          "Le titan qui a volé le feu aux dieux, condamné à avoir le foie dévoré chaque jour",
+          "Le héros qui a tué la Gorgone, condamné à porter le ciel",
+          "Le dieu de la mer, condamné à naviguer sans cesse",
+          "Le fils de Zeus, condamné à rouler un rocher"
+        ],
+        "answer": "Le titan qui a volé le feu aux dieux, condamné à avoir le foie dévoré chaque jour"
+      },
+      {
+        "question": "Qui est Sisyphe et pour quelle raison est-il condamné à pousser éternellement un rocher au sommet d'une colline ?",
+        "options": [
+          "Un titan puni pour avoir défié Zeus",
+          "Un roi rusé qui avait trompé la mort et les dieux à plusieurs reprises",
+          "Un héros ayant tué sa famille dans un accès de folie",
+          "Un mortel ayant refusé d'honorer les dieux par des sacrifices"
+        ],
+        "answer": "Un roi rusé qui avait trompé la mort et les dieux à plusieurs reprises"
+      },
+      {
+        "question": "Dans l'Odyssée d'Homère, quel cyclope fils de Poséidon Ulysse aveugle pour s'échapper de sa grotte ?",
+        "options": [
+          "Polyphème",
+          "Cyclops",
+          "Arges",
+          "Brontes"
+        ],
+        "answer": "Polyphème"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mythologies Nordique & Égyptienne — Les dieux des extrêmes",
+    "brief": "D'un côté, les glaces du Nord et un cosmos destiné à finir en apocalypse. De l'autre, les sables brûlants du Nil et une obsession millénaire pour l'au-delà. Deux mythologies radicalement différentes, mais toutes les deux d'une richesse narrative qui laisse bouche bée. Odin, le dieu borgne de la sagesse nordique, a sacrifié son œil pour boire à la source de la connaissance. Thor, son fils, combat les géants avec Mjolnir. Loki, le dieu de la ruse, balance entre allié et ennemi — un personnage d'une complexité narrative digne des meilleures séries.\n\nEn Égypte, Ra parcourt le ciel chaque jour dans sa barque solaire, affronte le serpent Apophis chaque nuit, et renaît chaque matin. Osiris, le dieu de la mort et de la résurrection, a été tué et démembré par son frère Set, avant d'être ressuscité par sa sœur-épouse Isis — un mythe de mort et de renaissance qui a traversé les millénaires.\n\nCes deux univers mythologiques ont en commun une chose : ils n'évitent pas l'obscurité. Le Ragnarok, fin du monde nordique, est inévitable. Et les dieux eux-mêmes y périront. Cette acceptation de la fin, c'est une profondeur philosophique que même les Grecs n'atteignaient pas toujours.",
+    "visualDescription": "Diptyque visuel spectaculaire : d'un côté, Asgard glaciale et dorée sous une aurore boréale artificielle, des ponts arc-en-ciel de photons traversant le vide ; de l'autre, pyramides égyptiennes illuminées de hiéroglyphes en néon turquoise, le dieu Ra en barque solaire holographique naviguant dans un ciel étoilé violet. Les deux mondes se rejoignent au centre de l'image.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1539768942893-daf3538e8f3d?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel sacrifice Odin a-t-il consenti pour acquérir la sagesse des runes selon la mythologie nordique ?",
+        "options": [
+          "Il a sacrifié son fils Baldr",
+          "Il s'est pendu à Yggdrasil et a sacrifié son œil à la source de Mimir",
+          "Il a cédé Asgard aux géants le temps d'un hiver",
+          "Il a forgé Mjolnir de ses propres mains brûlées"
+        ],
+        "answer": "Il s'est pendu à Yggdrasil et a sacrifié son œil à la source de Mimir"
+      },
+      {
+        "question": "Quel fils de Loki est le serpent géant qui tuera Thor lors du Ragnarök nordique ?",
+        "options": [
+          "Fenrir",
+          "Jörmungandr",
+          "Nidhogg",
+          "Surtr"
+        ],
+        "answer": "Jörmungandr"
+      },
+      {
+        "question": "Dans la mythologie égyptienne, quel dieu à tête de chacal est le gardien des morts et guide les âmes dans l'au-delà ?",
+        "options": [
+          "Horus",
+          "Thot",
+          "Anubis",
+          "Seth"
+        ],
+        "answer": "Anubis"
+      },
+      {
+        "question": "Quel est le nom de l'arbre cosmique dans la mythologie nordique, reliant les neuf mondes de l'univers ?",
+        "options": [
+          "Bifröst",
+          "Midgard",
+          "Yggdrasil",
+          "Valhöll"
+        ],
+        "answer": "Yggdrasil"
+      },
+      {
+        "question": "Dans le jugement des morts égyptien, contre quoi le cœur du défunt est-il pesé sur la balance pour juger de la pureté de son âme ?",
+        "options": [
+          "Une pierre sacrée du temple de Karnak",
+          "La plume de Maât, déesse de la vérité",
+          "Un grain d'or pur du Nil",
+          "Le sceptre d'Osiris"
+        ],
+        "answer": "La plume de Maât, déesse de la vérité"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Trois Monothéismes — Le grand schisme du divin",
+    "brief": "Trois religions, un seul Dieu, et des millénaires d'histoire qui ont redessiné la carte du monde. Le judaïsme est le premier des trois — il naît de l'alliance entre Dieu (YHWH) et le peuple hébreu, scellée notamment par Moïse sur le Sinaï. La Torah, le texte fondateur, contient à la fois la loi, l'histoire et la spiritualité d'un peuple qui a survécu à des persécutions répétées grâce, en partie, à la force de son identité religieuse.\n\nLe christianisme émerge au Ier siècle en Palestine avec Jésus de Nazareth, que ses disciples reconnaissent comme le Messie (Christ). Sa mort et sa résurrection constituent le cœur du message chrétien. L'islam, lui, naît au VIIe siècle en Arabie avec Muhammad (Mahomet), à qui l'ange Gabriel révèle le Coran. Ces deux religions héritent du judaïsme — Abraham est leur ancêtre commun — mais développent des théologies et des pratiques distinctes.\n\nAujourd'hui, ces trois traditions représentent plus de 4 milliards de croyants. Leurs textes sacrés, leurs figures fondatrices et leurs pratiques rituelles continuent de structurer des sociétés entières, des politiques internationales, des identités individuelles. Comprendre ces religions, c'est comprendre une large part de l'histoire mondiale.",
+    "visualDescription": "Triptyque architectural lumineux : une synagogue avec l'étoile de David en lumière dorée, une cathédrale gothique traversée de vitraux holographiques bleus, une mosquée avec croissant de lune néon argent. Les trois édifices se font face autour d'une fontaine de lumière blanche centrale qui monte vers un ciel sans étoiles, vide et infini.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1548625361-58a9d86b2a3f?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel patriarche biblique est considéré comme ancêtre commun des trois religions abrahamiques — judaïsme, christianisme et islam ?",
+        "options": [
+          "Moïse",
+          "Noé",
+          "Abraham",
+          "David"
+        ],
+        "answer": "Abraham"
+      },
+      {
+        "question": "Quelle est la profession de foi fondamentale de l'islam, la Shahada, premier des cinq piliers ?",
+        "options": [
+          "Dieu est amour et Muhammad est son serviteur",
+          "Il n'y a de dieu qu'Allah, et Muhammad est son prophète",
+          "Allah est grand et le Coran est sa parole éternelle",
+          "Il n'y a pas de salut en dehors de la soumission à Allah"
+        ],
+        "answer": "Il n'y a de dieu qu'Allah, et Muhammad est son prophète"
+      },
+      {
+        "question": "Quel événement central de la foi chrétienne, célébré à Pâques, constitue le fondement théologique du christianisme selon l'apôtre Paul ?",
+        "options": [
+          "La naissance virginale de Jésus à Bethléem",
+          "Le Sermon sur la Montagne",
+          "La résurrection de Jésus-Christ d'entre les morts",
+          "La Pentecôte et le don du Saint-Esprit"
+        ],
+        "answer": "La résurrection de Jésus-Christ d'entre les morts"
+      },
+      {
+        "question": "Quel est le nom du mois sacré du jeûne dans l'islam, commémorant la révélation du Coran à Muhammad ?",
+        "options": [
+          "Muharram",
+          "Dhul Hijja",
+          "Ramadan",
+          "Chawwal"
+        ],
+        "answer": "Ramadan"
+      },
+      {
+        "question": "Dans le judaïsme, quel texte oral et rabbinique complète la Torah écrite et constitue le cœur du droit religieux juif ?",
+        "options": [
+          "La Kabbale",
+          "Le Talmud",
+          "Les Psaumes",
+          "Le Midrash"
+        ],
+        "answer": "Le Talmud"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Les Religions d'Asie — L'éveil en mode silencieux",
+    "brief": "Pendant que l'Occident débattait de dogmes et de guerres saintes, l'Asie développait des systèmes spirituels d'une finesse philosophique extraordinaire. Siddhartha Gautama, le Bouddha, n'est pas un dieu — c'est un humain qui a trouvé l'éveil sous un arbre à Bodh Gaya, au Ve siècle av. J.-C. Son enseignement central : la souffrance vient de l'attachement, et la voie vers sa libération passe par les Quatre Nobles Vérités et le Noble Octuple Sentier.\n\nL'hindouisme, lui, est une des plus anciennes traditions religieuses du monde. Pas un fondateur unique, pas un seul livre sacré, mais une constellation de textes (Vedas, Upanishads, Bhagavad-Gita), de dieux (Brahma, Vishnou, Shiva) et de pratiques qui forment un univers spirituel d'une complexité fascinante. Le karma, la réincarnation (samsara), la libération finale (moksha) — ces concepts ont largement dépassé les frontières de l'Inde.\n\nConfucius, lui, ne parle pas vraiment de dieux. Il parle d'ordre social, de piété filiale, d'éthique politique. Son influence sur la Chine, le Japon, la Corée et le Vietnam est comparable à celle des Lumières en Europe. Un philosophe-sage dont les Analectes continuent de structurer des sociétés entières, 2 500 ans après sa mort.",
+    "visualDescription": "Pagode bouddhiste flottant dans un ciel de brume rose et dorée, entourée de lotus de lumière holographique. Des mandalas géométriques se déploient en fractales autour du temple. Une statue de Bouddha en marbre blanc lévite au centre, ses yeux fermés irradiant une lumière dorée apaisante. Ambiance zen maximale — pas de couleurs agressives, seulement des tonalités chaudes et des blancs doux.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quelles sont les Quatre Nobles Vérités enseignées par Bouddha comme fondement de sa doctrine ?",
+        "options": [
+          "La vie est joie, la joie vient du désir, désirer c'est souffrir, la méditation libère",
+          "La souffrance existe, elle a une cause (le désir), elle peut cesser, il existe un chemin vers sa cessation",
+          "Le monde est illusion, l'éveil est possible, le moine est le seul chemin, le nirvana est le but",
+          "L'attachement est mal, le détachement est bien, la compassion libère, le vide est la vérité"
+        ],
+        "answer": "La souffrance existe, elle a une cause (le désir), elle peut cesser, il existe un chemin vers sa cessation"
+      },
+      {
+        "question": "Dans l'hindouisme, quelle est la trimurti — la trinité divine fondamentale formée par trois aspects du divin ?",
+        "options": [
+          "Indra, Varuna et Agni",
+          "Brahma (créateur), Vishnou (protecteur) et Shiva (destructeur)",
+          "Krishna, Rama et Ganesh",
+          "Durga, Lakshmi et Saraswati"
+        ],
+        "answer": "Brahma (créateur), Vishnou (protecteur) et Shiva (destructeur)"
+      },
+      {
+        "question": "Quel concept hindou et bouddhiste désigne la loi de cause à effet moral, selon laquelle nos actions présentes déterminent nos existences futures ?",
+        "options": [
+          "Le dharma",
+          "Le samsara",
+          "Le karma",
+          "Le moksha"
+        ],
+        "answer": "Le karma"
+      },
+      {
+        "question": "Quel est le titre du recueil de paroles et d'enseignements de Confucius, compilé par ses disciples après sa mort ?",
+        "options": [
+          "Le Tao Te Ching",
+          "Les Analectes (Lunyu)",
+          "Le Livre des Rites (Liji)",
+          "L'Art de la Guerre"
+        ],
+        "answer": "Les Analectes (Lunyu)"
+      },
+      {
+        "question": "Comment s'appelle la notion bouddhiste désignant l'extinction du désir et de la souffrance, but ultime de la pratique spirituelle ?",
+        "options": [
+          "Le samsara",
+          "Le dharma",
+          "Le moksha",
+          "Le nirvana"
+        ],
+        "answer": "Le nirvana"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Mythes Fondateurs & Symboles Universels — Le code source de l'humanité",
+    "brief": "Il y a des récits qui reviennent partout, dans toutes les cultures, à toutes les époques. Le déluge universel, par exemple : avant la Bible, il y a l'Épopée de Gilgamesh en Mésopotamie — un roi légendaire qui cherche l'immortalité et croise un survivant d'un grand déluge envoyé par les dieux. Le même motif se retrouve dans des dizaines de cultures à travers le monde, de l'Inde à l'Amazonie. Coïncidence ou mémoire collective d'un événement réel ?\n\nLes mythes de création ont tous une structure commune : le chaos initial, une séparation (ciel/terre, lumière/ténèbres), et l'émergence de l'ordre. Dans la Genèse biblique, Dieu crée en séparant. Dans la cosmogonie babylonienne (Enuma Elish), le dieu Marduk tue le monstre primordial Tiamat pour construire le monde avec son corps. Ces récits fondateurs ne sont pas que des histoires — ils transmettent des valeurs, des ordres sociaux, des visions du monde.\n\nL'anthropologue Joseph Campbell a identifié le 'monomythe' ou 'voyage du héros' — une structure narrative universelle présente dans presque tous les mythes et épopées de l'humanité. Un héros ordinaire reçoit un appel, traverse des épreuves, et revient transformé. Star Wars, Harry Potter, Le Seigneur des Anneaux — c'est toujours le même schéma. Le mythe est immortel.",
+    "visualDescription": "Bibliothèque cosmique sphérique dont les murs sont faits de tablettes d'argile, de rouleaux de papyrus et de livres saints, tous illuminés de l'intérieur. Au centre, un globe terrestre holographique montre des arcs lumineux reliant les civilisations. Des symboles universels — ankh, étoile de David, croix, Om, yin-yang — tournent lentement en orbite autour du globe. Lumière ambrée et profonde.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel est le nom du héros de la plus ancienne épopée littéraire connue, un roi sumérien de la cité d'Uruk qui cherche l'immortalité ?",
+        "options": [
+          "Enkidu",
+          "Gilgamesh",
+          "Hammurabi",
+          "Sargon d'Akkad"
+        ],
+        "answer": "Gilgamesh"
+      },
+      {
+        "question": "Dans l'Épopée de Gilgamesh, quel personnage est le survivant du déluge mésopotamien, équivalent du Noé biblique ?",
+        "options": [
+          "Enkidu",
+          "Shamash",
+          "Utnapishtim",
+          "Marduk"
+        ],
+        "answer": "Utnapishtim"
+      },
+      {
+        "question": "Quel anthropologue américain a théorisé le 'monomythe' ou 'voyage du héros' dans son ouvrage 'Le Héros aux mille et un visages' (1949) ?",
+        "options": [
+          "Claude Lévi-Strauss",
+          "Mircea Eliade",
+          "Joseph Campbell",
+          "Carl Gustav Jung"
+        ],
+        "answer": "Joseph Campbell"
+      },
+      {
+        "question": "Quel est le nom de la tablette babylonienne de création cosmogonique (datée du IIe millénaire av. J.-C.) dans laquelle le dieu Marduk crée le monde en tuant la déesse Tiamat ?",
+        "options": [
+          "Le Livre des morts",
+          "L'Enuma Elish",
+          "L'Atrahasis",
+          "Le Code d'Hammurabi"
+        ],
+        "answer": "L'Enuma Elish"
+      },
+      {
+        "question": "Selon le récit de la Genèse, combien de jours Dieu a-t-il mis pour créer le monde, se reposant le septième jour ?",
+        "options": [
+          "Six jours",
+          "Sept jours",
+          "Quarante jours",
+          "Un seul jour"
+        ],
+        "answer": "Six jours"
+      }
+    ]
+  }
+]

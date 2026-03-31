@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useProgress } from "@/hooks/useProgress";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 export function StatsGrid() {
@@ -276,5 +276,160 @@ export function OnlineCount() {
       </span>
       <span>⚡️ {count} joueurs en ligne actuellement</span>
     </motion.p>
+  );
+}
+
+interface ActualiteItem {
+  id: number;
+  theme: string;
+  emoji: string;
+  color: string;
+  headline: string;
+  summary: string;
+  tag: string;
+  date: string;
+  details?: string;
+}
+
+const COLOR_MAP_CLIENT: Record<string, { badge: string; border: string; glow: string }> = {
+  blue:   { badge: "text-blue-300 bg-blue-500/10 border-blue-500/20",   border: "border-blue-500/40",   glow: "from-blue-500/[0.08]" },
+  cyan:   { badge: "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20", border: "border-neon-cyan/40",  glow: "from-neon-cyan/[0.08]" },
+  green:  { badge: "text-green-300 bg-green-500/10 border-green-500/20", border: "border-green-500/40",  glow: "from-green-500/[0.08]" },
+  yellow: { badge: "text-yellow-300 bg-yellow-500/10 border-yellow-500/20", border: "border-yellow-500/40", glow: "from-yellow-500/[0.08]" },
+  purple: { badge: "text-purple-300 bg-purple-500/10 border-purple-500/20", border: "border-purple-500/40", glow: "from-purple-500/[0.08]" },
+  orange: { badge: "text-orange-300 bg-orange-500/10 border-orange-500/20", border: "border-orange-500/40", glow: "from-orange-500/[0.08]" },
+};
+
+export function ActualitesModal({ item, onClose }: { item: ActualiteItem; onClose: () => void }) {
+  const c = COLOR_MAP_CLIENT[item.color] ?? COLOR_MAP_CLIENT.blue;
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", handler);
+    return () => document.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  // Parse markdown-like bold
+  const renderDetails = (text: string) => {
+    return text.split("\n").map((line, i) => {
+      const boldParsed = line.split(/\*\*(.*?)\*\*/g).map((part, j) =>
+        j % 2 === 1 ? <strong key={j} className="text-white font-semibold">{part}</strong> : part
+      );
+      return <p key={i} className={`${line.startsWith("•") ? "pl-2" : ""} text-slate-400 text-sm leading-relaxed mb-1`}>{boldParsed}</p>;
+    });
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+      onClick={onClose}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: 40, scale: 0.97 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 20, scale: 0.97 }}
+        transition={{ type: "spring", damping: 25, stiffness: 300 }}
+        className={`relative w-full max-w-lg bg-cyber-950 rounded-3xl border ${c.border} overflow-hidden max-h-[80vh] flex flex-col`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Glow */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${c.glow} to-transparent pointer-events-none`} />
+
+        {/* Header */}
+        <div className="relative p-5 pb-3 flex items-start gap-3 border-b border-white/[0.06]">
+          <span className="text-3xl mt-0.5">{item.emoji}</span>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 mb-1">
+              <span className={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${c.badge}`}>
+                {item.tag}
+              </span>
+              <span className="text-xs text-slate-600">{item.date}</span>
+            </div>
+            <h2 className="text-base font-bold text-white leading-snug">{item.headline}</h2>
+          </div>
+          <button
+            onClick={onClose}
+            className="flex-shrink-0 w-7 h-7 rounded-full bg-white/[0.06] hover:bg-white/[0.10] flex items-center justify-center text-slate-400 hover:text-white transition-all text-sm"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="relative overflow-y-auto p-5 space-y-1">
+          {item.details ? renderDetails(item.details) : <p className="text-slate-400 text-sm">{item.summary}</p>}
+        </div>
+
+        {/* Footer */}
+        <div className="relative p-4 border-t border-white/[0.06] flex items-center justify-between">
+          <span className="text-xs text-slate-700">📰 Contenu éditorial · Vibe Quiz Master</span>
+          <button
+            onClick={onClose}
+            className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.10] text-slate-300 transition-all"
+          >
+            Fermer
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  );
+}
+
+export function ActualitesGrid({ items }: { items: ActualiteItem[] }) {
+  const [selected, setSelected] = useState<ActualiteItem | null>(null);
+
+  const colorBorderMap: Record<string, string> = {
+    blue: "hover:border-blue-500/30", cyan: "hover:border-neon-cyan/30",
+    green: "hover:border-green-500/30", yellow: "hover:border-yellow-500/30",
+    purple: "hover:border-purple-500/30", orange: "hover:border-orange-500/30",
+  };
+  const colorGlowMap: Record<string, string> = {
+    blue: "from-blue-500/[0.04]", cyan: "from-neon-cyan/[0.04]",
+    green: "from-green-500/[0.04]", yellow: "from-yellow-500/[0.04]",
+    purple: "from-purple-500/[0.04]", orange: "from-orange-500/[0.04]",
+  };
+  const badgeMap: Record<string, string> = {
+    blue: "text-blue-300 bg-blue-500/10 border-blue-500/20",
+    cyan: "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20",
+    green: "text-green-300 bg-green-500/10 border-green-500/20",
+    yellow: "text-yellow-300 bg-yellow-500/10 border-yellow-500/20",
+    purple: "text-purple-300 bg-purple-500/10 border-purple-500/20",
+    orange: "text-orange-300 bg-orange-500/10 border-orange-500/20",
+  };
+
+  return (
+    <>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {items.map((item) => (
+          <motion.button
+            key={item.id}
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={() => setSelected(item)}
+            className={`relative group overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 text-left transition-all duration-200 hover:bg-white/[0.04] ${colorBorderMap[item.color] ?? ""} w-full`}
+          >
+            <div className={`absolute inset-0 bg-gradient-to-br ${colorGlowMap[item.color] ?? ""} to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
+            <div className="relative">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">{item.emoji}</span>
+                <span className={`text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${badgeMap[item.color] ?? ""}`}>
+                  {item.tag}
+                </span>
+                <span className="ml-auto text-slate-700 group-hover:text-slate-400 transition-colors text-xs">+ infos</span>
+              </div>
+              <h3 className="text-sm font-semibold text-white leading-snug mb-2 line-clamp-2">{item.headline}</h3>
+              <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">{item.summary}</p>
+            </div>
+          </motion.button>
+        ))}
+      </div>
+
+      <AnimatePresence>
+        {selected && <ActualitesModal item={selected} onClose={() => setSelected(null)} />}
+      </AnimatePresence>
+    </>
   );
 }

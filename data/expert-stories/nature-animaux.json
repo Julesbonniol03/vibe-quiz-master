@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "title": "Les Dinosaures — 165 Millions d'Années de Règne Absolu",
+    "brief": "Il y a environ 230 millions d'années, quelque chose d'extraordinaire s'est produit sur Terre : les premiers dinosaures ont fait leur apparition. Pendant plus de 165 millions d'années — une durée quasi incompréhensible pour notre cerveau humain habitué à penser en décennies — ils ont dominé la planète sous toutes ses formes. Des herbivores géants comme le Diplodocus qui mesurait jusqu'à 30 mètres de long, aux prédateurs terrifiants comme le T-Rex et ses bras ridiculement courts mais ses mâchoires capables d'exercer une pression de 57 000 newtons. Le Jurassique, c'était le pic de cette ère dorée.\n\nLe T-Rex en particulier fascine les paléontologues depuis des décennies. Les découvertes récentes ont bouleversé l'image qu'on en avait : il était probablement couvert de proto-plumes sur certaines parties de son corps, et marchait bien plus lentement qu'on ne le pensait — environ 5 km/h. Certains chercheurs pensent même qu'il était davantage charognard que chasseur actif, comme une sorte de vautour géant de 7 tonnes. Sympa comme voisin.\n\nEt puis il y a 66 millions d'années, tout s'est arrêté. Un astéroïde d'environ 10 kilomètres de diamètre s'écrase dans ce qui est aujourd'hui le Mexique, créant le cratère de Chicxulub. L'impact déclenche des tsunamis gigantesques, des incendies mondiaux et un «hiver d'impact» qui dure des années. Les trois quarts des espèces disparaissent. Mais pas tous les dinosaures — leurs descendants, les oiseaux, sont toujours là pour nous le rappeler.",
+    "visualDescription": "Une jungle du Crétacé rendue en néon fluorescent. Des fougères arborescentes géantes brillent en vert électrique sous une lumière rouge sang qui filtre à travers un ciel chargé de cendres volcaniques. Au loin, la silhouette holographique d'un T-Rex se découpe en pixels dorés. Des empreintes de pas fossilisées s'illuminent une à une sur le sol comme les traces d'un GPS préhistorique. L'air vibre de sons graves et digitaux.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Il y a combien de millions d'années environ l'astéroïde responsable de l'extinction des dinosaures non-aviens s'est-il écrasé sur Terre ?",
+        "options": [
+          "45 millions",
+          "55 millions",
+          "66 millions",
+          "80 millions"
+        ],
+        "answer": "66 millions"
+      },
+      {
+        "question": "Dans quelle région du monde se trouve le cratère de Chicxulub, formé lors de l'impact qui a provoqué la grande extinction du Crétacé ?",
+        "options": [
+          "Le golfe du Mexique",
+          "Le désert de Gobi",
+          "Le plateau sibérien",
+          "Le bassin du Congo"
+        ],
+        "answer": "Le golfe du Mexique"
+      },
+      {
+        "question": "Quel groupe d'animaux actuels est considéré comme les descendants directs des dinosaures non-aviens ?",
+        "options": [
+          "Les crocodiliens",
+          "Les lézards",
+          "Les oiseaux",
+          "Les tortues"
+        ],
+        "answer": "Les oiseaux"
+      },
+      {
+        "question": "Quelle était approximativement la longueur maximale du Diplodocus, l'un des plus longs dinosaures herbivores connus ?",
+        "options": [
+          "15 mètres",
+          "22 mètres",
+          "30 mètres",
+          "40 mètres"
+        ],
+        "answer": "30 mètres"
+      },
+      {
+        "question": "Le Vélociraptor, tel qu'il existait réellement, était approximativement de la taille de quel animal actuel ?",
+        "options": [
+          "Un cheval",
+          "Un lion",
+          "Une dinde ou un grand coq",
+          "Un chien berger allemand"
+        ],
+        "answer": "Une dinde ou un grand coq"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Les Mammifères — Records, Géants et Prédateurs Ultimes",
+    "brief": "Les mammifères, c'est notre famille. Et quelle famille ! On partage cette classe avec la baleine bleue, le mammifère le plus grand ayant jamais existé sur Terre — jusqu'à 33 mètres et 180 tonnes, soit l'équivalent de 25 éléphants. Mais aussi avec la chauve-souris étrusque qui pèse 2 grammes, ou avec le guépard qui atteint 112 km/h sur 400 mètres. La diversité des mammifères est proprement hallucinante : 5 400 espèces environ, adaptées à absolument tous les environnements.\n\nLes mammifères marins forment un groupe à part entière. Baleines, dauphins, orques, loutres de mer, phoques, morses et dugongs... Ils ont tous en commun d'avoir des ancêtres terrestres qui sont retournés à la mer. L'orque, souvent appelée «baleine tueuse», est en réalité le plus grand dauphin du monde. Elle communique avec des dialectes régionaux complexes, chasse en meutes coordonnées et transmet des techniques de chasse de génération en génération — une forme de culture animale.\n\nEt puis il y a les grands carnivores terrestres qui font rêver et frémir. Le lion d'Afrique, le tigre de Sibérie, le léopard des neiges, l'ours polaire... Chacun est une machine de prédation parfaite, affinée par des millions d'années d'évolution. Mais tous sont aujourd'hui menacés par la pression humaine sur leurs habitats. La sixième extinction de masse est en cours, et cette fois, elle n'a pas besoin d'astéroïde.",
+    "visualDescription": "Une savane africaine transformée en biome holographique. Des silhouettes de lions et d'éléphants se dessinent en filaments lumineux bleutés sur un horizon électrique orange et rouge. Au premier plan, un réseau de données visuelles cartographie les migrations animales en temps réel comme des circuits imprimés vivants. Dans le ciel numérique, des balenes bleues nagent comme des vaisseaux spatiaux bioluminescents.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel est le mammifère le plus lourd ayant jamais existé sur Terre ?",
+        "options": [
+          "L'éléphant d'Afrique",
+          "Le mégalodon",
+          "La baleine bleue",
+          "Le mammouth laineux"
+        ],
+        "answer": "La baleine bleue"
+      },
+      {
+        "question": "L'orque (Orcinus orca) appartient à quelle famille zoologique ?",
+        "options": [
+          "Les baleines à fanons (Mysticètes)",
+          "Les dauphins (Delphinidés)",
+          "Les cachalots (Physétéridés)",
+          "Les narvals et bélugas (Monodontidés)"
+        ],
+        "answer": "Les dauphins (Delphinidés)"
+      },
+      {
+        "question": "Quelle est la vitesse de pointe maximale du guépard, l'animal terrestre le plus rapide du monde ?",
+        "options": [
+          "90 km/h",
+          "100 km/h",
+          "112 km/h",
+          "130 km/h"
+        ],
+        "answer": "112 km/h"
+      },
+      {
+        "question": "Le Platypus (ornithorynque) est un mammifère exceptionnel pour quelle raison principale ?",
+        "options": [
+          "Il est le seul mammifère sans poils",
+          "Il est l'un des rares mammifères qui pond des œufs",
+          "Il est le seul mammifère complètement aveugle",
+          "Il est le seul mammifère sans cerveau limbique"
+        ],
+        "answer": "Il est l'un des rares mammifères qui pond des œufs"
+      },
+      {
+        "question": "Quel ancêtre terrestre les cétacés (baleines et dauphins) ont-ils selon les paléontologues modernes ?",
+        "options": [
+          "Un reptile amphibie du Trias",
+          "Un artiodactyle proche des hippopotames actuel",
+          "Un prédateur marin du genre requin primitif",
+          "Un rongeur semi-aquatique de l'Éocène"
+        ],
+        "answer": "Un artiodactyle proche des hippopotames actuel"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Les Océans & Vie Marine — L'Espace Intérieur de la Terre",
+    "brief": "On a cartographié la surface de Mars avec plus de précision que le fond de nos océans. Environ 80 % des fonds marins restent encore inexplorés à ce jour. L'océan couvre 71 % de la surface terrestre et représente 97 % de l'eau de la planète. C'est l'habitat vivant le plus vaste qui existe, et on n'en connaît qu'une infime partie. Les créatures qui y vivent défient souvent l'imagination : le calmar colossal peut atteindre 14 mètres, l'anémone de mer est biologiquement immortelle, et le requin Groenlandais peut vivre plus de 400 ans.\n\nLe requin baleine, lui, c'est le plus grand poisson du monde — pas un mammifère, un poisson — avec ses 12 à 18 mètres de long. Et pourtant, il se nourrit uniquement de plancton et de petits poissons. Un géant parfaitement inoffensif. Les récifs coralliens, eux, couvrent moins de 1 % du fond marin mais abritent environ 25 % de toutes les espèces marines connues. Ils sont les forêts tropicales de l'océan, et ils blanchissent à une vitesse alarmante à cause du réchauffement climatique.\n\nLes abysses — les zones au-delà de 6 000 mètres — forment un monde à part. Sans lumière, avec une pression écrasante et des températures proches de zéro, la vie y a quand même trouvé sa place. Des poissons translucides avec des organes lumineux, des vers tubicoles géants autour des sources hydrothermales, des pieuvres fantomatiques... La vie sur Terre ne cesse de surprendre, même dans ses conditions les plus extrêmes.",
+    "visualDescription": "Un fond marin cyberpunk : des récifs coralliens numériques brillent en cyan et magenta dans une obscurité totale. Des silhouettes bioluminescentes de calmars géants et de requins baleines dérivent dans l'eau comme des vaisseaux fantômes holographiques. Des particules de plancton lumineux forment des galaxies miniatures. Les sources hydrothermales projettent des geysers de lumière orange dans l'obscurité abyssale. Un sonar digital pulse doucement.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel pourcentage approximatif des fonds marins reste encore inexploré ou insuffisamment cartographié à ce jour ?",
+        "options": [
+          "40 %",
+          "60 %",
+          "80 %",
+          "95 %"
+        ],
+        "answer": "80 %"
+      },
+      {
+        "question": "Le requin baleine (Rhincodon typus) est le plus grand poisson du monde. De quoi se nourrit-il principalement ?",
+        "options": [
+          "De dauphins et de phoques",
+          "De plancton et de petits poissons",
+          "De requins plus petits",
+          "De céphalopodes géants"
+        ],
+        "answer": "De plancton et de petits poissons"
+      },
+      {
+        "question": "Quel pourcentage environ de toutes les espèces marines connues les récifs coralliens abritent-ils, malgré leur faible superficie ?",
+        "options": [
+          "5 %",
+          "15 %",
+          "25 %",
+          "40 %"
+        ],
+        "answer": "25 %"
+      },
+      {
+        "question": "Quelle est la longueur maximale approximative du calmar colossal (Mesonychoteuthis hamiltoni), le plus grand invertébré connu ?",
+        "options": [
+          "6 mètres",
+          "10 mètres",
+          "14 mètres",
+          "20 mètres"
+        ],
+        "answer": "14 mètres"
+      },
+      {
+        "question": "Les sources hydrothermales des abysses abritent des écosystèmes entiers. Quelle est la base de la chaîne alimentaire dans ces environnements sans lumière ?",
+        "options": [
+          "La photosynthèse de plantes abyssales bioluminescentes",
+          "La chimiosynthèse réalisée par des bactéries",
+          "Les matières organiques tombées de la surface",
+          "Les échanges thermiques entre l'eau froide et chaude"
+        ],
+        "answer": "La chimiosynthèse réalisée par des bactéries"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Oiseaux, Insectes & Reptiles — Les Autres Maîtres du Monde",
+    "brief": "Pendant qu'on se concentre sur les mammifères et les poissons, les vrais maîtres numériques de la biodiversité animale sont ailleurs. Les insectes représentent à eux seuls environ 80 % de toutes les espèces animales connues. On en a décrit un million, mais les entomologistes estiment qu'il en existe peut-être 10 millions. Sans eux, la plupart des écosystèmes terrestres s'effondreraient en quelques semaines : pollinisation, décomposition, chaînes alimentaires... Les insectes sont la colonne vertébrale invisible de la biosphère.\n\nLes oiseaux, descendants directs des dinosaures théropodes, sont eux aussi d'une diversité stupéfiante : plus de 10 000 espèces, des 2 grammes du colibri des abeilles au 150 kg de l'autruche. L'albatros hurleur peut planer sans battre des ailes pendant des heures grâce à une technique appelée vol dynamique, en exploitant les gradients de vent au-dessus des océans. La sterne arctique, elle, effectue chaque année la migration la plus longue de tous les animaux connus : 70 000 kilomètres aller-retour entre l'Arctique et l'Antarctique.\n\nLes reptiles, souvent sous-estimés, sont pourtant des animaux fascinants. Le komodo, avec sa salive chargée de bactéries et de venin, chasse des proies bien plus grandes que lui. Le caméléon ne change pas de couleur pour se camoufler — il le fait principalement pour communiquer avec ses congénères. Et les crocodiliens, avec leurs 250 millions d'années d'histoire, sont les seuls représentants vivants du groupe des archosaures avec les oiseaux. Les crocodiles ont survécu à l'extinction des dinosaures. Ça mérite le respect.",
+    "visualDescription": "Un écosystème de biodiversité rendu en mode visualisation de données. Des essaims d'insectes forment des vortex lumineux multicolores comme des galaxies miniatures. Des oiseaux migrateurs tracent des arcs de lumière sur une mappemonde holographique. Des reptiles aux écailles iridescentes se glissent dans l'ombre de néons verts et dorés. L'ensemble ressemble à un tableau de bord vivant de la biodiversité planétaire, pulsant au rythme des écosystèmes.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Quel oiseau effectue la plus longue migration annuelle connue dans le règne animal, parcourant jusqu'à 70 000 km aller-retour ?",
+        "options": [
+          "L'albatros hurleur",
+          "La cigogne blanche",
+          "La sterne arctique",
+          "Le faucon pèlerin"
+        ],
+        "answer": "La sterne arctique"
+      },
+      {
+        "question": "Les insectes représentent approximativement quel pourcentage de toutes les espèces animales connues ?",
+        "options": [
+          "30 %",
+          "50 %",
+          "80 %",
+          "95 %"
+        ],
+        "answer": "80 %"
+      },
+      {
+        "question": "Pourquoi le caméléon change-t-il principalement de couleur selon les recherches scientifiques récentes ?",
+        "options": [
+          "Pour se camoufler face à ses prédateurs",
+          "Pour réguler sa température corporelle",
+          "Pour communiquer avec ses congénères et exprimer ses états émotionnels",
+          "Pour attirer les insectes dont il se nourrit"
+        ],
+        "answer": "Pour communiquer avec ses congénères et exprimer ses états émotionnels"
+      },
+      {
+        "question": "Les crocodiliens et les oiseaux sont les deux seuls représentants vivants d'un groupe d'archosaures. Avec quel groupe de reptiles disparus partagent-ils cet ancêtre commun ?",
+        "options": [
+          "Les ichthyosaures",
+          "Les plésiosaures",
+          "Les dinosaures",
+          "Les ptérosaures"
+        ],
+        "answer": "Les dinosaures"
+      },
+      {
+        "question": "Quel est le plus petit oiseau du monde, capable de voler en stationnaire et même en arrière grâce à ses battements d'ailes ultra-rapides ?",
+        "options": [
+          "Le roitelet huppé",
+          "Le colibri des abeilles",
+          "Le tichodrome échelette",
+          "Le troglodyte mignon"
+        ],
+        "answer": "Le colibri des abeilles"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Conservation & Espèces Menacées — Dernier Appel pour la Biodiversité",
+    "brief": "On est en train de vivre la sixième extinction de masse de l'histoire de la Terre. La différence avec les cinq précédentes ? Cette fois, c'est nous. Selon le WWF, les populations de vertébrés sauvages ont décliné de 73 % en moyenne entre 1970 et 2020. Soixante-dix-trois pourcent. En cinquante ans. Le rythme d'extinction actuel serait entre 100 et 1 000 fois plus élevé que le taux naturel de fond. Des espèces disparaissent avant même d'avoir été décrites par la science.\n\nLe réchauffement climatique vient amplifier une destruction d'habitat déjà catastrophique. Les coraux blanchissent parce que les océans sont trop chauds. Les ours polaires perdent leur glace. Les migrations animales sont perturbées. La phénologie — le timing des événements biologiques comme la floraison, la ponte, les migrations — est décalée, créant des désynchronisations entre les espèces et leurs ressources alimentaires. La chaîne du vivant se fissure.\n\nMais il y a aussi des raisons d'espérer. Les programmes de réintroduction fonctionnent parfois magnifiquement : le loup gris réintroduit dans le parc de Yellowstone en 1995 a transformé tout l'écosystème en cascade, un phénomène qu'on appelle «cascade trophique». Le faucon pèlerin a failli disparaître dans les années 1970 à cause du DDT et compte aujourd'hui des milliers de couples nicheurs. L'action humaine peut détruire — mais elle peut aussi réparer. La question, c'est si on va agir assez vite.",
+    "visualDescription": "Une visualisation de données émotionnelle : sur fond noir d'univers, des points de lumière représentent chaque espèce connue. Des centaines s'éteignent en temps réel comme des étoiles qui meurent, laissant des taches sombres. Quelques points brillent plus fort — les espèces sauvées in extremis, entourées d'un halo vert espoir. Des courbes de données en rouge sang montrent le déclin. Une voix numérique compte le temps restant. L'urgence est palpable, même dans le silence pixelisé.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80",
+    "quiz": [
+      {
+        "question": "Selon le Rapport Planète Vivante du WWF, de quel pourcentage les populations de vertébrés sauvages ont-elles décliné entre 1970 et 2020 ?",
+        "options": [
+          "38 %",
+          "52 %",
+          "69 %",
+          "73 %"
+        ],
+        "answer": "73 %"
+      },
+      {
+        "question": "Quelle est la principale cause directe du blanchissement des coraux observé massivement depuis les années 1990 ?",
+        "options": [
+          "La pollution aux plastiques dans les océans",
+          "L'augmentation de la température de l'eau de mer",
+          "La surpêche qui déséquilibre les écosystèmes",
+          "L'acidification des océans par le CO2"
+        ],
+        "answer": "L'augmentation de la température de l'eau de mer"
+      },
+      {
+        "question": "La réintroduction du loup gris dans le parc de Yellowstone en 1995 a provoqué une «cascade trophique». Qu'est-ce que ce phénomène désigne ?",
+        "options": [
+          "Une migration massive de loups vers d'autres parcs nationaux",
+          "Un effet en chaîne où la présence du prédateur transforme tout l'écosystème",
+          "Une compétition directe entre le loup et les ours du parc",
+          "Un programme d'élevage en captivité qui a réussi"
+        ],
+        "answer": "Un effet en chaîne où la présence du prédateur transforme tout l'écosystème"
+      },
+      {
+        "question": "Le DDT, pesticide interdit dans les années 1970, avait provoqué le déclin catastrophique de quelle espèce emblématique en fragilisant ses œufs ?",
+        "options": [
+          "L'aigle chauve américain et le faucon pèlerin",
+          "Le condor de Californie",
+          "La grue blanche d'Amérique",
+          "Le pélican brun"
+        ],
+        "answer": "L'aigle chauve américain et le faucon pèlerin"
+      },
+      {
+        "question": "En quelle année a été fondé le WWF (World Wide Fund for Nature, alors World Wildlife Fund) ?",
+        "options": [
+          "1948",
+          "1961",
+          "1972",
+          "1980"
+        ],
+        "answer": "1961"
+      }
+    ]
+  }
+]

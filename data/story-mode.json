@@ -1,5 +1,73 @@
 [
   {
+    "id": 1,
+    "title": "La Préhistoire : Le Premier Spawn de l'Humanité",
+    "brief": "Avant tout, il y avait rien. Puis boom — l'humanité spawn. Les premiers Homo sapiens, c'est le personnage de base avec zéro équipement mais un cerveau qui buzze. On taille des silex (le craft originel), on peint des animaux sur des grottes (le premier Instagram), on maîtrise le feu (le premier cheat code de l'évolution). Pendant 300 000 ans, on est nomades — on follow les troupeaux comme des algorithmes de contenu. Puis il y a 12 000 ans, le game change radicalement : la révolution néolithique. On arrête de courir partout, on s'installe, on cultive le blé, on élève des animaux. C'est l'upgrade qui a tout changé. Des villages, des stocks de nourriture, une organisation sociale. Le premier serveur stable de l'histoire humaine vient d'être allumé.",
+    "visualDescription": "Une savane africaine en mode dark néon avec des silhouettes d'Homo sapiens autour d'un feu qui brille en cyan. Des peintures rupestres animées qui s'illuminent comme des hologrammes. Des mammouths laineux en néon violet dans le fond. Ambiance 'Level 1 - Tutorial' avec une interface RPG archaïque.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f",
+    "quiz": [
+      {
+        "question": "Il y a combien d'années environ Homo sapiens a-t-il apparu ?",
+        "options": ["10 000 ans", "100 000 ans", "300 000 ans", "1 million d'années"],
+        "answer": "300 000 ans"
+      },
+      {
+        "question": "Qu'est-ce que la révolution néolithique ?",
+        "options": ["La découverte du feu", "Le passage de la chasse-cueillette à l'agriculture sédentaire", "L'invention de l'écriture", "La fabrication des premiers outils en métal"],
+        "answer": "Le passage de la chasse-cueillette à l'agriculture sédentaire"
+      },
+      {
+        "question": "Il y a combien d'années environ la révolution néolithique a-t-elle commencé ?",
+        "options": ["3 000 ans", "6 000 ans", "12 000 ans", "50 000 ans"],
+        "answer": "12 000 ans"
+      },
+      {
+        "question": "Où se trouvent les célèbres peintures rupestres de Lascaux ?",
+        "options": ["En Espagne", "En France", "En Afrique du Sud", "En Australie"],
+        "answer": "En France"
+      },
+      {
+        "question": "Quel outil taillé dans la pierre est emblématique du Paléolithique ?",
+        "options": ["La hache en bronze", "Le silex taillé", "La roue en bois", "L'arc en os"],
+        "answer": "Le silex taillé"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "La Mésopotamie : Le Premier Serveur de l'Histoire",
+    "brief": "Entre le Tigre et l'Euphrate, quelque part en Irak actuel, l'humanité lance son premier vrai OS. La Mésopotamie (Sumer, Babylone, Assyrie), c'est l'endroit où tout commence pour de vrai. L'écriture cunéiforme, inventée vers 3200 av. J.-C. : le premier cloud de l'histoire, on peut enfin stocker de l'info sans compter sur la mémoire humaine. Le Code d'Hammurabi (1754 av. J.-C.), c'est la première mise à jour légale : 282 lois gravées dans la pierre, le premier patch de la société. Les Babyloniens inventent l'astronomie et les mathématiques en base 60 (pourquoi une heure = 60 minutes ? Merci eux). Les cités-États comme Ur ou Uruk sont les premières métropoles de l'histoire. La roue, le calendrier, la bière — oui, la bière. Tout part de là. Le flex originel.",
+    "visualDescription": "Des ziggurats colossaux en néon doré et violet qui s'élèvent dans un désert nocturne. Des tablettes cunéiformes holographiques qui flottent dans les airs. Le Code d'Hammurabi comme une stèle de pierre avec des inscriptions qui brillent en cyan. Le Tigre et l'Euphrate en LED bleu électrique. Ambiance civilisation 1.0.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1578301978018-3005759f48f7",
+    "quiz": [
+      {
+        "question": "Vers quelle date l'écriture cunéiforme a-t-elle été inventée ?",
+        "options": ["500 av. J.-C.", "1500 av. J.-C.", "3200 av. J.-C.", "5000 av. J.-C."],
+        "answer": "3200 av. J.-C."
+      },
+      {
+        "question": "Qu'est-ce que le Code d'Hammurabi ?",
+        "options": ["Un traité diplomatique entre Babylone et l'Égypte", "Le premier recueil de lois écrit de l'histoire", "Un calendrier astronomique babylonien", "La légende de la création du monde selon Sumer"],
+        "answer": "Le premier recueil de lois écrit de l'histoire"
+      },
+      {
+        "question": "Entre quels deux fleuves la Mésopotamie était-elle située ?",
+        "options": ["Le Nil et le Jourdain", "L'Indus et le Gange", "Le Tigre et l'Euphrate", "Le Rhin et le Danube"],
+        "answer": "Le Tigre et l'Euphrate"
+      },
+      {
+        "question": "Quelle invention mésopotamienne utilisons-nous encore pour mesurer le temps ?",
+        "options": ["La base 10", "La base 12", "La base 60 (minutes, secondes)", "La base 100"],
+        "answer": "La base 60 (minutes, secondes)"
+      },
+      {
+        "question": "Quel pays moderne correspond approximativement au territoire de la Mésopotamie ?",
+        "options": ["L'Égypte", "L'Irak", "L'Iran", "La Syrie"],
+        "answer": "L'Irak"
+      }
+    ]
+  },
+  {
     "id": 3,
     "title": "Rome : L'Empire du Flex Absolu",
     "brief": "Masterclass de domination mondiale. Rome, c'est le mec qui arrive en soirée, rachète le bar, et impose ses règles à tout le monde. Ils ont construit des routes partout (les autoroutes avant les autoroutes), des aqueducs (l'eau courante avant que ce soit cool), et des arènes où des mecs se tapaient dessus pour le divertissement — le premier stream Twitch en gros. Le Sénat, c'était leur groupe WhatsApp de décision, sauf que ça partait en embrouille H24. Jules César a flex tellement fort qu'il s'est fait poignarder par ses propres potes (le ratio ultime). Puis Auguste a pris le relais et a lancé la Pax Romana : 200 ans de paix relative. Le flex ? Un empire de 60 millions de personnes, du Maroc à l'Irak. Banger civilisationnel, personne a fait mieux pendant 1000 ans.",
@@ -767,6 +835,387 @@
         "question": "Qui a été élu président de la IIe République française après les révolutions de 1848 ?",
         "options": ["Alphonse de Lamartine", "Victor Hugo", "Louis-Napoléon Bonaparte", "Adolphe Thiers"],
         "answer": "Louis-Napoléon Bonaparte"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "La Première Guerre Mondiale : Le Crash du Siècle",
+    "brief": "1914. Un archiduc autrichien se fait assassiner à Sarajevo et l'Europe entière part en vrille en moins de 6 semaines. C'est l'effet domino le plus meurtrier de l'histoire : des alliances enchaînées comme un multi-kills en cascade. La Grande Guerre, c'est 4 ans de tranchées, de boue, de gaz moutarde et d'artillerie lourde. 17 millions de morts. Des généraux qui envoient des vagues d'hommes sur des mitrailleuses comme s'ils jouaient sur easy mode. La bataille de Verdun (1916) : 700 000 morts pour quelques kilomètres de boue — le ratio le plus absurde de l'histoire militaire. En 1917, les États-Unis entrent en jeu (le DLC américain). En 1918, l'Allemagne s'effondre. Le Traité de Versailles (1919) humilie l'Allemagne tellement fort qu'il plante les graines de la Seconde Guerre Mondiale. Le crash qui a brisé l'optimisme du XIXe siècle.",
+    "visualDescription": "Des tranchées cyberpunk sous un ciel de feu rouge et orange. Des soldats en uniformes d'époque avec des masques à gaz néon. Des obus qui explosent en pixels violets. Au loin, Verdun en flammes. Une interface 'GAME OVER' holographique qui clignote. Ambiance war zone glitch.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1580130601818-4a67f9e6f8e7",
+    "quiz": [
+      {
+        "question": "Quel événement a déclenché la Première Guerre Mondiale en 1914 ?",
+        "options": ["L'invasion de la Belgique par l'Allemagne", "L'assassinat de l'archiduc François-Ferdinand à Sarajevo", "La déclaration de guerre de la France à l'Allemagne", "La révolution russe"],
+        "answer": "L'assassinat de l'archiduc François-Ferdinand à Sarajevo"
+      },
+      {
+        "question": "Combien de morts la Première Guerre Mondiale a-t-elle causés approximativement ?",
+        "options": ["5 millions", "10 millions", "17 millions", "40 millions"],
+        "answer": "17 millions"
+      },
+      {
+        "question": "Quelle bataille de 1916 est emblématique de l'horreur des tranchées ?",
+        "options": ["La Marne", "Verdun", "La Somme", "Ypres"],
+        "answer": "Verdun"
+      },
+      {
+        "question": "Quel traité a mis fin à la Première Guerre Mondiale en 1919 ?",
+        "options": ["Le Traité de Paris", "Le Traité de Versailles", "Le Traité de Brest-Litovsk", "Le Traité de Londres"],
+        "answer": "Le Traité de Versailles"
+      },
+      {
+        "question": "En quelle année les États-Unis sont-ils entrés en guerre ?",
+        "options": ["1914", "1915", "1917", "1918"],
+        "answer": "1917"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Les Années Folles & La Crise de 29 : Le Boom puis le Bust",
+    "brief": "1920s. La guerre est finie, l'Europe respire, et l'Amérique pète les plombs en mode celebration. Les Années Folles (Roaring Twenties) : jazz, charleston, flappers, gratte-ciel, Ford T, cinéma. La bourse monte, tout le monde investit, tout le monde s'endette. C'est le premier bull run de l'histoire moderne — le sentiment que la croissance ne peut que continuer. Et puis le 24 octobre 1929, Jeudi Noir. Wall Street s'effondre en 48 heures. Des millions de personnes perdent tout. La Grande Dépression s'étend sur une décennie : chômage de masse, files de soupe populaire, Dust Bowl. Roosevelt lance le New Deal (les premières politiques sociales à l'américaine). En Europe, la misère fait le lit des extrémismes — Hitler, Mussolini, Franco profitent du désespoir collectif. Le crash économique qui a ouvert la porte au pire.",
+    "visualDescription": "Une salle de bal des années 20 en néon doré qui s'effondre soudainement — le sol se fissure, les lumières clignotent. Un ticker boursier qui affiche des chiffres rouges en cascade. Des silhouettes qui dansent le charleston d'un côté, des files de chômeurs de l'autre. Ambiance boom-bust cinématique.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "quiz": [
+      {
+        "question": "Comment appelle-t-on le krach boursier de 1929 ?",
+        "options": ["Le Lundi Noir", "Le Vendredi Noir", "Le Jeudi Noir", "Le Mardi Noir"],
+        "answer": "Le Jeudi Noir"
+      },
+      {
+        "question": "Quel président américain a lancé le New Deal pour relancer l'économie après 1929 ?",
+        "options": ["Herbert Hoover", "Woodrow Wilson", "Franklin D. Roosevelt", "Harry Truman"],
+        "answer": "Franklin D. Roosevelt"
+      },
+      {
+        "question": "Comment appelle-t-on la période de prospérité et d'euphorie des années 1920 ?",
+        "options": ["La Belle Époque", "Les Années Folles", "Le Siècle d'Or", "La Grande Prospérité"],
+        "answer": "Les Années Folles"
+      },
+      {
+        "question": "Quelle conséquence directe la Grande Dépression a-t-elle eu en Europe ?",
+        "options": ["Le renforcement des démocraties", "L'essor des mouvements fascistes et nationalistes", "La création de l'Union Européenne", "Le boom économique en Allemagne"],
+        "answer": "L'essor des mouvements fascistes et nationalistes"
+      },
+      {
+        "question": "Quelle innovation des années 1920 a révolutionné le transport de masse ?",
+        "options": ["L'avion de ligne", "Le Ford T et la production en série", "Le métro électrique", "Le paquebot transatlantique"],
+        "answer": "Le Ford T et la production en série"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "La Seconde Guerre Mondiale : Le Reset Mondial",
+    "brief": "1939-1945. Le conflit le plus dévastateur de l'histoire humaine. Hitler envahit la Pologne le 1er septembre 1939 : l'Europe repart en guerre à peine 20 ans après la précédente. La Blitzkrieg (guerre éclair) détruit la France en 6 semaines — le speed run militaire le plus brutal jamais vu. La Shoah : l'assassinat systématique de 6 millions de Juifs par le régime nazi, le génocide industriel le plus documenté de l'histoire. Sur le front Est, l'URSS et l'Allemagne s'affrontent dans des batailles d'une échelle incompréhensible (Stalingrad, 2 millions de morts en une seule bataille). En 1944, le D-Day : les Alliés débarquent en Normandie. En 1945, deux bombes atomiques sur Hiroshima et Nagasaki terminent la guerre dans le Pacifique. Bilan : 70-85 millions de morts. Et de ces ruines naît l'ONU, l'Europe moderne, et l'ordre mondial actuel.",
+    "visualDescription": "Une carte d'Europe en hologramme rouge sang avec des flèches d'invasion qui se propagent. Des bombardiers B-17 en néon acier dans un ciel de guerre. Le débarquement de Normandie vu de drone. Deux champignons atomiques néon à l'horizon. Puis, du chaos, les drapeaux de l'ONU qui s'élèvent en lumière blanche. Ambiance reset complet.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1547652577-f91f2bf51f38",
+    "quiz": [
+      {
+        "question": "En quelle année l'Allemagne nazie a-t-elle envahi la Pologne, déclenchant la WWII ?",
+        "options": ["1937", "1938", "1939", "1940"],
+        "answer": "1939"
+      },
+      {
+        "question": "Comment appelle-t-on l'extermination systématique de 6 millions de Juifs par les nazis ?",
+        "options": ["Le Goulag", "La Shoah", "L'Épuration", "La Grande Terreur"],
+        "answer": "La Shoah"
+      },
+      {
+        "question": "Quelle bataille sur le front Est a marqué le tournant de la guerre en faveur des Alliés ?",
+        "options": ["La bataille de Moscou", "La bataille de Koursk", "La bataille de Stalingrad", "L'opération Barbarossa"],
+        "answer": "La bataille de Stalingrad"
+      },
+      {
+        "question": "En quelle année a eu lieu le débarquement allié en Normandie (D-Day) ?",
+        "options": ["1942", "1943", "1944", "1945"],
+        "answer": "1944"
+      },
+      {
+        "question": "Quelle organisation internationale a été créée à la fin de la WWII pour maintenir la paix ?",
+        "options": ["La Société des Nations", "L'OTAN", "L'ONU", "L'Union Européenne"],
+        "answer": "L'ONU"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "La Guerre Froide : Le 1v1 de l'Histoire",
+    "brief": "1947-1991. Deux superpuissances, deux idéologies, zéro combat direct — le standoff le plus long et le plus tendu de l'histoire. Les États-Unis (capitalisme, liberté, Coca-Cola) contre l'URSS (communisme, collectivisme, Spoutnik). La Guerre Froide, c'est la guerre du proxy : on ne se bat pas directement, on finance des guerres partout ailleurs — Corée, Vietnam, Afghanistan, Angola. La course aux armements nucléaires (MAD : Mutually Assured Destruction — si tu tires, on est tous morts). La course à l'espace : Spoutnik, Gagarine, Apollo 11, 'un petit pas pour l'homme'. La crise des missiles de Cuba (1962) : le monde à 2 minutes de l'apocalypse nucléaire. Le Mur de Berlin (1961-1989) : le symbole ultime d'un monde coupé en deux. En 1991, l'URSS s'effondre. Fin de partie. Les États-Unis gagnent le 1v1. Pour l'instant.",
+    "visualDescription": "La planète Terre coupée en deux par un mur de glace néon — un côté bleu électrique (Occident), un côté rouge sang (URSS). Des missiles nucléaires qui se font face. Spoutnik et Apollo 11 en orbite. Le Mur de Berlin qui s'effondre en pixels. Ambiance échecs géopolitique grandeur nature.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+    "quiz": [
+      {
+        "question": "Quelle date marque la fin de la Guerre Froide ?",
+        "options": ["1985", "1989", "1991", "1993"],
+        "answer": "1991"
+      },
+      {
+        "question": "Qu'est-ce que la doctrine MAD dans le contexte nucléaire ?",
+        "options": ["Un plan de défense antimissile américain", "La destruction mutuelle assurée en cas de guerre nucléaire", "Un traité de non-prolifération nucléaire", "La stratégie de première frappe soviétique"],
+        "answer": "La destruction mutuelle assurée en cas de guerre nucléaire"
+      },
+      {
+        "question": "En quelle année la crise des missiles de Cuba a-t-elle failli provoquer une guerre nucléaire ?",
+        "options": ["1957", "1960", "1962", "1968"],
+        "answer": "1962"
+      },
+      {
+        "question": "Quelle année le Mur de Berlin est-il tombé, symbolisant la fin du bloc soviétique ?",
+        "options": ["1985", "1987", "1989", "1991"],
+        "answer": "1989"
+      },
+      {
+        "question": "Quel cosmonaute soviétique a été le premier humain dans l'espace en 1961 ?",
+        "options": ["Neil Armstrong", "Buzz Aldrin", "Youri Gagarine", "Valentina Terechkova"],
+        "answer": "Youri Gagarine"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "La Décolonisation : Le Grand Unfollow",
+    "brief": "1945-1975. Après la WWII, les empires coloniaux ne tiennent plus. Les peuples colonisés ont combattu pour les métropoles et ils demandent maintenant leur indépendance — logique. En 30 ans, des dizaines de pays d'Afrique et d'Asie se libèrent du joug colonial. L'Inde (Gandhi, non-violence) obtient son indépendance en 1947. Le Vietnam se bat d'abord contre la France (Diên Biên Phu, 1954) puis contre les États-Unis. L'Algérie arrache son indépendance à la France en 1962 après 8 ans de guerre brutale. En Afrique, les années 1960 sont l'année des indépendances : 17 pays en une seule année. Mais la décolonisation est rarement propre : frontières héritées du colonialisme, guerres civiles, coups d'État soutenus par les anciennes puissances. La liberté arrachée, mais pas toujours dans les meilleures conditions. Un unfollow forcé après des siècles de follow non consenti.",
+    "visualDescription": "Une carte du monde où les couleurs coloniales s'effacent en direct pour révéler les drapeaux des nouvelles nations — un feu d'artifice géopolitique. Gandhi en silhouette lumineuse. Des foules qui célèbrent l'indépendance sous des bannières néon. Des chaînes brisées qui brillent en or. Ambiance liberation day.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e",
+    "quiz": [
+      {
+        "question": "En quelle année l'Inde a-t-elle obtenu son indépendance du Royaume-Uni ?",
+        "options": ["1945", "1947", "1950", "1955"],
+        "answer": "1947"
+      },
+      {
+        "question": "Quelle bataille de 1954 a mis fin à la présence française en Indochine ?",
+        "options": ["La bataille de Hué", "La bataille de Saïgon", "La bataille de Diên Biên Phu", "La bataille de Hanoi"],
+        "answer": "La bataille de Diên Biên Phu"
+      },
+      {
+        "question": "En quelle année l'Algérie a-t-elle obtenu son indépendance de la France ?",
+        "options": ["1958", "1960", "1962", "1965"],
+        "answer": "1962"
+      },
+      {
+        "question": "Comment appelle-t-on les années 1960 en Afrique en raison des nombreuses indépendances ?",
+        "options": ["L'Année africaine", "L'Année des indépendances", "Le Printemps africain", "La Décennie de libération"],
+        "answer": "L'Année des indépendances"
+      },
+      {
+        "question": "Quel leader indien a incarné la résistance non-violente contre le colonialisme britannique ?",
+        "options": ["Nehru", "Gandhi", "Subhas Chandra Bose", "Ambedkar"],
+        "answer": "Gandhi"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "La Conquête Spatiale : Le Serveur du Cosmos",
+    "brief": "1957-1969. L'humanité quitte sa planète. La Guerre Froide prend une nouvelle dimension : l'espace. L'URSS frappe en premier — Spoutnik 1, le 4 octobre 1957, est le premier satellite artificiel. Premier satellite, premier chien dans l'espace (Laïka), premier homme (Youri Gagarine, 1961). Les Américains paniquent et lancent la NASA en mode urgence nationale. Kennedy annonce qu'on ira sur la Lune avant 1970 — le plus grand projet technologique de l'histoire. Le 20 juillet 1969, Apollo 11 : Neil Armstrong pose le pied sur la Lune. 'Un petit pas pour l'homme, un bond de géant pour l'humanité.' 600 millions de personnes regardent en direct. Le flex intergalactique absolu. Depuis, on a envoyé des sondes aux confins du système solaire (Voyager 1 a quitté le système solaire en 2012), posé des robots sur Mars, et photographié des trous noirs. L'univers est le nouveau terrain de jeu.",
+    "visualDescription": "La Terre vue depuis l'espace avec la trajectoire d'Apollo 11 en ligne néon dorée. La Lune en gros plan avec des astronautes en combinaison cyberpunk qui plantent un drapeau LED. Spoutnik et la Station Spatiale Internationale en orbite. Un fond étoilé infini. Ambiance cosmos néon pur.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1446776877081-d282a0f896e2",
+    "quiz": [
+      {
+        "question": "Quel était le nom du premier satellite artificiel, lancé par l'URSS en 1957 ?",
+        "options": ["Vostok", "Spoutnik 1", "Explorer 1", "Luna 1"],
+        "answer": "Spoutnik 1"
+      },
+      {
+        "question": "Qui a été le premier être humain dans l'espace (1961) ?",
+        "options": ["Neil Armstrong", "Buzz Aldrin", "John Glenn", "Youri Gagarine"],
+        "answer": "Youri Gagarine"
+      },
+      {
+        "question": "En quelle année Neil Armstrong a-t-il marché sur la Lune ?",
+        "options": ["1966", "1967", "1969", "1971"],
+        "answer": "1969"
+      },
+      {
+        "question": "Quelle agence spatiale américaine a été créée pour répondre au défi soviétique ?",
+        "options": ["La CIA", "Le Pentagone", "La NASA", "DARPA"],
+        "answer": "La NASA"
+      },
+      {
+        "question": "Quelle sonde spatiale américaine a quitté le système solaire en 2012 ?",
+        "options": ["Pioneer 10", "Voyager 2", "Voyager 1", "New Horizons"],
+        "answer": "Voyager 1"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Internet : Le Patch Qui a Tout Changé",
+    "brief": "1969-2000. Le plus grand bouleversement depuis l'imprimerie. Internet naît dans les labos militaires américains (ARPANET, 1969) comme un réseau de communication décentralisé capable de survivre à une attaque nucléaire. Pendant 20 ans, c'est un outil réservé aux chercheurs et militaires. Puis en 1991, Tim Berners-Lee invente le World Wide Web : des pages, des liens, des navigateurs. Le grand public arrive. En 1994, Amazon. En 1998, Google. En 1999, Napster — la première plateforme de partage de fichiers qui détruit l'industrie musicale. En 2000, la bulle dot-com explose : des milliards partent en fumée, mais les survivants (Amazon, Google) domineront le monde. Internet compresse le temps, abolit les distances, démocratise le savoir — et crée de nouveaux monopoles. La plus grande infrastructure jamais construite par l'humanité, inventée en 30 ans.",
+    "visualDescription": "Un réseau de fibres optiques qui recouvre la planète entière, brillant en bleu cyan. Des serveurs empilés comme des tours cyberpunk. Tim Berners-Lee qui tape sur un clavier et des pages web explosent partout en hologrammes. La bulle dot-com qui éclate en pixels. Ambiance réseau neuronal planétaire.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "quiz": [
+      {
+        "question": "Quel réseau militaire américain est considéré comme l'ancêtre d'Internet ?",
+        "options": ["MILNET", "ARPANET", "DARPANET", "USENET"],
+        "answer": "ARPANET"
+      },
+      {
+        "question": "Qui a inventé le World Wide Web en 1991 ?",
+        "options": ["Bill Gates", "Steve Jobs", "Tim Berners-Lee", "Vint Cerf"],
+        "answer": "Tim Berners-Lee"
+      },
+      {
+        "question": "En quelle année Google a-t-il été fondé ?",
+        "options": ["1994", "1996", "1998", "2000"],
+        "answer": "1998"
+      },
+      {
+        "question": "Comment appelle-t-on l'effondrement des valeurs tech en bourse en 2000 ?",
+        "options": ["Le Crash Numérique", "La Bulle dot-com", "Le Jeudi Noir du Net", "La Crise Silicon Valley"],
+        "answer": "La Bulle dot-com"
+      },
+      {
+        "question": "Quelle plateforme de partage de musique illégale a bouleversé l'industrie musicale en 1999 ?",
+        "options": ["Kazaa", "LimeWire", "Napster", "BitTorrent"],
+        "answer": "Napster"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "L'Ère du Smartphone : La Dopamine Economy",
+    "brief": "2007-aujourd'hui. Le 9 janvier 2007, Steve Jobs présente l'iPhone sur scène. 'Un iPod, un téléphone et un communicateur Internet.' La salle applaudit sans savoir qu'elle vient d'assister au lancement du produit qui va remodeler la civilisation. En 2008, l'App Store. En 2004-2010, les réseaux sociaux explosent — Facebook, Twitter, YouTube, Instagram, Snapchat, TikTok. L'attention humaine devient la ressource la plus précieuse du monde. Les algorithmes optimisent la dopamine, le scroll est infini, l'outrage est le meilleur carburant de l'engagement. En 15 ans, on passe de 500 millions à 5 milliards d'internautes. L'IA générative arrive (ChatGPT, 2022). Le monde dans ta poche — et ta poche dans la main de quelques plateformes. Le flex ultime du capitalisme de surveillance.",
+    "visualDescription": "Un iPhone en lévitation qui projette des hologrammes de toutes les apps connues. Des flux TikTok, Instagram et Twitter qui défilent en cascade néon. Des câbles de dopamine reliant les écrans aux cerveaux. Steve Jobs en silhouette LED. Ambiance attention economy, dark pattern et lumières bleues à 3h du mat.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
+    "quiz": [
+      {
+        "question": "Quelle année Steve Jobs a-t-il présenté le premier iPhone ?",
+        "options": ["2005", "2006", "2007", "2008"],
+        "answer": "2007"
+      },
+      {
+        "question": "Quel réseau social lancé en 2004 est devenu le plus grand du monde avec plus de 3 milliards d'utilisateurs ?",
+        "options": ["Twitter", "YouTube", "Instagram", "Facebook"],
+        "answer": "Facebook"
+      },
+      {
+        "question": "En quelle année ChatGPT a-t-il été lancé, marquant l'explosion grand public de l'IA générative ?",
+        "options": ["2020", "2021", "2022", "2023"],
+        "answer": "2022"
+      },
+      {
+        "question": "Quel concept décrit l'économie basée sur la monétisation de l'attention humaine par les plateformes ?",
+        "options": ["L'économie de partage", "L'économie de l'attention", "L'économie numérique", "L'économie de plateforme"],
+        "answer": "L'économie de l'attention"
+      },
+      {
+        "question": "Quel réseau social chinois de vidéos courtes a explosé mondialement à partir de 2018-2019 ?",
+        "options": ["WeChat", "Weibo", "TikTok", "Douyin"],
+        "answer": "TikTok"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "⚡ ULTIMATE BOSS : L'Odyssée Complète de l'Humanité",
+    "brief": "C'est la fin. Niveau 30. L'ULTIMATE BOSS. Tu as traversé 300 000 ans d'histoire humaine — de la Préhistoire aux smartphones, des premières tablettes cunéiformes à ChatGPT, de Jules César à Napoléon, des tranchées de Verdun à la Lune. 20 questions. Chaque arc, chaque époque, tout y passe. C'est le méga test de toute la saison. Si tu passes ça, t'es officiellement un OG de la culture G. Il n'y a pas de checkpoint. Pas de hints. Juste toi et l'histoire de l'humanité. Good luck.",
+    "visualDescription": "Une fresque cosmique en néon où toutes les époques coexistent : des dinosaures en fond, des pyramides, le Colisée, des cathédrales, des usines, la Lune, des serveurs de data center — tout dans un même tableau holographique épique. Une couronne dorée géante qui flotte au centre. ULTIMATE BOSS — la musique monte à fond.",
+    "imagePlaceholder": "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a",
+    "quiz": [
+      {
+        "question": "Il y a environ combien d'années Homo sapiens est-il apparu ?",
+        "options": ["50 000 ans", "150 000 ans", "300 000 ans", "1 million d'années"],
+        "answer": "300 000 ans"
+      },
+      {
+        "question": "Qu'est-ce que l'écriture cunéiforme, inventée par les Sumériens ?",
+        "options": ["Un système de peintures rupestres", "Le premier système d'écriture de l'histoire", "Un code de lois gravé dans la pierre", "Un calendrier astronomique"],
+        "answer": "Le premier système d'écriture de l'histoire"
+      },
+      {
+        "question": "Combien de temps a duré la Pax Romana sous l'Empire romain ?",
+        "options": ["50 ans", "100 ans", "200 ans", "500 ans"],
+        "answer": "200 ans"
+      },
+      {
+        "question": "En quelle année l'Empire romain d'Occident est-il tombé ?",
+        "options": ["376 ap. J.-C.", "410 ap. J.-C.", "476 ap. J.-C.", "565 ap. J.-C."],
+        "answer": "476 ap. J.-C."
+      },
+      {
+        "question": "Qui a dirigé la rédaction de l'Encyclopédie au XVIIIe siècle ?",
+        "options": ["Voltaire", "Rousseau", "Diderot", "Montesquieu"],
+        "answer": "Diderot"
+      },
+      {
+        "question": "Quelle date symbolise le déclenchement de la Révolution Française ?",
+        "options": ["4 août 1789", "14 juillet 1789", "26 août 1789", "21 janvier 1793"],
+        "answer": "14 juillet 1789"
+      },
+      {
+        "question": "Quelle bataille a définitivement mis fin au règne de Napoléon en 1815 ?",
+        "options": ["Iéna", "Austerlitz", "Waterloo", "Borodino"],
+        "answer": "Waterloo"
+      },
+      {
+        "question": "Qui a inventé la machine à vapeur perfectionnée qui a lancé la Révolution Industrielle ?",
+        "options": ["George Stephenson", "James Watt", "Richard Arkwright", "Thomas Edison"],
+        "answer": "James Watt"
+      },
+      {
+        "question": "Quel événement a déclenché la Première Guerre Mondiale en 1914 ?",
+        "options": ["L'invasion de la Belgique", "L'assassinat de l'archiduc François-Ferdinand", "La mobilisation allemande", "Le blocus naval britannique"],
+        "answer": "L'assassinat de l'archiduc François-Ferdinand"
+      },
+      {
+        "question": "Quel krach boursier a déclenché la Grande Dépression mondiale ?",
+        "options": ["Le Lundi Noir de 1987", "Le Jeudi Noir de 1929", "La Bulle dot-com de 2000", "La Crise de 2008"],
+        "answer": "Le Jeudi Noir de 1929"
+      },
+      {
+        "question": "Quelle bataille de la WWII a marqué le tournant décisif sur le front Est ?",
+        "options": ["La bataille de Moscou", "La bataille de Koursk", "La bataille de Stalingrad", "La chute de Berlin"],
+        "answer": "La bataille de Stalingrad"
+      },
+      {
+        "question": "Quelle année le Mur de Berlin est-il tombé, symbolisant la fin du bloc soviétique ?",
+        "options": ["1985", "1987", "1989", "1991"],
+        "answer": "1989"
+      },
+      {
+        "question": "En quelle année Neil Armstrong a-t-il posé le pied sur la Lune ?",
+        "options": ["1966", "1968", "1969", "1972"],
+        "answer": "1969"
+      },
+      {
+        "question": "Qui a inventé le World Wide Web en 1991 ?",
+        "options": ["Bill Gates", "Steve Jobs", "Tim Berners-Lee", "Vint Cerf"],
+        "answer": "Tim Berners-Lee"
+      },
+      {
+        "question": "Quelle année Steve Jobs a-t-il lancé le premier iPhone, changeant le monde ?",
+        "options": ["2005", "2006", "2007", "2008"],
+        "answer": "2007"
+      },
+      {
+        "question": "Quel leader a incarné la résistance non-violente contre le colonialisme britannique en Inde ?",
+        "options": ["Nehru", "Gandhi", "Subhas Chandra Bose", "Ambedkar"],
+        "answer": "Gandhi"
+      },
+      {
+        "question": "Quelle était la devise de la République française issue de la Révolution de 1789 ?",
+        "options": ["Dieu, Roi, Nation", "Liberté, Égalité, Fraternité", "Travail, Famille, Patrie", "Justice, Vérité, Progrès"],
+        "answer": "Liberté, Égalité, Fraternité"
+      },
+      {
+        "question": "Entre quels deux fleuves la civilisation mésopotamienne s'est-elle développée ?",
+        "options": ["Le Nil et le Jourdain", "Le Tigre et l'Euphrate", "L'Indus et le Gange", "Le Rhin et le Danube"],
+        "answer": "Le Tigre et l'Euphrate"
+      },
+      {
+        "question": "Quel cosmonaute soviétique a été le premier humain dans l'espace en 1961 ?",
+        "options": ["Neil Armstrong", "Buzz Aldrin", "Youri Gagarine", "Valentina Terechkova"],
+        "answer": "Youri Gagarine"
+      },
+      {
+        "question": "Quelle révolution néolithique il y a 12 000 ans a permis la sédentarisation de l'humanité ?",
+        "options": ["La maîtrise du feu", "L'invention de l'écriture", "Le passage à l'agriculture et à l'élevage", "La fabrication des premiers outils en métal"],
+        "answer": "Le passage à l'agriculture et à l'élevage"
       }
     ]
   }
