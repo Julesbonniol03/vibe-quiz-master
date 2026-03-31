@@ -153,7 +153,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     } else {
       setPhase("answered");
     }
-  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback]);
+  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback, heartsSystem]);
 
   // Per-question timer (classic & sudden death use 15s, blitz uses 10s)
   useEffect(() => {
