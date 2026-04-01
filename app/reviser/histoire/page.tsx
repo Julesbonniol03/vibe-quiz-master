@@ -197,7 +197,7 @@ export default function HistoireRevisionPage() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={startRevision}
-            className="flex-1 py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-cyber-950 font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-amber-500/20"
+            className="flex-1 py-4 bg-gradient-to-r from-amber-400 to-orange-500 text-obsidian-950 font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-amber-500/20"
           >
             Commencer les Flashcards
           </motion.button>
@@ -251,7 +251,7 @@ export default function HistoireRevisionPage() {
                 setFlipped(false);
                 setPhase("flashcards");
               }}
-              className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/15"
+              className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/15"
             >
               Recommencer
             </motion.button>
@@ -429,7 +429,7 @@ export default function HistoireRevisionPage() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.97 }}
           onClick={handleNext}
-          className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/15"
+          className="flex-1 py-3 bg-gradient-to-r from-amber-400 to-orange-500 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/15"
         >
           {currentIndex + 1 >= questions.length ? "Terminer" : "Suivant →"}
         </motion.button>

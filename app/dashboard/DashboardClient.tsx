@@ -99,7 +99,7 @@ export function DailyBanner() {
   if (!hydrated) return null;
 
   return (
-    <div className="relative overflow-hidden bg-cyber-900 border border-neon-rose/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div className="relative overflow-hidden bg-obsidian-800/50 border border-neon-rose/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4" style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}>
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-cyan/[0.03]" />
       <div className="relative flex items-center gap-4">
         <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl">
@@ -204,7 +204,7 @@ export function DailyOdyssey() {
       <div className="absolute inset-0 rounded-2xl animate-glow-border" />
 
       {/* Inner content with 2px inset to show the glow border */}
-      <div className="relative m-[2px] rounded-[14px] bg-cyber-900 p-5 sm:p-6">
+      <div className="relative m-[2px] rounded-[14px] bg-obsidian-850 p-5 sm:p-6">
         <div className="absolute inset-0 overflow-hidden rounded-[14px]">
           <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-cyan/[0.04] rounded-full blur-[80px]" />
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-rose/[0.03] rounded-full blur-[60px]" />
@@ -252,7 +252,7 @@ export function DailyOdyssey() {
             className={`px-5 py-2.5 font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 whitespace-nowrap ${
               isDailyCompleted
                 ? "bg-white/5 border border-white/10 text-slate-500 shadow-none"
-                : "bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 shadow-lg shadow-neon-cyan/20"
+                : "bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 shadow-lg shadow-neon-cyan/20"
             }`}
           >
             {isDailyCompleted ? "Revenir demain" : "Relever le défi →"}
@@ -348,7 +348,7 @@ export function ActualitesModal({ item, onClose }: { item: ActualiteItem; onClos
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 20, scale: 0.97 }}
         transition={{ type: "spring", damping: 25, stiffness: 300 }}
-        className={`relative w-full max-w-lg bg-cyber-950 rounded-3xl border ${c.border} overflow-hidden max-h-[80vh] flex flex-col`}
+        className={`relative w-full max-w-lg bg-obsidian-900 rounded-3xl border ${c.border} overflow-hidden max-h-[80vh] flex flex-col`}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Glow */}
@@ -481,7 +481,7 @@ export function PaywallMini() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-w-sm w-full rounded-3xl border border-amber-500/20 bg-cyber-950 p-8 text-center relative overflow-hidden"
+              className="max-w-sm w-full rounded-3xl border border-amber-500/20 bg-obsidian-900 p-8 text-center relative overflow-hidden"
             >
               {/* Glow */}
               <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-60 h-60 bg-amber-500/[0.08] rounded-full blur-[80px] pointer-events-none" />

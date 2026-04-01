@@ -203,7 +203,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-6 mb-6">
+        <div className="relative overflow-hidden rounded-3xl bg-obsidian-800 border border-white/[0.06] p-6 mb-6">
           <div className="relative z-10">
             <button onClick={handleBackToMainMap} className="text-slate-600 hover:text-slate-400 text-sm mb-3 flex items-center gap-1">
               &larr; Mode Expert
@@ -293,7 +293,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
     return (
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
-        <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-8 mb-8">
+        <div className="relative overflow-hidden rounded-3xl bg-obsidian-800 border border-white/[0.06] p-8 mb-8">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-32 -right-32 w-80 h-80 bg-purple-500/[0.04] rounded-full blur-[100px]" />
             <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
@@ -539,7 +539,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
           <div className="rounded-3xl overflow-hidden border border-white/[0.08]">
             {/* Image */}
             <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-cyber-950 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 to-transparent" />
               <span className="relative text-6xl">
                 {selectedLevel.id === -1 ? (activeExpertCategory?.emoji ?? "🎯") : selectedLevel.id === 1 ? "🦴" : selectedLevel.id === 2 ? "🏺" : selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : selectedLevel.id === 22 ? "🪖" : selectedLevel.id === 23 ? "📈" : selectedLevel.id === 24 ? "💣" : selectedLevel.id === 25 ? "☢️" : selectedLevel.id === 26 ? "🌍" : selectedLevel.id === 27 ? "🚀" : selectedLevel.id === 28 ? "🌐" : selectedLevel.id === 29 ? "📱" : selectedLevel.id === 30 ? "⚡" : "🏛️"}
               </span>
@@ -692,7 +692,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                 </div>
                 <button
                   onClick={handleNext}
-                  className="w-full py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-all"
+                  className="w-full py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
                 >
                   {currentQ + 1 < selectedLevel.quiz.length ? "Question suivante &rarr;" : "Voir les résultats"}
                 </button>
@@ -758,7 +758,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             </button>
             <button
               onClick={handleBackToMap}
-              className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold rounded-xl hover:opacity-90 transition-all"
+              className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
             >
               Continuer &rarr;
             </button>

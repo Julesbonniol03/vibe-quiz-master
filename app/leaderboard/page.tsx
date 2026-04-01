@@ -59,7 +59,7 @@ const leaderboardData: Record<Period, LeaderboardEntry[]> = {
 const periodLabels: Record<Period, string> = {
   week: "Cette semaine",
   month: "Ce mois",
-  alltime: "All Time",
+  alltime: "Historique",
 };
 
 const podiumColors = [
@@ -80,21 +80,25 @@ export default function LeaderboardPage() {
       <div className="text-center mb-8">
         <div className="text-5xl mb-3">🏆</div>
         <h1 className="text-3xl font-bold text-white mb-2">Classement</h1>
-        <p className="text-slate-400">Les meilleurs joueurs de Teubé</p>
+        <p className="text-slate-400">Les meilleurs joueurs de Teub&eacute;</p>
       </div>
 
-      {/* Period selector */}
+      {/* Period selector — obsidian pill */}
       <div className="flex justify-center mb-8">
-        <div className="flex bg-white/5 border border-white/10 rounded-2xl p-1 gap-1">
+        <div
+          className="flex bg-obsidian-800/80 border border-white/[0.05] rounded-2xl p-1 gap-1"
+          style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
+        >
           {(["week", "month", "alltime"] as Period[]).map((p) => (
             <button
               key={p}
               onClick={() => setPeriod(p)}
               className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                 period === p
-                  ? "bg-indigo-500/30 text-indigo-300 border border-indigo-500/40 shadow-lg"
-                  : "text-slate-400 hover:text-white hover:bg-white/5"
+                  ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+                  : "text-slate-400 hover:text-white hover:bg-white/[0.03]"
               }`}
+              style={period === p ? { boxShadow: "0 0 10px rgba(0,240,255,0.08)" } : undefined}
             >
               {periodLabels[p]}
             </button>
@@ -111,16 +115,17 @@ export default function LeaderboardPage() {
             <div key={entry.rank} className="flex flex-col items-center gap-2">
               <div className="text-2xl">{entry.badge}</div>
               <div
-                className={`${sizes[displayIdx]} rounded-2xl bg-gradient-to-br ${podiumColors[entry.rank - 1]} flex items-center justify-center text-2xl shadow-lg`}
+                className={`${sizes[displayIdx]} rounded-2xl bg-gradient-to-br ${podiumColors[entry.rank - 1]} flex items-center justify-center text-2xl`}
+                style={{ boxShadow: "0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2)" }}
               >
                 {entry.avatar}
               </div>
               <div className="text-center">
                 <div className="text-white text-sm font-semibold">{entry.name.split(" ")[0]}</div>
-                <div className="text-indigo-400 text-xs font-bold">{entry.score.toLocaleString()}</div>
+                <div className="text-neon-cyan text-xs font-bold">{entry.score.toLocaleString()}</div>
               </div>
               <div
-                className={`${heights[displayIdx]} w-full min-w-[80px] rounded-t-xl bg-gradient-to-t ${podiumColors[entry.rank - 1]} opacity-30 flex items-start justify-center pt-2`}
+                className={`${heights[displayIdx]} w-full min-w-[80px] rounded-t-xl bg-gradient-to-t ${podiumColors[entry.rank - 1]} opacity-20 flex items-start justify-center pt-2`}
               >
                 <span className="text-white font-bold text-lg">#{entry.rank}</span>
               </div>
@@ -129,23 +134,26 @@ export default function LeaderboardPage() {
         })}
       </div>
 
-      {/* Full ranking */}
-      <div className="bg-white/5 border border-white/10 rounded-3xl overflow-hidden mb-6">
-        <div className="grid grid-cols-[auto_1fr_auto_auto_auto] gap-0 text-xs text-slate-500 font-medium uppercase tracking-wider px-6 py-3 border-b border-white/5">
+      {/* Full ranking — obsidian table */}
+      <div
+        className="bg-obsidian-800/50 border border-white/[0.05] rounded-3xl overflow-hidden mb-6"
+        style={{ boxShadow: "0 8px 40px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
+      >
+        <div className="grid grid-cols-[auto_1fr_auto_auto_auto] gap-0 text-xs text-slate-500 font-medium uppercase tracking-wider px-6 py-3 border-b border-white/[0.04]">
           <span className="w-8">#</span>
           <span>Joueur</span>
           <span className="w-20 text-center hidden sm:block">Score</span>
-          <span className="w-20 text-center hidden md:block">Streak</span>
-          <span className="w-20 text-center">Précision</span>
+          <span className="w-20 text-center hidden md:block">S\u00e9rie</span>
+          <span className="w-20 text-center">Pr\u00e9cision</span>
         </div>
 
         {data.map((entry) => (
           <div
             key={entry.rank}
-            className={`grid grid-cols-[auto_1fr_auto_auto_auto] gap-0 items-center px-6 py-4 border-b border-white/5 last:border-0 transition-colors ${
+            className={`grid grid-cols-[auto_1fr_auto_auto_auto] gap-0 items-center px-6 py-4 border-b border-white/[0.03] last:border-0 transition-colors ${
               entry.isYou
-                ? "bg-indigo-500/10 border-l-2 border-indigo-500"
-                : "hover:bg-white/3"
+                ? "bg-neon-cyan/[0.04] border-l-2 border-l-neon-cyan/40"
+                : "hover:bg-white/[0.02]"
             }`}
           >
             <span
@@ -165,35 +173,37 @@ export default function LeaderboardPage() {
             <div className="flex items-center gap-3 min-w-0">
               <div className={`w-9 h-9 rounded-xl flex items-center justify-center text-lg flex-shrink-0 ${
                 entry.isPremium
-                  ? "bg-gradient-to-br from-amber-500/20 to-yellow-500/20 border border-amber-500/30 shadow-lg shadow-amber-500/10"
-                  : "bg-white/10"
-              }`}>
+                  ? "bg-gradient-to-br from-amber-500/15 to-yellow-500/15 border border-amber-500/20"
+                  : "bg-white/[0.05] border border-white/[0.04]"
+              }`}
+              style={entry.isPremium ? { boxShadow: "0 0 8px rgba(255,183,0,0.08)" } : undefined}
+              >
                 {entry.avatar}
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <span className={`font-medium text-sm truncate ${
-                    entry.isYou ? "text-indigo-300" :
+                    entry.isYou ? "text-neon-cyan" :
                     entry.isPremium ? "bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-bold" :
                     "text-white"
                   }`}>
                     {entry.name}
                   </span>
                   {entry.isPremium && (
-                    <span className="text-amber-400 text-[10px] font-bold bg-amber-500/10 border border-amber-500/20 px-1.5 py-0.5 rounded-full">👑</span>
+                    <span className="text-amber-400 text-[10px] font-bold bg-amber-500/10 border border-amber-500/15 px-1.5 py-0.5 rounded-full">👑</span>
                   )}
                   {entry.isYou && (
-                    <span className="bg-indigo-500/30 text-indigo-400 text-xs px-2 py-0.5 rounded-full border border-indigo-500/30">
+                    <span className="bg-neon-cyan/10 text-neon-cyan text-xs px-2 py-0.5 rounded-full border border-neon-cyan/20">
                       Vous
                     </span>
                   )}
                 </div>
-                <div className="text-slate-500 text-xs">{entry.gamesPlayed} parties</div>
+                <div className="text-slate-600 text-xs">{entry.gamesPlayed} parties</div>
               </div>
             </div>
 
             <div className="w-20 text-center hidden sm:block">
-              <span className="text-indigo-400 font-bold text-sm">{entry.score.toLocaleString()}</span>
+              <span className="text-neon-cyan font-bold text-sm">{entry.score.toLocaleString()}</span>
             </div>
 
             <div className="w-20 text-center hidden md:block">
@@ -221,11 +231,12 @@ export default function LeaderboardPage() {
       <div className="text-center">
         <Link
           href="/quiz"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-500 to-rose-500 text-white font-bold rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-indigo-500/20"
+          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose text-white font-bold rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
+          style={{ boxShadow: "0 0 20px rgba(0,240,255,0.15), 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
         >
-          Améliorer mon rang 🚀
+          Am\u00e9liorer mon rang 🚀
         </Link>
-        <p className="text-slate-500 text-sm mt-3">Classement mis à jour en temps réel</p>
+        <p className="text-slate-600 text-sm mt-3">Classement mis \u00e0 jour en temps r\u00e9el</p>
       </div>
     </div>
   );

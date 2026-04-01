@@ -23,8 +23,11 @@ export default function BottomNav() {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
       <div
-        className="mx-2 mb-1 rounded-2xl bg-[#0c0c1a]/90 backdrop-blur-2xl border border-white/[0.06] flex items-end shadow-[0_-4px_30px_rgba(0,0,0,0.4)]"
-        style={{ paddingBottom: "max(4px, env(safe-area-inset-bottom, 0px))" }}
+        className="mx-2 mb-1 rounded-2xl bg-obsidian-900/95 backdrop-blur-3xl border border-white/[0.04] flex items-end"
+        style={{
+          paddingBottom: "max(4px, env(safe-area-inset-bottom, 0px))",
+          boxShadow: "0 -4px 40px rgba(0,0,0,0.5), 0 -1px 0 rgba(255,255,255,0.03), inset 0 1px 0 rgba(255,255,255,0.04)",
+        }}
       >
         {tabs.map(({ href, label, icon: Icon, center }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
@@ -34,11 +37,16 @@ export default function BottomNav() {
               <Link key={href} href={href} className="flex flex-col items-center flex-1 -mt-4 pb-1">
                 <motion.div
                   whileTap={{ scale: 0.9 }}
-                  className={`w-14 h-14 rounded-[18px] flex items-center justify-center shadow-lg transition-all duration-300 ${
+                  className={`w-14 h-14 rounded-[18px] flex items-center justify-center transition-all duration-300 ${
                     active
-                      ? "bg-gradient-to-br from-neon-cyan to-neon-rose shadow-neon-cyan/25 scale-105"
-                      : "bg-gradient-to-br from-[#1a1a3a] to-[#12122a] border border-white/[0.08] shadow-black/30"
+                      ? "bg-gradient-to-br from-neon-cyan via-[#6366f1] to-neon-rose scale-105"
+                      : "bg-obsidian-700 border border-white/[0.06]"
                   }`}
+                  style={active ? {
+                    boxShadow: "0 0 20px rgba(0,240,255,0.25), 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)",
+                  } : {
+                    boxShadow: "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
+                  }}
                 >
                   <Icon size={22} active={active} />
                 </motion.div>
@@ -55,8 +63,9 @@ export default function BottomNav() {
                 {active && (
                   <motion.div
                     layoutId="bottomnav-active"
-                    className="absolute inset-0 rounded-xl bg-neon-cyan/[0.08]"
+                    className="absolute inset-0 rounded-xl bg-neon-cyan/[0.08] border border-neon-cyan/[0.1]"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                    style={{ boxShadow: "0 0 8px rgba(0,240,255,0.06)" }}
                   />
                 )}
                 <div className="relative z-10">
