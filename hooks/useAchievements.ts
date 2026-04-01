@@ -22,7 +22,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   // Modes spéciaux
   { id: "leclair", name: "L'Éclair", desc: "10/10 en mode Blitz", icon: "⚡", color: "text-yellow-400", glowColor: "rgba(250,204,21,0.5)" },
   { id: "increvable", name: "L'Increvable", desc: "20 questions en Mort Subite", icon: "💀", color: "text-rose-400", glowColor: "rgba(251,113,133,0.5)" },
-  { id: "cerveau", name: "Le Cerveau", desc: "10/10 en mode Expert", icon: "🧠", color: "text-neon-cyan", glowColor: "rgba(0,240,255,0.5)" },
+  { id: "cerveau", name: "Le Cerveau", desc: "10/10 en mode Expert", icon: "🧠", color: "text-neon-green", glowColor: "rgba(0,255,65,0.5)" },
 
   // Exploration
   { id: "voyageur", name: "Le Voyageur Temporel", desc: "50+ questions d'Histoire jouées", icon: "🕰️", color: "text-purple-400", glowColor: "rgba(192,132,252,0.5)" },

@@ -259,20 +259,20 @@ export default function TourDuMondeClient({ geoData }: Props) {
             initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
             onClick={() => startGame("capital-to-country")}
-            className="p-6 rounded-2xl border-2 border-neon-cyan/30 bg-neon-cyan/5 hover:bg-neon-cyan/10 transition-all text-center"
+            className="p-6 rounded-2xl border-2 border-neon-green/30 bg-neon-green/5 hover:bg-neon-green/10 transition-all text-center"
           >
             <div className="text-4xl mb-3">🏛️</div>
-            <div className="text-neon-cyan font-bold text-lg mb-1">Capitales</div>
+            <div className="text-neon-green font-bold text-lg mb-1">Capitales</div>
             <div className="text-slate-500 text-xs">Quelle est la capitale de... ?</div>
           </motion.button>
           <motion.button
             initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}
             whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
             onClick={() => startGame("country-to-capital")}
-            className="p-6 rounded-2xl border-2 border-neon-rose/30 bg-neon-rose/5 hover:bg-neon-rose/10 transition-all text-center"
+            className="p-6 rounded-2xl border-2 border-neon-red/30 bg-neon-red/5 hover:bg-neon-red/10 transition-all text-center"
           >
             <div className="text-4xl mb-3">🗺️</div>
-            <div className="text-neon-rose font-bold text-lg mb-1">Pays</div>
+            <div className="text-neon-red font-bold text-lg mb-1">Pays</div>
             <div className="text-slate-500 text-xs">De quel pays est cette capitale ?</div>
           </motion.button>
         </div>
@@ -282,7 +282,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
           <div className="flex flex-wrap gap-2">
             {continents.map((c) => (
               <button key={c} onClick={() => startGame("capital-to-country", c)}
-                className="px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 text-sm hover:border-neon-cyan/30 hover:text-white hover:bg-neon-cyan/5 transition-all">
+                className="px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.08] text-slate-400 text-sm hover:border-neon-green/30 hover:text-white hover:bg-neon-green/5 transition-all">
                 {c}
               </button>
             ))}
@@ -311,7 +311,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
 
         <div className="grid grid-cols-3 gap-3 mb-8">
           <div className="glass-card !rounded-2xl p-4">
-            <div className="text-2xl font-bold text-neon-cyan">{score}/{total}</div>
+            <div className="text-2xl font-bold text-neon-green">{score}/{total}</div>
             <div className="text-slate-600 text-xs mt-1">Score</div>
           </div>
           <div className="glass-card !rounded-2xl p-4">
@@ -330,7 +330,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
             Menu
           </button>
           <button onClick={() => { setXpRecorded(false); startGame(questionMode); }}
-            className="flex-1 py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-2xl hover:brightness-110 transition-all">
+            className="flex-1 py-4 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-2xl hover:brightness-110 transition-all">
             Rejouer 🌍
           </button>
         </div>
@@ -348,7 +348,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
         <div className="flex items-center gap-3">
           <div className="glass-card !rounded-xl px-3 py-1.5 flex items-center gap-2">
             <span className="text-slate-500 text-sm">Score</span>
-            <span className="text-neon-cyan font-bold">{score}</span>
+            <span className="text-neon-green font-bold">{score}</span>
           </div>
           <div className="flex items-center gap-0.5">
             {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
@@ -365,7 +365,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
           )}
         </div>
         <div className="flex items-center gap-3">
-          <span className="text-slate-600 text-sm tabular-nums">{currentIndex + 1}/{questions.length}</span>
+          <span className="text-slate-600 text-sm nums">{currentIndex + 1}/{questions.length}</span>
           <button onClick={() => setPhase("menu")} className="text-slate-600 hover:text-slate-300 text-sm px-3 py-1.5 rounded-lg hover:bg-white/5 transition-all">
             Quitter
           </button>
@@ -375,10 +375,10 @@ export default function TourDuMondeClient({ geoData }: Props) {
       {/* Progress bar */}
       <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-4 overflow-hidden">
         <motion.div
-          className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
+          className="h-1.5 rounded-full bg-gradient-to-r from-neon-green to-neon-red"
           animate={{ width: `${((currentIndex + (phase === "answered" ? 1 : 0)) / questions.length) * 100}%` }}
           transition={{ duration: 0.4 }}
-          style={{ boxShadow: "0 0 10px rgba(0, 240, 255, 0.4)" }}
+          style={{ boxShadow: "0 0 10px rgba(0, 255, 65, 0.4)" }}
         />
       </div>
 
@@ -397,9 +397,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
             <div className="mb-5">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-slate-600 text-xs">Temps restant</span>
-                <span className={`text-sm font-bold tabular-nums ${
+                <span className={`text-sm font-bold nums ${
                   phase === "answered" ? "opacity-30 text-slate-600" :
-                  timerUrgent ? "text-neon-rose" : timerWarn ? "text-amber-400" : "text-neon-cyan"
+                  timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
                 }`}>
                   {phase === "answered" ? "—" : `${timeLeft}s`}
                 </span>
@@ -410,15 +410,15 @@ export default function TourDuMondeClient({ geoData }: Props) {
                   style={{
                     width: phase === "answered" ? "0%" : `${timerPercent}%`,
                     background: timerUrgent
-                      ? "linear-gradient(90deg, #ff2d7b, #ff6b9d)"
+                      ? "linear-gradient(90deg, #FF003C, #ff6b9d)"
                       : timerWarn
                       ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                      : "linear-gradient(90deg, #00f0ff, #00c8d4)",
+                      : "linear-gradient(90deg, #00FF41, #00c8d4)",
                     boxShadow: timerUrgent
-                      ? "0 0 12px rgba(255, 45, 123, 0.6)"
+                      ? "0 0 12px rgba(255, 0, 60, 0.6)"
                       : timerWarn
                       ? "0 0 12px rgba(245, 158, 11, 0.5)"
-                      : "0 0 12px rgba(0, 240, 255, 0.5)",
+                      : "0 0 12px rgba(0, 255, 65, 0.5)",
                   }}
                 />
               </div>
@@ -457,9 +457,9 @@ export default function TourDuMondeClient({ geoData }: Props) {
                 textClass = "text-green-300";
                 glowStyle = { boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)" };
               } else if (isSelected && !isCorrect) {
-                bgClass = "bg-neon-rose/10";
-                borderClass = "border-neon-rose/40";
-                textClass = "text-neon-rose";
+                bgClass = "bg-neon-red/10";
+                borderClass = "border-neon-red/40";
+                textClass = "text-neon-red";
               } else {
                 bgClass = "bg-white/[0.01]";
                 borderClass = "border-white/[0.05]";
@@ -478,7 +478,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
                 onClick={() => handleAnswer(i)}
                 disabled={phase === "answered" || isAnswering}
                 className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-colors flex items-center gap-3 ${bgClass} ${borderClass} ${textClass} ${
-                  phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-cyan/30 hover:bg-neon-cyan/5" : ""
+                  phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-green/30 hover:bg-neon-green/5" : ""
                 }`}
                 style={glowStyle}
               >
@@ -486,7 +486,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
                   phase === "answered" && isCorrect
                     ? "bg-green-500/20 border-green-500/50 text-green-300"
                     : phase === "answered" && isSelected && !isCorrect
-                    ? "bg-neon-rose/20 border-neon-rose/40 text-neon-rose"
+                    ? "bg-neon-red/20 border-neon-red/40 text-neon-red"
                     : "bg-white/5 border-white/10 text-slate-500"
                 }`}>
                   {phase === "answered" && isCorrect ? "✓" : phase === "answered" && isSelected && !isCorrect ? "✗" : optionLabels[i]}
@@ -523,13 +523,13 @@ export default function TourDuMondeClient({ geoData }: Props) {
                 </motion.div>
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} transition={{ delay: 0.2 }} className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden">
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">💡 </span>{currentQ.explanation}
+                    <span className="text-neon-green font-medium">💡 </span>{currentQ.explanation}
                   </p>
                 </motion.div>
                 <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
                   onClick={handleNext}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2)" }}>
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2)" }}>
                   Continuer →
                 </motion.button>
               </>
@@ -543,28 +543,28 @@ export default function TourDuMondeClient({ geoData }: Props) {
                 </motion.div>
                 <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
                   <motion.div initial={{ width: "100%" }} animate={{ width: "0%" }} transition={{ duration: 1.2, ease: "linear" }}
-                    className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }} />
+                    className="h-1 rounded-full bg-gradient-to-r from-neon-green to-neon-red"
+                    style={{ boxShadow: "0 0 8px rgba(0, 255, 65, 0.4)" }} />
                 </div>
               </>
             ) : (
               /* Wrong */
               <>
-                <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
+                <div className="bg-neon-red/5 border border-neon-red/20 rounded-2xl p-4 mb-3 text-center">
+                  <p className="text-neon-red font-semibold text-lg">✗ Raté !</p>
                   <p className="text-slate-500 text-sm mt-1">
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
                 </div>
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden">
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">💡 </span>{currentQ.explanation}
+                    <span className="text-neon-green font-medium">💡 </span>{currentQ.explanation}
                   </p>
                 </motion.div>
                 <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
                   onClick={handleNext}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2)" }}>
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2)" }}>
                   Continuer →
                 </motion.button>
               </>

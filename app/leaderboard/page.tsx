@@ -95,10 +95,10 @@ export default function LeaderboardPage() {
               onClick={() => setPeriod(p)}
               className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                 period === p
-                  ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+                  ? "bg-neon-green/10 text-neon-green border border-neon-green/20"
                   : "text-slate-400 hover:text-white hover:bg-white/[0.03]"
               }`}
-              style={period === p ? { boxShadow: "0 0 10px rgba(0,240,255,0.08)" } : undefined}
+              style={period === p ? { boxShadow: "0 0 10px rgba(0,255,65,0.08)" } : undefined}
             >
               {periodLabels[p]}
             </button>
@@ -122,7 +122,7 @@ export default function LeaderboardPage() {
               </div>
               <div className="text-center">
                 <div className="text-white text-sm font-semibold">{entry.name.split(" ")[0]}</div>
-                <div className="text-neon-cyan text-xs font-bold">{entry.score.toLocaleString()}</div>
+                <div className="text-neon-green text-xs font-bold">{entry.score.toLocaleString()}</div>
               </div>
               <div
                 className={`${heights[displayIdx]} w-full min-w-[80px] rounded-t-xl bg-gradient-to-t ${podiumColors[entry.rank - 1]} opacity-20 flex items-start justify-center pt-2`}
@@ -152,7 +152,7 @@ export default function LeaderboardPage() {
             key={entry.rank}
             className={`grid grid-cols-[auto_1fr_auto_auto_auto] gap-0 items-center px-6 py-4 border-b border-white/[0.03] last:border-0 transition-colors ${
               entry.isYou
-                ? "bg-neon-cyan/[0.04] border-l-2 border-l-neon-cyan/40"
+                ? "bg-neon-green/[0.04] border-l-2 border-l-neon-green/40"
                 : "hover:bg-white/[0.02]"
             }`}
           >
@@ -183,7 +183,7 @@ export default function LeaderboardPage() {
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
                   <span className={`font-medium text-sm truncate ${
-                    entry.isYou ? "text-neon-cyan" :
+                    entry.isYou ? "text-neon-green" :
                     entry.isPremium ? "bg-gradient-to-r from-amber-300 to-yellow-400 bg-clip-text text-transparent font-bold" :
                     "text-white"
                   }`}>
@@ -193,7 +193,7 @@ export default function LeaderboardPage() {
                     <span className="text-amber-400 text-[10px] font-bold bg-amber-500/10 border border-amber-500/15 px-1.5 py-0.5 rounded-full">👑</span>
                   )}
                   {entry.isYou && (
-                    <span className="bg-neon-cyan/10 text-neon-cyan text-xs px-2 py-0.5 rounded-full border border-neon-cyan/20">
+                    <span className="bg-neon-green/10 text-neon-green text-xs px-2 py-0.5 rounded-full border border-neon-green/20">
                       Vous
                     </span>
                   )}
@@ -203,7 +203,7 @@ export default function LeaderboardPage() {
             </div>
 
             <div className="w-20 text-center hidden sm:block">
-              <span className="text-neon-cyan font-bold text-sm">{entry.score.toLocaleString()}</span>
+              <span className="text-neon-green font-bold text-sm">{entry.score.toLocaleString()}</span>
             </div>
 
             <div className="w-20 text-center hidden md:block">
@@ -231,8 +231,8 @@ export default function LeaderboardPage() {
       <div className="text-center">
         <Link
           href="/quiz"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose text-white font-bold rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
-          style={{ boxShadow: "0 0 20px rgba(0,240,255,0.15), 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
+          className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-neon-green via-obsidian-600 to-neon-red text-white font-bold rounded-2xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
+          style={{ boxShadow: "0 0 20px rgba(0,255,65,0.15), 0 8px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
         >
           Am\u00e9liorer mon rang 🚀
         </Link>

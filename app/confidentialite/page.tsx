@@ -4,7 +4,7 @@ export default function Confidentialite() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <div className="mb-8">
-        <Link href="/dashboard" className="text-slate-500 hover:text-neon-cyan text-sm transition-colors">
+        <Link href="/dashboard" className="text-slate-500 hover:text-neon-green text-sm transition-colors">
           &larr; Retour au dashboard
         </Link>
       </div>
@@ -47,7 +47,7 @@ export default function Confidentialite() {
 
         <Section title="2. Données collectées">
           <p>
-            <strong className="text-neon-cyan">Teubé ne collecte aucune donnée personnelle.</strong>
+            <strong className="text-neon-green">Teubé ne collecte aucune donnée personnelle.</strong>
           </p>
           <p className="mt-2">
             Les seules données stockées sont vos données de progression de jeu :
@@ -138,7 +138,7 @@ export default function Confidentialite() {
         <Section title="10. Contact">
           <p>
             Pour toute question relative à cette politique de confidentialité :<br />
-            <span className="text-neon-cyan">contact@vibequizmaster.app</span>
+            <span className="text-neon-green">contact@vibequizmaster.app</span>
           </p>
         </Section>
       </div>

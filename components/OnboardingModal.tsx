@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const AVATARS = [
-  { id: "hacker", label: "Le Hacker", Icon: Cpu, color: "#00f0ff", bg: "bg-cyan-500/15", border: "border-cyan-500/30", shadow: "shadow-cyan-500/20" },
+  { id: "hacker", label: "Le Hacker", Icon: Cpu, color: "#00FF41", bg: "bg-cyan-500/15", border: "border-cyan-500/30", shadow: "shadow-cyan-500/20" },
   { id: "erudit", label: "L'Érudit", Icon: BookOpen, color: "#a855f7", bg: "bg-purple-500/15", border: "border-purple-500/30", shadow: "shadow-purple-500/20" },
-  { id: "cyberpunk", label: "Le Cyber-Punk", Icon: Skull, color: "#ff2d7b", bg: "bg-rose-500/15", border: "border-rose-500/30", shadow: "shadow-rose-500/20" },
+  { id: "cyberpunk", label: "Le Cyber-Punk", Icon: Skull, color: "#FF003C", bg: "bg-rose-500/15", border: "border-rose-500/30", shadow: "shadow-rose-500/20" },
   { id: "recrue", label: "La Recrue", Icon: ShieldHalf, color: "#34d399", bg: "bg-emerald-500/15", border: "border-emerald-500/30", shadow: "shadow-emerald-500/20" },
   { id: "visionnaire", label: "Le Visionnaire", Icon: Eye, color: "#f59e0b", bg: "bg-amber-500/15", border: "border-amber-500/30", shadow: "shadow-amber-500/20" },
   { id: "rebelle", label: "Le Rebelle", Icon: Swords, color: "#f43f5e", bg: "bg-red-500/15", border: "border-red-500/30", shadow: "shadow-red-500/20" },
@@ -65,8 +65,8 @@ export default function OnboardingModal() {
           className="glass-card-strong max-w-md w-full p-8 relative overflow-hidden"
         >
           {/* Background orbs */}
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-neon-cyan/[0.06] rounded-full blur-[60px] pointer-events-none" />
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-rose/[0.04] rounded-full blur-[60px] pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-neon-green/[0.06] rounded-full blur-[60px] pointer-events-none" />
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-red/[0.04] rounded-full blur-[60px] pointer-events-none" />
 
           <div className="relative z-10">
             {/* Header */}
@@ -98,11 +98,11 @@ export default function OnboardingModal() {
                 onKeyDown={(e) => { if (e.key === "Enter") handleSubmit(); }}
                 placeholder="Choisis ton pseudo..."
                 maxLength={20}
-                className="w-full px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-cyan/40 focus:ring-1 focus:ring-neon-cyan/20 transition-all text-sm"
+                className="w-full px-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-green/40 focus:ring-1 focus:ring-neon-green/20 transition-all text-sm"
                 autoFocus
               />
               {error && (
-                <p className="text-neon-rose text-xs mt-1.5">{error}</p>
+                <p className="text-neon-red text-xs mt-1.5">{error}</p>
               )}
             </div>
 
@@ -173,7 +173,7 @@ export default function OnboardingModal() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleSubmit}
-              className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
+              className="w-full py-4 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-green/15"
             >
               C&apos;est parti !
             </motion.button>

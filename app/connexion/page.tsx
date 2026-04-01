@@ -65,8 +65,8 @@ export default function ConnexionPage() {
     <div className="min-h-screen flex items-center justify-center px-4 py-20">
       {/* Background effects */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/[0.03] rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-rose/[0.03] rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-green/[0.03] rounded-full blur-[120px]" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-red/[0.03] rounded-full blur-[120px]" />
       </div>
 
       <motion.div
@@ -81,7 +81,7 @@ export default function ConnexionPage() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ type: "spring", bounce: 0.5, delay: 0.15 }}
-            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-2xl font-black text-white mx-auto mb-4 shadow-lg shadow-neon-cyan/20"
+            className="w-16 h-16 rounded-2xl bg-gradient-to-br from-neon-green to-neon-red flex items-center justify-center text-2xl font-black text-white mx-auto mb-4 shadow-lg shadow-neon-green/20"
           >
             T
           </motion.div>
@@ -128,7 +128,7 @@ export default function ConnexionPage() {
                   onClick={() => { setMode(m); setError(""); setSuccess(""); }}
                   className={`flex-1 py-2.5 rounded-lg text-sm font-semibold transition-all ${
                     mode === m
-                      ? "bg-gradient-to-r from-neon-cyan/20 to-neon-rose/20 text-white border border-white/10"
+                      ? "bg-gradient-to-r from-neon-green/20 to-neon-red/20 text-white border border-white/10"
                       : "text-slate-500 hover:text-slate-300"
                   }`}
                 >
@@ -157,7 +157,7 @@ export default function ConnexionPage() {
                       onChange={(e) => setPseudo(e.target.value)}
                       placeholder="Ton pseudo de Teubé..."
                       maxLength={20}
-                      className="w-full pl-10 pr-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-cyan/40 focus:ring-1 focus:ring-neon-cyan/20 transition-all text-sm"
+                      className="w-full pl-10 pr-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-green/40 focus:ring-1 focus:ring-neon-green/20 transition-all text-sm"
                     />
                   </div>
                 </motion.div>
@@ -177,7 +177,7 @@ export default function ConnexionPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="ton@email.fr"
                   required
-                  className="w-full pl-10 pr-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-cyan/40 focus:ring-1 focus:ring-neon-cyan/20 transition-all text-sm"
+                  className="w-full pl-10 pr-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-green/40 focus:ring-1 focus:ring-neon-green/20 transition-all text-sm"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function ConnexionPage() {
                   placeholder="••••••••"
                   required
                   minLength={6}
-                  className="w-full pl-10 pr-12 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-cyan/40 focus:ring-1 focus:ring-neon-cyan/20 transition-all text-sm"
+                  className="w-full pl-10 pr-12 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-green/40 focus:ring-1 focus:ring-neon-green/20 transition-all text-sm"
                 />
                 <button
                   type="button"
@@ -270,7 +270,7 @@ export default function ConnexionPage() {
                 initial={{ opacity: 0, y: -5 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0 }}
-                className="p-3 rounded-xl bg-neon-rose/[0.08] border border-neon-rose/20 text-neon-rose text-sm text-center"
+                className="p-3 rounded-xl bg-neon-red/[0.08] border border-neon-red/20 text-neon-red text-sm text-center"
               >
                 {error}
               </motion.div>
@@ -293,7 +293,7 @@ export default function ConnexionPage() {
             whileTap={{ scale: 0.98 }}
             disabled={loading}
             type="submit"
-            className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base rounded-2xl hover:brightness-110 transition-all shadow-xl shadow-neon-cyan/15 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full py-4 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base rounded-2xl hover:brightness-110 transition-all shadow-xl shadow-neon-green/15 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {loading ? (
               <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -311,14 +311,14 @@ export default function ConnexionPage() {
           {mode === "login" ? (
             <>
               Pas encore de compte ?{" "}
-              <button onClick={() => { setMode("signup"); setError(""); }} className="text-neon-cyan hover:underline font-medium">
+              <button onClick={() => { setMode("signup"); setError(""); }} className="text-neon-green hover:underline font-medium">
                 Inscris-toi
               </button>
             </>
           ) : (
             <>
               Déjà un compte ?{" "}
-              <button onClick={() => { setMode("login"); setError(""); }} className="text-neon-cyan hover:underline font-medium">
+              <button onClick={() => { setMode("login"); setError(""); }} className="text-neon-green hover:underline font-medium">
                 Connecte-toi
               </button>
             </>

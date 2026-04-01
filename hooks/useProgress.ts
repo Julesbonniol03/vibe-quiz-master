@@ -89,7 +89,7 @@ const PRESTIGE_TITLES = [
   { minLevel: 1,  title: "Apprenti Teubé", color: "text-slate-400" },
   { minLevel: 6,  title: "Teubé Éclairé", color: "text-sky-400" },
   { minLevel: 16, title: "Maître du Réseau", color: "text-amber-400" },
-  { minLevel: 31, title: "Oracle de la Matrice", color: "text-neon-cyan" },
+  { minLevel: 31, title: "Oracle de la Matrice", color: "text-neon-green" },
 ];
 
 function getPrestigeTitle(level: number): { title: string; color: string } {

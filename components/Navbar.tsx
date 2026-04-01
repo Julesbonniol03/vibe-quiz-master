@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import HeartBar from "@/components/HeartBar";
 import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
@@ -34,12 +35,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
           <div
-            className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan via-[#6366f1] to-neon-rose flex items-center justify-center text-sm font-bold text-white group-hover:scale-110 transition-all"
-            style={{ boxShadow: "0 0 12px rgba(0,240,255,0.2), inset 0 1px 0 rgba(255,255,255,0.2)" }}
+            className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red flex items-center justify-center text-sm font-bold text-white group-hover:scale-110 transition-all"
+            style={{ boxShadow: "0 0 12px rgba(0,255,65,0.2), inset 0 1px 0 rgba(255,255,255,0.2)" }}
           >
             T
           </div>
-          <span className="font-bold text-lg bg-gradient-to-r from-neon-cyan to-neon-rose bg-clip-text text-transparent">
+          <span className="font-bold text-lg bg-gradient-to-r from-neon-green to-neon-red bg-clip-text text-transparent">
             Teub&eacute;
           </span>
         </Link>
@@ -55,16 +56,12 @@ export default function Navbar() {
           )}
           {/* Hearts */}
           {heartsSystem.hydrated && (
-            <div className="flex items-center gap-0.5">
-              {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
-                <span key={i} className="text-xs">
-                  {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
-                </span>
-              ))}
-              {heartsSystem.premium && (
-                <span className="text-[9px] text-amber-400 ml-0.5 font-bold">∞</span>
-              )}
-            </div>
+            <HeartBar
+              hearts={heartsSystem.hearts}
+              maxHearts={heartsSystem.maxHearts}
+              premium={heartsSystem.premium}
+              size="sm"
+            />
           )}
         </div>
 
@@ -102,10 +99,10 @@ export default function Navbar() {
                 href={item.href}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? "bg-neon-cyan/8 text-neon-cyan border border-neon-cyan/15"
+                    ? "bg-neon-green/8 text-neon-green border border-neon-green/15"
                     : "text-slate-500 hover:text-white hover:bg-white/[0.03]"
                 }`}
-                style={isActive ? { boxShadow: "0 0 8px rgba(0,240,255,0.06)" } : undefined}
+                style={isActive ? { boxShadow: "0 0 8px rgba(0,255,65,0.06)" } : undefined}
               >
                 <span>{item.icon}</span>
                 {item.label}
@@ -114,8 +111,8 @@ export default function Navbar() {
           })}
           <Link
             href="/quiz"
-            className="ml-2 px-4 py-2 bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
-            style={{ boxShadow: "0 0 16px rgba(0,240,255,0.15), 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
+            className="ml-2 px-4 py-2 bg-gradient-to-r from-neon-green via-obsidian-600 to-neon-red text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
+            style={{ boxShadow: "0 0 16px rgba(0,255,65,0.15), 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
           >
             Jouer →
           </Link>
@@ -123,7 +120,7 @@ export default function Navbar() {
             auth.user ? (
               <button
                 onClick={() => auth.signOut()}
-                className="ml-1 p-2 rounded-lg text-slate-500 hover:text-neon-rose hover:bg-neon-rose/5 transition-all"
+                className="ml-1 p-2 rounded-lg text-slate-500 hover:text-neon-red hover:bg-neon-red/5 transition-all"
                 title="D\u00e9connexion"
               >
                 <LogOut size={16} />
@@ -131,7 +128,7 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/connexion"
-                className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-neon-cyan hover:bg-neon-cyan/5 border border-transparent hover:border-neon-cyan/15 transition-all"
+                className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-neon-green hover:bg-neon-green/5 border border-transparent hover:border-neon-green/15 transition-all"
               >
                 <LogIn size={14} />
                 Connexion
@@ -171,7 +168,7 @@ export default function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`p-2 rounded-lg text-lg transition-all ${
-                  isActive ? "bg-neon-cyan/10" : "hover:bg-white/5"
+                  isActive ? "bg-neon-green/10" : "hover:bg-white/5"
                 }`}
                 title={item.label}
               >

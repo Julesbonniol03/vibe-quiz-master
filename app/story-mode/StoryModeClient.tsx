@@ -255,7 +255,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                     ${isLocked ? "bg-white/[0.03] border-white/[0.06] text-slate-700"
                       : isBoss ? "bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30 text-yellow-300"
                       : done ? "bg-purple-500/10 border-purple-500/20 text-purple-400"
-                      : "bg-gradient-to-br from-purple-500/10 to-neon-cyan/10 border-purple-400/20 text-purple-300"}`}>
+                      : "bg-gradient-to-br from-purple-500/10 to-neon-green/10 border-purple-400/20 text-purple-300"}`}>
                     {isLocked ? "🔒" : done ? (isBoss ? "🏆" : "✅") : isBoss ? "⚡" : `N${level.id}`}
                   </div>
                   <div className="flex-1 min-w-0">
@@ -296,7 +296,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
         <div className="relative overflow-hidden rounded-3xl bg-obsidian-800 border border-white/[0.06] p-8 mb-8">
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-32 -right-32 w-80 h-80 bg-purple-500/[0.04] rounded-full blur-[100px]" />
-            <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
+            <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-green/[0.04] rounded-full blur-[100px]" />
           </div>
           <div className="relative z-10">
             <div className="flex items-center gap-3 mb-3">
@@ -356,11 +356,11 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                         : "border-yellow-500/30 bg-yellow-500/[0.04] hover:bg-yellow-500/[0.08] hover:border-yellow-400/50 hover:scale-[1.01] active:scale-[0.99]"
                       : done
                         ? "border-green-500/20 bg-green-500/[0.03] hover:bg-green-500/[0.06] hover:scale-[1.01] active:scale-[0.99]"
-                        : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-neon-cyan/30 hover:scale-[1.01] active:scale-[0.99]"
+                        : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05] hover:border-neon-green/30 hover:scale-[1.01] active:scale-[0.99]"
                   }`}
               >
                 {!isLocked && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-neon-cyan/[0.02] to-purple-500/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-neon-green/[0.02] to-purple-500/[0.02] opacity-0 group-hover:opacity-100 transition-opacity" />
                 )}
                 <div className="relative p-5 flex items-center gap-5">
                   {/* Day Number */}
@@ -374,7 +374,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                           : "bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border-yellow-500/30 text-yellow-300"
                         : done
                           ? "bg-green-500/10 border-green-500/20 text-green-400"
-                          : "bg-gradient-to-br from-neon-cyan/10 to-purple-500/10 border-neon-cyan/20 text-neon-cyan"
+                          : "bg-gradient-to-br from-neon-green/10 to-purple-500/10 border-neon-green/20 text-neon-green"
                     }`}>
                     {isLocked ? "🔒" : done ? ([15, 21, 30].includes(level.id) ? "🏆" : "✅") : [15, 21, 30].includes(level.id) ? "⚡" : `J${level.id}`}
                   </div>
@@ -406,7 +406,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
 
                   {/* Arrow */}
                   {!isLocked && (
-                    <span className="text-slate-700 group-hover:text-neon-cyan group-hover:translate-x-1 transition-all text-xl flex-shrink-0">
+                    <span className="text-slate-700 group-hover:text-neon-green group-hover:translate-x-1 transition-all text-xl flex-shrink-0">
                       &rarr;
                     </span>
                   )}
@@ -482,11 +482,11 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                           onClick={() => handleSelectExpertStory(cat)}
-                          className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-neon-cyan/10 hover:bg-neon-cyan/20 border border-neon-cyan/20 text-neon-cyan transition-all text-left flex items-center justify-between"
+                          className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-neon-green/10 hover:bg-neon-green/20 border border-neon-green/20 text-neon-green transition-all text-left flex items-center justify-between"
                         >
                           <span>📖 Mode Histoire</span>
                           {storyDone > 0 && (
-                            <span className="text-neon-cyan/60">{storyDone}/{cat.story.length}</span>
+                            <span className="text-neon-green/60">{storyDone}/{cat.story.length}</span>
                           )}
                         </motion.button>
                       )}
@@ -538,7 +538,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
           {/* Header */}
           <div className="rounded-3xl overflow-hidden border border-white/[0.08]">
             {/* Image */}
-            <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-cyan/20 flex items-center justify-center">
+            <div className="relative h-48 bg-gradient-to-br from-purple-900/40 to-neon-green/20 flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-obsidian-950 to-transparent" />
               <span className="relative text-6xl">
                 {selectedLevel.id === -1 ? (activeExpertCategory?.emoji ?? "🎯") : selectedLevel.id === 1 ? "🦴" : selectedLevel.id === 2 ? "🏺" : selectedLevel.id === 3 ? "🏛️" : selectedLevel.id === 4 ? "💀" : selectedLevel.id === 5 ? "⚔️" : selectedLevel.id === 6 ? "👑" : selectedLevel.id === 7 ? "⛪" : selectedLevel.id === 8 ? "🦠" : selectedLevel.id === 9 ? "🗡️" : selectedLevel.id === 10 ? "📜" : selectedLevel.id === 11 ? "🎨" : selectedLevel.id === 12 ? "🌊" : selectedLevel.id === 13 ? "📌" : selectedLevel.id === 14 ? "⚔️" : selectedLevel.id === 15 ? "⚡" : selectedLevel.id === 16 ? "💡" : selectedLevel.id === 17 ? "🏴" : selectedLevel.id === 18 ? "🗺️" : selectedLevel.id === 19 ? "⚙️" : selectedLevel.id === 20 ? "✊" : selectedLevel.id === 21 ? "⚡" : selectedLevel.id === 22 ? "🪖" : selectedLevel.id === 23 ? "📈" : selectedLevel.id === 24 ? "💣" : selectedLevel.id === 25 ? "☢️" : selectedLevel.id === 26 ? "🌍" : selectedLevel.id === 27 ? "🚀" : selectedLevel.id === 28 ? "🌐" : selectedLevel.id === 29 ? "📱" : selectedLevel.id === 30 ? "⚡" : "🏛️"}
@@ -552,10 +552,10 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                   selectedLevel.id === -1
                     ? "text-purple-300 bg-purple-500/10 border-purple-500/20"
                     : expertStoryCategory
-                    ? "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"
+                    ? "text-neon-green bg-neon-green/10 border-neon-green/20"
                     : [15, 21, 30].includes(selectedLevel.id)
                     ? "text-yellow-300 bg-yellow-500/10 border-yellow-500/20"
-                    : "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20"
+                    : "text-neon-green bg-neon-green/10 border-neon-green/20"
                 }`}>
                   {selectedLevel.id === -1
                     ? `🔓 MODE EXPERT — ${activeExpertCategory?.name}`
@@ -587,7 +587,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleStartQuiz}
-            className="w-full py-4 bg-gradient-to-r from-neon-cyan to-purple-500 text-white font-bold rounded-2xl text-lg shadow-lg shadow-neon-cyan/20 hover:shadow-neon-cyan/30 transition-shadow"
+            className="w-full py-4 bg-gradient-to-r from-neon-green to-purple-500 text-white font-bold rounded-2xl text-lg shadow-lg shadow-neon-green/20 hover:shadow-neon-green/30 transition-shadow"
           >
             Lancer le Quiz &rarr;
           </motion.button>
@@ -617,13 +617,13 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             </span>
             <div className="flex-1 bg-white/[0.06] rounded-full h-2">
               <motion.div
-                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-purple-500"
+                className="h-2 rounded-full bg-gradient-to-r from-neon-green to-purple-500"
                 initial={{ width: `${(currentQ / selectedLevel.quiz.length) * 100}%` }}
                 animate={{ width: `${((currentQ + 1) / selectedLevel.quiz.length) * 100}%` }}
                 transition={{ duration: 0.5 }}
               />
             </div>
-            <span className="text-xs font-bold text-neon-cyan">{score} pts</span>
+            <span className="text-xs font-bold text-neon-green">{score} pts</span>
           </div>
 
           {/* Question */}
@@ -644,7 +644,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                   style = "border-white/[0.04] bg-white/[0.01] opacity-50";
                 }
               } else if (idx === selected) {
-                style = "border-neon-cyan/40 bg-neon-cyan/[0.05]";
+                style = "border-neon-green/40 bg-neon-green/[0.05]";
               }
 
               return (
@@ -692,7 +692,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
                 </div>
                 <button
                   onClick={handleNext}
-                  className="w-full py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
+                  className="w-full py-3 bg-gradient-to-r from-neon-green to-neon-green/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
                 >
                   {currentQ + 1 < selectedLevel.quiz.length ? "Question suivante &rarr;" : "Voir les résultats"}
                 </button>
@@ -741,7 +741,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
               ))}
             </div>
 
-            <div className={`text-4xl font-bold mb-1 ${perfect ? "text-yellow-400" : score >= 3 ? "text-green-400" : "text-neon-cyan"}`}>
+            <div className={`text-4xl font-bold mb-1 ${perfect ? "text-yellow-400" : score >= 3 ? "text-green-400" : "text-neon-green"}`}>
               {score}/{selectedLevel.quiz.length}
             </div>
             <p className="text-slate-600 text-sm">
@@ -758,7 +758,7 @@ export default function StoryModeClient({ levels, expertCategories }: { levels: 
             </button>
             <button
               onClick={handleBackToMap}
-              className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
+              className="flex-1 py-3 bg-gradient-to-r from-neon-green to-neon-green/80 text-obsidian-950 font-bold rounded-xl hover:opacity-90 transition-all"
             >
               Continuer &rarr;
             </button>

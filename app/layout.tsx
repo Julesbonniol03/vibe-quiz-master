@@ -12,7 +12,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#030306",
+  themeColor: "#050505",
 };
 
 const APP_URL = "https://vibe-quiz-master.vercel.app";

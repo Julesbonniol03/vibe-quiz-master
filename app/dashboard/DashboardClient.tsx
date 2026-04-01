@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode, type CSSProperties } from "react";
 import { useProgress } from "@/hooks/useProgress";
 import { useHearts } from "@/hooks/useHearts";
 import { useNotifications } from "@/hooks/useNotifications";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import TiltCard from "@/components/TiltCard";
+import NeonRipple from "@/components/NeonRipple";
 
 export function StatsGrid() {
   const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed, dailyStreak } = useProgress();
@@ -24,11 +26,13 @@ export function StatsGrid() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated, hearts.hydrated]);
 
+  const tileShadow = "0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.02)";
+
   if (!hydrated) {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="glass-card !rounded-2xl p-5 animate-pulse">
+          <div key={i} className="rounded-2xl p-5 animate-pulse border border-white/[0.04]" style={{ background: "rgba(255,255,255,0.025)", boxShadow: tileShadow }}>
             <div className="w-8 h-8 bg-white/5 rounded-lg mb-2" />
             <div className="w-16 h-6 bg-white/5 rounded mb-1" />
             <div className="w-20 h-4 bg-white/5 rounded" />
@@ -40,25 +44,26 @@ export function StatsGrid() {
 
   const stats = [
     { label: "Niveau", value: `${levelInfo.level}`, sub: `${levelInfo.currentXp}/${levelInfo.xpForNext} XP`, icon: "⭐", color: "text-yellow-400" },
-    { label: "Flamme Quotidienne", value: `${dailyStreak}`, sub: dailyStreak > 0 ? `jour${dailyStreak > 1 ? "s" : ""} d'affilée` : "Jouez le défi !", icon: "🔥", color: "text-orange-400" },
-    { label: "Parties Jouées", value: `${gamesPlayed}`, sub: `${totalPlayed} questions · streak ${globalBestStreak}`, icon: "🎮", color: "text-neon-cyan" },
-    { label: "Précision", value: `${accuracy}%`, sub: `${totalPlayed} réponses`, icon: "🎯", color: "text-green-400" },
+    { label: "Flamme", value: `${dailyStreak}`, sub: dailyStreak > 0 ? `jour${dailyStreak > 1 ? "s" : ""} d'affil\u00e9e` : "Jouez le d\u00e9fi !", icon: "🔥", color: "text-orange-400" },
+    { label: "Parties", value: `${gamesPlayed}`, sub: `${totalPlayed}q \u00b7 s\u00e9rie ${globalBestStreak}`, icon: "🎮", color: "text-neon-green" },
+    { label: "Pr\u00e9cision", value: `${accuracy}%`, sub: `${totalPlayed} r\u00e9ponses`, icon: "🎯", color: "text-green-400" },
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
       {stats.map((stat, i) => (
         <motion.div
           key={stat.label}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.08 }}
-          className="glass-card !rounded-2xl p-5 hover:bg-white/[0.04] transition-colors"
+          className="relative overflow-hidden rounded-2xl border border-white/[0.04] backdrop-blur-xl p-4 hover:scale-[1.02] transition-all"
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: tileShadow }}
         >
-          <div className="text-3xl mb-2">{stat.icon}</div>
-          <div className={`text-2xl font-bold ${stat.color} mb-1`}>{stat.value}</div>
-          <div className="text-slate-600 text-sm">{stat.label}</div>
-          <div className="text-slate-700 text-xs mt-0.5">{stat.sub}</div>
+          <div className="text-2xl mb-1.5">{stat.icon}</div>
+          <div className={`text-xl font-bold nums ${stat.color} mb-0.5`}>{stat.value}</div>
+          <div className="text-slate-500 text-xs font-medium">{stat.label}</div>
+          <div className="text-slate-700 text-[10px] mt-0.5">{stat.sub}</div>
         </motion.div>
       ))}
     </div>
@@ -84,10 +89,10 @@ export function XpBar() {
           initial={{ width: 0 }}
           animate={{ width: `${levelInfo.progress}%` }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-xp-pulse"
+          className="h-2 rounded-full bg-gradient-to-r from-neon-green to-neon-red animate-xp-pulse"
         />
       </div>
-      <span className="text-slate-600 text-xs tabular-nums whitespace-nowrap">
+      <span className="text-slate-600 text-xs nums whitespace-nowrap">
         {xp} XP total
       </span>
     </motion.div>
@@ -99,8 +104,8 @@ export function DailyBanner() {
   if (!hydrated) return null;
 
   return (
-    <div className="relative overflow-hidden bg-obsidian-800/50 border border-neon-rose/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4" style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-cyan/[0.03]" />
+    <div className="relative overflow-hidden bg-obsidian-800/50 border border-neon-red/10 rounded-2xl p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4" style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-green/[0.03]" />
       <div className="relative flex items-center gap-4">
         <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl">
           🎯
@@ -206,8 +211,8 @@ export function DailyOdyssey() {
       {/* Inner content with 2px inset to show the glow border */}
       <div className="relative m-[2px] rounded-[14px] bg-obsidian-850 p-5 sm:p-6">
         <div className="absolute inset-0 overflow-hidden rounded-[14px]">
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-cyan/[0.04] rounded-full blur-[80px]" />
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-rose/[0.03] rounded-full blur-[60px]" />
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-green/[0.04] rounded-full blur-[80px]" />
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-neon-red/[0.03] rounded-full blur-[60px]" />
         </div>
 
         <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
@@ -215,13 +220,13 @@ export function DailyOdyssey() {
             <motion.div
               animate={{ scale: [1, 1.1, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon-cyan/20 to-neon-rose/20 border border-neon-cyan/20 flex items-center justify-center text-3xl flex-shrink-0"
+              className="w-14 h-14 rounded-2xl bg-gradient-to-br from-neon-green/20 to-neon-red/20 border border-neon-green/20 flex items-center justify-center text-3xl flex-shrink-0"
             >
               🎯
             </motion.div>
             <div>
               <div className="flex items-center gap-2 mb-1 flex-wrap">
-                <span className="text-neon-cyan font-bold text-sm uppercase tracking-wider">Quête du Jour</span>
+                <span className="text-neon-green font-bold text-sm uppercase tracking-wider">Quête du Jour</span>
                 {dailyStreak > 0 && (
                   <span className="bg-orange-500/10 text-orange-400 text-xs px-2 py-0.5 rounded-full border border-orange-500/20 flex items-center gap-1">
                     🔥 {dailyStreak}j
@@ -239,7 +244,7 @@ export function DailyOdyssey() {
               {!isDailyCompleted && (
                 <div className="flex items-center gap-2 mt-1.5">
                   <span className="text-slate-600 text-xs">Prochaine quête dans</span>
-                  <span className="text-neon-cyan font-mono text-xs font-bold tabular-nums bg-neon-cyan/5 border border-neon-cyan/10 rounded-lg px-2 py-0.5">
+                  <span className="text-neon-green font-mono text-xs font-bold nums bg-neon-green/5 border border-neon-green/10 rounded-lg px-2 py-0.5">
                     {countdown}
                   </span>
                 </div>
@@ -252,7 +257,7 @@ export function DailyOdyssey() {
             className={`px-5 py-2.5 font-semibold rounded-xl transition-all hover:scale-105 active:scale-95 whitespace-nowrap ${
               isDailyCompleted
                 ? "bg-white/5 border border-white/10 text-slate-500 shadow-none"
-                : "bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-obsidian-950 shadow-lg shadow-neon-cyan/20"
+                : "bg-gradient-to-r from-neon-green to-neon-green/80 text-obsidian-950 shadow-lg shadow-neon-green/20"
             }`}
           >
             {isDailyCompleted ? "Revenir demain" : "Relever le défi →"}
@@ -309,7 +314,7 @@ interface ActualiteItem {
 
 const COLOR_MAP_CLIENT: Record<string, { badge: string; border: string; glow: string }> = {
   blue:   { badge: "text-blue-300 bg-blue-500/10 border-blue-500/20",   border: "border-blue-500/40",   glow: "from-blue-500/[0.08]" },
-  cyan:   { badge: "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20", border: "border-neon-cyan/40",  glow: "from-neon-cyan/[0.08]" },
+  cyan:   { badge: "text-neon-green bg-neon-green/10 border-neon-green/20", border: "border-neon-green/40",  glow: "from-neon-green/[0.08]" },
   green:  { badge: "text-green-300 bg-green-500/10 border-green-500/20", border: "border-green-500/40",  glow: "from-green-500/[0.08]" },
   yellow: { badge: "text-yellow-300 bg-yellow-500/10 border-yellow-500/20", border: "border-yellow-500/40", glow: "from-yellow-500/[0.08]" },
   purple: { badge: "text-purple-300 bg-purple-500/10 border-purple-500/20", border: "border-purple-500/40", glow: "from-purple-500/[0.08]" },
@@ -398,18 +403,18 @@ export function ActualitesGrid({ items }: { items: ActualiteItem[] }) {
   const [selected, setSelected] = useState<ActualiteItem | null>(null);
 
   const colorBorderMap: Record<string, string> = {
-    blue: "hover:border-blue-500/30", cyan: "hover:border-neon-cyan/30",
+    blue: "hover:border-blue-500/30", cyan: "hover:border-neon-green/30",
     green: "hover:border-green-500/30", yellow: "hover:border-yellow-500/30",
     purple: "hover:border-purple-500/30", orange: "hover:border-orange-500/30",
   };
   const colorGlowMap: Record<string, string> = {
-    blue: "from-blue-500/[0.04]", cyan: "from-neon-cyan/[0.04]",
+    blue: "from-blue-500/[0.04]", cyan: "from-neon-green/[0.04]",
     green: "from-green-500/[0.04]", yellow: "from-yellow-500/[0.04]",
     purple: "from-purple-500/[0.04]", orange: "from-orange-500/[0.04]",
   };
   const badgeMap: Record<string, string> = {
     blue: "text-blue-300 bg-blue-500/10 border-blue-500/20",
-    cyan: "text-neon-cyan bg-neon-cyan/10 border-neon-cyan/20",
+    cyan: "text-neon-green bg-neon-green/10 border-neon-green/20",
     green: "text-green-300 bg-green-500/10 border-green-500/20",
     yellow: "text-yellow-300 bg-yellow-500/10 border-yellow-500/20",
     purple: "text-purple-300 bg-purple-500/10 border-purple-500/20",
@@ -447,6 +452,28 @@ export function ActualitesGrid({ items }: { items: ActualiteItem[] }) {
         {selected && <ActualitesModal item={selected} onClose={() => setSelected(null)} />}
       </AnimatePresence>
     </>
+  );
+}
+
+// ─── BENTO TILE (client wrapper with TiltCard) ───
+export function BentoTile({ children, className = "", style, href }: { children: ReactNode; className?: string; style?: CSSProperties; href: string }) {
+  return (
+    <TiltCard className={className} style={style} tiltMax={5}>
+      <Link href={href} className="block h-full">
+        {children}
+      </Link>
+    </TiltCard>
+  );
+}
+
+// ─── NEON LINK BUTTON (with ripple effect) ───
+export function NeonLink({ children, href, className = "", style }: { children: ReactNode; href: string; className?: string; style?: CSSProperties }) {
+  return (
+    <Link href={href} className="block">
+      <NeonRipple className={className} style={style}>
+        {children}
+      </NeonRipple>
+    </Link>
   );
 }
 

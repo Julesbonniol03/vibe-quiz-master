@@ -34,13 +34,13 @@ export default function SplashScreen() {
               animate={{ scale: [1, 1.4, 1], opacity: [0.04, 0.12, 0.04] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full"
-              style={{ background: "radial-gradient(circle, rgba(0,240,255,0.12) 0%, transparent 60%)" }}
+              style={{ background: "radial-gradient(circle, rgba(0,255,65,0.12) 0%, transparent 60%)" }}
             />
             <motion.div
               animate={{ scale: [1, 1.3, 1], opacity: [0.03, 0.08, 0.03] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               className="absolute bottom-1/4 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[500px] rounded-full"
-              style={{ background: "radial-gradient(circle, rgba(255,45,123,0.1) 0%, transparent 60%)" }}
+              style={{ background: "radial-gradient(circle, rgba(255,0,60,0.1) 0%, transparent 60%)" }}
             />
             {/* Gold accent orb */}
             <motion.div
@@ -67,7 +67,7 @@ export default function SplashScreen() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="absolute inset-0 rounded-3xl"
               style={{
-                background: "linear-gradient(135deg, #00f0ff, #a78bfa, #ff2d7b)",
+                background: "linear-gradient(135deg, #00FF41, #a78bfa, #FF003C)",
                 filter: "blur(25px)",
                 margin: "-16px",
               }}
@@ -76,13 +76,13 @@ export default function SplashScreen() {
             <motion.div
               animate={{
                 boxShadow: [
-                  "0 0 20px rgba(0,240,255,0.2), 0 0 60px rgba(0,240,255,0.08)",
-                  "0 0 40px rgba(0,240,255,0.4), 0 0 100px rgba(0,240,255,0.15), 0 0 140px rgba(255,45,123,0.1)",
-                  "0 0 20px rgba(0,240,255,0.2), 0 0 60px rgba(0,240,255,0.08)",
+                  "0 0 20px rgba(0,255,65,0.2), 0 0 60px rgba(0,255,65,0.08)",
+                  "0 0 40px rgba(0,255,65,0.4), 0 0 100px rgba(0,255,65,0.15), 0 0 140px rgba(255,0,60,0.1)",
+                  "0 0 20px rgba(0,255,65,0.2), 0 0 60px rgba(0,255,65,0.08)",
                 ],
               }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="relative w-28 h-28 rounded-3xl bg-gradient-to-br from-neon-cyan via-[#6366f1] to-neon-rose flex items-center justify-center"
+              className="relative w-28 h-28 rounded-3xl bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red flex items-center justify-center"
               style={{
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2), 0 16px 48px rgba(0,0,0,0.5)",
               }}
@@ -98,7 +98,7 @@ export default function SplashScreen() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-4xl font-black mb-2 tracking-tight"
           >
-            <span className="bg-gradient-to-r from-neon-cyan via-white to-neon-rose bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-neon-green via-white to-neon-red bg-clip-text text-transparent">
               Teub&eacute;
             </span>
           </motion.h1>
@@ -125,8 +125,8 @@ export default function SplashScreen() {
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{ delay: 0.9, duration: 1.3, ease: "easeInOut" }}
-              className="h-full rounded-full bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose"
-              style={{ boxShadow: "0 0 12px rgba(0,240,255,0.4)" }}
+              className="h-full rounded-full bg-gradient-to-r from-neon-green via-obsidian-600 to-neon-red"
+              style={{ boxShadow: "0 0 12px rgba(0,255,65,0.4)" }}
             />
           </motion.div>
         </motion.div>

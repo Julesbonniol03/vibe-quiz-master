@@ -8,7 +8,7 @@ import { categoryColors } from "@/lib/questions";
 import { useFeedback } from "@/hooks/useFeedback";
 
 const LEITNER_INFO: Record<LeitnerLevel, { label: string; icon: string; color: string; bg: string; border: string }> = {
-  1: { label: "À revoir", icon: "🔴", color: "text-neon-rose", bg: "bg-neon-rose/10", border: "border-neon-rose/20" },
+  1: { label: "À revoir", icon: "🔴", color: "text-neon-red", bg: "bg-neon-red/10", border: "border-neon-red/20" },
   2: { label: "En cours", icon: "🟡", color: "text-amber-400", bg: "bg-amber-400/10", border: "border-amber-400/20" },
   3: { label: "Apprise", icon: "🟢", color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/20" },
 };
@@ -123,7 +123,7 @@ export default function ReviserPage() {
         </p>
         <Link
           href="/quiz"
-          className="inline-block px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20"
+          className="inline-block px-6 py-3 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-green/20"
         >
           Jouer un quiz →
         </Link>
@@ -161,7 +161,7 @@ export default function ReviserPage() {
               className={`${info.bg} border ${info.border} rounded-xl p-3 text-center`}
             >
               <div className="text-lg mb-0.5">{info.icon}</div>
-              <div className={`text-xl font-bold ${info.color} tabular-nums`}>{count}</div>
+              <div className={`text-xl font-bold ${info.color} nums`}>{count}</div>
               <div className="text-slate-500 text-[10px]">{info.label}</div>
             </motion.div>
           );
@@ -174,7 +174,7 @@ export default function ReviserPage() {
       {filtered.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-slate-500">Aucune erreur dans cette catégorie.</p>
-          <button onClick={() => { setFilter("all"); setCurrentIndex(0); }} className="mt-4 text-neon-cyan text-sm hover:underline">
+          <button onClick={() => { setFilter("all"); setCurrentIndex(0); }} className="mt-4 text-neon-green text-sm hover:underline">
             Voir toutes les catégories
           </button>
         </div>
@@ -307,7 +307,7 @@ export default function ReviserPage() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               onClick={handleStillWrong}
-              className="flex-1 py-3 bg-neon-rose/10 border border-neon-rose/20 text-neon-rose font-semibold rounded-xl hover:bg-neon-rose/20 transition-colors text-sm"
+              className="flex-1 py-3 bg-neon-red/10 border border-neon-red/20 text-neon-red font-semibold rounded-xl hover:bg-neon-red/20 transition-colors text-sm"
             >
               ❌ Pas encore
             </motion.button>
@@ -382,8 +382,8 @@ function MasteryBar({ stats }: { stats: MasteryStats }) {
         <h3 className="text-white font-semibold text-sm flex items-center gap-2">
           <span>🧠</span> Maîtrise globale
         </h3>
-        <span className={`text-sm font-bold tabular-nums ${
-          stats.percent >= 80 ? "text-green-400" : stats.percent >= 40 ? "text-amber-400" : "text-neon-rose"
+        <span className={`text-sm font-bold nums ${
+          stats.percent >= 80 ? "text-green-400" : stats.percent >= 40 ? "text-amber-400" : "text-neon-red"
         }`}>
           {stats.percent}%
         </span>
@@ -413,7 +413,7 @@ function MasteryBar({ stats }: { stats: MasteryStats }) {
             initial={{ width: 0 }}
             animate={{ width: `${l1Pct}%` }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-            className="h-3 bg-neon-rose/60"
+            className="h-3 bg-neon-red/60"
           />
         )}
       </div>
@@ -497,7 +497,7 @@ function CategoryFilter({
         onClick={() => { setFilter("all"); onFilterChange(); }}
         className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
           filter === "all"
-            ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+            ? "bg-neon-green/10 text-neon-green border border-neon-green/20"
             : "text-slate-500 hover:text-white hover:bg-white/5 border border-transparent"
         }`}
       >
@@ -511,7 +511,7 @@ function CategoryFilter({
             onClick={() => { setFilter(cat); onFilterChange(); }}
             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all ${
               filter === cat
-                ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+                ? "bg-neon-green/10 text-neon-green border border-neon-green/20"
                 : "text-slate-500 hover:text-white hover:bg-white/5 border border-transparent"
             }`}
           >
@@ -537,7 +537,7 @@ function DifficultyBadge({ difficulty }: { difficulty: string }) {
   const map: Record<string, { label: string; color: string }> = {
     easy: { label: "Facile", color: "text-green-400" },
     medium: { label: "Moyen", color: "text-amber-400" },
-    hard: { label: "Difficile", color: "text-neon-rose" },
+    hard: { label: "Difficile", color: "text-neon-red" },
   };
   const d = map[difficulty] || { label: difficulty, color: "text-slate-400" };
   return <span className={`text-xs font-medium ${d.color}`}>{d.label}</span>;
