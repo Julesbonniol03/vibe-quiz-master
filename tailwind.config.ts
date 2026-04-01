@@ -5,21 +5,30 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
+    "./contexts/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         "neon-cyan": "#00f0ff",
         "neon-rose": "#ff2d7b",
         cyber: {
-          950: "#050505",
-          900: "#0a0a0f",
-          800: "#0f0f1a",
-          700: "#161625",
+          950: "#050508",
+          900: "#0a0a12",
+          800: "#0f0f1c",
+          700: "#161628",
+          600: "#1e1e3a",
         },
+      },
+      borderRadius: {
+        "2.5xl": "1.25rem",
       },
       animation: {
         "bounce-in":  "bounceIn 0.5s ease-out",
@@ -28,8 +37,9 @@ const config: Config = {
         "slide-down": "slideDown 0.35s ease-out",
         "pop":        "pop 0.25s ease-out",
         "shake":      "shake 0.5s ease-in-out",
-        "pulse-glow": "pulseGlow 2s ease-in-out infinite",
+        "pulse-glow": "pulseGlow 2.5s ease-in-out infinite",
         "glow-bar":   "glowBar 2s ease-in-out infinite",
+        "float":      "float 3s ease-in-out infinite",
       },
       keyframes: {
         bounceIn: {
@@ -60,12 +70,16 @@ const config: Config = {
           "30%, 70%": { transform: "translateX(4px)" },
         },
         pulseGlow: {
-          "0%, 100%": { boxShadow: "0 0 10px rgba(0, 240, 255, 0.3)" },
-          "50%": { boxShadow: "0 0 25px rgba(0, 240, 255, 0.6), 0 0 50px rgba(0, 240, 255, 0.2)" },
+          "0%, 100%": { boxShadow: "0 0 8px rgba(0, 240, 255, 0.2)" },
+          "50%": { boxShadow: "0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.15)" },
         },
         glowBar: {
           "0%, 100%": { filter: "brightness(1)" },
-          "50%": { filter: "brightness(1.3)" },
+          "50%": { filter: "brightness(1.25)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-4px)" },
         },
       },
     },
