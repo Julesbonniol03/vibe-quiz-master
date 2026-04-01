@@ -32,7 +32,8 @@ export default function BottomSheet({ open, onClose, children, title, height = "
     };
   }, [open, onClose]);
 
-  const handleDragEnd = useCallback((_: never, info: PanInfo) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleDragEnd = useCallback((_: any, info: PanInfo) => {
     if (info.offset.y > 80 || info.velocity.y > 300) {
       onClose();
     }
