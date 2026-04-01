@@ -24,11 +24,13 @@ export function StatsGrid() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hydrated, hearts.hydrated]);
 
+  const tileShadow = "0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.02)";
+
   if (!hydrated) {
     return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="glass-card !rounded-2xl p-5 animate-pulse">
+          <div key={i} className="rounded-2xl p-5 animate-pulse border border-white/[0.04]" style={{ background: "rgba(255,255,255,0.025)", boxShadow: tileShadow }}>
             <div className="w-8 h-8 bg-white/5 rounded-lg mb-2" />
             <div className="w-16 h-6 bg-white/5 rounded mb-1" />
             <div className="w-20 h-4 bg-white/5 rounded" />
@@ -40,25 +42,26 @@ export function StatsGrid() {
 
   const stats = [
     { label: "Niveau", value: `${levelInfo.level}`, sub: `${levelInfo.currentXp}/${levelInfo.xpForNext} XP`, icon: "⭐", color: "text-yellow-400" },
-    { label: "Flamme Quotidienne", value: `${dailyStreak}`, sub: dailyStreak > 0 ? `jour${dailyStreak > 1 ? "s" : ""} d'affilée` : "Jouez le défi !", icon: "🔥", color: "text-orange-400" },
-    { label: "Parties Jouées", value: `${gamesPlayed}`, sub: `${totalPlayed} questions · streak ${globalBestStreak}`, icon: "🎮", color: "text-neon-green" },
-    { label: "Précision", value: `${accuracy}%`, sub: `${totalPlayed} réponses`, icon: "🎯", color: "text-green-400" },
+    { label: "Flamme", value: `${dailyStreak}`, sub: dailyStreak > 0 ? `jour${dailyStreak > 1 ? "s" : ""} d'affil\u00e9e` : "Jouez le d\u00e9fi !", icon: "🔥", color: "text-orange-400" },
+    { label: "Parties", value: `${gamesPlayed}`, sub: `${totalPlayed}q \u00b7 s\u00e9rie ${globalBestStreak}`, icon: "🎮", color: "text-neon-green" },
+    { label: "Pr\u00e9cision", value: `${accuracy}%`, sub: `${totalPlayed} r\u00e9ponses`, icon: "🎯", color: "text-green-400" },
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
       {stats.map((stat, i) => (
         <motion.div
           key={stat.label}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.08 }}
-          className="glass-card !rounded-2xl p-5 hover:bg-white/[0.04] transition-colors"
+          className="relative overflow-hidden rounded-2xl border border-white/[0.04] backdrop-blur-xl p-4 hover:scale-[1.02] transition-all"
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: tileShadow }}
         >
-          <div className="text-3xl mb-2">{stat.icon}</div>
-          <div className={`text-2xl font-bold nums ${stat.color} mb-1`}>{stat.value}</div>
-          <div className="text-slate-600 text-sm">{stat.label}</div>
-          <div className="text-slate-700 text-xs mt-0.5">{stat.sub}</div>
+          <div className="text-2xl mb-1.5">{stat.icon}</div>
+          <div className={`text-xl font-bold nums ${stat.color} mb-0.5`}>{stat.value}</div>
+          <div className="text-slate-500 text-xs font-medium">{stat.label}</div>
+          <div className="text-slate-700 text-[10px] mt-0.5">{stat.sub}</div>
         </motion.div>
       ))}
     </div>

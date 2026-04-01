@@ -34,45 +34,55 @@ function loadCategories() {
     .sort((a, b) => a.name.localeCompare(b.name));
 }
 
+/* ─── Bento tile glass style ─── */
+const TILE_BASE = "relative overflow-hidden rounded-2xl backdrop-blur-xl border border-white/[0.04] transition-all hover:scale-[1.015] active:scale-[0.985]";
+const TILE_GLASS = "background: rgba(255,255,255,0.025); backdrop-filter: blur(24px) saturate(1.2);";
+const TILE_SHADOW = "0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.02)";
+
 export default function DashboardPage() {
   const categories = loadCategories();
   const totalQ = categories.reduce((sum, c) => sum + c.questions, 0);
   const actualites = loadActualites();
 
+  const featured = categories.filter((c) => FEATURED_CATEGORIES.includes(c.name));
+  const regular = categories.filter((c) => !FEATURED_CATEGORIES.includes(c.name));
+
   return (
-    <div className="max-w-2xl mx-auto px-4 py-6">
-      {/* Hero — obsidian premium */}
-      <div className="relative overflow-hidden card-obsidian p-6 mb-6">
-        {/* Mesh glow orbs */}
+    <div className="max-w-3xl mx-auto px-4 py-6">
+
+      {/* ═══════ HERO TILE ═══════ */}
+      <div
+        className={`${TILE_BASE} p-6 mb-5`}
+        style={{ background: "linear-gradient(160deg, rgba(255,255,255,0.03), rgba(255,255,255,0.008))", boxShadow: TILE_SHADOW }}
+      >
+        {/* Mesh orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-28 -right-28 w-64 h-64 bg-neon-green/[0.04] rounded-full blur-[100px]" />
           <div className="absolute -bottom-28 -left-28 w-64 h-64 bg-neon-red/[0.03] rounded-full blur-[100px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#6366f1]/[0.02] rounded-full blur-[60px]" />
         </div>
-        {/* Shimmer overlay */}
-        <div className="absolute inset-0 shimmer-bg rounded-3xl pointer-events-none" />
+        <div className="absolute inset-0 shimmer-bg rounded-2xl pointer-events-none" />
 
         <div className="relative z-10">
           <p className="text-slate-600 text-[10px] font-semibold uppercase tracking-[0.2em] mb-1.5">Bienvenue sur</p>
           <h1 className="text-3xl font-black text-white mb-1 tracking-tight">
             Teub&eacute;<span className="text-neon-green animate-neon-flicker">.</span>
           </h1>
-          <p className="text-slate-500 text-sm mb-4">
+          <p className="text-slate-500 text-sm mb-4 nums">
             {totalQ} questions &middot; {categories.length} cat&eacute;gories
           </p>
           <XpBar />
           <div className="flex gap-2.5 mt-5">
             <Link
               href="/quiz"
-              className="flex-1 py-3 text-center bg-gradient-to-r from-neon-green via-obsidian-600 to-neon-red text-white font-bold text-sm rounded-xl hover:opacity-90 transition-all active:scale-[0.97]"
-              style={{ boxShadow: "0 0 20px rgba(0,255,65,0.15), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
+              className="flex-1 py-3 text-center bg-gradient-to-r from-neon-green to-neon-green/70 text-obsidian-950 font-bold text-sm rounded-xl hover:brightness-110 transition-all active:scale-[0.97]"
+              style={{ boxShadow: "0 0 24px rgba(0,255,65,0.18), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)" }}
             >
               Jouer →
             </Link>
             <Link
               href="/leaderboard"
               className="py-3 px-5 bg-white/[0.03] border border-white/[0.06] text-white font-semibold text-sm rounded-xl hover:bg-white/[0.06] transition-all active:scale-[0.97]"
-              style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
+              style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)" }}
             >
               🏆
             </Link>
@@ -80,212 +90,287 @@ export default function DashboardPage() {
         </div>
       </div>
 
-      {/* Mode &Eacute;pop&eacute;e CTA */}
-      <Link
-        href="/story-mode"
-        className="group relative block overflow-hidden rounded-2xl border border-purple-500/15 bg-gradient-to-r from-purple-500/[0.04] to-neon-green/[0.02] p-5 mb-8 hover:border-purple-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
-        style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03)" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-green/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="relative flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl flex-shrink-0">
-            📖
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-0.5">
-              <span className="font-bold text-white text-sm">Mode &Eacute;pop&eacute;e</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400 border border-purple-500/20">
-                NOUVEAU
-              </span>
-            </div>
-            <p className="text-slate-500 text-xs">L&apos;Odyss&eacute;e de la Culture G — De Rome au Moyen-&Acirc;ge</p>
-          </div>
-          <span className="text-slate-700 group-hover:text-purple-400 group-hover:translate-x-1 transition-all text-lg">&rarr;</span>
-        </div>
-      </Link>
+      {/* ═══════ BENTO GRID PRINCIPALE ═══════ */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
 
-      {/* Tour du Monde CTA */}
-      <Link
-        href="/tour-du-monde"
-        className="group relative block overflow-hidden rounded-2xl border border-emerald-500/15 bg-gradient-to-r from-emerald-500/[0.04] to-neon-green/[0.02] p-5 mb-8 hover:border-emerald-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
-        style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03)" }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/[0.03] to-neon-green/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
-        <div className="relative flex items-center gap-4">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0">
-            🌍
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-0.5">
-              <span className="font-bold text-white text-sm">Tour du Monde</span>
-              <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/20">
-                NOUVEAU
-              </span>
-            </div>
-            <p className="text-slate-500 text-xs">Trouve les pays sur la carte — Capitales &amp; G&eacute;ographie</p>
-          </div>
-          <span className="text-slate-700 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all text-lg">&rarr;</span>
-        </div>
-      </Link>
+        {/* ── Tuile dominante : Actualités 2025-2026 (col-span-2, row-span-2) ── */}
+        {featured[0] && (() => {
+          const cat = featured.find((c) => c.name.includes("Actualit")) || featured[0];
+          const colors = categoryColors[cat.name] || { bg: "bg-lime-500/20", text: "text-lime-400", border: "border-lime-500/30", icon: "📰" };
+          return (
+            <Link
+              key={cat.name}
+              href={`/quiz?category=${cat.name}`}
+              className={`${TILE_BASE} col-span-2 row-span-2 p-6 group`}
+              style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+            >
+              {/* Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-500/[0.06] to-transparent opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-      {/* Daily Odyssey */}
-      <DailyOdyssey />
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className={`w-11 h-11 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-2xl`}>
+                      {colors.icon}
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-neon-red/10 text-neon-red border border-neon-red/20">
+                      🔥 TENDANCE
+                    </span>
+                  </div>
+                  <h3 className={`text-xl font-bold ${colors.text} mb-1.5 group-hover:text-white transition-colors`}>{cat.name}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    Questions sur l&apos;actualit&eacute; br&ucirc;lante. Mis &agrave; jour chaque semaine.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-slate-600 text-xs nums">{cat.questions} questions</span>
+                  <span className="text-slate-600 group-hover:text-neon-green group-hover:translate-x-1 transition-all text-lg">&rarr;</span>
+                </div>
+                {/* Progress bar */}
+                <div className="w-full bg-white/[0.04] rounded-full h-1 mt-2" style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.4)" }}>
+                  <div
+                    className="h-1 rounded-full bg-gradient-to-r from-lime-400 to-neon-green"
+                    style={{ width: `${Math.min(100, Math.round((cat.questions / 50) * 100))}%`, boxShadow: "0 0 6px rgba(0,255,65,0.3)" }}
+                  />
+                </div>
+              </div>
+            </Link>
+          );
+        })()}
 
-      {/* Actualit&eacute; du Jour */}
-      {actualites.length > 0 && (
-        <div className="mb-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold text-white flex items-center gap-2">
-              <span>📰</span> Actualit&eacute; du Jour
-            </h2>
-            <span className="text-xs text-slate-600">{actualites[0]?.date}</span>
-          </div>
-          <ActualitesGrid items={actualites} />
-          <p className="text-xs text-slate-700 text-center mt-3">
-            Appuie sur une carte pour en savoir plus &middot; Contenu &eacute;ditorial
-          </p>
-        </div>
-      )}
-
-      {/* Premium lock for Actualit&eacute;s 2026 */}
-      <PaywallMini />
-
-      {/* Game Modes — obsidian cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        {/* ── Mode &Eacute;pop&eacute;e ── */}
         <Link
-          href="/quiz?mode=classique"
-          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-green/20"
-          style={{ background: "linear-gradient(155deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008))", boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
+          href="/story-mode"
+          className={`${TILE_BASE} col-span-2 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-neon-green/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          <div className="relative">
-            <div className="text-4xl mb-3">📝</div>
-            <h3 className="text-lg font-bold text-neon-green mb-1">Classique</h3>
-            <p className="text-slate-500 text-sm">10 questions tranquilles avec timer de 15s par question.</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-xl flex-shrink-0">📖</div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="font-bold text-white text-sm">Mode &Eacute;pop&eacute;e</span>
+                <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-400 border border-purple-500/20">NOUVEAU</span>
+              </div>
+              <p className="text-slate-500 text-xs truncate">L&apos;Odyss&eacute;e de la Culture G</p>
+            </div>
+            <span className="text-slate-700 group-hover:text-purple-400 group-hover:translate-x-1 transition-all">&rarr;</span>
           </div>
         </Link>
+
+        {/* ── Tour du Monde ── */}
         <Link
-          href="/quiz?mode=blitz"
-          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-amber-400/20"
-          style={{ background: "linear-gradient(155deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008))", boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
+          href="/tour-du-monde"
+          className={`${TILE_BASE} col-span-2 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          <div className="relative">
-            <div className="text-4xl mb-3">⚡</div>
-            <h3 className="text-lg font-bold text-amber-400 mb-1">Blitz</h3>
-            <p className="text-slate-500 text-sm">60 secondes au chrono pour marquer un max de points !</p>
-          </div>
-        </Link>
-        <Link
-          href="/quiz?mode=mort-subite"
-          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-red/20"
-          style={{ background: "linear-gradient(155deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008))", boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-br from-neon-red/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          <div className="relative">
-            <div className="text-4xl mb-3">💀</div>
-            <h3 className="text-lg font-bold text-neon-red mb-1">Mort Subite</h3>
-            <p className="text-slate-500 text-sm">Premi&egrave;re erreur = fin de partie. Combien tiendrez-vous ?</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-xl flex-shrink-0">🌍</div>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="font-bold text-white text-sm">Tour du Monde</span>
+                <span className="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/20">NOUVEAU</span>
+              </div>
+              <p className="text-slate-500 text-xs truncate">Capitales &amp; G&eacute;ographie</p>
+            </div>
+            <span className="text-slate-700 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all">&rarr;</span>
           </div>
         </Link>
       </div>
 
-      {/* Dynamic Stats */}
+      {/* ═══════ QUÊTE DU JOUR ═══════ */}
+      <DailyOdyssey />
+
+      {/* ═══════ BENTO: TUILE FRANÇAIS + MODES DE JEU ═══════ */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+
+        {/* ── Tuile dominante : Maîtrise du Français (col-span-2, row-span-2) ── */}
+        {(() => {
+          const cat = featured.find((c) => c.name.includes("Fran")) || featured[1];
+          if (!cat) return null;
+          const colors = categoryColors[cat.name] || { bg: "bg-blue-600/20", text: "text-blue-300", border: "border-blue-500/30", icon: "📝" };
+          return (
+            <Link
+              key={cat.name}
+              href={`/quiz?category=${cat.name}`}
+              className={`${TILE_BASE} col-span-2 row-span-2 p-6 group`}
+              style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/[0.06] to-transparent opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none" />
+
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className={`w-11 h-11 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center text-2xl`}>
+                      {colors.icon}
+                    </div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-neon-green/10 text-neon-green border border-neon-green/20">
+                      ✨ POPULAIRE
+                    </span>
+                  </div>
+                  <h3 className={`text-xl font-bold ${colors.text} mb-1.5 group-hover:text-white transition-colors`}>{cat.name}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    Orthographe, conjugaison, vocabulaire. Teste ta ma&icirc;trise de la langue.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between mt-4">
+                  <span className="text-slate-600 text-xs nums">{cat.questions} questions</span>
+                  <span className="text-slate-600 group-hover:text-neon-green group-hover:translate-x-1 transition-all text-lg">&rarr;</span>
+                </div>
+                <div className="w-full bg-white/[0.04] rounded-full h-1 mt-2" style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.4)" }}>
+                  <div
+                    className="h-1 rounded-full bg-gradient-to-r from-blue-400 to-neon-green"
+                    style={{ width: `${Math.min(100, Math.round((cat.questions / 50) * 100))}%`, boxShadow: "0 0 6px rgba(0,255,65,0.3)" }}
+                  />
+                </div>
+              </div>
+            </Link>
+          );
+        })()}
+
+        {/* ── 3 Modes de jeu (colonne droite, empilés) ── */}
+        <Link
+          href="/quiz?mode=classique"
+          className={`${TILE_BASE} col-span-1 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-green/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10">
+            <div className="text-2xl mb-2">📝</div>
+            <h3 className="text-sm font-bold text-neon-green mb-0.5">Classique</h3>
+            <p className="text-slate-600 text-[11px] leading-tight">10 questions &middot; 15s</p>
+          </div>
+        </Link>
+
+        <Link
+          href="/quiz?mode=blitz"
+          className={`${TILE_BASE} col-span-1 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-400/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10">
+            <div className="text-2xl mb-2">⚡</div>
+            <h3 className="text-sm font-bold text-amber-400 mb-0.5">Blitz</h3>
+            <p className="text-slate-600 text-[11px] leading-tight">60s chrono</p>
+          </div>
+        </Link>
+
+        <Link
+          href="/quiz?mode=mort-subite"
+          className={`${TILE_BASE} col-span-1 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-red/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10">
+            <div className="text-2xl mb-2">💀</div>
+            <h3 className="text-sm font-bold text-neon-red mb-0.5">Mort Subite</h3>
+            <p className="text-slate-600 text-[11px] leading-tight">0 erreur tol&eacute;r&eacute;e</p>
+          </div>
+        </Link>
+
+        <Link
+          href="/quiz?mode=daily"
+          className={`${TILE_BASE} col-span-1 p-4 group`}
+          style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          <div className="relative z-10">
+            <div className="text-2xl mb-2">🎯</div>
+            <h3 className="text-sm font-bold text-purple-400 mb-0.5">D&eacute;fi du Jour</h3>
+            <p className="text-slate-600 text-[11px] leading-tight">5 questions</p>
+          </div>
+        </Link>
+      </div>
+
+      {/* ═══════ ACTUALITÉS DU JOUR ═══════ */}
+      {actualites.length > 0 && (
+        <div className="mb-5">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-base font-semibold text-white flex items-center gap-2">
+              <span>📰</span> Actualit&eacute; du Jour
+            </h2>
+            <span className="text-xs text-slate-600 nums">{actualites[0]?.date}</span>
+          </div>
+          <ActualitesGrid items={actualites} />
+        </div>
+      )}
+
+      {/* Premium lock */}
+      <PaywallMini />
+
+      {/* ═══════ STATS BENTO ═══════ */}
       <StatsGrid />
 
       {/* Revision CTA */}
       <RevisionCta />
 
-      <div className="grid md:grid-cols-2 gap-6 mb-8">
-        {/* Categories */}
-        <div className="card-obsidian p-6">
-          <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
-            <span>📚</span> Cat&eacute;gories
-          </h2>
-          <div className="space-y-2">
-            {categories.map((cat) => {
-              const colors = categoryColors[cat.name] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
-              const progress = Math.min(100, Math.round((cat.questions / 50) * 100));
-              const isFeatured = FEATURED_CATEGORIES.includes(cat.name);
+      {/* ═══════ BENTO: TOUTES CATÉGORIES ═══════ */}
+      <div className="mb-5">
+        <h2 className="text-base font-semibold text-white mb-3 flex items-center gap-2">
+          <span>📚</span> Toutes les cat&eacute;gories
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {regular.map((cat) => {
+            const colors = categoryColors[cat.name] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
+            const progress = Math.min(100, Math.round((cat.questions / 50) * 100));
 
-              return (
-                <Link
-                  key={cat.name}
-                  href={`/quiz?category=${cat.name}`}
-                  className={`group relative flex items-center gap-4 rounded-xl transition-all duration-200
-                    hover:scale-[1.025] hover:z-10 active:scale-[0.98]
-                    ${isFeatured
-                      ? "p-4 bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/[0.06] hover:border-neon-green/30 hover:bg-white/[0.05]"
-                      : "p-3 hover:bg-white/[0.03]"
-                    }`}
-                  style={isFeatured ? { boxShadow: "0 2px 12px rgba(0,0,0,0.2)" } : undefined}
-                >
-                  {/* Neon highlight on hover */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neon-green/[0.02] to-neon-red/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-                  <div
-                    className={`relative flex-shrink-0 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
-                      isFeatured ? "w-12 h-12 text-xl" : "w-10 h-10 text-lg"
-                    }`}
-                  >
-                    {colors.icon}
-                  </div>
-                  <div className="relative flex-1 min-w-0">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`font-medium group-hover:text-white transition-colors ${
-                        isFeatured ? `${colors.text} text-base` : colors.text
-                      }`}>
-                        {cat.name}
-                      </span>
-                      {isFeatured && (
-                        <span className="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-400 border border-orange-500/20 whitespace-nowrap">
-                          🔥 TENDANCE
-                        </span>
-                      )}
-                      <span className="ml-auto text-slate-600 text-xs flex-shrink-0">{cat.questions}q</span>
-                    </div>
-                    <div className="w-full bg-white/[0.04] rounded-full h-1.5" style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.3)" }}>
-                      <div
-                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-green to-neon-red transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,255,65,0.3)]"
-                        style={{
-                          width: `${progress}%`,
-                          boxShadow: "0 0 6px rgba(0, 255, 65, 0.2)",
-                        }}
-                      />
-                    </div>
-                  </div>
-                  <span className="relative text-slate-700 group-hover:text-neon-green group-hover:translate-x-1 transition-all duration-200 text-lg">&rarr;</span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* How XP Works */}
-        <div className="card-obsidian p-6">
-          <h2 className="text-lg font-semibold text-white mb-5 flex items-center gap-2">
-            <span>✨</span> Syst&egrave;me XP
-          </h2>
-          <div className="space-y-4">
-            {[
-              { icon: "✅", label: "Bonne r\u00e9ponse", value: "+10 XP", color: "text-green-400" },
-              { icon: "🔥", label: "Bonus s\u00e9rie", value: "+5 XP / s\u00e9rie", color: "text-neon-red" },
-              { icon: "🎮", label: "Partie termin\u00e9e", value: "+20 XP", color: "text-neon-green" },
-              { icon: "💯", label: "Sans faute", value: "+50 XP", color: "text-yellow-400" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.015] border border-white/[0.04]"
-                style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.02)" }}
+            return (
+              <Link
+                key={cat.name}
+                href={`/quiz?category=${cat.name}`}
+                className={`${TILE_BASE} p-4 group`}
+                style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
               >
-                <span className="text-2xl">{item.icon}</span>
-                <div className="flex-1">
-                  <span className="text-slate-300 text-sm font-medium">{item.label}</span>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className={`w-9 h-9 rounded-lg ${colors.bg} border ${colors.border} flex items-center justify-center text-lg flex-shrink-0 group-hover:scale-110 transition-transform`}>
+                      {colors.icon}
+                    </div>
+                    <span className="text-slate-600 text-[10px] nums ml-auto">{cat.questions}q</span>
+                  </div>
+                  <span className={`text-sm font-semibold ${colors.text} group-hover:text-white transition-colors line-clamp-1`}>{cat.name}</span>
+                  <div className="w-full bg-white/[0.04] rounded-full h-1 mt-2" style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.4)" }}>
+                    <div
+                      className="h-1 rounded-full bg-gradient-to-r from-neon-green/70 to-neon-green"
+                      style={{ width: `${progress}%`, boxShadow: "0 0 4px rgba(0,255,65,0.2)" }}
+                    />
+                  </div>
                 </div>
-                <span className={`font-bold text-sm ${item.color}`}>{item.value}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ═══════ SYSTÈME XP ═══════ */}
+      <div
+        className={`${TILE_BASE} p-6 mb-5`}
+        style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
+      >
+        <h2 className="text-base font-semibold text-white mb-4 flex items-center gap-2">
+          <span>✨</span> Syst&egrave;me XP
+        </h2>
+        <div className="grid grid-cols-2 gap-2">
+          {[
+            { icon: "✅", label: "Bonne r\u00e9ponse", value: "+10 XP", color: "text-green-400" },
+            { icon: "🔥", label: "Bonus s\u00e9rie", value: "+5 XP", color: "text-neon-red" },
+            { icon: "🎮", label: "Partie termin\u00e9e", value: "+20 XP", color: "text-neon-green" },
+            { icon: "💯", label: "Sans faute", value: "+50 XP", color: "text-yellow-400" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.015] border border-white/[0.04]"
+              style={{ boxShadow: "inset 0 1px 0 rgba(255,255,255,0.03)" }}
+            >
+              <span className="text-xl">{item.icon}</span>
+              <div className="flex-1 min-w-0">
+                <span className="text-slate-400 text-xs block truncate">{item.label}</span>
+                <span className={`font-bold text-sm nums ${item.color}`}>{item.value}</span>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -293,7 +378,7 @@ export default function DashboardPage() {
       <DailyBanner />
 
       {/* Footer */}
-      <div className="mt-12 pt-6 border-t border-white/[0.03] flex items-center justify-center gap-4 text-xs text-slate-700 pb-4">
+      <div className="mt-10 pt-5 border-t border-white/[0.03] flex items-center justify-center gap-4 text-xs text-slate-700 pb-4">
         <Link href="/mentions-legales" className="hover:text-slate-400 transition-colors">
           Mentions L&eacute;gales
         </Link>
