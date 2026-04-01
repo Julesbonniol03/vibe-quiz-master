@@ -102,6 +102,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const heartsSystem = useHearts();
   const [heartLostAnim, setHeartLostAnim] = useState(false);
   const [isAnswering, setIsAnswering] = useState(false);
+  const [timerResetting, setTimerResetting] = useState(false);
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const stopTimer = useCallback(() => {
@@ -162,7 +163,12 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   useEffect(() => {
     if (phase !== "playing") return;
     const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
+    // Disable transition during reset, re-enable after a frame
+    setTimerResetting(true);
     setTimeLeft(perQuestionTime);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setTimerResetting(false));
+    });
     timerRef.current = setInterval(() => {
       setTimeLeft((t) => {
         if (t <= 1) {
@@ -861,7 +867,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               className="bg-neon-red/5 border border-neon-red/15 rounded-2xl p-4"
             >
               <div className="text-2xl font-bold text-neon-red">{bestStreak} 🔥</div>
-              <div className="text-slate-500 text-xs mt-1">Meilleur Streak</div>
+              <div className="text-slate-500 text-xs mt-1">Meilleure s&eacute;rie</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -1030,9 +1036,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   style={isLastHeart && isFilled ? { filter: "drop-shadow(0 0 4px rgba(255,0,60,0.5))" } : undefined}
                 >
                   {isFilled ? (
-                    heartsSystem.premium ? "\uD83D\uDC9B" : "\u2764\uFE0F"
+                    heartsSystem.premium ? "💛" : "❤️"
                   ) : (
-                    <span className="opacity-20">{"\uD83D\uDDA4"}</span>
+                    <span className="opacity-20">🖤</span>
                   )}
                 </motion.span>
               );
@@ -1196,13 +1202,19 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 <circle
                   cx="28" cy="28" r="24"
                   fill="none"
-                  stroke={timerUrgent ? "#FF003C" : timerWarn ? "#f59e0b" : "#00FF41"}
                   strokeWidth="3"
                   strokeLinecap="round"
-                  strokeDasharray={`${2 * Math.PI * 24}`}
-                  strokeDashoffset={`${2 * Math.PI * 24 * (1 - (phase === "answered" ? 0 : timerPercent / 100))}`}
+                  strokeDasharray={2 * Math.PI * 24}
                   style={{
-                    transition: "stroke-dashoffset 1s linear, stroke 0.3s ease",
+                    strokeDashoffset: phase === "answered"
+                      ? 2 * Math.PI * 24 * (1 - timerPercent / 100)
+                      : 2 * Math.PI * 24 * (1 - timerPercent / 100),
+                    stroke: timerUrgent ? "#FF003C" : timerWarn ? "#f59e0b" : "#00FF41",
+                    transition: timerResetting
+                      ? "none"
+                      : phase === "playing"
+                      ? "stroke-dashoffset 1s linear, stroke 0.3s ease"
+                      : "stroke 0.3s ease",
                     filter: timerUrgent
                       ? "drop-shadow(0 0 6px rgba(255,0,60,0.6))"
                       : timerWarn
@@ -1216,7 +1228,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 <span className={`text-sm font-bold nums ${
                   phase === "answered" ? "text-slate-600" : timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
                 }`}>
-                  {phase === "answered" ? "—" : timeLeft}
+                  {phase === "answered" ? "\u2014" : timeLeft}
                 </span>
               </div>
             </div>
@@ -1602,7 +1614,7 @@ function ShareScoreCard({
     const stats = [
       { label: "Niveau", value: `${level}`, icon: "⭐" },
       { label: "Temps", value: timeStr, icon: "⏱️" },
-      { label: "Streak", value: `${streak}x`, icon: "🔥" },
+      { label: "S\u00e9rie", value: `${streak}x`, icon: "🔥" },
     ];
     const statW = 160;
     const statsStartX = cx - ((stats.length * statW) / 2);
