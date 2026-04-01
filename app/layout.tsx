@@ -12,7 +12,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#050505",
+  themeColor: "#030306",
 };
 
 const APP_URL = "https://vibe-quiz-master.vercel.app";
@@ -65,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="dark">
-      <body className="antialiased bg-cyber-950 text-slate-100 min-h-screen">
+      <body className="antialiased bg-obsidian-950 text-slate-100 min-h-screen">
         <AuthProvider>
           <SplashScreen />
           <OnboardingModal />

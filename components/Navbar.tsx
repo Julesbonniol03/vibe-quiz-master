@@ -13,9 +13,9 @@ const navItems = [
   { href: "/dashboard", label: "Accueil", icon: "🏠" },
   { href: "/quiz", label: "Quiz", icon: "🧠" },
   { href: "/profil", label: "Profil", icon: "👤", isProfile: true },
-  { href: "/reviser", label: "Réviser", icon: "📖" },
+  { href: "/reviser", label: "R\u00e9viser", icon: "📖" },
   { href: "/leaderboard", label: "Classement", icon: "🏆" },
-  { href: "/premium", label: "Légende", icon: "👑" },
+  { href: "/premium", label: "L\u00e9gende", icon: "👑" },
 ];
 
 export default function Navbar() {
@@ -26,23 +26,29 @@ export default function Navbar() {
   const { dailyStreak, hydrated: progressHydrated } = useProgress();
 
   return (
-    <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-cyber-950/70 backdrop-blur-2xl border-b border-white/[0.06] safe-nav-top">
+    <nav
+      className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-obsidian-950/80 backdrop-blur-3xl border-b border-white/[0.04] safe-nav-top"
+      style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.4), inset 0 -1px 0 rgba(255,255,255,0.03)" }}
+    >
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between" style={{ paddingLeft: "max(1rem, env(safe-area-inset-left, 0px))", paddingRight: "max(1rem, env(safe-area-inset-right, 0px))" }}>
         {/* Logo */}
         <Link href="/dashboard" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-sm font-bold text-white shadow-lg shadow-neon-cyan/20 group-hover:scale-110 group-hover:shadow-neon-cyan/40 transition-all">
+          <div
+            className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan via-[#6366f1] to-neon-rose flex items-center justify-center text-sm font-bold text-white group-hover:scale-110 transition-all"
+            style={{ boxShadow: "0 0 12px rgba(0,240,255,0.2), inset 0 1px 0 rgba(255,255,255,0.2)" }}
+          >
             T
           </div>
           <span className="font-bold text-lg bg-gradient-to-r from-neon-cyan to-neon-rose bg-clip-text text-transparent">
-            Teubé
+            Teub&eacute;
           </span>
         </Link>
 
-        {/* Hearts + Flame (visible on all screens) */}
+        {/* Hearts + Flame */}
         <div className="flex items-center gap-2">
           {/* Daily streak flame */}
           {progressHydrated && dailyStreak > 0 && (
-            <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/20 rounded-lg px-2 py-1">
+            <div className="flex items-center gap-1 bg-orange-500/8 border border-orange-500/15 rounded-lg px-2 py-1">
               <span className="text-sm">🔥</span>
               <span className="text-orange-400 text-xs font-bold">{dailyStreak}</span>
             </div>
@@ -96,9 +102,10 @@ export default function Navbar() {
                 href={item.href}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
-                    : "text-slate-500 hover:text-white hover:bg-white/5"
+                    ? "bg-neon-cyan/8 text-neon-cyan border border-neon-cyan/15"
+                    : "text-slate-500 hover:text-white hover:bg-white/[0.03]"
                 }`}
+                style={isActive ? { boxShadow: "0 0 8px rgba(0,240,255,0.06)" } : undefined}
               >
                 <span>{item.icon}</span>
                 {item.label}
@@ -107,7 +114,8 @@ export default function Navbar() {
           })}
           <Link
             href="/quiz"
-            className="ml-2 px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-rose text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20"
+            className="ml-2 px-4 py-2 bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95"
+            style={{ boxShadow: "0 0 16px rgba(0,240,255,0.15), 0 4px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
           >
             Jouer →
           </Link>
@@ -116,14 +124,14 @@ export default function Navbar() {
               <button
                 onClick={() => auth.signOut()}
                 className="ml-1 p-2 rounded-lg text-slate-500 hover:text-neon-rose hover:bg-neon-rose/5 transition-all"
-                title="Déconnexion"
+                title="D\u00e9connexion"
               >
                 <LogOut size={16} />
               </button>
             ) : (
               <Link
                 href="/connexion"
-                className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-neon-cyan hover:bg-neon-cyan/5 border border-transparent hover:border-neon-cyan/20 transition-all"
+                className="ml-1 flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-slate-400 hover:text-neon-cyan hover:bg-neon-cyan/5 border border-transparent hover:border-neon-cyan/15 transition-all"
               >
                 <LogIn size={14} />
                 Connexion

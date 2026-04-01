@@ -29,7 +29,7 @@ export default function AchievementToast({ achievement, onDismiss }: Props) {
           style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}
         >
           <div
-            className="relative overflow-hidden rounded-2xl border bg-cyber-900/95 backdrop-blur-xl p-4 flex items-center gap-4"
+            className="relative overflow-hidden rounded-2xl border bg-obsidian-800/95 backdrop-blur-xl p-4 flex items-center gap-4"
             style={{
               borderColor: achievement.glowColor.replace("0.5", "0.3"),
               boxShadow: `0 0 20px ${achievement.glowColor.replace("0.5", "0.2")}, 0 0 50px ${achievement.glowColor.replace("0.5", "0.08")}`,

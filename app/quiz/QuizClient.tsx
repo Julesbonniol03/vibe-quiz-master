@@ -1719,7 +1719,7 @@ function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: nu
               </p>
             </div>
             {/* Overlay paywall */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-cyber-950/60 backdrop-blur-sm">
+            <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-obsidian-950/60 backdrop-blur-sm">
               <span className="text-lg mb-1">👑</span>
               <p className="text-amber-400 font-semibold text-sm mb-2">Explication réservée aux Légendes</p>
               <button
