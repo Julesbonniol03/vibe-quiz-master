@@ -27,7 +27,7 @@ export async function GET() {
             width: 500,
             height: 500,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(0,240,255,0.12) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(0,255,65,0.12) 0%, transparent 70%)",
           }}
         />
         <div
@@ -38,7 +38,7 @@ export async function GET() {
             width: 450,
             height: 450,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(255,45,123,0.10) 0%, transparent 70%)",
+            background: "radial-gradient(circle, rgba(255,0,60,0.10) 0%, transparent 70%)",
           }}
         />
 
@@ -51,7 +51,7 @@ export async function GET() {
             right: 16,
             bottom: 16,
             borderRadius: 28,
-            border: "2px solid rgba(0,240,255,0.2)",
+            border: "2px solid rgba(0,255,65,0.2)",
             display: "flex",
           }}
         />
@@ -62,12 +62,12 @@ export async function GET() {
             width: 140,
             height: 140,
             borderRadius: 36,
-            background: "linear-gradient(135deg, #00f0ff, #ff2d7b)",
+            background: "linear-gradient(135deg, #00FF41, #FF003C)",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             marginBottom: 32,
-            boxShadow: "0 0 40px rgba(0,240,255,0.3), 0 0 80px rgba(0,240,255,0.1)",
+            boxShadow: "0 0 40px rgba(0,255,65,0.3), 0 0 80px rgba(0,255,65,0.1)",
           }}
         >
           <span style={{ fontSize: 80, fontWeight: 900, color: "white" }}>T</span>
@@ -78,7 +78,7 @@ export async function GET() {
           style={{
             fontSize: 52,
             fontWeight: 800,
-            background: "linear-gradient(90deg, #00f0ff, #ff2d7b)",
+            background: "linear-gradient(90deg, #00FF41, #FF003C)",
             backgroundClip: "text",
             color: "transparent",
             marginBottom: 16,
@@ -140,11 +140,11 @@ export async function GET() {
             justifyContent: "center",
             padding: "14px 48px",
             borderRadius: 16,
-            background: "linear-gradient(90deg, rgba(0,240,255,0.15), rgba(255,45,123,0.15))",
-            border: "1.5px solid rgba(0,240,255,0.3)",
+            background: "linear-gradient(90deg, rgba(0,255,65,0.15), rgba(255,0,60,0.15))",
+            border: "1.5px solid rgba(0,255,65,0.3)",
           }}
         >
-          <span style={{ fontSize: 20, fontWeight: 700, color: "#00f0ff" }}>
+          <span style={{ fontSize: 20, fontWeight: 700, color: "#00FF41" }}>
             Jouer maintenant →
           </span>
         </div>

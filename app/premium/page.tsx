@@ -136,7 +136,7 @@ function MeshBackground() {
         transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
         className="absolute -bottom-40 -right-40 w-[600px] h-[600px] rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(255,45,123,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(255,0,60,0.06) 0%, transparent 70%)",
         }}
       />
       <motion.div

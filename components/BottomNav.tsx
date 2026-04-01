@@ -39,18 +39,18 @@ export default function BottomNav() {
                   whileTap={{ scale: 0.9 }}
                   className={`w-14 h-14 rounded-[18px] flex items-center justify-center transition-all duration-300 ${
                     active
-                      ? "bg-gradient-to-br from-neon-cyan via-[#6366f1] to-neon-rose scale-105"
+                      ? "bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red scale-105"
                       : "bg-obsidian-700 border border-white/[0.06]"
                   }`}
                   style={active ? {
-                    boxShadow: "0 0 20px rgba(0,240,255,0.25), 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)",
+                    boxShadow: "0 0 20px rgba(0,255,65,0.25), 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)",
                   } : {
                     boxShadow: "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
                   }}
                 >
                   <Icon size={22} active={active} />
                 </motion.div>
-                <span className={`text-[9px] font-semibold mt-1 transition-colors ${active ? "text-neon-cyan" : "text-slate-600"}`}>
+                <span className={`text-[9px] font-semibold mt-1 transition-colors ${active ? "text-neon-green" : "text-slate-600"}`}>
                   {label}
                 </span>
               </Link>
@@ -63,9 +63,9 @@ export default function BottomNav() {
                 {active && (
                   <motion.div
                     layoutId="bottomnav-active"
-                    className="absolute inset-0 rounded-xl bg-neon-cyan/[0.08] border border-neon-cyan/[0.1]"
+                    className="absolute inset-0 rounded-xl bg-neon-green/[0.08] border border-neon-green/[0.1]"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
-                    style={{ boxShadow: "0 0 8px rgba(0,240,255,0.06)" }}
+                    style={{ boxShadow: "0 0 8px rgba(0,255,65,0.06)" }}
                   />
                 )}
                 <div className="relative z-10">
@@ -73,7 +73,7 @@ export default function BottomNav() {
                 </div>
               </div>
               <span className={`text-[10px] font-medium leading-none transition-colors ${
-                active ? "text-neon-cyan" : "text-slate-600"
+                active ? "text-neon-green" : "text-slate-600"
               }`}>
                 {label}
               </span>
@@ -88,7 +88,7 @@ export default function BottomNav() {
 /* ── SVG icons with smooth active states ── */
 function HomeIcon({ size, active }: { size: number; active: boolean }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,240,255,0.15)" : "none"} stroke={active ? "#00f0ff" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,255,65,0.15)" : "none"} stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" />
       <path d="M9 21V12h6v9" />
     </svg>
@@ -96,7 +96,7 @@ function HomeIcon({ size, active }: { size: number; active: boolean }) {
 }
 function TrophyIcon({ size, active }: { size: number; active: boolean }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={active ? "#00f0ff" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M6 9H3V4h3M18 9h3V4h-3" />
       <path d="M6 4h12v6a6 6 0 01-12 0V4z" />
       <path d="M12 15v3M8 21h8" />
@@ -112,7 +112,7 @@ function PlayIcon({ size, active }: { size: number; active: boolean }) {
 }
 function CrownIcon({ size, active }: { size: number; active: boolean }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,240,255,0.15)" : "none"} stroke={active ? "#00f0ff" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,255,65,0.15)" : "none"} stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M2 20h20L19 8l-5 6-2-8-2 8-5-6-3 12z" />
       <path d="M2 20h20" />
     </svg>
@@ -120,7 +120,7 @@ function CrownIcon({ size, active }: { size: number; active: boolean }) {
 }
 function ProfileIcon({ size, active }: { size: number; active: boolean }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,240,255,0.15)" : "none"} stroke={active ? "#00f0ff" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
+    <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,255,65,0.15)" : "none"} stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
       <circle cx="12" cy="7" r="4" />
     </svg>

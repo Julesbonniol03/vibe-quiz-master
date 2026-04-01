@@ -4,7 +4,7 @@ export default function MentionsLegales() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
       <div className="mb-8">
-        <Link href="/dashboard" className="text-slate-500 hover:text-neon-cyan text-sm transition-colors">
+        <Link href="/dashboard" className="text-slate-500 hover:text-neon-green text-sm transition-colors">
           &larr; Retour au dashboard
         </Link>
       </div>
@@ -55,7 +55,7 @@ export default function MentionsLegales() {
           </p>
           <p className="mt-2">
             Pour plus de détails, consultez notre{" "}
-            <Link href="/confidentialite" className="text-neon-cyan hover:underline">
+            <Link href="/confidentialite" className="text-neon-green hover:underline">
               Politique de Confidentialité
             </Link>.
           </p>
@@ -100,7 +100,7 @@ export default function MentionsLegales() {
         <Section title="9. Contact">
           <p>
             Pour toute question relative aux présentes mentions, contactez-nous
-            à l&apos;adresse : <span className="text-neon-cyan">contact@vibequizmaster.app</span>
+            à l&apos;adresse : <span className="text-neon-green">contact@vibequizmaster.app</span>
           </p>
         </Section>
       </div>

@@ -45,8 +45,8 @@ export default function DashboardPage() {
       <div className="relative overflow-hidden card-obsidian p-6 mb-6">
         {/* Mesh glow orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-28 -right-28 w-64 h-64 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
-          <div className="absolute -bottom-28 -left-28 w-64 h-64 bg-neon-rose/[0.03] rounded-full blur-[100px]" />
+          <div className="absolute -top-28 -right-28 w-64 h-64 bg-neon-green/[0.04] rounded-full blur-[100px]" />
+          <div className="absolute -bottom-28 -left-28 w-64 h-64 bg-neon-red/[0.03] rounded-full blur-[100px]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#6366f1]/[0.02] rounded-full blur-[60px]" />
         </div>
         {/* Shimmer overlay */}
@@ -55,7 +55,7 @@ export default function DashboardPage() {
         <div className="relative z-10">
           <p className="text-slate-600 text-[10px] font-semibold uppercase tracking-[0.2em] mb-1.5">Bienvenue sur</p>
           <h1 className="text-3xl font-black text-white mb-1 tracking-tight">
-            Teub&eacute;<span className="text-neon-cyan animate-neon-flicker">.</span>
+            Teub&eacute;<span className="text-neon-green animate-neon-flicker">.</span>
           </h1>
           <p className="text-slate-500 text-sm mb-4">
             {totalQ} questions &middot; {categories.length} cat&eacute;gories
@@ -64,8 +64,8 @@ export default function DashboardPage() {
           <div className="flex gap-2.5 mt-5">
             <Link
               href="/quiz"
-              className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan via-[#6366f1] to-neon-rose text-white font-bold text-sm rounded-xl hover:opacity-90 transition-all active:scale-[0.97]"
-              style={{ boxShadow: "0 0 20px rgba(0,240,255,0.15), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
+              className="flex-1 py-3 text-center bg-gradient-to-r from-neon-green via-obsidian-600 to-neon-red text-white font-bold text-sm rounded-xl hover:opacity-90 transition-all active:scale-[0.97]"
+              style={{ boxShadow: "0 0 20px rgba(0,255,65,0.15), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15)" }}
             >
               Jouer →
             </Link>
@@ -83,10 +83,10 @@ export default function DashboardPage() {
       {/* Mode &Eacute;pop&eacute;e CTA */}
       <Link
         href="/story-mode"
-        className="group relative block overflow-hidden rounded-2xl border border-purple-500/15 bg-gradient-to-r from-purple-500/[0.04] to-neon-cyan/[0.02] p-5 mb-8 hover:border-purple-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
+        className="group relative block overflow-hidden rounded-2xl border border-purple-500/15 bg-gradient-to-r from-purple-500/[0.04] to-neon-green/[0.02] p-5 mb-8 hover:border-purple-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
         style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03)" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-cyan/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/[0.03] to-neon-green/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative flex items-center gap-4">
           <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl flex-shrink-0">
             📖
@@ -107,10 +107,10 @@ export default function DashboardPage() {
       {/* Tour du Monde CTA */}
       <Link
         href="/tour-du-monde"
-        className="group relative block overflow-hidden rounded-2xl border border-emerald-500/15 bg-gradient-to-r from-emerald-500/[0.04] to-neon-cyan/[0.02] p-5 mb-8 hover:border-emerald-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
+        className="group relative block overflow-hidden rounded-2xl border border-emerald-500/15 bg-gradient-to-r from-emerald-500/[0.04] to-neon-green/[0.02] p-5 mb-8 hover:border-emerald-500/30 transition-all hover:scale-[1.01] active:scale-[0.99]"
         style={{ boxShadow: "0 4px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.03)" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/[0.03] to-neon-cyan/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/[0.03] to-neon-green/[0.03] opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative flex items-center gap-4">
           <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl flex-shrink-0">
             🌍
@@ -154,13 +154,13 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
         <Link
           href="/quiz?mode=classique"
-          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-cyan/20"
+          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-green/20"
           style={{ background: "linear-gradient(155deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008))", boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-green/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="relative">
             <div className="text-4xl mb-3">📝</div>
-            <h3 className="text-lg font-bold text-neon-cyan mb-1">Classique</h3>
+            <h3 className="text-lg font-bold text-neon-green mb-1">Classique</h3>
             <p className="text-slate-500 text-sm">10 questions tranquilles avec timer de 15s par question.</p>
           </div>
         </Link>
@@ -178,13 +178,13 @@ export default function DashboardPage() {
         </Link>
         <Link
           href="/quiz?mode=mort-subite"
-          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-rose/20"
+          className="group relative overflow-hidden rounded-2xl p-6 hover:scale-[1.02] active:scale-[0.98] transition-all border border-white/[0.04] hover:border-neon-red/20"
           style={{ background: "linear-gradient(155deg, rgba(255,255,255,0.025), rgba(255,255,255,0.008))", boxShadow: "0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03)" }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-neon-rose/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="absolute inset-0 bg-gradient-to-br from-neon-red/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           <div className="relative">
             <div className="text-4xl mb-3">💀</div>
-            <h3 className="text-lg font-bold text-neon-rose mb-1">Mort Subite</h3>
+            <h3 className="text-lg font-bold text-neon-red mb-1">Mort Subite</h3>
             <p className="text-slate-500 text-sm">Premi&egrave;re erreur = fin de partie. Combien tiendrez-vous ?</p>
           </div>
         </Link>
@@ -215,13 +215,13 @@ export default function DashboardPage() {
                   className={`group relative flex items-center gap-4 rounded-xl transition-all duration-200
                     hover:scale-[1.025] hover:z-10 active:scale-[0.98]
                     ${isFeatured
-                      ? "p-4 bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/[0.06] hover:border-neon-cyan/30 hover:bg-white/[0.05]"
+                      ? "p-4 bg-gradient-to-r from-white/[0.03] to-white/[0.01] border border-white/[0.06] hover:border-neon-green/30 hover:bg-white/[0.05]"
                       : "p-3 hover:bg-white/[0.03]"
                     }`}
                   style={isFeatured ? { boxShadow: "0 2px 12px rgba(0,0,0,0.2)" } : undefined}
                 >
                   {/* Neon highlight on hover */}
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neon-cyan/[0.02] to-neon-rose/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-neon-green/[0.02] to-neon-red/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
                   <div
                     className={`relative flex-shrink-0 rounded-xl ${colors.bg} border ${colors.border} flex items-center justify-center transition-transform duration-200 group-hover:scale-110 ${
@@ -246,15 +246,15 @@ export default function DashboardPage() {
                     </div>
                     <div className="w-full bg-white/[0.04] rounded-full h-1.5" style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.3)" }}>
                       <div
-                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,240,255,0.3)]"
+                        className="h-1.5 rounded-full bg-gradient-to-r from-neon-green to-neon-red transition-all duration-300 group-hover:shadow-[0_0_12px_rgba(0,255,65,0.3)]"
                         style={{
                           width: `${progress}%`,
-                          boxShadow: "0 0 6px rgba(0, 240, 255, 0.2)",
+                          boxShadow: "0 0 6px rgba(0, 255, 65, 0.2)",
                         }}
                       />
                     </div>
                   </div>
-                  <span className="relative text-slate-700 group-hover:text-neon-cyan group-hover:translate-x-1 transition-all duration-200 text-lg">&rarr;</span>
+                  <span className="relative text-slate-700 group-hover:text-neon-green group-hover:translate-x-1 transition-all duration-200 text-lg">&rarr;</span>
                 </Link>
               );
             })}
@@ -269,8 +269,8 @@ export default function DashboardPage() {
           <div className="space-y-4">
             {[
               { icon: "✅", label: "Bonne r\u00e9ponse", value: "+10 XP", color: "text-green-400" },
-              { icon: "🔥", label: "Bonus s\u00e9rie", value: "+5 XP / s\u00e9rie", color: "text-neon-rose" },
-              { icon: "🎮", label: "Partie termin\u00e9e", value: "+20 XP", color: "text-neon-cyan" },
+              { icon: "🔥", label: "Bonus s\u00e9rie", value: "+5 XP / s\u00e9rie", color: "text-neon-red" },
+              { icon: "🎮", label: "Partie termin\u00e9e", value: "+20 XP", color: "text-neon-green" },
               { icon: "💯", label: "Sans faute", value: "+50 XP", color: "text-yellow-400" },
             ].map((item) => (
               <div

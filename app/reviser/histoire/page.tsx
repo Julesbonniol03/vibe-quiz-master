@@ -258,7 +258,7 @@ export default function HistoireRevisionPage() {
           </div>
           <Link
             href="/quiz?category=Histoire"
-            className="block mt-4 text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
+            className="block mt-4 text-neon-green/70 hover:text-neon-green text-sm font-medium transition-colors"
           >
             Passer au Quiz Histoire →
           </Link>
@@ -386,7 +386,7 @@ export default function HistoireRevisionPage() {
                         </p>
                         <div className="w-12 h-px bg-white/10" />
                         <p className="text-slate-400 text-sm text-center leading-relaxed max-w-md">
-                          <span className="text-neon-cyan font-medium">💡 </span>
+                          <span className="text-neon-green font-medium">💡 </span>
                           {currentCard.explanation}
                         </p>
                       </div>

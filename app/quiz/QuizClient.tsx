@@ -20,7 +20,7 @@ type GamePhase = "loading" | "select" | "select-difficulty" | "playing" | "answe
 const DIFFICULTY_INFO: Record<Difficulty, { label: string; icon: string; desc: string; color: string; border: string; bg: string; shadow: string }> = {
   easy: { label: "Débutant", icon: "🌱", desc: "Pour se mettre en jambes", color: "text-green-400", border: "border-green-500/50", bg: "bg-green-500/10", shadow: "shadow-green-500/10" },
   medium: { label: "Intermédiaire", icon: "⚡", desc: "Le juste milieu", color: "text-amber-400", border: "border-amber-400/50", bg: "bg-amber-400/10", shadow: "shadow-amber-400/10" },
-  hard: { label: "Expert", icon: "🔥", desc: "Seuls les meilleurs survivent", color: "text-neon-rose", border: "border-neon-rose/50", bg: "bg-neon-rose/10", shadow: "shadow-neon-rose/10" },
+  hard: { label: "Expert", icon: "🔥", desc: "Seuls les meilleurs survivent", color: "text-neon-red", border: "border-neon-red/50", bg: "bg-neon-red/10", shadow: "shadow-neon-red/10" },
 };
 
 const TIMER_SECONDS = 15;
@@ -31,9 +31,9 @@ const BLITZ_DURATION = 60;
 const SUDDEN_DEATH_QUESTIONS = 50; // large pool, game ends on first error
 
 const MODE_INFO: Record<GameMode, { label: string; icon: string; desc: string; color: string }> = {
-  classique: { label: "Classique", icon: "📝", desc: "10 questions tranquilles", color: "neon-cyan" },
+  classique: { label: "Classique", icon: "📝", desc: "10 questions tranquilles", color: "neon-green" },
   blitz: { label: "Blitz", icon: "⚡", desc: "60s chrono, max de points", color: "amber-400" },
-  "mort-subite": { label: "Mort Subite", icon: "💀", desc: "Première erreur = fin", color: "neon-rose" },
+  "mort-subite": { label: "Mort Subite", icon: "💀", desc: "Première erreur = fin", color: "neon-red" },
   daily: { label: "Défi du Jour", icon: "🎯", desc: "5 questions, même pour tous", color: "purple-400" },
 };
 
@@ -371,7 +371,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     const total = answers.length;
     if (total === 0 || score !== total) return;
 
-    const neonColors = ["#00f0ff", "#ff2d7b", "#a855f7", "#fbbf24", "#34d399"];
+    const neonColors = ["#00FF41", "#FF003C", "#a855f7", "#fbbf24", "#34d399"];
     const fire = (opts: confetti.Options) =>
       confetti({ ...opts, colors: neonColors, disableForReducedMotion: true });
 
@@ -410,7 +410,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         <p className="text-slate-500 text-lg">Chargement des questions...</p>
         <div className="mt-6 mx-auto w-48 h-1 bg-white/5 rounded-full overflow-hidden">
           <motion.div
-            className="h-full bg-gradient-to-r from-neon-cyan to-neon-rose rounded-full"
+            className="h-full bg-gradient-to-r from-neon-green to-neon-red rounded-full"
             animate={{ x: ["-100%", "100%"] }}
             transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -446,14 +446,14 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             const isActive = gameMode === mode;
             const activeClass =
               mode === "blitz" ? "border-amber-400/50 bg-amber-400/10 shadow-lg shadow-amber-400/10"
-              : mode === "mort-subite" ? "border-neon-rose/50 bg-neon-rose/10 shadow-lg shadow-neon-rose/10"
+              : mode === "mort-subite" ? "border-neon-red/50 bg-neon-red/10 shadow-lg shadow-neon-red/10"
               : mode === "daily" ? "border-purple-400/50 bg-purple-400/10 shadow-lg shadow-purple-400/10"
-              : "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10";
+              : "border-neon-green/50 bg-neon-green/10 shadow-lg shadow-neon-green/10";
             const activeText =
               mode === "blitz" ? "text-amber-400"
-              : mode === "mort-subite" ? "text-neon-rose"
+              : mode === "mort-subite" ? "text-neon-red"
               : mode === "daily" ? "text-purple-400"
-              : "text-neon-cyan";
+              : "text-neon-green";
             return (
               <motion.button
                 key={mode}
@@ -510,12 +510,12 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   onClick={() => setSelectedCategory(cat as Category | "All")}
                   className={`p-5 rounded-2xl border-2 transition-colors text-left ${
                     isSelected
-                      ? "border-neon-cyan/50 bg-neon-cyan/10 shadow-lg shadow-neon-cyan/10"
+                      ? "border-neon-green/50 bg-neon-green/10 shadow-lg shadow-neon-green/10"
                       : "border-white/[0.06] bg-white/[0.02] hover:border-white/10 hover:bg-white/[0.04]"
                   }`}
                 >
                   <div className="text-3xl mb-2">{colors ? colors.icon : "🌍"}</div>
-                  <div className={`font-semibold ${isSelected ? "text-neon-cyan" : "text-white"}`}>
+                  <div className={`font-semibold ${isSelected ? "text-neon-green" : "text-white"}`}>
                     {cat === "All" ? "Tout" : cat}
                   </div>
                   <div className="text-slate-600 text-xs mt-1">
@@ -563,7 +563,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               setPhase("select-difficulty");
             }
           }}
-          className="w-full py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
+          className="w-full py-4 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-green/15"
         >
           {gameMode === "daily" ? "🎯 Lancer le Défi du Jour" : selectedCategory === "Histoire" ? "📝 Quiz Classique →" : "Choisir le niveau →"}
         </motion.button>
@@ -679,7 +679,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </span>
           ))}
           {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
-            <span className="text-xs text-slate-500 ml-2 tabular-nums">+1 dans {heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
+            <span className="text-xs text-slate-500 ml-2 nums">+1 dans {heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
           )}
           {heartsSystem.premium && (
             <span className="text-xs text-amber-400 ml-2 font-bold">Vies illimitées ✦</span>
@@ -699,7 +699,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               <p className="text-slate-400 text-sm mb-1 italic">Ton cerveau est en surchauffe, Teubé.</p>
               <p className="text-slate-500 text-sm mb-1">Repose-toi ou passe en <span className="text-amber-400 font-bold">Mode Légende</span> pour devenir immortel !</p>
               {heartsSystem.nextRegenIn > 0 && (
-                <p className="text-slate-600 text-xs mt-2 mb-4">Prochain cœur dans <span className="text-neon-cyan font-bold">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span></p>
+                <p className="text-slate-600 text-xs mt-2 mb-4">Prochain cœur dans <span className="text-neon-green font-bold">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span></p>
               )}
               <div className="flex flex-col gap-3">
                 <Link
@@ -731,7 +731,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={startGame}
-            className="flex-1 py-4 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-cyan/15"
+            className="flex-1 py-4 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-lg rounded-2xl hover:opacity-90 transition-opacity shadow-xl shadow-neon-green/15"
           >
             {gameMode === "blitz" ? "⚡ Lancer le Blitz" : gameMode === "mort-subite" ? "💀 Lancer Mort Subite" : "📝 Lancer le Quiz"}
           </motion.button>
@@ -747,9 +747,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
     const grade =
       accuracy >= 90 ? { label: "Excellent !", icon: "🏆", color: "text-yellow-400" }
-      : accuracy >= 70 ? { label: "Très bien !", icon: "⭐", color: "text-neon-cyan" }
+      : accuracy >= 70 ? { label: "Très bien !", icon: "⭐", color: "text-neon-green" }
       : accuracy >= 50 ? { label: "Pas mal !", icon: "👍", color: "text-green-400" }
-      : { label: "Continuez !", icon: "💪", color: "text-neon-rose" };
+      : { label: "Continuez !", icon: "💪", color: "text-neon-red" };
 
     const modeLabel = MODE_INFO[gameMode];
 
@@ -849,18 +849,18 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="bg-neon-cyan/5 border border-neon-cyan/15 rounded-2xl p-4"
+              className="bg-neon-green/5 border border-neon-green/15 rounded-2xl p-4"
             >
-              <div className="text-2xl font-bold text-neon-cyan">{score}/{total}</div>
+              <div className="text-2xl font-bold text-neon-green">{score}/{total}</div>
               <div className="text-slate-500 text-xs mt-1">Score</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="bg-neon-rose/5 border border-neon-rose/15 rounded-2xl p-4"
+              className="bg-neon-red/5 border border-neon-red/15 rounded-2xl p-4"
             >
-              <div className="text-2xl font-bold text-neon-rose">{bestStreak} 🔥</div>
+              <div className="text-2xl font-bold text-neon-red">{bestStreak} 🔥</div>
               <div className="text-slate-500 text-xs mt-1">Meilleur Streak</div>
             </motion.div>
             <motion.div
@@ -893,7 +893,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     className={`flex items-center gap-3 p-3 rounded-xl border ${
                       isCorrect
                         ? "bg-green-500/5 border-green-500/15"
-                        : "bg-neon-rose/5 border-neon-rose/15"
+                        : "bg-neon-red/5 border-neon-red/15"
                     }`}
                   >
                     <span className="text-lg">{isCorrect ? "✅" : isTimedOut ? "⏰" : "❌"}</span>
@@ -903,7 +903,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                         onClick={() => setReviewOpenId(isOpen ? null : q.id)}
                         className={`text-xs font-semibold px-2.5 py-1 rounded-lg transition-all flex-shrink-0 ${
                           isOpen
-                            ? "bg-neon-cyan/10 text-neon-cyan border border-neon-cyan/20"
+                            ? "bg-neon-green/10 text-neon-green border border-neon-green/20"
                             : "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-transparent"
                         }`}
                       >
@@ -959,7 +959,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   setPhase("select-difficulty");
                 }
               }}
-              className={`flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15 ${
+              className={`flex-1 py-3 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-green/15 ${
                 gameMode === "daily" && progress.isDailyCompleted ? "opacity-50" : ""
               }`}
             >
@@ -977,7 +977,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             )}
             <Link
               href="/leaderboard"
-              className="flex-1 py-3 text-center text-neon-cyan/70 hover:text-neon-cyan text-sm font-medium transition-colors"
+              className="flex-1 py-3 text-center text-neon-green/70 hover:text-neon-green text-sm font-medium transition-colors"
             >
               Voir le classement →
             </Link>
@@ -1002,10 +1002,10 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         <div className="flex items-center gap-3">
           <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2">
             <span className="text-slate-500 text-sm">Score</span>
-            <span className="text-neon-cyan font-bold">{score}</span>
+            <span className="text-neon-green font-bold">{score}</span>
           </div>
           {/* Hearts */}
-          <div className={`glass-card !rounded-xl px-3 py-2 flex items-center gap-1 transition-all ${heartLostAnim ? "border-neon-rose/50 bg-neon-rose/10" : ""}`}>
+          <div className={`glass-card !rounded-xl px-3 py-2 flex items-center gap-1 transition-all ${heartLostAnim ? "border-neon-red/50 bg-neon-red/10" : ""}`}>
             {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
               <motion.span
                 key={i}
@@ -1021,7 +1021,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               </motion.span>
             ))}
             {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
-              <span className="text-[10px] text-slate-500 ml-1 tabular-nums">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
+              <span className="text-[10px] text-slate-500 ml-1 nums">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
             )}
             {heartsSystem.premium && (
               <span className="text-[10px] text-amber-400 ml-1 font-bold">∞</span>
@@ -1033,9 +1033,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
-                className="bg-neon-rose/10 border border-neon-rose/20 rounded-xl px-4 py-2 flex items-center gap-2"
+                className="bg-neon-red/10 border border-neon-red/20 rounded-xl px-4 py-2 flex items-center gap-2"
               >
-                <span className="text-neon-rose text-sm font-bold">{streak}x</span>
+                <span className="text-neon-red text-sm font-bold">{streak}x</span>
                 <span>🔥</span>
               </motion.div>
             )}
@@ -1046,11 +1046,11 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           {/* Blitz global timer */}
           {gameMode === "blitz" && (
             <div className={`glass-card !rounded-xl px-4 py-2 flex items-center gap-2 ${
-              blitzTimeLeft <= 10 ? "border-neon-rose/30" : ""
+              blitzTimeLeft <= 10 ? "border-neon-red/30" : ""
             }`}>
               <span className="text-lg">⚡</span>
-              <span className={`font-bold tabular-nums ${
-                blitzTimeLeft <= 10 ? "text-neon-rose" : blitzTimeLeft <= 20 ? "text-amber-400" : "text-neon-cyan"
+              <span className={`font-bold nums ${
+                blitzTimeLeft <= 10 ? "text-neon-red" : blitzTimeLeft <= 20 ? "text-amber-400" : "text-neon-green"
               }`}>
                 {blitzTimeLeft}s
               </span>
@@ -1059,9 +1059,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
 
           {/* Mort subite indicator */}
           {gameMode === "mort-subite" && (
-            <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-neon-rose/20">
+            <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-neon-red/20">
               <span className="text-lg">💀</span>
-              <span className="text-neon-rose text-sm font-bold">Mort Subite</span>
+              <span className="text-neon-red text-sm font-bold">Mort Subite</span>
             </div>
           )}
 
@@ -1074,13 +1074,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           )}
 
           {(gameMode === "classique" || gameMode === "daily") && (
-            <div className="text-slate-600 text-sm font-medium tabular-nums">
+            <div className="text-slate-600 text-sm font-medium nums">
               {currentIndex + 1} / {gameQuestions.length}
             </div>
           )}
 
           {gameMode !== "classique" && gameMode !== "daily" && (
-            <div className="text-slate-600 text-sm font-medium tabular-nums">
+            <div className="text-slate-600 text-sm font-medium nums">
               Q{currentIndex + 1}
             </div>
           )}
@@ -1101,11 +1101,11 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       {(gameMode === "classique" || gameMode === "daily") && (
         <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
           <motion.div
-            className="h-1.5 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-glow-bar"
+            className="h-1.5 rounded-full bg-gradient-to-r from-neon-green to-neon-red animate-glow-bar"
             animate={{ width: `${progressPercent}%` }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             style={{
-              boxShadow: "0 0 10px rgba(0, 240, 255, 0.4), 0 0 25px rgba(0, 240, 255, 0.15)",
+              boxShadow: "0 0 10px rgba(0, 255, 65, 0.4), 0 0 25px rgba(0, 255, 65, 0.15)",
             }}
           />
         </div>
@@ -1120,12 +1120,12 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             transition={{ duration: 1, ease: "linear" }}
             style={{
               background: blitzTimeLeft <= 10
-                ? "linear-gradient(90deg, #ff2d7b, #ff6b9d)"
+                ? "linear-gradient(90deg, #FF003C, #ff6b9d)"
                 : blitzTimeLeft <= 20
                 ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                : "linear-gradient(90deg, #f59e0b, #00f0ff)",
+                : "linear-gradient(90deg, #f59e0b, #00FF41)",
               boxShadow: blitzTimeLeft <= 10
-                ? "0 0 12px rgba(255, 45, 123, 0.6)"
+                ? "0 0 12px rgba(255, 0, 60, 0.6)"
                 : "0 0 10px rgba(245, 158, 11, 0.4)",
             }}
           />
@@ -1156,8 +1156,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             <div className="flex items-center justify-between mb-2">
               <span className="text-slate-600 text-xs">Temps restant</span>
               <span
-                className={`text-sm font-bold tabular-nums ${
-                  timerUrgent ? "text-neon-rose" : timerWarn ? "text-amber-400" : "text-neon-cyan"
+                className={`text-sm font-bold nums ${
+                  timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
                 } ${phase === "answered" ? "opacity-30" : ""}`}
               >
                 {phase === "answered" ? "—" : `${timeLeft}s`}
@@ -1169,15 +1169,15 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 style={{
                   width: phase === "answered" ? "0%" : `${timerPercent}%`,
                   background: timerUrgent
-                    ? "linear-gradient(90deg, #ff2d7b, #ff6b9d)"
+                    ? "linear-gradient(90deg, #FF003C, #ff6b9d)"
                     : timerWarn
                     ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                    : "linear-gradient(90deg, #00f0ff, #00c8d4)",
+                    : "linear-gradient(90deg, #00FF41, #00c8d4)",
                   boxShadow: timerUrgent
-                    ? "0 0 12px rgba(255, 45, 123, 0.6), 0 0 30px rgba(255, 45, 123, 0.2)"
+                    ? "0 0 12px rgba(255, 0, 60, 0.6), 0 0 30px rgba(255, 0, 60, 0.2)"
                     : timerWarn
                     ? "0 0 12px rgba(245, 158, 11, 0.5)"
-                    : "0 0 12px rgba(0, 240, 255, 0.5), 0 0 30px rgba(0, 240, 255, 0.15)",
+                    : "0 0 12px rgba(0, 255, 65, 0.5), 0 0 30px rgba(0, 255, 65, 0.15)",
                 }}
               />
             </div>
@@ -1207,9 +1207,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               textClass = "text-green-300";
               glowStyle = { boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)" };
             } else if (isSelected && !isCorrect) {
-              bgClass = "bg-neon-rose/10";
-              borderClass = "border-neon-rose/40";
-              textClass = "text-neon-rose";
+              bgClass = "bg-neon-red/10";
+              borderClass = "border-neon-red/40";
+              textClass = "text-neon-red";
             } else {
               bgClass = "bg-white/[0.01]";
               borderClass = "border-white/[0.05]";
@@ -1232,7 +1232,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               onClick={() => handleAnswer(i)}
               disabled={phase === "answered" || isAnswering}
               className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-colors flex items-center gap-3 ${bgClass} ${borderClass} ${textClass} ${
-                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-cyan/30 hover:bg-neon-cyan/5" : ""
+                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-green/30 hover:bg-neon-green/5" : ""
               }`}
               style={glowStyle}
             >
@@ -1241,7 +1241,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   phase === "answered" && isCorrect
                     ? "bg-green-500/20 border-green-500/50 text-green-300"
                     : phase === "answered" && isSelected && !isCorrect
-                    ? "bg-neon-rose/20 border-neon-rose/40 text-neon-rose"
+                    ? "bg-neon-red/20 border-neon-red/40 text-neon-red"
                     : "bg-white/5 border-white/10 text-slate-500"
                 }`}
               >
@@ -1290,7 +1290,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
                 >
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">💡 </span>
+                    <span className="text-neon-green font-medium">💡 </span>
                     {currentQ.explanation}
                   </p>
                 </motion.div>
@@ -1299,8 +1299,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   onClick={() => { handleNext(); setIsAnswering(false); }}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2), 0 0 40px rgba(255, 45, 123, 0.1)" }}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 0 40px rgba(255, 0, 60, 0.1)" }}
                 >
                   Continuer →
                 </motion.button>
@@ -1324,16 +1324,16 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     initial={{ width: "100%" }}
                     animate={{ width: "0%" }}
                     transition={{ duration: 1.2, ease: "linear" }}
-                    className="h-1 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                    className="h-1 rounded-full bg-gradient-to-r from-neon-green to-neon-red"
+                    style={{ boxShadow: "0 0 8px rgba(0, 255, 65, 0.4)" }}
                   />
                 </div>
               </>
             ) : (
               /* ── Wrong: explanation + Oracle nudge + Continuer ── */
               <>
-                <div className="bg-neon-rose/5 border border-neon-rose/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-neon-rose font-semibold text-lg">✗ Raté !</p>
+                <div className="bg-neon-red/5 border border-neon-red/20 rounded-2xl p-4 mb-3 text-center">
+                  <p className="text-neon-red font-semibold text-lg">✗ Raté !</p>
                   <p className="text-slate-500 text-sm mt-1">
                     La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
@@ -1344,7 +1344,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
                 >
                   <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-cyan font-medium">💡 </span>
+                    <span className="text-neon-green font-medium">💡 </span>
                     {currentQ.explanation}
                   </p>
                 </motion.div>
@@ -1367,8 +1367,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                   onClick={() => { handleNext(); setIsAnswering(false); }}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold text-base hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 240, 255, 0.2), 0 0 40px rgba(255, 45, 123, 0.1)" }}
+                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all"
+                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 0 40px rgba(255, 0, 60, 0.1)" }}
                 >
                   Continuer →
                 </motion.button>
@@ -1442,8 +1442,8 @@ function ShareScoreCard({
       ctx.fillStyle = grad;
       ctx.fillRect(x - r, y - r, r * 2, r * 2);
     };
-    drawOrb(100, 80, 200, "rgba(0,240,255,0.08)");
-    drawOrb(620, 400, 250, "rgba(255,45,123,0.07)");
+    drawOrb(100, 80, 200, "rgba(0,255,65,0.08)");
+    drawOrb(620, 400, 250, "rgba(255,0,60,0.07)");
     drawOrb(360, 240, 180, "rgba(255,183,0,0.05)");
 
     // ─ Subtle grid
@@ -1457,7 +1457,7 @@ function ShareScoreCard({
     }
 
     // ─ Border glow
-    ctx.strokeStyle = "rgba(0,240,255,0.15)";
+    ctx.strokeStyle = "rgba(0,255,65,0.15)";
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.roundRect(8, 8, W - 16, H - 16, 24);
@@ -1465,7 +1465,7 @@ function ShareScoreCard({
 
     // ─ Header: logo + title
     ctx.font = "bold 16px -apple-system, BlinkMacSystemFont, sans-serif";
-    ctx.fillStyle = "#00f0ff";
+    ctx.fillStyle = "#00FF41";
     ctx.fillText("V", 32, 50);
     ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.5)";
@@ -1492,8 +1492,8 @@ function ShareScoreCard({
     const startAngle = -Math.PI / 2;
     const endAngle = startAngle + (accuracy / 100) * Math.PI * 2;
     const grad = ctx.createLinearGradient(cx - radius, cy, cx + radius, cy);
-    grad.addColorStop(0, "#00f0ff");
-    grad.addColorStop(1, "#ff2d7b");
+    grad.addColorStop(0, "#00FF41");
+    grad.addColorStop(1, "#FF003C");
     ctx.beginPath();
     ctx.arc(cx, cy, radius, startAngle, endAngle);
     ctx.strokeStyle = grad;
@@ -1567,8 +1567,8 @@ function ShareScoreCard({
     ctx.textAlign = "center";
     ctx.font = "italic 15px -apple-system, BlinkMacSystemFont, sans-serif";
     const challengeGrad = ctx.createLinearGradient(cx - 200, 0, cx + 200, 0);
-    challengeGrad.addColorStop(0, "#00f0ff");
-    challengeGrad.addColorStop(1, "#ff2d7b");
+    challengeGrad.addColorStop(0, "#00FF41");
+    challengeGrad.addColorStop(1, "#FF003C");
     ctx.fillStyle = challengeGrad;
     ctx.fillText(`"${challengeText}"`, cx, 400);
 
@@ -1644,7 +1644,7 @@ function ShareScoreCard({
           whileTap={{ scale: 0.97 }}
           onClick={shareCard}
           disabled={!cardReady}
-          className="flex-1 py-3 bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15 text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+          className="flex-1 py-3 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-green/15 text-sm flex items-center justify-center gap-2 disabled:opacity-50"
         >
           {copied ? "✅ Lien copié !" : "📤 Partager"}
         </motion.button>
@@ -1693,9 +1693,9 @@ function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: nu
       <div className="mt-1 mb-1 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 space-y-3">
         {/* What you answered vs correct */}
         <div className="flex gap-3">
-          <div className="flex-1 rounded-lg bg-neon-rose/5 border border-neon-rose/15 p-2.5 text-center">
+          <div className="flex-1 rounded-lg bg-neon-red/5 border border-neon-red/15 p-2.5 text-center">
             <p className="text-slate-600 text-[10px] uppercase tracking-wider mb-1">Votre réponse</p>
-            <p className="text-neon-rose text-sm font-semibold">{userAnswerText}</p>
+            <p className="text-neon-red text-sm font-semibold">{userAnswerText}</p>
           </div>
           <div className="flex-1 rounded-lg bg-green-500/5 border border-green-500/15 p-2.5 text-center">
             <p className="text-slate-600 text-[10px] uppercase tracking-wider mb-1">Bonne réponse</p>
@@ -1705,9 +1705,9 @@ function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: nu
 
         {/* Explanation: premium = visible, free = blurred + paywall */}
         {isPremium ? (
-          <div className="rounded-lg bg-neon-cyan/5 border border-neon-cyan/15 p-3">
+          <div className="rounded-lg bg-neon-green/5 border border-neon-green/15 p-3">
             <p className="text-slate-300 text-sm leading-relaxed">
-              <span className="text-neon-cyan font-semibold">💡 </span>
+              <span className="text-neon-green font-semibold">💡 </span>
               {question.explanation}
             </p>
           </div>

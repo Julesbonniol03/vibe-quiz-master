@@ -147,8 +147,8 @@ export function NotificationPermissionPrompt() {
       >
         <div className="glass-card-strong !rounded-3xl p-6 relative overflow-hidden">
           {/* Background glow */}
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-neon-cyan/[0.08] rounded-full blur-[50px] pointer-events-none" />
-          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-neon-rose/[0.06] rounded-full blur-[50px] pointer-events-none" />
+          <div className="absolute -top-10 -right-10 w-32 h-32 bg-neon-green/[0.08] rounded-full blur-[50px] pointer-events-none" />
+          <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-neon-red/[0.06] rounded-full blur-[50px] pointer-events-none" />
 
           <div className="relative z-10">
             {/* Icon */}
@@ -192,7 +192,7 @@ export function NotificationPermissionPrompt() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={handleAccept}
-                className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-neon-cyan to-neon-rose text-white text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-neon-cyan/15"
+                className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-neon-green to-neon-red text-white text-sm font-bold hover:brightness-110 transition-all shadow-lg shadow-neon-green/15"
               >
                 Activer 🔔
               </motion.button>

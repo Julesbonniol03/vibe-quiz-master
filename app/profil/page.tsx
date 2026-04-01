@@ -18,8 +18,8 @@ const RANKS = [
   { name: "Érudit", icon: "🎓", minXp: 1500, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
   { name: "Sage", icon: "🧙", minXp: 3500, color: "text-amber-400", bg: "bg-amber-500/10", border: "border-amber-500/20" },
   { name: "Maître", icon: "👑", minXp: 7000, color: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/20" },
-  { name: "Oracle", icon: "🔮", minXp: 15000, color: "text-neon-cyan", bg: "bg-neon-cyan/10", border: "border-neon-cyan/20" },
-  { name: "Légende", icon: "⚡", minXp: 30000, color: "text-neon-rose", bg: "bg-neon-rose/10", border: "border-neon-rose/20" },
+  { name: "Oracle", icon: "🔮", minXp: 15000, color: "text-neon-green", bg: "bg-neon-green/10", border: "border-neon-green/20" },
+  { name: "Légende", icon: "⚡", minXp: 30000, color: "text-neon-red", bg: "bg-neon-red/10", border: "border-neon-red/20" },
 ];
 
 function getRank(xp: number) {
@@ -111,7 +111,7 @@ function RadarChart({ stats }: { stats: Record<string, { played: number; correct
           animate={{ r: values[i] > 0 ? 5 : 0 }}
           transition={{ delay: 0.6 + i * 0.08 }}
           cx={p.x} cy={p.y}
-          fill="#00f0ff"
+          fill="#00FF41"
           filter="url(#glow)"
         />
       ))}
@@ -137,12 +137,12 @@ function RadarChart({ stats }: { stats: Record<string, { played: number; correct
 
       <defs>
         <linearGradient id="radarGradient" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="rgba(0,240,255,0.18)" />
-          <stop offset="100%" stopColor="rgba(255,45,123,0.18)" />
+          <stop offset="0%" stopColor="rgba(0,255,65,0.18)" />
+          <stop offset="100%" stopColor="rgba(255,0,60,0.18)" />
         </linearGradient>
         <linearGradient id="radarStroke" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#00f0ff" />
-          <stop offset="100%" stopColor="#ff2d7b" />
+          <stop offset="0%" stopColor="#00FF41" />
+          <stop offset="100%" stopColor="#FF003C" />
         </linearGradient>
         <filter id="glow">
           <feGaussianBlur stdDeviation="3" result="blur" />
@@ -214,8 +214,8 @@ export default function ProfilPage() {
         className="relative overflow-hidden glass-card-strong p-8 mb-8"
       >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-cyan/[0.04] rounded-full blur-[80px]" />
-          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-neon-rose/[0.04] rounded-full blur-[80px]" />
+          <div className="absolute -top-20 -right-20 w-60 h-60 bg-neon-green/[0.04] rounded-full blur-[80px]" />
+          <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-neon-red/[0.04] rounded-full blur-[80px]" />
         </div>
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center gap-6">
@@ -233,7 +233,7 @@ export default function ProfilPage() {
                   <avatar.Icon size={42} style={{ color: avatar.color }} strokeWidth={2} />
                 </div>
                 {/* Level badge */}
-                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-br from-neon-cyan to-neon-rose flex items-center justify-center text-xs font-black text-white shadow-lg shadow-neon-cyan/30">
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-br from-neon-green to-neon-red flex items-center justify-center text-xs font-black text-white shadow-lg shadow-neon-green/30">
                   {levelInfo.level}
                 </div>
               </motion.div>
@@ -253,10 +253,10 @@ export default function ProfilPage() {
                 initial={{ width: 0 }}
                 animate={{ width: `${levelInfo.progress}%` }}
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
-                className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose animate-xp-pulse"
+                className="h-2 rounded-full bg-gradient-to-r from-neon-green to-neon-red animate-xp-pulse"
               />
             </div>
-            <span className="text-slate-600 text-[10px] tabular-nums">
+            <span className="text-slate-600 text-[10px] nums">
               {levelInfo.currentXp}/{levelInfo.xpForNext} XP
             </span>
           </div>
@@ -287,8 +287,8 @@ export default function ProfilPage() {
                     initial={{ width: 0 }}
                     animate={{ width: `${rank.progressToNext}%` }}
                     transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
-                    className="h-2 rounded-full bg-gradient-to-r from-neon-cyan to-neon-rose"
-                    style={{ boxShadow: "0 0 8px rgba(0, 240, 255, 0.4)" }}
+                    className="h-2 rounded-full bg-gradient-to-r from-neon-green to-neon-red"
+                    style={{ boxShadow: "0 0 8px rgba(0, 255, 65, 0.4)" }}
                   />
                 </div>
               </div>
@@ -311,9 +311,9 @@ export default function ProfilPage() {
       {/* ── STATS CARDS ── */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
-          { icon: "📝", label: "Questions Répondues", value: progress.totalPlayed.toLocaleString(), color: "text-neon-cyan", glow: "neon-cyan" },
+          { icon: "📝", label: "Questions Répondues", value: progress.totalPlayed.toLocaleString(), color: "text-neon-green", glow: "neon-green" },
           { icon: "🎯", label: "Taux de Réussite", value: `${progress.accuracy}%`, color: progress.accuracy >= 70 ? "text-green-400" : "text-amber-400", glow: progress.accuracy >= 70 ? "green-500" : "amber-500" },
-          { icon: "🔥", label: "Série de Victoires", value: `${progress.globalBestStreak}x`, color: "text-neon-rose", glow: "neon-rose" },
+          { icon: "🔥", label: "Série de Victoires", value: `${progress.globalBestStreak}x`, color: "text-neon-red", glow: "neon-red" },
           { icon: "⏱️", label: "Temps de Jeu", value: totalTimeStr, color: "text-purple-400", glow: "purple-500" },
         ].map((stat, i) => (
           <motion.div
@@ -326,7 +326,7 @@ export default function ProfilPage() {
             <div className={`absolute inset-0 bg-gradient-to-br from-${stat.glow}/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none`} />
             <div className="relative">
               <div className="text-2xl mb-2">{stat.icon}</div>
-              <div className={`text-2xl font-bold ${stat.color} tabular-nums mb-1`}>{stat.value}</div>
+              <div className={`text-2xl font-bold ${stat.color} nums mb-1`}>{stat.value}</div>
               <div className="text-slate-600 text-xs">{stat.label}</div>
             </div>
           </motion.div>
@@ -409,7 +409,7 @@ export default function ProfilPage() {
             <div className="text-center py-8">
               <div className="text-4xl mb-3 opacity-50">📊</div>
               <p className="text-slate-500 text-sm">Joue quelques quiz pour voir tes forces !</p>
-              <Link href="/quiz" className="inline-block mt-3 text-neon-cyan text-sm hover:underline">
+              <Link href="/quiz" className="inline-block mt-3 text-neon-green text-sm hover:underline">
                 Lancer un quiz →
               </Link>
             </div>
@@ -432,7 +432,7 @@ export default function ProfilPage() {
             <div className="text-center py-8">
               <div className="text-4xl mb-3 opacity-50">🎮</div>
               <p className="text-slate-500 text-sm">Aucune partie jou&eacute;e pour le moment</p>
-              <Link href="/quiz" className="inline-block mt-3 text-neon-cyan text-sm hover:underline">
+              <Link href="/quiz" className="inline-block mt-3 text-neon-green text-sm hover:underline">
                 Lance ton premier quiz →
               </Link>
             </div>
@@ -513,8 +513,8 @@ export default function ProfilPage() {
                     </div>
                     <span className={`font-medium flex-1 text-sm ${colors.text}`}>{item.cat}</span>
                     <span className="text-slate-600 text-xs">{item.played}q</span>
-                    <span className={`font-bold text-sm tabular-nums ${
-                      item.accuracy >= 80 ? "text-green-400" : item.accuracy >= 60 ? "text-amber-400" : "text-neon-rose"
+                    <span className={`font-bold text-sm nums ${
+                      item.accuracy >= 80 ? "text-green-400" : item.accuracy >= 60 ? "text-amber-400" : "text-neon-red"
                     }`}>
                       {item.accuracy}%
                     </span>
@@ -527,7 +527,7 @@ export default function ProfilPage() {
 
       {/* Actions */}
       <div className="flex gap-3 mb-10">
-        <Link href="/quiz" className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-rose text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-cyan/15">
+        <Link href="/quiz" className="flex-1 py-3 text-center bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-green/15">
           Lancer un quiz →
         </Link>
         <Link href="/reviser" className="flex-1 py-3 text-center bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors">
@@ -556,8 +556,8 @@ function GameRow({ game, index }: { game: GameHistoryEntry; index: number }) {
     >
       <div className="text-center flex-shrink-0 w-10">
         <div className="text-slate-600 text-[10px]">{formatDate(game.date)}</div>
-        <div className={`text-lg font-bold tabular-nums ${
-          accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-rose"
+        <div className={`text-lg font-bold nums ${
+          accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-red"
         }`}>
           {game.score}/{game.total}
         </div>
@@ -579,8 +579,8 @@ function GameRow({ game, index }: { game: GameHistoryEntry; index: number }) {
           )}
         </div>
       </div>
-      <div className={`text-sm font-bold tabular-nums ${
-        accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-rose"
+      <div className={`text-sm font-bold nums ${
+        accuracy >= 80 ? "text-green-400" : accuracy >= 50 ? "text-amber-400" : "text-neon-red"
       }`}>
         {accuracy}%
       </div>
