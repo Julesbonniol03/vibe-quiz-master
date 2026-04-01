@@ -2,7 +2,7 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, OnlineCount, ActualitesGrid, PaywallMini } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, ActualitesGrid, PaywallMini } from "./DashboardClient";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function loadActualites(): any[] {
@@ -40,43 +40,34 @@ export default function DashboardPage() {
   const actualites = loadActualites();
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      {/* Hero */}
-      <div className="relative overflow-hidden rounded-3xl bg-cyber-900 border border-white/[0.06] p-8 mb-8">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-32 -right-32 w-80 h-80 bg-neon-cyan/[0.04] rounded-full blur-[100px]" />
-          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-neon-rose/[0.04] rounded-full blur-[100px]" />
+    <div className="max-w-2xl mx-auto px-4 py-6">
+      {/* Hero — compact, punchy */}
+      <div className="relative overflow-hidden card-elevated p-6 mb-6">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-24 -right-24 w-56 h-56 bg-neon-cyan/[0.05] rounded-full blur-[80px]" />
+          <div className="absolute -bottom-24 -left-24 w-56 h-56 bg-neon-rose/[0.04] rounded-full blur-[80px]" />
         </div>
-        <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-2xl">👋</span>
-              <span className="text-slate-500 text-sm font-medium">Bienvenue de retour !</span>
-            </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-              Prêt à tester vos{" "}
-              <span className="gradient-text">
-                connaissances ?
-              </span>
-            </h1>
-            <p className="text-slate-500 max-w-md">
-              {totalQ} questions · 3 modes de jeu · Système XP
-            </p>
-            <OnlineCount />
-            <XpBar />
-          </div>
-          <div className="flex gap-3">
+        <div className="relative z-10">
+          <p className="text-slate-600 text-xs font-medium uppercase tracking-widest mb-1">Bienvenue sur</p>
+          <h1 className="text-3xl font-black text-white mb-1 tracking-tight">
+            Teubé<span className="text-neon-cyan">.</span>
+          </h1>
+          <p className="text-slate-500 text-sm mb-4">
+            {totalQ} questions · {categories.length} catégories
+          </p>
+          <XpBar />
+          <div className="flex gap-2.5 mt-5">
             <Link
               href="/quiz"
-              className="px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-semibold rounded-xl hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-neon-cyan/20 whitespace-nowrap"
+              className="flex-1 py-3 text-center bg-gradient-to-r from-neon-cyan to-neon-cyan/80 text-cyber-950 font-bold text-sm rounded-xl hover:opacity-90 transition-all active:scale-[0.97] shadow-lg shadow-neon-cyan/15"
             >
-              Jouer maintenant →
+              Jouer →
             </Link>
             <Link
               href="/leaderboard"
-              className="px-6 py-3 bg-white/[0.04] border border-white/[0.08] text-white font-semibold rounded-xl hover:bg-white/[0.07] transition-all whitespace-nowrap"
+              className="py-3 px-5 bg-white/[0.04] border border-white/[0.08] text-white font-semibold text-sm rounded-xl hover:bg-white/[0.07] transition-all active:scale-[0.97]"
             >
-              Classement 🏆
+              🏆
             </Link>
           </div>
         </div>
