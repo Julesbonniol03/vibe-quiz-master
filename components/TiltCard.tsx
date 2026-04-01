@@ -13,7 +13,7 @@ interface TiltCardProps {
 
 /**
  * Carte avec effet de tilt 3D au survol/toucher.
- * Pivote légèrement vers le pointeur pour un ressenti "physique".
+ * Pivote l&eacute;g&egrave;rement vers le pointeur pour un ressenti "physique".
  */
 export default function TiltCard({ children, className = "", style, tiltMax = 6, glowOnTilt = true }: TiltCardProps) {
   const ref = useRef<HTMLDivElement>(null);
@@ -24,11 +24,15 @@ export default function TiltCard({ children, className = "", style, tiltMax = 6,
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [tiltMax, -tiltMax]), { stiffness: 300, damping: 20 });
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-tiltMax, tiltMax]), { stiffness: 300, damping: 20 });
 
-  // Edge glow position
+  // Edge glow position — hooks called unconditionally
   const glowX = useSpring(useTransform(mouseX, [-0.5, 0.5], [20, 80]), { stiffness: 200, damping: 25 });
   const glowY = useSpring(useTransform(mouseY, [-0.5, 0.5], [20, 80]), { stiffness: 200, damping: 25 });
   const glowOpacity = useMotionValue(0);
   const glowOpacitySmooth = useSpring(glowOpacity, { stiffness: 200, damping: 30 });
+  const glowBackground = useTransform(
+    [glowX, glowY],
+    ([x, y]) => `radial-gradient(circle at ${x}% ${y}%, rgba(0,255,65,0.06) 0%, transparent 60%)`
+  );
 
   function handlePointerMove(e: React.PointerEvent) {
     const el = ref.current;
@@ -67,11 +71,7 @@ export default function TiltCard({ children, className = "", style, tiltMax = 6,
           className="absolute inset-0 rounded-[inherit] pointer-events-none z-10"
           style={{
             opacity: glowOpacitySmooth,
-            background: useTransform(
-              [glowX, glowY],
-              ([x, y]) =>
-                `radial-gradient(circle at ${x}% ${y}%, rgba(0,255,65,0.06) 0%, transparent 60%)`
-            ),
+            background: glowBackground,
           }}
         />
       )}

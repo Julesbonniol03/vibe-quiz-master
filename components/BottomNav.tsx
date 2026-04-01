@@ -35,7 +35,7 @@ export default function BottomNav() {
         >
           {tabs.map(({ href, label, icon: Icon, center, isSheet, id }) => {
             const active = href ? (pathname === href || pathname.startsWith(href + "/")) : false;
-            const isProfilActive = isSheet && profilOpen;
+            const isProfilActive = !!isSheet && profilOpen;
 
             // Center "play" button
             if (center) {

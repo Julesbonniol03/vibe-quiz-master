@@ -17,7 +17,7 @@ interface Props {
  * Affiche avatar, niveau, XP, c\u0153urs et liens rapides.
  */
 export default function ProfileSheet({ onNavigate }: Props) {
-  const { hydrated, xp, accuracy, totalPlayed, gamesPlayed, dailyStreak } = useProgress();
+  const { hydrated, xp, accuracy, gamesPlayed, dailyStreak } = useProgress();
   const { profile, hydrated: profileHydrated } = useProfile();
   const heartsSystem = useHearts();
 

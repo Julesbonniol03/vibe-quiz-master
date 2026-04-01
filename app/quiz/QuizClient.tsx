@@ -1234,28 +1234,23 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           const isCorrect = i === currentQ.correctIndex;
           const optionLabel = ["A", "B", "C", "D"][i];
 
-          let bgClass: string;
           let borderClass: string;
           let textClass: string;
           let glowStyle = {};
 
           if (phase === "answered") {
             if (isCorrect) {
-              bgClass = "bg-green-500/10";
               borderClass = "border-green-500/50";
               textClass = "text-green-300";
               glowStyle = { boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)" };
             } else if (isSelected && !isCorrect) {
-              bgClass = "bg-neon-red/10";
               borderClass = "border-neon-red/40";
               textClass = "text-neon-red";
             } else {
-              bgClass = "bg-white/[0.01]";
               borderClass = "border-white/[0.05]";
               textClass = "text-slate-600";
             }
           } else {
-            bgClass = "bg-white/[0.02]";
             borderClass = "border-white/[0.06]";
             textClass = "text-slate-300";
           }

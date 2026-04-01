@@ -36,7 +36,6 @@ function loadCategories() {
 
 /* ─── Bento tile glass style ─── */
 const TILE_BASE = "relative overflow-hidden rounded-2xl backdrop-blur-xl border border-white/[0.04] transition-all hover:scale-[1.015] active:scale-[0.985]";
-const TILE_GLASS = "background: rgba(255,255,255,0.025); backdrop-filter: blur(24px) saturate(1.2);";
 const TILE_SHADOW = "0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.06), inset 0 0 0 1px rgba(255,255,255,0.02)";
 
 export default function DashboardPage() {
