@@ -1,18 +1,21 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import BottomSheet from "@/components/BottomSheet";
+import ProfileSheet from "@/components/ProfileSheet";
 
 const tabs = [
-  { href: "/dashboard",   label: "Accueil",     icon: HomeIcon },
-  { href: "/leaderboard", label: "Classement",  icon: TrophyIcon },
-  { href: "/quiz",        label: "Jouer",       icon: PlayIcon, center: true },
-  { href: "/premium",     label: "Boutique",    icon: CrownIcon },
-  { href: "/profil",      label: "Profil",      icon: ProfileIcon },
+  { href: "/dashboard",   label: "Accueil",    icon: HomeIcon,   id: "home" },
+  { href: "/quiz",        label: "D\u00e9fis",      icon: PlayIcon,   id: "defis",  center: true },
+  { href: "/premium",     label: "Boutique",   icon: CrownIcon,  id: "boutique" },
+  { href: null,           label: "Profil",     icon: ProfileIcon, id: "profil", isSheet: true },
 ];
 
 export default function BottomNav() {
   const pathname = usePathname();
+  const [profilOpen, setProfilOpen] = useState(false);
 
   // Hide on quiz playing to avoid accidental navigation
   if (pathname === "/quiz" && typeof window !== "undefined") {
@@ -21,85 +24,114 @@ export default function BottomNav() {
   }
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-      <div
-        className="mx-2 mb-1 rounded-2xl bg-obsidian-900/95 backdrop-blur-3xl border border-white/[0.04] flex items-end"
-        style={{
-          paddingBottom: "max(4px, env(safe-area-inset-bottom, 0px))",
-          boxShadow: "0 -4px 40px rgba(0,0,0,0.5), 0 -1px 0 rgba(255,255,255,0.03), inset 0 1px 0 rgba(255,255,255,0.04)",
-        }}
-      >
-        {tabs.map(({ href, label, icon: Icon, center }) => {
-          const active = pathname === href || pathname.startsWith(href + "/");
+    <>
+      <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
+        <div
+          className="mx-2 mb-1 rounded-2xl bg-obsidian-900/95 backdrop-blur-3xl border border-white/[0.04] flex items-end"
+          style={{
+            paddingBottom: "max(4px, env(safe-area-inset-bottom, 0px))",
+            boxShadow: "0 -4px 40px rgba(0,0,0,0.5), 0 -1px 0 rgba(255,255,255,0.03), inset 0 1px 0 rgba(255,255,255,0.04)",
+          }}
+        >
+          {tabs.map(({ href, label, icon: Icon, center, isSheet, id }) => {
+            const active = href ? (pathname === href || pathname.startsWith(href + "/")) : false;
+            const isProfilActive = isSheet && profilOpen;
 
-          if (center) {
-            return (
-              <Link key={href} href={href} className="flex flex-col items-center flex-1 -mt-4 pb-1">
-                <motion.div
-                  whileTap={{ scale: 0.9 }}
-                  className={`w-14 h-14 rounded-[18px] flex items-center justify-center transition-all duration-300 ${
-                    active
-                      ? "bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red scale-105"
-                      : "bg-obsidian-700 border border-white/[0.06]"
-                  }`}
-                  style={active ? {
-                    boxShadow: "0 0 20px rgba(0,255,65,0.25), 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)",
-                  } : {
-                    boxShadow: "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
-                  }}
+            // Center "play" button
+            if (center) {
+              return (
+                <Link key={id} href={href!} className="flex flex-col items-center flex-1 -mt-4 pb-1">
+                  <motion.div
+                    whileTap={{ scale: 0.9 }}
+                    className={`w-14 h-14 rounded-[18px] flex items-center justify-center transition-all duration-300 ${
+                      active
+                        ? "bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red scale-105"
+                        : "bg-obsidian-700 border border-white/[0.06]"
+                    }`}
+                    style={active ? {
+                      boxShadow: "0 0 20px rgba(0,255,65,0.25), 0 8px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15)",
+                    } : {
+                      boxShadow: "0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.04)",
+                    }}
+                  >
+                    <Icon size={22} active={active} />
+                  </motion.div>
+                  <span className={`text-[9px] font-semibold mt-1 transition-colors ${active ? "text-neon-green" : "text-slate-600"}`}>
+                    {label}
+                  </span>
+                </Link>
+              );
+            }
+
+            // Profile tab → opens bottom sheet
+            if (isSheet) {
+              return (
+                <button
+                  key={id}
+                  onClick={() => setProfilOpen(true)}
+                  className="flex flex-col items-center justify-center gap-1 flex-1 py-2.5"
                 >
-                  <Icon size={22} active={active} />
-                </motion.div>
-                <span className={`text-[9px] font-semibold mt-1 transition-colors ${active ? "text-neon-green" : "text-slate-600"}`}>
+                  <div className="relative flex items-center justify-center w-9 h-9">
+                    {isProfilActive && (
+                      <div
+                        className="absolute inset-0 rounded-xl bg-neon-green/[0.08] border border-neon-green/[0.1]"
+                        style={{ boxShadow: "0 0 8px rgba(0,255,65,0.06)" }}
+                      />
+                    )}
+                    <div className="relative z-10">
+                      <Icon size={20} active={isProfilActive} />
+                    </div>
+                  </div>
+                  <span className={`text-[10px] font-medium leading-none transition-colors ${
+                    isProfilActive ? "text-neon-green" : "text-slate-600"
+                  }`}>
+                    {label}
+                  </span>
+                </button>
+              );
+            }
+
+            // Regular nav tab
+            return (
+              <Link key={id} href={href!} className="flex flex-col items-center justify-center gap-1 flex-1 py-2.5">
+                <div className="relative flex items-center justify-center w-9 h-9">
+                  {active && (
+                    <motion.div
+                      layoutId="bottomnav-active"
+                      className="absolute inset-0 rounded-xl bg-neon-green/[0.08] border border-neon-green/[0.1]"
+                      transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                      style={{ boxShadow: "0 0 8px rgba(0,255,65,0.06)" }}
+                    />
+                  )}
+                  <div className="relative z-10">
+                    <Icon size={20} active={active} />
+                  </div>
+                </div>
+                <span className={`text-[10px] font-medium leading-none transition-colors ${
+                  active ? "text-neon-green" : "text-slate-600"
+                }`}>
                   {label}
                 </span>
               </Link>
             );
-          }
+          })}
+        </div>
+      </nav>
 
-          return (
-            <Link key={href} href={href} className="flex flex-col items-center justify-center gap-1 flex-1 py-2.5">
-              <div className="relative flex items-center justify-center w-9 h-9">
-                {active && (
-                  <motion.div
-                    layoutId="bottomnav-active"
-                    className="absolute inset-0 rounded-xl bg-neon-green/[0.08] border border-neon-green/[0.1]"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
-                    style={{ boxShadow: "0 0 8px rgba(0,255,65,0.06)" }}
-                  />
-                )}
-                <div className="relative z-10">
-                  <Icon size={20} active={active} />
-                </div>
-              </div>
-              <span className={`text-[10px] font-medium leading-none transition-colors ${
-                active ? "text-neon-green" : "text-slate-600"
-              }`}>
-                {label}
-              </span>
-            </Link>
-          );
-        })}
-      </div>
-    </nav>
+      {/* Profile Bottom Sheet */}
+      <BottomSheet open={profilOpen} onClose={() => setProfilOpen(false)} title="Profil" height="half">
+        <ProfileSheet onNavigate={() => setProfilOpen(false)} />
+      </BottomSheet>
+    </>
   );
 }
 
-/* ── SVG icons with smooth active states ── */
+/* ── SVG icons with smooth active states — n\u00e9on ── */
 function HomeIcon({ size, active }: { size: number; active: boolean }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,255,65,0.15)" : "none"} stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" />
       <path d="M9 21V12h6v9" />
-    </svg>
-  );
-}
-function TrophyIcon({ size, active }: { size: number; active: boolean }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
-      <path d="M6 9H3V4h3M18 9h3V4h-3" />
-      <path d="M6 4h12v6a6 6 0 01-12 0V4z" />
-      <path d="M12 15v3M8 21h8" />
     </svg>
   );
 }

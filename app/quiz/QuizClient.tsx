@@ -1357,16 +1357,22 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     {currentQ.explanation}
                   </p>
                 </motion.div>
-                <motion.button
-                  initial={{ opacity: 0, y: 8 }}
+                {/* Zone de pouce — bouton fixe en bas */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  onClick={() => { handleNext(); setIsAnswering(false); }}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 0 40px rgba(255, 0, 60, 0.1)" }}
+                  transition={{ delay: 0.2 }}
+                  className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:static md:p-0 md:mt-3"
+                  style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}
                 >
-                  Continuer →
-                </motion.button>
+                  <button
+                    onClick={() => { handleNext(); setIsAnswering(false); }}
+                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all active:scale-[0.97]"
+                    style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 -4px 20px rgba(0,0,0,0.3)" }}
+                  >
+                    Continuer →
+                  </button>
+                </motion.div>
               </>
             ) : selectedOption === currentQ.correctIndex ? (
               /* ── Correct: brief congrats + auto-advance 1.2s ── */
@@ -1425,21 +1431,31 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                     <span className="text-amber-400/40 text-xs font-bold">👑 PRO</span>
                   </Link>
                 )}
-                <motion.button
-                  initial={{ opacity: 0, y: 8 }}
+                {/* Zone de pouce — bouton fixe en bas */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  onClick={() => { handleNext(); setIsAnswering(false); }}
-                  className="w-full py-3 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all"
-                  style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 0 40px rgba(255, 0, 60, 0.1)" }}
+                  transition={{ delay: 0.2 }}
+                  className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:static md:p-0 md:mt-3"
+                  style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}
                 >
-                  Continuer →
-                </motion.button>
+                  <button
+                    onClick={() => { handleNext(); setIsAnswering(false); }}
+                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all active:scale-[0.97]"
+                    style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 -4px 20px rgba(0,0,0,0.3)" }}
+                  >
+                    Continuer →
+                  </button>
+                </motion.div>
               </>
             )}
           </motion.div>
         )}
       </AnimatePresence>
+      {/* Spacer pour le bouton fixe en bas (timeout + mauvaise r\u00e9ponse) */}
+      {phase === "answered" && selectedOption !== currentQ.correctIndex && (
+        <div className="h-24 md:hidden" />
+      )}
     </div>
   );
 }
