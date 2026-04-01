@@ -283,6 +283,11 @@ body::after {
 }
 .animate-breathe { animation: breathe 4s ease-in-out infinite; }
 
+/* ─── Quiz: boutons liquides hover fill ─── */
+button:hover .hover-fill {
+  opacity: 1 !important;
+}
+
 /* ─── Safe areas ─── */
 .safe-main {
   padding-top: env(safe-area-inset-top, 0px);

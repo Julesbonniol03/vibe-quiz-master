@@ -1114,36 +1114,49 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         </button>
       </div>
 
-      {/* Glowing progress bar */}
+      {/* ── Ligne de progression glow fixe en haut de l'écran ── */}
       {(gameMode === "classique" || gameMode === "daily") && (
-        <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
+        <div className="fixed top-0 left-0 right-0 z-[60] h-[2px] bg-white/[0.03]">
           <motion.div
-            className="h-1.5 rounded-full bg-gradient-to-r from-neon-green to-neon-red animate-glow-bar"
+            className="h-full"
             animate={{ width: `${progressPercent}%` }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
             style={{
-              boxShadow: "0 0 10px rgba(0, 255, 65, 0.4), 0 0 25px rgba(0, 255, 65, 0.15)",
+              background: "linear-gradient(90deg, #00FF41, #00FF41)",
+              boxShadow: "0 0 8px rgba(0,255,65,0.6), 0 0 20px rgba(0,255,65,0.3), 0 1px 4px rgba(0,255,65,0.4)",
+            }}
+          />
+          {/* Particule lumineuse au bout de la barre */}
+          <motion.div
+            className="absolute top-0 h-[2px] w-8"
+            animate={{ left: `${progressPercent}%` }}
+            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+            style={{
+              transform: "translateX(-100%)",
+              background: "linear-gradient(90deg, transparent, rgba(0,255,65,0.8), white)",
+              boxShadow: "0 0 12px rgba(0,255,65,0.8)",
+              borderRadius: "0 1px 1px 0",
             }}
           />
         </div>
       )}
 
-      {/* Blitz progress bar (time-based) */}
+      {/* Blitz progress bar — ligne fixe en haut */}
       {gameMode === "blitz" && (
-        <div className="w-full bg-white/[0.06] rounded-full h-1.5 mb-6 overflow-hidden">
+        <div className="fixed top-0 left-0 right-0 z-[60] h-[2px] bg-white/[0.03]">
           <motion.div
-            className="h-1.5 rounded-full"
+            className="h-full"
             animate={{ width: `${(blitzTimeLeft / BLITZ_DURATION) * 100}%` }}
             transition={{ duration: 1, ease: "linear" }}
             style={{
               background: blitzTimeLeft <= 10
-                ? "linear-gradient(90deg, #FF003C, #ff6b9d)"
+                ? "#FF003C"
                 : blitzTimeLeft <= 20
-                ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                : "linear-gradient(90deg, #f59e0b, #00FF41)",
+                ? "#f59e0b"
+                : "#00FF41",
               boxShadow: blitzTimeLeft <= 10
-                ? "0 0 12px rgba(255, 0, 60, 0.6)"
-                : "0 0 10px rgba(245, 158, 11, 0.4)",
+                ? "0 0 8px rgba(255,0,60,0.6), 0 0 20px rgba(255,0,60,0.3), 0 1px 4px rgba(255,0,60,0.4)"
+                : "0 0 8px rgba(0,255,65,0.6), 0 0 20px rgba(0,255,65,0.3), 0 1px 4px rgba(0,255,65,0.4)",
             }}
           />
         </div>
@@ -1168,40 +1181,49 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             <span className={`text-xs font-medium ${diffColors.text}`}>{diffColors.label}</span>
           </div>
 
-          {/* Per-question timer */}
-          <div className="mb-6">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-slate-600 text-xs">Temps restant</span>
-              <span
-                className={`text-sm font-bold nums ${
-                  timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
-                } ${phase === "answered" ? "opacity-30" : ""}`}
-              >
-                {phase === "answered" ? "—" : `${timeLeft}s`}
-              </span>
+          {/* Per-question timer — cercle SVG qui se consume */}
+          <div className="flex items-center gap-4 mb-6">
+            <div className="relative w-14 h-14 flex-shrink-0">
+              {/* Background circle */}
+              <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+                <circle
+                  cx="28" cy="28" r="24"
+                  fill="none"
+                  stroke="rgba(255,255,255,0.06)"
+                  strokeWidth="3"
+                />
+                {/* Consuming arc */}
+                <circle
+                  cx="28" cy="28" r="24"
+                  fill="none"
+                  stroke={timerUrgent ? "#FF003C" : timerWarn ? "#f59e0b" : "#00FF41"}
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeDasharray={`${2 * Math.PI * 24}`}
+                  strokeDashoffset={`${2 * Math.PI * 24 * (1 - (phase === "answered" ? 0 : timerPercent / 100))}`}
+                  style={{
+                    transition: "stroke-dashoffset 1s linear, stroke 0.3s ease",
+                    filter: timerUrgent
+                      ? "drop-shadow(0 0 6px rgba(255,0,60,0.6))"
+                      : timerWarn
+                      ? "drop-shadow(0 0 4px rgba(245,158,11,0.4))"
+                      : "drop-shadow(0 0 4px rgba(0,255,65,0.4))",
+                  }}
+                />
+              </svg>
+              {/* Seconds in center */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className={`text-sm font-bold nums ${
+                  phase === "answered" ? "text-slate-600" : timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
+                }`}>
+                  {phase === "answered" ? "—" : timeLeft}
+                </span>
+              </div>
             </div>
-            <div className="w-full bg-white/[0.06] rounded-full h-2 overflow-hidden">
-              <div
-                className="h-2 rounded-full transition-all duration-1000 ease-linear"
-                style={{
-                  width: phase === "answered" ? "0%" : `${timerPercent}%`,
-                  background: timerUrgent
-                    ? "linear-gradient(90deg, #FF003C, #ff6b9d)"
-                    : timerWarn
-                    ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                    : "linear-gradient(90deg, #00FF41, #00c8d4)",
-                  boxShadow: timerUrgent
-                    ? "0 0 12px rgba(255, 0, 60, 0.6), 0 0 30px rgba(255, 0, 60, 0.2)"
-                    : timerWarn
-                    ? "0 0 12px rgba(245, 158, 11, 0.5)"
-                    : "0 0 12px rgba(0, 255, 65, 0.5), 0 0 30px rgba(0, 255, 65, 0.15)",
-                }}
-              />
-            </div>
-          </div>
 
-          {/* Question */}
-          <h2 className="text-xl font-semibold text-white leading-relaxed">{currentQ.question}</h2>
+            {/* Question */}
+            <h2 className="text-xl font-semibold text-white leading-relaxed flex-1">{currentQ.question}</h2>
+          </div>
         </motion.div>
       </AnimatePresence>
 
@@ -1245,16 +1267,40 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.06, duration: 0.25 }}
               whileHover={phase !== "answered" ? { scale: 1.01, x: 4 } : undefined}
-              whileTap={phase !== "answered" ? { scale: 0.98 } : undefined}
+              whileTap={phase !== "answered" ? { scale: 0.97 } : undefined}
               onClick={() => handleAnswer(i)}
               disabled={phase === "answered" || isAnswering}
-              className={`w-full p-4 rounded-2xl border-2 text-left font-medium transition-colors flex items-center gap-3 ${bgClass} ${borderClass} ${textClass} ${
-                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-green/30 hover:bg-neon-green/5" : ""
+              className={`relative w-full p-4 rounded-2xl border-2 text-left font-medium flex items-center gap-3 overflow-hidden ${borderClass} ${textClass} ${
+                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-green/30" : ""
               }`}
               style={glowStyle}
             >
+              {/* Liquid fill background — remplit de couleur au clic */}
+              <motion.div
+                className="absolute inset-0 rounded-2xl pointer-events-none"
+                initial={{ scaleX: 0 }}
+                animate={{
+                  scaleX: phase === "answered" && isSelected ? 1 : phase === "answered" && isCorrect ? 1 : 0,
+                }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+                style={{
+                  transformOrigin: "left center",
+                  background: phase === "answered" && isCorrect
+                    ? "linear-gradient(90deg, rgba(34,197,94,0.12), rgba(34,197,94,0.04))"
+                    : phase === "answered" && isSelected && !isCorrect
+                    ? "linear-gradient(90deg, rgba(255,0,60,0.12), rgba(255,0,60,0.04))"
+                    : "linear-gradient(90deg, rgba(0,255,65,0.08), rgba(0,255,65,0.02))",
+                }}
+              />
+              {/* Idle hover fill — subtle energy charge on hover */}
+              {phase !== "answered" && (
+                <div
+                  className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 hover-fill transition-opacity duration-300"
+                  style={{ background: `linear-gradient(90deg, rgba(0,255,65,0.05), transparent)` }}
+                />
+              )}
               <span
-                className={`w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold border ${
+                className={`relative z-10 w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold border transition-all duration-300 ${
                   phase === "answered" && isCorrect
                     ? "bg-green-500/20 border-green-500/50 text-green-300"
                     : phase === "answered" && isSelected && !isCorrect
@@ -1268,9 +1314,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   ? "✗"
                   : optionLabel}
               </span>
-              <span className="flex-1">{option}</span>
+              <span className="relative z-10 flex-1">{option}</span>
               {phase === "answered" && isCorrect && !isSelected && (
-                <span className="text-green-400/70 text-sm">← Bonne réponse</span>
+                <span className="relative z-10 text-green-400/70 text-sm">← Bonne r&eacute;ponse</span>
               )}
             </motion.button>
           );
