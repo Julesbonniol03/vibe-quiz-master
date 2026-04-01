@@ -2,7 +2,7 @@ import Link from "next/link";
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import { categoryColors } from "@/lib/questions";
-import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, ActualitesGrid, PaywallMini } from "./DashboardClient";
+import { StatsGrid, XpBar, RevisionCta, DailyBanner, DailyOdyssey, ActualitesGrid, PaywallMini, BentoTile, NeonLink } from "./DashboardClient";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function loadActualites(): any[] {
@@ -72,13 +72,13 @@ export default function DashboardPage() {
           </p>
           <XpBar />
           <div className="flex gap-2.5 mt-5">
-            <Link
+            <NeonLink
               href="/quiz"
               className="flex-1 py-3 text-center bg-gradient-to-r from-neon-green to-neon-green/70 text-obsidian-950 font-bold text-sm rounded-xl hover:brightness-110 transition-all active:scale-[0.97]"
               style={{ boxShadow: "0 0 24px rgba(0,255,65,0.18), 0 4px 16px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2)" }}
             >
               Jouer →
-            </Link>
+            </NeonLink>
             <Link
               href="/leaderboard"
               className="py-3 px-5 bg-white/[0.03] border border-white/[0.06] text-white font-semibold text-sm rounded-xl hover:bg-white/[0.06] transition-all active:scale-[0.97]"
@@ -98,8 +98,7 @@ export default function DashboardPage() {
           const cat = featured.find((c) => c.name.includes("Actualit")) || featured[0];
           const colors = categoryColors[cat.name] || { bg: "bg-lime-500/20", text: "text-lime-400", border: "border-lime-500/30", icon: "📰" };
           return (
-            <Link
-              key={cat.name}
+            <BentoTile
               href={`/quiz?category=${cat.name}`}
               className={`${TILE_BASE} col-span-2 row-span-2 p-6 group`}
               style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -134,7 +133,7 @@ export default function DashboardPage() {
                   />
                 </div>
               </div>
-            </Link>
+            </BentoTile>
           );
         })()}
 
@@ -191,8 +190,7 @@ export default function DashboardPage() {
           if (!cat) return null;
           const colors = categoryColors[cat.name] || { bg: "bg-blue-600/20", text: "text-blue-300", border: "border-blue-500/30", icon: "📝" };
           return (
-            <Link
-              key={cat.name}
+            <BentoTile
               href={`/quiz?category=${cat.name}`}
               className={`${TILE_BASE} col-span-2 row-span-2 p-6 group`}
               style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -225,12 +223,12 @@ export default function DashboardPage() {
                   />
                 </div>
               </div>
-            </Link>
+            </BentoTile>
           );
         })()}
 
         {/* ── 3 Modes de jeu (colonne droite, empilés) ── */}
-        <Link
+        <BentoTile
           href="/quiz?mode=classique"
           className={`${TILE_BASE} col-span-1 p-4 group`}
           style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -241,9 +239,9 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold text-neon-green mb-0.5">Classique</h3>
             <p className="text-slate-600 text-[11px] leading-tight">10 questions &middot; 15s</p>
           </div>
-        </Link>
+        </BentoTile>
 
-        <Link
+        <BentoTile
           href="/quiz?mode=blitz"
           className={`${TILE_BASE} col-span-1 p-4 group`}
           style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -254,9 +252,9 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold text-amber-400 mb-0.5">Blitz</h3>
             <p className="text-slate-600 text-[11px] leading-tight">60s chrono</p>
           </div>
-        </Link>
+        </BentoTile>
 
-        <Link
+        <BentoTile
           href="/quiz?mode=mort-subite"
           className={`${TILE_BASE} col-span-1 p-4 group`}
           style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -267,9 +265,9 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold text-neon-red mb-0.5">Mort Subite</h3>
             <p className="text-slate-600 text-[11px] leading-tight">0 erreur tol&eacute;r&eacute;e</p>
           </div>
-        </Link>
+        </BentoTile>
 
-        <Link
+        <BentoTile
           href="/quiz?mode=daily"
           className={`${TILE_BASE} col-span-1 p-4 group`}
           style={{ background: "rgba(255,255,255,0.025)", boxShadow: TILE_SHADOW }}
@@ -280,7 +278,7 @@ export default function DashboardPage() {
             <h3 className="text-sm font-bold text-purple-400 mb-0.5">D&eacute;fi du Jour</h3>
             <p className="text-slate-600 text-[11px] leading-tight">5 questions</p>
           </div>
-        </Link>
+        </BentoTile>
       </div>
 
       {/* ═══════ ACTUALITÉS DU JOUR ═══════ */}

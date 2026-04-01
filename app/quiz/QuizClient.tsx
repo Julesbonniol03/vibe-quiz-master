@@ -12,6 +12,7 @@ import confetti from "canvas-confetti";
 import { useAchievements, evaluateAchievements } from "@/hooks/useAchievements";
 import { useHearts } from "@/hooks/useHearts";
 import AchievementToast from "@/components/AchievementToast";
+import HeartBar from "@/components/HeartBar";
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
 type Difficulty = "easy" | "medium" | "hard";
@@ -673,16 +674,15 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
 
         {/* Hearts indicator */}
         <div className="flex items-center justify-center gap-1.5 mb-6">
-          {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
-            <span key={i} className="text-lg">
-              {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
-            </span>
-          ))}
-          {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
-            <span className="text-xs text-slate-500 ml-2 nums">+1 dans {heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
-          )}
+          <HeartBar
+            hearts={heartsSystem.hearts}
+            maxHearts={heartsSystem.maxHearts}
+            premium={heartsSystem.premium}
+            size="lg"
+            showRegen={!heartsSystem.premium && heartsSystem.nextRegenIn > 0 ? `+1 dans ${heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}` : undefined}
+          />
           {heartsSystem.premium && (
-            <span className="text-xs text-amber-400 ml-2 font-bold">Vies illimitées ✦</span>
+            <span className="text-xs text-amber-400 ml-2 font-bold">Vies illimit&eacute;es ✦</span>
           )}
         </div>
 
@@ -1006,20 +1006,37 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </div>
           {/* Hearts */}
           <div className={`glass-card !rounded-xl px-3 py-2 flex items-center gap-1 transition-all ${heartLostAnim ? "border-neon-red/50 bg-neon-red/10" : ""}`}>
-            {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
-              <motion.span
-                key={i}
-                animate={heartLostAnim && i === heartsSystem.hearts ? { scale: [1, 1.5, 0], opacity: [1, 1, 0] } : {}}
-                transition={{ duration: 0.4 }}
-                className="text-sm"
-              >
-                {i < heartsSystem.hearts ? (
-                  heartsSystem.premium ? "💛" : "❤️"
-                ) : (
-                  <span className="opacity-20">🖤</span>
-                )}
-              </motion.span>
-            ))}
+            {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => {
+              const isFilled = i < heartsSystem.hearts;
+              const isLastHeart = heartsSystem.hearts === 1 && i === 0 && !heartsSystem.premium;
+              return (
+                <motion.span
+                  key={i}
+                  animate={
+                    heartLostAnim && i === heartsSystem.hearts
+                      ? { scale: [1, 1.5, 0], opacity: [1, 1, 0] }
+                      : isLastHeart && isFilled
+                      ? { scale: [1, 1.3, 1, 1.25, 1] }
+                      : {}
+                  }
+                  transition={
+                    heartLostAnim && i === heartsSystem.hearts
+                      ? { duration: 0.4 }
+                      : isLastHeart && isFilled
+                      ? { duration: 1.2, repeat: Infinity, ease: "easeInOut" }
+                      : { duration: 0.4 }
+                  }
+                  className="text-sm"
+                  style={isLastHeart && isFilled ? { filter: "drop-shadow(0 0 4px rgba(255,0,60,0.5))" } : undefined}
+                >
+                  {isFilled ? (
+                    heartsSystem.premium ? "\uD83D\uDC9B" : "\u2764\uFE0F"
+                  ) : (
+                    <span className="opacity-20">{"\uD83D\uDDA4"}</span>
+                  )}
+                </motion.span>
+              );
+            })}
             {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
               <span className="text-[10px] text-slate-500 ml-1 nums">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
             )}

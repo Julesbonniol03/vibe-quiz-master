@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, type ReactNode, type CSSProperties } from "react";
 import { useProgress } from "@/hooks/useProgress";
 import { useHearts } from "@/hooks/useHearts";
 import { useNotifications } from "@/hooks/useNotifications";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import TiltCard from "@/components/TiltCard";
+import NeonRipple from "@/components/NeonRipple";
 
 export function StatsGrid() {
   const { hydrated, levelInfo, gamesPlayed, globalBestStreak, accuracy, totalPlayed, dailyStreak } = useProgress();
@@ -450,6 +452,28 @@ export function ActualitesGrid({ items }: { items: ActualiteItem[] }) {
         {selected && <ActualitesModal item={selected} onClose={() => setSelected(null)} />}
       </AnimatePresence>
     </>
+  );
+}
+
+// ─── BENTO TILE (client wrapper with TiltCard) ───
+export function BentoTile({ children, className = "", style, href }: { children: ReactNode; className?: string; style?: CSSProperties; href: string }) {
+  return (
+    <TiltCard className={className} style={style} tiltMax={5}>
+      <Link href={href} className="block h-full">
+        {children}
+      </Link>
+    </TiltCard>
+  );
+}
+
+// ─── NEON LINK BUTTON (with ripple effect) ───
+export function NeonLink({ children, href, className = "", style }: { children: ReactNode; href: string; className?: string; style?: CSSProperties }) {
+  return (
+    <Link href={href} className="block">
+      <NeonRipple className={className} style={style}>
+        {children}
+      </NeonRipple>
+    </Link>
   );
 }
 

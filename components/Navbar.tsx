@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import HeartBar from "@/components/HeartBar";
 import { usePathname } from "next/navigation";
 import { useProfile } from "@/hooks/useProfile";
 import { getAvatarById } from "@/components/OnboardingModal";
@@ -55,16 +56,12 @@ export default function Navbar() {
           )}
           {/* Hearts */}
           {heartsSystem.hydrated && (
-            <div className="flex items-center gap-0.5">
-              {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => (
-                <span key={i} className="text-xs">
-                  {i < heartsSystem.hearts ? (heartsSystem.premium ? "💛" : "❤️") : <span className="opacity-20">🖤</span>}
-                </span>
-              ))}
-              {heartsSystem.premium && (
-                <span className="text-[9px] text-amber-400 ml-0.5 font-bold">∞</span>
-              )}
-            </div>
+            <HeartBar
+              hearts={heartsSystem.hearts}
+              maxHearts={heartsSystem.maxHearts}
+              premium={heartsSystem.premium}
+              size="sm"
+            />
           )}
         </div>
 
