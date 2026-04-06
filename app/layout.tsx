@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -66,6 +67,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className="dark">
       <body className="antialiased bg-obsidian-950 text-slate-100 min-h-screen">
+        <Script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3109961148486262"
+  crossorigin="anonymous"
+  strategy="afterInteractive"
+/>
         <AuthProvider>
           <SplashScreen />
           <OnboardingModal />
