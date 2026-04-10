@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const KEY_SPLASH_SEEN = "vqm_splash_seen";
+const KEY_SPLASH_SEEN = "inkult_splash_seen";
 
 export default function SplashScreen() {
   const [visible, setVisible] = useState(false);

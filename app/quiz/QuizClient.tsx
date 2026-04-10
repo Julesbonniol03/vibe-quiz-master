@@ -1737,7 +1737,7 @@ function ShareScoreCard({
 }
 
 // ─── WHY PANEL (explanation for wrong answers) ───
-const KEY_PREMIUM = "vqm_premium";
+const KEY_PREMIUM = "inkult_premium";
 
 function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: number | null | undefined }) {
   const [isPremium, setIsPremium] = useState(false);

@@ -26,7 +26,7 @@ export default function ConnexionPage() {
   const hasLocalXp = (() => {
     if (typeof window === "undefined") return false;
     try {
-      return (JSON.parse(localStorage.getItem("vqm_xp") || "0")) > 0;
+      return (JSON.parse(localStorage.getItem("inkult_xp") || "0")) > 0;
     } catch { return false; }
   })();
 

@@ -126,16 +126,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     let localSpeedRecord = { totalTime: 0, totalAnswered: 0, bestAvg: 0 };
 
     try {
-      localXp = JSON.parse(localStorage.getItem("vqm_xp") || "0");
-      localGames = JSON.parse(localStorage.getItem("vqm_games") || "0");
-      localPlayed = JSON.parse(localStorage.getItem("vqm_played") || "0");
-      localCorrect = JSON.parse(localStorage.getItem("vqm_correct") || "0");
-      localBestStreak = JSON.parse(localStorage.getItem("vqm_best_streak") || "0");
-      localDailyStreak = JSON.parse(localStorage.getItem("vqm_daily_streak") || "0");
-      localDailyLastDate = localStorage.getItem("vqm_daily_last_date") || "";
-      localDailyCompleted = localStorage.getItem("vqm_daily_completed") || "";
-      localCategoryStats = JSON.parse(localStorage.getItem("vqm_category_stats") || "{}");
-      localSpeedRecord = JSON.parse(localStorage.getItem("vqm_speed_records") || '{"totalTime":0,"totalAnswered":0,"bestAvg":0}');
+      localXp = JSON.parse(localStorage.getItem("inkult_xp") || "0");
+      localGames = JSON.parse(localStorage.getItem("inkult_games") || "0");
+      localPlayed = JSON.parse(localStorage.getItem("inkult_played") || "0");
+      localCorrect = JSON.parse(localStorage.getItem("inkult_correct") || "0");
+      localBestStreak = JSON.parse(localStorage.getItem("inkult_best_streak") || "0");
+      localDailyStreak = JSON.parse(localStorage.getItem("inkult_daily_streak") || "0");
+      localDailyLastDate = localStorage.getItem("inkult_daily_last_date") || "";
+      localDailyCompleted = localStorage.getItem("inkult_daily_completed") || "";
+      localCategoryStats = JSON.parse(localStorage.getItem("inkult_category_stats") || "{}");
+      localSpeedRecord = JSON.parse(localStorage.getItem("inkult_speed_records") || '{"totalTime":0,"totalAnswered":0,"bestAvg":0}');
     } catch { /* ignore */ }
 
     console.log("[Auth] Local XP to migrate:", localXp);

@@ -4,8 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import { LocalNotifications } from "@capacitor/local-notifications";
 import { motion, AnimatePresence } from "framer-motion";
 
-const KEY_NOTIF_PERMISSION = "vqm_notif_granted";
-const KEY_NOTIF_DISMISSED = "vqm_notif_dismissed";
+const KEY_NOTIF_PERMISSION = "inkult_notif_granted";
+const KEY_NOTIF_DISMISSED = "inkult_notif_dismissed";
 
 // ─── Schedule local notifications (works on web + native) ───
 

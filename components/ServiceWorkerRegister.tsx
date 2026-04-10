@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const KEY_PREFETCHED = "vqm_questions_prefetched";
+const KEY_PREFETCHED = "inkult_questions_prefetched";
 
 export function ServiceWorkerRegister() {
   useEffect(() => {

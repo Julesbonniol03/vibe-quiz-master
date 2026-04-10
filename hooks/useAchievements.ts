@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const KEY_ACHIEVEMENTS = "vqm_achievements";
+const KEY_ACHIEVEMENTS = "inkult_achievements";
 
 export interface Achievement {
   id: string;

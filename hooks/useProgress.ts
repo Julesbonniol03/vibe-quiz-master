@@ -2,21 +2,21 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useOptionalAuth } from "@/contexts/AuthContext";
 
-const KEY_WRONG = "vqm_wrong";
-const KEY_RIGHT = "vqm_right";
-const KEY_PLAYED = "vqm_played";
-const KEY_CORRECT = "vqm_correct";
-const KEY_XP = "vqm_xp";
-const KEY_GAMES = "vqm_games";
-const KEY_BEST_STREAK = "vqm_best_streak";
-const KEY_WRONG_QUESTIONS = "vqm_wrong_questions"; // full question data for flashcards
-const KEY_DAILY_STREAK = "vqm_daily_streak";
-const KEY_DAILY_LAST_DATE = "vqm_daily_last_date";
-const KEY_DAILY_COMPLETED = "vqm_daily_completed"; // date string of last completed daily
-const KEY_CATEGORY_STATS = "vqm_category_stats"; // { [category]: { played, correct } }
-const KEY_SPEED_RECORDS = "vqm_speed_records"; // { totalTime, totalAnswered } for avg speed
-const KEY_LEITNER = "vqm_leitner"; // Spaced repetition: { [questionId]: 1|2|3 }
-const KEY_GAME_HISTORY = "vqm_game_history"; // last N games played
+const KEY_WRONG = "inkult_wrong";
+const KEY_RIGHT = "inkult_right";
+const KEY_PLAYED = "inkult_played";
+const KEY_CORRECT = "inkult_correct";
+const KEY_XP = "inkult_xp";
+const KEY_GAMES = "inkult_games";
+const KEY_BEST_STREAK = "inkult_best_streak";
+const KEY_WRONG_QUESTIONS = "inkult_wrong_questions"; // full question data for flashcards
+const KEY_DAILY_STREAK = "inkult_daily_streak";
+const KEY_DAILY_LAST_DATE = "inkult_daily_last_date";
+const KEY_DAILY_COMPLETED = "inkult_daily_completed"; // date string of last completed daily
+const KEY_CATEGORY_STATS = "inkult_category_stats"; // { [category]: { played, correct } }
+const KEY_SPEED_RECORDS = "inkult_speed_records"; // { totalTime, totalAnswered } for avg speed
+const KEY_LEITNER = "inkult_leitner"; // Spaced repetition: { [questionId]: 1|2|3 }
+const KEY_GAME_HISTORY = "inkult_game_history"; // last N games played
 
 export type LeitnerLevel = 1 | 2 | 3;
 export interface LeitnerMap {
@@ -375,7 +375,7 @@ export function useProgress() {
 
     // Flame freeze for premium: check if within 2 days (allows 1 missed day per week)
     const isPremiumUser = auth?.profile?.premium_status ||
-      (typeof window !== "undefined" && (() => { try { return JSON.parse(localStorage.getItem("vqm_premium") || "false"); } catch { return false; } })());
+      (typeof window !== "undefined" && (() => { try { return JSON.parse(localStorage.getItem("inkult_premium") || "false"); } catch { return false; } })());
     if (isPremiumUser && dailyStreak > 0) {
       const twoDaysAgo = (() => {
         const d = new Date();

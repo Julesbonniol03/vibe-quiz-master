@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const KEY_PROFILE = "vqm_profile";
+const KEY_PROFILE = "inkult_profile";
 
 export interface UserProfile {
   pseudo: string;

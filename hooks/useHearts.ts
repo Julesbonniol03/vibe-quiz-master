@@ -3,9 +3,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { useOptionalAuth } from "@/contexts/AuthContext";
 
-const KEY_HEARTS = "vqm_hearts";
-const KEY_HEARTS_TS = "vqm_hearts_ts"; // timestamp of last heart loss
-const KEY_PREMIUM = "vqm_premium";
+const KEY_HEARTS = "inkult_hearts";
+const KEY_HEARTS_TS = "inkult_hearts_ts"; // timestamp of last heart loss
+const KEY_PREMIUM = "inkult_premium";
 
 const MAX_HEARTS = 5;
 const REGEN_INTERVAL_MS = 30 * 60 * 1000; // 30 minutes per heart

@@ -37,9 +37,9 @@ interface ExpertCategory {
   story?: StoryLevel[];
 }
 
-const STORAGE_KEY = "vqm_story_progress";
-const EXPERT_KEY = "vqm_expert_progress";
-const EXPERT_STORY_PREFIX = "vqm_expert_story_";
+const STORAGE_KEY = "inkult_story_progress";
+const EXPERT_KEY = "inkult_expert_progress";
+const EXPERT_STORY_PREFIX = "inkult_expert_story_";
 
 function getProgress(): Record<number, { completed: boolean; score: number }> {
   if (typeof window === "undefined") return {};

@@ -597,8 +597,8 @@ function ResetSection({ onReset }: { onReset: () => void }) {
   const handleConfirm = () => {
     onReset();
     // Also clear achievements and profile
-    localStorage.removeItem("vqm_achievements");
-    localStorage.removeItem("vqm_profile");
+    localStorage.removeItem("inkult_achievements");
+    localStorage.removeItem("inkult_profile");
     setStep(2);
     setTimeout(() => window.location.reload(), 1200);
   };

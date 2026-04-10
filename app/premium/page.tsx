@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useHearts } from "@/hooks/useHearts";
 import { useOptionalAuth } from "@/contexts/AuthContext";
 
-const KEY_PREMIUM = "vqm_premium";
+const KEY_PREMIUM = "inkult_premium";
 
 function loadPremium(): boolean {
   if (typeof window === "undefined") return false;

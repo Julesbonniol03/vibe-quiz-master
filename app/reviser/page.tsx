@@ -442,7 +442,7 @@ function PremiumRevisionCTA() {
   const [isPremium, setIsPremium] = useState(false);
   useEffect(() => {
     try {
-      setIsPremium(JSON.parse(localStorage.getItem("vqm_premium") || "false"));
+      setIsPremium(JSON.parse(localStorage.getItem("inkult_premium") || "false"));
     } catch { setIsPremium(false); }
   }, []);
 
