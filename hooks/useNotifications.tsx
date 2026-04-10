@@ -36,7 +36,7 @@ async function scheduleStreakReminder(streakDays: number) {
         {
           id: 1001,
           title: "🔥 Ta série va s'éteindre !",
-          body: `Hé Teubé ! Ta série de ${streakDays} jour${streakDays > 1 ? "s" : ""} va s'éteindre. Viens sauver ta flamme !`,
+          body: `Hé Inkult ! Ta série de ${streakDays} jour${streakDays > 1 ? "s" : ""} va s'éteindre. Viens sauver ta flamme !`,
           schedule: { at: target },
           sound: "default",
           actionTypeId: "STREAK_REMINDER",
@@ -161,7 +161,7 @@ export function NotificationPermissionPrompt() {
                 🔔
               </motion.div>
               <div>
-                <h3 className="text-white font-bold text-base">Reste dans la boucle, Teubé</h3>
+                <h3 className="text-white font-bold text-base">Reste dans la boucle, Inkult</h3>
                 <p className="text-slate-500 text-xs">On te préviendra au bon moment</p>
               </div>
             </div>

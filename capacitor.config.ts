@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.teube.app',
-  appName: 'Teubé',
+  appId: 'com.inkult.app',
+  appName: 'Inkult',
   webDir: 'out',
   server: {
     androidScheme: 'https',

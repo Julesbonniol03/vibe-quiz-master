@@ -696,7 +696,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             <div className="glass-card-strong p-8 !rounded-2xl mb-4">
               <div className="text-6xl mb-4">🧠💨</div>
               <h2 className="text-2xl font-bold text-white mb-2">Cerveau en surchauffe !</h2>
-              <p className="text-slate-400 text-sm mb-1 italic">Ton cerveau est en surchauffe, Teubé.</p>
+              <p className="text-slate-400 text-sm mb-1 italic">Ton cerveau est en surchauffe, Inkult.</p>
               <p className="text-slate-500 text-sm mb-1">Repose-toi ou passe en <span className="text-amber-400 font-bold">Mode Légende</span> pour devenir immortel !</p>
               {heartsSystem.nextRegenIn > 0 && (
                 <p className="text-slate-600 text-xs mt-2 mb-4">Prochain cœur dans <span className="text-neon-green font-bold">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span></p>
@@ -1337,7 +1337,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                   style={{ boxShadow: "0 0 30px rgba(245, 158, 11, 0.15)" }}
                 >
                   <p className="text-amber-400 font-black text-xl mb-1">⏰ TROP LENT !</p>
-                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Teubé !</p>
+                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Inkult !</p>
                   <p className="text-slate-500 text-sm">
                     La bonne réponse : <span className="text-green-400 font-bold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>
@@ -1543,7 +1543,7 @@ function ShareScoreCard({
     ctx.fillText("V", 32, 50);
     ctx.font = "bold 14px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.5)";
-    ctx.fillText("Teubé", 54, 50);
+    ctx.fillText("Inkult", 54, 50);
 
     // Mode badge
     ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
@@ -1664,7 +1664,7 @@ function ShareScoreCard({
 
     // Try native share with image (mobile)
     if (blob && typeof navigator !== "undefined" && navigator.share && navigator.canShare) {
-      const file = new File([blob], "teube-score.png", { type: "image/png" });
+      const file = new File([blob], "inkult-score.png", { type: "image/png" });
       const shareData = { files: [file], text: "vibequizmaster.vercel.app" };
       if (navigator.canShare(shareData)) {
         try {
@@ -1690,7 +1690,7 @@ function ShareScoreCard({
     const canvas = canvasRef.current;
     if (!canvas) return;
     const link = document.createElement("a");
-    link.download = "teube-score.png";
+    link.download = "inkult-score.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
   };

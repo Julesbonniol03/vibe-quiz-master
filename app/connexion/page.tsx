@@ -83,11 +83,11 @@ export default function ConnexionPage() {
             transition={{ type: "spring", bounce: 0.5, delay: 0.15 }}
             className="w-16 h-16 rounded-2xl bg-gradient-to-br from-neon-green to-neon-red flex items-center justify-center text-2xl font-black text-white mx-auto mb-4 shadow-lg shadow-neon-green/20"
           >
-            T
+            I
           </motion.div>
           <h1 className="text-3xl font-bold text-white mb-1">
             {mode === "login" ? "Content de te revoir" : "Rejoins les "}
-            {mode === "signup" && <span className="gradient-text">Teubés</span>}
+            {mode === "signup" && <span className="gradient-text">Inkults</span>}
           </h1>
           <p className="text-slate-500 text-sm">
             {mode === "login"
@@ -155,7 +155,7 @@ export default function ConnexionPage() {
                       type="text"
                       value={pseudo}
                       onChange={(e) => setPseudo(e.target.value)}
-                      placeholder="Ton pseudo de Teubé..."
+                      placeholder="Ton pseudo Inkult..."
                       maxLength={20}
                       className="w-full pl-10 pr-4 py-3 bg-white/[0.04] border border-white/[0.08] rounded-xl text-white placeholder:text-slate-600 focus:outline-none focus:border-neon-green/40 focus:ring-1 focus:ring-neon-green/20 transition-all text-sm"
                     />

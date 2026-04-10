@@ -38,10 +38,10 @@ export default function Navbar() {
             className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-green via-obsidian-600 to-neon-red flex items-center justify-center text-sm font-bold text-white group-hover:scale-110 transition-all"
             style={{ boxShadow: "0 0 12px rgba(0,255,65,0.2), inset 0 1px 0 rgba(255,255,255,0.2)" }}
           >
-            T
+            I
           </div>
           <span className="font-bold text-lg bg-gradient-to-r from-neon-green to-neon-red bg-clip-text text-transparent">
-            Teub&eacute;
+            Inkult
           </span>
         </Link>
 

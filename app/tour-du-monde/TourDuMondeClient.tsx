@@ -506,7 +506,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
         {phase === "answered" && currentQ && (
           <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
             {selectedOption === -1 ? (
-              /* Timeout — Teubé style */
+              /* Timeout — Inkult style */
               <>
                 <motion.div
                   initial={{ scale: 1.5, opacity: 0 }}
@@ -516,7 +516,7 @@ export default function TourDuMondeClient({ geoData }: Props) {
                   style={{ boxShadow: "0 0 30px rgba(245, 158, 11, 0.15)" }}
                 >
                   <p className="text-amber-400 font-black text-xl mb-1">⏰ TROP LENT !</p>
-                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Teubé !</p>
+                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Inkult !</p>
                   <p className="text-slate-500 text-sm">
                     La bonne réponse : <span className="text-green-400 font-bold">{currentQ.options[currentQ.correctIndex]}</span>
                   </p>

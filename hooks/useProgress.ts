@@ -86,8 +86,8 @@ export function getLevel(xp: number): { level: number; currentXp: number; xpForN
 }
 
 const PRESTIGE_TITLES = [
-  { minLevel: 1,  title: "Apprenti Teubé", color: "text-slate-400" },
-  { minLevel: 6,  title: "Teubé Éclairé", color: "text-sky-400" },
+  { minLevel: 1,  title: "Apprenti Inkult", color: "text-slate-400" },
+  { minLevel: 6,  title: "Inkult Éclairé", color: "text-sky-400" },
   { minLevel: 16, title: "Maître du Réseau", color: "text-amber-400" },
   { minLevel: 31, title: "Oracle de la Matrice", color: "text-neon-green" },
 ];

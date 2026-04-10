@@ -87,7 +87,7 @@ export default function SplashScreen() {
                 boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2), 0 16px 48px rgba(0,0,0,0.5)",
               }}
             >
-              <span className="text-white font-black text-6xl select-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">T</span>
+              <span className="text-white font-black text-6xl select-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]">I</span>
             </motion.div>
           </motion.div>
 
@@ -99,7 +99,7 @@ export default function SplashScreen() {
             className="text-4xl font-black mb-2 tracking-tight"
           >
             <span className="bg-gradient-to-r from-neon-green via-white to-neon-red bg-clip-text text-transparent">
-              Teub&eacute;
+              Inkult
             </span>
           </motion.h1>
 

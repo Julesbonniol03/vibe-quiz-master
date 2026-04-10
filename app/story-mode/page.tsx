@@ -47,7 +47,7 @@ function loadExpertCategories() {
 }
 
 export const metadata = {
-  title: "Mode Épopée — Teubé",
+  title: "Mode Épopée — Inkult",
   description: "L'Odyssée de la Culture G : 30 niveaux de la Préhistoire à l'Ère Numérique, chaque époque racontée comme un débrief en terrasse.",
 };
 

@@ -17,11 +17,11 @@ export default function MentionsLegales() {
       <div className="space-y-8 text-slate-400 text-sm leading-relaxed">
         <Section title="1. Éditeur du site">
           <p>
-            <strong className="text-white">Teubé</strong> est une application web de quiz éducatif
+            <strong className="text-white">Inkult</strong> est une application web de quiz éducatif
             de culture générale, éditée à titre personnel.
           </p>
           <p className="mt-2">
-            Responsable de la publication : Équipe Teubé<br />
+            Responsable de la publication : Équipe Inkult<br />
             Contact : contact@vibequizmaster.app<br />
             Hébergement : Vercel Inc. — 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis
           </p>
@@ -29,7 +29,7 @@ export default function MentionsLegales() {
 
         <Section title="2. Propriété intellectuelle">
           <p>
-            L&apos;ensemble des contenus présents sur Teubé (textes, questions, graphismes,
+            L&apos;ensemble des contenus présents sur Inkult (textes, questions, graphismes,
             logo, code source, animations) sont protégés par le droit d&apos;auteur et restent la
             propriété exclusive de l&apos;éditeur, sauf mentions contraires.
           </p>
@@ -63,7 +63,7 @@ export default function MentionsLegales() {
 
         <Section title="5. Cookies">
           <p>
-            Teubé n&apos;utilise aucun cookie de tracking ni cookie publicitaire.
+            Inkult n&apos;utilise aucun cookie de tracking ni cookie publicitaire.
             Seul le stockage local du navigateur (localStorage) est utilisé pour sauvegarder
             votre progression de jeu.
           </p>

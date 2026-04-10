@@ -386,7 +386,7 @@ export function ActualitesModal({ item, onClose }: { item: ActualiteItem; onClos
 
         {/* Footer */}
         <div className="relative p-4 border-t border-white/[0.06] flex items-center justify-between">
-          <span className="text-xs text-slate-700">📰 Contenu éditorial · Teubé</span>
+          <span className="text-xs text-slate-700">📰 Contenu éditorial · Inkult</span>
           <button
             onClick={onClose}
             className="text-xs font-semibold px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/[0.10] text-slate-300 transition-all"

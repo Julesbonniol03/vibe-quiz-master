@@ -8,7 +8,7 @@ function loadGeoData() {
 }
 
 export const metadata = {
-  title: "Tour du Monde — Teubé",
+  title: "Tour du Monde — Inkult",
   description: "Trouve les pays sur la carte ! Mode géographie interactif.",
 };
 

@@ -1,7 +1,7 @@
 {
-  "name": "Teubé",
-  "short_name": "Teubé",
-  "description": "Le quiz des Teubés. 1000+ questions, 17 catégories, 3 modes de jeu.",
+  "name": "Inkult",
+  "short_name": "Inkult",
+  "description": "Le quiz Inkult. 1000+ questions, 17 catégories, 3 modes de jeu.",
   "start_url": "/dashboard",
   "scope": "/",
   "display": "standalone",
