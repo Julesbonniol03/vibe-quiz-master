@@ -1649,7 +1649,7 @@ function ShareScoreCard({
     // ─ Footer
     ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.2)";
-    ctx.fillText("vibequizmaster.vercel.app", cx, H - 24);
+    ctx.fillText("inkult.app", cx, H - 24);
 
     ctx.textAlign = "left";
     setCardReady(true);
@@ -1665,7 +1665,7 @@ function ShareScoreCard({
     // Try native share with image (mobile)
     if (blob && typeof navigator !== "undefined" && navigator.share && navigator.canShare) {
       const file = new File([blob], "inkult-score.png", { type: "image/png" });
-      const shareData = { files: [file], text: "vibequizmaster.vercel.app" };
+      const shareData = { files: [file], text: "inkult.app" };
       if (navigator.canShare(shareData)) {
         try {
           await navigator.share(shareData);
@@ -1678,7 +1678,7 @@ function ShareScoreCard({
 
     // Fallback: copy link to clipboard
     try {
-      await navigator.clipboard.writeText("vibequizmaster.vercel.app");
+      await navigator.clipboard.writeText("inkult.app");
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {

@@ -22,7 +22,7 @@ export default function MentionsLegales() {
           </p>
           <p className="mt-2">
             Responsable de la publication : Équipe Inkult<br />
-            Contact : contact@vibequizmaster.app<br />
+            Contact : contact@inkult.app<br />
             Hébergement : Vercel Inc. — 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis
           </p>
         </Section>
@@ -100,7 +100,7 @@ export default function MentionsLegales() {
         <Section title="9. Contact">
           <p>
             Pour toute question relative aux présentes mentions, contactez-nous
-            à l&apos;adresse : <span className="text-neon-green">contact@vibequizmaster.app</span>
+            à l&apos;adresse : <span className="text-neon-green">contact@inkult.app</span>
           </p>
         </Section>
       </div>

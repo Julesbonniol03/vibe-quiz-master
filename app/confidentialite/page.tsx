@@ -138,7 +138,7 @@ export default function Confidentialite() {
         <Section title="10. Contact">
           <p>
             Pour toute question relative à cette politique de confidentialité :<br />
-            <span className="text-neon-green">contact@vibequizmaster.app</span>
+            <span className="text-neon-green">contact@inkult.app</span>
           </p>
         </Section>
       </div>

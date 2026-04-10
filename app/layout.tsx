@@ -16,7 +16,7 @@ export const viewport: Viewport = {
   themeColor: "#050505",
 };
 
-const APP_URL = "https://vibe-quiz-master.vercel.app";
+const APP_URL = "https://inkult.app";
 
 export const metadata: Metadata = {
   title: "Inkult - Quiz Culture Générale",
