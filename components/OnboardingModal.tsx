@@ -81,7 +81,7 @@ export default function OnboardingModal() {
               </motion.div>
               <h2 className="text-2xl font-bold text-white mb-1">
                 Bienvenue chez les{" "}
-                <span className="gradient-text">Teub&eacute;s</span>
+                <span className="gradient-text">Inkults</span>
               </h2>
               <p className="text-slate-500 text-sm">Cr&eacute;ation de ton identit&eacute;</p>
             </div>

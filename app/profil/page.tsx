@@ -203,7 +203,7 @@ export default function ProfilPage() {
       >
         <h1 className="text-3xl font-bold text-white">
           Tes Statistiques de{" "}
-          <span className="gradient-text">Teub&eacute;</span>
+          <span className="gradient-text">Inkult</span>
         </h1>
       </motion.div>
 

@@ -64,7 +64,7 @@ export default function DashboardPage() {
         <div className="relative z-10">
           <p className="text-slate-600 text-[10px] font-semibold uppercase tracking-[0.2em] mb-1.5">Bienvenue sur</p>
           <h1 className="text-3xl font-black text-white mb-1 tracking-tight">
-            Teub&eacute;<span className="text-neon-green animate-neon-flicker">.</span>
+            Inkult<span className="text-neon-green animate-neon-flicker">.</span>
           </h1>
           <p className="text-slate-500 text-sm mb-4 nums">
             {totalQ} questions &middot; {categories.length} cat&eacute;gories
@@ -384,7 +384,7 @@ export default function DashboardPage() {
           Confidentialit&eacute;
         </Link>
         <span>&middot;</span>
-        <span>Teub&eacute; &copy; 2026</span>
+        <span>Inkult &copy; 2026</span>
       </div>
     </div>
   );
