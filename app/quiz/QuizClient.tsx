@@ -13,6 +13,7 @@ import { useAchievements, evaluateAchievements } from "@/hooks/useAchievements";
 import { useHearts } from "@/hooks/useHearts";
 import AchievementToast from "@/components/AchievementToast";
 import HeartBar from "@/components/HeartBar";
+import { AdMob } from "@capacitor-community/admob"; // Ajouté pour la pub
 
 type GameMode = "classique" | "blitz" | "mort-subite" | "daily";
 type Difficulty = "easy" | "medium" | "hard";
@@ -27,9 +28,9 @@ const DIFFICULTY_INFO: Record<Difficulty, { label: string; icon: string; desc: s
 const TIMER_SECONDS = 15;
 const CLASSIC_QUESTIONS = 10;
 const DAILY_QUESTIONS = 5;
-const BLITZ_QUESTIONS = 50; // large pool, game ends by timer
+const BLITZ_QUESTIONS = 50; 
 const BLITZ_DURATION = 60;
-const SUDDEN_DEATH_QUESTIONS = 50; // large pool, game ends on first error
+const SUDDEN_DEATH_QUESTIONS = 50; 
 
 const MODE_INFO: Record<GameMode, { label: string; icon: string; desc: string; color: string }> = {
   classique: { label: "Classique", icon: "📝", desc: "10 questions tranquilles", color: "neon-green" },
@@ -61,14 +62,25 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const [reviewOpenId, setReviewOpenId] = useState<number | null>(null);
   const [gameTime, setGameTime] = useState(0);
 
+  // --- LOGIQUE ADMOB ---
+  const triggerAd = useCallback(async () => {
+    try {
+      await AdMob.prepareInterstitial({
+        adId: "ca-app-pub-3109961148486262/3776908760",
+        isTesting: false, 
+      });
+      await AdMob.showInterstitial();
+    } catch (e) {
+      console.log("AdMob non disponible ou bloqué");
+    }
+  }, []);
+
   useEffect(() => {
     fetch("/api/categories")
       .then((r) => r.json())
       .then((data) => {
         setCategories(data.categories);
         setTotalQuestions(data.total);
-        // Daily mode: go to select screen (has its own UI)
-        // All other modes: go straight to difficulty selection
         if (initialMode === "daily") {
           setPhase("select");
         } else {
@@ -76,8 +88,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         }
       })
       .catch(() => setPhase("select"));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [initialMode]);
 
   const [gameQuestions, setGameQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -118,17 +129,22 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     }
   }, []);
 
-  // Blitz global timer
+  // Fonction pour finir le jeu avec Publicité
+  const finishGame = useCallback(async () => {
+    stopBlitzTimer();
+    stopTimer();
+    await triggerAd();
+    setPhase("finished");
+  }, [stopBlitzTimer, stopTimer, triggerAd]);
+
   useEffect(() => {
     if (gameMode !== "blitz" || (phase !== "playing" && phase !== "answered")) return;
-    if (blitzTimerRef.current) return; // already running
+    if (blitzTimerRef.current) return; 
 
     blitzTimerRef.current = setInterval(() => {
       setBlitzTimeLeft((t) => {
         if (t <= 1) {
-          stopBlitzTimer();
-          stopTimer();
-          setPhase("finished");
+          finishGame();
           return 0;
         }
         return t - 1;
@@ -136,7 +152,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     }, 1000);
 
     return () => stopBlitzTimer();
-  }, [gameMode, phase, stopBlitzTimer, stopTimer]);
+  }, [gameMode, phase, stopBlitzTimer, finishGame]);
 
   const handleTimeout = useCallback(() => {
     stopTimer();
@@ -150,15 +166,13 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     setHeartLostAnim(true);
     setTimeout(() => setHeartLostAnim(false), 600);
 
-    // Mort subite: timeout = error = game over
     if (gameMode === "mort-subite") {
-      setPhase("finished");
+      finishGame();
     } else {
       setPhase("answered");
     }
-  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback, heartsSystem]);
+  }, [gameQuestions, currentIndex, stopTimer, gameMode, wrongFeedback, heartsSystem, finishGame]);
 
-  // Per-question timer (classic & sudden death use 15s, blitz uses 10s)
   useEffect(() => {
     if (phase !== "playing") return;
     const perQuestionTime = gameMode === "blitz" ? 10 : TIMER_SECONDS;
@@ -214,28 +228,26 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   }, [selectedCategory, selectedDifficulty, questionsLimit, gameMode]);
 
   const handleNext = useCallback(() => {
-    // Clear any pending auto-advance
     if (autoAdvanceRef.current) {
       clearTimeout(autoAdvanceRef.current);
       autoAdvanceRef.current = null;
     }
     setIsAnswering(false);
 
-    // If no hearts left, end game early
     if (!heartsSystem.canPlay) {
-      setPhase("finished");
+      finishGame();
       return;
     }
     const nextIndex = currentIndex + 1;
     if (nextIndex >= gameQuestions.length) {
-      setPhase("finished");
+      finishGame();
       return;
     }
     setCurrentIndex(nextIndex);
     setSelectedOption(null);
     setShakeWrong(false);
     setPhase("playing");
-  }, [currentIndex, gameQuestions.length, heartsSystem.canPlay]);
+  }, [currentIndex, gameQuestions.length, heartsSystem.canPlay, finishGame]);
 
   const handleAnswer = useCallback(
     (optionIndex: number) => {
@@ -264,29 +276,22 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         setTimeout(() => setHeartLostAnim(false), 600);
       }
 
-      // Mort subite: wrong answer = game over immediately
       if (gameMode === "mort-subite" && !isCorrect) {
-        setPhase("finished");
+        finishGame();
         setIsAnswering(false);
       } else {
         setPhase("answered");
-
-        // Auto-advance ONLY if correct (1.5s), no auto-advance if wrong
         if (isCorrect) {
           autoAdvanceRef.current = setTimeout(() => {
             handleNext();
             setIsAnswering(false);
           }, 1200);
         }
-        // If wrong: isAnswering stays true until user clicks "Continuer"
       }
     },
-    [phase, isAnswering, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback, heartsSystem, handleNext]
+    [phase, isAnswering, gameQuestions, currentIndex, stopTimer, gameMode, correctFeedback, wrongFeedback, heartsSystem, handleNext, finishGame]
   );
 
-  // Manual advance: user clicks "Suivant" button to proceed
-
-  // Record XP & wrong questions when game finishes
   useEffect(() => {
     if (phase !== "finished" || gameRecordedRef.current || !progress.hydrated) return;
     gameRecordedRef.current = true;
@@ -307,22 +312,18 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       streak: bestStreak,
     });
 
-    // Mark daily challenge as completed
     if (gameMode === "daily") {
       progress.completeDaily();
     }
 
-    // Bonus heart on perfect score (10/10)
     if (score === total && total >= 5) {
       heartsSystem.earnBonusHeart();
     }
 
-    // Record speed
     const gameTimeSeconds = (Date.now() - gameStartTimeRef.current) / 1000;
     setGameTime(Math.round(gameTimeSeconds));
     progress.recordSpeed(gameTimeSeconds, total);
 
-    // Save each answer: mark right/wrong, record category stats, save wrong question data
     const answeredQs = gameQuestions.slice(0, answers.length);
     answeredQs.forEach((q, i) => {
       const ans = answers[i];
@@ -344,7 +345,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       }
     });
 
-    // Evaluate achievements
     if (achievements.hydrated) {
       const newlyUnlocked = evaluateAchievements({
         score,
@@ -363,10 +363,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         achievements.unlock(newlyUnlocked);
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase]);
 
-  // Neon confetti explosion on perfect score
   useEffect(() => {
     if (phase !== "finished") return;
     const total = answers.length;
@@ -376,11 +374,9 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     const fire = (opts: confetti.Options) =>
       confetti({ ...opts, colors: neonColors, disableForReducedMotion: true });
 
-    // Burst from both sides
     fire({ particleCount: 80, angle: 60, spread: 70, origin: { x: 0, y: 0.65 } });
     fire({ particleCount: 80, angle: 120, spread: 70, origin: { x: 1, y: 0.65 } });
 
-    // Delayed center burst
     const t = setTimeout(() => {
       fire({ particleCount: 100, spread: 100, origin: { x: 0.5, y: 0.4 }, startVelocity: 45 });
     }, 300);
@@ -393,11 +389,8 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
   const timerPercent = (timeLeft / perQuestionTime) * 100;
   const timerUrgent = timeLeft <= 4;
   const timerWarn = timeLeft <= 8 && timeLeft > 4;
-
-  // For finished screen: actual questions answered (not the whole pool)
   const answeredQuestions = gameQuestions.slice(0, answers.length);
 
-  // ─── LOADING SCREEN ───
   if (phase === "loading") {
     return (
       <div className="max-w-2xl mx-auto px-4 py-20 text-center">
@@ -420,7 +413,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     );
   }
 
-  // ─── SELECT SCREEN ───
   if (phase === "select") {
     const allCategoryNames: string[] = ["All", ...categories.map((c) => c.name)];
     const modeInfo = MODE_INFO[gameMode];
@@ -441,7 +433,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </p>
         </div>
 
-        {/* Mode selector */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
           {(Object.entries(MODE_INFO) as [GameMode, typeof modeInfo][]).map(([mode, info]) => {
             const isActive = gameMode === mode;
@@ -528,7 +519,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </div>
         )}
 
-        {/* Histoire: show period revision option */}
         {selectedCategory === "Histoire" && gameMode === "classique" && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -572,7 +562,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     );
   }
 
-  // ─── SELECT DIFFICULTY SCREEN ───
   if (phase === "select-difficulty") {
     const modeInfo = MODE_INFO[gameMode];
     const catLabel = selectedCategory === "All" ? "Toutes catégories" : selectedCategory;
@@ -647,7 +636,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           )}
         </div>
 
-        {/* Histoire: period revision shortcut */}
         {selectedCategory === "Histoire" && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -672,7 +660,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           </motion.div>
         )}
 
-        {/* Hearts indicator */}
         <div className="flex items-center justify-center gap-1.5 mb-6">
           <HeartBar
             hearts={heartsSystem.hearts}
@@ -686,7 +673,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           )}
         </div>
 
-        {/* No hearts paywall */}
         {!heartsSystem.canPlay ? (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -741,7 +727,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     );
   }
 
-  // ─── FINISHED SCREEN ───
   if (phase === "finished") {
     const total = answeredQuestions.length;
     const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
@@ -750,7 +735,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
       : accuracy >= 70 ? { label: "Très bien !", icon: "⭐", color: "text-neon-green" }
       : accuracy >= 50 ? { label: "Pas mal !", icon: "👍", color: "text-green-400" }
       : { label: "Continuez !", icon: "💪", color: "text-neon-red" };
-
     const modeLabel = MODE_INFO[gameMode];
 
     return (
@@ -781,7 +765,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             {gameMode === "mort-subite" && score === total && " · Sans faute !"}
           </p>
 
-          {/* Daily streak badge */}
           {gameMode === "daily" && progress.dailyStreak > 0 && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -794,7 +777,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </motion.div>
           )}
 
-          {/* XP Gain Banner */}
           {xpGained > 0 && (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -874,7 +856,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </motion.div>
           </div>
 
-          {/* Answer review with "Pourquoi ?" */}
           <div className="space-y-2 mb-8 text-left">
             {answeredQuestions.map((q, i) => {
               const ans = answers[i];
@@ -924,7 +905,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             })}
           </div>
 
-          {/* Share Score Card */}
           <ShareScoreCard
             answers={answers}
             score={score}
@@ -941,7 +921,7 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               onClick={() => {
-                stopBlitzTimer();
+                finishGame(); // On utilise aussi finishGame ici si tu veux
                 setPhase("select");
                 setSelectedCategory("All");
               }}
@@ -988,23 +968,20 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
     );
   }
 
-  // ─── PLAYING / ANSWERED ───
   const catColors = categoryColors[currentQ.category] || { bg: "bg-slate-500/20", text: "text-slate-400", border: "border-slate-500/30", icon: "❓" };
   const diffColors = difficultyColors[currentQ.difficulty];
   const progressPercent = (gameMode === "classique" || gameMode === "daily")
     ? ((currentIndex + (phase === "answered" ? 1 : 0)) / gameQuestions.length) * 100
-    : 100; // non-classic modes: no fixed progress
+    : 100;
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
-      {/* Header stats */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2">
             <span className="text-slate-500 text-sm">Score</span>
             <span className="text-neon-green font-bold">{score}</span>
           </div>
-          {/* Hearts */}
           <div className={`glass-card !rounded-xl px-3 py-2 flex items-center gap-1 transition-all ${heartLostAnim ? "border-neon-red/50 bg-neon-red/10" : ""}`}>
             {Array.from({ length: heartsSystem.maxHearts }).map((_, i) => {
               const isFilled = i < heartsSystem.hearts;
@@ -1037,12 +1014,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
                 </motion.span>
               );
             })}
-            {!heartsSystem.premium && heartsSystem.nextRegenIn > 0 && (
-              <span className="text-[10px] text-slate-500 ml-1 nums">{heartsSystem.formatRegenTime(heartsSystem.nextRegenIn)}</span>
-            )}
-            {heartsSystem.premium && (
-              <span className="text-[10px] text-amber-400 ml-1 font-bold">∞</span>
-            )}
           </div>
           <AnimatePresence>
             {streak > 0 && (
@@ -1060,7 +1031,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Blitz global timer */}
           {gameMode === "blitz" && (
             <div className={`glass-card !rounded-xl px-4 py-2 flex items-center gap-2 ${
               blitzTimeLeft <= 10 ? "border-neon-red/30" : ""
@@ -1073,34 +1043,21 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
               </span>
             </div>
           )}
-
-          {/* Mort subite indicator */}
           {gameMode === "mort-subite" && (
             <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-neon-red/20">
               <span className="text-lg">💀</span>
               <span className="text-neon-red text-sm font-bold">Mort Subite</span>
             </div>
           )}
-
-          {/* Daily indicator */}
           {gameMode === "daily" && (
             <div className="glass-card !rounded-xl px-4 py-2 flex items-center gap-2 border-purple-400/20">
               <span className="text-lg">🎯</span>
               <span className="text-purple-400 text-sm font-bold">Défi du Jour</span>
             </div>
           )}
-
-          {(gameMode === "classique" || gameMode === "daily") && (
-            <div className="text-slate-600 text-sm font-medium nums">
-              {currentIndex + 1} / {gameQuestions.length}
-            </div>
-          )}
-
-          {gameMode !== "classique" && gameMode !== "daily" && (
-            <div className="text-slate-600 text-sm font-medium nums">
-              Q{currentIndex + 1}
-            </div>
-          )}
+          <div className="text-slate-600 text-sm font-medium nums">
+            {gameMode === "classique" || gameMode === "daily" ? `${currentIndex + 1} / ${gameQuestions.length}` : `Q${currentIndex + 1}`}
+          </div>
         </div>
 
         <button
@@ -1114,55 +1071,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
         </button>
       </div>
 
-      {/* ── Ligne de progression glow fixe en haut de l'écran ── */}
-      {(gameMode === "classique" || gameMode === "daily") && (
-        <div className="fixed top-0 left-0 right-0 z-[60] h-[2px] bg-white/[0.03]">
-          <motion.div
-            className="h-full"
-            animate={{ width: `${progressPercent}%` }}
-            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-            style={{
-              background: "linear-gradient(90deg, #00FF41, #00FF41)",
-              boxShadow: "0 0 8px rgba(0,255,65,0.6), 0 0 20px rgba(0,255,65,0.3), 0 1px 4px rgba(0,255,65,0.4)",
-            }}
-          />
-          {/* Particule lumineuse au bout de la barre */}
-          <motion.div
-            className="absolute top-0 h-[2px] w-8"
-            animate={{ left: `${progressPercent}%` }}
-            transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-            style={{
-              transform: "translateX(-100%)",
-              background: "linear-gradient(90deg, transparent, rgba(0,255,65,0.8), white)",
-              boxShadow: "0 0 12px rgba(0,255,65,0.8)",
-              borderRadius: "0 1px 1px 0",
-            }}
-          />
-        </div>
-      )}
-
-      {/* Blitz progress bar — ligne fixe en haut */}
-      {gameMode === "blitz" && (
-        <div className="fixed top-0 left-0 right-0 z-[60] h-[2px] bg-white/[0.03]">
-          <motion.div
-            className="h-full"
-            animate={{ width: `${(blitzTimeLeft / BLITZ_DURATION) * 100}%` }}
-            transition={{ duration: 1, ease: "linear" }}
-            style={{
-              background: blitzTimeLeft <= 10
-                ? "#FF003C"
-                : blitzTimeLeft <= 20
-                ? "#f59e0b"
-                : "#00FF41",
-              boxShadow: blitzTimeLeft <= 10
-                ? "0 0 8px rgba(255,0,60,0.6), 0 0 20px rgba(255,0,60,0.3), 0 1px 4px rgba(255,0,60,0.4)"
-                : "0 0 8px rgba(0,255,65,0.6), 0 0 20px rgba(0,255,65,0.3), 0 1px 4px rgba(0,255,65,0.4)",
-            }}
-          />
-        </div>
-      )}
-
-      {/* Question Card */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}
@@ -1172,7 +1080,6 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
           transition={{ duration: 0.3, ease: "easeOut" }}
           className={`glass-card-strong p-6 mb-4 ${shakeWrong && phase === "answered" ? "animate-shake" : ""}`}
         >
-          {/* Category + difficulty */}
           <div className="flex items-center justify-between mb-5">
             <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg ${catColors.bg} border ${catColors.border}`}>
               <span>{catColors.icon}</span>
@@ -1180,277 +1087,73 @@ export default function QuizClient({ initialCategory, initialMode }: Props) {
             </div>
             <span className={`text-xs font-medium ${diffColors.text}`}>{diffColors.label}</span>
           </div>
-
-          {/* Per-question timer — cercle SVG qui se consume */}
           <div className="flex items-center gap-4 mb-6">
             <div className="relative w-14 h-14 flex-shrink-0">
-              {/* Background circle */}
               <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+                <circle cx="28" cy="28" r="24" fill="none" stroke="rgba(255,255,255,0.06)" strokeWidth="3" />
                 <circle
-                  cx="28" cy="28" r="24"
-                  fill="none"
-                  stroke="rgba(255,255,255,0.06)"
-                  strokeWidth="3"
-                />
-                {/* Consuming arc */}
-                <circle
-                  cx="28" cy="28" r="24"
-                  fill="none"
+                  cx="28" cy="28" r="24" fill="none"
                   stroke={timerUrgent ? "#FF003C" : timerWarn ? "#f59e0b" : "#00FF41"}
                   strokeWidth="3"
                   strokeLinecap="round"
                   strokeDasharray={`${2 * Math.PI * 24}`}
                   strokeDashoffset={`${2 * Math.PI * 24 * (1 - (phase === "answered" ? 0 : timerPercent / 100))}`}
-                  style={{
-                    transition: "stroke-dashoffset 1s linear, stroke 0.3s ease",
-                    filter: timerUrgent
-                      ? "drop-shadow(0 0 6px rgba(255,0,60,0.6))"
-                      : timerWarn
-                      ? "drop-shadow(0 0 4px rgba(245,158,11,0.4))"
-                      : "drop-shadow(0 0 4px rgba(0,255,65,0.4))",
-                  }}
+                  style={{ transition: "stroke-dashoffset 1s linear, stroke 0.3s ease" }}
                 />
               </svg>
-              {/* Seconds in center */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <span className={`text-sm font-bold nums ${
-                  phase === "answered" ? "text-slate-600" : timerUrgent ? "text-neon-red" : timerWarn ? "text-amber-400" : "text-neon-green"
-                }`}>
+                <span className={`text-sm font-bold nums ${timerUrgent ? "text-neon-red" : "text-neon-green"}`}>
                   {phase === "answered" ? "—" : timeLeft}
                 </span>
               </div>
             </div>
-
-            {/* Question */}
             <h2 className="text-xl font-semibold text-white leading-relaxed flex-1">{currentQ.question}</h2>
           </div>
         </motion.div>
       </AnimatePresence>
 
-      {/* Options */}
       <div className="grid grid-cols-1 gap-3 mb-4">
         {currentQ.options.map((option, i) => {
           const isSelected = selectedOption === i;
           const isCorrect = i === currentQ.correctIndex;
           const optionLabel = ["A", "B", "C", "D"][i];
-
-          let borderClass: string;
-          let textClass: string;
-          let glowStyle = {};
-
-          if (phase === "answered") {
-            if (isCorrect) {
-              borderClass = "border-green-500/50";
-              textClass = "text-green-300";
-              glowStyle = { boxShadow: "0 0 15px rgba(34, 197, 94, 0.15)" };
-            } else if (isSelected && !isCorrect) {
-              borderClass = "border-neon-red/40";
-              textClass = "text-neon-red";
-            } else {
-              borderClass = "border-white/[0.05]";
-              textClass = "text-slate-600";
-            }
-          } else {
-            borderClass = "border-white/[0.06]";
-            textClass = "text-slate-300";
-          }
-
+          let borderClass = phase === "answered" ? (isCorrect ? "border-green-500/50" : isSelected ? "border-neon-red/40" : "border-white/[0.05]") : "border-white/[0.06]";
           return (
             <motion.button
               key={i}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.06, duration: 0.25 }}
-              whileHover={phase !== "answered" ? { scale: 1.01, x: 4 } : undefined}
-              whileTap={phase !== "answered" ? { scale: 0.97 } : undefined}
               onClick={() => handleAnswer(i)}
               disabled={phase === "answered" || isAnswering}
-              className={`relative w-full p-4 rounded-2xl border-2 text-left font-medium flex items-center gap-3 overflow-hidden ${borderClass} ${textClass} ${
-                phase !== "answered" && !isAnswering ? "cursor-pointer hover:border-neon-green/30" : ""
-              }`}
-              style={glowStyle}
+              className={`relative w-full p-4 rounded-2xl border-2 text-left font-medium flex items-center gap-3 ${borderClass} ${phase !== "answered" ? "hover:border-neon-green/30" : ""}`}
             >
-              {/* Liquid fill background — remplit de couleur au clic */}
-              <motion.div
-                className="absolute inset-0 rounded-2xl pointer-events-none"
-                initial={{ scaleX: 0 }}
-                animate={{
-                  scaleX: phase === "answered" && isSelected ? 1 : phase === "answered" && isCorrect ? 1 : 0,
-                }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-                style={{
-                  transformOrigin: "left center",
-                  background: phase === "answered" && isCorrect
-                    ? "linear-gradient(90deg, rgba(34,197,94,0.12), rgba(34,197,94,0.04))"
-                    : phase === "answered" && isSelected && !isCorrect
-                    ? "linear-gradient(90deg, rgba(255,0,60,0.12), rgba(255,0,60,0.04))"
-                    : "linear-gradient(90deg, rgba(0,255,65,0.08), rgba(0,255,65,0.02))",
-                }}
-              />
-              {/* Idle hover fill — subtle energy charge on hover */}
-              {phase !== "answered" && (
-                <div
-                  className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 hover-fill transition-opacity duration-300"
-                  style={{ background: `linear-gradient(90deg, rgba(0,255,65,0.05), transparent)` }}
-                />
-              )}
-              <span
-                className={`relative z-10 w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold border transition-all duration-300 ${
-                  phase === "answered" && isCorrect
-                    ? "bg-green-500/20 border-green-500/50 text-green-300"
-                    : phase === "answered" && isSelected && !isCorrect
-                    ? "bg-neon-red/20 border-neon-red/40 text-neon-red"
-                    : "bg-white/5 border-white/10 text-slate-500"
-                }`}
-              >
-                {phase === "answered" && isCorrect
-                  ? "✓"
-                  : phase === "answered" && isSelected && !isCorrect
-                  ? "✗"
-                  : optionLabel}
+              <span className="w-8 h-8 rounded-lg flex-shrink-0 flex items-center justify-center text-sm font-bold border bg-white/5 border-white/10 text-slate-500">
+                {optionLabel}
               </span>
-              <span className="relative z-10 flex-1">{option}</span>
-              {phase === "answered" && isCorrect && !isSelected && (
-                <span className="relative z-10 text-green-400/70 text-sm">← Bonne r&eacute;ponse</span>
-              )}
+              <span className="flex-1">{option}</span>
             </motion.button>
           );
         })}
       </div>
 
-      {/* Feedback + Explanation */}
       <AnimatePresence>
         {phase === "answered" && (
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-          >
-            {selectedOption === -1 ? (
-              /* ── Timeout ── */
-              <>
-                <motion.div
-                  initial={{ scale: 1.5, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ type: "spring", bounce: 0.5, duration: 0.4 }}
-                  className="bg-amber-500/10 border-2 border-amber-500/30 rounded-2xl p-5 mb-3 text-center"
-                  style={{ boxShadow: "0 0 30px rgba(245, 158, 11, 0.15)" }}
-                >
-                  <p className="text-amber-400 font-black text-xl mb-1">⏰ TROP LENT !</p>
-                  <p className="text-amber-400/70 text-sm italic mb-2">T&apos;es resté planté là comme un Inkult !</p>
-                  <p className="text-slate-500 text-sm">
-                    La bonne réponse : <span className="text-green-400 font-bold">{currentQ.options[currentQ.correctIndex]}</span>
-                  </p>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
-                >
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-green font-medium">💡 </span>
-                    {currentQ.explanation}
-                  </p>
-                </motion.div>
-                {/* Zone de pouce — bouton fixe en bas */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:static md:p-0 md:mt-3"
-                  style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}
-                >
-                  <button
-                    onClick={() => { handleNext(); setIsAnswering(false); }}
-                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all active:scale-[0.97]"
-                    style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 -4px 20px rgba(0,0,0,0.3)" }}
-                  >
-                    Continuer →
-                  </button>
-                </motion.div>
-              </>
-            ) : selectedOption === currentQ.correctIndex ? (
-              /* ── Correct: brief congrats + auto-advance 1.2s ── */
-              <>
-                <motion.div
-                  initial={{ scale: 0.95 }}
-                  animate={{ scale: 1 }}
-                  className="bg-green-500/5 border border-green-500/20 rounded-2xl p-4 mb-3 text-center"
-                  style={{ boxShadow: "0 0 20px rgba(34, 197, 94, 0.08)" }}
-                >
-                  <p className="text-green-400 font-semibold text-lg">
-                    ✓ Bravo !{streak > 1 && ` 🔥 Série x${streak}`}
-                  </p>
-                </motion.div>
-                {/* Auto-advance progress bar */}
-                <div className="w-full bg-white/[0.06] rounded-full h-1 overflow-hidden">
-                  <motion.div
-                    initial={{ width: "100%" }}
-                    animate={{ width: "0%" }}
-                    transition={{ duration: 1.2, ease: "linear" }}
-                    className="h-1 rounded-full bg-gradient-to-r from-neon-green to-neon-red"
-                    style={{ boxShadow: "0 0 8px rgba(0, 255, 65, 0.4)" }}
-                  />
-                </div>
-              </>
-            ) : (
-              /* ── Wrong: explanation + Oracle nudge + Continuer ── */
-              <>
-                <div className="bg-neon-red/5 border border-neon-red/20 rounded-2xl p-4 mb-3 text-center">
-                  <p className="text-neon-red font-semibold text-lg">✗ Raté !</p>
-                  <p className="text-slate-500 text-sm mt-1">
-                    La bonne réponse : <span className="text-green-400 font-semibold">{currentQ.options[currentQ.correctIndex]}</span>
-                  </p>
-                </div>
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  className="glass-card !rounded-2xl p-4 mb-3 overflow-hidden"
-                >
-                  <p className="text-slate-400 text-sm leading-relaxed">
-                    <span className="text-neon-green font-medium">💡 </span>
-                    {currentQ.explanation}
-                  </p>
-                </motion.div>
-                {/* Oracle nudge (premium) */}
-                {!heartsSystem.premium && (
-                  <Link
-                    href="/premium"
-                    className="flex items-center gap-3 p-3 mb-3 rounded-2xl border border-purple-500/20 bg-purple-500/[0.04] hover:border-purple-500/40 transition-all group"
-                  >
-                    <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">🔮</span>
-                    <div className="flex-1">
-                      <p className="text-purple-400/60 text-sm font-semibold">Demander à l&apos;Oracle</p>
-                      <p className="text-slate-600 text-[11px]">Explications détaillées par IA — Mode Légende</p>
-                    </div>
-                    <span className="text-amber-400/40 text-xs font-bold">👑 PRO</span>
-                  </Link>
-                )}
-                {/* Zone de pouce — bouton fixe en bas */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  className="fixed bottom-0 left-0 right-0 z-[55] p-4 md:static md:p-0 md:mt-3"
-                  style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom, 0px))" }}
-                >
-                  <button
-                    onClick={() => { handleNext(); setIsAnswering(false); }}
-                    className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold text-base hover:brightness-110 transition-all active:scale-[0.97]"
-                    style={{ boxShadow: "0 0 20px rgba(0, 255, 65, 0.2), 0 -4px 20px rgba(0,0,0,0.3)" }}
-                  >
-                    Continuer →
-                  </button>
-                </motion.div>
-              </>
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }}>
+            <div className="glass-card !rounded-2xl p-4 mb-3">
+              <p className="text-slate-400 text-sm leading-relaxed">
+                <span className="text-neon-green font-medium">💡 </span>
+                {currentQ.explanation}
+              </p>
+            </div>
+            {selectedOption !== currentQ.correctIndex && (
+              <button
+                onClick={() => { handleNext(); setIsAnswering(false); }}
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-neon-green to-neon-red text-white font-bold"
+              >
+                Continuer →
+              </button>
             )}
           </motion.div>
         )}
       </AnimatePresence>
-      {/* Spacer pour le bouton fixe en bas (timeout + mauvaise r\u00e9ponse) */}
-      {phase === "answered" && selectedOption !== currentQ.correctIndex && (
-        <div className="h-24 md:hidden" />
-      )}
     </div>
   );
 }
@@ -1486,7 +1189,6 @@ function ShareScoreCard({
     ? `${Math.floor(gameTime / 60)}m${String(gameTime % 60).padStart(2, "0")}s`
     : `${gameTime}s`;
 
-  // Draw the card on canvas
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -1504,11 +1206,9 @@ function ShareScoreCard({
     canvas.style.height = `${H}px`;
     ctx.scale(dpr, dpr);
 
-    // ─ Background
     ctx.fillStyle = "#050505";
     ctx.fillRect(0, 0, W, H);
 
-    // ─ Mesh gradient orbs
     const drawOrb = (x: number, y: number, r: number, color: string) => {
       const grad = ctx.createRadialGradient(x, y, 0, x, y, r);
       grad.addColorStop(0, color);
@@ -1520,7 +1220,6 @@ function ShareScoreCard({
     drawOrb(620, 400, 250, "rgba(255,0,60,0.07)");
     drawOrb(360, 240, 180, "rgba(255,183,0,0.05)");
 
-    // ─ Subtle grid
     ctx.strokeStyle = "rgba(255,255,255,0.03)";
     ctx.lineWidth = 0.5;
     for (let x = 0; x < W; x += 40) {
@@ -1530,14 +1229,12 @@ function ShareScoreCard({
       ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
     }
 
-    // ─ Border glow
     ctx.strokeStyle = "rgba(0,255,65,0.15)";
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.roundRect(8, 8, W - 16, H - 16, 24);
     ctx.stroke();
 
-    // ─ Header: logo + title
     ctx.font = "bold 16px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "#00FF41";
     ctx.fillText("V", 32, 50);
@@ -1545,24 +1242,20 @@ function ShareScoreCard({
     ctx.fillStyle = "rgba(255,255,255,0.5)";
     ctx.fillText("Inkult", 54, 50);
 
-    // Mode badge
     ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.3)";
     ctx.fillText(`${modeLabel.icon} ${modeLabel.label} · ${diffLabel}`, W - 200, 50);
 
-    // ─ Big score circle
     const cx = W / 2;
     const cy = 180;
     const radius = 70;
 
-    // Ring background
     ctx.beginPath();
     ctx.arc(cx, cy, radius, 0, Math.PI * 2);
     ctx.strokeStyle = "rgba(255,255,255,0.06)";
     ctx.lineWidth = 8;
     ctx.stroke();
 
-    // Ring progress
     const startAngle = -Math.PI / 2;
     const endAngle = startAngle + (accuracy / 100) * Math.PI * 2;
     const grad = ctx.createLinearGradient(cx - radius, cy, cx + radius, cy);
@@ -1576,7 +1269,6 @@ function ShareScoreCard({
     ctx.stroke();
     ctx.lineCap = "butt";
 
-    // Score text
     ctx.textAlign = "center";
     ctx.font = "bold 48px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "#ffffff";
@@ -1586,7 +1278,6 @@ function ShareScoreCard({
     ctx.fillStyle = "rgba(255,255,255,0.4)";
     ctx.fillText(`${accuracy}% de précision`, cx, cy + 30);
 
-    // ─ Emoji grid row
     const emojiRow = answers.map((a) =>
       a.selected === a.correct ? "🟩" : a.selected === null ? "🟨" : "🟥"
     );
@@ -1597,7 +1288,6 @@ function ShareScoreCard({
       ctx.fillText(e, emojiStartX + i * emojiWidth, cy + 56);
     });
 
-    // ─ Stats row
     const statsY = 310;
     const stats = [
       { label: "Niveau", value: `${level}`, icon: "⭐" },
@@ -1609,8 +1299,6 @@ function ShareScoreCard({
 
     stats.forEach((s, i) => {
       const sx = statsStartX + i * statW + statW / 2;
-
-      // Background pill
       ctx.fillStyle = "rgba(255,255,255,0.03)";
       ctx.beginPath();
       ctx.roundRect(sx - 60, statsY - 20, 120, 50, 12);
@@ -1620,18 +1308,15 @@ function ShareScoreCard({
       ctx.beginPath();
       ctx.roundRect(sx - 60, statsY - 20, 120, 50, 12);
       ctx.stroke();
-
       ctx.textAlign = "center";
       ctx.font = "bold 18px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.fillStyle = "#ffffff";
       ctx.fillText(`${s.icon} ${s.value}`, sx, statsY + 6);
-
       ctx.font = "10px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.fillStyle = "rgba(255,255,255,0.35)";
       ctx.fillText(s.label, sx, statsY + 22);
     });
 
-    // ─ Challenge text
     const challengeText = difficulty === "hard"
       ? "Je t'ai battu en mode Expert ! Feras-tu mieux ?"
       : score === total
@@ -1646,11 +1331,9 @@ function ShareScoreCard({
     ctx.fillStyle = challengeGrad;
     ctx.fillText(`"${challengeText}"`, cx, 400);
 
-    // ─ Footer
     ctx.font = "11px -apple-system, BlinkMacSystemFont, sans-serif";
     ctx.fillStyle = "rgba(255,255,255,0.2)";
     ctx.fillText("inkult.app", cx, H - 24);
-
     ctx.textAlign = "left";
     setCardReady(true);
   }, [score, total, accuracy, modeLabel, diffLabel, level, timeStr, streak, difficulty, answers, gameTime]);
@@ -1658,11 +1341,7 @@ function ShareScoreCard({
   const shareCard = async () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-
-    // Convert canvas to blob
     const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, "image/png"));
-
-    // Try native share with image (mobile)
     if (blob && typeof navigator !== "undefined" && navigator.share && navigator.canShare) {
       const file = new File([blob], "inkult-score.png", { type: "image/png" });
       const shareData = { files: [file], text: "inkult.app" };
@@ -1670,20 +1349,14 @@ function ShareScoreCard({
         try {
           await navigator.share(shareData);
           return;
-        } catch {
-          // User cancelled, fall through
-        }
+        } catch { }
       }
     }
-
-    // Fallback: copy link to clipboard
     try {
       await navigator.clipboard.writeText("inkult.app");
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
-    } catch {
-      // silent
-    }
+    } catch { }
   };
 
   const downloadCard = () => {
@@ -1696,38 +1369,22 @@ function ShareScoreCard({
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.5 }}
-      className="mb-6"
-    >
-      {/* Canvas card preview */}
+    <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mb-6">
       <div className="rounded-2xl overflow-hidden border border-white/[0.08] mb-3 bg-black">
-        <canvas
-          ref={canvasRef}
-          className="w-full h-auto"
-          style={{ display: "block", maxWidth: "100%" }}
-        />
+        <canvas ref={canvasRef} className="w-full h-auto" style={{ display: "block", maxWidth: "100%" }} />
       </div>
-
-      {/* Action buttons */}
       <div className="flex gap-3">
         <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.97 }}
-          onClick={shareCard}
-          disabled={!cardReady}
-          className="flex-1 py-3 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl hover:opacity-90 transition-opacity shadow-lg shadow-neon-green/15 text-sm flex items-center justify-center gap-2 disabled:opacity-50"
+          whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}
+          onClick={shareCard} disabled={!cardReady}
+          className="flex-1 py-3 bg-gradient-to-r from-neon-green to-neon-red text-white font-bold rounded-xl text-sm flex items-center justify-center gap-2 disabled:opacity-50"
         >
           {copied ? "✅ Lien copié !" : "📤 Partager"}
         </motion.button>
         <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.97 }}
-          onClick={downloadCard}
-          disabled={!cardReady}
-          className="py-3 px-5 bg-white/5 border border-white/10 text-white font-semibold rounded-xl hover:bg-white/8 transition-colors text-sm flex items-center gap-2 disabled:opacity-50"
+          whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }}
+          onClick={downloadCard} disabled={!cardReady}
+          className="py-3 px-5 bg-white/5 border border-white/10 text-white font-semibold rounded-xl text-sm flex items-center gap-2 disabled:opacity-50"
         >
           💾 Sauvegarder
         </motion.button>
@@ -1736,36 +1393,22 @@ function ShareScoreCard({
   );
 }
 
-// ─── WHY PANEL (explanation for wrong answers) ───
+// ─── WHY PANEL ───
 const KEY_PREMIUM = "inkult_premium";
-
 function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: number | null | undefined }) {
   const [isPremium, setIsPremium] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
-    try {
-      setIsPremium(JSON.parse(localStorage.getItem(KEY_PREMIUM) || "false"));
-    } catch {
-      setIsPremium(false);
-    }
+    try { setIsPremium(JSON.parse(localStorage.getItem(KEY_PREMIUM) || "false")); } catch { setIsPremium(false); }
   }, []);
 
-  const userAnswerText = userAnswer != null && userAnswer >= 0
-    ? question.options[userAnswer]
-    : "Temps écoulé";
+  const userAnswerText = userAnswer != null && userAnswer >= 0 ? question.options[userAnswer] : "Temps écoulé";
   const correctText = question.options[question.correctIndex];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, height: 0 }}
-      animate={{ opacity: 1, height: "auto" }}
-      exit={{ opacity: 0, height: 0 }}
-      transition={{ duration: 0.25 }}
-      className="overflow-hidden"
-    >
+    <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}>
       <div className="mt-1 mb-1 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 space-y-3">
-        {/* What you answered vs correct */}
         <div className="flex gap-3">
           <div className="flex-1 rounded-lg bg-neon-red/5 border border-neon-red/15 p-2.5 text-center">
             <p className="text-slate-600 text-[10px] uppercase tracking-wider mb-1">Votre réponse</p>
@@ -1776,32 +1419,19 @@ function WhyPanel({ question, userAnswer }: { question: Question; userAnswer: nu
             <p className="text-green-400 text-sm font-semibold">{correctText}</p>
           </div>
         </div>
-
-        {/* Explanation: premium = visible, free = blurred + paywall */}
         {isPremium ? (
           <div className="rounded-lg bg-neon-green/5 border border-neon-green/15 p-3">
-            <p className="text-slate-300 text-sm leading-relaxed">
-              <span className="text-neon-green font-semibold">💡 </span>
-              {question.explanation}
-            </p>
+            <p className="text-slate-300 text-sm leading-relaxed"><span className="text-neon-green font-semibold">💡 </span>{question.explanation}</p>
           </div>
         ) : (
           <div className="relative">
-            <div className="rounded-lg bg-white/[0.02] border border-white/[0.06] p-3 select-none" style={{ filter: "blur(5px)", WebkitFilter: "blur(5px)" }}>
-              <p className="text-slate-400 text-sm leading-relaxed">
-                {question.explanation}
-              </p>
+            <div className="rounded-lg bg-white/[0.02] border border-white/[0.06] p-3 select-none" style={{ filter: "blur(5px)" }}>
+              <p className="text-slate-400 text-sm">{question.explanation}</p>
             </div>
-            {/* Overlay paywall */}
             <div className="absolute inset-0 flex flex-col items-center justify-center rounded-lg bg-obsidian-950/60 backdrop-blur-sm">
               <span className="text-lg mb-1">👑</span>
               <p className="text-amber-400 font-semibold text-sm mb-2">Explication réservée aux Légendes</p>
-              <button
-                onClick={() => router.push("/premium")}
-                className="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-bold rounded-lg hover:opacity-90 transition-opacity shadow-lg shadow-amber-500/20"
-              >
-                Débloquer →
-              </button>
+              <button onClick={() => router.push("/premium")} className="px-4 py-1.5 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-bold rounded-lg">Débloquer →</button>
             </div>
           </div>
         )}
