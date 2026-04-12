@@ -1,21 +1,15 @@
-import type { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.inkult.app',
   appName: 'Inkult',
   webDir: 'out',
-  server: {
-    androidScheme: 'https',
-  },
+  bundledWebRuntime: false,
   plugins: {
-    Haptics: {
-      // Use native haptics on iOS/Android
-    },
-    SplashScreen: {
-      launchAutoHide: false,
-      backgroundColor: '#050505',
-    },
-  },
+    AdMob: {
+      appId: 'ca-app-pub-3109961148486262~4407464156'
+    }
+  }
 };
 
 export default config;
