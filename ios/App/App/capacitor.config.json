@@ -1,0 +1,16 @@
+{
+	"appId": "com.inkult.app",
+	"appName": "Inkult",
+	"webDir": "out",
+	"plugins": {
+		"AdMob": {
+			"appId": "ca-app-pub-3109961148486262~4407464156"
+		}
+	},
+	"packageClassList": [
+		"AdMobPlugin",
+		"HapticsPlugin",
+		"LocalNotificationsPlugin",
+		"PushNotificationsPlugin"
+	]
+}
