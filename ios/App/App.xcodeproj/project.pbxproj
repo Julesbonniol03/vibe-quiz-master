@@ -84,6 +84,7 @@
 				504EC3001FED79650016851F /* Sources */,
 				504EC3011FED79650016851F /* Frameworks */,
 				504EC3021FED79650016851F /* Resources */,
+				AA000001AA000001AA000001 /* Re-sign Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +150,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AA000001AA000001AA000001 /* Re-sign Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Re-sign Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Re-sign embedded frameworks with the correct signing identity\nif [ -z \"${EXPANDED_CODE_SIGN_IDENTITY}\" ]; then\n    echo \"No signing identity found, skipping re-signing\"\n    exit 0\nfi\n\nFRAMEWORKS_PATH=\"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nif [ -d \"$FRAMEWORKS_PATH\" ]; then\n    find \"$FRAMEWORKS_PATH\" -name \"*.framework\" -type d | while read -r FRAMEWORK; do\n        echo \"Re-signing: $FRAMEWORK\"\n        codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n            --preserve-metadata=identifier,entitlements \\\n            --timestamp=none \\\n            \"${FRAMEWORK}\"\n    done\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		504EC3001FED79650016851F /* Sources */ = {
