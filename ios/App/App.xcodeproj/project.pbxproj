@@ -170,7 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BINARY=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Capacitor.framework/Capacitor\"\nif [ -f \"$BINARY\" ]; then\n    codesign --remove-signature \"$BINARY\" 2>/dev/null || true\n    echo \"Stripped Capacitor signature for re-signing\"\nfi\nmkdir -p \"$DERIVED_FILE_DIR\"\ntouch \"$DERIVED_FILE_DIR/capacitor-stripped.marker\"\n";
+			shellScript = "echo \"=== Strip Capacitor Signature ===\"\necho \"BUILD_DIR=$TARGET_BUILD_DIR\"\nls \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\" 2>/dev/null || echo \"Frameworks dir empty/missing\"\nFW=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Capacitor.framework\"\nif [ ! -d \"$FW\" ]; then\n    FW=$(find \"$TARGET_BUILD_DIR\" -maxdepth 6 -name \"Capacitor.framework\" -type d 2>/dev/null | grep -v \".xcframework\" | grep -v SourcePackages | head -1)\nfi\nif [ -d \"$FW\" ]; then\n    echo \"Found: $FW\"\n    codesign -dv \"$FW/Capacitor\" 2>&1 | grep Authority || echo \"(no Authority)\"\n    codesign --remove-signature \"$FW\" 2>/dev/null || true\n    echo \"Stripped Capacitor.framework signature\"\nelse\n    echo \"Capacitor.framework NOT FOUND in build products\"\n    find \"$TARGET_BUILD_DIR\" -name \"Capacitor.framework\" -type d 2>/dev/null | head -5\nfi\nmkdir -p \"$DERIVED_FILE_DIR\"\ntouch \"$DERIVED_FILE_DIR/capacitor-stripped.marker\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JTG5N2U9J7;
