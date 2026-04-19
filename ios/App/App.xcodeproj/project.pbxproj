@@ -166,11 +166,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capacitor.framework/Capacitor",
+				"$(DERIVED_FILE_DIR)/capacitor-stripped.marker",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "BINARY=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Capacitor.framework/Capacitor\"\nif [ -f \"$BINARY\" ]; then\n    codesign --remove-signature \"$BINARY\" 2>/dev/null || true\n    echo \"Stripped Capacitor signature for re-signing\"\nfi\n";
+			shellScript = "BINARY=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Capacitor.framework/Capacitor\"\nif [ -f \"$BINARY\" ]; then\n    codesign --remove-signature \"$BINARY\" 2>/dev/null || true\n    echo \"Stripped Capacitor signature for re-signing\"\nfi\nmkdir -p \"$DERIVED_FILE_DIR\"\ntouch \"$DERIVED_FILE_DIR/capacitor-stripped.marker\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
