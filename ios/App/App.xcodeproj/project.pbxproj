@@ -84,7 +84,6 @@
 				504EC3001FED79650016851F /* Sources */,
 				504EC3011FED79650016851F /* Frameworks */,
 				504EC3021FED79650016851F /* Resources */,
-				CC000001CC000001CC000001 /* Re-sign Capacitor (clear Ionic DR) */,
 			);
 			buildRules = (
 			);
@@ -150,30 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CC000001CC000001CC000001 /* Re-sign Capacitor (clear Ionic DR) */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capacitor.framework/Capacitor",
-			);
-			name = "Re-sign Capacitor (clear Ionic DR)";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/capacitor-dr-resigned.stamp",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\nset -e\n\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nCAP_FRAMEWORK=\"${FRAMEWORKS_DIR}/Capacitor.framework\"\nCAP_BINARY=\"${CAP_FRAMEWORK}/Capacitor\"\n\nif [ ! -f \"$CAP_BINARY\" ]; then\n    echo 'Capacitor not found, skipping'\n    touch \"${DERIVED_FILE_DIR}/capacitor-dr-resigned.stamp\"\n    exit 0\nfi\n\nIDENTITY=\"${CODE_SIGN_IDENTITY}\"\nif [ -z \"$IDENTITY\" ]; then\n    echo 'No CODE_SIGN_IDENTITY, skipping'\n    touch \"${DERIVED_FILE_DIR}/capacitor-dr-resigned.stamp\"\n    exit 0\nfi\n\necho \"Re-signing Capacitor.framework to replace Ionic designated requirement (identity: $IDENTITY)\"\n/usr/bin/codesign --force --sign \"$IDENTITY\" \\\n    --preserve-metadata=identifier,entitlements,flags \\\n    \"$CAP_FRAMEWORK\"\necho 'Done: Capacitor re-signed with fresh DR'\n\ntouch \"${DERIVED_FILE_DIR}/capacitor-dr-resigned.stamp\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		504EC3001FED79650016851F /* Sources */ = {
