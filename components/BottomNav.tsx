@@ -8,6 +8,7 @@ import ProfileSheet from "@/components/ProfileSheet";
 
 const tabs = [
   { href: "/dashboard",   label: "Accueil",    icon: HomeIcon,   id: "home" },
+  { href: "/recherche",   label: "Recherche",  icon: SearchIcon,  id: "recherche" },
   { href: "/quiz",        label: "D\u00e9fis",      icon: PlayIcon,   id: "defis",  center: true },
   { href: "/premium",     label: "Boutique",   icon: CrownIcon,  id: "boutique" },
   { href: null,           label: "Profil",     icon: ProfileIcon, id: "profil", isSheet: true },
@@ -147,6 +148,14 @@ function CrownIcon({ size, active }: { size: number; active: boolean }) {
     <svg width={size} height={size} viewBox="0 0 24 24" fill={active ? "rgba(0,255,65,0.15)" : "none"} stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
       <path d="M2 20h20L19 8l-5 6-2-8-2 8-5-6-3 12z" />
       <path d="M2 20h20" />
+    </svg>
+  );
+}
+function SearchIcon({ size, active }: { size: number; active: boolean }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={active ? "#00FF41" : "#475569"} strokeWidth={active ? 2 : 1.6} strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21-4.35-4.35" />
     </svg>
   );
 }
