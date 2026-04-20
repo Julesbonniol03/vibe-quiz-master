@@ -84,7 +84,6 @@
 				504EC3001FED79650016851F /* Sources */,
 				504EC3011FED79650016851F /* Frameworks */,
 				504EC3021FED79650016851F /* Resources */,
-				BB000001BB000001BB000001 /* Strip Capacitor Signature */,
 			);
 			buildRules = (
 			);
@@ -150,30 +149,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BB000001BB000001BB000001 /* Strip Capacitor Signature */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Capacitor.framework/Capacitor",
-			);
-			name = "Strip Capacitor Signature";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/capacitor-stripped.marker",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo \"=== Strip Capacitor Signature ===\"\necho \"BUILD_DIR=$TARGET_BUILD_DIR\"\nls \"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/\" 2>/dev/null || echo \"Frameworks dir empty/missing\"\nFW=\"$TARGET_BUILD_DIR/$FRAMEWORKS_FOLDER_PATH/Capacitor.framework\"\nif [ ! -d \"$FW\" ]; then\n    FW=$(find \"$TARGET_BUILD_DIR\" -maxdepth 6 -name \"Capacitor.framework\" -type d 2>/dev/null | grep -v \".xcframework\" | grep -v SourcePackages | head -1)\nfi\nif [ -d \"$FW\" ]; then\n    echo \"Found: $FW\"\n    codesign -dv \"$FW/Capacitor\" 2>&1 | grep Authority || echo \"(no Authority)\"\n    codesign --remove-signature \"$FW\" 2>/dev/null || true\n    echo \"Stripped Capacitor.framework signature\"\nelse\n    echo \"Capacitor.framework NOT FOUND in build products\"\n    find \"$TARGET_BUILD_DIR\" -name \"Capacitor.framework\" -type d 2>/dev/null | head -5\nfi\nmkdir -p \"$DERIVED_FILE_DIR\"\ntouch \"$DERIVED_FILE_DIR/capacitor-stripped.marker\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		504EC3001FED79650016851F /* Sources */ = {
@@ -308,7 +283,6 @@
 				DEVELOPMENT_TEAM = JTG5N2U9J7;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -363,7 +337,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JTG5N2U9J7;
-				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Inkult;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.educational-games";
